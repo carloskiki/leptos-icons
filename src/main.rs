@@ -1,4 +1,4 @@
-use anyhow::{anyhow, Result};
+use anyhow::{anyhow, Result, Context};
 use convert_case::{Case, Casing};
 use rayon::prelude::*;
 use serde::Deserialize;
@@ -28,12 +28,12 @@ fn main() -> Result<()> {
         .par_iter_mut()
         .map(|icon_package| {
             // Download icon packages
-            download_submodule(&icon_package).and_then(|exit_status| {
-                exit_status
-                    .success()
-                    .then_some(())
-                    .ok_or(anyhow!("submodule was not downloded successfully"))
-            })?;
+            // download_submodule(&icon_package).and_then(|exit_status| {
+            //     exit_status
+            //         .success()
+            //         .then_some(())
+            //         .ok_or(anyhow!("submodule was not downloded successfully"))
+            // })?;
 
             // Get Icons Paths
             get_icons(icon_package, Path::new(""))?;
@@ -193,7 +193,7 @@ fn get_icons(icon_package: &mut IconPackage, extra_path: &Path) -> Result<()> {
         .join(&icon_package.path)
         .join(extra_path);
 
-    for entry in read_dir(&path_to_package)? {
+    for entry in read_dir(&path_to_package).context(format!("package: {}", icon_package.package_name))? {
         let entry = entry?;
         let entry_full_path = entry.path();
         let entry_name: &Path = &entry_full_path.strip_prefix(&path_to_package)?;
