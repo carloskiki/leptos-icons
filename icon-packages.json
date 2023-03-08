@@ -4,7 +4,7 @@
     "packageName": "Ant Design Icons",
     "license": "MIT",
     "url": "https://github.com/ant-design/ant-design-icons",
-    "path": "icons/ant-design-icons/packages/icons-svg/svg",
+    "path": "/icons/ant-design-icons/packages/icons-svg/svg",
     "folderName": "ant-design-icons"
   },
   {
@@ -12,7 +12,7 @@
     "packageName": "Font Awesome",
     "license": "CC BY 4.0 License",
     "url": "https://github.com/FortAwesome/Font-Awesome",
-    "path": "icons/Font-Awesome/svgs",
+    "path": "/icons/Font-Awesome/svgs",
     "folderName": "Font-Awesome"
   },
   {
@@ -20,7 +20,7 @@
     "packageName": "Weather Icons",
     "license": "SIL OFL 1.1",
     "url": "https://github.com/erikflowers/weather-icons",
-    "path": "icons/weather-icons/svg",
+    "path": "/icons/weather-icons/svg",
     "folderName": "weather-icons"
   },
   {
@@ -28,7 +28,7 @@
     "packageName": "Feather",
     "license": "MIT",
     "url": "https://github.com/feathericons/feather",
-    "path": "icons/feather/icons",
+    "path": "/icons/feather/icons",
     "folderName": "feather"
   },
   {
@@ -36,7 +36,7 @@
     "packageName": "VS Code Icons",
     "license": "CC BY 4.0",
     "url": "https://github.com/microsoft/vscode-codicons",
-    "path": "icons/vscode-codicons/src/icons",
+    "path": "/icons/vscode-codicons/src/icons",
     "folderName": "vscode-codicons"
   },
   {
@@ -44,7 +44,7 @@
     "packageName": "Bootstrap Icons",
     "license": "MIT",
     "url": "https://github.com/twbs/icons",
-    "path": "icons/icons/icons",
+    "path": "/icons/icons/icons",
     "folderName": "icons"
   },
   {
@@ -52,7 +52,7 @@
     "packageName": "BoxIcons",
     "license": "CC BY 4.0 License",
     "url": "https://github.com/atisawd/boxicons",
-    "path": "icons/boxicons/svg",
+    "path": "/icons/boxicons/svg",
     "folderName": "boxicons"
   },
   {
@@ -60,7 +60,7 @@
     "packageName": "IcoMoon Free",
     "license": "CC BY 4.0 License",
     "url": "https://github.com/Keyamoon/IcoMoon-Free",
-    "path": "icons/IcoMoon-Free/SVG",
+    "path": "/icons/IcoMoon-Free/SVG",
     "folderName": "IcoMoon-Free"
   },
   {
@@ -68,7 +68,7 @@
     "packageName": "Ionicons",
     "license": "MIT",
     "url": "https://github.com/ionic-team/ionicons",
-    "path": "icons/ionicons/src/svg",
+    "path": "/icons/ionicons/src/svg",
     "folderName": "ionicons"
   },
   {
@@ -76,7 +76,7 @@
     "packageName": "Remix Icon",
     "license": "Apache License Version 2.0",
     "url": "https://github.com/Remix-Design/RemixIcon",
-    "path": "icons/RemixIcon/icons",
+    "path": "/icons/RemixIcon/icons",
     "folderName": "RemixIcon"
   },
   {
@@ -84,7 +84,7 @@
     "packageName": "Simple Icons",
     "license": "CC0 1.0 Universal",
     "url": "https://github.com/simple-icons/simple-icons",
-    "path": "icons/simple-icons/icons",
+    "path": "/icons/simple-icons/icons",
     "folderName": "simple-icons"
   },
   {
@@ -92,7 +92,7 @@
     "packageName": "Typicons",
     "license": "CC BY-SA 3.0",
     "url": "https://github.com/stephenhutchings/typicons.font",
-    "path": "icons/typicons.font/src/svg",
+    "path": "/icons/typicons.font/src/svg",
     "folderName": "typicons.font"
   },
   {
@@ -100,7 +100,7 @@
     "packageName": "Heroicons",
     "license": "MIT",
     "url": "https://github.com/refactoringui/heroicons",
-    "path": "icons/heroicons/src",
+    "path": "/icons/heroicons/src",
     "folderName": "heroicons"
   },
   {
@@ -108,7 +108,7 @@
     "packageName": "css.gg",
     "license": "MIT",
     "url": "https://github.com/astrit/css.gg",
-    "path": "icons/css.gg/icons/svg",
+    "path": "/icons/css.gg/icons/svg",
     "folderName": "css.gg"
   },
   {
@@ -116,7 +116,7 @@
     "packageName": "Tabler Icons",
     "license": "MIT",
     "url": "https://github.com/tabler/tabler-icons",
-    "path": "icons/tabler/icons",
+    "path": "/icons/tabler/icons",
     "folderName": "tabler"
   },
   {
@@ -124,7 +124,7 @@
     "packageName": "Github Octicons",
     "license": "MIT",
     "url": "https://github.com/primer/octicons",
-    "path": "icons/octicons/icons",
+    "path": "/icons/octicons/icons",
     "folderName": "octicons"
   }
 ]
