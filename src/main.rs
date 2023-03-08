@@ -118,14 +118,15 @@ fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
 }
 
 fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Result<()> {
-    create_dir_all(module_path)?;
+    create_dir_all(Path::new("src/").join(module_path))?;
     let mut new_child_module: Option<String> = None;
     module_path
         .ancestors()
         .map(|ancestor: &Path| {
             if let Some(child) = &new_child_module {
-                let mut module_file_path = ancestor.to_owned();
+                let mut module_file_path = Path::new(env!("CARGO_MANIFEST_DIR")).join("src/").join(ancestor);
                 module_file_path.set_extension(".rs");
+                println!("module file path: {:?}", &module_file_path);
 
                 match OpenOptions::new()
                     .create_new(true)
