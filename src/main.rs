@@ -39,15 +39,15 @@ fn main() -> Result<()> {
             get_icons(icon_package, Path::new(""))?;
 
             // Generate Lib files
-            // let mut lib_file = OpenOptions::new()
-            //     .create(true)
-            //     .append(true)
-            //     .open(concat!(env!("CARGO_MANIFEST_DIR"), "/src/lib.rs"))?;
-            // let mut cargo_file = OpenOptions::new()
-            //     .append(true)
-            //     .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?;
+            let mut lib_file = OpenOptions::new()
+                .create(true)
+                .append(true)
+                .open(concat!(env!("CARGO_MANIFEST_DIR"), "/src/lib.rs"))?;
+            let mut cargo_file = OpenOptions::new()
+                .append(true)
+                .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?;
 
-            // gen_lib_files(&icon_package, &mut lib_file, &mut cargo_file)?;
+            gen_lib_files(&icon_package, &mut lib_file, &mut cargo_file)?;
 
             Ok(())
         })
