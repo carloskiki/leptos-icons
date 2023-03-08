@@ -115,55 +115,50 @@ fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
 }
 
 fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Result<()> {
-    create_dir_all(Path::new("src/").join(module_path))?;
-    let mut new_child_module: Option<String> = None;
-    module_path
-        .ancestors()
-        .map(|ancestor: &Path| {
-            println!("ancestor: {:?}", ancestor);
-            if let Some(child) = &new_child_module {
-                let mut module_file_path = Path::new(env!("CARGO_MANIFEST_DIR"))
-                    .join("src/")
-                    .join(ancestor);
-                module_file_path.set_extension("rs");
-                println!("module file path: {:?}", &module_file_path);
+    let mut full_module_path = Path::new("src/").join(module_path);
+    create_dir_all(&full_module_path)?;
 
-                match OpenOptions::new()
-                    .create_new(true)
-                    .write(true)
-                    .open(&module_file_path)
-                {
-                    Ok(mut module_file) => {
-                        declare_mod(&mut module_file, &child)?;
-                    }
-                    Err(file_error) => {
-                        if file_error.kind() != ErrorKind::AlreadyExists {
-                            return Err(anyhow!("file creation error"));
-                        };
-                        let mut module_file =
-                            OpenOptions::new().append(true).open(module_file_path)?;
-                        declare_mod(&mut module_file, &child)?;
-                        return Ok(());
-                    }
-                };
-            };
+    module_path.set_extension("rs");
+    OpenOptions::new()
+        .create_new(true)
+        .open(full_module_path)?;
 
-            new_child_module = Some(
-                ancestor
-                    .file_name()
-                    .unwrap()
-                    .to_str()
-                    .ok_or(anyhow!("module name is not a valid utf-8 string"))?
-                    .to_owned(),
-            );
+    let mut new_child_module = module_path
+        .file_stem()
+        .unwrap()
+        .to_str()
+        .ok_or(anyhow!("file name is not valid utf-8"))?
+        .to_owned();
 
-            Ok(())
-        })
-        .collect::<Result<()>>()?;
+    for ancestor in module_path.ancestors().skip(1) {
+        println!("ancestor: {:?}", ancestor);
+        println!("new child module: {}", new_child_module);
 
-    if let Some(last_child) = new_child_module {
-        declare_mod(package_file, &last_child)?;
-    };
+        let mut module_file_path = Path::new("src/").join(ancestor);
+        module_file_path.set_extension("rs");
+        let file_existed = module_file_path.exists();
+
+        let mut module_file = OpenOptions::new()
+            .create(true)
+            .append(true)
+            .open(&module_file_path);
+
+        if let Some(child) = &new_child_module {
+            declare_mod(&mut module_file, child)?;
+        };
+
+        if file_existed {
+            break;
+        };
+
+        new_child_module = module_file_path
+        .file_stem()
+        .unwrap()
+        .to_str()
+        .ok_or(anyhow!("file name is not valid utf-8"))?
+        .to_owned();
+
+    }
 
     Ok(())
 }
