@@ -1,4 +1,4 @@
-use anyhow::{anyhow, Result, Context};
+use anyhow::{anyhow, Context, Result};
 use convert_case::{Case, Casing};
 use rayon::prelude::*;
 use serde::Deserialize;
@@ -18,10 +18,8 @@ use url::Url;
 fn main() -> Result<()> {
     // 4. Write setup features
 
-    let raw_icon_packages = include_str!(concat!(
-        env!("CARGO_MANIFEST_DIR"),
-        "/icon-packages.json"
-    ));
+    let raw_icon_packages =
+        include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/icon-packages.json"));
 
     let mut icon_packages: Vec<IconPackage> = serde_json::from_str(raw_icon_packages).unwrap();
     icon_packages
@@ -71,8 +69,7 @@ fn gen_lib_files(
     );
     create_dir(&package_path)?;
 
-
-    let mut modules_created: Vec<PathBuf> = vec![PathBuf::new()];
+    let mut modules_created: Vec<PathBuf> = vec![PathBuf::from(&icon_package.short_name)];
 
     let mut package_file = OpenOptions::new()
         .create(true)
@@ -87,7 +84,7 @@ fn gen_lib_files(
         .icons
         .iter()
         .map(|icon| {
-            let mut path_to_icon = PathBuf::new();
+            let mut path_to_icon = PathBuf::from(&icon_package.short_name);
             if let Some(size) = icon.name.size {
                 let size_string = size.to_string();
                 path_to_icon.push(&size_string);
@@ -124,8 +121,10 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
         .ancestors()
         .map(|ancestor: &Path| {
             if let Some(child) = &new_child_module {
-                let mut module_file_path = Path::new(env!("CARGO_MANIFEST_DIR")).join("src/").join(ancestor);
-                module_file_path.set_extension(".rs");
+                let mut module_file_path = Path::new(env!("CARGO_MANIFEST_DIR"))
+                    .join("src/")
+                    .join(ancestor);
+                module_file_path.set_extension("rs");
                 println!("module file path: {:?}", &module_file_path);
 
                 match OpenOptions::new()
@@ -161,11 +160,11 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
         })
         .collect::<Result<()>>()?;
 
-        if let Some(last_child) = new_child_module {
-            declare_mod(package_file, &last_child)?;
-        };
+    if let Some(last_child) = new_child_module {
+        declare_mod(package_file, &last_child)?;
+    };
 
-        Ok(())
+    Ok(())
 }
 
 fn create_icon(mut icon_path: PathBuf, icon: &Icon) -> Result<()> {
@@ -179,19 +178,19 @@ fn create_icon(mut icon_path: PathBuf, icon: &Icon) -> Result<()> {
         &mut icon_file,
         "use leptos::{{component, Scope, IntoView, view}};
 
-           #[cfg(feature = {})]
-           #[component]
-           pub fn {}(cx: Scope) -> impl IntoView {{
-               view! {{ cx,
-                   {}
-               }}
-    }}",
+#[cfg(feature = {})]
+#[component]
+pub fn {}(cx: Scope) -> impl IntoView {{
+   view! {{ cx,
+       {}
+   }}
+}}",
         icon.name.feature_name(),
         &icon_component_name,
         &icon.content
-    );
+    )?;
 
-    icon_path.set_extension(".rs");
+    icon_path.set_extension("rs");
     let mut upper_module_file = OpenOptions::new().append(true).open(&icon_path)?;
     declare_mod(&mut upper_module_file, &icon_component_name)?;
 
@@ -203,7 +202,9 @@ fn get_icons(icon_package: &mut IconPackage, extra_path: &Path) -> Result<()> {
         .join(&icon_package.path)
         .join(extra_path);
 
-    for entry in read_dir(&path_to_package).context(format!("package: {}", icon_package.package_name))? {
+    for entry in
+        read_dir(&path_to_package).context(format!("package: {}", icon_package.package_name))?
+    {
         let entry = entry?;
         let entry_full_path = entry.path();
         let entry_name: &Path = &entry_full_path.strip_prefix(&path_to_package)?;
