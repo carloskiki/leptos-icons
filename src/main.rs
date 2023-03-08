@@ -101,7 +101,7 @@ fn gen_lib_files(
                 modules_created.push(path_to_icon.clone());
             };
 
-            create_icon(PathBuf::from(&package_path).join(path_to_icon), icon)?;
+            create_icon(Path::new("src/").join(path_to_icon), icon)?;
 
             Ok(())
         })
@@ -118,9 +118,9 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
     let mut full_module_path = Path::new("src/").join(module_path);
     create_dir_all(&full_module_path)?;
 
-    module_path.set_extension("rs");
+    full_module_path.set_extension("rs");
     OpenOptions::new()
-        .create_new(true)
+        .create_new(true).write(true)
         .open(full_module_path)?;
 
     let mut new_child_module = module_path
@@ -141,14 +141,14 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
         let mut module_file = OpenOptions::new()
             .create(true)
             .append(true)
-            .open(&module_file_path);
+            .open(&module_file_path)?;
 
-        if let Some(child) = &new_child_module {
-            declare_mod(&mut module_file, child)?;
-        };
+        println!("module file: {:?}", module_file);
+
+        declare_mod(&mut module_file, &new_child_module)?;
 
         if file_existed {
-            break;
+            return Ok(());
         };
 
         new_child_module = module_file_path
@@ -157,14 +157,17 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
         .to_str()
         .ok_or(anyhow!("file name is not valid utf-8"))?
         .to_owned();
+    };
 
-    }
+    let first_category = module_path.iter().next().unwrap().to_str().unwrap();
+    declare_mod(package_file, first_category)?;
 
     Ok(())
 }
 
 fn create_icon(mut icon_path: PathBuf, icon: &Icon) -> Result<()> {
     let icon_component_name = icon.name.component_name();
+
     let mut icon_file = OpenOptions::new()
         .create_new(true)
         .write(true)
