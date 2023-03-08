@@ -120,6 +120,7 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
     module_path
         .ancestors()
         .map(|ancestor: &Path| {
+            println!("ancestor: {:?}", ancestor);
             if let Some(child) = &new_child_module {
                 let mut module_file_path = Path::new(env!("CARGO_MANIFEST_DIR"))
                     .join("src/")
