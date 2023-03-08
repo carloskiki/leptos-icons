@@ -39,19 +39,22 @@ fn main() -> Result<()> {
             get_icons(icon_package, Path::new(""))?;
 
             // Generate Lib files
-            let mut lib_file = OpenOptions::new()
-                .create(true)
-                .append(true)
-                .open(concat!(env!("CARGO_MANIFEST_DIR"), "/src/lib.rs"))?;
-            let mut cargo_file = OpenOptions::new()
-                .append(true)
-                .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?;
-
-            gen_lib_files(&icon_package, &mut lib_file, &mut cargo_file)?;
 
             Ok(())
         })
         .collect::<Result<()>>()?;
+
+    let mut lib_file = OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(concat!(env!("CARGO_MANIFEST_DIR"), "/src/lib.rs"))?;
+    let mut cargo_file = OpenOptions::new()
+        .append(true)
+        .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?;
+
+    println!("package: {}", icon_packages[0].package_name);
+
+    gen_lib_files(&icon_packages[0], &mut lib_file, &mut cargo_file)?;
 
     Ok(())
 }
@@ -68,6 +71,7 @@ fn gen_lib_files(
     );
     create_dir(&package_path)?;
 
+
     let mut modules_created: Vec<PathBuf> = vec![PathBuf::new()];
 
     let mut package_file = OpenOptions::new()
@@ -76,6 +80,8 @@ fn gen_lib_files(
         .open(format!("{}.rs", package_path))?;
 
     declare_mod(lib_file, &icon_package.short_name)?;
+
+    println!("modules created: {:?}", &modules_created);
 
     icon_package
         .icons
@@ -86,8 +92,11 @@ fn gen_lib_files(
                 let size_string = size.to_string();
                 path_to_icon.push(&size_string);
             }
+            println!("path after size: {:?}", &path_to_icon);
+
             icon.name.categories.iter().for_each(|category| {
                 path_to_icon.push(category);
+                println!("path after category: {:?}", &path_to_icon);
             });
 
             if !modules_created.contains(&path_to_icon) {
