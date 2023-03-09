@@ -3,23 +3,37 @@ use convert_case::{Case, Casing};
 use rayon::prelude::*;
 use serde::Deserialize;
 use std::fs::{create_dir, create_dir_all, read_dir, read_to_string, File, OpenOptions};
-use std::io::{ErrorKind, Write};
+use std::io::{BufWriter, Write};
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitStatus};
 use std::str::FromStr;
 use url::Url;
 
+// Not working
+// 1. two file with same name
+// 2. files starting with digits
+
 // Missing support for:
 // 1. props passing
-// 2. optimizing svg
+// 2. optimizing svgs
 // 3. remove useless categories (e.g. vscode-light/dark, sizes?)
 // 4. ssr optimizations?
+// 5. Docs
 
 fn main() -> Result<()> {
-    // 4. Write setup features
-
     let raw_icon_packages =
         include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/icon-packages.json"));
+
+    let mut cargo_file = OpenOptions::new()
+        .append(true)
+        .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?;
+
+    write!(
+        cargo_file,
+        "
+[features]
+"
+    )?;
 
     let mut icon_packages: Vec<IconPackage> = serde_json::from_str(raw_icon_packages).unwrap();
     icon_packages
@@ -37,49 +51,48 @@ fn main() -> Result<()> {
             get_icons(icon_package, Path::new(""))?;
 
             // Generate Lib files
+            let mut lib_file = OpenOptions::new()
+                .create(true)
+                .append(true)
+                .open(concat!(env!("CARGO_MANIFEST_DIR"), "/src/lib.rs"))?;
+            let mut cargo_file = BufWriter::new(
+                OpenOptions::new()
+                    .append(true)
+                    .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?,
+            );
+
+            gen_lib_files(icon_package, &mut lib_file, &mut cargo_file)?;
+
+            cargo_file.flush()?;
 
             Ok(())
         })
-        .collect::<Result<()>>()?;
+        .collect::<Result<()>>()
+}
 
-    let mut lib_file = OpenOptions::new()
-        .create(true)
-        .append(true)
-        .open(concat!(env!("CARGO_MANIFEST_DIR"), "/src/lib.rs"))?;
-    let mut cargo_file = OpenOptions::new()
-        .append(true)
-        .open(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"))?;
-
-    println!("package: {}", icon_packages[0].package_name);
-
-    gen_lib_files(&icon_packages[0], &mut lib_file, &mut cargo_file)?;
-
-    Ok(())
+fn pkg_path_to_abs<P: AsRef<Path>>(relative_path: P) -> PathBuf {
+    Path::new(env!("CARGO_MANIFEST_DIR"))
+        .join("src/")
+        .join(relative_path)
 }
 
 fn gen_lib_files(
     icon_package: &IconPackage,
     lib_file: &mut File,
-    cargo_file: &mut File,
+    cargo_file: &mut BufWriter<File>,
 ) -> Result<()> {
-    let package_path = format!(
-        "{}/src/{}",
-        env!("CARGO_MANIFEST_DIR"),
-        icon_package.short_name,
-    );
+    let mut package_path = pkg_path_to_abs(&icon_package.short_name);
     create_dir(&package_path)?;
 
-    let mut modules_created: Vec<PathBuf> = vec![PathBuf::from(&icon_package.short_name)];
-
+    package_path.set_extension("rs");
     let mut package_file = OpenOptions::new()
         .create(true)
         .append(true)
-        .open(format!("{}.rs", package_path))?;
+        .open(package_path)?;
 
     declare_mod(lib_file, &icon_package.short_name)?;
 
-    println!("modules created: {:?}", &modules_created);
-
+    let mut modules_created: Vec<PathBuf> = vec![PathBuf::from(&icon_package.short_name)];
     icon_package
         .icons
         .iter()
@@ -89,11 +102,9 @@ fn gen_lib_files(
                 let size_string = size.to_string();
                 path_to_icon.push(&size_string);
             }
-            println!("path after size: {:?}", &path_to_icon);
 
             icon.name.categories.iter().for_each(|category| {
                 path_to_icon.push(category);
-                println!("path after category: {:?}", &path_to_icon);
             });
 
             if !modules_created.contains(&path_to_icon) {
@@ -101,13 +112,16 @@ fn gen_lib_files(
                 modules_created.push(path_to_icon.clone());
             };
 
-            create_icon(Path::new("src/").join(path_to_icon), icon)?;
+            create_icon(
+                Path::new("src/").join(path_to_icon),
+                icon,
+                &icon_package.short_name,
+                cargo_file,
+            )?;
 
             Ok(())
         })
-        .collect::<Result<()>>()?;
-
-    Ok(())
+        .collect::<Result<()>>()
 }
 
 fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
@@ -115,12 +129,13 @@ fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
 }
 
 fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Result<()> {
-    let mut full_module_path = Path::new("src/").join(module_path);
+    let mut full_module_path = pkg_path_to_abs(module_path);
     create_dir_all(&full_module_path)?;
 
     full_module_path.set_extension("rs");
     OpenOptions::new()
-        .create_new(true).write(true)
+        .create_new(true)
+        .write(true)
         .open(full_module_path)?;
 
     let mut new_child_module = module_path
@@ -131,10 +146,7 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
         .to_owned();
 
     for ancestor in module_path.ancestors().skip(1) {
-        println!("ancestor: {:?}", ancestor);
-        println!("new child module: {}", new_child_module);
-
-        let mut module_file_path = Path::new("src/").join(ancestor);
+        let mut module_file_path = pkg_path_to_abs(ancestor);
         module_file_path.set_extension("rs");
         let file_existed = module_file_path.exists();
 
@@ -143,8 +155,6 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
             .append(true)
             .open(&module_file_path)?;
 
-        println!("module file: {:?}", module_file);
-
         declare_mod(&mut module_file, &new_child_module)?;
 
         if file_existed {
@@ -152,12 +162,12 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
         };
 
         new_child_module = module_file_path
-        .file_stem()
-        .unwrap()
-        .to_str()
-        .ok_or(anyhow!("file name is not valid utf-8"))?
-        .to_owned();
-    };
+            .file_stem()
+            .unwrap()
+            .to_str()
+            .ok_or(anyhow!("file name is not valid utf-8"))?
+            .to_owned();
+    }
 
     let first_category = module_path.iter().next().unwrap().to_str().unwrap();
     declare_mod(package_file, first_category)?;
@@ -165,11 +175,21 @@ fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Res
     Ok(())
 }
 
-fn create_icon(mut icon_path: PathBuf, icon: &Icon) -> Result<()> {
+fn create_icon(
+    mut icon_path: PathBuf,
+    icon: &Icon,
+    package_short_name: &str,
+    cargo_file: &mut BufWriter<File>,
+) -> Result<()> {
     let icon_component_name = icon.name.component_name();
+    let icon_feature_name = icon.name.feature_name(package_short_name);
+
+    if icon_feature_name == "" {
+        println!("feature name for {} is empty", &icon_component_name);
+    };
 
     let mut icon_file = OpenOptions::new()
-        .create_new(true)
+        .create(true)
         .write(true)
         .open(&icon_path.join(format!("{}.rs", &icon_component_name)))?;
 
@@ -184,14 +204,14 @@ pub fn {}(cx: Scope) -> impl IntoView {{
        {}
    }}
 }}",
-        icon.name.feature_name(),
-        &icon_component_name,
-        &icon.content
+        &icon_feature_name, &icon_component_name, &icon.content
     )?;
 
     icon_path.set_extension("rs");
     let mut upper_module_file = OpenOptions::new().append(true).open(&icon_path)?;
     declare_mod(&mut upper_module_file, &icon_component_name)?;
+
+    cargo_file.write_all(format!("{} = []\n", &icon_feature_name).as_bytes())?;
 
     Ok(())
 }
@@ -297,6 +317,8 @@ enum IconSize {
     Sm,
     Md,
     Lg,
+    Xl,
+    Xxl
 }
 
 impl ToString for IconSize {
@@ -305,6 +327,8 @@ impl ToString for IconSize {
             IconSize::Sm => "sm".to_string(),
             IconSize::Md => "md".to_string(),
             IconSize::Lg => "lg".to_string(),
+            IconSize::Xl => "xl".to_string(),
+            IconSize::Xxl => "xxl".to_string(),
         }
     }
 }
@@ -317,6 +341,8 @@ impl FromStr for IconSize {
             "16" => Ok(IconSize::Sm),
             "20" => Ok(IconSize::Md),
             "24" => Ok(IconSize::Lg),
+            "48" => Ok(IconSize::Xl),
+            "96" => Ok(IconSize::Xxl),
             _ => return Err(anyhow!("icon size not recognized")),
         }
     }
@@ -396,14 +422,18 @@ impl IconName {
         self.name.to_case(Case::Pascal)
     }
 
-    fn feature_name(&self) -> String {
-        let mut name = String::new();
+    fn feature_name(&self, package_short_name: &str) -> String {
+        let mut name = package_short_name.to_owned() + " ";
+
         if let Some(size) = self.size {
-            name.push_str(&size.to_string().to_case(Case::Pascal));
+            name = name + &size.to_string() + " ";
         };
         self.categories.iter().for_each(|category| {
-            name.push_str(&category.to_case(Case::Pascal));
+            name.push_str(category);
+            name.push(' ');
         });
-        name
+        name.push_str(&self.name);
+
+        name.to_case(Case::Pascal)
     }
 }
