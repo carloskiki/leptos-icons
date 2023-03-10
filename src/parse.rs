@@ -23,16 +23,17 @@ pub(crate) fn get_icons(icon_package: &mut IconPackage, extra_path: &Path) -> Re
                 "not a valid file extension (could not convert OsStr)"
             ))?;
             if file_extension == "svg" {
-                let content = optimize(read_to_string(&entry_full_path)?)?;
-                icon_package.icons.push(Icon {
-                    content,
-                    name: format_icon_name(
+                let name = format_icon_name(
                         entry_relative_path
                             .to_str()
                             .ok_or(anyhow!("icon path is not a valid utf-8 path"))?
                             .to_string(),
                         &icon_package.short_name,
-                    )?,
+                    )?;
+                let content = optimize(read_to_string(&entry_full_path)?)?;
+                icon_package.icons.push(Icon {
+                    content,
+                    name,
                 });
             }
         }

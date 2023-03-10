@@ -2,7 +2,7 @@ use std::process::{Command, ExitStatus};
 use crate::types::IconPackage;
 use anyhow::Result;
 
-pub fn download_submodule(icon_package: &IconPackage) -> Result<ExitStatus> {
+pub(crate) fn download_submodule(icon_package: &IconPackage) -> Result<ExitStatus> {
     Command::new("git")
         .args([
             "submodule",

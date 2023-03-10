@@ -1,4 +1,5 @@
 use anyhow::{Result, anyhow};
+use indicatif::ParallelProgressIterator;
 use rayon::prelude::*;
 use std::fs::OpenOptions;
 use std::io::{BufWriter, Write};
@@ -46,14 +47,15 @@ fn main() -> Result<()> {
     let mut icon_packages: Vec<IconPackage> = serde_json::from_str(raw_icon_packages).unwrap();
     icon_packages
         .par_iter_mut()
+        .progress()
         .map(|icon_package| {
             // Download icon packages
-            download_submodule(&icon_package).and_then(|exit_status| {
-                exit_status
-                    .success()
-                    .then_some(())
-                    .ok_or(anyhow!("submodule was not downloded successfully"))
-            })?;
+            // download_submodule(&icon_package).and_then(|exit_status| {
+            //     exit_status
+            //         .success()
+            //         .then_some(())
+            //         .ok_or(anyhow!("submodule was not downloded successfully"))
+            // })?;
 
             // Get Icons Paths
             get_icons(icon_package, Path::new(""))?;
