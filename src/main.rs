@@ -47,7 +47,6 @@ fn main() -> Result<()> {
     let mut icon_packages: Vec<IconPackage> = serde_json::from_str(raw_icon_packages).unwrap();
     icon_packages
         .par_iter_mut()
-        .progress()
         .map(|icon_package| {
             // Download icon packages
             // download_submodule(&icon_package).and_then(|exit_status| {
@@ -77,6 +76,6 @@ fn main() -> Result<()> {
 
             Ok(())
         })
+        .progress()
         .collect::<Result<()>>()
 }
-

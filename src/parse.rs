@@ -1,5 +1,5 @@
 use anyhow::{Result, anyhow};
-use std::{fs::{read_dir, read_to_string}, path::Path, str::FromStr};
+use std::{fs::{read_dir, read_to_string, File}, path::Path, str::FromStr};
 
 use crate::{types::{IconPackage, Icon, IconSize, IconName}, optimize::optimize};
 
@@ -30,7 +30,7 @@ pub(crate) fn get_icons(icon_package: &mut IconPackage, extra_path: &Path) -> Re
                             .to_string(),
                         &icon_package.short_name,
                     )?;
-                let content = optimize(read_to_string(&entry_full_path)?)?;
+                let content = optimize(File::open(entry_full_path)?)?;
                 icon_package.icons.push(Icon {
                     content,
                     name,

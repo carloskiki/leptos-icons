@@ -1,5 +1,5 @@
 use std::{path::PathBuf, str::FromStr};
-use convert_case::{Casing, Case};
+use heck::ToPascalCase;
 use serde::Deserialize;
 use url::Url;
 use anyhow::anyhow;
@@ -129,7 +129,11 @@ impl IconName {
     }
 
     pub(crate) fn component_name(&self) -> String {
-        self.name.to_case(Case::Pascal)
+        let name = self.name.to_pascal_case();
+        if name.starts_with(char::is_numeric) {
+            return "_".to_owned() + &name;
+        }
+        name
     }
 
     pub(crate) fn feature_name(&self, package_short_name: &str) -> String {
@@ -144,6 +148,6 @@ impl IconName {
         });
         name.push_str(&self.name);
 
-        name.to_case(Case::Pascal)
+        name.to_pascal_case()
     }
 }

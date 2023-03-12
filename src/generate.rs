@@ -122,9 +122,9 @@ fn create_icon(
 
     write!(
         &mut icon_file,
-        "use leptos::{{component, Scope, IntoView, view}};
+        "use leptos::*;
 
-#[cfg(feature = {})]
+#[cfg(feature = \"{}\")]
 #[component]
 pub fn {}(cx: Scope) -> impl IntoView {{
    view! {{ cx,
