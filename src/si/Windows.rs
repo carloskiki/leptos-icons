@@ -1,0 +1,11 @@
+#[cfg(feature = "SiWindows")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "SiWindows")]
+/// *This icon requires the feature* `SiWindows` *to be enabled*.
+#[component]
+pub fn Windows(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" /></svg>
+   }
+}

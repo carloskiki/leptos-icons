@@ -1,0 +1,11 @@
+#[cfg(feature = "FiTriangle")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "FiTriangle")]
+/// *This icon requires the feature* `FiTriangle` *to be enabled*.
+#[component]
+pub fn Triangle(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /></svg>
+   }
+}

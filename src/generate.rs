@@ -122,16 +122,18 @@ fn create_icon(
 
     write!(
         &mut icon_file,
-        "use leptos::*;
+        "#[cfg(feature = \"{icon_feature_name}\")]
+use leptos::{{component, Scope, IntoView, view}};
 
-#[cfg(feature = \"{}\")]
+#[cfg(feature = \"{icon_feature_name}\")]
+/// *This icon requires the feature* `{icon_feature_name}` *to be enabled*.
 #[component]
 pub fn {}(cx: Scope) -> impl IntoView {{
    view! {{ cx,
        {}
    }}
 }}",
-        &icon_feature_name, &icon_component_name, &icon.content
+        &icon_component_name, &icon.content
     )?;
 
     icon_path.set_extension("rs");

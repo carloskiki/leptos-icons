@@ -1,5 +1,5 @@
 use leptos::*;
-use leptos_icons::fa::solid::Bars;
+use leptos_icons::fa::solid::Bars::*;
 
 fn main() {
     _ = console_log::init_with_level(log::Level::Debug);

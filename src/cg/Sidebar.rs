@@ -1,0 +1,11 @@
+#[cfg(feature = "CgSidebar")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "CgSidebar")]
+/// *This icon requires the feature* `CgSidebar` *to be enabled*.
+#[component]
+pub fn Sidebar(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 20H7V4H21V20ZM19 18H9V6H19V18Z" fill="currentColor" /><path d="M3 20H5V4H3V20Z" fill="currentColor" /></svg>
+   }
+}
