@@ -82,12 +82,14 @@ fn main() -> Result<()> {
 fn clean_lib() -> Result<()> {
 
     // Remove git submodules
-    Command::new("git").arg("rm").arg("icons/*").status()?;
+    Command::new("git").arg("rm").arg("icons/*").status().context("weirder")?;
 
     // cargo file relevant content
     let cargo_contents = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"));
     let cargo_no_features: String = cargo_contents.lines().take_while(|line| line != &"[features]").collect();
     let cargo_path = crate_path("Cargo.toml");
+
+    println!("test");
 
     // remove old cargo file
     Command::new("rm").arg(cargo_path.to_str().unwrap()).status().context("1")?;
