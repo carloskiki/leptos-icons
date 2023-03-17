@@ -93,7 +93,7 @@ fn clean_lib() -> Result<()> {
     Command::new("rm").arg(cargo_path.to_str().unwrap()).status().context("1")?;
 
     // Write to new cargo file
-    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path)?;
+    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path).context("weird")?;
     new_cargo_file.write_all(cargo_no_features.as_bytes()).context("2")?;
 
     // remove lib files
