@@ -85,7 +85,7 @@ fn clean_lib() -> Result<()> {
 
     // cargo file relevant content
     let cargo_contents = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"));
-    let cargo_no_features: String = cargo_contents.lines().take_while(|line| line != &"[features]").collect();
+    let cargo_no_features = cargo_contents.lines().take_while(|line| line != &"[features]").collect::<Vec<&str>>().join("\n");
     let cargo_path = crate_path("Cargo.toml");
 
     // remove old cargo file
