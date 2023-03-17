@@ -92,7 +92,7 @@ fn clean_lib() -> Result<()> {
     Command::new("rm").arg(cargo_path.to_str().unwrap()).status()?;
 
     // Write to new cargo file
-    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path)?;
+    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path).context("test 1")?;
     new_cargo_file.write_all(cargo_no_features.as_bytes())?;
 
     // remove lib files
@@ -100,7 +100,7 @@ fn clean_lib() -> Result<()> {
 
     // New lib file
     let lib_path = src_path("lib.rs");
-    OpenOptions::new().create_new(true).write(true).open(lib_path)?;
+    OpenOptions::new().create_new(true).write(true).open(lib_path).context("test 2")?;
 
     println!("test");
 
