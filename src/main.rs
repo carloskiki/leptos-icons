@@ -80,36 +80,29 @@ fn main() -> Result<()> {
 }
 
 fn clean_lib() -> Result<()> {
-
     // Remove git submodules
-    Command::new("git").arg("rm").arg("icons/*").status().context("weirder")?;
+    Command::new("git").arg("rm").arg("icons/*").status()?;
 
     // cargo file relevant content
     let cargo_contents = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"));
     let cargo_no_features: String = cargo_contents.lines().take_while(|line| line != &"[features]").collect();
     let cargo_path = crate_path("Cargo.toml");
 
-
     // remove old cargo file
-    Command::new("rm").arg(cargo_path.to_str().unwrap()).status().context("1")?;
+    Command::new("rm").arg(cargo_path.to_str().unwrap()).status()?;
 
-    println!("test");
     // Write to new cargo file
-    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path).context("weird")?;
-
-    println!("test 2");
-    new_cargo_file.write_all(cargo_no_features.as_bytes()).context("2")?;
-
-    println!("test 3");
+    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path)?;
+    new_cargo_file.write_all(cargo_no_features.as_bytes())?;
 
     // remove lib files
-    Command::new("rm").arg("-rf").arg(src_path("")).status().context("3")?;
-
-    println!("test 4");
+    Command::new("rm").arg("-rf").arg(src_path("")).status()?;
 
     // New lib file
     let lib_path = src_path("lib.rs");
     OpenOptions::new().create_new(true).open(lib_path)?;
+
+    println!("test");
 
     Ok(())
 }
