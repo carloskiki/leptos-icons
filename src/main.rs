@@ -89,17 +89,23 @@ fn clean_lib() -> Result<()> {
     let cargo_no_features: String = cargo_contents.lines().take_while(|line| line != &"[features]").collect();
     let cargo_path = crate_path("Cargo.toml");
 
-    println!("test");
 
     // remove old cargo file
     Command::new("rm").arg(cargo_path.to_str().unwrap()).status().context("1")?;
 
+    println!("test");
     // Write to new cargo file
     let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path).context("weird")?;
+
+    println!("test 2");
     new_cargo_file.write_all(cargo_no_features.as_bytes()).context("2")?;
+
+    println!("test 3");
 
     // remove lib files
     Command::new("rm").arg("-rf").arg(src_path("")).status().context("3")?;
+
+    println!("test 4");
 
     // New lib file
     let lib_path = src_path("lib.rs");
