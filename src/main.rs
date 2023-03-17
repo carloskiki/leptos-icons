@@ -1,22 +1,23 @@
-use anyhow::{Result, anyhow};
+use anyhow::{anyhow, Result};
 use indicatif::ParallelProgressIterator;
 use rayon::prelude::*;
 use std::fs::OpenOptions;
 use std::io::{BufWriter, Write};
 use std::path::Path;
+use std::process::Command;
 
-use path::{src_path, crate_path};
-use types::IconPackage;
-use submodules::download_submodule;
 use generate::gen_lib_files;
 use parse::get_icons;
+use path::{crate_path, src_path};
+use submodules::download_submodule;
+use types::IconPackage;
 
+mod generate;
+mod optimize;
+mod parse;
 mod path;
 mod submodules;
 mod types;
-mod parse;
-mod generate;
-mod optimize;
 
 // Not working
 // - two file with same name
@@ -30,32 +31,30 @@ mod optimize;
 // - ssr optimizations?
 
 fn main() -> Result<()> {
+
+    println!("cargo:rerun-if-changed=build/");
+
     let raw_icon_packages =
         include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/icon-packages.json"));
-
-    let mut cargo_file = OpenOptions::new()
-        .append(true)
-        .open(crate_path("Cargo.toml"))?;
-
-    write!(
-        cargo_file,
-        "
-[features]
-"
-    )?;
-
     let mut icon_packages: Vec<IconPackage> = serde_json::from_str(raw_icon_packages).unwrap();
+
+    // Reset the repository
+    clean_lib()?;
+
+    // Git commands can't be run in parralel
+    icon_packages.iter().map(|icon_package| {
+            // Download icon packages
+            download_submodule(&icon_package).and_then(|exit_status| {
+                exit_status
+                    .success()
+                    .then_some(())
+                    .ok_or(anyhow!("submodule was not downloded successfully"))
+            })
+    }).collect::<Result<()>>()?;
+
     icon_packages
         .par_iter_mut()
         .map(|icon_package| {
-            // Download icon packages
-            // download_submodule(&icon_package).and_then(|exit_status| {
-            //     exit_status
-            //         .success()
-            //         .then_some(())
-            //         .ok_or(anyhow!("submodule was not downloded successfully"))
-            // })?;
-
             // Get Icons Paths
             get_icons(icon_package, Path::new(""))?;
 
@@ -78,4 +77,31 @@ fn main() -> Result<()> {
         })
         .progress()
         .collect::<Result<()>>()
+}
+
+fn clean_lib() -> Result<()> {
+
+    // Remove git submodules
+    Command::new("git").arg("rm").arg("icons/*").status()?;
+
+    // cargo file relevant content
+    let cargo_contents = include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/Cargo.toml"));
+    let cargo_no_features: String = cargo_contents.lines().take_while(|line| line != &"[features]").collect();
+    let cargo_path = crate_path("Cargo.toml");
+
+    // remove old cargo file
+    Command::new("rm").arg(cargo_path.to_str().unwrap()).status()?;
+
+    // Write to new cargo file
+    let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path)?;
+    new_cargo_file.write_all(cargo_no_features.as_bytes())?;
+
+    // remove lib files
+    Command::new("rm").arg("-rf").arg(src_path("")).status()?;
+
+    // New lib file
+    let lib_path = src_path("lib.rs");
+    OpenOptions::new().create_new(true).open(lib_path)?;
+
+    Ok(())
 }
