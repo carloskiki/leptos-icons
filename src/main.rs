@@ -96,7 +96,7 @@ fn clean_lib() -> Result<()> {
     new_cargo_file.write_all(cargo_no_features.as_bytes())?;
 
     // remove lib files
-    Command::new("rm").arg("-rf").arg(src_path("")).status()?;
+    Command::new("rm").arg("-rf").arg(src_path("*")).status()?;
 
     // New lib file
     let lib_path = src_path("lib.rs");
