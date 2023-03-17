@@ -1,4 +1,4 @@
-use anyhow::{anyhow, Result};
+use anyhow::{anyhow, Result, Context};
 use indicatif::ParallelProgressIterator;
 use rayon::prelude::*;
 use std::fs::OpenOptions;
@@ -90,14 +90,14 @@ fn clean_lib() -> Result<()> {
     let cargo_path = crate_path("Cargo.toml");
 
     // remove old cargo file
-    Command::new("rm").arg(cargo_path.to_str().unwrap()).status()?;
+    Command::new("rm").arg(cargo_path.to_str().unwrap()).status().context("1")?;
 
     // Write to new cargo file
     let mut new_cargo_file = OpenOptions::new().create_new(true).write(true).open(cargo_path)?;
-    new_cargo_file.write_all(cargo_no_features.as_bytes())?;
+    new_cargo_file.write_all(cargo_no_features.as_bytes()).context("2")?;
 
     // remove lib files
-    Command::new("rm").arg("-rf").arg(src_path("")).status()?;
+    Command::new("rm").arg("-rf").arg(src_path("")).status().context("3")?;
 
     // New lib file
     let lib_path = src_path("lib.rs");
