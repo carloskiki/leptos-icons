@@ -100,7 +100,7 @@ fn clean_lib() -> Result<()> {
 
     // New lib file
     let lib_path = src_path("lib.rs");
-    OpenOptions::new().create_new(true).open(lib_path)?;
+    OpenOptions::new().create_new(true).write(true).open(lib_path)?;
 
     println!("test");
 
