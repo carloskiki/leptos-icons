@@ -1,48 +1,48 @@
-[submodule "icons/vscode-codicons"]
-	path = icons/vscode-codicons
-	url = https://github.com/microsoft/vscode-codicons
-[submodule "icons/typicons.font"]
-	path = icons/typicons.font
-	url = https://github.com/stephenhutchings/typicons.font
-[submodule "icons/boxicons"]
-	path = icons/boxicons
-	url = https://github.com/atisawd/boxicons
-[submodule "icons/heroicons"]
-	path = icons/heroicons
-	url = https://github.com/refactoringui/heroicons
-[submodule "icons/ionicons"]
-	path = icons/ionicons
-	url = https://github.com/ionic-team/ionicons
-[submodule "icons/simple-icons"]
-	path = icons/simple-icons
-	url = https://github.com/simple-icons/simple-icons
 [submodule "icons/ant-design-icons"]
 	path = icons/ant-design-icons
 	url = https://github.com/ant-design/ant-design-icons
-[submodule "icons/octicons"]
-	path = icons/octicons
-	url = https://github.com/primer/octicons
+[submodule "icons/Font-Awesome"]
+	path = icons/Font-Awesome
+	url = https://github.com/FortAwesome/Font-Awesome
 [submodule "icons/weather-icons"]
 	path = icons/weather-icons
 	url = https://github.com/erikflowers/weather-icons
 [submodule "icons/feather"]
 	path = icons/feather
 	url = https://github.com/feathericons/feather
+[submodule "icons/vscode-codicons"]
+	path = icons/vscode-codicons
+	url = https://github.com/microsoft/vscode-codicons
 [submodule "icons/icons"]
 	path = icons/icons
 	url = https://github.com/twbs/icons
-[submodule "icons/RemixIcon"]
-	path = icons/RemixIcon
-	url = https://github.com/Remix-Design/RemixIcon
-[submodule "icons/css.gg"]
-	path = icons/css.gg
-	url = https://github.com/astrit/css.gg
+[submodule "icons/boxicons"]
+	path = icons/boxicons
+	url = https://github.com/atisawd/boxicons
 [submodule "icons/IcoMoon-Free"]
 	path = icons/IcoMoon-Free
 	url = https://github.com/Keyamoon/IcoMoon-Free
+[submodule "icons/ionicons"]
+	path = icons/ionicons
+	url = https://github.com/ionic-team/ionicons
+[submodule "icons/RemixIcon"]
+	path = icons/RemixIcon
+	url = https://github.com/Remix-Design/RemixIcon
+[submodule "icons/simple-icons"]
+	path = icons/simple-icons
+	url = https://github.com/simple-icons/simple-icons
+[submodule "icons/typicons.font"]
+	path = icons/typicons.font
+	url = https://github.com/stephenhutchings/typicons.font
+[submodule "icons/heroicons"]
+	path = icons/heroicons
+	url = https://github.com/refactoringui/heroicons
+[submodule "icons/css.gg"]
+	path = icons/css.gg
+	url = https://github.com/astrit/css.gg
 [submodule "icons/tabler"]
 	path = icons/tabler
 	url = https://github.com/tabler/tabler-icons
-[submodule "icons/Font-Awesome"]
-	path = icons/Font-Awesome
-	url = https://github.com/FortAwesome/Font-Awesome
+[submodule "icons/octicons"]
+	path = icons/octicons
+	url = https://github.com/primer/octicons
