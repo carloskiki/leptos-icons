@@ -38,7 +38,7 @@ Please note that this crate is in very early developpement and may include [bugs
 | [Github Octicons](https://github.com/primer/octicons)              | [MIT](https://opensource.org/licenses/MIT)                              | "oc" |
 
 ## Contributing
-Non-exclusive list of crucial missing features:
+Non-inclusive list of crucial missing features:
 - Better Docs
 - Props passing
 - remove useless categories (e.g. vscode-light/dark, sizes?)
