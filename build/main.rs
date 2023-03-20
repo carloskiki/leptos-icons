@@ -31,7 +31,9 @@ mod types;
 // - ssr optimizations?
 
 fn main() -> Result<()> {
-    println!("cargo:rerun-if-changed=build/");
+    if std::env::var("REBUID") != Ok("true".to_string()) {
+        return Ok(())
+    }
 
     let raw_icon_packages =
         include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/icon-packages.json"));
