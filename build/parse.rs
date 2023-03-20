@@ -1,5 +1,5 @@
 use anyhow::{Result, anyhow};
-use std::{fs::{read_dir, read_to_string, File}, path::Path, str::FromStr};
+use std::{fs::{read_dir, File}, path::Path, str::FromStr};
 
 use crate::{types::{IconPackage, Icon, IconSize, IconName}, optimize::optimize};
 

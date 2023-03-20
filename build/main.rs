@@ -1,4 +1,4 @@
-use anyhow::{anyhow, Result, Context};
+use anyhow::{anyhow, Result};
 use indicatif::ParallelProgressIterator;
 use rayon::prelude::*;
 use std::fs::{OpenOptions, create_dir};
