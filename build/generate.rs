@@ -1,7 +1,14 @@
-use std::{fs::{File, create_dir, OpenOptions, create_dir_all}, io::{BufWriter, Write}, path::{PathBuf, Path}};
-use anyhow::{Result, anyhow};
+use anyhow::{anyhow, Result};
+use std::{
+    fs::{create_dir, create_dir_all, File, OpenOptions},
+    io::{BufWriter, Write},
+    path::{Path, PathBuf},
+};
 
-use crate::{types::{IconPackage, Icon}, path::src_path};
+use crate::{
+    path::src_path,
+    types::{Icon, IconPackage},
+};
 
 pub(crate) fn gen_lib_files(
     icon_package: &IconPackage,
@@ -52,7 +59,16 @@ pub(crate) fn gen_lib_files(
 }
 
 fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
-    write!(file, "pub mod {};\n",mod_name).map_err(anyhow::Error::from)
+    write!(file, "pub mod {};\n", mod_name).map_err(anyhow::Error::from)
+}
+
+fn declare_icon(file: &mut File, mod_name: &str, feature_name: &str) -> Result<()> {
+    write!(
+        file,
+        "#[cfg(feature = {})]\npub mod {};\n",
+        feature_name, mod_name
+    )
+    .map_err(anyhow::Error::from)
 }
 
 fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Result<()> {
@@ -111,10 +127,6 @@ fn create_icon(
     let icon_component_name = icon.name.component_name();
     let icon_feature_name = icon.name.feature_name(package_short_name);
 
-    if icon_feature_name == "" {
-        println!("feature name for {} is empty", &icon_component_name);
-    };
-
     let mut icon_file = OpenOptions::new()
         .create(true)
         .write(true)
@@ -138,7 +150,7 @@ pub fn {}(cx: Scope) -> impl IntoView {{
 
     icon_path.set_extension("rs");
     let mut upper_module_file = OpenOptions::new().append(true).open(&icon_path)?;
-    declare_mod(&mut upper_module_file, &icon_component_name)?;
+    declare_icon(&mut upper_module_file, &icon_component_name, &icon_feature_name)?;
 
     cargo_file.write_all(format!("{} = []\n", &icon_feature_name).as_bytes())?;
 
