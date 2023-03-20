@@ -31,7 +31,7 @@ mod types;
 // - ssr optimizations?
 
 fn main() -> Result<()> {
-    if std::env::var("REBUID") != Ok("true".to_string()) {
+    if std::env::var("REBUILD") != Ok("true".to_string()) {
         return Ok(())
     }
 
@@ -108,8 +108,8 @@ fn clean_lib() -> Result<()> {
 
     // New lib file
     let lib_path = src_path("lib.rs");
-    OpenOptions::new().create_new(true).write(true).open(lib_path)?;
+    let mut lib_file = OpenOptions::new().create_new(true).write(true).open(lib_path)?;
+    write!(lib_file, "#![allow(non_snake_case)]\n")?;
 
-    // Test
     Ok(())
 }

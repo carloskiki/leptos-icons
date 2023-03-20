@@ -62,15 +62,6 @@ fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
     write!(file, "pub mod {};\n", mod_name).map_err(anyhow::Error::from)
 }
 
-fn declare_icon(file: &mut File, mod_name: &str, feature_name: &str) -> Result<()> {
-    write!(
-        file,
-        "#[cfg(feature = {})]\npub mod {};\n",
-        feature_name, mod_name
-    )
-    .map_err(anyhow::Error::from)
-}
-
 fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Result<()> {
     let mut full_module_path = src_path(module_path);
     create_dir_all(&full_module_path)?;
@@ -150,7 +141,7 @@ pub fn {}(cx: Scope) -> impl IntoView {{
 
     icon_path.set_extension("rs");
     let mut upper_module_file = OpenOptions::new().append(true).open(&icon_path)?;
-    declare_icon(&mut upper_module_file, &icon_component_name, &icon_feature_name)?;
+    declare_mod(&mut upper_module_file, &icon_component_name)?;
 
     cargo_file.write_all(format!("{} = []\n", &icon_feature_name).as_bytes())?;
 
