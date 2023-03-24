@@ -9,6 +9,8 @@ repository = "https://github.com/Carlosted/leptos-icons"
 licence = "MIT"
 keywords = ["leptos", "icons"]
 categories = ["web-programming"]
+exclude = ["icons/", "icon-packages.json"]
+
 build = "build/main.rs"
 
 [dependencies]
