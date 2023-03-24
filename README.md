@@ -40,10 +40,13 @@ Please note that this crate is in very early developpement and may include [bugs
 ## Contributing
 Non-inclusive list of crucial missing features:
 - Better Docs
-- Props passing
+- Props passing (style, color)
 - remove useless categories (e.g. vscode-light/dark, sizes?)
 - ssr optimizations?
 
 Bugs:
 - Tabler Icon's "Pagebreak" and "PageBreak" icons have the same file name.
 - Icon names starting with digits
+- Tracing feature [#1]([#1][i1])
+
+[i1]: https://github.com/Carlosted/leptos-icons/issues/1
