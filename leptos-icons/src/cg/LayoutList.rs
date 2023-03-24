@@ -1,0 +1,11 @@
+#[cfg(feature = "CgLayoutList")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "CgLayoutList")]
+/// *This icon requires the feature* `CgLayoutList` *to be enabled*.
+#[component]
+pub fn LayoutList(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 7H7V9H9V7Z" fill="currentColor" /><path d="M7 13V11H9V13H7Z" fill="currentColor" /><path d="M7 15V17H9V15H7Z" fill="currentColor" /><path d="M11 15V17H17V15H11Z" fill="currentColor" /><path d="M17 13V11H11V13H17Z" fill="currentColor" /><path d="M17 7V9H11V7H17Z" fill="currentColor" /></svg>
+   }
+}

@@ -1,0 +1,11 @@
+#[cfg(feature = "CgBorderBottom")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "CgBorderBottom")]
+/// *This icon requires the feature* `CgBorderBottom` *to be enabled*.
+#[component]
+pub fn BorderBottom(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 8H16V15H19V5H5V15H8V8Z" fill="currentColor" fill-opacity="0.3" /><path d="M5 17H19V20H5V17Z" fill="currentColor" /></svg>
+   }
+}

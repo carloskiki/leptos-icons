@@ -1,0 +1,11 @@
+#[cfg(feature = "CgPathIntersect")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "CgPathIntersect")]
+/// *This icon requires the feature* `CgPathIntersect` *to be enabled*.
+#[component]
+pub fn PathIntersect(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 5H5V15H9V19H19V9H15V5ZM13 7H7V13H9V9H13V7ZM17 17H11V15H15V11H17V17Z" fill="currentColor" /></svg>
+   }
+}

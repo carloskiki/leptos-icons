@@ -1,0 +1,11 @@
+#[cfg(feature = "SiBitbucket")]
+use leptos::{component, Scope, IntoView, view};
+
+#[cfg(feature = "SiBitbucket")]
+/// *This icon requires the feature* `SiBitbucket` *to be enabled*.
+#[component]
+pub fn Bitbucket(cx: Scope) -> impl IntoView {
+   view! { cx,
+       <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M.778 1.213a.768.768 0 00-.768.892l3.263 19.81c.084.5.515.868 1.022.873H19.95a.772.772 0 00.77-.646l3.27-20.03a.768.768 0 00-.768-.891zM14.52 15.53H9.522L8.17 8.466h7.561z" /></svg>
+   }
+}
