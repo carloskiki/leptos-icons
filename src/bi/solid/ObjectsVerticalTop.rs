@@ -1,11 +1,40 @@
 #[cfg(feature = "BiSolidObjectsVerticalTop")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "BiSolidObjectsVerticalTop")]
-/// *This icon requires the feature* `BiSolidObjectsVerticalTop` *to be enabled*.
+///This icon requires the feature `BiSolidObjectsVerticalTop` to be enabled.
 #[component]
-pub fn ObjectsVerticalTop(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2 2h20v2H2z" /><rect x="5" y="6" width="6" height="16" rx="1" /><rect x="13" y="6" width="6" height="12" rx="1" /></svg>
-   }
+pub fn ObjectsVerticalTop(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
+        width = { size.clone() } height = { size } > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M2 2h20v2H2z" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "5" y = "6" width = "6" height = "16" rx = "1"
+        />< rect xmlns = "http://www.w3.org/2000/svg" x = "13" y = "6" width = "6" height
+        = "12" rx = "1" /> < title > { title } < / title > < / svg >
+    }
 }

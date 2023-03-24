@@ -1,11 +1,39 @@
 #[cfg(feature = "BiSolidCategory")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "BiSolidCategory")]
-/// *This icon requires the feature* `BiSolidCategory` *to be enabled*.
+///This icon requires the feature `BiSolidCategory` to be enabled.
 #[component]
-pub fn Category(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 11h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm10 0h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zM4 21h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm13 0c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4z" /></svg>
-   }
+pub fn Category(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
+        width = { size.clone() } height = { size } > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M4 11h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm10 0h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zM4 21h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1zm13 0c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4z"
+        /> < title > { title } < / title > < / svg >
+    }
 }

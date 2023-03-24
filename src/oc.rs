@@ -1,11 +1,5 @@
 pub mod lg;
 pub mod sm;
-pub mod ChevronDown;
-pub mod XCircleFill;
-pub mod ChevronUp;
+pub mod xs;
 pub mod xl;
 pub mod xxl;
-pub mod AlertFill;
-pub mod ChevronRight;
-pub mod NoEntryFill;
-pub mod CheckCircleFill;

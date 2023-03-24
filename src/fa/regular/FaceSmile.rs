@@ -1,11 +1,38 @@
 #[cfg(feature = "FaRegularFaceSmile")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "FaRegularFaceSmile")]
-/// *This icon requires the feature* `FaRegularFaceSmile` *to be enabled*.
+///This icon requires the feature `FaRegularFaceSmile` to be enabled.
 #[component]
-pub fn FaceSmile(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" /></svg>
-   }
+pub fn FaceSmile(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
+        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+        /> < title > { title } < / title > < / svg >
+    }
 }

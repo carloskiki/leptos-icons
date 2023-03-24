@@ -1,11 +1,39 @@
 #[cfg(feature = "SiFujitsu")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "SiFujitsu")]
-/// *This icon requires the feature* `SiFujitsu` *to be enabled*.
+///This icon requires the feature `SiFujitsu` to be enabled.
 #[component]
-pub fn Fujitsu(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M16.56 3C14.15 3 12.04 4.24 10.68 5.97L10.68 9.76C12.5 4.71 16.56 5.08 16.56 5.08C19.5 5.08 21.84 7.38 21.84 10.2C21.84 13.04 19.5 15.33 16.56 15.33A5.32 5.32 0 0 1 12.84 13.83L10.28 11.03A6.06 6.06 0 0 0 6.03 9.32C2.7 9.32 0 11.93 0 15.16C0 18.4 2.7 21 6.03 21C7.9 21 9.58 20.19 10.68 18.89L10.68 15.86C8.88 19.29 6.03 18.92 6.03 18.92C3.9 18.92 2.17 17.24 2.17 15.16C2.17 13.1 3.9 11.42 6.03 11.42C7.09 11.42 8.05 11.84 8.75 12.5L11.31 15.31A7.5 7.5 0 0 0 16.56 17.43C20.67 17.43 24 14.19 24 10.2C24 6.21 20.67 3 16.56 3Z" /></svg>
-   }
+pub fn Fujitsu(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
+        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
+        =
+        "M16.56 3C14.15 3 12.04 4.24 10.68 5.97L10.68 9.76C12.5 4.71 16.56 5.08 16.56 5.08C19.5 5.08 21.84 7.38 21.84 10.2C21.84 13.04 19.5 15.33 16.56 15.33A5.32 5.32 0 0 1 12.84 13.83L10.28 11.03A6.06 6.06 0 0 0 6.03 9.32C2.7 9.32 0 11.93 0 15.16C0 18.4 2.7 21 6.03 21C7.9 21 9.58 20.19 10.68 18.89L10.68 15.86C8.88 19.29 6.03 18.92 6.03 18.92C3.9 18.92 2.17 17.24 2.17 15.16C2.17 13.1 3.9 11.42 6.03 11.42C7.09 11.42 8.05 11.84 8.75 12.5L11.31 15.31A7.5 7.5 0 0 0 16.56 17.43C20.67 17.43 24 14.19 24 10.2C24 6.21 20.67 3 16.56 3Z"
+        /> < title > { title } < / title > < / svg >
+    }
 }

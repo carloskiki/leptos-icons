@@ -1,11 +1,44 @@
 #[cfg(feature = "TbArrowsDiagonal")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbArrowsDiagonal")]
-/// *This icon requires the feature* `TbArrowsDiagonal` *to be enabled*.
+///This icon requires the feature `TbArrowsDiagonal` to be enabled.
 #[component]
-pub fn ArrowsDiagonal(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrows-diagonal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M16 4l4 0l0 4" /><path d="M14 10l6 -6" /><path d="M8 20l-4 0l0 -4" /><path d="M4 20l6 -6" /></svg>
-   }
+pub fn ArrowsDiagonal(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class =
+        "icon icon-tabler icon-tabler-arrows-diagonal" width = "24" height = "24" viewBox
+        = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
+        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
+        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
+        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M16 4l4 0l0 4" />< path xmlns = "http://www.w3.org/2000/svg" d = "M14 10l6 -6"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M8 20l-4 0l0 -4" />< path
+        xmlns = "http://www.w3.org/2000/svg" d = "M4 20l6 -6" /> < title > { title } < /
+        title > < / svg >
+    }
 }

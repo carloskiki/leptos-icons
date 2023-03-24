@@ -1,11 +1,48 @@
 #[cfg(feature = "TbMathFunctionOff")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbMathFunctionOff")]
-/// *This icon requires the feature* `TbMathFunctionOff` *to be enabled*.
+///This icon requires the feature `TbMathFunctionOff` to be enabled.
 #[component]
-pub fn MathFunctionOff(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-math-function-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 10h1c.882 0 .986 .777 1.694 2.692" /><path d="M13 17c.864 0 1.727 -.663 2.495 -1.512m1.717 -2.302c.993 -1.45 2.39 -3.186 3.788 -3.186" /><path d="M3 19c0 1.5 .5 2 2 2s2 -4 3 -9c.237 -1.186 .446 -2.317 .647 -3.35m.727 -3.248c.423 -1.492 .91 -2.402 1.626 -2.402c1.5 0 2 .5 2 2" /><path d="M5 12h6" /><path d="M3 3l18 18" /></svg>
-   }
+pub fn MathFunctionOff(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class =
+        "icon icon-tabler icon-tabler-math-function-off" width = "24" height = "24"
+        viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
+        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
+        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
+        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M14 10h1c.882 0 .986 .777 1.694 2.692" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M13 17c.864 0 1.727 -.663 2.495 -1.512m1.717 -2.302c.993 -1.45 2.39 -3.186 3.788 -3.186"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M3 19c0 1.5 .5 2 2 2s2 -4 3 -9c.237 -1.186 .446 -2.317 .647 -3.35m.727 -3.248c.423 -1.492 .91 -2.402 1.626 -2.402c1.5 0 2 .5 2 2"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M5 12h6" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M3 3l18 18" /> < title > { title } < / title >
+        < / svg >
+    }
 }

@@ -1,11 +1,44 @@
 #[cfg(feature = "TbInnerShadowRightFilled")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbInnerShadowRightFilled")]
-/// *This icon requires the feature* `TbInnerShadowRightFilled` *to be enabled*.
+///This icon requires the feature `TbInnerShadowRightFilled` to be enabled.
 #[component]
-pub fn InnerShadowRightFilled(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-inner-shadow-right-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4.929 4.929c3.905 -3.905 10.237 -3.905 14.142 0c3.905 3.905 3.905 10.237 0 14.142c-3.905 3.905 -10.237 3.905 -14.142 0c-3.905 -3.905 -3.905 -10.237 0 -14.142zm12.02 2.121a1 1 0 0 0 -1.413 1.414a5 5 0 0 1 0 7.072a1 1 0 0 0 1.414 1.414a7 7 0 0 0 0 -9.9z" stroke-width="0" fill="currentColor" /></svg>
-   }
+pub fn InnerShadowRightFilled(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class =
+        "icon icon-tabler icon-tabler-inner-shadow-right-filled" width = "24" height =
+        "24" viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill =
+        "none" stroke - linecap = "round" stroke - linejoin = "round" width = { size
+        .clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke
+        = "none" d = "M0 0h24v24H0z" fill = "none" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M4.929 4.929c3.905 -3.905 10.237 -3.905 14.142 0c3.905 3.905 3.905 10.237 0 14.142c-3.905 3.905 -10.237 3.905 -14.142 0c-3.905 -3.905 -3.905 -10.237 0 -14.142zm12.02 2.121a1 1 0 0 0 -1.413 1.414a5 5 0 0 1 0 7.072a1 1 0 0 0 1.414 1.414a7 7 0 0 0 0 -9.9z"
+        stroke - width = "0" fill = "currentColor" /> < title > { title } < / title > < /
+        svg >
+    }
 }

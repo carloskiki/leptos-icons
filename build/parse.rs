@@ -30,9 +30,10 @@ pub(crate) fn get_icons(icon_package: &mut IconPackage, extra_path: &Path) -> Re
                             .to_string(),
                         &icon_package.short_name,
                     )?;
-                let content = optimize(File::open(entry_full_path)?)?;
+                let (content, attributes) = optimize(File::open(entry_full_path)?)?;
                 icon_package.icons.push(Icon {
                     content,
+                    attributes,
                     name,
                 });
             }

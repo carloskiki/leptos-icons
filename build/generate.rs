@@ -1,9 +1,12 @@
 use anyhow::{anyhow, Result};
+use proc_macro2::{Ident, Span, TokenStream};
+use quote::quote;
 use std::{
     fs::{create_dir, create_dir_all, File, OpenOptions},
     io::{BufWriter, Write},
     path::{Path, PathBuf},
 };
+use xml::attribute::OwnedAttribute;
 
 use crate::{
     path::src_path,
@@ -122,22 +125,13 @@ fn create_icon(
         .create(true)
         .write(true)
         .open(&icon_path.join(format!("{}.rs", &icon_component_name)))?;
-
-    write!(
-        &mut icon_file,
-        "#[cfg(feature = \"{icon_feature_name}\")]
-use leptos::{{component, Scope, IntoView, view}};
-
-#[cfg(feature = \"{icon_feature_name}\")]
-/// *This icon requires the feature* `{icon_feature_name}` *to be enabled*.
-#[component]
-pub fn {}(cx: Scope) -> impl IntoView {{
-   view! {{ cx,
-       {}
-   }}
-}}",
-        &icon_component_name, &icon.content
-    )?;
+    let icon_file_content = icon_file_content(
+        &icon_feature_name,
+        &icon_component_name,
+        &icon.content,
+        &icon.attributes,
+    );
+    icon_file.write_all(icon_file_content?.as_bytes())?;
 
     icon_path.set_extension("rs");
     let mut upper_module_file = OpenOptions::new().append(true).open(&icon_path)?;
@@ -146,4 +140,77 @@ pub fn {}(cx: Scope) -> impl IntoView {{
     cargo_file.write_all(format!("{} = []\n", &icon_feature_name).as_bytes())?;
 
     Ok(())
+}
+
+fn icon_file_content(
+    icon_feature_name: &str,
+    icon_component_name: &str,
+    icon_content: &str,
+    attributes: &Vec<OwnedAttribute>,
+) -> Result<String> {
+    let doc_comment =
+        format!("This icon requires the feature `{icon_feature_name}` to be enabled.");
+    let attributes = attributes_token_stream(attributes)?;
+    let icon_component_ident = Ident::new(icon_component_name, Span::call_site());
+    let icon_content_ident: TokenStream = icon_content
+        .parse()
+        .map_err(|_| anyhow!("could not transform icon_content to ident"))?;
+
+    let tokens = quote! {
+        #[cfg(feature = #icon_feature_name)]
+        use leptos::*;
+
+        #[cfg(feature = #icon_feature_name)]
+        #[doc = #doc_comment]
+        #[component]
+        pub fn #icon_component_ident(
+            cx: Scope,
+            /// The size of the icon (The side length of the square surrounding the icon).
+            /// Defaults to "1em".
+            #[prop(into)] #[prop(optional)] size: String,
+            /// HTML class attribute.
+            #[prop(into)] #[prop(optional)] class: String,
+            /// Color of the icon.
+            /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+            #[prop(into)] #[prop(optional)] color: String,
+            /// HTML style attribute.
+            #[prop(into)] #[prop(optional)] style: String,
+            /// Accessibility title.
+            #[prop(into)] #[prop(optional)] title: String,
+            ) -> impl IntoView {
+            view! { cx,
+            <svg
+            class=class
+            stroke="currentColor"
+            fill="currentColor"
+            stroke_witdh="0"
+            style=style
+            #attributes
+            width={size.clone()}
+            height={size}
+            >
+                #icon_content_ident
+                <title>{title}</title>
+            </svg>
+            }
+        }
+    };
+
+    let tokens_file: syn::File = syn::parse2(tokens)?;
+    Ok(prettyplease::unparse(&tokens_file))
+}
+
+fn attributes_token_stream(attributes: &Vec<OwnedAttribute>) -> Result<TokenStream> {
+    attributes
+        .into_iter()
+        .map(|attribute| {
+            let attribute_val = &attribute.value;
+            let attr_ident: TokenStream = attribute
+                .name
+                .local_name
+                .parse()
+                .map_err(|_| anyhow!("could not convert attributes to token stream"))?;
+            Ok(quote!(#attr_ident=#attribute_val))
+        })
+        .collect::<Result<TokenStream>>()
 }

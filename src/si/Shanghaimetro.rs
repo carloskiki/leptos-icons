@@ -1,11 +1,39 @@
 #[cfg(feature = "SiShanghaimetro")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "SiShanghaimetro")]
-/// *This icon requires the feature* `SiShanghaimetro` *to be enabled*.
+///This icon requires the feature `SiShanghaimetro` to be enabled.
 #[component]
-pub fn Shanghaimetro(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="M20.383 11.664h-1.716l-3.432-4.487-3.073 3.606L9.31 7.177l-3.513 4.487H3.63c.185-4.464 3.872-8.047 8.383-8.047 3.953 0 7.27 2.748 8.15 6.424h3.687C22.91 4.359 17.96.01 12 .01c-6.632 0-12 5.369-12 12 0 1.102.15 2.169.429 3.177h6.516l2.412-2.55 2.805 3.478 2.945-3.502 1.902 2.61h2.69c-1.287 2.967-4.256 5.495-7.699 5.495-2.84 0-5.357-1.681-6.875-3.942H.997C2.852 21.02 7.072 23.988 12 23.988c6.632 0 12-5.368 12-12 0-.116 0-.231-.012-.347l-3.605.023Z" /></svg>
-   }
+pub fn Shanghaimetro(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
+        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
+        =
+        "M20.383 11.664h-1.716l-3.432-4.487-3.073 3.606L9.31 7.177l-3.513 4.487H3.63c.185-4.464 3.872-8.047 8.383-8.047 3.953 0 7.27 2.748 8.15 6.424h3.687C22.91 4.359 17.96.01 12 .01c-6.632 0-12 5.369-12 12 0 1.102.15 2.169.429 3.177h6.516l2.412-2.55 2.805 3.478 2.945-3.502 1.902 2.61h2.69c-1.287 2.967-4.256 5.495-7.699 5.495-2.84 0-5.357-1.681-6.875-3.942H.997C2.852 21.02 7.072 23.988 12 23.988c6.632 0 12-5.368 12-12 0-.116 0-.231-.012-.347l-3.605.023Z"
+        /> < title > { title } < / title > < / svg >
+    }
 }

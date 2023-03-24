@@ -3,6 +3,7 @@ use heck::ToPascalCase;
 use serde::Deserialize;
 use url::Url;
 use anyhow::anyhow;
+use xml::attribute::OwnedAttribute;
 
 #[derive(Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
@@ -19,11 +20,13 @@ pub(crate) struct IconPackage {
 #[derive(Debug)]
 pub(crate) struct Icon {
     pub(crate) content: String,
+    pub(crate) attributes: Vec<OwnedAttribute>,
     pub(crate) name: IconName,
 }
 
 #[derive(Clone, Copy, Debug)]
 pub(crate) enum IconSize {
+    Xs,
     Sm,
     Md,
     Lg,
@@ -34,6 +37,7 @@ pub(crate) enum IconSize {
 impl ToString for IconSize {
     fn to_string(&self) -> String {
         match self {
+            IconSize::Xs => "xs".to_string(),
             IconSize::Sm => "sm".to_string(),
             IconSize::Md => "md".to_string(),
             IconSize::Lg => "lg".to_string(),
@@ -48,6 +52,7 @@ impl FromStr for IconSize {
 
     fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
         match s {
+            "12" => Ok(IconSize::Xs),
             "16" => Ok(IconSize::Sm),
             "20" => Ok(IconSize::Md),
             "24" => Ok(IconSize::Lg),

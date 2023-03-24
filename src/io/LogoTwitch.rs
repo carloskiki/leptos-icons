@@ -1,11 +1,41 @@
 #[cfg(feature = "IoLogoTwitch")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "IoLogoTwitch")]
-/// *This icon requires the feature* `IoLogoTwitch` *to be enabled*.
+///This icon requires the feature `IoLogoTwitch` to be enabled.
 #[component]
-pub fn LogoTwitch(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M80,32,48,112V416h96v64h64l64-64h80L464,304V32ZM416,288l-64,64H256l-64,64V352H112V80H416Z" /><rect x="320" y="143" width="48" height="129" /><rect x="208" y="143" width="48" height="129" /></svg>
-   }
+pub fn LogoTwitch(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
+        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M80,32,48,112V416h96v64h64l64-64h80L464,304V32ZM416,288l-64,64H256l-64,64V352H112V80H416Z"
+        />< rect xmlns = "http://www.w3.org/2000/svg" x = "320" y = "143" width = "48"
+        height = "129" />< rect xmlns = "http://www.w3.org/2000/svg" x = "208" y = "143"
+        width = "48" height = "129" /> < title > { title } < / title > < / svg >
+    }
 }

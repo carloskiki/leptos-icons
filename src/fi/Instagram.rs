@@ -1,11 +1,42 @@
 #[cfg(feature = "FiInstagram")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "FiInstagram")]
-/// *This icon requires the feature* `FiInstagram` *to be enabled*.
+///This icon requires the feature `FiInstagram` to be enabled.
 #[component]
-pub fn Instagram(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
-   }
+pub fn Instagram(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
+        fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
+        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
+        < rect xmlns = "http://www.w3.org/2000/svg" x = "2" y = "2" width = "20" height =
+        "20" rx = "5" ry = "5" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />< line xmlns =
+        "http://www.w3.org/2000/svg" x1 = "17.5" y1 = "6.5" x2 = "17.51" y2 = "6.5" /> <
+        title > { title } < / title > < / svg >
+    }
 }

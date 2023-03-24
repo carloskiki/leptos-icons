@@ -1,11 +1,47 @@
 #[cfg(feature = "TbBrandNpm")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbBrandNpm")]
-/// *This icon requires the feature* `TbBrandNpm` *to be enabled*.
+///This icon requires the feature `TbBrandNpm` to be enabled.
 #[component]
-pub fn BrandNpm(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-npm" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M1 8h22v7h-12v2h-4v-2h-6z" /><path d="M7 8v7" /><path d="M14 8v7" /><path d="M17 11v4" /><path d="M4 11v4" /><path d="M11 11v1" /><path d="M20 11v4" /></svg>
-   }
+pub fn BrandNpm(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-brand-npm"
+        width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
+        "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
+        "round" width = { size.clone() } height = { size } > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M1 8h22v7h-12v2h-4v-2h-6z" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M7 8v7" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M14 8v7" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M17 11v4" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M4 11v4" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M11 11v1" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M20 11v4" /> < title > { title } < / title > <
+        / svg >
+    }
 }

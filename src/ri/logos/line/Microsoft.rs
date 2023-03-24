@@ -1,11 +1,39 @@
 #[cfg(feature = "RiLogosLineMicrosoft")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "RiLogosLineMicrosoft")]
-/// *This icon requires the feature* `RiLogosLineMicrosoft` *to be enabled*.
+///This icon requires the feature `RiLogosLineMicrosoft` to be enabled.
 #[component]
-pub fn Microsoft(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path fill="none" d="M0 0h24v24H0z" /><path d="M11 5H5v6h6V5zm2 0v6h6V5h-6zm6 8h-6v6h6v-6zm-8 6v-6H5v6h6zM3 3h18v18H3V3z" /></g></svg>
-   }
+pub fn Microsoft(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
+        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
+        "none" d = "M0 0h24v24H0z" />< path d =
+        "M11 5H5v6h6V5zm2 0v6h6V5h-6zm6 8h-6v6h6v-6zm-8 6v-6H5v6h6zM3 3h18v18H3V3z" /></
+        g > < title > { title } < / title > < / svg >
+    }
 }

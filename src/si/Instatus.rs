@@ -1,11 +1,39 @@
 #[cfg(feature = "SiInstatus")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "SiInstatus")]
-/// *This icon requires the feature* `SiInstatus` *to be enabled*.
+///This icon requires the feature `SiInstatus` to be enabled.
 #[component]
-pub fn Instatus(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><path d="m16.994 21.028c3.5843-1.91 5.471-5.759 5.0561-9.5637-1.3206 1.0851-2.6237 2.3203-3.8709 3.6906-2.0656 2.2694-3.7476 4.6559-4.9953 6.9817 1.2946-0.09715 2.5907-0.45868 3.8101-1.1086zm-13.394-2.5626c-1.3408 1.8191-2.3771 4.4991-1.3032 5.3066 1.5151 1.1394 8.404-2.0133 13.908-8.8051 5.504-6.7918 7.3265-13.796 4.879-14.873-1.1283-0.49644-3.486 1.083-4.8394 2.3943l0.58412 0.31415c1.332-0.85276 3.5528-1.7338 1.4995 1.9758-0.0097 0.01768-0.01962 0.03541-0.02949 0.05317-2.9067-2.2075-6.9471-2.662-10.379-0.8328-4.7026 2.506-6.4831 8.3499-3.9771 13.052 0.58979 1.1067 1.3644 2.0516 2.2655 2.8168-3.5586 2.7493-2.6905 0.35965-2.1925-0.8162z" /></svg>
-   }
+pub fn Instatus(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
+        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
+        =
+        "m16.994 21.028c3.5843-1.91 5.471-5.759 5.0561-9.5637-1.3206 1.0851-2.6237 2.3203-3.8709 3.6906-2.0656 2.2694-3.7476 4.6559-4.9953 6.9817 1.2946-0.09715 2.5907-0.45868 3.8101-1.1086zm-13.394-2.5626c-1.3408 1.8191-2.3771 4.4991-1.3032 5.3066 1.5151 1.1394 8.404-2.0133 13.908-8.8051 5.504-6.7918 7.3265-13.796 4.879-14.873-1.1283-0.49644-3.486 1.083-4.8394 2.3943l0.58412 0.31415c1.332-0.85276 3.5528-1.7338 1.4995 1.9758-0.0097 0.01768-0.01962 0.03541-0.02949 0.05317-2.9067-2.2075-6.9471-2.662-10.379-0.8328-4.7026 2.506-6.4831 8.3499-3.9771 13.052 0.58979 1.1067 1.3644 2.0516 2.2655 2.8168-3.5586 2.7493-2.6905 0.35965-2.1925-0.8162z"
+        /> < title > { title } < / title > < / svg >
+    }
 }

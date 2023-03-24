@@ -1,10 +1,10 @@
 use std::collections::HashMap;
 use std::fs::File;
 use std::str::from_utf8;
-use xml::{ParserConfig, EmitterConfig};
+use xml::{ParserConfig, EmitterConfig, attribute::OwnedAttribute};
 use anyhow::{anyhow, Result};
 
-pub(crate) fn optimize(icon_content: File) -> Result<String> {
+pub(crate) fn optimize(icon_content: File) -> Result<(String, Vec<OwnedAttribute>)> {
 
     let parser_config = ParserConfig {
         trim_whitespace: true,
@@ -27,30 +27,36 @@ pub(crate) fn optimize(icon_content: File) -> Result<String> {
     reader.next()?;
 
     let mut is_title = false;
+    let mut svg_attributes: Vec<OwnedAttribute> = Vec::new();
+    let mut in_content = false;
 
-    reader.into_iter().map(|event| {
-        match event.map_err(|_| anyhow!("optimization reading error"))? {
-            xml::reader::XmlEvent::EndDocument => Ok(()),
+    for event in reader.into_iter() {
+        let event = event.map_err(|_| anyhow!("optimization reading error"))?;
+        match event {
+            xml::reader::XmlEvent::EndDocument => (),
             xml::reader::XmlEvent::StartElement { name, .. } if name.local_name == "title" =>  {
                 is_title = true;
-                Ok(())
+            }
+            xml::reader::XmlEvent::StartElement { name, attributes, .. } if name.local_name == "svg" => {
+                // TODO: parse attributes
+                svg_attributes.extend(attributes.into_iter());
+                in_content = true;
+            }
+            xml::reader::XmlEvent::EndElement { name } if name.local_name == "svg" => {
+                break;
             }
             xml::reader::XmlEvent::EndElement { name } if name.local_name == "title" => {
                 is_title = false;
-                Ok(())
             }
             event => {
-                if is_title {
-                    return Ok(());
+                if is_title || !in_content {
+                    continue;
                 }
-                writer.write(event.as_writer_event().unwrap()).map_err(|_| anyhow!(" optimization writing error"))
+                writer.write(event.as_writer_event().unwrap()).map_err(|_| anyhow!(" optimization writing error"))?;
             }
         }
-    }).collect::<Result<()>>()?;
 
+    };
 
-    Ok(from_utf8(writer.inner_mut())?.to_owned())
-
-    // let optimization_output = Command::new("svgo").arg("-s").arg(icon_content).output()?;
-    // Ok(from_utf8(&optimization_output.stdout)?.to_owned())
+    Ok((from_utf8(writer.inner_mut())?.to_owned(), svg_attributes))
 }

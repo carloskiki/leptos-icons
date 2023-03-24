@@ -1,11 +1,43 @@
 #[cfg(feature = "TbBrandBitbucket")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbBrandBitbucket")]
-/// *This icon requires the feature* `TbBrandBitbucket` *to be enabled*.
+///This icon requires the feature `TbBrandBitbucket` to be enabled.
 #[component]
-pub fn BrandBitbucket(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bitbucket" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3.648 4a.64 .64 0 0 0 -.64 .744l3.14 14.528c.07 .417 .43 .724 .852 .728h10a.644 .644 0 0 0 .642 -.539l3.35 -14.71a.641 .641 0 0 0 -.64 -.744l-16.704 -.007z" /><path d="M14 15h-4l-1 -6h6z" /></svg>
-   }
+pub fn BrandBitbucket(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class =
+        "icon icon-tabler icon-tabler-brand-bitbucket" width = "24" height = "24" viewBox
+        = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
+        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
+        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
+        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M3.648 4a.64 .64 0 0 0 -.64 .744l3.14 14.528c.07 .417 .43 .724 .852 .728h10a.644 .644 0 0 0 .642 -.539l3.35 -14.71a.641 .641 0 0 0 -.64 -.744l-16.704 -.007z"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M14 15h-4l-1 -6h6z" /> < title
+        > { title } < / title > < / svg >
+    }
 }

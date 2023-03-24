@@ -10,4 +10,4 @@ leptos = "0.2.1"
 console_error_panic_hook = "0.1.7"
 console_log = "0.2"
 log = "0.4"
-leptos-icons = { path = "../../", features = ["FaSolidBars"] }
+leptos-icons = { path = "../../", features = ["OcLgCheckCircleFill"] }

@@ -1,11 +1,43 @@
 #[cfg(feature = "IoMailOutline")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "IoMailOutline")]
-/// *This icon requires the feature* `IoMailOutline` *to be enabled*.
+///This icon requires the feature `IoMailOutline` to be enabled.
 #[component]
-pub fn MailOutline(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="40" ry="40" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" /><polyline points="112 160 256 272 400 160" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" /></svg>
-   }
+pub fn MailOutline(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
+        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
+        "http://www.w3.org/2000/svg" x = "48" y = "96" width = "416" height = "320" rx =
+        "40" ry = "40" style =
+        "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"
+        />< polyline xmlns = "http://www.w3.org/2000/svg" points =
+        "112 160 256 272 400 160" style =
+        "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"
+        /> < title > { title } < / title > < / svg >
+    }
 }

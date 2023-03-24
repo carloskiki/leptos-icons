@@ -1,11 +1,41 @@
 #[cfg(feature = "BsStackOverflow")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "BsStackOverflow")]
-/// *This icon requires the feature* `BsStackOverflow` *to be enabled*.
+///This icon requires the feature `BsStackOverflow` to be enabled.
 #[component]
-pub fn StackOverflow(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack-overflow" viewBox="0 0 16 16"><path d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" /><path d="M3.857 13.145h7.137v-1.428H3.857v1.428zM10.254 0 9.108.852l4.26 5.727 1.146-.852L10.254 0zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" /></svg>
-   }
+pub fn StackOverflow(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
+        class = "bi bi-stack-overflow" viewBox = "0 0 16 16" width = { size.clone() }
+        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M3.857 13.145h7.137v-1.428H3.857v1.428zM10.254 0 9.108.852l4.26 5.727 1.146-.852L10.254 0zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z"
+        /> < title > { title } < / title > < / svg >
+    }
 }

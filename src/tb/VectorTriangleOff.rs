@@ -1,11 +1,50 @@
 #[cfg(feature = "TbVectorTriangleOff")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbVectorTriangleOff")]
-/// *This icon requires the feature* `TbVectorTriangleOff` *to be enabled*.
+///This icon requires the feature `TbVectorTriangleOff` to be enabled.
 #[component]
-pub fn VectorTriangleOff(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-vector-triangle-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M10 6v-1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-1" /><path d="M3 17m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z" /><path d="M20.705 20.709a1 1 0 0 1 -.705 .291h-2a1 1 0 0 1 -1 -1v-2c0 -.28 .115 -.532 .3 -.714" /><path d="M6.5 17.1l3.749 -6.823" /><path d="M13.158 9.197l-.658 -1.197" /><path d="M7 19h10" /><path d="M3 3l18 18" /></svg>
-   }
+pub fn VectorTriangleOff(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class =
+        "icon icon-tabler icon-tabler-vector-triangle-off" width = "24" height = "24"
+        viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
+        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
+        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
+        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M10 6v-1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-1" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M3 17m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M20.705 20.709a1 1 0 0 1 -.705 .291h-2a1 1 0 0 1 -1 -1v-2c0 -.28 .115 -.532 .3 -.714"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M6.5 17.1l3.749 -6.823" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M13.158 9.197l-.658 -1.197" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M7 19h10" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M3 3l18 18" /> < title > { title } < / title >
+        < / svg >
+    }
 }

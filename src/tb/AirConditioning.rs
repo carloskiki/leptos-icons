@@ -1,11 +1,47 @@
 #[cfg(feature = "TbAirConditioning")]
-use leptos::{component, Scope, IntoView, view};
-
+use leptos::*;
 #[cfg(feature = "TbAirConditioning")]
-/// *This icon requires the feature* `TbAirConditioning` *to be enabled*.
+///This icon requires the feature `TbAirConditioning` to be enabled.
 #[component]
-pub fn AirConditioning(cx: Scope) -> impl IntoView {
-   view! { cx,
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-air-conditioning" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 16a3 3 0 0 1 -3 3" /><path d="M16 16a3 3 0 0 0 3 3" /><path d="M12 16v4" /><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M7 13v-3a1 1 0 0 1 1 -1h8a1 1 0 0 1 1 1v3" /></svg>
-   }
+pub fn AirConditioning(
+    cx: Scope,
+    /// The size of the icon (The side length of the square surrounding the icon).
+    /// Defaults to "1em".
+    #[prop(into)]
+    #[prop(optional)]
+    size: String,
+    /// HTML class attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    class: String,
+    /// Color of the icon.
+    /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into)]
+    #[prop(optional)]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into)]
+    #[prop(optional)]
+    style: String,
+    /// Accessibility title.
+    #[prop(into)]
+    #[prop(optional)]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class stroke = "currentColor" fill = "currentColor"
+        stroke_witdh = "0" style = style class =
+        "icon icon-tabler icon-tabler-air-conditioning" width = "24" height = "24"
+        viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
+        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
+        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
+        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M8 16a3 3 0 0 1 -3 3" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M16 16a3 3 0 0 0 3 3" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M12 16v4" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M7 13v-3a1 1 0 0 1 1 -1h8a1 1 0 0 1 1 1v3" /> < title > { title } < / title > <
+        / svg >
+    }
 }
