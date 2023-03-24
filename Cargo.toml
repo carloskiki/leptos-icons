@@ -1,11 +1,15 @@
 [package]
 name = "leptos-icons"
-version = "0.1.0"
+version = "0.0.1"
+authors = ["Charles Edward Gagnon"]
 edition = "2021"
-
+description = "Icons library for the leptos web framework"
+readme = "./README.md"
+repository = "https://github.com/Carlosted/leptos-icons"
+licence = "MIT"
+keywords = ["leptos", "icons"]
+categories = ["web-programming"]
 build = "build/main.rs"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 leptos = { version = "0.2.1", default-features = false }
