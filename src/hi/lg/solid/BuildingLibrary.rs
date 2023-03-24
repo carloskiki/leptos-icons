@@ -28,11 +28,13 @@ pub fn BuildingLibrary(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M11.5841 2.37596C11.836 2.20801 12.1642 2.20801 12.4161 2.37596L21.4161 8.37596C21.7608 8.60573 21.8539 9.07138 21.6241 9.41602C21.3944 9.76067 20.9287 9.8538 20.5841 9.62404L12.0001 3.90139L3.4161 9.62404C3.07146 9.8538 2.60581 9.76067 2.37604 9.41602C2.14628 9.07138 2.23941 8.60573 2.58405 8.37596L11.5841 2.37596Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

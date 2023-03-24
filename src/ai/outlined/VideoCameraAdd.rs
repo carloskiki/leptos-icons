@@ -28,14 +28,16 @@ pub fn VideoCameraAdd(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style t = "1569683915274" class = "icon" viewBox =
         "0 0 1024 1024" version = "1.1" p - id = "14734" width = "200" height = "200"
-        width = { size.clone() } height = { size } > < defs xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" ><
-        style type = "text/css" /></ defs >< path xmlns = "http://www.w3.org/2000/svg"
-        xmlns : xlink = "http://www.w3.org/1999/xlink" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < defs
+        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
+        "http://www.w3.org/1999/xlink" >< style type = "text/css" /></ defs >< path xmlns
+        = "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" d =
         "M368 724H252V608c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v116H72c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h116v116c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V788h116c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8z"
         p - id = "14735" />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" d =

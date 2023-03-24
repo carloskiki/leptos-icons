@@ -28,11 +28,13 @@ pub fn ArrowDownThick(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.2" baseProfile = "tiny" width =
-        "24" height = "24" viewBox = "0 0 24 24" width = { size.clone() } height = { size
-        } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "24" height = "24" viewBox = "0 0 24 24" width = size.clone() height = size xmlns
+        = "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M18.414 10.656c-.781-.781-2.047-.781-2.828 0l-1.586 1.586v-7.242c0-1.105-.896-2-2-2-1.105 0-2 .895-2 2v7.242l-1.586-1.586c-.781-.781-2.047-.781-2.828 0s-.781 2.047 0 2.828l6.414 6.414 6.414-6.414c.781-.781.781-2.046 0-2.828z"
         /> < title > { title } < / title > < / svg >
     }

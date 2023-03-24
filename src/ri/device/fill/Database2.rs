@@ -28,11 +28,14 @@ pub fn Database2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
-        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
-        "none" d = "M0 0h24v24H0z" />< path d =
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < g xmlns =
+        "http://www.w3.org/2000/svg" >< path fill = "none" d = "M0 0h24v24H0z" />< path d
+        =
         "M21 9.5v3c0 2.485-4.03 4.5-9 4.5s-9-2.015-9-4.5v-3c0 2.485 4.03 4.5 9 4.5s9-2.015 9-4.5zm-18 5c0 2.485 4.03 4.5 9 4.5s9-2.015 9-4.5v3c0 2.485-4.03 4.5-9 4.5s-9-2.015-9-4.5v-3zm9-2.5c-4.97 0-9-2.015-9-4.5S7.03 3 12 3s9 2.015 9 4.5-4.03 4.5-9 4.5z"
         /></ g > < title > { title } < / title > < / svg >
     }

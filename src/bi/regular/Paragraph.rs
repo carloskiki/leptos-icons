@@ -28,11 +28,13 @@ pub fn Paragraph(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M9 16h2v4h2V6h2v14h2V6h3V4H9c-3.309 0-6 2.691-6 6s2.691 6 6 6zM9 6h2v8H9c-2.206 0-4-1.794-4-4s1.794-4 4-4z"
         /> < title > { title } < / title > < / svg >
     }

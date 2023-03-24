@@ -28,11 +28,14 @@ pub fn Virustotal(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        = "M10.87 12L0 22.68h24V1.32H0zm10.73 8.52H5.28l8.637-8.448L5.28 3.48H21.6z" /> <
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M10.87 12L0 22.68h24V1.32H0zm10.73 8.52H5.28l8.637-8.448L5.28 3.48H21.6z" /> <
         title > { title } < / title > < / svg >
     }
 }

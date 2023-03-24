@@ -28,11 +28,13 @@ pub fn ChevronDoubleLeft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M18.3639 7.75735L16.9497 6.34314L11.2929 12L16.9497 17.6568L18.3639 16.2426L14.1213 12L18.3639 7.75735Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M11.2929 6.34314L12.7071 7.75735L8.46447 12L12.7071 16.2426L11.2929 17.6568L5.63605 12L11.2929 6.34314Z"

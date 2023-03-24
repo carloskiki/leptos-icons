@@ -28,11 +28,14 @@ pub fn VolumeMute(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < line xmlns =
-        "http://www.w3.org/2000/svg" x1 = "416" y1 = "432" x2 = "64" y2 = "80" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "416" y1 = "432" x2 = "64" y2 = "80" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M243.33,98.86a23.89,23.89,0,0,0-25.55,1.82l-.66.51L188.6,124.54a8,8,0,0,0-.59,11.85l54.33,54.33A8,8,0,0,0,256,185.06V120.57A24.51,24.51,0,0,0,243.33,98.86Z"

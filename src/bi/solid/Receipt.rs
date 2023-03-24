@@ -28,11 +28,13 @@ pub fn Receipt(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M20 12v6a1 1 0 0 1-2 0V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v14c0 1.654 1.346 3 3 3h14c1.654 0 3-1.346 3-3v-6h-2zm-6-1v2H6v-2h8zM6 9V7h8v2H6zm8 6v2h-3v-2h3z"
         /> < title > { title } < / title > < / svg >
     }

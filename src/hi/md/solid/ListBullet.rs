@@ -28,11 +28,14 @@ pub fn ListBullet(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M6 4.75C6 4.33579 6.33579 4 6.75 4H17.25C17.6642 4 18 4.33579 18 4.75C18 5.16421 17.6642 5.5 17.25 5.5H6.75C6.33579 5.5 6 5.16421 6 4.75ZM6 10C6 9.58579 6.33579 9.25 6.75 9.25H17.25C17.6642 9.25 18 9.58579 18 10C18 10.4142 17.6642 10.75 17.25 10.75H6.75C6.33579 10.75 6 10.4142 6 10ZM6 15.25C6 14.8358 6.33579 14.5 6.75 14.5H17.25C17.6642 14.5 18 14.8358 18 15.25C18 15.6642 17.6642 16 17.25 16H6.75C6.33579 16 6 15.6642 6 15.25Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

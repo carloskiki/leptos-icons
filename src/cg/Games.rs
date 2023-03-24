@@ -28,11 +28,13 @@ pub fn Games(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z"

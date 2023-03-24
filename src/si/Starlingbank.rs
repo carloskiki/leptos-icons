@@ -28,11 +28,13 @@ pub fn Starlingbank(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        =
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm2.738 3.822h.666v2.724h-.666a4.794 4.794 0 0 0-4.789 4.788V12H7.226v-.666c0-4.142 3.37-7.512 7.512-7.512zM14.05 12h2.723v.666c0 4.142-3.37 7.512-7.512 7.512h-.666v-2.724h.666a4.794 4.794 0 0 0 4.789-4.788z"
         /> < title > { title } < / title > < / svg >
     }

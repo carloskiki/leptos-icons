@@ -28,11 +28,14 @@ pub fn Eye(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
-        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
-        "none" d = "M0 0h24v24H0z" />< path d =
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < g xmlns =
+        "http://www.w3.org/2000/svg" >< path fill = "none" d = "M0 0h24v24H0z" />< path d
+        =
         "M12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9C2.121 6.88 6.608 3 12 3zm0 16a9.005 9.005 0 0 0 8.777-7 9.005 9.005 0 0 0-17.554 0A9.005 9.005 0 0 0 12 19zm0-2.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"
         /></ g > < title > { title } < / title > < / svg >
     }

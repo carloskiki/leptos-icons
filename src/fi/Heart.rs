@@ -28,12 +28,14 @@ pub fn Heart(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
         /> < title > { title } < / title > < / svg >
     }

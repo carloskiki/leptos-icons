@@ -28,14 +28,16 @@ pub fn LetterC(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-letter-c"
         width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M18 9a5 5 0 0 0 -5 -5h-2a5 5 0 0 0 -5 5v6a5 5 0 0 0 5 5h2a5 5 0 0 0 5 -5" /> <
         title > { title } < / title > < / svg >
     }

@@ -28,15 +28,17 @@ pub fn Dog(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-dog" width
         = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d = "M11 5h2" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d = "M11 5h2" /><
+        path xmlns = "http://www.w3.org/2000/svg" d =
         "M19 12c-.667 5.333 -2.333 8 -5 8h-4c-2.667 0 -4.333 -2.667 -5 -8" />< path xmlns
         = "http://www.w3.org/2000/svg" d = "M11 16c0 .667 .333 1 1 1s1 -.333 1 -1h-2z"
         />< path xmlns = "http://www.w3.org/2000/svg" d = "M12 18v2" />< path xmlns =

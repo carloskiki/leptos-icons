@@ -28,11 +28,13 @@ pub fn Microsoft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        =
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M0 0v11.408h11.408V0zm12.594 0v11.408H24V0zM0 12.594V24h11.408V12.594zm12.594 0V24H24V12.594z"
         /> < title > { title } < / title > < / svg >
     }

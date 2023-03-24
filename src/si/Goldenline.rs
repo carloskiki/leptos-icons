@@ -28,11 +28,13 @@ pub fn Goldenline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        =
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M11.997 24a11.995 11.995 0 0 0 11.949-13.04h-6.781v2.943h1.226a6.667 6.667 0 1 1-.114-4.156h5.509A11.995 11.995 0 1 0 12 23.991z"
         /> < title > { title } < / title > < / svg >
     }

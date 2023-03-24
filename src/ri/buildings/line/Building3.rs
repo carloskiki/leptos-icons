@@ -28,12 +28,14 @@ pub fn Building3(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
-        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
-        "none" d = "M0 0h24v24H0z" />< path d =
-        "M10 10.111V1l11 6v14H3V7l7 3.111zm2-5.742v8.82l-7-3.111V19h14V8.187L12 4.37z"
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < g xmlns =
+        "http://www.w3.org/2000/svg" >< path fill = "none" d = "M0 0h24v24H0z" />< path d
+        = "M10 10.111V1l11 6v14H3V7l7 3.111zm2-5.742v8.82l-7-3.111V19h14V8.187L12 4.37z"
         /></ g > < title > { title } < / title > < / svg >
     }
 }

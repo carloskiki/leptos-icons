@@ -28,11 +28,13 @@ pub fn SelectMultiple(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6.933 12.481-3.274-3.274 1.414-1.414 1.726 1.726 4.299-5.159 1.537 1.281-5.702 6.84z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M4 22h11v-2H4V8H2v12c0 1.103.897 2 2 2z" /> < title > { title } < / title > < /

@@ -28,14 +28,17 @@ pub fn DatabaseExport(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-database-export" width = "24" height = "24" viewBox
         = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
-        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
-        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        linecap = "round" stroke - linejoin = "round" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M4 6v6c0 1.657 3.582 3 8 3a19.84 19.84 0 0 0 3.302 -.267m4.698 -2.733v-6" /><

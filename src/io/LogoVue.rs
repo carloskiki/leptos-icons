@@ -28,11 +28,14 @@ pub fn LogoVue(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polygon xmlns =
-        "http://www.w3.org/2000/svg" points =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points =
         "256 144.03 200.51 47.92 121.08 47.92 256 281.61 390.92 47.92 311.49 47.92 256 144.03"
         />< polygon xmlns = "http://www.w3.org/2000/svg" points =
         "409.4 47.92 256 313.61 102.6 47.92 15.74 47.92 256 464.08 496.26 47.92 409.4 47.92"

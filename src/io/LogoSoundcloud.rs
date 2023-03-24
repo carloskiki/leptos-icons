@@ -28,11 +28,13 @@ pub fn LogoSoundcloud(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style id = "Layer_1" data - name = "Layer 1" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M5.8,278a2.11,2.11,0,0,0-2,2L0,308.64,3.74,336.8a2.12,2.12,0,0,0,2.05,2,2.14,2.14,0,0,0,2-2h0l4.44-28.17L7.83,280a2.14,2.14,0,0,0-2-2Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M26.85,262.32a2.13,2.13,0,0,0-4.26,0l-5,46.32,5,45.3a2.13,2.13,0,0,0,4.26,0l5.73-45.31-5.73-46.32Z"

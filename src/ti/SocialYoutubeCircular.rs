@@ -28,11 +28,14 @@ pub fn SocialYoutubeCircular(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" id = "Layer_1" width = "24px"
-        height = "24px" viewBox = "0 0 24 24" width = { size.clone() } height = { size }
-        > < polygon xmlns = "http://www.w3.org/2000/svg" points =
+        height = "24px" viewBox = "0 0 24 24" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points =
         "8.48,13.14 9.21,13.14 9.21,16.75 9.91,16.75 9.91,13.14 10.64,13.14 10.64,12.53 8.48,12.53 "
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M12.17,16c-0.12,0.14-0.53,0.42-0.53,0.02v-2.39h-0.62v2.61c0,0.79,0.79,0.58,1.16,0.17v0.34h0.62v-3.12h-0.62V16H12.17z"

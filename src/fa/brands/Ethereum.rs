@@ -28,10 +28,13 @@ pub fn Ethereum(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 320 512" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 320 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"
         /> < title > { title } < / title > < / svg >
     }

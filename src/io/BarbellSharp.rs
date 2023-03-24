@@ -28,11 +28,14 @@ pub fn BarbellSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polygon xmlns =
-        "http://www.w3.org/2000/svg" points =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points =
         "496 176 438 176 438 112 362 112 362 234 150 234 150 112 74 112 74 176 16 176 16 336 74 336 74 400 150 400 150 278 362 278 362 400 438 400 438 336 496 336 496 176"
         /> < title > { title } < / title > < / svg >
     }

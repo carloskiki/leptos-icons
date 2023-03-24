@@ -28,11 +28,14 @@ pub fn SoundModule(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
-        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
-        "none" d = "M0 0h24v24H0z" />< path d =
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < g xmlns =
+        "http://www.w3.org/2000/svg" >< path fill = "none" d = "M0 0h24v24H0z" />< path d
+        =
         "M21 18v3h-2v-3h-2v-2h6v2h-2zM5 18v3H3v-3H1v-2h6v2H5zm6-12V3h2v3h2v2H9V6h2zm0 4h2v11h-2V10zm-8 4V3h2v11H3zm16 0V3h2v11h-2z"
         /></ g > < title > { title } < / title > < / svg >
     }

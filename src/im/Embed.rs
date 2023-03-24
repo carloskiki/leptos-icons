@@ -28,12 +28,15 @@ pub fn Embed(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d = "M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z" />< path xmlns =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
+        "M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z" />< path xmlns =
         "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
         = "#000000" d = "M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z" /> < title > { title }
         < / title > < / svg >

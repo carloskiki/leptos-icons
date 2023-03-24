@@ -28,11 +28,13 @@ pub fn Square3Stack3d(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M3.19569 12.8694L2.37071 13.353C2.14108 13.4876 2 13.7338 2 14C2 14.2662 2.14108 14.5124 2.37071 14.647L9.62071 18.897C9.85493 19.0343 10.1451 19.0343 10.3793 18.897L17.6293 14.647C17.8589 14.5124 18 14.2662 18 14C18 13.7338 17.8589 13.4876 17.6293 13.353L16.8043 12.8694L11.1379 16.1911C10.4352 16.603 9.56479 16.603 8.86213 16.1911L3.19569 12.8694Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M3.19569 8.86937L2.37071 9.35298C2.14108 9.48759 2 9.73382 2 10C2 10.2662 2.14108 10.5124 2.37071 10.647L9.62071 14.897C9.85493 15.0343 10.1451 15.0343 10.3793 14.897L17.6293 10.647C17.8589 10.5124 18 10.2662 18 10C18 9.73382 17.8589 9.48759 17.6293 9.35298L16.8043 8.86937L11.1379 12.1911C10.4352 12.603 9.56479 12.603 8.86213 12.1911L3.19569 8.86937Z"

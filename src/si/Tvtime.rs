@@ -28,11 +28,14 @@ pub fn Tvtime(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        = "M0 0v24h24V0zm4.8 4.8h14.4v4.8h-4.8v9.6H9.6V9.6H4.8Z" /> < title > { title } <
-        / title > < / svg >
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M0 0v24h24V0zm4.8 4.8h14.4v4.8h-4.8v9.6H9.6V9.6H4.8Z" /> < title > { title } < /
+        title > < / svg >
     }
 }

@@ -28,11 +28,13 @@ pub fn RectangleStack(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M5.12744 3.50197C5.16817 3.50066 5.20906 3.5 5.25011 3.5H14.7501C14.7912 3.5 14.832 3.50066 14.8728 3.50197C14.5645 2.62705 13.7305 2 12.7501 2H7.25011C6.26971 2 5.43576 2.62705 5.12744 3.50197Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M1 10.25C1 9.00736 2.00736 8 3.25 8H16.75C17.9926 8 19 9.00736 19 10.25V15.75C19 16.9926 17.9926 18 16.75 18H3.25C2.00736 18 1 16.9926 1 15.75V10.25Z"

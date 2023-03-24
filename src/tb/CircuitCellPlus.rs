@@ -28,16 +28,19 @@ pub fn CircuitCellPlus(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-circuit-cell-plus" width = "24" height = "24"
         viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
-        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
-        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M2 12h9" />< path xmlns = "http://www.w3.org/2000/svg" d = "M15 12h7" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M11 5v14" />< path xmlns =
+        stroke - linecap = "round" stroke - linejoin = "round" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M2 12h9" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M15 12h7" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M11 5v14" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M15 9v6" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M3 5h4" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M5 3v4" /> < title > { title } < / title > < /

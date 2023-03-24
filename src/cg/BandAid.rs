@@ -28,11 +28,13 @@ pub fn BandAid(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M11.9389 9.76478C11.7055 10.2653 11.1105 10.4819 10.61 10.2485C10.1094 10.0151 9.89288 9.42008 10.1263 8.91954C10.3597 8.419 10.9547 8.20244 11.4552 8.43585C11.9558 8.66925 12.1723 9.26423 11.9389 9.76478Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M8.9195 13.8737C9.42004 14.1071 10.015 13.8905 10.2484 13.39C10.4818 12.8895 10.2653 12.2945 9.76474 12.0611C9.2642 11.8277 8.66922 12.0442 8.43581 12.5448C8.20241 13.0453 8.41896 13.6403 8.9195 13.8737Z"

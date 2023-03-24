@@ -28,11 +28,13 @@ pub fn PrismOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style id = "icons" viewBox = "0 0 512 512" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        =
+        stroke_witdh = "0" style = style id = "icons" viewBox = "0 0 512 512" width =
+        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M229.73,45.88,37.53,327.79a31.79,31.79,0,0,0,11.31,46L241,476.26a31.77,31.77,0,0,0,29.92,0l192.2-102.51a31.79,31.79,0,0,0,11.31-46L282.27,45.88A31.8,31.8,0,0,0,229.73,45.88Z"
         fill = "none" stroke = "#000" stroke - linecap = "round" stroke - linejoin =
         "round" stroke - width = "32" />< line xmlns = "http://www.w3.org/2000/svg" x1 =

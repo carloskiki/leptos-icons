@@ -28,11 +28,13 @@ pub fn LogoWechat(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" id =
-        "XMLID_501_-1" data - name = "XMLID 501 -1" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" id = "XMLID_501_-1" data - name = "XMLID 501 -1" d =
         "M408.67,298.53a21,21,0,1,1,20.9-21,20.85,20.85,0,0,1-20.9,21m-102.17,0a21,21,0,1,1,20.9-21,20.84,20.84,0,0,1-20.9,21M458.59,417.39C491.1,394.08,512,359.13,512,319.51c0-71.08-68.5-129.35-154.41-129.35S203.17,248.43,203.17,319.51s68.5,129.34,154.42,129.34c17.41,0,34.83-2.33,49.92-7,2.49-.86,3.48-1.17,4.64-1.17a16.67,16.67,0,0,1,8.13,2.34L454,462.83a11.62,11.62,0,0,0,3.48,1.17,5,5,0,0,0,4.65-4.66,14.27,14.27,0,0,0-.77-3.86c-.41-1.46-5-16-7.36-25.27a18.94,18.94,0,0,1-.33-3.47,11.4,11.4,0,0,1,5-9.35"
         />< path xmlns = "http://www.w3.org/2000/svg" id = "XMLID_505_-7" data - name =
         "XMLID 505 -7" d =

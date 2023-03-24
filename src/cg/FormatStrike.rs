@@ -28,14 +28,16 @@ pub fn FormatStrike(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M13 7H17V5H7V7H11V10H13V7Z" fill =
-        "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M11 19V14H13V19H11Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M5 13H19V11H5V13Z" fill = "currentColor" /> <
-        title > { title } < / title > < / svg >
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M13 7H17V5H7V7H11V10H13V7Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M11 19V14H13V19H11Z" fill = "currentColor" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M5 13H19V11H5V13Z" fill =
+        "currentColor" /> < title > { title } < / title > < / svg >
     }
 }

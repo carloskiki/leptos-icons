@@ -28,10 +28,13 @@ pub fn EllipsisVertical(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 128 512" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 128 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M56 472a56 56 0 1 1 0-112 56 56 0 1 1 0 112zm0-160a56 56 0 1 1 0-112 56 56 0 1 1 0 112zM0 96a56 56 0 1 1 112 0A56 56 0 1 1 0 96z"
         /> < title > { title } < / title > < / svg >
     }

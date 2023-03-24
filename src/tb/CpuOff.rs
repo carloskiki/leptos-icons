@@ -28,14 +28,16 @@ pub fn CpuOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-cpu-off"
         width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M9 5h9a1 1 0 0 1 1 1v9m-.292 3.706a1 1 0 0 1 -.708 .294h-12a1 1 0 0 1 -1 -1v-12c0 -.272 .108 -.518 .284 -.698"
         />< path xmlns = "http://www.w3.org/2000/svg" d = "M13 9h2v2m0 4h-6v-6" />< path
         xmlns = "http://www.w3.org/2000/svg" d = "M3 10h2" />< path xmlns =

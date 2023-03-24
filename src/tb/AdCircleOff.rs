@@ -28,14 +28,17 @@ pub fn AdCircleOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-ad-circle-off" width = "24" height = "24" viewBox =
         "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
-        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
-        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        linecap = "round" stroke - linejoin = "round" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M4.91 4.949a9.968 9.968 0 0 0 -2.91 7.051c0 5.523 4.477 10 10 10a9.968 9.968 0 0 0 7.05 -2.909"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M20.778 16.793a9.955 9.955 0 0 0 1.222 -4.793c0 -5.523 -4.477 -10 -10 -10c-1.74 0 -3.376 .444 -4.8 1.225"

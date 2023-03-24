@@ -28,12 +28,14 @@ pub fn ImageOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "48" y = "80" width = "416" height = "352" rx =
-        "48" ry = "48" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "48" y = "80" width = "416" height = "352" rx = "48" ry = "48" style =
         "fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />< circle xmlns
         = "http://www.w3.org/2000/svg" cx = "336" cy = "176" r = "32" style =
         "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< path xmlns =

@@ -28,11 +28,13 @@ pub fn EditNoise(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M10.4044 17.7657C10.419 17.7803 10.4329 17.7953 10.446 17.8108C10.1948 17.7439 9.95005 17.661 9.71293 17.5634C9.95429 17.5106 10.2167 17.578 10.4044 17.7657Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M8.43574 16.705C8.40862 16.7321 8.37994 16.7567 8.34999 16.7788C7.95661 16.4775 7.60163 16.1285 7.29364 15.7406C7.31765 15.7068 7.3448 15.6746 7.37508 15.6443C7.66797 15.3514 8.14285 15.3514 8.43574 15.6443C8.72863 15.9372 8.72863 16.4121 8.43574 16.705Z"

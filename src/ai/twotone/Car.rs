@@ -28,11 +28,13 @@ pub fn Car(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = { size.clone()
-        } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" fill =
-        "#D9D9D9" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" fill = "#D9D9D9" d =
         "M199.6 474L184 517v237h656V517l-15.6-43H199.6zM264 621c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm388 75c0 4.4-3.6 8-8 8H380c-4.4 0-8-3.6-8-8v-84c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v36h168v-36c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v84zm108-75c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M720 581a40 40 0 1 0 80 0 40 40 0 1 0-80 0z" />< path xmlns =

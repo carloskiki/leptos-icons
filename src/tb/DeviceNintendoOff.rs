@@ -28,14 +28,17 @@ pub fn DeviceNintendoOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-device-nintendo-off" width = "24" height = "24"
         viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
-        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
-        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        stroke - linecap = "round" stroke - linejoin = "round" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M4.713 4.718a4 4 0 0 0 -1.713 3.282v8a4 4 0 0 0 4 4h3v-10m0 -4v-2h-2" />< path
         xmlns = "http://www.w3.org/2000/svg" d =
         "M14 10v-6h3a4 4 0 0 1 4 4v8c0 .308 -.035 .608 -.1 .896m-1.62 2.39a3.982 3.982 0 0 1 -2.28 .714h-3v-6"

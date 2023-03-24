@@ -28,11 +28,14 @@ pub fn Remote(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M12.904 9.57L8.928 5.596l3.976-3.976-.619-.62L8 5.286v.619l4.285 4.285.62-.618zM3 5.62l4.072 4.07L3 13.763l.619.618L8 10v-.619L3.619 5 3 5.619z"
         /> < title > { title } < / title > < / svg >
     }

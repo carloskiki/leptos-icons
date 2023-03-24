@@ -28,12 +28,14 @@ pub fn CircleLeft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM8 1.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5 2.91-6.5 6.5-6.5z"
         />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" fill = "#000000" d =

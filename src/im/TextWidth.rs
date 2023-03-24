@@ -28,12 +28,14 @@ pub fn TextWidth(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M4 14v2l-3-2.5 3-2.5v2h8v-2l3 2.5-3 2.5v-2zM13 1v4l-1-2h-3v7h2v1h-6v-1h2v-7h-3l-1 2v-4z"
         /> < title > { title } < / title > < / svg >
     }

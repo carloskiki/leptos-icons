@@ -28,14 +28,17 @@ pub fn PropellerOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-propeller-off" width = "24" height = "24" viewBox =
         "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
-        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
-        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        linecap = "round" stroke - linejoin = "round" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M10.448 10.432a3 3 0 1 0 4.106 4.143" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M14.272 10.272c.66 -1.459 1.058 -2.888 1.198 -4.286c.22 -1.63 -.762 -2.986 -3.47 -2.986c-1.94 0 -3 .696 -3.355 1.69m.697 4.653c.145 .384 .309 .77 .491 1.157"

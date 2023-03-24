@@ -28,11 +28,14 @@ pub fn CloseAll(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M8.621 8.086l-.707-.707L6.5 8.793 5.086 7.379l-.707.707L5.793 9.5l-1.414 1.414.707.707L6.5 10.207l1.414 1.414.707-.707L7.207 9.5l1.414-1.414z"
         />< path xmlns = "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule
         = "evenodd" d =

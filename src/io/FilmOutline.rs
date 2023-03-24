@@ -28,12 +28,14 @@ pub fn FilmOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "48" y = "96" width = "416" height = "320" rx =
-        "28" ry = "28" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "48" y = "96" width = "416" height = "320" rx = "28" ry = "28" style =
         "fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />< rect xmlns =
         "http://www.w3.org/2000/svg" x = "384" y = "336" width = "80" height = "80" rx =
         "28" ry = "28" style =

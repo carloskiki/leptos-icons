@@ -28,11 +28,13 @@ pub fn SearchCircleOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M256,80A176,176,0,1,0,432,256,176,176,0,0,0,256,80Z" style =
         "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< path xmlns =
         "http://www.w3.org/2000/svg" d =

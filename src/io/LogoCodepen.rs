@@ -28,11 +28,13 @@ pub fn LogoCodepen(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M241.24,303.94c-15.32-10.36-30.74-20.57-46.06-30.93-2-1.38-3.43-1.48-5.5,0L150.8,299.13C182,319.9,244,361.32,244,361.32V307.53C244,306.31,242.45,304.75,241.24,303.94Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M195.09,240.67q23.19-15.24,46.11-30.86a7.54,7.54,0,0,0,2.8-5.34v-51.7s-62,41.12-93.26,61.94c13.7,9.16,26.67,17.91,39.78,26.44C191.54,241.81,193.92,241.43,195.09,240.67Z"

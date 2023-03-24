@@ -28,13 +28,15 @@ pub fn Hdmi(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-hdmi" viewBox = "0 0 16 16" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" d =
-        "M2.5 7a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        class = "bi bi-hdmi" viewBox = "0 0 16 16" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M2.5 7a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11Z"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M1 5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h.293l.707.707a1 1 0 0 0 .707.293h10.586a1 1 0 0 0 .707-.293l.707-.707H15a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H1Zm0 1h14v3h-.293a1 1 0 0 0-.707.293l-.707.707H2.707L2 9.293A1 1 0 0 0 1.293 9H1V6Z"
         /> < title > { title } < / title > < / svg >
     }

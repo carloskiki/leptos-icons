@@ -28,14 +28,16 @@ pub fn Hanger2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-hanger-2"
         width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M12 9l-7.971 4.428a2 2 0 0 0 -1.029 1.749v.823a2 2 0 0 0 2 2h1" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M18 18h1a2 2 0 0 0 2 -2v-.823a2 2 0 0 0 -1.029 -1.749l-7.971 -4.428c-1.457 -.81 -1.993 -2.333 -2 -4a2 2 0 1 1 4 0"

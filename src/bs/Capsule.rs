@@ -28,11 +28,14 @@ pub fn Capsule(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-capsule" viewBox = "0 0 16 16" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        class = "bi bi-capsule" viewBox = "0 0 16 16" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429l4.243 4.242Z"
         /> < title > { title } < / title > < / svg >
     }

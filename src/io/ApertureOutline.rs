@@ -28,11 +28,13 @@ pub fn ApertureOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z"
         style = "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< line
         xmlns = "http://www.w3.org/2000/svg" x1 = "360" y1 = "94.59" x2 = "360" y2 =

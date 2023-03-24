@@ -28,12 +28,14 @@ pub fn FileOpenoffice(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M10.785 7.37c-0.948-0.448-2.156-0.538-3.044 0.095 1.080-0.103 2.265 0.076 3.049 0.893 0.75-0.861 1.939-1.022 3.015-0.933-0.898-0.596-2.082-0.516-3.019-0.054v0zM10.401 9.465c-1.068-0.025-2.101 0.362-2.986 0.939-1.675-0.712-3.793-0.58-5.219 0.609 0.411-0.015 0.813-0.116 1.22-0.169 1.487-0.148 3.072 0.221 4.196 1.247 0.465-0.68 1.119-1.223 1.87-1.561 0.986-0.477 2.096-0.526 3.169-0.539-0.651-0.448-1.478-0.531-2.249-0.526z"
         />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" fill = "#000000" d =

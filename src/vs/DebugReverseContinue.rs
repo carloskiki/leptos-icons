@@ -28,11 +28,14 @@ pub fn DebugReverseContinue(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M13.5 2H12v12h1.5V2zm-4.936.39L9.75 3v10l-1.186.61-7-5V7.39l7-5zM3.29 8l4.96 3.543V4.457L3.29 8z"
         /> < title > { title } < / title > < / svg >
     }

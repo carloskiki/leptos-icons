@@ -28,16 +28,19 @@ pub fn TrophyOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-trophy-off" width = "24" height = "24" viewBox =
         "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
-        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
-        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8 21h8" />< path xmlns = "http://www.w3.org/2000/svg" d = "M12 17v4" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M8 4h9" />< path xmlns =
+        linecap = "round" stroke - linejoin = "round" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M8 21h8" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M12 17v4" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M8 4h9" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M17 4v8c0 .31 -.028 .612 -.082 .905m-1.384 2.632a5 5 0 0 1 -8.534 -3.537v-5" /><
         path xmlns = "http://www.w3.org/2000/svg" d =

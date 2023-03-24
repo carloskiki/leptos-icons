@@ -28,11 +28,14 @@ pub fn GitCommitOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "256" cy = "256" r = "96" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "256" cy = "256" r = "96" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"
         />< line xmlns = "http://www.w3.org/2000/svg" x1 = "160" y1 = "256" x2 = "48" y2
         = "256" style =

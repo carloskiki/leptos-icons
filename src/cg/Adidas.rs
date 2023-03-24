@@ -28,11 +28,13 @@ pub fn Adidas(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z" fill =

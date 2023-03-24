@@ -28,11 +28,13 @@ pub fn ObjectsHorizontalLeft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M2 2h2v20H2z" />< rect xmlns =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d = "M2 2h2v20H2z" />< rect xmlns =
         "http://www.w3.org/2000/svg" x = "6" y = "13" width = "16" height = "6" rx = "1"
         />< rect xmlns = "http://www.w3.org/2000/svg" x = "6" y = "5" width = "12" height
         = "6" rx = "1" /> < title > { title } < / title > < / svg >

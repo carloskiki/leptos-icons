@@ -28,13 +28,15 @@ pub fn BorderLeft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M16 8V16H9L9 19H19L19 5L9 5V8H16Z" fill =
-        "currentColor" fill - opacity = "0.3" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M7 5L7 19H4L4 5L7 5Z" fill = "currentColor" />
-        < title > { title } < / title > < / svg >
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M16 8V16H9L9 19H19L19 5L9 5V8H16Z" fill = "currentColor" fill - opacity = "0.3"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M7 5L7 19H4L4 5L7 5Z" fill =
+        "currentColor" /> < title > { title } < / title > < / svg >
     }
 }

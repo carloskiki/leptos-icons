@@ -28,12 +28,14 @@ pub fn FontSize2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
-        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
-        "none" d = "M0 0h24v24H0z" />< path d =
-        "M10 6v15H8V6H2V4h14v2h-6zm8 8v7h-2v-7h-3v-2h8v2h-3z" /></ g > < title > { title
-        } < / title > < / svg >
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < g xmlns =
+        "http://www.w3.org/2000/svg" >< path fill = "none" d = "M0 0h24v24H0z" />< path d
+        = "M10 6v15H8V6H2V4h14v2h-6zm8 8v7h-2v-7h-3v-2h8v2h-3z" /></ g > < title > {
+        title } < / title > < / svg >
     }
 }

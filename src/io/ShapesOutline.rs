@@ -28,11 +28,14 @@ pub fn ShapesOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polygon xmlns =
-        "http://www.w3.org/2000/svg" points = "336 320 32 320 184 48 336 320" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points = "336 320 32 320 184 48 336 320" style =
         "fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M265.32,194.51A144,144,0,1,1,192,320" style =
         "fill:none;stroke:#000;stroke-linejoin:round;stroke-width:32px" /> < title > {

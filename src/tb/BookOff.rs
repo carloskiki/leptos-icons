@@ -28,14 +28,16 @@ pub fn BookOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-book-off"
         width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M3 19a9 9 0 0 1 9 0a9 9 0 0 1 5.899 -1.096" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M3 6a9 9 0 0 1 2.114 -.884m3.8 -.21c1.07 .17 2.116 .534 3.086 1.094a9 9 0 0 1 9 0"

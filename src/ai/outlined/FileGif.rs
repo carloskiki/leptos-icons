@@ -28,14 +28,16 @@ pub fn FileGif(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style t = "1569683725598" class = "icon" viewBox =
         "0 0 1024 1024" version = "1.1" p - id = "13780" width = "200" height = "200"
-        width = { size.clone() } height = { size } > < defs xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" ><
-        style type = "text/css" /></ defs >< path xmlns = "http://www.w3.org/2000/svg"
-        xmlns : xlink = "http://www.w3.org/1999/xlink" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < defs
+        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
+        "http://www.w3.org/1999/xlink" >< style type = "text/css" /></ defs >< path xmlns
+        = "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" d =
         "M551.5 490.5H521c-4.6 0-8.4 3.7-8.4 8.4V720c0 4.6 3.7 8.4 8.4 8.4h30.5c4.6 0 8.4-3.7 8.4-8.4V498.9c-0.1-4.6-3.8-8.4-8.4-8.4zM477.3 600h-88.1c-4.6 0-8.4 3.7-8.4 8.4v23.8c0 4.6 3.7 8.4 8.4 8.4h47.6v0.7c-0.6 29.9-23 49.8-56.5 49.8-39.2 0-63.6-30.7-63.6-81.4 0-50.1 23.9-80.6 62.3-80.6 28.1 0 47.5 13.5 55.4 38.3l0.9 2.8h49.2l-0.7-4.6C475.9 515.9 434.7 484 379 484c-68.8 0-113 49.4-113 125.9 0 77.5 43.7 126.1 113.6 126.1 64.4 0 106-40.3 106-102.9v-24.8c0-4.6-3.7-8.3-8.3-8.3z"
         p - id = "13781" />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" d =

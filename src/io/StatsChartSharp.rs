@@ -28,14 +28,16 @@ pub fn StatsChartSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M128,496H48V304h80Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M352,496H272V208h80Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M464,496H384V96h80Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M240,496H160V16h80Z" /> < title > { title } < /
-        title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M128,496H48V304h80Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M352,496H272V208h80Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M464,496H384V96h80Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M240,496H160V16h80Z" /> < title > { title } < / title > < / svg >
     }
 }

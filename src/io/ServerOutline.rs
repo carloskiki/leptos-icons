@@ -28,11 +28,14 @@ pub fn ServerOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < ellipse xmlns =
-        "http://www.w3.org/2000/svg" cx = "256" cy = "128" rx = "192" ry = "80" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < ellipse xmlns = "http://www.w3.org/2000/svg" cx
+        = "256" cy = "128" rx = "192" ry = "80" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M448,214c0,44.18-86,80-192,80S64,258.18,64,214" style =

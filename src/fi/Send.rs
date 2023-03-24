@@ -28,13 +28,16 @@ pub fn Send(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < line xmlns = "http://www.w3.org/2000/svg" x1 = "22" y1 = "2" x2 = "11" y2 =
-        "13" />< polygon xmlns = "http://www.w3.org/2000/svg" points =
-        "22 2 15 22 11 13 2 9 22 2" /> < title > { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "22" y1 = "2" x2 = "11" y2 = "13" />< polygon xmlns =
+        "http://www.w3.org/2000/svg" points = "22 2 15 22 11 13 2 9 22 2" /> < title > {
+        title } < / title > < / svg >
     }
 }

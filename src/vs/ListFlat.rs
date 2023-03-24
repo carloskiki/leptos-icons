@@ -28,14 +28,17 @@ pub fn ListFlat(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "2" y = "9" width = "9" height = "1" />< rect
-        xmlns = "http://www.w3.org/2000/svg" x = "2" y = "12" width = "8" height = "1"
-        />< rect xmlns = "http://www.w3.org/2000/svg" x = "2" y = "6" width = "12" height
-        = "1" />< rect xmlns = "http://www.w3.org/2000/svg" x = "2" y = "3" width = "11"
-        height = "1" /> < title > { title } < / title > < / svg >
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "2" y = "9" width = "9" height = "1" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "2" y = "12" width = "8" height = "1" />< rect
+        xmlns = "http://www.w3.org/2000/svg" x = "2" y = "6" width = "12" height = "1"
+        />< rect xmlns = "http://www.w3.org/2000/svg" x = "2" y = "3" width = "11" height
+        = "1" /> < title > { title } < / title > < / svg >
     }
 }

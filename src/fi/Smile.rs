@@ -28,15 +28,17 @@ pub fn Smile(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = "24" height = "24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < circle xmlns = "http://www.w3.org/2000/svg" cx = "12" cy = "12" r = "10" /><
-        path xmlns = "http://www.w3.org/2000/svg" d = "M8 14s1.5 2 4 2 4-2 4-2" />< line
-        xmlns = "http://www.w3.org/2000/svg" x1 = "9" y1 = "9" x2 = "9.01" y2 = "9" /><
-        line xmlns = "http://www.w3.org/2000/svg" x1 = "15" y1 = "9" x2 = "15.01" y2 =
-        "9" /> < title > { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "12" cy = "12" r = "10" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M8 14s1.5 2 4 2 4-2 4-2" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "9"
+        y1 = "9" x2 = "9.01" y2 = "9" />< line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "15" y1 = "9" x2 = "15.01" y2 = "9" /> < title > { title } < / title > < / svg >
     }
 }

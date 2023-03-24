@@ -28,13 +28,16 @@ pub fn AlbumsSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "128" y = "64" width = "256" height = "32" /><
-        rect xmlns = "http://www.w3.org/2000/svg" x = "96" y = "112" width = "320" height
-        = "32" />< path xmlns = "http://www.w3.org/2000/svg" d = "M464,448H48V160H464Z"
-        /> < title > { title } < / title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "128" y = "64" width = "256" height = "32" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "96" y = "112" width = "320" height = "32" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M464,448H48V160H464Z" /> < title >
+        { title } < / title > < / svg >
     }
 }

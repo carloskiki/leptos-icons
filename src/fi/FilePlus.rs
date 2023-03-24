@@ -28,12 +28,14 @@ pub fn FilePlus(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />< polyline xmlns =
         "http://www.w3.org/2000/svg" points = "14 2 14 8 20 8" />< line xmlns =
         "http://www.w3.org/2000/svg" x1 = "12" y1 = "18" x2 = "12" y2 = "12" />< line

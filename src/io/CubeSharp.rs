@@ -28,14 +28,17 @@ pub fn CubeSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polygon xmlns =
-        "http://www.w3.org/2000/svg" points = "48 170 48 366.92 240 480 240 284 48 170"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M272,480,464,366.92V170L272,284ZM448,357.64h0Z" />< polygon xmlns =
-        "http://www.w3.org/2000/svg" points = "448 144 256 32 64 144 256 256 448 144" />
-        < title > { title } < / title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points = "48 170 48 366.92 240 480 240 284 48 170" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M272,480,464,366.92V170L272,284ZM448,357.64h0Z"
+        />< polygon xmlns = "http://www.w3.org/2000/svg" points =
+        "448 144 256 32 64 144 256 256 448 144" /> < title > { title } < / title > < /
+        svg >
     }
 }

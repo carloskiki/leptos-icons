@@ -28,11 +28,13 @@ pub fn Reconciliation(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = { size.clone()
-        } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" fill =
-        "#D9D9D9" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" fill = "#D9D9D9" d =
         "M740 344H404V240H304v160h176c17.7 0 32 14.3 32 32v360h328V240H740v104zM584 448c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56zm92 301c-50.8 0-92-41.2-92-92s41.2-92 92-92 92 41.2 92 92-41.2 92-92 92zm92-341v96c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-96c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8z"
         />< path xmlns = "http://www.w3.org/2000/svg" fill = "#D9D9D9" d =
         "M642 657a34 34 0 1 0 68 0 34 34 0 1 0-68 0z" />< path xmlns =

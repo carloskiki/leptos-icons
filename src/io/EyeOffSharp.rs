@@ -28,12 +28,15 @@ pub fn EyeOffSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "240.44" y = "0.03" width = "31.11" height =
-        "511.95" transform = "translate(-106.04 256) rotate(-45)" />< path xmlns =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "240.44" y = "0.03" width = "31.11" height = "511.95" transform =
+        "translate(-106.04 256) rotate(-45)" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M259.34,192.09l60.57,60.57A64.07,64.07,0,0,0,259.34,192.09Z" />< path xmlns =
         "http://www.w3.org/2000/svg" d =

@@ -28,14 +28,16 @@ pub fn FundView(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style t = "1569683816874" class = "icon" viewBox =
         "0 0 1024 1024" version = "1.1" p - id = "14256" width = "200" height = "200"
-        width = { size.clone() } height = { size } > < defs xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" ><
-        style type = "text/css" /></ defs >< path xmlns = "http://www.w3.org/2000/svg"
-        xmlns : xlink = "http://www.w3.org/1999/xlink" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < defs
+        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
+        "http://www.w3.org/1999/xlink" >< style type = "text/css" /></ defs >< path xmlns
+        = "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" d =
         "M956 686.5l-0.1-0.1-0.1-0.1C911.7 593 843.4 545 752.5 545s-159.2 48.1-203.4 141.3v0.1c-5.4 11.5-5.4 24.9 0 36.4C593.3 816 661.6 864 752.5 864s159.2-48.1 203.4-141.3c5.4-11.5 5.4-24.8 0.1-36.2zM752.5 800c-62.1 0-107.4-30-141.1-95.5C645 639 690.4 609 752.5 609c62.1 0 107.4 30 141.1 95.5C860 770 814.6 800 752.5 800z"
         p - id = "14257" />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" d =

@@ -28,12 +28,14 @@ pub fn Drop(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = { size.clone() }
-        height = { size } > < g xmlns = "http://www.w3.org/2000/svg" >< path fill =
-        "none" d = "M0 0h24v24H0z" />< path d =
-        "M5.636 6.636L12 .272l6.364 6.364a9 9 0 1 1-12.728 0z" /></ g > < title > { title
-        } < / title > < / svg >
+        stroke_witdh = "0" style = style viewBox = "0 0 24 24" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < g xmlns =
+        "http://www.w3.org/2000/svg" >< path fill = "none" d = "M0 0h24v24H0z" />< path d
+        = "M5.636 6.636L12 .272l6.364 6.364a9 9 0 1 1-12.728 0z" /></ g > < title > {
+        title } < / title > < / svg >
     }
 }

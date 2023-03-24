@@ -28,14 +28,16 @@ pub fn FundProjectionScreen(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style t = "1569683753031" class = "icon" viewBox =
         "0 0 1024 1024" version = "1.1" p - id = "14137" width = "200" height = "200"
-        width = { size.clone() } height = { size } > < defs xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" ><
-        style type = "text/css" /></ defs >< path xmlns = "http://www.w3.org/2000/svg"
-        xmlns : xlink = "http://www.w3.org/1999/xlink" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < defs
+        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
+        "http://www.w3.org/1999/xlink" >< style type = "text/css" /></ defs >< path xmlns
+        = "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" d =
         "M312.1 591.5c3.1 3.1 8.2 3.1 11.3 0l101.8-101.8 86.1 86.2c3.1 3.1 8.2 3.1 11.3 0l226.3-226.5c3.1-3.1 3.1-8.2 0-11.3l-36.8-36.8c-3.1-3.1-8.2-3.1-11.3 0L517 485.3l-86.1-86.2c-3.1-3.1-8.2-3.1-11.3 0L275.3 543.4c-3.1 3.1-3.1 8.2 0 11.3l36.8 36.8z"
         p - id = "14138" />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" d =

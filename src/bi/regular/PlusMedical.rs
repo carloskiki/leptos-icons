@@ -28,11 +28,13 @@ pub fn PlusMedical(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M15 2.013H9V9H2v6h7v6.987h6V15h7V9h-7z" /> <
-        title > { title } < / title > < / svg >
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d = "M15 2.013H9V9H2v6h7v6.987h6V15h7V9h-7z"
+        /> < title > { title } < / title > < / svg >
     }
 }

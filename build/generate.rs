@@ -156,6 +156,7 @@ fn icon_file_content(
         .parse()
         .map_err(|_| anyhow!("could not transform icon_content to ident"))?;
 
+    // Leptos bug: Cannot specify mut to props...
     let tokens = quote! {
         #[cfg(feature = #icon_feature_name)]
         use leptos::*;
@@ -178,6 +179,8 @@ fn icon_file_content(
             /// Accessibility title.
             #[prop(into)] #[prop(optional)] title: String,
             ) -> impl IntoView {
+            let style = format!("{} color: {};", style, color);
+            let size = if size == "" { "1em" } else { &size };
             view! { cx,
             <svg
             class=class
@@ -186,8 +189,9 @@ fn icon_file_content(
             stroke_witdh="0"
             style=style
             #attributes
-            width={size.clone()}
-            height={size}
+            width=size.clone()
+            height=size
+            xmlns="http://www.w3.org/2000/svg"
             >
                 #icon_content_ident
                 <title>{title}</title>

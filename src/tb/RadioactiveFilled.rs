@@ -28,14 +28,17 @@ pub fn RadioactiveFilled(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-radioactive-filled" width = "24" height = "24"
         viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
-        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
-        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        stroke - linecap = "round" stroke - linejoin = "round" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M21 11a1 1 0 0 1 1 1a10 10 0 0 1 -5 8.656a1 1 0 0 1 -1.302 -.268l-.064 -.098l-3 -5.19a.995 .995 0 0 1 -.133 -.542l.01 -.11l.023 -.106l.034 -.106l.046 -.1l.056 -.094l.067 -.089a.994 .994 0 0 1 .165 -.155l.098 -.064a2 2 0 0 0 .993 -1.57l.007 -.163a1 1 0 0 1 .883 -.994l.117 -.007h6z"
         stroke - width = "0" fill = "currentColor" />< path xmlns =
         "http://www.w3.org/2000/svg" d =

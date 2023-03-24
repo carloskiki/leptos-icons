@@ -28,11 +28,14 @@ pub fn PersonAddSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polygon xmlns =
-        "http://www.w3.org/2000/svg" points =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points =
         "106 304 106 250 160 250 160 214 106 214 106 160 70 160 70 214 16 214 16 250 70 250 70 304 106 304"
         />< circle xmlns = "http://www.w3.org/2000/svg" cx = "288" cy = "144" r = "112"
         />< path xmlns = "http://www.w3.org/2000/svg" d =

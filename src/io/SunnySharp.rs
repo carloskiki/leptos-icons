@@ -28,16 +28,19 @@ pub fn SunnySharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "234" y = "26" width = "44" height = "92" /><
-        rect xmlns = "http://www.w3.org/2000/svg" x = "234" y = "394" width = "44" height
-        = "92" />< rect xmlns = "http://www.w3.org/2000/svg" x = "340.11" y = "103.89"
-        width = "92" height = "44" transform = "translate(24.07 309.89) rotate(-45)" /><
-        rect xmlns = "http://www.w3.org/2000/svg" x = "79.89" y = "364.11" width = "92"
-        height = "44" transform = "translate(-236.14 202.1) rotate(-45)" />< rect xmlns =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "234" y = "26" width = "44" height = "92" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "234" y = "394" width = "44" height = "92" /><
+        rect xmlns = "http://www.w3.org/2000/svg" x = "340.11" y = "103.89" width = "92"
+        height = "44" transform = "translate(24.07 309.89) rotate(-45)" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "79.89" y = "364.11" width = "92" height = "44"
+        transform = "translate(-236.14 202.1) rotate(-45)" />< rect xmlns =
         "http://www.w3.org/2000/svg" x = "394" y = "234" width = "92" height = "44" /><
         rect xmlns = "http://www.w3.org/2000/svg" x = "26" y = "234" width = "92" height
         = "44" />< rect xmlns = "http://www.w3.org/2000/svg" x = "364.11" y = "340.11"

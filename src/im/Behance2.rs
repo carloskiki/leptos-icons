@@ -28,12 +28,14 @@ pub fn Behance2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M6.316 7.009c0.203-0.147 0.3-0.391 0.3-0.728 0-0.188-0.031-0.341-0.097-0.459-0.069-0.119-0.156-0.213-0.272-0.278-0.112-0.069-0.241-0.116-0.388-0.141-0.144-0.028-0.297-0.041-0.453-0.041h-1.647v1.869h1.781c0.313 0.003 0.572-0.072 0.775-0.222z"
         />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" fill = "#000000" d =

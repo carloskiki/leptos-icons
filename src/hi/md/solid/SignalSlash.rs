@@ -28,11 +28,13 @@ pub fn SignalSlash(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M2.21967 2.21967C2.51256 1.92678 2.98744 1.92678 3.28033 2.21967L10.0626 9.00193C10.565 9.03295 10.967 9.43498 10.9981 9.93741L17.7803 16.7197C18.0732 17.0126 18.0732 17.4874 17.7803 17.7803C17.4874 18.0732 17.0126 18.0732 16.7197 17.7803L9.93741 10.9981C9.43498 10.967 9.03295 10.565 9.00193 10.0626L2.21967 3.28033C1.92678 2.98744 1.92678 2.51256 2.21967 2.21967Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M3.63604 16.364C0.670686 13.3986 0.207189 8.87882 2.24555 5.42753L3.3485 6.53048C1.87267 9.35787 2.32207 12.9287 4.6967 15.3033C4.98959 15.5962 4.98959 16.0711 4.6967 16.364C4.40381 16.6569 3.92893 16.6569 3.63604 16.364Z"

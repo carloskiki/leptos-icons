@@ -28,12 +28,14 @@ pub fn BarcodeSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polyline xmlns =
-        "http://www.w3.org/2000/svg" points = "400 400.33 448 400 448 112 400 112.33"
-        style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "400 400.33 448 400 448 112 400 112.33" style =
         "fill:none;stroke:#000;stroke-linecap:square;stroke-linejoin:round;stroke-width:32px"
         />< polyline xmlns = "http://www.w3.org/2000/svg" points =
         "112 112 64 112.33 64 400.33 112 400" style =

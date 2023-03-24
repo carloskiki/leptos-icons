@@ -28,11 +28,13 @@ pub fn Delicious(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        = "M12 12H0v12h12V12zM24 0H12v12h12V0z" /> < title > { title } < / title > < /
-        svg >
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M12 12H0v12h12V12zM24 0H12v12h12V0z" /> < title
+        > { title } < / title > < / svg >
     }
 }

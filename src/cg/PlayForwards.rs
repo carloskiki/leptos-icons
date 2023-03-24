@@ -28,14 +28,17 @@ pub fn PlayForwards(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M21.0023 17H18.0023V7H21.0023V17Z" fill =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M21.0023 17H18.0023V7H21.0023V17Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M17.0023 12L10 17V7L17.0023 12Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M17.0023 12L10 17V7L17.0023 12Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M2 17L9.00232 12L2 7V17Z" fill = "currentColor"
-        /> < title > { title } < / title > < / svg >
+        "M2 17L9.00232 12L2 7V17Z" fill = "currentColor" /> < title > { title } < / title
+        > < / svg >
     }
 }

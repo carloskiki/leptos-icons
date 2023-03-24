@@ -28,18 +28,21 @@ pub fn TextDirectionLtr(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-text-direction-ltr" width = "24" height = "24"
         viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
-        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
-        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M5 19h14" />< path xmlns = "http://www.w3.org/2000/svg" d = "M17 21l2 -2l-2 -2"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M16 4h-6.5a3.5 3.5 0 0 0 0 7h.5" />< path xmlns = "http://www.w3.org/2000/svg" d
-        = "M14 15v-11" />< path xmlns = "http://www.w3.org/2000/svg" d = "M10 15v-11" />
-        < title > { title } < / title > < / svg >
+        stroke - linecap = "round" stroke - linejoin = "round" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M5 19h14" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M17 21l2 -2l-2 -2" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M16 4h-6.5a3.5 3.5 0 0 0 0 7h.5" />< path xmlns
+        = "http://www.w3.org/2000/svg" d = "M14 15v-11" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M10 15v-11" /> < title > { title } < / title >
+        < / svg >
     }
 }

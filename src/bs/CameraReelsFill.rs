@@ -28,14 +28,16 @@ pub fn CameraReelsFill(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-camera-reels-fill" viewBox = "0 0 16 16" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
-        "M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />< path xmlns = "http://www.w3.org/2000/svg"
-        d = "M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        class = "bi bi-camera-reels-fill" viewBox = "0 0 16 16" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />< path
+        xmlns = "http://www.w3.org/2000/svg" d = "M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /><
+        path xmlns = "http://www.w3.org/2000/svg" d =
         "M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"
         /> < title > { title } < / title > < / svg >
     }

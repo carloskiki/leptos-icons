@@ -28,13 +28,15 @@ pub fn BandageOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "-24.43" y = "167.88" width = "560.87" height =
-        "176.25" rx = "88.12" ry = "88.12" transform =
-        "translate(-106.04 256) rotate(-45)" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "-24.43" y = "167.88" width = "560.87" height = "176.25" rx = "88.12" ry =
+        "88.12" transform = "translate(-106.04 256) rotate(-45)" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"
         />< rect xmlns = "http://www.w3.org/2000/svg" x = "169.41" y = "156.59" width =
         "176" height = "196" rx = "32" ry = "32" transform =

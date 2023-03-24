@@ -28,16 +28,19 @@ pub fn Scissors(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < circle xmlns = "http://www.w3.org/2000/svg" cx = "6" cy = "6" r = "3" /><
-        circle xmlns = "http://www.w3.org/2000/svg" cx = "6" cy = "18" r = "3" />< line
-        xmlns = "http://www.w3.org/2000/svg" x1 = "20" y1 = "4" x2 = "8.12" y2 = "15.88"
-        />< line xmlns = "http://www.w3.org/2000/svg" x1 = "14.47" y1 = "14.48" x2 = "20"
-        y2 = "20" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "8.12" y1 = "8.12"
-        x2 = "12" y2 = "12" /> < title > { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "6" cy = "6" r = "3" />< circle xmlns = "http://www.w3.org/2000/svg" cx = "6" cy
+        = "18" r = "3" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "20" y1 = "4"
+        x2 = "8.12" y2 = "15.88" />< line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "14.47" y1 = "14.48" x2 = "20" y2 = "20" />< line xmlns =
+        "http://www.w3.org/2000/svg" x1 = "8.12" y1 = "8.12" x2 = "12" y2 = "12" /> <
+        title > { title } < / title > < / svg >
     }
 }

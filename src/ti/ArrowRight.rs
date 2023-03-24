@@ -28,11 +28,13 @@ pub fn ArrowRight(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.2" baseProfile = "tiny" width =
-        "24" height = "24" viewBox = "0 0 24 24" width = { size.clone() } height = { size
-        } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "24" height = "24" viewBox = "0 0 24 24" width = size.clone() height = size xmlns
+        = "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M13.293 7.293c-.391.391-.391 1.023 0 1.414l2.293 2.293h-7.586c-.552 0-1 .448-1 1s.448 1 1 1h7.586l-2.293 2.293c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l4.707-4.707-4.707-4.707c-.391-.391-1.023-.391-1.414 0z"
         /> < title > { title } < / title > < / svg >
     }

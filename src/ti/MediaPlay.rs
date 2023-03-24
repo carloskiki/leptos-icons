@@ -28,11 +28,13 @@ pub fn MediaPlay(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.2" baseProfile = "tiny" width =
-        "24" height = "24" viewBox = "0 0 24 24" width = { size.clone() } height = { size
-        } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "24" height = "24" viewBox = "0 0 24 24" width = size.clone() height = size xmlns
+        = "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M10.396 18.433c2.641-2.574 6.604-6.433 6.604-6.433s-3.963-3.859-6.604-6.433c-.363-.349-.853-.567-1.396-.567-1.104 0-2 .896-2 2v10c0 1.104.896 2 2 2 .543 0 1.033-.218 1.396-.567z"
         /> < title > { title } < / title > < / svg >
     }

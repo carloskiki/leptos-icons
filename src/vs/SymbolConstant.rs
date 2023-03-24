@@ -28,14 +28,16 @@ pub fn SymbolConstant(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
-        "M4 6h8v1H4V6zm8 3H4v1h8V9z" />< path xmlns = "http://www.w3.org/2000/svg" fill -
-        rule = "evenodd" clip - rule = "evenodd" d =
-        "M1 4l1-1h12l1 1v8l-1 1H2l-1-1V4zm1 0v8h12V4H2z" /> < title > { title } < / title
-        > < / svg >
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d = "M4 6h8v1H4V6zm8 3H4v1h8V9z" /><
+        path xmlns = "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule =
+        "evenodd" d = "M1 4l1-1h12l1 1v8l-1 1H2l-1-1V4zm1 0v8h12V4H2z" /> < title > {
+        title } < / title > < / svg >
     }
 }

@@ -28,14 +28,16 @@ pub fn WhatsApp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style t = "1569683925316" class = "icon" viewBox =
         "0 0 1024 1024" version = "1.1" p - id = "14972" width = "200" height = "200"
-        width = { size.clone() } height = { size } > < defs xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" ><
-        style type = "text/css" /></ defs >< path xmlns = "http://www.w3.org/2000/svg"
-        xmlns : xlink = "http://www.w3.org/1999/xlink" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < defs
+        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
+        "http://www.w3.org/1999/xlink" >< style type = "text/css" /></ defs >< path xmlns
+        = "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" d =
         "M713.5 599.9c-10.9-5.6-65.2-32.2-75.3-35.8-10.1-3.8-17.5-5.6-24.8 5.6-7.4 11.1-28.4 35.8-35 43.3-6.4 7.4-12.9 8.3-23.8 2.8-64.8-32.4-107.3-57.8-150-131.1-11.3-19.5 11.3-18.1 32.4-60.2 3.6-7.4 1.8-13.7-1-19.3-2.8-5.6-24.8-59.8-34-81.9-8.9-21.5-18.1-18.5-24.8-18.9-6.4-0.4-13.7-0.4-21.1-0.4-7.4 0-19.3 2.8-29.4 13.7-10.1 11.1-38.6 37.8-38.6 92s39.5 106.7 44.9 114.1c5.6 7.4 77.7 118.6 188.4 166.5 70 30.2 97.4 32.8 132.4 27.6 21.3-3.2 65.2-26.6 74.3-52.5 9.1-25.8 9.1-47.9 6.4-52.5-2.7-4.9-10.1-7.7-21-13z"
         p - id = "14973" />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" d =

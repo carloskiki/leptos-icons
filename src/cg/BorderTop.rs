@@ -28,13 +28,15 @@ pub fn BorderTop(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M8 16H16V9L19 9L19 19L5 19L5 9L8 9V16Z" fill =
-        "currentColor" fill - opacity = "0.3" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M5 7L19 7V4L5 4L5 7Z" fill = "#110000" /> <
-        title > { title } < / title > < / svg >
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M8 16H16V9L19 9L19 19L5 19L5 9L8 9V16Z" fill = "currentColor" fill - opacity =
+        "0.3" />< path xmlns = "http://www.w3.org/2000/svg" d = "M5 7L19 7V4L5 4L5 7Z"
+        fill = "#110000" /> < title > { title } < / title > < / svg >
     }
 }

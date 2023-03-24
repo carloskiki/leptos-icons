@@ -28,13 +28,15 @@ pub fn Framer(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M12 21L12 9L6 9L6 15L12 21Z" fill =
-        "currentColor" fill - opacity = "0.5" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M18 9V3H6L12 9H6V15H18L12 9H18Z" fill =
-        "currentColor" /> < title > { title } < / title > < / svg >
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M12 21L12 9L6 9L6 15L12 21Z" fill = "currentColor" fill - opacity = "0.5" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M18 9V3H6L12 9H6V15H18L12 9H18Z"
+        fill = "currentColor" /> < title > { title } < / title > < / svg >
     }
 }

@@ -28,12 +28,14 @@ pub fn Dot(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-dot" viewBox = "0 0 16 16" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" /> < title > { title } < / title >
-        < / svg >
+        class = "bi bi-dot" viewBox = "0 0 16 16" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+        < title > { title } < / title > < / svg >
     }
 }

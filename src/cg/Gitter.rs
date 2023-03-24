@@ -28,15 +28,18 @@ pub fn Gitter(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M5 1.5H7V14.5H5V1.5Z" fill = "currentColor" /><
-        path xmlns = "http://www.w3.org/2000/svg" d = "M9 4.5H11V22.5H9V4.5Z" fill =
-        "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M15 4.5H13V22.5H15V4.5Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M17 4.5H19V14.5H17V4.5Z" fill = "currentColor"
-        /> < title > { title } < / title > < / svg >
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M5 1.5H7V14.5H5V1.5Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M9 4.5H11V22.5H9V4.5Z" fill = "currentColor"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M15 4.5H13V22.5H15V4.5Z" fill
+        = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M17 4.5H19V14.5H17V4.5Z" fill = "currentColor" /> < title > { title } < / title
+        > < / svg >
     }
 }

@@ -28,11 +28,13 @@ pub fn Cake(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M6.74999 0.979492L5.86612 1.86339C5.37796 2.35154 5.37796 3.143 5.86612 3.63115C6.35427 4.11931 7.14573 4.11931 7.63388 3.63115C8.12204 3.143 8.12204 2.35154 7.63388 1.86339L6.74999 0.979492Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M13.25 0.979492L12.3661 1.86339C11.878 2.35154 11.878 3.143 12.3661 3.63115C12.8543 4.11931 13.6457 4.11931 14.1339 3.63115C14.622 3.143 14.622 2.35154 14.1339 1.86339L13.25 0.979492Z"

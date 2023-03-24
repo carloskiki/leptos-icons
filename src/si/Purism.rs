@@ -28,11 +28,14 @@ pub fn Purism(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        = "M24 19.588H0V4.412h24zM2.824 16.765h18.352v-9.53H2.824Z" /> < title > { title
-        } < / title > < / svg >
+        stroke_witdh = "0" style = style role = "img" viewBox = "0 0 24 24" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
+        "M24 19.588H0V4.412h24zM2.824 16.765h18.352v-9.53H2.824Z" /> < title > { title }
+        < / title > < / svg >
     }
 }

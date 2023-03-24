@@ -28,12 +28,14 @@ pub fn Youtube2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "40" height = "16"
-        viewBox = "0 0 40 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 40 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M5.375 2.647c0.003-0.014 0.005-0.023 0.006-0.028l0.016-0.118-0.74-0.004c-0.668-0.004-0.873 0-0.891 0.017-0.009 0.008-0.24 0.885-0.651 2.473-0.196 0.758-0.361 1.363-0.367 1.345s-0.24-0.883-0.522-1.922c-0.281-1.039-0.517-1.894-0.524-1.901-0.010-0.010-0.906-0.014-1.632-0.008-0.105 0.001-0.164-0.205 0.938 3.299 0.152 0.485 0.381 1.172 0.507 1.526 0.146 0.408 0.25 0.724 0.321 0.987 0.126 0.501 0.13 0.815 0.103 1.182-0.032 0.423-0.036 3.413-0.005 3.463 0.024 0.038 1.425 0.056 1.558 0.020 0.021-0.006 0.035-0.026 0.045-0.139 0.033-0.097 0.036-0.484 0.036-2.090v-2.051l0.090-0.283c0.059-0.185 0.206-0.672 0.328-1.082s0.269-0.9 0.327-1.090c0.529-1.724 1.033-3.419 1.047-3.516l0.011-0.079z"
         />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" fill = "#000000" d =

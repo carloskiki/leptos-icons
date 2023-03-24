@@ -28,16 +28,18 @@ pub fn BallAmericanFootballOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-ball-american-football-off" width = "24" height =
         "24" viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill =
-        "none" stroke - linecap = "round" stroke - linejoin = "round" width = { size
-        .clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke
-        = "none" d = "M0 0h24v24H0z" fill = "none" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M15 9l-1 1m-2 2l-3 3" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M10 12l2 2" />< path xmlns =
+        "none" stroke - linecap = "round" stroke - linejoin = "round" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M15 9l-1 1m-2 2l-3 3" />< path
+        xmlns = "http://www.w3.org/2000/svg" d = "M10 12l2 2" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M8 21a5 5 0 0 0 -5 -5" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M6.813 6.802a12.96 12.96 0 0 0 -3.813 9.198a5 5 0 0 0 5 5a12.96 12.96 0 0 0 9.186 -3.801m1.789 -2.227a12.94 12.94 0 0 0 2.025 -6.972a5 5 0 0 0 -5 -5a12.94 12.94 0 0 0 -6.967 2.022"

@@ -28,12 +28,15 @@ pub fn NotificationsCircleSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M295.68,351.43c0,.19,0,.38,0,.57H296Z" />< path
-        xmlns = "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M295.68,351.43c0,.19,0,.38,0,.57H296Z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M256,384c22.28,0,39.36-10.63,39.66-32H216C216,373.75,233.53,384,256,384Z" style
         = "fill:none" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M295.67,352H296l-.32-.57C295.68,351.62,295.67,351.81,295.67,352Z" style =

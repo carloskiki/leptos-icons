@@ -28,11 +28,13 @@ pub fn ThumbsDown(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M39.94,178l144.16,6.12c4.61.36,23.9,1.22,23.9,25.88,0,23.8-19.16,25.33-24.14,25.88L39.94,242C27.27,241.87,16,227.56,16,210S27.27,178.13,39.94,178ZM181.39,309.66,74.65,318C62,318,48,301.31,48,284.12v-.33c0-16.33,11.14-29.63,24.88-29.79l108.45,1.72C208,259,208,275.16,208,282.12,208,305,186.2,309.26,181.39,309.66ZM90.15,32l89.37,8.93C204,41.86,208,58.18,208,68.4,208,86.79,194.59,93,181.33,93l-91,3C75.78,95.78,64,81.51,64,64S75.68,32.34,90.15,32ZM55.79,103.5l126.4,6.22c9.39.63,25.81,3,25.81,26.36,0,12-4.35,25.62-25,27.53L55.79,167.5C42.65,167.35,32,154,32,136.08S42.65,103.65,55.79,103.5Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M378.45,273.93A15.84,15.84,0,0,1,386,272h0a15.93,15.93,0,0,0-7.51,1.91Z" style =

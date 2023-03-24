@@ -28,14 +28,16 @@ pub fn GridSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M240,240H32V32H240Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M480,240H272V32H480Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M240,480H32V272H240Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M480,480H272V272H480Z" /> < title > { title } <
-        / title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M240,240H32V32H240Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M480,240H272V32H480Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M240,480H32V272H240Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M480,480H272V272H480Z" /> < title > { title } < / title > < / svg >
     }
 }

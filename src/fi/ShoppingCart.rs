@@ -28,14 +28,16 @@ pub fn ShoppingCart(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < circle xmlns = "http://www.w3.org/2000/svg" cx = "9" cy = "21" r = "1" /><
-        circle xmlns = "http://www.w3.org/2000/svg" cx = "20" cy = "21" r = "1" />< path
-        xmlns = "http://www.w3.org/2000/svg" d =
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "9" cy = "21" r = "1" />< circle xmlns = "http://www.w3.org/2000/svg" cx = "20"
+        cy = "21" r = "1" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /> < title > {
         title } < / title > < / svg >
     }

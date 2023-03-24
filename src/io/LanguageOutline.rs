@@ -28,11 +28,14 @@ pub fn LanguageOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < line xmlns =
-        "http://www.w3.org/2000/svg" x1 = "48" y1 = "112" x2 = "336" y2 = "112" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "48" y1 = "112" x2 = "336" y2 = "112" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"
         />< line xmlns = "http://www.w3.org/2000/svg" x1 = "192" y1 = "64" x2 = "192" y2
         = "112" style =

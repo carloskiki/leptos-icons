@@ -28,11 +28,14 @@ pub fn Bookshelf(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-bookshelf" viewBox = "0 0 16 16" width = { size.clone() } height =
-        { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        class = "bi bi-bookshelf" viewBox = "0 0 16 16" width = size.clone() height =
+        size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M2.5 0a.5.5 0 0 1 .5.5V2h10V.5a.5.5 0 0 1 1 0v15a.5.5 0 0 1-1 0V15H3v.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zM3 14h10v-3H3v3zm0-4h10V7H3v3zm0-4h10V3H3v3z"
         /> < title > { title } < / title > < / svg >
     }

@@ -28,12 +28,14 @@ pub fn Frustrated(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M5.724 4.428c-0.543-0.271-1.080-0.407-1.102-0.413-0.268-0.067-0.539 0.096-0.606 0.364s0.096 0.539 0.364 0.606c0.275 0.070 0.602 0.189 0.89 0.334-0.166 0.179-0.268 0.418-0.268 0.681 0 0.552 0.448 1 1 1s1-0.448 1-1c0-0.018-0.001-0.036-0.002-0.054-0.032-0.741-0.706-1.234-1.275-1.518z"
         />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" fill = "#000000" d =

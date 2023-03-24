@@ -28,12 +28,15 @@ pub fn CloudOfflineSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "240" y = "-31.53" width = "32" height =
-        "575.06" transform = "translate(-106.04 256) rotate(-45)" />< path xmlns =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "240" y = "-31.53" width = "32" height = "575.06" transform =
+        "translate(-106.04 256) rotate(-45)" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M38.72,212.78C13.39,235.88,0,267.42,0,304c0,36,14.38,68.88,40.49,92.59C65.64,419.43,99.56,432,136,432H364.12L110.51,178.39C82.5,183.78,57.42,195.72,38.72,212.78Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =

@@ -28,17 +28,20 @@ pub fn MagnetOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M421.83,293.82A144,144,0,0,0,218.18,90.17"
-        style = "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M353.94,225.94a48,48,0,0,0-67.88-67.88"
-        style = "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< line
-        xmlns = "http://www.w3.org/2000/svg" x1 = "192" y1 = "464" x2 = "192" y2 = "416"
-        style = "stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"
-        />< line xmlns = "http://www.w3.org/2000/svg" x1 = "90.18" y1 = "421.82" x2 =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M421.83,293.82A144,144,0,0,0,218.18,90.17" style =
+        "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M353.94,225.94a48,48,0,0,0-67.88-67.88" style =
+        "fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:32px" />< line xmlns =
+        "http://www.w3.org/2000/svg" x1 = "192" y1 = "464" x2 = "192" y2 = "416" style =
+        "stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" /><
+        line xmlns = "http://www.w3.org/2000/svg" x1 = "90.18" y1 = "421.82" x2 =
         "124.12" y2 = "387.88" style =
         "stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" /><
         line xmlns = "http://www.w3.org/2000/svg" x1 = "48" y1 = "320" x2 = "96" y2 =

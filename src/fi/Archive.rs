@@ -28,14 +28,17 @@ pub fn Archive(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < polyline xmlns = "http://www.w3.org/2000/svg" points = "21 8 21 21 3 21 3 8"
-        />< rect xmlns = "http://www.w3.org/2000/svg" x = "1" y = "3" width = "22" height
-        = "5" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "10" y1 = "12" x2 = "14"
-        y2 = "12" /> < title > { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "21 8 21 21 3 21 3 8" />< rect xmlns = "http://www.w3.org/2000/svg" x =
+        "1" y = "3" width = "22" height = "5" />< line xmlns =
+        "http://www.w3.org/2000/svg" x1 = "10" y1 = "12" x2 = "14" y2 = "12" /> < title >
+        { title } < / title > < / svg >
     }
 }

@@ -28,11 +28,13 @@ pub fn BellAlert(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M4.21444 3.2267C4.47824 2.90735 4.43321 2.43462 4.11386 2.17082C3.79452 1.90702 3.32178 1.95204 3.05798 2.27139C2.1587 3.36002 1.50992 4.66481 1.20153 6.09691C1.11433 6.50184 1.37191 6.90079 1.77684 6.98799C2.18177 7.07519 2.58072 6.81762 2.66792 6.41268C2.92443 5.22148 3.46427 4.13482 4.21444 3.2267Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M16.9417 2.27139C16.6779 1.95204 16.2051 1.90702 15.8858 2.17082C15.5664 2.43462 15.5214 2.90735 15.7852 3.2267C16.5354 4.13482 17.0752 5.22148 17.3317 6.41268C17.4189 6.81762 17.8179 7.07519 18.2228 6.98799C18.6277 6.90079 18.8853 6.50184 18.7981 6.09691C18.4897 4.66481 17.8409 3.36002 16.9417 2.27139Z"

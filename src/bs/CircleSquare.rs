@@ -28,13 +28,15 @@ pub fn CircleSquare(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-circle-square" viewBox = "0 0 16 16" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
-        "M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        class = "bi bi-circle-square" viewBox = "0 0 16 16" width = size.clone() height =
+        size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M0 6a6 6 0 1 1 12 0A6 6 0 0 1 0 6z" />< path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M12.93 5h1.57a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1.57a6.953 6.953 0 0 1-1-.22v1.79A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 4h-1.79c.097.324.17.658.22 1z"
         /> < title > { title } < / title > < / svg >
     }

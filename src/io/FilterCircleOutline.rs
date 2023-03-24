@@ -28,11 +28,14 @@ pub fn FilterCircleOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" fill = "none"
-        stroke = "#000" stroke - width = "32" stroke - miterlimit = "10" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke - width = "32"
+        stroke - miterlimit = "10" d =
         "M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z" /><
         line xmlns = "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke -
         width = "32" stroke - linecap = "round" stroke - linejoin = "round" x1 = "144" y1

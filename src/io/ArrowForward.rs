@@ -28,11 +28,14 @@ pub fn ArrowForward(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polyline xmlns =
-        "http://www.w3.org/2000/svg" points = "268 112 412 256 268 400" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "268 112 412 256 268 400" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"
         />< line xmlns = "http://www.w3.org/2000/svg" x1 = "392" y1 = "256" x2 = "100" y2
         = "256" style =

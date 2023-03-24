@@ -28,11 +28,13 @@ pub fn CreditCard(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = { size.clone()
-        } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" fill =
-        "#D9D9D9" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" fill = "#D9D9D9" d =
         "M136 792h752V440H136v352zm507-144c0-4.4 3.6-8 8-8h165c4.4 0 8 3.6 8 8v72c0 4.4-3.6 8-8 8H651c-4.4 0-8-3.6-8-8v-72zM136 232h752v120H136z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M651 728h165c4.4 0 8-3.6 8-8v-72c0-4.4-3.6-8-8-8H651c-4.4 0-8 3.6-8 8v72c0 4.4 3.6 8 8 8z"

@@ -28,16 +28,19 @@ pub fn GraphScatter(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M15 13V14H1.5L1 13.5V0H2V13H15Z" />< rect xmlns
-        = "http://www.w3.org/2000/svg" x = "5" y = "2" width = "2" height = "2" />< rect
-        xmlns = "http://www.w3.org/2000/svg" x = "12" y = "1" width = "2" height = "2"
-        />< rect xmlns = "http://www.w3.org/2000/svg" x = "8" y = "5" width = "2" height
-        = "2" />< rect xmlns = "http://www.w3.org/2000/svg" x = "5" y = "9" width = "2"
-        height = "2" />< rect xmlns = "http://www.w3.org/2000/svg" x = "12" y = "8" width
-        = "2" height = "2" /> < title > { title } < / title > < / svg >
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M15 13V14H1.5L1 13.5V0H2V13H15Z" />< rect xmlns = "http://www.w3.org/2000/svg" x
+        = "5" y = "2" width = "2" height = "2" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "12" y = "1" width = "2" height = "2" />< rect
+        xmlns = "http://www.w3.org/2000/svg" x = "8" y = "5" width = "2" height = "2" /><
+        rect xmlns = "http://www.w3.org/2000/svg" x = "5" y = "9" width = "2" height =
+        "2" />< rect xmlns = "http://www.w3.org/2000/svg" x = "12" y = "8" width = "2"
+        height = "2" /> < title > { title } < / title > < / svg >
     }
 }

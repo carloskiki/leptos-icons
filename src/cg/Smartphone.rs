@@ -28,13 +28,15 @@ pub fn Smartphone(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M13 16H11V18H13V16Z" fill = "currentColor" /><
-        path xmlns = "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule =
-        "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M13 16H11V18H13V16Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
         "M5 4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V4ZM7 4H17V20H7L7 4Z"
         fill = "currentColor" /> < title > { title } < / title > < / svg >
     }

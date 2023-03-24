@@ -28,11 +28,14 @@ pub fn ExclamationCircleFill(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-exclamation-circle-fill" viewBox = "0 0 16 16" width = { size
-        .clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        class = "bi bi-exclamation-circle-fill" viewBox = "0 0 16 16" width = size
+        .clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
         /> < title > { title } < / title > < / svg >
     }

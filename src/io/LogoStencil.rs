@@ -28,13 +28,16 @@ pub fn LogoStencil(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M188.8,334.07H386.13L279.47,448H83.2Z" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M512,199H106.61L0,313H405.39Z" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M232.2,64H428.8L322.62,177.93H125.87Z"
-        /> < title > { title } < / title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M188.8,334.07H386.13L279.47,448H83.2Z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M512,199H106.61L0,313H405.39Z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M232.2,64H428.8L322.62,177.93H125.87Z" /> <
+        title > { title } < / title > < / svg >
     }
 }

@@ -28,11 +28,13 @@ pub fn CurrencyDollar(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M10.7499 10.8176V13.4324C11.1816 13.3527 11.5745 13.2046 11.8876 12.9999C12.3698 12.6846 12.4999 12.352 12.4999 12.125C12.4999 11.898 12.3698 11.5654 11.8876 11.2501C11.5745 11.0454 11.1816 10.8973 10.7499 10.8176Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M8.32961 8.61947C8.38337 8.67543 8.44464 8.73053 8.51404 8.78416C8.72197 8.94484 8.97355 9.06777 9.25 9.1469V6.60315C9.17545 6.62449 9.10271 6.64901 9.03215 6.6766C8.98721 6.69417 8.94315 6.71299 8.90007 6.73302C8.75996 6.79816 8.63019 6.87614 8.51404 6.96589C8.13658 7.25757 8 7.59253 8 7.87503C8 8.05887 8.05784 8.26493 8.20228 8.46683C8.23898 8.51812 8.28126 8.56915 8.32961 8.61947Z"

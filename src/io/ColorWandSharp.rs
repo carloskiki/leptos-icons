@@ -28,12 +28,15 @@ pub fn ColorWandSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "158.6" y = "150.86" width = "95.03" height =
-        "110.51" transform = "translate(-85.38 206.12) rotate(-45)" />< polygon xmlns =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "158.6" y = "150.86" width = "95.03" height = "110.51" transform =
+        "translate(-85.38 206.12) rotate(-45)" />< polygon xmlns =
         "http://www.w3.org/2000/svg" points =
         "301.41 234.21 234.22 301.41 412 480 480 412 301.41 234.21" />< rect xmlns =
         "http://www.w3.org/2000/svg" x = "32" y = "176" width = "80" height = "32" /><

@@ -28,13 +28,15 @@ pub fn CartAdd(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "10.5" cy = "19.5" r = "1.5" />< circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "17.5" cy = "19.5" r = "1.5" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > <
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "10.5" cy = "19.5" r = "1.5" /><
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "17.5" cy = "19.5" r = "1.5" /><
+        path xmlns = "http://www.w3.org/2000/svg" d =
         "M21 7H7.334L6.18 4.23A1.995 1.995 0 0 0 4.333 3H2v2h2.334l4.743 11.385c.155.372.52.615.923.615h8c.417 0 .79-.259.937-.648l3-8A1.003 1.003 0 0 0 21 7zm-4 6h-2v2h-2v-2h-2v-2h2V9h2v2h2v2z"
         /> < title > { title } < / title > < / svg >
     }

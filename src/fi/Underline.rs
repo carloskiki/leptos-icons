@@ -28,12 +28,14 @@ pub fn Underline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < path xmlns = "http://www.w3.org/2000/svg" d =
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3" />< line xmlns =
         "http://www.w3.org/2000/svg" x1 = "4" y1 = "21" x2 = "20" y2 = "21" /> < title >
         { title } < / title > < / svg >

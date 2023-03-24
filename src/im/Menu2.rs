@@ -28,16 +28,18 @@ pub fn Menu2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "22" height = "16"
-        viewBox = "0 0 22 16" width = { size.clone() } height = { size } > < path xmlns =
+        viewBox = "0 0 22 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
+        "M0 3h14v3h-14v-3zM0 7h14v3h-14v-3zM0 11h14v3h-14v-3z" />< path xmlns =
         "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d = "M0 3h14v3h-14v-3zM0 7h14v3h-14v-3zM0 11h14v3h-14v-3z" />< path
-        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
-        "http://www.w3.org/1999/xlink" fill = "#000000" d = "M15.5 9l3 3 3-3z" />< path
-        xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
-        "http://www.w3.org/1999/xlink" fill = "#000000" d = "M21.5 8l-3-3-3 3z" /> <
-        title > { title } < / title > < / svg >
+        = "#000000" d = "M15.5 9l3 3 3-3z" />< path xmlns = "http://www.w3.org/2000/svg"
+        xmlns : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
+        "M21.5 8l-3-3-3 3z" /> < title > { title } < / title > < / svg >
     }
 }

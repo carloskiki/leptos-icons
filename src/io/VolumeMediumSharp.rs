@@ -28,11 +28,14 @@ pub fn VolumeMediumSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polygon xmlns =
-        "http://www.w3.org/2000/svg" points =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points =
         "157.65 176.1 64 176.1 64 335.9 157.65 335.9 288 440 288 72 157.65 176.1" /><
         path xmlns = "http://www.w3.org/2000/svg" d =
         "M352,320c9.74-19.41,16-40.81,16-64,0-23.51-6-44.4-16-64" style =

@@ -28,11 +28,14 @@ pub fn ChevronDoubleRight(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M10.2094 14.7698C9.92228 14.4713 9.93159 13.9965 10.2302 13.7094L14.1679 10L10.2302 6.29062C9.93159 6.00353 9.92228 5.52875 10.2094 5.23017C10.4965 4.93159 10.9713 4.92228 11.2698 5.20937L15.7698 9.45937C15.9169 9.60078 16 9.79599 16 10C16 10.204 15.9169 10.3992 15.7698 10.5406L11.2698 14.7906C10.9713 15.0777 10.4965 15.0684 10.2094 14.7698Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

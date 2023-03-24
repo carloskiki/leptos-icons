@@ -28,15 +28,17 @@ pub fn PlayListCheck(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M15 6H3V8H15V6Z" fill = "currentColor" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M15 10H3V12H15V10Z" fill =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M15 6H3V8H15V6Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M15 10H3V12H15V10Z" fill = "currentColor" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M3 14H11V16H3V14Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M3 14H11V16H3V14Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
         "M11.9905 15.025L13.4049 13.6106L15.526 15.7321L19.7687 11.4895L21.1829 12.9037L15.526 18.5606L11.9905 15.025Z"
         fill = "currentColor" /> < title > { title } < / title > < / svg >
     }

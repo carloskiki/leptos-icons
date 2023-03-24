@@ -28,14 +28,16 @@ pub fn MoveLeft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M19.071 17V15H11.071V17H19.071Z" fill =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M19.071 17V15H11.071V17H19.071Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M19.071 9V7H11.071V9H19.071Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M19.071 9V7H11.071V9H19.071Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
         "M19.071 12.9999V10.9999H9.07109V7.96454L5 11.9644L9.07109 15.9644V12.9999H19.071Z"
         fill = "currentColor" /> < title > { title } < / title > < / svg >
     }

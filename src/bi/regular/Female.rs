@@ -28,12 +28,14 @@ pub fn Female(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "12" cy = "4" r = "2" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > <
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "12" cy = "4" r = "2" />< path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M14.948 7.684A.997.997 0 0 0 14 7h-4a.998.998 0 0 0-.948.684l-2 6 1.775.593L8 18h2v4h4v-4h2l-.827-3.724 1.775-.593-2-5.999z"
         /> < title > { title } < / title > < / svg >
     }

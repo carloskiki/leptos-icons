@@ -28,12 +28,15 @@ pub fn Gift(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M200,144h40V104a40,40,0,1,0-40,40Z" style =
-        "fill:none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M200,144h40V104a40,40,0,1,0-40,40Z" style = "fill:none" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M352,104a40,40,0,0,0-80,0v40h40A40,40,0,0,0,352,104Z" style = "fill:none" /><
         path xmlns = "http://www.w3.org/2000/svg" d =
         "M80,416a64,64,0,0,0,64,64h92a4,4,0,0,0,4-4V292a4,4,0,0,0-4-4H88a8,8,0,0,0-8,8Z"

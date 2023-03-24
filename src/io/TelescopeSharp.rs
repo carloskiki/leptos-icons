@@ -28,10 +28,13 @@ pub fn TelescopeSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < polygon xmlns = "http://www.w3.org/2000/svg" points =
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < polygon xmlns =
+        "http://www.w3.org/2000/svg" points =
         "1.41 292.9 46.23 369.87 144.37 313.49 99.64 236.12 1.41 292.9" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M287.87,252.34l23.67-13.81-63.42-110-132.92,77C133.75,237.51,176,310,176,310l15.53-8.32c.24-.13.55,0,.83,0L102.65,496h35.16l99.05-214.25,23.24-13.4L358,464h36Z"

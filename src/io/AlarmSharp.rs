@@ -28,11 +28,13 @@ pub fn AlarmSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M403.79,64.11l-3.27-.1H400c-14.73,0-28.55,5.91-40.52,15S344,96,344,96l88,86s11.25-5.71,17.61-13.85,14.28-18.08,14.32-37.11C464,95.55,437.6,66.15,403.79,64.11Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M108.21,64.11l3.27-.1H112c14.73,0,28.55,5.91,40.52,15S168,96,168,96L80,182s-11.25-5.71-17.61-13.85S48.11,150.07,48.07,131C48,95.55,74.4,66.15,108.21,64.11Z"

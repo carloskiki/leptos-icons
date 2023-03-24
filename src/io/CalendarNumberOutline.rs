@@ -28,23 +28,25 @@ pub fn CalendarNumberOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style id = "icons" viewBox = "0 0 512 512" width = {
-        size.clone() } height = { size } > < rect xmlns = "http://www.w3.org/2000/svg" x
-        = "48" y = "80" width = "416" height = "384" rx = "48" fill = "none" stroke =
-        "#000" stroke - linejoin = "round" stroke - width = "32" />< line xmlns =
-        "http://www.w3.org/2000/svg" x1 = "128" y1 = "48" x2 = "128" y2 = "80" fill =
+        stroke_witdh = "0" style = style id = "icons" viewBox = "0 0 512 512" width =
+        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < rect xmlns =
+        "http://www.w3.org/2000/svg" x = "48" y = "80" width = "416" height = "384" rx =
+        "48" fill = "none" stroke = "#000" stroke - linejoin = "round" stroke - width =
+        "32" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "128" y1 = "48" x2 =
+        "128" y2 = "80" fill = "none" stroke = "#000" stroke - linecap = "round" stroke -
+        linejoin = "round" stroke - width = "32" />< line xmlns =
+        "http://www.w3.org/2000/svg" x1 = "384" y1 = "48" x2 = "384" y2 = "80" fill =
         "none" stroke = "#000" stroke - linecap = "round" stroke - linejoin = "round"
-        stroke - width = "32" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "384" y1
-        = "48" x2 = "384" y2 = "80" fill = "none" stroke = "#000" stroke - linecap =
-        "round" stroke - linejoin = "round" stroke - width = "32" />< line xmlns =
-        "http://www.w3.org/2000/svg" x1 = "464" y1 = "160" x2 = "48" y2 = "160" fill =
+        stroke - width = "32" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "464" y1
+        = "160" x2 = "48" y2 = "160" fill = "none" stroke = "#000" stroke - linecap =
+        "round" stroke - linejoin = "round" stroke - width = "32" />< polyline xmlns =
+        "http://www.w3.org/2000/svg" points = "304 260 347.42 228 352 228 352 396" fill =
         "none" stroke = "#000" stroke - linecap = "round" stroke - linejoin = "round"
-        stroke - width = "32" />< polyline xmlns = "http://www.w3.org/2000/svg" points =
-        "304 260 347.42 228 352 228 352 396" fill = "none" stroke = "#000" stroke -
-        linecap = "round" stroke - linejoin = "round" stroke - width = "32" />< path
-        xmlns = "http://www.w3.org/2000/svg" d =
+        stroke - width = "32" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M191.87,306.63c9.11,0,25.79-4.28,36.72-15.47a37.9,37.9,0,0,0,11.13-27.26c0-26.12-22.59-39.9-47.89-39.9-21.4,0-33.52,11.61-37.85,18.93"
         fill = "none" stroke = "#000" stroke - linecap = "round" stroke - linejoin =
         "round" stroke - width = "32" />< path xmlns = "http://www.w3.org/2000/svg" d =

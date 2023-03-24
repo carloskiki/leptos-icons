@@ -28,11 +28,13 @@ pub fn AdjustmentsVertical(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M17 2.75C17 2.33579 16.6642 2 16.25 2C15.8358 2 15.5 2.33579 15.5 2.75V8.25C15.5 8.66421 15.8358 9 16.25 9C16.6642 9 17 8.66421 17 8.25V2.75Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M17 15.75C17 15.3358 16.6642 15 16.25 15C15.8358 15 15.5 15.3358 15.5 15.75V17.25C15.5 17.6642 15.8358 18 16.25 18C16.6642 18 17 17.6642 17 17.25V15.75Z"

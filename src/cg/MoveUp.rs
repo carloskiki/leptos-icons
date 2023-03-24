@@ -28,14 +28,16 @@ pub fn MoveUp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M17 19.071H15V11.071H17V19.071Z" fill =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M17 19.071H15V11.071H17V19.071Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M9 19.071H7V11.071H9V19.071Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M9 19.071H7V11.071H9V19.071Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
         "M12.9999 19.071H10.9999V9.07109H7.96454L11.9644 5L15.9644 9.07109H12.9999V19.071Z"
         fill = "currentColor" /> < title > { title } < / title > < / svg >
     }

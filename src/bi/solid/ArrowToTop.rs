@@ -28,11 +28,13 @@ pub fn ArrowToTop(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z" /> <
-        title > { title } < / title > < / svg >
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d = "M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"
+        /> < title > { title } < / title > < / svg >
     }
 }

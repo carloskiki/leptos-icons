@@ -28,11 +28,13 @@ pub fn ArrowsPointingOut(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M13.2803 7.78033L16.5 4.56066V7.25C16.5 7.66421 16.8358 8 17.25 8C17.6642 8 18 7.66421 18 7.25V2.75C18 2.33579 17.6642 2 17.25 2H12.75C12.3358 2 12 2.33579 12 2.75C12 3.16421 12.3358 3.5 12.75 3.5H15.4393L12.2197 6.71967C11.9268 7.01256 11.9268 7.48744 12.2197 7.78033C12.5126 8.07322 12.9874 8.07322 13.2803 7.78033Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M2 17.25V12.75C2 12.3358 2.33579 12 2.75 12C3.16421 12 3.5 12.3358 3.5 12.75V15.4393L6.71967 12.2197C7.01256 11.9268 7.48744 11.9268 7.78033 12.2197C8.07322 12.5126 8.07322 12.9874 7.78033 13.2803L4.56066 16.5H7.25C7.66421 16.5 8 16.8358 8 17.25C8 17.6642 7.66421 18 7.25 18H2.75C2.55806 18 2.36612 17.9268 2.21967 17.7803C2.14776 17.7084 2.09351 17.6255 2.05691 17.5371C2.02024 17.4487 2 17.3517 2 17.25Z"

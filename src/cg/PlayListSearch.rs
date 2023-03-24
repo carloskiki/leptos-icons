@@ -28,11 +28,13 @@ pub fn PlayListSearch(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M15.8787 4.87866H3.87872V6.87866H15.8787V4.87866Z" fill = "currentColor" /><
         path xmlns = "http://www.w3.org/2000/svg" d =
         "M15.8787 8.87866H3.87872V10.8787H15.8787V8.87866Z" fill = "currentColor" /><

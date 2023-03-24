@@ -28,11 +28,14 @@ pub fn Bracket(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M10 4V2H4v20h6v-2H6V4zm4 16v2h6V2h-6v2h4v16z"
-        /> < title > { title } < / title > < / svg >
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d =
+        "M10 4V2H4v20h6v-2H6V4zm4 16v2h6V2h-6v2h4v16z" /> < title > { title } < / title >
+        < / svg >
     }
 }

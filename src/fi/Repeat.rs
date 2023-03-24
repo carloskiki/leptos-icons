@@ -28,15 +28,17 @@ pub fn Repeat(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < polyline xmlns = "http://www.w3.org/2000/svg" points = "17 1 21 5 17 9" /><
-        path xmlns = "http://www.w3.org/2000/svg" d = "M3 11V9a4 4 0 0 1 4-4h14" /><
-        polyline xmlns = "http://www.w3.org/2000/svg" points = "7 23 3 19 7 15" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M21 13v2a4 4 0 0 1-4 4H3" /> < title >
-        { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "17 1 21 5 17 9" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M3 11V9a4 4 0 0 1 4-4h14" />< polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "7 23 3 19 7 15" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M21 13v2a4 4 0 0 1-4 4H3" /> < title > { title } < / title > < / svg >
     }
 }

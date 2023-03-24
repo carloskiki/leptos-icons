@@ -28,13 +28,15 @@ pub fn AlignBottom(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" fill = "currentColor"
-        class = "bi bi-align-bottom" viewBox = "0 0 16 16" width = { size.clone() }
-        height = { size } > < rect xmlns = "http://www.w3.org/2000/svg" width = "4"
-        height = "12" x = "6" y = "1" rx = "1" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        class = "bi bi-align-bottom" viewBox = "0 0 16 16" width = size.clone() height =
+        size xmlns = "http://www.w3.org/2000/svg" > < rect xmlns =
+        "http://www.w3.org/2000/svg" width = "4" height = "12" x = "6" y = "1" rx = "1"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M1.5 14a.5.5 0 0 0 0 1v-1zm13 1a.5.5 0 0 0 0-1v1zm-13 0h13v-1h-13v1z" /> < title
         > { title } < / title > < / svg >
     }

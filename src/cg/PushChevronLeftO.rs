@@ -28,12 +28,15 @@ pub fn PushChevronLeftO(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M10 16H8V8H10V16Z" fill = "currentColor" /><
-        path xmlns = "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M10 16H8V8H10V16Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M15.2974 7.75732L16.7116 9.17153L13.8832 12L16.7116 14.8284L15.2974 16.2426L11.0547 11.9999L15.2974 7.75732Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

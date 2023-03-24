@@ -28,11 +28,13 @@ pub fn Audible(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M2.005 10.238v1.69l10.002 6.254 9.988-6.254v-1.69l-9.988 6.229z" />< path xmlns
         = "http://www.w3.org/2000/svg" d =
         "m15.938 12.469 1.465-.938c-1.161-1.701-3.153-2.876-5.396-2.876-2.257 0-4.236 1.135-5.371 2.89.093-.093.146-.146.238-.211 2.811-2.336 6.86-1.808 9.064 1.135z"

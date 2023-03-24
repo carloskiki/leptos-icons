@@ -28,12 +28,14 @@ pub fn SinaWeibo(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.1" width = "16" height = "16"
-        viewBox = "0 0 16 16" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" xmlns : xlink = "http://www.w3.org/1999/xlink" fill
-        = "#000000" d =
+        viewBox = "0 0 16 16" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" xmlns
+        : xlink = "http://www.w3.org/1999/xlink" fill = "#000000" d =
         "M6.722 14.031c-2.65 0.262-4.938-0.938-5.109-2.675-0.172-1.741 1.837-3.359 4.484-3.622 2.65-0.263 4.938 0.938 5.106 2.675 0.175 1.741-1.834 3.362-4.481 3.622zM12.019 8.259c-0.225-0.069-0.381-0.113-0.262-0.409 0.256-0.644 0.281-1.197 0.003-1.594-0.519-0.741-1.941-0.703-3.569-0.019 0 0-0.513 0.222-0.381-0.181 0.25-0.806 0.213-1.478-0.178-1.869-0.884-0.884-3.234 0.034-5.25 2.050-1.506 1.503-2.381 3.106-2.381 4.491 0 2.644 3.394 4.253 6.713 4.253 4.35 0 7.247-2.528 7.247-4.534 0-1.216-1.022-1.903-1.941-2.188z"
         />< path xmlns = "http://www.w3.org/2000/svg" xmlns : xlink =
         "http://www.w3.org/1999/xlink" fill = "#000000" d =

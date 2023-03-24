@@ -28,11 +28,13 @@ pub fn SquareFull(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d =
-        "M512 0V512H0V0H512zM464 48H48V464H464V48z" /> < title > { title } < / title > <
-        / svg >
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d = "M512 0V512H0V0H512zM464 48H48V464H464V48z" /> <
+        title > { title } < / title > < / svg >
     }
 }

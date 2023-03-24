@@ -28,13 +28,16 @@ pub fn CashSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "48" y = "368" width = "416" height = "32" /><
-        rect xmlns = "http://www.w3.org/2000/svg" x = "80" y = "416" width = "352" height
-        = "32" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "48" y = "368" width = "416" height = "32" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "80" y = "416" width = "352" height = "32" /><
+        path xmlns = "http://www.w3.org/2000/svg" d =
         "M480,176a96.11,96.11,0,0,1-96-96V64H128V80a96.11,96.11,0,0,1-96,96H16v64H32a96.11,96.11,0,0,1,96,96v16H384V336a96.11,96.11,0,0,1,96-96h16V176ZM256,304a96,96,0,1,1,96-96A96.11,96.11,0,0,1,256,304Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M96,80V64H16v80H32A64.07,64.07,0,0,0,96,80Z" />< path xmlns =

@@ -28,14 +28,17 @@ pub fn AdjustmentsFilled(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-adjustments-filled" width = "24" height = "24"
         viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
-        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
-        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        stroke - linecap = "round" stroke - linejoin = "round" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M6 3a1 1 0 0 1 .993 .883l.007 .117v3.171a3.001 3.001 0 0 1 0 5.658v7.171a1 1 0 0 1 -1.993 .117l-.007 -.117v-7.17a3.002 3.002 0 0 1 -1.995 -2.654l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-3.17a1 1 0 0 1 1 -1z"
         stroke - width = "0" fill = "currentColor" />< path xmlns =
         "http://www.w3.org/2000/svg" d =

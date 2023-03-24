@@ -28,11 +28,13 @@ pub fn TapSingle(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M12.0491 3.11401C14.1927 3.11401 16.1393 3.95706 17.5756 5.32967L16.1609 6.74437C15.087 5.73346 13.6404 5.11401 12.0491 5.11401C10.4086 5.11401 8.92183 5.77243 7.83868 6.83944L6.42444 5.42519C7.86954 3.99627 9.85631 3.11401 12.0491 3.11401Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M10.9767 11.886C10.9767 11.3337 11.4244 10.886 11.9767 10.886C12.529 10.886 12.9767 11.3337 12.9767 11.886V13.886H10.9767V11.886Z"

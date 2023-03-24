@@ -28,11 +28,14 @@ pub fn TextOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polyline xmlns =
-        "http://www.w3.org/2000/svg" points = "32 415.5 152 95.5 272 415.5" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "32 415.5 152 95.5 272 415.5" style =
         "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"
         />< line xmlns = "http://www.w3.org/2000/svg" x1 = "230" y1 = "303.5" x2 = "74"
         y2 = "303.5" style =

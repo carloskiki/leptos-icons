@@ -28,11 +28,13 @@ pub fn Signal(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M16.364 3.63617C16.0711 3.34328 15.5962 3.34328 15.3033 3.63617C15.0104 3.92907 15.0104 4.40394 15.3033 4.69683C18.2322 7.62577 18.2322 12.3745 15.3033 15.3034C15.0104 15.5963 15.0104 16.0712 15.3033 16.3641C15.5962 16.657 16.0711 16.657 16.364 16.3641C19.8787 12.8494 19.8787 7.15089 16.364 3.63617Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M4.6967 4.69683C4.98959 4.40394 4.98959 3.92907 4.6967 3.63617C4.40381 3.34328 3.92893 3.34328 3.63604 3.63617C0.12132 7.15089 0.12132 12.8494 3.63604 16.3641C3.92893 16.657 4.40381 16.657 4.6967 16.3641C4.98959 16.0712 4.98959 15.5963 4.6967 15.3034C1.76777 12.3745 1.76777 7.62577 4.6967 4.69683Z"

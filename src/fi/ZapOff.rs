@@ -28,16 +28,18 @@ pub fn ZapOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < polyline xmlns = "http://www.w3.org/2000/svg" points =
-        "12.41 6.75 13 2 10.57 4.92" />< polyline xmlns = "http://www.w3.org/2000/svg"
-        points = "18.57 12.91 21 10 15.66 10" />< polyline xmlns =
-        "http://www.w3.org/2000/svg" points = "8 8 3 14 12 14 11 22 16 16" />< line xmlns
-        = "http://www.w3.org/2000/svg" x1 = "1" y1 = "1" x2 = "23" y2 = "23" /> < title >
-        { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "12.41 6.75 13 2 10.57 4.92" />< polyline xmlns =
+        "http://www.w3.org/2000/svg" points = "18.57 12.91 21 10 15.66 10" />< polyline
+        xmlns = "http://www.w3.org/2000/svg" points = "8 8 3 14 12 14 11 22 16 16" /><
+        line xmlns = "http://www.w3.org/2000/svg" x1 = "1" y1 = "1" x2 = "23" y2 = "23"
+        /> < title > { title } < / title > < / svg >
     }
 }

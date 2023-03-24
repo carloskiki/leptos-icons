@@ -28,13 +28,15 @@ pub fn Codepen(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < polygon xmlns = "http://www.w3.org/2000/svg" points =
-        "12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />< line xmlns =
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polygon xmlns = "http://www.w3.org/2000/svg"
+        points = "12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />< line xmlns =
         "http://www.w3.org/2000/svg" x1 = "12" y1 = "22" x2 = "12" y2 = "15.5" /><
         polyline xmlns = "http://www.w3.org/2000/svg" points = "22 8.5 12 15.5 2 8.5" /><
         polyline xmlns = "http://www.w3.org/2000/svg" points = "2 15.5 12 8.5 22 15.5"

@@ -28,11 +28,13 @@ pub fn DocumentMagnifyingGlass(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M8 10C8 9.17157 8.67157 8.5 9.5 8.5C10.3284 8.5 11 9.17157 11 10C11 10.4144 10.8329 10.7884 10.5607 11.0607C10.2884 11.3329 9.91442 11.5 9.5 11.5C8.67157 11.5 8 10.8284 8 10Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

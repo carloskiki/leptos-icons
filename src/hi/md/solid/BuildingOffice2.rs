@@ -28,11 +28,14 @@ pub fn BuildingOffice2(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M1 2.75C1 2.33579 1.33579 2 1.75 2H12.25C12.6642 2 13 2.33579 13 2.75C13 3.16421 12.6642 3.5 12.25 3.5H12V17.25C12 17.6642 11.6642 18 11.25 18H9.75C9.33579 18 9 17.6642 9 17.25V14.75C9 14.3358 8.66421 14 8.25 14H5.75C5.33579 14 5 14.3358 5 14.75V17.25C5 17.6642 4.66421 18 4.25 18H1.75C1.33579 18 1 17.6642 1 17.25C1 16.8358 1.33579 16.5 1.75 16.5H2V3.5H1.75C1.33579 3.5 1 3.16421 1 2.75ZM4 5.5C4 5.22386 4.22386 5 4.5 5H5.5C5.77614 5 6 5.22386 6 5.5V6.5C6 6.77614 5.77614 7 5.5 7H4.5C4.22386 7 4 6.77614 4 6.5V5.5ZM4.5 9C4.22386 9 4 9.22386 4 9.5V10.5C4 10.7761 4.22386 11 4.5 11H5.5C5.77614 11 6 10.7761 6 10.5V9.5C6 9.22386 5.77614 9 5.5 9H4.5ZM8 5.5C8 5.22386 8.22386 5 8.5 5H9.5C9.77614 5 10 5.22386 10 5.5V6.5C10 6.77614 9.77614 7 9.5 7H8.5C8.22386 7 8 6.77614 8 6.5V5.5ZM8.5 9C8.22386 9 8 9.22386 8 9.5V10.5C8 10.7761 8.22386 11 8.5 11H9.5C9.77614 11 10 10.7761 10 10.5V9.5C10 9.22386 9.77614 9 9.5 9H8.5Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

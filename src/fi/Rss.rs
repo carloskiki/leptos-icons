@@ -28,14 +28,16 @@ pub fn Rss(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < path xmlns = "http://www.w3.org/2000/svg" d = "M4 11a9 9 0 0 1 9 9" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M4 4a16 16 0 0 1 16 16" />< circle
-        xmlns = "http://www.w3.org/2000/svg" cx = "5" cy = "19" r = "1" /> < title > {
-        title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M4 11a9 9 0 0 1 9 9" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M4 4a16 16 0 0 1 16 16" />< circle xmlns = "http://www.w3.org/2000/svg" cx = "5"
+        cy = "19" r = "1" /> < title > { title } < / title > < / svg >
     }
 }

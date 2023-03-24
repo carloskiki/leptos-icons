@@ -28,11 +28,14 @@ pub fn Scissors(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M1.46876 3.7501C0.502265 5.42412 1.07583 7.56469 2.74985 8.53119C4.20093 9.36897 6.00256 9.04958 7.08619 7.85934L7.9695 8.36931C7.99431 8.46193 8.11599 8.4862 8.17843 8.41344C8.32967 8.23719 8.49725 8.07501 8.67914 7.92923C8.96545 7.69975 8.979 7.22009 8.66123 7.03663L7.83619 6.56029C8.32514 5.02673 7.70093 3.30679 6.24985 2.46901C4.57583 1.50251 2.43526 2.07607 1.46876 3.7501ZM3.49985 7.23215C2.54327 6.67986 2.21552 5.45668 2.7678 4.5001C3.32009 3.54351 4.54327 3.21576 5.49985 3.76805C6.45644 4.32033 6.78419 5.54351 6.2319 6.5001C5.67962 7.45668 4.45644 7.78443 3.49985 7.23215Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

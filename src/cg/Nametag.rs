@@ -28,17 +28,20 @@ pub fn Nametag(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M4 14V20H10V18H6V14H4Z" fill = "currentColor"
-        />< path xmlns = "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule
-        = "evenodd" d = "M9 9V15H15V9H9ZM13 11H11V13H13V11Z" fill = "currentColor" /><
-        path xmlns = "http://www.w3.org/2000/svg" d = "M4 10V4H10V6H6V10H4Z" fill =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M4 14V20H10V18H6V14H4Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        "M9 9V15H15V9H9ZM13 11H11V13H13V11Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M4 10V4H10V6H6V10H4Z" fill = "currentColor" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M20 10V4H14V6H18V10H20Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M20 10V4H14V6H18V10H20Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M20 14V20H14V18H18V14H20Z" fill =
-        "currentColor" /> < title > { title } < / title > < / svg >
+        "M20 14V20H14V18H18V14H20Z" fill = "currentColor" /> < title > { title } < /
+        title > < / svg >
     }
 }

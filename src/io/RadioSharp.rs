@@ -28,12 +28,15 @@ pub fn RadioSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < ellipse xmlns =
-        "http://www.w3.org/2000/svg" cx = "256" cy = "256" rx = "36" ry = "35.99" /><
-        path xmlns = "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < ellipse xmlns = "http://www.w3.org/2000/svg" cx
+        = "256" cy = "256" rx = "36" ry = "35.99" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M188.4,350.8l-14.62-16.44a117.91,117.91,0,0,1,0-156.71l14.62-16.43,32.87,29.24-14.62,16.43a73.93,73.93,0,0,0,0,98.25l14.62,16.44Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M323.6,350.8l-32.89-29.22,14.62-16.44a73.93,73.93,0,0,0,0-98.25l-14.62-16.43,32.87-29.24,14.62,16.43a117.91,117.91,0,0,1,0,156.71Z"

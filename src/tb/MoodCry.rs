@@ -28,15 +28,17 @@ pub fn MoodCry(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-mood-cry"
         width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d = "M9 10l.01 0" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M15 10l.01 0" />< path xmlns =
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d = "M9 10l.01 0" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M15 10l.01 0" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M9.5 15.25a3.5 3.5 0 0 1 5 0" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M17.566 17.606a2 2 0 1 0 2.897 .03l-1.463 -1.636l-1.434 1.606z" />< path xmlns =

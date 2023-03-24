@@ -28,13 +28,15 @@ pub fn Image(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "7.499" cy = "9.5" r = "1.5" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "m10.499 14-1.5-2-3 4h12l-4.5-6z" />< path xmlns
-        = "http://www.w3.org/2000/svg" d =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > <
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "7.499" cy = "9.5" r = "1.5" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "m10.499 14-1.5-2-3 4h12l-4.5-6z"
+        />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M19.999 4h-16c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-16 14V6h16l.002 12H3.999z"
         /> < title > { title } < / title > < / svg >
     }

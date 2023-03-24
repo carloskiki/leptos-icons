@@ -28,14 +28,16 @@ pub fn DollarSign(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < line xmlns = "http://www.w3.org/2000/svg" x1 = "12" y1 = "1" x2 = "12" y2 =
-        "23" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /> < title > { title } < /
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "12" y1 = "1" x2 = "12" y2 = "23" />< path xmlns = "http://www.w3.org/2000/svg" d
+        = "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /> < title > { title } < /
         title > < / svg >
     }
 }

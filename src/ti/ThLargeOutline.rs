@@ -28,11 +28,13 @@ pub fn ThLargeOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style version = "1.2" baseProfile = "tiny" width =
-        "24" height = "24" viewBox = "0 0 24 24" width = { size.clone() } height = { size
-        } > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "24" height = "24" viewBox = "0 0 24 24" width = size.clone() height = size xmlns
+        = "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M9 2h-5c-1.103 0-2 .896-2 2v5c0 1.104.897 2 2 2h5c1.103 0 2-.896 2-2v-5c0-1.104-.897-2-2-2zm0 7h-5v-5h5v5zM20 2h-5c-1.104 0-2 .896-2 2v5c0 1.104.896 2 2 2h5c1.104 0 2-.896 2-2v-5c0-1.104-.896-2-2-2zm0 7h-5v-5h5v5zM9 13h-5c-1.103 0-2 .896-2 2v5c0 1.104.897 2 2 2h5c1.103 0 2-.896 2-2v-5c0-1.104-.897-2-2-2zm0 7h-5v-5h5v5zM20 13h-5c-1.104 0-2 .896-2 2v5c0 1.104.896 2 2 2h5c1.104 0 2-.896 2-2v-5c0-1.104-.896-2-2-2zm0 7h-5v-5h5v5z"
         /> < title > { title } < / title > < / svg >
     }

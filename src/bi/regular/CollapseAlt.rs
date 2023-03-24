@@ -28,11 +28,14 @@ pub fn CollapseAlt(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z" /> <
-        title > { title } < / title > < / svg >
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path
+        xmlns = "http://www.w3.org/2000/svg" d =
+        "M2 15h7v7h2v-9H2v2zM15 2h-2v9h9V9h-7V2z" /> < title > { title } < / title > < /
+        svg >
     }
 }

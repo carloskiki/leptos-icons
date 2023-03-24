@@ -28,12 +28,15 @@ pub fn LogoNoSmoking(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "360" y = "256" width = "16" height = "48" /><
-        polygon xmlns = "http://www.w3.org/2000/svg" points =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "360" y = "256" width = "16" height = "48" />< polygon xmlns =
+        "http://www.w3.org/2000/svg" points =
         "112 304 241.6 304 193.6 256 112 256 112 304" />< path xmlns =
         "http://www.w3.org/2000/svg" d =
         "M364.5,60.1a8.79,8.79,0,0,1-1-.6,218.79,218.79,0,0,0-34.4-14.8l-5.4-1.8A223.2,223.2,0,0,0,256,32C132.3,32,32,132.3,32,256A223.71,223.71,0,0,0,147.4,451.8c.4.2.7.5,1.1.7a218.79,218.79,0,0,0,34.4,14.8l5.4,1.8A222.7,222.7,0,0,0,256,480c123.7,0,224-100.3,224-224A223.76,223.76,0,0,0,364.5,60.1ZM256,426.4a161.85,161.85,0,0,1-27.2-2.4,170.14,170.14,0,0,1-28.5-7.3c-1.9-.6-3.8-1.2-5.6-1.9a162.39,162.39,0,0,1-19-8.6A170.33,170.33,0,0,1,85.6,255.9c0-37.2,12.4-71.4,32.7-99.4L355.5,393.7C327.4,414,293.2,426.4,256,426.4Zm137.8-71L156.6,118.2c28-20.2,62.1-32.6,99.4-32.6A162.79,162.79,0,0,1,283.2,88a170.14,170.14,0,0,1,28.5,7.3c1.8.6,3.7,1.2,5.6,1.9a162,162,0,0,1,18,8.1,170.25,170.25,0,0,1,91.2,150.8C426.4,293.3,414,327.4,393.8,355.4Z"

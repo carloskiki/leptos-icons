@@ -28,11 +28,14 @@ pub fn ListSelection(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "16" height = "16" viewBox = "0 0 16 16"
-        fill = "currentColor" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M1 12v-1h9v1H1zm0-5h14v1H1V7zm11-4v1H1V3h11z"
-        /> < title > { title } < / title > < / svg >
+        fill = "currentColor" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M1 12v-1h9v1H1zm0-5h14v1H1V7zm11-4v1H1V3h11z" /> < title > { title } < / title >
+        < / svg >
     }
 }

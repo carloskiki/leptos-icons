@@ -28,13 +28,16 @@ pub fn CartSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "176" cy = "416" r = "32" />< circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "400" cy = "416" r = "32" />< polygon xmlns =
-        "http://www.w3.org/2000/svg" points =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "176" cy = "416" r = "32" />< circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "400" cy = "416" r = "32" />< polygon xmlns = "http://www.w3.org/2000/svg" points
+        =
         "167.78 304 429.12 304 467.52 112 133.89 112 125.42 64 32 64 32 96 98.58 96 146.58 368 432 368 432 336 173.42 336 167.78 304"
         /> < title > { title } < / title > < / svg >
     }

@@ -28,14 +28,16 @@ pub fn CellularSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M496,432H400V80h96Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M368,432H272V160h96Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M240,432H144V224h96Z" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M112,432H16V288h96Z" /> < title > { title } < /
-        title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M496,432H400V80h96Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M368,432H272V160h96Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M240,432H144V224h96Z" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        "M112,432H16V288h96Z" /> < title > { title } < / title > < / svg >
     }
 }

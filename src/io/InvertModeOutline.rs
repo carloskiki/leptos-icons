@@ -28,14 +28,16 @@ pub fn InvertModeOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < circle xmlns = "http://www.w3.org/2000/svg" fill = "none"
-        stroke = "#000" stroke - miterlimit = "10" stroke - width = "32" cx = "256" cy =
-        "256" r = "208" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M256,176V336a80,80,0,0,1,0-160Z" />< path xmlns = "http://www.w3.org/2000/svg" d
-        =
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < circle xmlns =
+        "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke - miterlimit =
+        "10" stroke - width = "32" cx = "256" cy = "256" r = "208" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M256,176V336a80,80,0,0,1,0-160Z" />< path xmlns
+        = "http://www.w3.org/2000/svg" d =
         "M256,48V176a80,80,0,0,1,0,160V464c114.88,0,208-93.12,208-208S370.88,48,256,48Z"
         /> < title > { title } < / title > < / svg >
     }

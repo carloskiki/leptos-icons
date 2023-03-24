@@ -28,13 +28,16 @@ pub fn MenuGridR(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M4 4H8V8H4V4Z" fill = "currentColor" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M4 10H8V14H4V10Z" fill = "currentColor"
-        />< path xmlns = "http://www.w3.org/2000/svg" d = "M8 16H4V20H8V16Z" fill =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M4 4H8V8H4V4Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M4 10H8V14H4V10Z" fill = "currentColor" /><
+        path xmlns = "http://www.w3.org/2000/svg" d = "M8 16H4V20H8V16Z" fill =
         "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M10 4H14V8H10V4Z" fill = "currentColor" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M14 10H10V14H14V10Z" fill = "currentColor" /><

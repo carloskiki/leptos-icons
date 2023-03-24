@@ -28,11 +28,13 @@ pub fn Sun(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "20" height = "20" viewBox = "0 0 20 20"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M10 2C10.4142 2 10.75 2.33579 10.75 2.75V4.25C10.75 4.66421 10.4142 5 10 5C9.58579 5 9.25 4.66421 9.25 4.25V2.75C9.25 2.33579 9.58579 2 10 2Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M10 15C10.4142 15 10.75 15.3358 10.75 15.75V17.25C10.75 17.6642 10.4142 18 10 18C9.58579 18 9.25 17.6642 9.25 17.25V15.75C9.25 15.3358 9.58579 15 10 15Z"

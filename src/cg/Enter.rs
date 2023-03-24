@@ -28,12 +28,15 @@ pub fn Enter(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z" fill =
-        "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z" fill = "currentColor" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M13.0743 16.9498L11.6601 15.5356L14.1957 13H2V11H14.1956L11.6601 8.46451L13.0743 7.05029L18.024 12L13.0743 16.9498Z"
         fill = "currentColor" /> < title > { title } < / title > < / svg >
     }

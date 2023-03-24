@@ -28,18 +28,20 @@ pub fn LoaderCircle(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "12" cy = "20" r = "2" />< circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "12" cy = "4" r = "2" />< circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "6.343" cy = "17.657" r = "2" />< circle xmlns
-        = "http://www.w3.org/2000/svg" cx = "17.657" cy = "6.343" r = "2" />< circle
-        xmlns = "http://www.w3.org/2000/svg" cx = "4" cy = "12" r = "2.001" />< circle
-        xmlns = "http://www.w3.org/2000/svg" cx = "20" cy = "12" r = "2" />< circle xmlns
-        = "http://www.w3.org/2000/svg" cx = "6.343" cy = "6.344" r = "2" />< circle xmlns
-        = "http://www.w3.org/2000/svg" cx = "17.657" cy = "17.658" r = "2" /> < title > {
-        title } < / title > < / svg >
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > <
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "12" cy = "20" r = "2" /><
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "12" cy = "4" r = "2" />< circle
+        xmlns = "http://www.w3.org/2000/svg" cx = "6.343" cy = "17.657" r = "2" /><
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "17.657" cy = "6.343" r = "2"
+        />< circle xmlns = "http://www.w3.org/2000/svg" cx = "4" cy = "12" r = "2.001"
+        />< circle xmlns = "http://www.w3.org/2000/svg" cx = "20" cy = "12" r = "2" /><
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "6.343" cy = "6.344" r = "2" /><
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "17.657" cy = "17.658" r = "2"
+        /> < title > { title } < / title > < / svg >
     }
 }

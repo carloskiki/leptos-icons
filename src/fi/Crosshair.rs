@@ -28,16 +28,19 @@ pub fn Crosshair(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
         fill = "none" stroke = "currentColor" stroke - width = "2" stroke - linecap =
-        "round" stroke - linejoin = "round" width = { size.clone() } height = { size } >
-        < circle xmlns = "http://www.w3.org/2000/svg" cx = "12" cy = "12" r = "10" /><
-        line xmlns = "http://www.w3.org/2000/svg" x1 = "22" y1 = "12" x2 = "18" y2 = "12"
-        />< line xmlns = "http://www.w3.org/2000/svg" x1 = "6" y1 = "12" x2 = "2" y2 =
-        "12" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "12" y1 = "6" x2 = "12"
-        y2 = "2" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "12" y1 = "22" x2 =
-        "12" y2 = "18" /> < title > { title } < / title > < / svg >
+        "round" stroke - linejoin = "round" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < circle xmlns = "http://www.w3.org/2000/svg" cx =
+        "12" cy = "12" r = "10" />< line xmlns = "http://www.w3.org/2000/svg" x1 = "22"
+        y1 = "12" x2 = "18" y2 = "12" />< line xmlns = "http://www.w3.org/2000/svg" x1 =
+        "6" y1 = "12" x2 = "2" y2 = "12" />< line xmlns = "http://www.w3.org/2000/svg" x1
+        = "12" y1 = "6" x2 = "12" y2 = "2" />< line xmlns = "http://www.w3.org/2000/svg"
+        x1 = "12" y1 = "22" x2 = "12" y2 = "18" /> < title > { title } < / title > < /
+        svg >
     }
 }

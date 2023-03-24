@@ -28,11 +28,14 @@ pub fn Scissors(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M8.12833 9.15465C6.98189 10.5304 4.97858 10.9236 3.37489 9.99773C1.5813 8.9622 0.966765 6.66874 2.0023 4.87514C3.03783 3.08154 5.3313 2.46701 7.12489 3.50254C8.66319 4.39068 9.33419 6.20412 8.84075 7.83392L9.97714 8.49001C10.1638 8.59775 10.295 8.78056 10.3374 8.99182C10.3799 9.20309 10.3294 9.4224 10.1989 9.59385L10.1933 9.6012C9.94809 9.92324 9.49126 9.99309 9.16144 9.75845C9.12519 9.73266 9.08749 9.70843 9.04842 9.68586L8.12833 9.15465ZM3.30134 5.62514C3.92266 4.54898 5.29874 4.18026 6.37489 4.80158C7.3896 5.38742 7.77536 6.6443 7.29525 7.68806C7.27427 7.71504 7.25489 7.74377 7.23732 7.7742C7.21056 7.82057 7.1893 7.8686 7.17336 7.91755C6.54071 8.96089 5.18679 9.31178 4.12489 8.6987C3.04874 8.07737 2.68002 6.7013 3.30134 5.62514Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

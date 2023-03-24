@@ -28,11 +28,13 @@ pub fn Bonfire(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M273.38,368.37c-.81-9.23-8.86-16.44-18.55-16.44A18.63,18.63,0,0,0,236.63,366l-18.2,88.36a35.59,35.59,0,0,0-.93,7.87c0,19.93,16.68,33.77,37.33,33.77s37.34-13.84,37.34-33.77a36.16,36.16,0,0,0-1.29-9.45Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M411.05,407.89a42.66,42.66,0,0,0-5.95-4.36L335.57,355c-6.77-4.24-14-4.13-19.25,1a13.52,13.52,0,0,0-2,17.19l52.5,69a38,38,0,0,0,4,4.69c9.1,10.16,29.28,10.72,40.37,0C422.13,435.92,422,416.49,411.05,407.89Z"

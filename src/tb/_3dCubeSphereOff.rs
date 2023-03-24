@@ -28,20 +28,23 @@ pub fn _3dCubeSphereOff(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-3d-cube-sphere-off" width = "24" height = "24"
         viewBox = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none"
-        stroke - linecap = "round" stroke - linejoin = "round" width = { size.clone() }
-        height = { size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d
-        = "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M6 17.6l-2 -1.1v-2.5" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M4 10v-2.5l2 -1.1" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M10 4.1l2 -1.1l2 1.1" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M18 6.4l2 1.1v2.5" />< path xmlns = "http://www.w3.org/2000/svg" d = "M20 14v2"
-        />< path xmlns = "http://www.w3.org/2000/svg" d = "M14 19.9l-2 1.1l-2 -1.1" /><
-        path xmlns = "http://www.w3.org/2000/svg" d = "M18 8.6l2 -1.1" />< path xmlns =
+        stroke - linecap = "round" stroke - linejoin = "round" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M6 17.6l-2 -1.1v-2.5" />< path
+        xmlns = "http://www.w3.org/2000/svg" d = "M4 10v-2.5l2 -1.1" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M10 4.1l2 -1.1l2 1.1" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M18 6.4l2 1.1v2.5" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M20 14v2" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M14 19.9l-2 1.1l-2 -1.1" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M18 8.6l2 -1.1" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M12 12v2.5" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M12 18.5v2.5" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M12 12l-2 -1.12" />< path xmlns =

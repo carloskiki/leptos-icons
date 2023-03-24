@@ -28,14 +28,16 @@ pub fn ColorWandOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < rect xmlns = "http://www.w3.org/2000/svg" fill = "none"
-        stroke = "#000" stroke - miterlimit = "10" stroke - width = "32" x = "280.48" y =
-        "122.9" width = "63.03" height = "378.2" rx = "31.52" transform =
-        "translate(-129.23 312) rotate(-45)" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < rect xmlns =
+        "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke - miterlimit =
+        "10" stroke - width = "32" x = "280.48" y = "122.9" width = "63.03" height =
+        "378.2" rx = "31.52" transform = "translate(-129.23 312) rotate(-45)" />< path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M178.38,178.38h0a31.64,31.64,0,0,0,0,44.75L223.25,268,268,223.25l-44.87-44.87A31.64,31.64,0,0,0,178.38,178.38Z"
         />< line xmlns = "http://www.w3.org/2000/svg" stroke = "#000" stroke - miterlimit
         = "10" stroke - width = "32" stroke - linecap = "round" x1 = "48" y1 = "192" x2 =

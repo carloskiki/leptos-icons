@@ -28,11 +28,13 @@ pub fn Cog(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M17.0039 10.4069C17.1423 10.8419 16.7882 11.2494 16.3317 11.2494H12.8667C12.5988 11.2494 12.3512 11.1064 12.2172 10.8744L10.4845 7.87349C10.2561 7.47789 10.4321 6.96735 10.8784 6.87021C11.2398 6.79157 11.6151 6.75015 12 6.75015C14.344 6.75015 16.3293 8.28635 17.0039 10.4069Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M8.11938 8.46409C8.42728 8.12639 8.95767 8.22903 9.18619 8.62478L10.9182 11.6244C11.0522 11.8564 11.0522 12.1424 10.9182 12.3744L9.18577 15.375C8.95726 15.7708 8.42679 15.8735 8.11891 15.5357C7.26853 14.6027 6.75 13.362 6.75 12.0001C6.75 10.6381 7.26872 9.39712 8.11938 8.46409Z"

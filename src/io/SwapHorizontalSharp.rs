@@ -28,11 +28,14 @@ pub fn SwapHorizontalSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < polyline xmlns =
-        "http://www.w3.org/2000/svg" points = "304 48 416 160 304 272" style =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < polyline xmlns = "http://www.w3.org/2000/svg"
+        points = "304 48 416 160 304 272" style =
         "fill:none;stroke:#000;stroke-linecap:square;stroke-miterlimit:10;stroke-width:32px"
         />< line xmlns = "http://www.w3.org/2000/svg" x1 = "398.87" y1 = "160" x2 = "96"
         y2 = "160" style =

@@ -28,16 +28,19 @@ pub fn StereoGlasses(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-stereo-glasses" width = "24" height = "24" viewBox
         = "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
-        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
-        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8 3h-2l-3 9" />< path xmlns = "http://www.w3.org/2000/svg" d = "M16 3h2l3 9"
-        />< path xmlns = "http://www.w3.org/2000/svg" d =
+        linecap = "round" stroke - linejoin = "round" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M8 3h-2l-3 9" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M16 3h2l3 9" />< path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M3 12v7a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707 -.293l2 -2a1 1 0 0 1 1.414 0l2 2a1 1 0 0 0 .707 .293h4.586a1 1 0 0 0 1 -1v-7h-18z"
         />< path xmlns = "http://www.w3.org/2000/svg" d = "M7 16h1" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M16 16h1" /> < title > { title } < / title > <

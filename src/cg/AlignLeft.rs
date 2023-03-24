@@ -28,14 +28,16 @@ pub fn AlignLeft(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d = "M8 13H14V17H8V13Z" fill = "currentColor" fill -
-        opacity = "0.5" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M6 6H4V18H6V6Z" fill = "currentColor" />< path xmlns =
-        "http://www.w3.org/2000/svg" d = "M20 7H8V11H20V7Z" fill = "currentColor" /> <
-        title > { title } < / title > < / svg >
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
+        "M8 13H14V17H8V13Z" fill = "currentColor" fill - opacity = "0.5" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M6 6H4V18H6V6Z" fill = "currentColor" />< path
+        xmlns = "http://www.w3.org/2000/svg" d = "M20 7H8V11H20V7Z" fill = "currentColor"
+        /> < title > { title } < / title > < / svg >
     }
 }

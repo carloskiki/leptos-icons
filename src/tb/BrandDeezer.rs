@@ -28,23 +28,26 @@ pub fn BrandDeezer(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =
         "icon icon-tabler icon-tabler-brand-deezer" width = "24" height = "24" viewBox =
         "0 0 24 24" stroke - width = "2" stroke = "currentColor" fill = "none" stroke -
-        linecap = "round" stroke - linejoin = "round" width = { size.clone() } height = {
-        size } > < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d =
-        "M0 0h24v24H0z" fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M3 16.5h2v.5h-2z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8 16.5h2.5v.5h-2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M16 17h-2.5v-.5h2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M21.5 17h-2.5v-.5h2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M21.5 13h-2.5v.5h2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M21.5 9.5h-2.5v.5h2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M21.5 6h-2.5v.5h2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M16 13h-2.5v.5h2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8 13.5h2.5v-.5h-2.5z" />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8 9.5h2.5v.5h-2.5z" /> < title > { title } < / title > < / svg >
+        linecap = "round" stroke - linejoin = "round" width = size.clone() height = size
+        xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
+        />< path xmlns = "http://www.w3.org/2000/svg" d = "M3 16.5h2v.5h-2z" />< path
+        xmlns = "http://www.w3.org/2000/svg" d = "M8 16.5h2.5v.5h-2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M16 17h-2.5v-.5h2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M21.5 17h-2.5v-.5h2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M21.5 13h-2.5v.5h2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M21.5 9.5h-2.5v.5h2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M21.5 6h-2.5v.5h2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M16 13h-2.5v.5h2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M8 13.5h2.5v-.5h-2.5z" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M8 9.5h2.5v.5h-2.5z" /> < title > { title } < /
+        title > < / svg >
     }
 }

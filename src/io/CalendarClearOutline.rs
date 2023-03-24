@@ -28,19 +28,22 @@ pub fn CalendarClearOutline(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = { size.clone() }
-        height = { size } > < rect xmlns = "http://www.w3.org/2000/svg" fill = "none"
-        stroke = "#000" stroke - linejoin = "round" stroke - width = "32" x = "48" y =
-        "80" width = "416" height = "384" rx = "48" />< line xmlns =
+        stroke_witdh = "0" style = style viewBox = "0 0 512 512" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < rect xmlns =
         "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke - linejoin =
-        "round" stroke - width = "32" stroke - linecap = "round" x1 = "128" y1 = "48" x2
-        = "128" y2 = "80" />< line xmlns = "http://www.w3.org/2000/svg" fill = "none"
+        "round" stroke - width = "32" x = "48" y = "80" width = "416" height = "384" rx =
+        "48" />< line xmlns = "http://www.w3.org/2000/svg" fill = "none" stroke = "#000"
+        stroke - linejoin = "round" stroke - width = "32" stroke - linecap = "round" x1 =
+        "128" y1 = "48" x2 = "128" y2 = "80" />< line xmlns =
+        "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke - linejoin =
+        "round" stroke - width = "32" stroke - linecap = "round" x1 = "384" y1 = "48" x2
+        = "384" y2 = "80" />< line xmlns = "http://www.w3.org/2000/svg" fill = "none"
         stroke = "#000" stroke - linejoin = "round" stroke - width = "32" stroke -
-        linecap = "round" x1 = "384" y1 = "48" x2 = "384" y2 = "80" />< line xmlns =
-        "http://www.w3.org/2000/svg" fill = "none" stroke = "#000" stroke - linejoin =
-        "round" stroke - width = "32" stroke - linecap = "round" x1 = "464" y1 = "160" x2
-        = "48" y2 = "160" /> < title > { title } < / title > < / svg >
+        linecap = "round" x1 = "464" y1 = "160" x2 = "48" y2 = "160" /> < title > { title
+        } < / title > < / svg >
     }
 }

@@ -28,11 +28,13 @@ pub fn EyeInvisible(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = { size.clone()
-        } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" fill =
-        "#D9D9D9" d =
+        stroke_witdh = "0" style = style viewBox = "0 0 1024 1024" width = size.clone()
+        height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" fill = "#D9D9D9" d =
         "M254.89,758.85,380.46,633.28A176,176,0,0,1,629.28,384.46L757,256.72Q651.69,186.07,512,186,223.7,186,81.8,486.3a60.3,60.3,0,0,0,0,51.5Q151.07,683.71,254.89,758.85Z"
         />< path xmlns = "http://www.w3.org/2000/svg" fill = "#D9D9D9" d =
         "M942.2,486.2Q889.46,375.11,816.7,305L672.48,449.27A176.09,176.09,0,0,1,445.26,676.48L323,798.75Q408,838,512,838q288.3,0,430.2-300.3A60.29,60.29,0,0,0,942.2,486.2Z"

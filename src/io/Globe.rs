@@ -28,11 +28,13 @@ pub fn Globe(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M340.75,344.49c5.91-20.7,9.82-44.75,11.31-67.84A4.41,4.41,0,0,0,347.6,272H276.54a4.43,4.43,0,0,0-4.47,4.39v55.3a4.44,4.44,0,0,0,4.14,4.38,273.51,273.51,0,0,1,59,11.39A4.45,4.45,0,0,0,340.75,344.49Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M323.58,377.31a260.05,260.05,0,0,0-46.6-9.09,4.42,4.42,0,0,0-4.91,4.29v65.24a4.47,4.47,0,0,0,6.76,3.7c15.9-9.27,29-24.84,40.84-45.43,1.94-3.36,4.89-9.15,6.67-12.69A4.29,4.29,0,0,0,323.58,377.31Z"

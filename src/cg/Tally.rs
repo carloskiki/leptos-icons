@@ -28,11 +28,13 @@ pub fn Tally(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M3.66124 2.67117C3.71341 2.4 3.97956 2.18018 4.2557 2.18018H6.2557C6.53184 2.18018 6.71341 2.4 6.66124 2.67117L5.33877 9.54511C5.2866 9.81628 5.02045 10.0361 4.74431 10.0361H2.74431C2.46817 10.0361 2.2866 9.81628 2.33877 9.54511L3.66124 2.67117Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M8.66124 2.67117C8.71341 2.4 8.97956 2.18018 9.2557 2.18018H11.2557C11.5318 2.18018 11.7134 2.4 11.6612 2.67117L8.07168 21.329C8.01951 21.6002 7.75336 21.82 7.47722 21.82H5.47722C5.20108 21.82 5.01951 21.6002 5.07168 21.329L8.66124 2.67117Z"

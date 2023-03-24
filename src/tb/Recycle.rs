@@ -28,18 +28,20 @@ pub fn Recycle(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class = "icon icon-tabler icon-tabler-recycle"
         width = "24" height = "24" viewBox = "0 0 24 24" stroke - width = "2" stroke =
         "currentColor" fill = "none" stroke - linecap = "round" stroke - linejoin =
-        "round" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z" fill = "none"
-        />< path xmlns = "http://www.w3.org/2000/svg" d = "M12 17l-2 2l2 2" />< path
-        xmlns = "http://www.w3.org/2000/svg" d = "M10 19h9a2 2 0 0 0 1.75 -2.75l-.55 -1"
+        "round" width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" >
+        < path xmlns = "http://www.w3.org/2000/svg" stroke = "none" d = "M0 0h24v24H0z"
+        fill = "none" />< path xmlns = "http://www.w3.org/2000/svg" d = "M12 17l-2 2l2 2"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
-        "M8.536 11l-.732 -2.732l-2.732 .732" />< path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        "M10 19h9a2 2 0 0 0 1.75 -2.75l-.55 -1" />< path xmlns =
+        "http://www.w3.org/2000/svg" d = "M8.536 11l-.732 -2.732l-2.732 .732" />< path
+        xmlns = "http://www.w3.org/2000/svg" d =
         "M7.804 8.268l-4.5 7.794a2 2 0 0 0 1.506 2.89l1.141 .024" />< path xmlns =
         "http://www.w3.org/2000/svg" d = "M15.464 11l2.732 .732l.732 -2.732" />< path
         xmlns = "http://www.w3.org/2000/svg" d =

@@ -28,11 +28,14 @@ pub fn TapDouble(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" fill - rule = "evenodd" clip - rule = "evenodd" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" fill -
+        rule = "evenodd" clip - rule = "evenodd" d =
         "M14.9236 18V14C14.9236 12.3431 13.5804 11 11.9236 11C10.2667 11 8.92355 12.3431 8.92355 14V18C8.92355 19.6569 10.2667 21 11.9236 21C13.5804 21 14.9236 19.6569 14.9236 18ZM11.9236 9C9.16213 9 6.92355 11.2386 6.92355 14V18C6.92355 20.7614 9.16213 23 11.9236 23C14.685 23 16.9236 20.7614 16.9236 18V14C16.9236 11.2386 14.685 9 11.9236 9Z"
         fill = "currentColor" />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M10.9236 14C10.9236 13.4477 11.3713 13 11.9236 13C12.4758 13 12.9236 13.4477 12.9236 14V17H10.9236V14Z"

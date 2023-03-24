@@ -28,11 +28,13 @@ pub fn Footsteps(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
-        stroke_witdh = "0" style = style id = "icons" viewBox = "0 0 512 512" width = {
-        size.clone() } height = { size } > < path xmlns = "http://www.w3.org/2000/svg" d
-        =
+        stroke_witdh = "0" style = style id = "icons" viewBox = "0 0 512 512" width =
+        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > < path xmlns =
+        "http://www.w3.org/2000/svg" d =
         "M133.83,361.27c-22.61,0-41-8.17-54.79-24.39S56.2,296.59,50.93,261.57c-7.76-51.61-.06-95.11,21.68-122.48,12.8-16.12,29.6-25.44,48.58-26.94,16.25-1.3,40.54,5.29,64,44,14.69,24.24,25.86,56.44,30.65,88.34h0c5.79,38.51,1.48,66.86-13.18,86.65-11.64,15.72-29.54,25.46-53.21,29A106.46,106.46,0,0,1,133.83,361.27Z"
         />< path xmlns = "http://www.w3.org/2000/svg" d =
         "M173,496c-13.21,0-26.6-4.23-38.66-12.36a79.79,79.79,0,0,1-33.52-50.6c-2.85-14.66-1.14-26.31,5.22-35.64,10.33-15.15,28.87-18.56,48.49-22.18,2.07-.38,4.17-.76,6.3-1.17,4.52-.86,9.14-2,13.62-3.11,16.78-4.14,34.14-8.43,48.47,1.75,9.59,6.8,15,18.36,16.62,35.32h0c1.84,19.57-2.36,39.1-11.83,55-10.19,17.11-25.47,28.42-43,31.86A61,61,0,0,1,173,496Z"

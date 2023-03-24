@@ -28,13 +28,16 @@ pub fn PodiumSharp(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "512" height = "512" viewBox =
-        "0 0 512 512" width = { size.clone() } height = { size } > < rect xmlns =
-        "http://www.w3.org/2000/svg" x = "160" y = "32" width = "192" height = "448" /><
-        rect xmlns = "http://www.w3.org/2000/svg" x = "384" y = "192" width = "112"
-        height = "288" />< rect xmlns = "http://www.w3.org/2000/svg" x = "16" y = "128"
-        width = "112" height = "352" /> < title > { title } < / title > < / svg >
+        "0 0 512 512" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < rect xmlns = "http://www.w3.org/2000/svg" x =
+        "160" y = "32" width = "192" height = "448" />< rect xmlns =
+        "http://www.w3.org/2000/svg" x = "384" y = "192" width = "112" height = "288" /><
+        rect xmlns = "http://www.w3.org/2000/svg" x = "16" y = "128" width = "112" height
+        = "352" /> < title > { title } < / title > < / svg >
     }
 }

@@ -28,11 +28,13 @@ pub fn GlobeAsiaAustralia(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        fill = "none" width = { size.clone() } height = { size } > < path xmlns =
-        "http://www.w3.org/2000/svg" d =
+        fill = "none" width = size.clone() height = size xmlns =
+        "http://www.w3.org/2000/svg" > < path xmlns = "http://www.w3.org/2000/svg" d =
         "M15.7498 8.25C16.164 8.25 16.4998 8.58579 16.4998 9C16.4998 10.1201 16.0077 11.1263 15.2304 11.8123C14.9199 12.0864 14.4459 12.0569 14.1718 11.7463C13.8977 11.4357 13.9273 10.9618 14.2378 10.6877C14.7062 10.2743 14.9998 9.67191 14.9998 9C14.9998 8.58579 15.3356 8.25 15.7498 8.25Z"
         fill = "#0F172A" />< path xmlns = "http://www.w3.org/2000/svg" fill - rule =
         "evenodd" clip - rule = "evenodd" d =

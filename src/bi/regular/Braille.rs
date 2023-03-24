@@ -28,13 +28,15 @@ pub fn Braille(
     #[prop(optional)]
     title: String,
 ) -> impl IntoView {
+    let style = format!("{} color: {};", style, color);
+    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style width = "24" height = "24" viewBox = "0 0 24 24"
-        width = { size.clone() } height = { size } > < circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "4" cy = "7" r = "2" />< circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "9" cy = "12" r = "2" />< circle xmlns =
-        "http://www.w3.org/2000/svg" cx = "15" cy = "7" r = "2" />< circle xmlns =
+        width = size.clone() height = size xmlns = "http://www.w3.org/2000/svg" > <
+        circle xmlns = "http://www.w3.org/2000/svg" cx = "4" cy = "7" r = "2" />< circle
+        xmlns = "http://www.w3.org/2000/svg" cx = "9" cy = "12" r = "2" />< circle xmlns
+        = "http://www.w3.org/2000/svg" cx = "15" cy = "7" r = "2" />< circle xmlns =
         "http://www.w3.org/2000/svg" cx = "15" cy = "12" r = "2" />< circle xmlns =
         "http://www.w3.org/2000/svg" cx = "15" cy = "17" r = "2" />< circle xmlns =
         "http://www.w3.org/2000/svg" cx = "20" cy = "7" r = "2" />< circle xmlns =
