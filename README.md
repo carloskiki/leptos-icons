@@ -1,7 +1,8 @@
 # Leptos-Icons
-add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
-Note that this crate is **heavily** inspired by the [solidjs-icons](https://github.com/x64Bits/solid-icons) library.
+- Please note that this crate is in very early developpement and may include [bugs](#contributing).
+- This crate is **heavily** inspired by the [solidjs-icons](https://github.com/x64Bits/solid-icons) library.
 
 ## Table of Contents
 
@@ -12,9 +13,7 @@ Note that this crate is **heavily** inspired by the [solidjs-icons](https://gith
 ## Usage
 To use this crate, simply add it to your dependencies and list the features corresponding to the icons you need.
 
-e.g. `cargo add leptos-icons --features FaSolidBars`
-
-Please note that this crate is in very early developpement and may include [bugs](#contributing).
+e.g.: `cargo add leptos-icons --features FaSolidBars`
 
 ## Icon Packages
 
@@ -40,13 +39,13 @@ Please note that this crate is in very early developpement and may include [bugs
 ## Contributing
 Non-inclusive list of crucial missing features:
 - Better Docs
-- Props passing (style, color)
+- Arbitrary props passing
 - remove useless categories (e.g. vscode-light/dark, sizes?)
 - ssr optimizations?
 
 Bugs:
 - Tabler Icon's "Pagebreak" and "PageBreak" icons have the same file name.
 - Icon names starting with digits
-- Tracing feature [#1]([#1][i1])
+- Tracing feature ([#1][i1])
 
 [i1]: https://github.com/Carlosted/leptos-icons/issues/1

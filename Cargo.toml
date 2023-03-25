@@ -14,7 +14,7 @@ exclude = ["icons/"]
 build = "build/main.rs"
 
 [dependencies]
-leptos = { version = "0.2.1", default-features = false }
+leptos = { version = "0.2.4", default-features = false }
 
 [build-dependencies]
 url = { version = "2.3.1", features = ["serde"] }
