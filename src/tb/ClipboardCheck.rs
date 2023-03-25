@@ -9,6 +9,7 @@ pub fn ClipboardCheck(
     /// Defaults to "1em".
     #[prop(into)]
     #[prop(optional)]
+    #[prop(default = String::from("1em"))]
     size: String,
     /// HTML class attribute.
     #[prop(into)]
@@ -18,6 +19,7 @@ pub fn ClipboardCheck(
     /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
     #[prop(into)]
     #[prop(optional)]
+    #[prop(default = String::from("currentColor"))]
     color: String,
     /// HTML style attribute.
     #[prop(into)]
@@ -29,7 +31,6 @@ pub fn ClipboardCheck(
     title: String,
 ) -> impl IntoView {
     let style = format!("{} color: {};", style, color);
-    let size = if size == "" { "1em" } else { &size };
     view! {
         cx, < svg class = class stroke = "currentColor" fill = "currentColor"
         stroke_witdh = "0" style = style class =

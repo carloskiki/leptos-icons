@@ -168,19 +168,28 @@ fn icon_file_content(
             cx: Scope,
             /// The size of the icon (The side length of the square surrounding the icon).
             /// Defaults to "1em".
-            #[prop(into)] #[prop(optional)] size: String,
+            #[prop(into)]
+            #[prop(optional)]
+            #[prop(default = String::from("1em"))]
+            size: String,
             /// HTML class attribute.
-            #[prop(into)] #[prop(optional)] class: String,
+            #[prop(into)]
+            #[prop(optional)]
+            class: String,
             /// Color of the icon.
             /// For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
-            #[prop(into)] #[prop(optional)] color: String,
+            #[prop(into)]
+            #[prop(optional)]
+            #[prop(default = String::from("currentColor"))]
+            color: String,
             /// HTML style attribute.
-            #[prop(into)] #[prop(optional)] style: String,
+            #[prop(into)]
+            #[prop(optional)]
+            style: String,
             /// Accessibility title.
             #[prop(into)] #[prop(optional)] title: String,
             ) -> impl IntoView {
             let style = format!("{} color: {};", style, color);
-            let size = if size == "" { "1em" } else { &size };
             view! { cx,
             <svg
             class=class
