@@ -9,11 +9,11 @@ use crate::{
 };
 
 #[instrument(level = "info")]
-pub(crate) fn clear() -> Result<()> {
+pub(crate) async fn clear() -> Result<()> {
     let download_path = path::download_path("");
     if download_path.exists() {
         info!(?download_path, "Removing existing downloads folder");
-        std::fs::remove_dir_all(&download_path)?;
+        tokio::fs::remove_dir_all(&download_path).await?;
     }
     Ok(())
 }

@@ -1,16 +1,8 @@
-use anyhow::{anyhow, Result};
-use tracing::{instrument, info, debug};
-use std::{
-    fs::{create_dir, create_dir_all, File, OpenOptions},
-    io::{BufWriter, Write},
-    path::{Path, PathBuf},
-};
+use anyhow::Result;
+use std::io::Write;
+use tracing::{info, instrument};
 
-use crate::{
-    icon::Icon,
-    package::{Package, PackageMetadata},
-    path::{src_path, self},
-};
+use crate::{icon::Icon, package::Package, path};
 
 const BASE_CARGO_TOML: &'static str = indoc::indoc!(
     r#"
@@ -51,146 +43,36 @@ pub(crate) fn generate_initial_cargo_toml() -> Result<()> {
     Ok(())
 }
 
-pub(crate) fn gen_lib_files(
-    package: Package,
-    meta: &PackageMetadata,
-    icons: Vec<Icon>,
-    lib_file: &mut File,
-    cargo_file: &mut BufWriter<File>,
-) -> Result<()> {
-    info!(?package, "gen_lib_files");
-    let short_name = meta.short_name.as_ref();
-    let mut package_path = src_path(short_name);
-    create_dir(&package_path)?;
+// TODO: Return newtype?
+pub(crate) fn gen_icon_components(package: Package, icons: Vec<Icon>) -> Vec<String> {
+    info!(?package, "gen_icon_components");
 
-    package_path.set_extension("rs");
-    let mut package_file = OpenOptions::new()
-        .create(true)
-        .append(true)
-        .open(package_path)?;
-
-    declare_mod(lib_file, &meta.short_name)?;
-
-    let mut modules_created: Vec<PathBuf> = vec![PathBuf::from(short_name)];
-    icons
-        .iter()
-        .map(|icon| {
-            let mut path_to_icon = PathBuf::from(short_name);
-            if let Some(size) = icon.name.size {
-                let size_string = size.to_string();
-                path_to_icon.push(&size_string);
-            }
-
-            icon.name.categories.iter().for_each(|category| {
-                path_to_icon.push(category.to_string());
-            });
-
-            if !modules_created.contains(&path_to_icon) {
-                create_modules_on_path(&path_to_icon, &mut package_file)?;
-                modules_created.push(path_to_icon.clone());
-            };
-
-            create_icon(
-                path::src_path("").join(path_to_icon),
-                &icon,
-                short_name,
-                cargo_file,
-            )?;
-
-            Ok(())
-        })
-        .collect::<Result<()>>()
-}
-
-fn declare_mod(file: &mut File, mod_name: &str) -> Result<()> {
-    debug!(?mod_name, "declare_mod");
-    write!(file, "pub mod {};\n", mod_name).map_err(anyhow::Error::from)
-}
-
-fn create_modules_on_path(module_path: &PathBuf, package_file: &mut File) -> Result<()> {
-    info!(?module_path, "create_modules_on_path");
-    let mut full_module_path = src_path(module_path);
-    create_dir_all(&full_module_path)?;
-
-    full_module_path.set_extension("rs");
-    OpenOptions::new()
-        .create_new(true)
-        .write(true)
-        .open(full_module_path)?;
-
-    let mut new_child_module = module_path
-        .file_stem()
-        .unwrap()
-        .to_str()
-        .ok_or(anyhow!("file name is not valid utf-8"))?
-        .to_owned();
-
-    for ancestor in module_path.ancestors().skip(1) {
-        let mut module_file_path = src_path(ancestor);
-        module_file_path.set_extension("rs");
-        let file_existed = module_file_path.exists();
-
-        let mut module_file = OpenOptions::new()
-            .create(true)
-            .append(true)
-            .open(&module_file_path)?;
-
-        declare_mod(&mut module_file, &new_child_module)?;
-
-        if file_existed {
-            return Ok(());
-        };
-
-        new_child_module = module_file_path
-            .file_stem()
-            .unwrap()
-            .to_str()
-            .ok_or(anyhow!("file name is not valid utf-8"))?
-            .to_owned();
+    let mut icon_component = Vec::new();
+    for icon in icons {
+        icon_component.push(create_icon_component_string(
+            &icon.feature_name,
+            &icon.component_name,
+            &icon.view,
+        ));
     }
 
-    let first_category = module_path.iter().next().unwrap().to_str().unwrap();
-    declare_mod(package_file, first_category)?;
-
-    Ok(())
+    icon_component
 }
 
-fn create_icon(
-    mut icon_path: PathBuf,
-    icon: &Icon,
-    package_short_name: &str,
-    cargo_file: &mut BufWriter<File>,
-) -> Result<()> {
-    debug!(?icon_path, "create_icon");
-    let icon_component_name = icon.name.component_name();
-    let icon_feature_name = icon.name.feature_name(package_short_name);
+/// This creates the Rust code for a leptos component representing a single icon.
+/// Feature-gated by the given feature name.
+fn create_icon_component_string(feature_name: &str, component_name: &str, view: &str) -> String {
+    indoc::formatdoc!(
+        r#"
+        #[cfg(feature = "{feature_name}")]
+        /// *This icon requires the feature* `{feature_name}` *to be enabled*.
+        #[::leptos::component]
+        pub fn {component_name}(cx: ::leptos::Scope) -> impl ::leptos::IntoView {{
+            ::leptos::view! {{ cx,
+                {view}
+            }}
+        }}
 
-    let mut icon_file = OpenOptions::new()
-        .create(true)
-        .write(true)
-        .open(&icon_path.join(format!("{}.rs", &icon_component_name)))?;
-
-    write!(
-        &mut icon_file,
-        "#[cfg(feature = \"{icon_feature_name}\")]
-use leptos::{{component, Scope, IntoView, view}};
-
-#[cfg(feature = \"{icon_feature_name}\")]
-/// *This icon requires the feature* `{icon_feature_name}` *to be enabled*.
-#[component]
-pub fn {}(cx: Scope) -> impl IntoView {{
-   view! {{ cx,
-       {}
-   }}
-}}",
-        &icon_component_name, &icon.content
-    )?;
-
-    icon_path.set_extension("rs");
-    let mut upper_module_file = OpenOptions::new().append(true).open(&icon_path)?;
-    declare_mod(&mut upper_module_file, &icon_component_name)?;
-
-    cargo_file.write_all(format!("{} = []\n", &icon_feature_name).as_bytes())?;
-
-    Ok(())
+        "#
+    )
 }

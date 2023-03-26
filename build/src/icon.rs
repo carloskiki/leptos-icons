@@ -6,8 +6,12 @@ use crate::package::Package;
 
 #[derive(Debug)]
 pub(crate) struct Icon {
-    pub(crate) content: String,
-    pub(crate) name: IconName,
+    pub view: String,
+    pub size: Option<IconSize>,
+    pub categories: Vec<String>,
+    pub component_name: String,
+    pub feature_name: String,
+    // TODO: Original file name?
 }
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
@@ -19,15 +23,21 @@ pub(crate) enum IconSize {
     Xxl,
 }
 
-impl Display for IconSize {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_str(match self {
+impl IconSize {
+    fn as_str(&self) -> &'static str {
+        match self {
             IconSize::Sm => "sm",
             IconSize::Md => "md",
             IconSize::Lg => "lg",
             IconSize::Xl => "xl",
             IconSize::Xxl => "xxl",
-        })
+        }
+    }
+}
+
+impl Display for IconSize {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.write_str(self.as_str())
     }
 }
 
@@ -50,13 +60,6 @@ impl FromStr for IconSize {
     }
 }
 
-#[derive(Debug)]
-pub(crate) struct IconName {
-    pub(crate) size: Option<IconSize>,
-    pub(crate) categories: Vec<Category>,
-    pub(crate) name: String,
-}
-
 // Ant design icons: filled, outlined, twotone
 // Font awesome: brands, regular, solid
 // Feather icons: Not categorized
@@ -69,102 +72,100 @@ pub(crate) struct IconName {
 // Heroicons: (20| solid) , (24| outline, solid)
 // css.gg: Not categorized
 // Tabler icons: Not categorized
-impl IconName {
-    pub(crate) fn component_name(&self) -> String {
-        let name = self.name.to_pascal_case();
-        if name.starts_with(char::is_numeric) {
-            return "_".to_owned() + &name;
+pub(crate) fn component_name(raw_name: &str) -> String {
+    let pascal_case = raw_name.to_pascal_case();
+    if pascal_case.starts_with(char::is_numeric) {
+        format!("_{pascal_case}")
+    } else {
+        pascal_case
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use crate::icon::component_name;
+
+    #[test]
+    fn test() {
+        assert_eq!("TestName", component_name("1-test-name"))
+    }
+}
+pub(crate) fn feature_name(
+    raw_name: &str,
+    icon_size: Option<IconSize>,
+    categories: &Vec<String>,
+    package_short_name: &str,
+) -> String {
+    let mut name = String::with_capacity(
+        package_short_name.len()
+            + 1
+            + raw_name.len()
+            + categories.iter().map(|it| it.len() + 1).sum::<usize>()
+            + icon_size.map(|it| it.as_str().len() + 1).unwrap_or(0),
+    );
+
+    name.push_str(package_short_name.as_ref());
+    name.push(' ');
+
+    name.push_str(raw_name);
+    name.push(' ');
+
+    categories.iter().for_each(|category| {
+        name.push_str(&category);
+        name.push(' ');
+    });
+
+    if let Some(size) = icon_size {
+        name.push_str(size.as_str());
+        name.push(' ');
+    };
+
+    name.to_pascal_case()
+}
+
+pub(crate) fn extract_raw_icon_name(
+    package: Package,
+    file_stem: &str,
+) -> (&str, Option<IconSize>, Option<Vec<String>>) {
+    match package {
+        // octoicons: size suffix e.g: '-24.svg'
+        Package::GithubOcticons => {
+            let size = IconSize::from_str(&file_stem[(file_stem.len() - 2)..]).ok();
+            let name = file_stem
+                .trim_end_matches(char::is_numeric)
+                .trim_end_matches('-');
+            (name, size, None)
         }
-        name
-    }
-
-    pub(crate) fn feature_name(&self, package_short_name: &str) -> String {
-        let mut name = package_short_name.to_owned() + " ";
-
-        if let Some(size) = self.size {
-            name = name + &size.to_string() + " ";
-        };
-        self.categories.iter().for_each(|category| {
-            name.push_str(category.to_str());
-            name.push(' ');
-        });
-        name.push_str(&self.name);
-
-        name.to_pascal_case()
-    }
-}
-
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
-pub enum Category {
-    Fill,
-    Line,
-    Other(String),
-}
-
-impl Category {
-    fn to_str(&self) -> &str {
-        match self {
-            Category::Fill => "fill",
-            Category::Line => "line",
-            Category::Other(str) => str.as_str(),
+        // Weather icons: 'wi-' prefix
+        Package::WeatherIcons => {
+            let name = file_stem.trim_start_matches("wi-");
+            (name, None, None)
         }
-    }
-}
-
-impl Display for Category {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.write_str(self.to_str())
-    }
-}
-
-impl IconName {
-    pub(crate) fn new(
-        package: Package,
-        mut name: &str,
-        mut size: Option<IconSize>,
-        mut categories: Vec<Category>,
-    ) -> IconName {
-        match package {
-            // octoicons: size suffix e.g: '-24.svg'
-            Package::GithubOcticons => {
-                size = IconSize::from_str(&name[(name.len() - 2)..]).ok();
-                name = name
-                    .trim_end_matches(char::is_numeric)
-                    .trim_end_matches('-');
-            }
-            // Weather icons: 'wi-' prefix
-            Package::WeatherIcons => {
-                name = name.trim_start_matches("wi-");
-            }
-            // Box icons: logos: 'bxl-', regular:  'bx-', solid: 'bxs-' prefixes
-            Package::BoxIcons => {
-                name = name
-                    .trim_start_matches("bxl-")
-                    .trim_start_matches("bx-")
-                    .trim_start_matches("bxs-");
-            }
-            // Icomoon icons: numbered '001-xxxxxx'
-            Package::IcoMoonFree => {
-                name = name.trim_start_matches(char::is_numeric);
-            }
-            Package::RemixIcon => {
-                if name.ends_with("-fill") {
-                    name = name.trim_end_matches("-fill");
-                    categories.push(Category::Fill);
-                } else if name.ends_with("-line") {
-                    name = name.trim_end_matches("-line");
-                    categories.push(Category::Line);
-                }
-            }
-            _ => (),
-        };
-
-        let name = name.to_string();
-
-        IconName {
-            size,
-            categories,
-            name,
+        // Box icons: logos: 'bxl-', regular:  'bx-', solid: 'bxs-' prefixes
+        Package::BoxIcons => {
+            let name = file_stem
+                .trim_start_matches("bxl-")
+                .trim_start_matches("bx-")
+                .trim_start_matches("bxs-");
+            (name, None, None)
         }
+        // Icomoon icons: numbered '001-xxxxxx'
+        Package::IcoMoonFree => {
+            let name = file_stem.trim_start_matches(char::is_numeric);
+            (name, None, None)
+        }
+        Package::RemixIcon => {
+            let mut name = file_stem;
+            let mut cats = vec![];
+            if name.ends_with("-fill") {
+                name = name.trim_end_matches("-fill");
+                cats.push("fill".to_string());
+            } else if name.ends_with("-line") {
+                name = name.trim_end_matches("-line");
+                cats.push("line".to_string());
+            }
+            (name, None, if cats.is_empty() { None } else { Some(cats) })
+        }
+        _ => (file_stem, None, None),
     }
 }

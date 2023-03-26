@@ -1,83 +1,108 @@
-use anyhow::{anyhow, Result};
-use std::{fs::File, path::Path, str::FromStr};
-use tracing::{error, info, instrument};
+use anyhow::Result;
+use std::{path::PathBuf, str::FromStr};
+use tracing::{info, instrument, warn};
 
 use crate::{
-    icon::{Category, Icon, IconName, IconSize},
+    icon::{self, Icon, IconSize},
     optimize,
     package::{Package, PackageMetadata},
     path,
 };
 
 #[instrument(level = "info", skip(meta))]
-pub(crate) fn get_icons(
-    package: Package,
-    meta: &PackageMetadata,
-    extra_path: &Path,
-) -> Result<Vec<Icon>> {
+pub(crate) async fn get_icons(package: Package, meta: &PackageMetadata) -> Result<Vec<Icon>> {
     info!("Retrieving icon names...");
-    let svg_dir = path::download_path(meta.download_dir.as_ref())
-        .join(meta.svg_dir.as_ref())
-        .join(extra_path);
-
     let mut icons = Vec::new();
 
-    for entry in std::fs::read_dir(&svg_dir)? {
-        let entry = entry?;
-        let entry_full_path = entry.path();
-        let entry_name: &Path = &entry_full_path.strip_prefix(&svg_dir)?;
-        let entry_relative_path = extra_path.join(entry_name);
+    // A vec of directories to search combined with a list of categories valid for the contents of that directory.
+    let mut search_dirs = Vec::<(PathBuf, Vec<String>)>::new();
+    search_dirs.push((
+        path::download_path(meta.download_dir.as_ref()).join(meta.svg_dir.as_ref()),
+        Vec::new(),
+    ));
 
-        if !entry_full_path.exists() {
-            error!(
-                ?entry_full_path,
-                "There is something wrong here... Path does not exist"
-            );
-            panic!("Path does not exist.");
-        }
+    while !search_dirs.is_empty() {
+        let (current, categories) = search_dirs.pop().expect("must exist");
+        let mut dir_stream = tokio::fs::read_dir(&current).await?;
+        while let Some(entry) = dir_stream.next_entry().await? {
+            let entry_path = entry.path();
 
-        if entry.file_type()?.is_dir() {
-            get_icons(package, meta, &entry_relative_path)?;
-        };
+            if entry.file_type().await?.is_dir() {
+                info!(additional_dir = ?entry_path, "Found additional directory.");
 
-        if let Some(file_extension) = entry_name.extension() {
-            let file_extension = file_extension.to_str().ok_or(anyhow!(
-                "not a valid file extension (could not convert OsStr)"
-            ))?;
-            if file_extension == "svg" {
-                let name = format_icon_name(
-                    package,
-                    entry_relative_path
-                        .to_str()
-                        .ok_or(anyhow!("icon path is not a valid utf-8 path"))?
-                        .to_string(),
-                )?;
-                let content = optimize::optimize(File::open(entry_full_path)?)?;
-                icons.push(Icon { content, name });
-            }
+                // This dir must be searched as well. We consider is's name as being a "category" for the items contained in it.
+                let cat = entry_path
+                    .file_name()
+                    .unwrap()
+                    .to_string_lossy()
+                    .to_string();
+                let mut entry_cats = categories.clone();
+                entry_cats.push(cat);
+                search_dirs.push((current.join(&entry_path), entry_cats));
+
+                continue;
+            };
+
+            match entry_path.extension() {
+                Some(file_extension) => {
+                    match file_extension.to_str() {
+                        Some(file_extension) => match file_extension {
+                            "svg" => {
+                                let file_stem = entry_path.file_stem().unwrap().to_string_lossy(); // TODO: Error handling\
+
+                                let (raw_name, size_from_name, cats_from_name) =
+                                    icon::extract_raw_icon_name(package, &file_stem);
+
+                                let mut icon_categories = categories.clone();
+                                if let Some(mut cats_from_name) = cats_from_name {
+                                    icon_categories.append(&mut cats_from_name);
+                                }
+
+                                let icon_size = size_from_name.or_else(|| {
+                                    icon_categories
+                                        .iter()
+                                        .filter_map(|cat| IconSize::from_str(&cat).ok())
+                                        .next()
+                                });
+
+                                let feature_name = icon::feature_name(
+                                    raw_name,
+                                    icon_size,
+                                    &icon_categories,
+                                    &meta.short_name,
+                                );
+
+                                let view = optimize::optimize(
+                                    tokio::fs::read_to_string(&entry_path).await?.as_bytes(),
+                                )?;
+
+                                icons.push(Icon {
+                                    view,
+                                    size: icon_size,
+                                    categories: icon_categories,
+                                    component_name: feature_name.clone(), // TODO: Make clear why
+                                    feature_name,
+                                });
+                            }
+                            _ => warn!(
+                                ?entry_path,
+                                file_extension, "Found file without svg extension. Ignoring it."
+                            ),
+                        },
+                        None => {
+                            warn!(
+                                ?entry_path,
+                                ?file_extension,
+                                "Found file whose file_extension (&OsStr) could not be converted to a &str. Ignoring it."
+                            );
+                        }
+                    }
+                }
+                None => warn!(?entry_path, "Found file without extension. Ignoring it."),
+            };
         }
     }
 
     info!(num_icons = icons.len(), "Finished retrieving icon names.");
     Ok(icons)
-}
-
-fn format_icon_name(package: Package, icon_path_string: String) -> Result<IconName> {
-    let mut directories = icon_path_string[..(icon_path_string.len() - 4)]
-        .split('/')
-        .collect::<Vec<&str>>();
-    let file_name = directories.pop().ok_or(anyhow!("icon path is empty"))?;
-
-    let (icon_size, categories) =
-        directories
-            .iter()
-            .fold((None, Vec::new()), |(size, mut categories), dir_name| {
-                if dir_name.chars().all(char::is_numeric) {
-                    return (IconSize::from_str(&dir_name).ok(), categories);
-                };
-                categories.push(Category::Other(dir_name.to_lowercase()));
-                (size, categories)
-            });
-
-    Ok(IconName::new(package, file_name, icon_size, categories))
 }
