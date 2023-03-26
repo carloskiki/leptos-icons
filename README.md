@@ -14,7 +14,9 @@ Add icons from popular icon libraries into your leptos projects. Every icon is p
 To use this crate, it is currently required to use github linking as it is not yet published to crates.io.
 
 ```toml
-leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" }
+[dependencies]
+# ...
+leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["..."] }
 ```
 
 It is then possible to add Icons by their feature names.
