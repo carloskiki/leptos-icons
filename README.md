@@ -11,9 +11,13 @@ Add icons from popular icon libraries into your leptos projects. Every icon is p
 - [Contributing](#contributing)
 
 ## Usage
-To use this crate, simply add it to your dependencies and list the features corresponding to the icons you need.
+To use this crate, it is currently required to use github linking as it is not yet published to crates.io.
 
-e.g.: `cargo add leptos-icons --features FaSolidBars`
+```toml
+leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" }
+```
+
+It is then possible to add Icons by their feature names.
 
 ## Icon Packages
 
