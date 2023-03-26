@@ -61,7 +61,7 @@ pub(crate) async fn get_icons(package: Package, meta: &PackageMetadata) -> Resul
                                 let icon_size = size_from_name.or_else(|| {
                                     icon_categories
                                         .iter()
-                                        .filter_map(|cat| IconSize::from_str(&cat).ok())
+                                        .filter_map(|cat| IconSize::from_str(cat).ok())
                                         .next()
                                 });
 

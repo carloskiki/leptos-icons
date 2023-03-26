@@ -13,7 +13,3 @@ pub(crate) fn leptos_icons_crate<P: AsRef<Path>>(relative_path: P) -> PathBuf {
     current.pop();
     current.join("leptos-icons").join(relative_path)
 }
-
-pub(crate) fn src_path<P: AsRef<Path>>(relative_path: P) -> PathBuf {
-    leptos_icons_crate("src").join(relative_path)
-}

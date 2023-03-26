@@ -1,6 +1,7 @@
 use std::{fmt::Display, str::FromStr};
 
 use heck::ToPascalCase;
+use tracing::info;
 
 use crate::package::Package;
 
@@ -168,4 +169,44 @@ pub(crate) fn extract_raw_icon_name(
         }
         _ => (file_stem, None, None),
     }
+}
+
+pub(crate) fn gen_icon_components(package: Package, icons: Vec<Icon>) -> Vec<LeptosComponent> {
+    info!(?package, "Generating leptos icon components.");
+    icons
+        .into_iter()
+        .map(|icon| {
+            create_leptos_icon_component(&icon.feature_name, &icon.component_name, &icon.view)
+        })
+        .collect()
+}
+
+/// A self-contained Leptos component declaration.
+///
+/// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, remove this note
+/// Currently requires `use leptos::*;` to be in scope to compile properly.
+pub(crate) struct LeptosComponent(pub String);
+
+/// This creates the Rust code for a leptos component representing a single icon.
+/// Feature-gated by the given feature name.
+///
+/// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, use `::leptos::...` wherever possible and remove `use leptos::*` in main.rs.
+fn create_leptos_icon_component(
+    feature_name: &str,
+    component_name: &str,
+    view: &str,
+) -> LeptosComponent {
+    LeptosComponent(indoc::formatdoc!(
+        r#"
+        #[cfg(feature = "{feature_name}")]
+        /// *This icon requires the feature* `{feature_name}` *to be enabled*.
+        #[component]
+        pub fn {component_name}(cx: Scope) -> impl IntoView {{
+            view! {{ cx,
+                {view}
+            }}
+        }}
+
+        "#
+    ))
 }

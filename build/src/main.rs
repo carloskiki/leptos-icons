@@ -1,6 +1,5 @@
 use anyhow::Result;
-use std::fs::OpenOptions;
-use std::io::Write;
+use clap::{command, Parser};
 use std::sync::Arc;
 use strum::IntoEnumIterator;
 use tokio::io::AsyncWriteExt;
@@ -12,20 +11,16 @@ use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::{Layer, Registry};
 
-use path::src_path;
+use crate::library::Library;
 
 mod download;
-mod generate;
 mod icon;
+mod library;
 mod optimize;
 mod package;
 mod parse;
 mod path;
 mod sem_ver;
-
-// Not working
-// - two file with same name
-// - files starting with digits
 
 // Missing support for:
 // - Docs
@@ -34,20 +29,32 @@ mod sem_ver;
 // - remove useless categories (e.g. vscode-light/dark, sizes?)
 // - ssr optimizations?
 
+#[derive(Debug, Parser)]
+#[command(author, version, about, long_about = None)]
+struct BuildArgs {
+    /// Clear downloads and re-download.
+    #[arg(long, default_value_t = false)]
+    clear: bool,
+}
+
 #[tokio::main]
 async fn main() -> Result<()> {
     init_tracing(tracing::level_filters::LevelFilter::INFO);
 
     assert_paths();
 
+    let args: BuildArgs = BuildArgs::parse();
+    info!(?args, "Parsed program arguments.");
+
     let start = time::OffsetDateTime::now_utc();
 
-    // Re-download packages
-    download::clear().await?;
-    clean_src_dir()?;
-    generate::generate_initial_cargo_toml()?;
+    let lib = Library::new();
 
-    //let lib_mods = Arc::new(RwLock::new(Vec::<String>::new()));
+    info!("Resetting library directory.");
+    lib.src_dir().reset().await?;
+    lib.cargo_toml().remove().await?;
+    lib.cargo_toml().init().await?;
+
     let features = Arc::new(RwLock::new(Vec::<String>::new()));
     let modules = Arc::new(RwLock::new(Vec::<String>::new()));
 
@@ -58,6 +65,11 @@ async fn main() -> Result<()> {
             let features = features.clone();
             let modules = modules.clone();
             tokio::spawn(async move {
+                // 0. Remove previous download if requested.
+                if args.clear {
+                    download::remove_package(&meta).await?;
+                }
+
                 // 1. Download the package.
                 download::download_package(&meta).map_err(|err| {
                     error!(
@@ -76,7 +88,6 @@ async fn main() -> Result<()> {
                 // Sorting is necessary, as we wan't to reduce churn as much as possible.
                 icons.sort_by(|icon_a, icon_b| icon_a.component_name.cmp(&icon_b.component_name));
 
-
                 // 3. Collect feature names for this icon-package. TODO: This should be port / outcome of another process..
                 info!(?package, "Generating feature names.");
                 let mut lock = features.write().await;
@@ -90,14 +101,13 @@ async fn main() -> Result<()> {
                 lock.push(meta.short_name.to_owned().to_string());
                 drop(lock);
 
-
                 // 4. Generate and write leptos-icon components.
                 info!(?package, "Generating leptos icon component declarations.");
                 // NOTE: sorted correctly, as icons were already sorted.
-                let icon_components = generate::gen_icon_components(package, icons);
+                let icon_components = icon::gen_icon_components(package, icons);
 
                 // 4. Generate and write leptos-icon components.
-                let mut mod_path = src_path(meta.short_name.as_ref());
+                let mut mod_path = path::leptos_icons_crate("src").join(meta.short_name.as_ref()); // TODO: This should also be done using the lib type. Potential for tracking created modules.
                 mod_path.set_extension("rs");
                 let mut mod_file_writer = tokio::io::BufWriter::new(
                     tokio::fs::OpenOptions::new()
@@ -110,8 +120,13 @@ async fn main() -> Result<()> {
                             err
                         })?,
                 );
+                // TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, remove next line and in generate.rs: use `::leptos::...` wherever possible.
+                mod_file_writer
+                    .write("use leptos::*;\n\n".as_bytes())
+                    .await
+                    .unwrap();
                 for comp in icon_components {
-                    mod_file_writer.write(comp.as_bytes()).await.unwrap();
+                    mod_file_writer.write(comp.0.as_bytes()).await.unwrap();
                 }
 
                 Ok::<(), anyhow::Error>(())
@@ -119,7 +134,9 @@ async fn main() -> Result<()> {
         })
         .collect::<Vec<_>>();
     for handle in handles {
-        handle.await.unwrap().unwrap();
+        if let Err(err) = handle.await.unwrap() {
+            error!(?err, "Could not process package successfully.");
+        }
     }
 
     let mut modules = modules.write().await;
@@ -129,53 +146,24 @@ async fn main() -> Result<()> {
     modules.sort();
 
     info!(num_modules, "Writing modules to lib.rs.");
-    let mut lib_file = tokio::io::BufWriter::new(
-        tokio::fs::OpenOptions::new()
-            .create(true)
-            .append(true)
-            .open(path::src_path("lib.rs"))
-            .await
-            .map_err(|err| {
-                error!(?err, "Could not open lib.rs file to append modules.");
-                err
-            })?,
-    );
+    let mut lib_rs = lib.src_dir().lib_rs().append().await?;
     for module_name in modules.iter() {
-        lib_file.write_all("pub mod ".as_bytes()).await?;
-        lib_file.write_all(module_name.as_bytes()).await?;
-        lib_file.write_all(";\n".as_bytes()).await?;
+        lib_rs.write_all("pub mod ".as_bytes()).await?;
+        lib_rs.write_all(module_name.as_bytes()).await?;
+        lib_rs.write_all(";\n".as_bytes()).await?;
     }
-    lib_file.flush().await.map_err(|err| {
+    lib_rs.flush().await.map_err(|err| {
         error!(?err, "Could not flush lib.rs file after writing.");
         err
     })?;
 
-    let mut features = features.write().await;
-    let num_features = features.len();
-
+    let mut lock = features.write().await;
+    let num_features = lock.len();
     info!(num_features, "Sorting features to avoid churn.");
-    features.sort();
-
-    info!(num_features, "Writing features to Cargo.toml.");
-    let mut cargo_file = tokio::io::BufWriter::new(
-        tokio::fs::OpenOptions::new()
-            .append(true)
-            .open(path::leptos_icons_crate("Cargo.toml"))
-            .await
-            .map_err(|err| {
-                error!(?err, "Could not open Cargo.toml file to append data.");
-                err
-            })?,
-    );
-    for feature_name in features.iter() {
-        cargo_file
-            .write_all(format!("{} = []\n", &feature_name).as_bytes())
-            .await?;
-    }
-    cargo_file.flush().await.map_err(|err| {
-        error!(?err, "Could not flush Cargo.toml file after writing.");
-        err
-    })?;
+    lock.sort();
+    let s = std::mem::take(&mut *lock);
+    lib.cargo_toml().append_features(s).await?;
+    drop(lock);
 
     let end = time::OffsetDateTime::now_utc();
     let took = end - start;
@@ -223,25 +211,4 @@ fn assert_paths() {
             .file_name()
             .and_then(|it| it.to_str())
     );
-}
-
-fn clean_src_dir() -> Result<()> {
-    let src_dir = path::src_path("");
-
-    info!(?src_dir, "Removing existing src dir");
-    std::fs::remove_dir_all(&src_dir)?;
-
-    info!(?src_dir, "Creating new src dir");
-    std::fs::create_dir(&src_dir)?;
-
-    let lib_rs_path = path::src_path("lib.rs");
-
-    info!(?lib_rs_path, "Creating new lib.rs file");
-    OpenOptions::new()
-        .create_new(true)
-        .write(true)
-        .open(lib_rs_path)?
-        .write("#![allow(non_snake_case)]\n".as_bytes())?;
-
-    Ok(())
 }
