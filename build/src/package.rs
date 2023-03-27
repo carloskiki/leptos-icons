@@ -23,6 +23,30 @@ pub(crate) enum Package {
     GithubOcticons,
 }
 
+impl Package {
+    pub fn is_category(&self, str: &str) -> bool {
+        match self {
+            Package::AntDesignIcons => true,
+            Package::FontAwesome => true,
+            Package::WeatherIcons => true,
+            Package::Feather => true,
+            Package::VSCodeIcons => true,
+            Package::BootstrapIcons => true,
+            // SVG's located in the "logos" directory are distinct from files in the "regular" and "solid" directories. We may not use that as a category.
+            Package::BoxIcons => str != "logos",
+            Package::IcoMoonFree => true,
+            Package::Ionicons => true,
+            Package::RemixIcon => true,
+            Package::SimpleIcons => true,
+            Package::Typicons => true,
+            Package::Heroicons => true,
+            Package::CssGg => true,
+            Package::TablerIcons => true,
+            Package::GithubOcticons => true,
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub(crate) enum PackageSource {
     Git {

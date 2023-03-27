@@ -9,11 +9,14 @@ use crate::package::Package;
 pub(crate) struct Icon {
     pub view: String,
     pub size: Option<IconSize>,
-    pub categories: Vec<String>,
+    pub categories: Vec<Category>,
     pub component_name: String,
     pub feature_name: String,
     // TODO: Original file name?
 }
+
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
+pub(crate) struct Category(pub String);
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub(crate) enum IconSize {
@@ -56,7 +59,7 @@ impl FromStr for IconSize {
             "48" => Ok(IconSize::Xl),
             "96" => Ok(IconSize::Xxl),
             other => {
-                return Err(anyhow::anyhow!(
+                Err(anyhow::anyhow!(
                     "Icon size '{other}' could not be recognized!"
                 ))
             }
@@ -64,18 +67,6 @@ impl FromStr for IconSize {
     }
 }
 
-// Ant design icons: filled, outlined, twotone
-// Font awesome: brands, regular, solid
-// Feather icons: Not categorized
-// VS code icons: light, dark
-// Bootstrap icons: Not categorized
-// Ionicons: Not categorized
-// Remix icons: tons of categories
-// Simple icons: Not categorized
-// Typicons: Not categorized
-// Heroicons: (20| solid) , (24| outline, solid)
-// css.gg: Not categorized
-// Tabler icons: Not categorized
 pub(crate) fn component_name(raw_name: &str) -> String {
     let pascal_case = raw_name.to_pascal_case();
     if pascal_case.starts_with(char::is_numeric) {
@@ -97,14 +88,14 @@ mod test {
 pub(crate) fn feature_name(
     raw_name: &str,
     icon_size: Option<IconSize>,
-    categories: &Vec<String>,
+    categories: &[Category],
     package_short_name: &str,
 ) -> String {
     let mut name = String::with_capacity(
         package_short_name.len()
             + 1
             + raw_name.len()
-            + categories.iter().map(|it| it.len() + 1).sum::<usize>()
+            + categories.iter().map(|it| it.0.len() + 1).sum::<usize>()
             + icon_size.map(|it| it.as_str().len() + 1).unwrap_or(0),
     );
 
@@ -115,7 +106,7 @@ pub(crate) fn feature_name(
     name.push(' ');
 
     categories.iter().for_each(|category| {
-        name.push_str(&category);
+        name.push_str(&category.0);
         name.push(' ');
     });
 
@@ -130,7 +121,7 @@ pub(crate) fn feature_name(
 pub(crate) fn extract_raw_icon_name(
     package: Package,
     file_stem: &str,
-) -> (&str, Option<IconSize>, Option<Vec<String>>) {
+) -> (&str, Option<IconSize>, Option<Vec<Category>>) {
     match package {
         // octoicons: size suffix e.g: '-24.svg'
         Package::GithubOcticons => {
@@ -163,10 +154,10 @@ pub(crate) fn extract_raw_icon_name(
             let mut cats = vec![];
             if name.ends_with("-fill") {
                 name = name.trim_end_matches("-fill");
-                cats.push("fill".to_string());
+                cats.push(Category("fill".to_string()));
             } else if name.ends_with("-line") {
                 name = name.trim_end_matches("-line");
-                cats.push("line".to_string());
+                cats.push(Category("line".to_string()));
             }
             (name, None, if cats.is_empty() { None } else { Some(cats) })
         }

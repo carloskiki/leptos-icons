@@ -28,31 +28,27 @@ pub(crate) fn optimize<R: std::io::Read>(icon_content: R) -> Result<String> {
 
     let mut is_title = false;
 
-    // TODO: Use for loop, remove collect?
-    reader
-        .into_iter()
-        .map(
-            |event| match event.map_err(|_| anyhow!("optimization reading error"))? {
-                xml::reader::XmlEvent::EndDocument => Ok(()),
-                xml::reader::XmlEvent::StartElement { name, .. } if name.local_name == "title" => {
-                    is_title = true;
-                    Ok(())
+    reader.into_iter().try_for_each(|event| {
+        match event.map_err(|_| anyhow!("optimization reading error"))? {
+            xml::reader::XmlEvent::EndDocument => Ok(()),
+            xml::reader::XmlEvent::StartElement { name, .. } if name.local_name == "title" => {
+                is_title = true;
+                Ok(())
+            }
+            xml::reader::XmlEvent::EndElement { name } if name.local_name == "title" => {
+                is_title = false;
+                Ok(())
+            }
+            event => {
+                if is_title {
+                    return Ok(());
                 }
-                xml::reader::XmlEvent::EndElement { name } if name.local_name == "title" => {
-                    is_title = false;
-                    Ok(())
-                }
-                event => {
-                    if is_title {
-                        return Ok(());
-                    }
-                    writer
-                        .write(event.as_writer_event().unwrap())
-                        .map_err(|_| anyhow!(" optimization writing error"))
-                }
-            },
-        )
-        .collect::<Result<()>>()?;
+                writer
+                    .write(event.as_writer_event().unwrap())
+                    .map_err(|_| anyhow!(" optimization writing error"))
+            }
+        }
+    })?;
 
     Ok(from_utf8(writer.inner_mut())?.to_owned())
 

@@ -18,15 +18,6 @@ pub fn OcAccessibilitySm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcAlertFill")]
-/// *This icon requires the feature* `OcAlertFill` *to be enabled*.
-#[component]
-pub fn OcAlertFill(cx: Scope) -> impl IntoView {
-    view! { cx,
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /></svg>
-    }
-}
-
 #[cfg(feature = "OcAlertFillLg")]
 /// *This icon requires the feature* `OcAlertFillLg` *to be enabled*.
 #[component]
@@ -42,6 +33,15 @@ pub fn OcAlertFillLg(cx: Scope) -> impl IntoView {
 pub fn OcAlertFillSm(cx: Scope) -> impl IntoView {
     view! { cx,
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm1 6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" /></svg>
+    }
+}
+
+#[cfg(feature = "OcAlertFillXs")]
+/// *This icon requires the feature* `OcAlertFillXs` *to be enabled*.
+#[component]
+pub fn OcAlertFillXs(cx: Scope) -> impl IntoView {
+    view! { cx,
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" /></svg>
     }
 }
 
@@ -549,15 +549,6 @@ pub fn OcCalendarSm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcCheckCircleFill")]
-/// *This icon requires the feature* `OcCheckCircleFill` *to be enabled*.
-#[component]
-pub fn OcCheckCircleFill(cx: Scope) -> impl IntoView {
-    view! { cx,
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 0a6 6 0 1 1 0 12A6 6 0 0 1 6 0Zm-.705 8.737L9.63 4.403 8.392 3.166 5.295 6.263l-1.7-1.702L2.356 5.8l2.938 2.938Z" /></svg>
-    }
-}
-
 #[cfg(feature = "OcCheckCircleFillLg")]
 /// *This icon requires the feature* `OcCheckCircleFillLg` *to be enabled*.
 #[component]
@@ -573,6 +564,15 @@ pub fn OcCheckCircleFillLg(cx: Scope) -> impl IntoView {
 pub fn OcCheckCircleFillSm(cx: Scope) -> impl IntoView {
     view! { cx,
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Zm3.78-9.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018L6.75 9.19 5.28 7.72a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z" /></svg>
+    }
+}
+
+#[cfg(feature = "OcCheckCircleFillXs")]
+/// *This icon requires the feature* `OcCheckCircleFillXs` *to be enabled*.
+#[component]
+pub fn OcCheckCircleFillXs(cx: Scope) -> impl IntoView {
+    view! { cx,
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 0a6 6 0 1 1 0 12A6 6 0 0 1 6 0Zm-.705 8.737L9.63 4.403 8.392 3.166 5.295 6.263l-1.7-1.702L2.356 5.8l2.938 2.938Z" /></svg>
     }
 }
 
@@ -648,15 +648,6 @@ pub fn OcChecklistSm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcChevronDown")]
-/// *This icon requires the feature* `OcChevronDown` *to be enabled*.
-#[component]
-pub fn OcChevronDown(cx: Scope) -> impl IntoView {
-    view! { cx,
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l2.7 2.7 2.7-2.7c.3-.3.8-.3 1.1 0 .3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3Z" /></svg>
-    }
-}
-
 #[cfg(feature = "OcChevronDownLg")]
 /// *This icon requires the feature* `OcChevronDownLg` *to be enabled*.
 #[component]
@@ -672,6 +663,15 @@ pub fn OcChevronDownLg(cx: Scope) -> impl IntoView {
 pub fn OcChevronDownSm(cx: Scope) -> impl IntoView {
     view! { cx,
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z" /></svg>
+    }
+}
+
+#[cfg(feature = "OcChevronDownXs")]
+/// *This icon requires the feature* `OcChevronDownXs` *to be enabled*.
+#[component]
+pub fn OcChevronDownXs(cx: Scope) -> impl IntoView {
+    view! { cx,
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l2.7 2.7 2.7-2.7c.3-.3.8-.3 1.1 0 .3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3Z" /></svg>
     }
 }
 
@@ -693,15 +693,6 @@ pub fn OcChevronLeftSm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcChevronRight")]
-/// *This icon requires the feature* `OcChevronRight` *to be enabled*.
-#[component]
-pub fn OcChevronRight(cx: Scope) -> impl IntoView {
-    view! { cx,
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z" /></svg>
-    }
-}
-
 #[cfg(feature = "OcChevronRightLg")]
 /// *This icon requires the feature* `OcChevronRightLg` *to be enabled*.
 #[component]
@@ -720,12 +711,12 @@ pub fn OcChevronRightSm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcChevronUp")]
-/// *This icon requires the feature* `OcChevronUp` *to be enabled*.
+#[cfg(feature = "OcChevronRightXs")]
+/// *This icon requires the feature* `OcChevronRightXs` *to be enabled*.
 #[component]
-pub fn OcChevronUp(cx: Scope) -> impl IntoView {
+pub fn OcChevronRightXs(cx: Scope) -> impl IntoView {
     view! { cx,
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 4c-.2 0-.4.1-.5.2L2.2 7.5c-.3.3-.3.8 0 1.1.3.3.8.3 1.1 0L6 5.9l2.7 2.7c.3.3.8.3 1.1 0 .3-.3.3-.8 0-1.1L6.6 4.3C6.4 4.1 6.2 4 6 4Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z" /></svg>
     }
 }
 
@@ -744,6 +735,15 @@ pub fn OcChevronUpLg(cx: Scope) -> impl IntoView {
 pub fn OcChevronUpSm(cx: Scope) -> impl IntoView {
     view! { cx,
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M3.22 10.53a.749.749 0 0 1 0-1.06l4.25-4.25a.749.749 0 0 1 1.06 0l4.25 4.25a.749.749 0 1 1-1.06 1.06L8 6.811 4.28 10.53a.749.749 0 0 1-1.06 0Z" /></svg>
+    }
+}
+
+#[cfg(feature = "OcChevronUpXs")]
+/// *This icon requires the feature* `OcChevronUpXs` *to be enabled*.
+#[component]
+pub fn OcChevronUpXs(cx: Scope) -> impl IntoView {
+    view! { cx,
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 4c-.2 0-.4.1-.5.2L2.2 7.5c-.3.3-.3.8 0 1.1.3.3.8.3 1.1 0L6 5.9l2.7 2.7c.3.3.8.3 1.1 0 .3-.3.3-.8 0-1.1L6.6 4.3C6.4 4.1 6.2 4 6 4Z" /></svg>
     }
 }
 
@@ -3132,10 +3132,10 @@ pub fn OcMuteSm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcNoEntryFill")]
-/// *This icon requires the feature* `OcNoEntryFill` *to be enabled*.
+#[cfg(feature = "OcNoEntryFillXs")]
+/// *This icon requires the feature* `OcNoEntryFillXs` *to be enabled*.
 #[component]
-pub fn OcNoEntryFill(cx: Scope) -> impl IntoView {
+pub fn OcNoEntryFillXs(cx: Scope) -> impl IntoView {
     view! { cx,
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M6 0a6 6 0 1 1 0 12A6 6 0 0 1 6 0Zm3 5H3v2h6Z" /></svg>
     }
@@ -5067,12 +5067,12 @@ pub fn OcWorkflowSm(cx: Scope) -> impl IntoView {
     }
 }
 
-#[cfg(feature = "OcXCircleFill")]
-/// *This icon requires the feature* `OcXCircleFill` *to be enabled*.
+#[cfg(feature = "OcXCircleFillLg")]
+/// *This icon requires the feature* `OcXCircleFillLg` *to be enabled*.
 #[component]
-pub fn OcXCircleFill(cx: Scope) -> impl IntoView {
+pub fn OcXCircleFillLg(cx: Scope) -> impl IntoView {
     view! { cx,
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M1.757 10.243a6.001 6.001 0 1 1 8.488-8.486 6.001 6.001 0 0 1-8.488 8.486ZM6 4.763l-2-2L2.763 4l2 2-2 2L4 9.237l2-2 2 2L9.237 8l-2-2 2-2L8 2.763Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12Zm8.036-4.024a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L10.939 12l-2.963 2.963a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L12 13.06l2.963 2.964a.75.75 0 0 0 1.061-1.06L13.061 12l2.963-2.964a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L12 10.939Z" /></svg>
     }
 }
 

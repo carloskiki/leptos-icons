@@ -62,7 +62,6 @@ async fn main() -> Result<()> {
 
     let handles = package::Package::iter()
         .map(|package| (package, package.metadata()))
-        .into_iter()
         .map(|(package, meta)| {
             let features = features.clone();
             let modules = modules.clone();
@@ -102,7 +101,7 @@ async fn main() -> Result<()> {
 
                 info!(?package, "Keeping module name.");
                 let mut lock = modules.write().await;
-                lock.push(meta.short_name.to_owned().to_string());
+                lock.push(meta.short_name.clone().into_owned());
                 drop(lock);
 
                 // 4. Generate and write leptos-icon components.
@@ -126,11 +125,11 @@ async fn main() -> Result<()> {
                 );
                 // TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, remove next line and in generate.rs: use `::leptos::...` wherever possible.
                 mod_file_writer
-                    .write("use leptos::*;\n\n".as_bytes())
+                    .write_all("use leptos::*;\n\n".as_bytes())
                     .await
                     .unwrap();
                 for comp in icon_components {
-                    mod_file_writer.write(comp.0.as_bytes()).await.unwrap();
+                    mod_file_writer.write_all(comp.0.as_bytes()).await.unwrap();
                 }
 
                 Ok::<(), anyhow::Error>(())
