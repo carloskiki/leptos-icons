@@ -17,6 +17,7 @@ pub(crate) struct Icon {
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub(crate) enum IconSize {
+    Xs,
     Sm,
     Md,
     Lg,
@@ -27,6 +28,7 @@ pub(crate) enum IconSize {
 impl IconSize {
     fn as_str(&self) -> &'static str {
         match self {
+            IconSize::Xs => "xs",
             IconSize::Sm => "sm",
             IconSize::Md => "md",
             IconSize::Lg => "lg",
@@ -47,6 +49,7 @@ impl FromStr for IconSize {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
+            "12" => Ok(IconSize::Xs),
             "16" => Ok(IconSize::Sm),
             "20" => Ok(IconSize::Md),
             "24" => Ok(IconSize::Lg),

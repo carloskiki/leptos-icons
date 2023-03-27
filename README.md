@@ -43,7 +43,7 @@ Please note that this crate is in very early developpement and may include [bugs
 
 ## Contributing
 
-Non-exclusive list of crucial missing features:
+Non-inclusive list of crucial missing features:
 
 - Better Docs
 - Props passing

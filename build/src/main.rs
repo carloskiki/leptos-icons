@@ -11,9 +11,11 @@ use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::{Layer, Registry};
 
+use crate::feature::Feature;
 use crate::library::Library;
 
 mod download;
+mod feature;
 mod icon;
 mod library;
 mod optimize;
@@ -55,7 +57,7 @@ async fn main() -> Result<()> {
     lib.cargo_toml().remove().await?;
     lib.cargo_toml().init().await?;
 
-    let features = Arc::new(RwLock::new(Vec::<String>::new()));
+    let features = Arc::new(RwLock::new(Vec::<Feature>::new()));
     let modules = Arc::new(RwLock::new(Vec::<String>::new()));
 
     let handles = package::Package::iter()
@@ -92,7 +94,9 @@ async fn main() -> Result<()> {
                 info!(?package, "Generating feature names.");
                 let mut lock = features.write().await;
                 for icon in &icons {
-                    lock.push(icon.feature_name.clone()); // TODO: remove clone
+                    lock.push(Feature {
+                        name: icon.feature_name.clone(),
+                    }); // TODO: remove clone
                 }
                 drop(lock);
 
