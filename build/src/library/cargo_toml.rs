@@ -26,11 +26,8 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 
     [dependencies]
     leptos = { version = "0.2", default-features = false }
-    tracing = { version = "0.1", optional = true }
 
     [features]
-    tracing = ["dep:tracing"]
-
 "#
 );
 
