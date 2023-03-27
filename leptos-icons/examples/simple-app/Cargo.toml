@@ -1,0 +1,16 @@
+[package]
+name = "simple-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+leptos = { version = "0.2", default-features = false, features = ["csr"] }
+console_error_panic_hook = "0.1"
+console_log = "1"
+log = "0.4"
+leptos-icons = { path = "../../", features = [
+    "Bs1Circle",
+    "FaBarsSolid",
+    "ImPagebreak",
+    "ImPageBreak",
+] }
