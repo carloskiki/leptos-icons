@@ -28,7 +28,6 @@ mod sem_ver;
 // - Docs
 // - props passing
 // - optimizing svgs
-// - remove useless categories (e.g. vscode-light/dark, sizes?)
 // - ssr optimizations?
 
 #[derive(Debug, Parser)]
