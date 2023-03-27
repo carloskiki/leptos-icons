@@ -53,16 +53,16 @@ impl Package {
             PackageSource::Git { url, target } => {
                 if download_path.exists() {
                     info!(?download_path, "Directory exists. Assuming git repository.");
-                    git::perform_checkout(target, &download_path)
+                    git::checkout(target, &download_path)
                 } else {
                     info!(
                         ?download_path,
                         "Directory does not exist. Cloning the repository."
                     );
-                    git::perform_direct_clone(url, target, &download_path).or_else(|_err| {
+                    git::clone(url, target, &download_path).or_else(|_err| {
                         info!("Direct clone unsuccessful. Trying clone with checkout...");
-                        git::perform_clone_without_checkout(url, &download_path)?;
-                        git::perform_checkout(target, &download_path)
+                        git::clone_without_checkout(url, &download_path)?;
+                        git::checkout(target, &download_path)
                     })
                 }
             }

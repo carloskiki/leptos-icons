@@ -9,11 +9,7 @@ use crate::{
 };
 
 /// Clone the given repository at a specific commit ref or tag.
-pub(crate) fn perform_direct_clone(
-    git_url: &str,
-    git_target: &GitTarget,
-    target_dir: &PathBuf,
-) -> Result<()> {
+pub(crate) fn clone(git_url: &str, git_target: &GitTarget, target_dir: &PathBuf) -> Result<()> {
     let mut cmd = Command::new("git");
     cmd.args(["clone", "--depth", "1", "--branch"]);
 
@@ -65,8 +61,10 @@ pub(crate) fn perform_direct_clone(
     }
 }
 
-/// Clone the given repository at a specific commit ref or tag.
-pub(crate) fn perform_clone_without_checkout(git_url: &str, target_dir: &PathBuf) -> Result<()> {
+/// Clone the given repository without checking out any specific commit or tag.
+/// This might be used in conjunction with `git::checkout()` if a simple `git::clone()` fails.
+/// You have to call `git::checkout()` after this was successful.
+pub(crate) fn clone_without_checkout(git_url: &str, target_dir: &PathBuf) -> Result<()> {
     let clone_output = {
         let mut cmd = Command::new("git");
         cmd.args(["clone", "--depth", "1", "--no-checkout", git_url]);
@@ -98,7 +96,8 @@ pub(crate) fn perform_clone_without_checkout(git_url: &str, target_dir: &PathBuf
     Ok(())
 }
 
-pub(crate) fn perform_checkout(git_target: &GitTarget, target_dir: &PathBuf) -> Result<()> {
+/// Checkout a specific tag or commit. `target_dir` must point to a directory containing a cloned git repository.
+pub(crate) fn checkout(git_target: &GitTarget, target_dir: &PathBuf) -> Result<()> {
     let checkout_output = {
         let mut cmd = Command::new("git");
         cmd.args([
