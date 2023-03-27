@@ -9,7 +9,7 @@ use crate::{
     icon::{self, Category, Icon, IconSize},
     optimize,
     package::{Package, PackageMetadata},
-    path,
+    path, feature::Feature,
 };
 
 /// A directory to be searched, combined with:
@@ -113,9 +113,9 @@ async fn svg_icon(
         categories.append(&mut cats_from_name);
     }
 
-    let icon_size = size_from_name.or_else(|| icon_size);
+    let icon_size = size_from_name.or(icon_size);
 
-    let feature_name = icon::feature_name(raw_name, icon_size, &categories, &meta.short_name);
+    let feature = Feature { name: icon::feature_name(raw_name, icon_size, &categories, &meta.short_name) };
 
     let (view, attributes) = optimize::optimize(tokio::fs::read_to_string(path).await?.as_bytes())?;
 
@@ -124,7 +124,7 @@ async fn svg_icon(
         attributes,
         size: icon_size,
         categories,
-        component_name: feature_name.clone(), // TODO: Make clear why
-        feature_name,
+        component_name: feature.name.clone(), // TODO: Make clear why
+        feature,
     })
 }

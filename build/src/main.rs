@@ -17,6 +17,7 @@ use crate::library::Library;
 mod download;
 mod feature;
 mod icon;
+mod leptos;
 mod library;
 mod optimize;
 mod package;
@@ -35,7 +36,7 @@ mod sem_ver;
 struct BuildArgs {
     /// Clear downloads and re-download.
     #[arg(long, default_value_t = false)]
-    clear: bool,
+    clean: bool,
 }
 
 #[tokio::main]
@@ -65,12 +66,12 @@ async fn main() -> Result<()> {
             let features = features.clone();
             let modules = modules.clone();
             tokio::spawn(async move {
-                // 0. Remove previous download if requested.
-                if args.clear {
+                // Remove previous download if requested.
+                if args.clean {
                     download::remove_package(&meta).await?;
                 }
 
-                // 1. Download the package.
+                // Download the package.
                 download::download_package(&meta).map_err(|err| {
                     error!(
                         ?package,
@@ -80,35 +81,44 @@ async fn main() -> Result<()> {
                     err
                 })?;
 
-                // 2. Extract icon information from that package.
+                // Extract icon information from that package.
+                // Sorting the resulting Vec is necessary, as we want to reduce churn in the later generated output as much as possible.
                 let mut icons = parse::get_icons(package, &meta).await.map_err(|err| {
                     error!(?package, ?err, "Could not get icons.");
                     err
                 })?;
-                // Sorting is necessary, as we wan't to reduce churn as much as possible.
                 icons.sort_by(|icon_a, icon_b| icon_a.component_name.cmp(&icon_b.component_name));
 
-                // 3. Collect feature names for this icon-package. TODO: This should be port / outcome of another process..
-                info!(?package, "Generating feature names.");
-                let mut lock = features.write().await;
-                for icon in &icons {
-                    lock.push(Feature {
-                        name: icon.feature_name.clone(),
-                    }); // TODO: remove clone
+                // Collect feature names for this icon-package.
+                info!(?package, "Collecting feature names.");
+                {
+                    let mut lock = features.write().await;
+                    for icon in &icons {
+                        lock.push(icon.feature.clone());
+                    }
                 }
-                drop(lock);
 
-                info!(?package, "Keeping module name.");
-                let mut lock = modules.write().await;
-                lock.push(meta.short_name.clone().into_owned());
-                drop(lock);
+                info!(?package, "Collecting module name.");
+                {
+                    let mut lock = modules.write().await;
+                    lock.push(meta.short_name.clone().into_owned());
+                }
 
-                // 4. Generate and write leptos-icon components.
-                info!(?package, "Generating leptos icon component declarations.");
-                // NOTE: sorted correctly, as icons were already sorted.
-                let icon_components = icon::gen_icon_components(package, icons);
+                // Generate leptos icon components. Note that these sorted correctly, as the icons were already sorted.
+                info!(?package, "Generating leptos icon components.");
+                let icon_components = icons
+                    .into_iter()
+                    .map(|icon| {
+                        icon.create_leptos_icon_component().unwrap() // TODO:: Error handling
+                    })
+                    .collect::<Vec<_>>();
 
-                // 4. Generate and write leptos-icon components.
+                // Writing leptos icon components.
+                info!(
+                    ?package,
+                    num_components = icon_components.len(),
+                    "Writing leptos icon components."
+                );
                 let mut mod_path = path::leptos_icons_crate("src").join(meta.short_name.as_ref()); // TODO: This should also be done using the lib type. Potential for tracking created modules.
                 mod_path.set_extension("rs");
                 let mut mod_file_writer = tokio::io::BufWriter::new(
@@ -122,7 +132,7 @@ async fn main() -> Result<()> {
                             err
                         })?,
                 );
-                // TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, remove next line and in generate.rs: use `::leptos::...` wherever possible.
+                // TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, this write can be removed. In component generation use `::leptos::...` wherever possible.
                 mod_file_writer
                     .write_all("use leptos::*;\n\n".as_bytes())
                     .await
@@ -159,18 +169,20 @@ async fn main() -> Result<()> {
         err
     })?;
 
-    let mut lock = features.write().await;
-    let num_features = lock.len();
-    info!(num_features, "Sorting features to avoid churn.");
-    lock.sort();
-    let s = std::mem::take(&mut *lock);
-    lib.cargo_toml().append_features(s).await?;
-    drop(lock);
+    let features = {
+        let mut lock = features.write().await;
+        let num_features = lock.len();
+        info!(num_features, "Sorting features to avoid churn.");
+        lock.sort();
+        std::mem::take(&mut *lock)
+    };
+    lib.cargo_toml().append_features(features).await?;
 
     let end = time::OffsetDateTime::now_utc();
-    let took = end - start;
-    let took = format!("{}s", took.whole_seconds());
-    info!(took, "Build successful!");
+    info!(
+        took = format!("{}s", (end - start).whole_seconds()),
+        "Build successful!"
+    );
 
     Ok(())
 }

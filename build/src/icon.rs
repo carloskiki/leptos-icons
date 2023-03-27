@@ -4,10 +4,9 @@ use anyhow::Result;
 use heck::ToPascalCase;
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
-use tracing::info;
 use xml::attribute::OwnedAttribute;
 
-use crate::package::Package;
+use crate::{leptos::LeptosComponent, package::Package, feature::Feature};
 
 #[derive(Debug)]
 pub(crate) struct Icon {
@@ -16,8 +15,72 @@ pub(crate) struct Icon {
     pub size: Option<IconSize>,
     pub categories: Vec<Category>,
     pub component_name: String,
-    pub feature_name: String,
+    pub feature: Feature,
     // TODO: Original file name?
+}
+
+impl Icon {
+    /// This creates the Rust code for a leptos component representing a single icon.
+    /// Feature-gated by the given feature name.
+    ///
+    /// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, use `::leptos::...` wherever possible and remove `use leptos::*` in main.rs.
+    pub(crate) fn create_leptos_icon_component(&self) -> Result<LeptosComponent> {
+        let feature_name: &str = &self.feature.name;
+        let component_name: &str = &self.component_name;
+        let svg_content: &str = &self.view;
+        let attributes: &[OwnedAttribute] = &self.attributes;
+
+        let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
+        let attributes = attributes_token_stream(attributes)?;
+        let component_ident = Ident::new(component_name, Span::call_site());
+        let svg_content: TokenStream = svg_content
+            .parse()
+            .map_err(|_| anyhow::anyhow!("could not transform icon_content to ident"))?;
+
+        let tokens = quote! {
+            #[cfg(feature = #feature_name)]
+            #[doc = #doc_comment]
+            #[component]
+            pub fn #component_ident(
+                cx: Scope,
+                /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+                #[prop(into, optional, default = String::from("1em"))]
+                size: String,
+                /// HTML class attribute.
+                #[prop(into, optional)]
+                class: String,
+                /// Color of the icon. For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+                #[prop(into, optional, default = String::from("currentColor"))]
+                color: String,
+                /// HTML style attribute.
+                #[prop(into, optional)]
+                style: String,
+                /// Accessibility title.
+                #[prop(into, optional)]
+                title: String,
+            ) -> impl IntoView {
+                view! { cx,
+                    <svg
+                        class=class
+                        stroke="currentColor"
+                        fill="currentColor"
+                        stroke_width="0"
+                        style=format!("{} color: {};", style, color)
+                        #attributes
+                        width=size.clone()
+                        height=size
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        #svg_content
+                        <title>{title}</title>
+                    </svg>
+                }
+            }
+        };
+
+        let tokens_file: syn::File = syn::parse2(tokens)?;
+        Ok(LeptosComponent(prettyplease::unparse(&tokens_file)))
+    }
 }
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
@@ -150,93 +213,9 @@ pub(crate) fn parse_raw_icon_name(
     }
 }
 
-pub(crate) fn gen_icon_components(package: Package, icons: Vec<Icon>) -> Vec<LeptosComponent> {
-    info!(?package, "Generating leptos icon components.");
-    icons
-        .into_iter()
-        .map(|icon| {
-            create_leptos_icon_component(
-                &icon.feature_name,
-                &icon.component_name,
-                &icon.view,
-                &icon.attributes,
-            )
-            .unwrap() // TODO:: Error handling
-        })
-        .collect()
-}
-
-/// A self-contained Leptos component declaration.
-///
-/// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, remove this note
-/// Currently requires `use leptos::*;` to be in scope to compile properly.
-pub(crate) struct LeptosComponent(pub String);
-
-/// This creates the Rust code for a leptos component representing a single icon.
-/// Feature-gated by the given feature name.
-///
-/// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, use `::leptos::...` wherever possible and remove `use leptos::*` in main.rs.
-fn create_leptos_icon_component(
-    feature_name: &str,
-    component_name: &str,
-    svg_content: &str,
-    attributes: &Vec<OwnedAttribute>,
-) -> Result<LeptosComponent> {
-    let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
-    let attributes = attributes_token_stream(attributes)?;
-    let component_ident = Ident::new(component_name, Span::call_site());
-    let svg_content: TokenStream = svg_content
-        .parse()
-        .map_err(|_| anyhow::anyhow!("could not transform icon_content to ident"))?;
-
-    let tokens = quote! {
-        #[cfg(feature = #feature_name)]
-        #[doc = #doc_comment]
-        #[component]
-        pub fn #component_ident(
-            cx: Scope,
-            /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
-            #[prop(into, optional, default = String::from("1em"))]
-            size: String,
-            /// HTML class attribute.
-            #[prop(into, optional)]
-            class: String,
-            /// Color of the icon. For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
-            #[prop(into, optional, default = String::from("currentColor"))]
-            color: String,
-            /// HTML style attribute.
-            #[prop(into, optional)]
-            style: String,
-            /// Accessibility title.
-            #[prop(into, optional)]
-            title: String,
-        ) -> impl IntoView {
-            view! { cx,
-                <svg
-                    class=class
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke_width="0"
-                    style=format!("{} color: {};", style, color)
-                    #attributes
-                    width=size.clone()
-                    height=size
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    #svg_content
-                    <title>{title}</title>
-                </svg>
-            }
-        }
-    };
-
-    let tokens_file: syn::File = syn::parse2(tokens)?;
-    Ok(LeptosComponent(prettyplease::unparse(&tokens_file)))
-}
-
-fn attributes_token_stream(attributes: &Vec<OwnedAttribute>) -> Result<TokenStream> {
+fn attributes_token_stream(attributes: &[OwnedAttribute]) -> Result<TokenStream> {
     attributes
-        .into_iter()
+        .iter()
         .map(|attribute| {
             let attribute_val = &attribute.value;
             let attr_ident: TokenStream = attribute

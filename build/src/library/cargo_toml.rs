@@ -1,9 +1,9 @@
 use anyhow::Result;
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, info, instrument};
 
-use crate::{feature::Feature, path};
+use crate::feature::Feature;
 
 const BASE_CARGO_TOML: &str = indoc::indoc!(
     r#"
@@ -35,108 +35,8 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 );
 
 #[derive(Debug)]
-pub(crate) struct Library {
-    path: PathBuf,
-    cargo_toml: CargoToml,
-    src_dir: SrcDir,
-}
-
-impl Library {
-    pub fn new() -> Self {
-        Self {
-            path: path::leptos_icons_crate(""),
-            cargo_toml: CargoToml {
-                file_path: path::leptos_icons_crate("Cargo.toml"),
-            },
-            src_dir: SrcDir {
-                path: path::leptos_icons_crate("src"),
-                lib_rs: LibRs {
-                    path: path::leptos_icons_crate("src").join("lib.rs"),
-                },
-            },
-        }
-    }
-
-    pub fn cargo_toml(&self) -> &CargoToml {
-        &self.cargo_toml
-    }
-
-    pub fn src_dir(&self) -> &SrcDir {
-        &self.src_dir
-    }
-
-    #[allow(unused)]
-    pub fn relative_path<P: AsRef<Path>>(&self, join: P) -> PathBuf {
-        self.path.join(join)
-    }
-}
-
-#[derive(Debug)]
-pub(crate) struct SrcDir {
-    path: PathBuf,
-    lib_rs: LibRs,
-}
-
-impl SrcDir {
-    /// Removes everything inside and creates a fresh lib.rs file.
-    pub async fn reset(&self) -> Result<()> {
-        info!(path = ?self.path, "Removing existing src directory");
-        tokio::fs::remove_dir_all(&self.path).await?;
-
-        info!(path = ?self.path, "Creating new src directory");
-        tokio::fs::create_dir(&self.path).await?;
-
-        self.lib_rs.init().await?;
-        Ok(())
-    }
-
-    pub fn lib_rs(&self) -> &LibRs {
-        &self.lib_rs
-    }
-
-    #[allow(unused)]
-    pub fn relative_path<P: AsRef<Path>>(&self, join: P) -> PathBuf {
-        self.path.join(join)
-    }
-}
-
-#[derive(Debug)]
-pub(crate) struct LibRs {
-    path: PathBuf,
-}
-
-impl LibRs {
-    pub async fn init(&self) -> Result<()> {
-        info!(path = ?self.path, "Creating new lib.rs file.");
-        tokio::fs::OpenOptions::new()
-            .create_new(true)
-            .write(true)
-            .open(&self.path)
-            .await?
-            .write_all("#![allow(non_snake_case)]\n".as_bytes())
-            .await?;
-        Ok(())
-    }
-
-    /// Opens the file for appending thereby creating it if non-existent.
-    pub async fn append(&self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
-        Ok(tokio::io::BufWriter::new(
-            tokio::fs::OpenOptions::new()
-                .create(true)
-                .append(true)
-                .open(&self.path)
-                .await
-                .map_err(|err| {
-                    error!(?err, "Could not open lib.rs file to append modules.");
-                    err
-                })?,
-        ))
-    }
-}
-
-#[derive(Debug)]
 pub(crate) struct CargoToml {
-    file_path: PathBuf,
+    pub file_path: PathBuf,
 }
 
 impl CargoToml {
