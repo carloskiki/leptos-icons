@@ -6,11 +6,11 @@ use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
 use xml::attribute::OwnedAttribute;
 
-use crate::{feature::Feature, leptos::LeptosComponent, package::PackageType, svg::Svg};
+use crate::{feature::Feature, leptos::LeptosComponent, package::PackageType, svg::ParsedSvg};
 
 #[derive(Debug)]
 pub(crate) struct SvgIcon {
-    pub svg: Svg,
+    pub svg: ParsedSvg,
     pub categories: Vec<Category>,
     pub component_name: String,
     pub feature: Feature,

@@ -7,6 +7,9 @@ use crate::{path, sem_ver::SemVer};
 
 pub mod git;
 
+/// Name of the directory, relative to the root of this crate, to which all icon packages should be downloaded.
+const DOWNLOAD_DIR: &str = "downloads";
+
 #[derive(Debug, Clone)]
 pub(crate) struct Package {
     pub ty: PackageType,
@@ -27,40 +30,34 @@ impl Package {
             .collect()
     }
 
-    fn download_path(&self) -> PathBuf {
-        path::download_path(self.meta.download_dir.as_ref())
+    pub fn download_path(&self) -> PathBuf {
+        path::build_crate(DOWNLOAD_DIR).join(self.meta.download_dir.as_ref())
     }
 
     #[instrument(level = "info", fields(package = self.meta.package_name.as_ref()))]
-    pub(crate) async fn remove(&self) -> Result<()> {
+    pub async fn remove(&self) -> Result<()> {
         let download_path = self.download_path();
         if download_path.exists() {
-            info!(
-                ?download_path,
-                "Removing existing download folder for package"
-            );
+            info!(?download_path, "Removing...");
             tokio::fs::remove_dir_all(&download_path).await?;
         }
         Ok(())
     }
 
     #[instrument(level = "info")]
-    pub(crate) fn download(&self) -> Result<()> {
+    pub fn download(&self) -> Result<()> {
         let download_path = self.download_path();
-        info!(?download_path, "Constructed target directory for download.");
+        info!(?download_path, "Downloading...");
 
         match &self.meta.source {
             PackageSource::Git { url, target } => {
                 if download_path.exists() {
-                    info!(
-                        ?download_path,
-                        "Download target directory already exists. Assuming git repository."
-                    );
+                    info!(?download_path, "Directory exists. Assuming git repository.");
                     git::perform_checkout(target, &download_path)
                 } else {
                     info!(
                         ?download_path,
-                        "Download target directory does not exist. Cloning the repository."
+                        "Directory does not exist. Cloning the repository."
                     );
                     git::perform_direct_clone(url, target, &download_path).or_else(|_err| {
                         info!("Direct clone unsuccessful. Trying clone with checkout...");

@@ -5,14 +5,14 @@ use tracing::instrument;
 use xml::{attribute::OwnedAttribute, EmitterConfig, ParserConfig};
 
 #[derive(Debug)]
-pub(crate) struct Svg {
+pub(crate) struct ParsedSvg {
     pub content: String,
     pub attributes: Vec<OwnedAttribute>,
 }
 
-impl Svg {
+impl ParsedSvg {
     #[instrument(level = "info", skip(icon_content))]
-    pub(crate) fn parse<R: std::io::Read>(icon_content: R) -> Result<Svg> {
+    pub(crate) fn parse<R: std::io::Read>(icon_content: R) -> Result<ParsedSvg> {
         let parser_config = ParserConfig {
             trim_whitespace: true,
             whitespace_to_characters: false,
@@ -68,7 +68,7 @@ impl Svg {
             }
         }
 
-        Ok(Svg {
+        Ok(ParsedSvg {
             content: from_utf8(writer.inner_mut())?.to_owned(),
             attributes: svg_attributes,
         })

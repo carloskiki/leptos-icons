@@ -9,8 +9,7 @@ use crate::{
     feature::Feature,
     icon::{self, Category, IconSize, SvgIcon},
     package::Package,
-    path,
-    svg::Svg,
+    svg::ParsedSvg,
 };
 
 /// A directory to be searched, combined with:
@@ -30,8 +29,7 @@ pub(crate) async fn get_icons(package: &Package) -> Result<Vec<SvgIcon>> {
 
     let mut search_dirs = Vec::<SearchDir>::new();
     search_dirs.push(SearchDir {
-        path: path::download_path(package.meta.download_dir.as_ref())
-            .join(package.meta.svg_dir.as_ref()),
+        path: package.download_path().join(package.meta.svg_dir.as_ref()),
         categories: Vec::new(),
         icon_size: None,
     });
@@ -126,7 +124,7 @@ async fn svg_icon(
     let svg = tokio::fs::read_to_string(path).await?;
 
     Ok(SvgIcon {
-        svg: Svg::parse(svg.as_bytes())?,
+        svg: ParsedSvg::parse(svg.as_bytes())?,
         categories,
         component_name: feature.name.clone(), // TODO: Make clear why
         feature,

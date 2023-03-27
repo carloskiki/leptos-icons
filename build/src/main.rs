@@ -71,6 +71,7 @@ async fn main() -> Result<()> {
     let handles = Package::all()
         .into_iter()
         .map(|package| {
+            let package_type = package.ty;
             let features = features.clone();
             let modules = modules.clone();
             let package_icon_metadata = package_icon_metadata.clone();
@@ -82,7 +83,7 @@ async fn main() -> Result<()> {
                 // Download the package.
                 package.download().map_err(|err| {
                     error!(
-                        ?package,
+                        ?package_type,
                         ?err,
                         "Downloading the package failed unexpectedly."
                     );
@@ -92,12 +93,12 @@ async fn main() -> Result<()> {
                 // Extract icon information from that package.
                 // Sorting the resulting Vec is necessary, as we want to reduce churn in the later generated output as much as possible.
                 let mut icons = parse::get_icons(&package).await.map_err(|err| {
-                    error!(?package, ?err, "Could not get icons.");
+                    error!(?package_type, ?err, "Could not get icons.");
                     err
                 })?;
                 icons.sort_by(|icon_a, icon_b| icon_a.component_name.cmp(&icon_b.component_name));
 
-                info!(?package, "Collecting icon metadata.");
+                info!(?package_type, "Collecting icon metadata.");
                 {
                     let meta = icons
                         .iter()
@@ -114,7 +115,7 @@ async fn main() -> Result<()> {
                         .1 = meta;
                 }
 
-                info!(?package, "Collecting feature names.");
+                info!(?package_type, "Collecting feature names.");
                 {
                     let mut lock = features.write().await;
                     for icon in &icons {
@@ -122,14 +123,14 @@ async fn main() -> Result<()> {
                     }
                 }
 
-                info!(?package, "Collecting module name.");
+                info!(?package_type, "Collecting module name.");
                 {
                     let mut lock = modules.write().await;
                     lock.push(package.meta.short_name.clone().into_owned());
                 }
 
                 // Generate leptos icon components. Note that these sorted correctly, as the icons were already sorted.
-                info!(?package, "Generating leptos icon components.");
+                info!(?package_type, "Generating leptos icon components.");
                 let icon_components = icons
                     .into_iter()
                     .map(|icon| {
@@ -139,7 +140,7 @@ async fn main() -> Result<()> {
 
                 // Writing leptos icon components.
                 info!(
-                    ?package,
+                    ?package_type,
                     num_components = icon_components.len(),
                     "Writing leptos icon components."
                 );
