@@ -14,8 +14,15 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 
     [package]
     name = "leptos-icons"
-    version = "0.1.0"
+    version = "0.0.1"
+    authors = ["Charles Edward Gagnon"]
     edition = "2021"
+    description = "Icons library for the leptos web framework"
+    readme = "./README.md"
+    repository = "https://github.com/Carlosted/leptos-icons"
+    license = "MIT"
+    keywords = ["leptos", "icons"]
+    categories = ["web-programming"]
 
     [dependencies]
     leptos = { version = "0.2", default-features = false }

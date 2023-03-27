@@ -25,6 +25,11 @@ pub(crate) enum Package {
 
 impl Package {
     pub fn is_category(&self, str: &str) -> bool {
+        // We avoid using all-numeric directories as categories,
+        // as they most likely state the size of the icons contained and not an actual category.
+        if str.chars().all(char::is_numeric) {
+            return false;
+        }
         match self {
             Package::AntDesignIcons => true,
             Package::FontAwesome => true,

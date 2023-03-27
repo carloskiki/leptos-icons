@@ -1,13 +1,18 @@
 use std::{fmt::Display, str::FromStr};
 
+use anyhow::Result;
 use heck::ToPascalCase;
+use proc_macro2::{Ident, Span, TokenStream};
+use quote::quote;
 use tracing::info;
+use xml::attribute::OwnedAttribute;
 
 use crate::package::Package;
 
 #[derive(Debug)]
 pub(crate) struct Icon {
     pub view: String,
+    pub attributes: Vec<OwnedAttribute>,
     pub size: Option<IconSize>,
     pub categories: Vec<Category>,
     pub component_name: String,
@@ -50,41 +55,21 @@ impl Display for IconSize {
 impl FromStr for IconSize {
     type Err = anyhow::Error;
 
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
+    fn from_str(str: &str) -> Result<Self, Self::Err> {
+        match str {
             "12" => Ok(IconSize::Xs),
             "16" => Ok(IconSize::Sm),
             "20" => Ok(IconSize::Md),
             "24" => Ok(IconSize::Lg),
             "48" => Ok(IconSize::Xl),
             "96" => Ok(IconSize::Xxl),
-            other => {
-                Err(anyhow::anyhow!(
-                    "Icon size '{other}' could not be recognized!"
-                ))
-            }
+            other => Err(anyhow::anyhow!(
+                "Icon size '{other}' could not be recognized!"
+            )),
         }
     }
 }
 
-pub(crate) fn component_name(raw_name: &str) -> String {
-    let pascal_case = raw_name.to_pascal_case();
-    if pascal_case.starts_with(char::is_numeric) {
-        format!("_{pascal_case}")
-    } else {
-        pascal_case
-    }
-}
-
-#[cfg(test)]
-mod test {
-    use crate::icon::component_name;
-
-    #[test]
-    fn test() {
-        assert_eq!("TestName", component_name("1-test-name"))
-    }
-}
 pub(crate) fn feature_name(
     raw_name: &str,
     icon_size: Option<IconSize>,
@@ -118,7 +103,7 @@ pub(crate) fn feature_name(
     name.to_pascal_case()
 }
 
-pub(crate) fn extract_raw_icon_name(
+pub(crate) fn parse_raw_icon_name(
     package: Package,
     file_stem: &str,
 ) -> (&str, Option<IconSize>, Option<Vec<Category>>) {
@@ -170,7 +155,13 @@ pub(crate) fn gen_icon_components(package: Package, icons: Vec<Icon>) -> Vec<Lep
     icons
         .into_iter()
         .map(|icon| {
-            create_leptos_icon_component(&icon.feature_name, &icon.component_name, &icon.view)
+            create_leptos_icon_component(
+                &icon.feature_name,
+                &icon.component_name,
+                &icon.view,
+                &icon.attributes,
+            )
+            .unwrap() // TODO:: Error handling
         })
         .collect()
 }
@@ -188,19 +179,72 @@ pub(crate) struct LeptosComponent(pub String);
 fn create_leptos_icon_component(
     feature_name: &str,
     component_name: &str,
-    view: &str,
-) -> LeptosComponent {
-    LeptosComponent(indoc::formatdoc!(
-        r#"
-        #[cfg(feature = "{feature_name}")]
-        /// *This icon requires the feature* `{feature_name}` *to be enabled*.
-        #[component]
-        pub fn {component_name}(cx: Scope) -> impl IntoView {{
-            view! {{ cx,
-                {view}
-            }}
-        }}
+    svg_content: &str,
+    attributes: &Vec<OwnedAttribute>,
+) -> Result<LeptosComponent> {
+    let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
+    let attributes = attributes_token_stream(attributes)?;
+    let component_ident = Ident::new(component_name, Span::call_site());
+    let svg_content: TokenStream = svg_content
+        .parse()
+        .map_err(|_| anyhow::anyhow!("could not transform icon_content to ident"))?;
 
-        "#
-    ))
+    let tokens = quote! {
+        #[cfg(feature = #feature_name)]
+        #[doc = #doc_comment]
+        #[component]
+        pub fn #component_ident(
+            cx: Scope,
+            /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+            #[prop(into, optional, default = String::from("1em"))]
+            size: String,
+            /// HTML class attribute.
+            #[prop(into, optional)]
+            class: String,
+            /// Color of the icon. For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+            #[prop(into, optional, default = String::from("currentColor"))]
+            color: String,
+            /// HTML style attribute.
+            #[prop(into, optional)]
+            style: String,
+            /// Accessibility title.
+            #[prop(into, optional)]
+            title: String,
+        ) -> impl IntoView {
+            view! { cx,
+                <svg
+                    class=class
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke_width="0"
+                    style=format!("{} color: {};", style, color)
+                    #attributes
+                    width=size.clone()
+                    height=size
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    #svg_content
+                    <title>{title}</title>
+                </svg>
+            }
+        }
+    };
+
+    let tokens_file: syn::File = syn::parse2(tokens)?;
+    Ok(LeptosComponent(prettyplease::unparse(&tokens_file)))
+}
+
+fn attributes_token_stream(attributes: &Vec<OwnedAttribute>) -> Result<TokenStream> {
+    attributes
+        .into_iter()
+        .map(|attribute| {
+            let attribute_val = &attribute.value;
+            let attr_ident: TokenStream = attribute
+                .name
+                .local_name
+                .parse()
+                .map_err(|_| anyhow::anyhow!("could not convert attributes to token stream"))?;
+            Ok(quote!(#attr_ident=#attribute_val))
+        })
+        .collect::<Result<TokenStream>>()
 }

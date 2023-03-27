@@ -1,8 +1,9 @@
 # Leptos-Icons
 
-add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
+Add icons from popular icon libraries into your leptos projects. Every icon is packaged as its own cargo feature to reduce build times.
 
-Note that this crate is **heavily** inspired by the [solidjs-icons](https://github.com/x64Bits/solid-icons) library.
+- Please note that this crate is in very early developpement and may include [bugs](#contributing).
+- This crate is **heavily** inspired by the [solidjs-icons](https://github.com/x64Bits/solid-icons) library.
 
 ## Table of Contents
 
@@ -14,11 +15,14 @@ Note that this crate is **heavily** inspired by the [solidjs-icons](https://gith
 
 ## Usage
 
-To use this crate, simply add it to your dependencies and list the features corresponding to the icons you need.
+To use this crate, it is currently required to use github linking as it is not yet published to crates.io.
+Use icons by specifying their feature names. For example `BsFolder` for the Bootstrap-Icon `Folder`.
 
-e.g. `cargo add leptos-icons --features FaSolidBars`
-
-Please note that this crate is in very early developpement and may include [bugs](#contributing).
+```toml
+[dependencies]
+# ...
+leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features = ["BsFolder"] }
+```
 
 ## Icon Packages
 
@@ -46,7 +50,7 @@ Please note that this crate is in very early developpement and may include [bugs
 Non-inclusive list of crucial missing features:
 
 - Better Docs
-- Props passing
+- Arbitrary props passing
 - remove useless categories (e.g. vscode-light/dark, sizes?)
 - ssr optimizations?
 
@@ -54,3 +58,7 @@ Bugs:
 
 - Tabler Icon's "Pagebreak" and "PageBreak" icons have the same file name.
 - Icon names starting with digits
+- Tracing feature ([#1][i1])
+- "stroke-width" attribute
+
+[i1]: https://github.com/Carlosted/leptos-icons/issues/1
