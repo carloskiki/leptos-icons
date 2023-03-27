@@ -36,28 +36,27 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 
 #[derive(Debug)]
 pub(crate) struct CargoToml {
-    pub file_path: PathBuf,
+    /// Path to the libraries Cargo.toml file.
+    pub path: PathBuf,
 }
 
 impl CargoToml {
-    #[instrument(level = "info", skip_all)]
+    #[instrument(level = "info")]
     pub async fn remove(&self) -> Result<()> {
-        info!(cargo_toml = ?self.file_path, "Removing file.");
-        tokio::fs::remove_file(&self.file_path)
-            .await
-            .map_err(Into::into)
+        info!("Removing file.");
+        tokio::fs::remove_file(&self.path).await.map_err(Into::into)
     }
 
-    #[instrument(level = "info", skip_all)]
+    #[instrument(level = "info")]
     async fn create_file(&self) -> Result<tokio::fs::File> {
-        info!(cargo_toml = ?self.file_path, "Creating file.");
+        info!("Creating file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
             .write(true)
-            .open(&self.file_path)
+            .open(&self.path)
             .await
             .map_err(|err| {
-                error!(?err, "Could not create Cargo.toml.");
+                error!(?err, "Could not create file.");
                 err
             })
             .map_err(Into::into)
@@ -65,7 +64,7 @@ impl CargoToml {
 
     #[instrument(level = "info")]
     pub(crate) async fn init(&self) -> Result<()> {
-        info!(cargo_toml = ?self.file_path, "Writing BASE_CARGO_TOML content.");
+        info!("Writing BASE_CARGO_TOML content.");
         self.create_file()
             .await?
             .write_all(BASE_CARGO_TOML.as_bytes())
@@ -74,15 +73,15 @@ impl CargoToml {
     }
 
     #[instrument(level = "info", skip_all)]
-    async fn append_file(&self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
-        info!(cargo_toml = ?self.file_path, "Creating file.");
+    async fn append(&self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
+        info!("Creating file.");
         Ok(tokio::io::BufWriter::new(
             tokio::fs::OpenOptions::new()
                 .append(true)
-                .open(&self.file_path)
+                .open(&self.path)
                 .await
                 .map_err(|err| {
-                    error!(?err, "Could not open Cargo.toml file to append data.");
+                    error!(?err, "Could not open file to append data.");
                     err
                 })?,
         ))
@@ -94,7 +93,7 @@ impl CargoToml {
             num_features = features.len(),
             "Writing features to Cargo.toml."
         );
-        let mut cargo_file = self.append_file().await?;
+        let mut cargo_file = self.append().await?;
         for feature in features.iter() {
             cargo_file
                 .write_all(format!("{} = []\n", &feature.name).as_bytes())

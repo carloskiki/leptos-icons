@@ -6,20 +6,17 @@ use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
 use xml::attribute::OwnedAttribute;
 
-use crate::{leptos::LeptosComponent, package::Package, feature::Feature};
+use crate::{feature::Feature, leptos::LeptosComponent, package::PackageType, svg::Svg};
 
 #[derive(Debug)]
-pub(crate) struct Icon {
-    pub view: String,
-    pub attributes: Vec<OwnedAttribute>,
-    pub size: Option<IconSize>,
+pub(crate) struct SvgIcon {
+    pub svg: Svg,
     pub categories: Vec<Category>,
     pub component_name: String,
     pub feature: Feature,
-    // TODO: Original file name?
 }
 
-impl Icon {
+impl SvgIcon {
     /// This creates the Rust code for a leptos component representing a single icon.
     /// Feature-gated by the given feature name.
     ///
@@ -27,15 +24,15 @@ impl Icon {
     pub(crate) fn create_leptos_icon_component(&self) -> Result<LeptosComponent> {
         let feature_name: &str = &self.feature.name;
         let component_name: &str = &self.component_name;
-        let svg_content: &str = &self.view;
-        let attributes: &[OwnedAttribute] = &self.attributes;
 
         let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
-        let attributes = attributes_token_stream(attributes)?;
         let component_ident = Ident::new(component_name, Span::call_site());
-        let svg_content: TokenStream = svg_content
+        let svg_content: TokenStream = self
+            .svg
+            .content
             .parse()
             .map_err(|_| anyhow::anyhow!("could not transform icon_content to ident"))?;
+        let svg_attributes = attributes_token_stream(&self.svg.attributes)?;
 
         let tokens = quote! {
             #[cfg(feature = #feature_name)]
@@ -66,7 +63,7 @@ impl Icon {
                         fill="currentColor"
                         stroke_width="0"
                         style=format!("{} color: {};", style, color)
-                        #attributes
+                        #svg_attributes
                         width=size.clone()
                         height=size
                         xmlns="http://www.w3.org/2000/svg"
@@ -81,6 +78,11 @@ impl Icon {
         let tokens_file: syn::File = syn::parse2(tokens)?;
         Ok(LeptosComponent(prettyplease::unparse(&tokens_file)))
     }
+}
+
+pub(crate) struct IconMeta {
+    pub name: String, // Both the component and feature name!
+    pub categories: Vec<Category>,
 }
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]
@@ -135,7 +137,7 @@ impl FromStr for IconSize {
 
 pub(crate) fn feature_name(
     raw_name: &str,
-    icon_size: Option<IconSize>,
+    size: Option<IconSize>,
     categories: &[Category],
     package_short_name: &str,
 ) -> String {
@@ -144,7 +146,7 @@ pub(crate) fn feature_name(
             + 1
             + raw_name.len()
             + categories.iter().map(|it| it.0.len() + 1).sum::<usize>()
-            + icon_size.map(|it| it.as_str().len() + 1).unwrap_or(0),
+            + size.map(|it| it.as_str().len() + 1).unwrap_or(0),
     );
 
     name.push_str(package_short_name.as_ref());
@@ -158,7 +160,7 @@ pub(crate) fn feature_name(
         name.push(' ');
     });
 
-    if let Some(size) = icon_size {
+    if let Some(size) = size {
         name.push_str(size.as_str());
         name.push(' ');
     };
@@ -167,12 +169,12 @@ pub(crate) fn feature_name(
 }
 
 pub(crate) fn parse_raw_icon_name(
-    package: Package,
+    package: PackageType,
     file_stem: &str,
 ) -> (&str, Option<IconSize>, Option<Vec<Category>>) {
     match package {
         // octoicons: size suffix e.g: '-24.svg'
-        Package::GithubOcticons => {
+        PackageType::GithubOcticons => {
             let size = IconSize::from_str(&file_stem[(file_stem.len() - 2)..]).ok();
             let name = file_stem
                 .trim_end_matches(char::is_numeric)
@@ -180,12 +182,12 @@ pub(crate) fn parse_raw_icon_name(
             (name, size, None)
         }
         // Weather icons: 'wi-' prefix
-        Package::WeatherIcons => {
+        PackageType::WeatherIcons => {
             let name = file_stem.trim_start_matches("wi-");
             (name, None, None)
         }
         // Box icons: logos: 'bxl-', regular:  'bx-', solid: 'bxs-' prefixes
-        Package::BoxIcons => {
+        PackageType::BoxIcons => {
             let name = file_stem
                 .trim_start_matches("bxl-")
                 .trim_start_matches("bx-")
@@ -193,11 +195,11 @@ pub(crate) fn parse_raw_icon_name(
             (name, None, None)
         }
         // Icomoon icons: numbered '001-xxxxxx'
-        Package::IcoMoonFree => {
+        PackageType::IcoMoonFree => {
             let name = file_stem.trim_start_matches(char::is_numeric);
             (name, None, None)
         }
-        Package::RemixIcon => {
+        PackageType::RemixIcon => {
             let mut name = file_stem;
             let mut cats = vec![];
             if name.ends_with("-fill") {

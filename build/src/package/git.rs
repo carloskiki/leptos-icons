@@ -1,56 +1,19 @@
 use std::{path::PathBuf, process::Command};
 
 use anyhow::{anyhow, Ok, Result};
-use tracing::{info, instrument, warn};
+use tracing::{info, warn};
 
 use crate::{
-    package::{self, GitTarget, PackageMetadata},
+    package::{self, GitTarget},
     path,
 };
 
-#[instrument(level = "info", fields(package = meta.package_name.as_ref()))]
-pub(crate) async fn remove_package(meta: &PackageMetadata) -> Result<()> {
-    let package_download_path = path::download_path(meta.download_dir.as_ref());
-    if package_download_path.exists() {
-        info!(
-            ?package_download_path,
-            "Removing existing download folder for package"
-        );
-        tokio::fs::remove_dir_all(&package_download_path).await?;
-    }
-    Ok(())
-}
-
-#[instrument(level = "info")]
-pub(crate) fn download_package(meta: &PackageMetadata) -> Result<()> {
-    let target_dir = path::download_path(meta.download_dir.as_ref());
-    info!(?target_dir, "Constructed target directory for download.");
-
-    match &meta.source {
-        package::PackageSource::Git { url, target } => {
-            if target_dir.exists() {
-                info!(
-                    ?target_dir,
-                    "Download target directory already exists. Assuming git repository."
-                );
-                perform_checkout(target, &target_dir)
-            } else {
-                info!(
-                    ?target_dir,
-                    "Download target directory does not exist. Cloning the repository."
-                );
-                perform_direct_clone(url, target, &target_dir).or_else(|_err| {
-                    info!("Direct clone unsuccessful. Trying clone with checkout...");
-                    perform_clone_without_checkout(url, &target_dir)?;
-                    perform_checkout(target, &target_dir)
-                })
-            }
-        }
-    }
-}
-
 /// Clone the given repository at a specific commit ref or tag.
-fn perform_direct_clone(git_url: &str, git_target: &GitTarget, target_dir: &PathBuf) -> Result<()> {
+pub(crate) fn perform_direct_clone(
+    git_url: &str,
+    git_target: &GitTarget,
+    target_dir: &PathBuf,
+) -> Result<()> {
     let mut cmd = Command::new("git");
     cmd.args(["clone", "--depth", "1", "--branch"]);
 
@@ -103,7 +66,7 @@ fn perform_direct_clone(git_url: &str, git_target: &GitTarget, target_dir: &Path
 }
 
 /// Clone the given repository at a specific commit ref or tag.
-fn perform_clone_without_checkout(git_url: &str, target_dir: &PathBuf) -> Result<()> {
+pub(crate) fn perform_clone_without_checkout(git_url: &str, target_dir: &PathBuf) -> Result<()> {
     let clone_output = {
         let mut cmd = Command::new("git");
         cmd.args(["clone", "--depth", "1", "--no-checkout", git_url]);
@@ -135,7 +98,7 @@ fn perform_clone_without_checkout(git_url: &str, target_dir: &PathBuf) -> Result
     Ok(())
 }
 
-fn perform_checkout(git_target: &GitTarget, target_dir: &PathBuf) -> Result<()> {
+pub(crate) fn perform_checkout(git_target: &GitTarget, target_dir: &PathBuf) -> Result<()> {
     let checkout_output = {
         let mut cmd = Command::new("git");
         cmd.args([
