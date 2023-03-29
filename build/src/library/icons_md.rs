@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, info, instrument};
 
-use crate::{icon::IconMeta, package::PackageType};
+use crate::{icon::IconMetadata, package::PackageType};
 
 const BASE_ICONS: &str = indoc::indoc!(
     r#"
@@ -69,7 +69,7 @@ impl Icons {
 
     pub(crate) async fn write_icon_table(
         &self,
-        package_icon_metadata: Vec<(PackageType, Vec<IconMeta>)>,
+        package_icon_metadata: Vec<(PackageType, Vec<IconMetadata>)>,
     ) -> Result<()> {
         info!("Writing icon table.");
 
@@ -116,20 +116,13 @@ impl Icons {
             for entry in entries {
                 file.write_all("| ".as_bytes()).await?;
                 file.write_all(entry.name.as_bytes()).await?;
-                file.write_all(
-                    std::iter::repeat(' ')
-                        .take(longest_name - entry.name.len())
-                        .collect::<String>()
-                        .as_bytes(),
-                )
-                .await?;
+                file.write_all(" ".repeat(longest_name - entry.name.len()).as_bytes())
+                    .await?;
 
                 file.write_all(" | ".as_bytes()).await?;
                 file.write_all(entry.categories.as_bytes()).await?;
                 file.write_all(
-                    std::iter::repeat(' ')
-                        .take(longest_categories - entry.categories.len())
-                        .collect::<String>()
+                    " ".repeat(longest_categories - entry.categories.len())
                         .as_bytes(),
                 )
                 .await?;

@@ -1,4 +1,4 @@
-use std::{fmt::Display, str::FromStr};
+use std::{fmt::Display, path::Path, str::FromStr};
 
 use anyhow::Result;
 use heck::ToPascalCase;
@@ -6,28 +6,72 @@ use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
 use xml::attribute::OwnedAttribute;
 
-use crate::{feature::Feature, leptos::LeptosComponent, package::PackageType, svg::ParsedSvg};
+use crate::{
+    feature::Feature,
+    leptos::LeptosComponent,
+    package::{Downloaded, Package, PackageType},
+};
+
+use self::svg::ParsedSvg;
+
+mod svg;
 
 #[derive(Debug)]
 pub(crate) struct SvgIcon {
-    pub svg: ParsedSvg,
+    pub svg: svg::ParsedSvg,
     pub categories: Vec<Category>,
-    pub component_name: String,
     pub feature: Feature,
 }
 
 impl SvgIcon {
+    pub async fn new(
+        package: &Package<Downloaded>,
+        path: &Path,
+        size: Option<IconSize>,
+        mut categories: Vec<Category>,
+    ) -> Result<Self> {
+        let file_stem = path.file_stem().unwrap().to_string_lossy(); // TODO: Error handling\
+
+        let (raw_name, size_from_name, cats_from_name) =
+            parse_raw_icon_name(package.ty, &file_stem);
+
+        if let Some(mut cats_from_name) = cats_from_name {
+            categories.append(&mut cats_from_name);
+        }
+
+        let feature = Feature {
+            name: feature_name(
+                raw_name,
+                size_from_name.or(size),
+                &categories,
+                &package.meta.short_name,
+            ),
+        };
+
+        let svg = tokio::fs::read_to_string(path).await?;
+
+        Ok(SvgIcon {
+            svg: ParsedSvg::parse(svg.as_bytes())?,
+            categories,
+            feature,
+        })
+    }
+
     /// This creates the Rust code for a leptos component representing a single icon.
     /// Feature-gated by the given feature name.
     ///
     /// TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, use `::leptos::...` wherever possible and remove `use leptos::*` in main.rs.
     pub(crate) fn create_leptos_icon_component(&self) -> Result<LeptosComponent> {
         let feature_name: &str = &self.feature.name;
-        let component_name: &str = &self.component_name;
-        let svg_content = &self.svg.content;
+        let component_name: &str = &self.feature.name;
 
         let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
         let component_ident = Ident::new(component_name, Span::call_site());
+        let svg_content: TokenStream = self
+            .svg
+            .content
+            .parse()
+            .map_err(|_| anyhow::anyhow!("could not transform icon_content to ident"))?;
         let svg_attributes = attributes_token_stream(&self.svg.attributes)?;
 
         let tokens = quote! {
@@ -63,8 +107,8 @@ impl SvgIcon {
                         width=size.clone()
                         height=size
                         xmlns="http://www.w3.org/2000/svg"
-                        inner_html=#svg_content
                     >
+                        #svg_content
                         <title>{title}</title>
                     </svg>
                 }
@@ -76,7 +120,7 @@ impl SvgIcon {
     }
 }
 
-pub(crate) struct IconMeta {
+pub(crate) struct IconMetadata {
     pub name: String, // Both the component and feature name!
     pub categories: Vec<Category>,
 }

@@ -1,16 +1,13 @@
 use anyhow::Result;
-use std::{
-    path::{Path, PathBuf},
-    str::FromStr,
-};
+use std::{path::PathBuf, str::FromStr};
 use tracing::{info, instrument, warn};
 
 use crate::{
-    feature::Feature,
-    icon::{self, Category, IconSize, SvgIcon},
+    icon::{Category, IconSize, SvgIcon},
     package::Package,
-    svg::ParsedSvg,
 };
+
+use super::Downloaded;
 
 /// A directory to be searched, combined with:
 ///     - a list of categories valid for the contents of that directory and
@@ -23,13 +20,14 @@ struct SearchDir {
 }
 
 #[instrument(level = "info", skip(package), fields(package = ?package.ty))]
-pub(crate) async fn get_icons(package: &Package) -> Result<Vec<SvgIcon>> {
-    info!("Retrieving icon names...");
+pub(crate) async fn read_icons(package: &Package<Downloaded>) -> Result<Vec<SvgIcon>> {
+    info!("Reading icon data...");
     let mut icons = Vec::new();
 
     let mut search_dirs = Vec::<SearchDir>::new();
+
     search_dirs.push(SearchDir {
-        path: package.download_path().join(package.meta.svg_dir.as_ref()),
+        path: package.icons_path(),
         categories: Vec::new(),
         icon_size: None,
     });
@@ -40,26 +38,31 @@ pub(crate) async fn get_icons(package: &Package) -> Result<Vec<SvgIcon>> {
             categories,
             icon_size,
         } = search_dirs.pop().expect("must exist");
+
         let mut dir_stream = tokio::fs::read_dir(&path).await?;
         while let Some(entry) = dir_stream.next_entry().await? {
             let entry_path = entry.path();
 
+            // We found a nested directory which should also be searched.
             if entry.file_type().await?.is_dir() {
                 info!(additional_dir = ?entry_path, "Found additional directory.");
 
-                // This dir must be searched as well. We consider is's name as being a "category" for the items contained in it.
                 let file_name = entry_path
                     .file_name()
                     .unwrap()
                     .to_string_lossy()
                     .to_string();
 
+                // The first directory being parsable as an IconSize counts.
                 let icon_size = icon_size.or_else(|| IconSize::from_str(&file_name).ok());
 
+                // The new directory needs all categories from the current directory.
+                // We may consider the dir name as being a "category" for all items contained in it.
                 let mut entry_cats = categories.clone();
                 if package.ty.is_category(&file_name) {
                     entry_cats.push(Category(file_name));
                 }
+
                 search_dirs.push(SearchDir {
                     path: path.join(&entry_path),
                     categories: entry_cats,
@@ -69,11 +72,13 @@ pub(crate) async fn get_icons(package: &Package) -> Result<Vec<SvgIcon>> {
                 continue;
             };
 
+            // We found a file and can check its extension.
             match entry_path.extension() {
                 Some(file_extension) => match file_extension.to_str() {
                     Some(file_extension) => match file_extension {
                         "svg" => icons.push(
-                            svg_icon(&package, &entry_path, icon_size, categories.clone()).await?,
+                            SvgIcon::new(package, &entry_path, icon_size, categories.clone())
+                                .await?,
                         ),
                         _ => warn!(
                             ?entry_path,
@@ -95,38 +100,4 @@ pub(crate) async fn get_icons(package: &Package) -> Result<Vec<SvgIcon>> {
 
     info!(num_icons = icons.len(), "Finished retrieving icon names.");
     Ok(icons)
-}
-
-async fn svg_icon(
-    package: &Package,
-    path: &Path,
-    size: Option<IconSize>,
-    mut categories: Vec<Category>,
-) -> Result<SvgIcon> {
-    let file_stem = path.file_stem().unwrap().to_string_lossy(); // TODO: Error handling\
-
-    let (raw_name, size_from_name, cats_from_name) =
-        icon::parse_raw_icon_name(package.ty, &file_stem);
-
-    if let Some(mut cats_from_name) = cats_from_name {
-        categories.append(&mut cats_from_name);
-    }
-
-    let feature = Feature {
-        name: icon::feature_name(
-            raw_name,
-            size_from_name.or(size),
-            &categories,
-            &package.meta.short_name,
-        ),
-    };
-
-    let svg = tokio::fs::read_to_string(path).await?;
-
-    Ok(SvgIcon {
-        svg: ParsedSvg::parse(svg.as_bytes())?,
-        categories,
-        component_name: feature.name.clone(), // TODO: Make clear why
-        feature,
-    })
 }

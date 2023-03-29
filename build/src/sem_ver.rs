@@ -1,8 +1,6 @@
 use std::fmt::Display;
 
-use serde::{Deserialize, Serialize};
-
-#[derive(Debug, PartialEq, Eq, Clone, Serialize, Deserialize)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub struct SemVer {
     pub major: u32,
     pub minor: u32,

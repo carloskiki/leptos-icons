@@ -1,19 +1,20 @@
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 
 use anyhow::Result;
 use tracing::info;
 
-use super::lib_rs::LibRs;
+use super::{icon_module::IconModule, lib_rs::LibRs};
 
 #[derive(Debug)]
 pub(crate) struct SrcDir {
     pub path: PathBuf,
     pub lib_rs: LibRs,
+    pub icon_modules: Vec<IconModule>,
 }
 
 impl SrcDir {
     /// Removes everything inside and creates a fresh lib.rs file.
-    pub async fn reset(&self) -> Result<()> {
+    pub async fn reset(&mut self) -> Result<()> {
         info!(path = ?self.path, "Removing existing src directory");
         tokio::fs::remove_dir_all(&self.path).await?;
 
@@ -28,8 +29,8 @@ impl SrcDir {
         &self.lib_rs
     }
 
-    #[allow(unused)]
-    pub fn relative_path<P: AsRef<Path>>(&self, join: P) -> PathBuf {
-        self.path.join(join)
+    pub fn add_module(&mut self, module: IconModule) -> &IconModule {
+        self.icon_modules.push(module);
+        self.icon_modules.last().expect("must exist")
     }
 }

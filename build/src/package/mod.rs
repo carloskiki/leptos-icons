@@ -1,37 +1,49 @@
 use anyhow::Result;
-use std::{borrow::Cow, path::PathBuf};
+use std::{borrow::Cow, marker::PhantomData, path::PathBuf};
 use strum::{EnumIter, IntoEnumIterator};
 use tracing::{info, instrument};
 
-use crate::{path, sem_ver::SemVer};
+use crate::{git, icon::SvgIcon, path, sem_ver::SemVer};
 
-pub mod git;
+mod reader;
 
 /// Name of the directory, relative to the root of this crate, to which all icon packages should be downloaded.
 const DOWNLOAD_DIR: &str = "downloads";
 
 #[derive(Debug, Clone)]
-pub(crate) struct Package {
+pub(crate) struct Package<S> {
     pub ty: PackageType,
     pub meta: PackageMetadata,
+    phantom_data: PhantomData<S>,
 }
 
-impl Package {
-    pub fn all() -> Vec<Package> {
-        Package::of_types(PackageType::iter())
-    }
+/// It is not guaranteed that the package was downloaded to teh exact version specified.
+#[derive(Debug, Clone)]
+pub struct Unknown {}
 
-    fn of_types<I: Iterator<Item = PackageType>>(types: I) -> Vec<Package> {
-        types
-            .map(|ty| Package {
-                ty,
-                meta: ty.metadata(),
-            })
-            .collect()
-    }
+/// The package was successfully downloaded. Icon data can be read.
+#[derive(Debug, Clone)]
+pub struct Downloaded {}
 
+impl<S> Package<S> {
     pub fn download_path(&self) -> PathBuf {
         path::build_crate(DOWNLOAD_DIR).join(self.meta.download_dir.as_ref())
+    }
+}
+
+impl Package<Unknown> {
+    pub fn all() -> Vec<Package<Unknown>> {
+        Package::<Unknown>::of_types(PackageType::iter())
+    }
+
+    fn of_types<I: Iterator<Item = PackageType>>(types: I) -> Vec<Package<Unknown>> {
+        types
+            .map(|ty| Package::<Unknown> {
+                ty,
+                meta: ty.metadata(),
+                phantom_data: PhantomData {},
+            })
+            .collect()
     }
 
     #[instrument(level = "info", fields(package = self.meta.package_name.as_ref()))]
@@ -45,7 +57,7 @@ impl Package {
     }
 
     #[instrument(level = "info")]
-    pub fn download(&self) -> Result<()> {
+    pub fn download(self) -> Result<Package<Downloaded>> {
         let download_path = self.download_path();
         info!(?download_path, "Downloading...");
 
@@ -53,7 +65,7 @@ impl Package {
             PackageSource::Git { url, target } => {
                 if download_path.exists() {
                     info!(?download_path, "Directory exists. Assuming git repository.");
-                    git::checkout(target, &download_path)
+                    git::checkout(target, &download_path)?;
                 } else {
                     info!(
                         ?download_path,
@@ -63,10 +75,26 @@ impl Package {
                         info!("Direct clone unsuccessful. Trying clone with checkout...");
                         git::clone_without_checkout(url, &download_path)?;
                         git::checkout(target, &download_path)
-                    })
+                    })?;
                 }
             }
-        }
+        };
+
+        Ok(Package::<Downloaded> {
+            ty: self.ty,
+            meta: self.meta,
+            phantom_data: PhantomData {},
+        })
+    }
+}
+
+impl Package<Downloaded> {
+    pub fn icons_path(&self) -> PathBuf {
+        self.download_path().join(self.meta.svg_dir.as_ref())
+    }
+
+    pub async fn read_icons(&self) -> Result<Vec<SvgIcon>> {
+        reader::read_icons(self).await
     }
 }
 

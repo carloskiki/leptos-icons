@@ -38,13 +38,13 @@ pub(crate) struct CargoToml {
 
 impl CargoToml {
     #[instrument(level = "info")]
-    pub async fn remove(&self) -> Result<()> {
+    pub async fn remove(&mut self) -> Result<()> {
         info!("Removing file.");
         tokio::fs::remove_file(&self.path).await.map_err(Into::into)
     }
 
     #[instrument(level = "info")]
-    async fn create_file(&self) -> Result<tokio::fs::File> {
+    async fn create_file(&mut self) -> Result<tokio::fs::File> {
         info!("Creating file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
@@ -59,7 +59,7 @@ impl CargoToml {
     }
 
     #[instrument(level = "info")]
-    pub(crate) async fn init(&self) -> Result<()> {
+    pub(crate) async fn init(&mut self) -> Result<()> {
         info!("Writing BASE_CARGO_TOML content.");
         self.create_file()
             .await?
@@ -69,7 +69,7 @@ impl CargoToml {
     }
 
     #[instrument(level = "info", skip_all)]
-    async fn append(&self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
+    async fn append(&mut self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
         info!("Creating file.");
         Ok(tokio::io::BufWriter::new(
             tokio::fs::OpenOptions::new()
@@ -84,7 +84,7 @@ impl CargoToml {
     }
 
     #[instrument(level = "info", skip(features))]
-    pub(crate) async fn append_features(&self, features: Vec<Feature>) -> Result<()> {
+    pub(crate) async fn append_features(&mut self, features: Vec<Feature>) -> Result<()> {
         info!(
             num_features = features.len(),
             "Writing features to Cargo.toml."
