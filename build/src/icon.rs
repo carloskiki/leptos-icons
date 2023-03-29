@@ -24,11 +24,11 @@ impl SvgIcon {
     pub(crate) fn create_leptos_icon_component(&self) -> Result<LeptosComponent> {
         let feature_name: &str = &self.feature.name;
         let component_name: &str = &self.component_name;
-        let svg_content = &self.svg.content;
 
         let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
         let component_ident = Ident::new(component_name, Span::call_site());
         let svg_attributes = attributes_token_stream(&self.svg.attributes)?;
+        let svg_content = &self.svg.content;
 
         let tokens = quote! {
             #[cfg(feature = #feature_name)]
@@ -57,8 +57,8 @@ impl SvgIcon {
                         class=class
                         stroke="currentColor"
                         fill="currentColor"
-                        stroke_width="0"
-                        style=format!("{} color: {};", style, color)
+                        stroke-width="0"
+                        style=format!("color: {}; {}", color, style)
                         #svg_attributes
                         width=size.clone()
                         height=size

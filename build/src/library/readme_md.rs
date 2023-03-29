@@ -1,4 +1,5 @@
 use anyhow::Result;
+use indoc::indoc;
 use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, info, instrument};
@@ -208,8 +209,16 @@ impl Readme {
             });
         }
 
+        let section_header = indoc! { r#"
+                ## Icon Packages
+
+                Licenses of the icons provided through these libraries were extracted with best intent,
+                but must only be taken as a hint. Please check the individual icon repositories for up-to-date license information.
+
+            "#};
+
         let mut file = self.append().await?;
-        file.write_all("## Icon Packages\n\n".as_bytes()).await?;
+        file.write_all(section_header.as_bytes()).await?;
 
         let longest_name = entries
             .iter()

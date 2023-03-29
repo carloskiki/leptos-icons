@@ -26,6 +26,9 @@ leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features 
 
 ## Icon Packages
 
+Licenses of the icons provided through these libraries were extracted with best intent,
+but must only be taken as a hint. Please check the individual icon repositories for up-to-date license information.
+
 | Icon Library     | Version | Source                                                                                                                    | License             | Short name |
 | ---              | ---     | ---                                                                                                                       | ---                 | ---        |
 | Ant Design Icons | 5.3.2   | Git: <https://github.com/ant-design/ant-design-icons> - Branch: master - Commit: 7c804893b4ac698d5713b2b59f3d044eb8f5128f | MIT,                | ai         |
