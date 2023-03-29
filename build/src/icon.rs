@@ -24,14 +24,10 @@ impl SvgIcon {
     pub(crate) fn create_leptos_icon_component(&self) -> Result<LeptosComponent> {
         let feature_name: &str = &self.feature.name;
         let component_name: &str = &self.component_name;
+        let svg_content = &self.svg.content;
 
         let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
         let component_ident = Ident::new(component_name, Span::call_site());
-        let svg_content: TokenStream = self
-            .svg
-            .content
-            .parse()
-            .map_err(|_| anyhow::anyhow!("could not transform icon_content to ident"))?;
         let svg_attributes = attributes_token_stream(&self.svg.attributes)?;
 
         let tokens = quote! {
@@ -67,8 +63,8 @@ impl SvgIcon {
                         width=size.clone()
                         height=size
                         xmlns="http://www.w3.org/2000/svg"
+                        inner_html=#svg_content
                     >
-                        #svg_content
                         <title>{title}</title>
                     </svg>
                 }
