@@ -54,12 +54,12 @@ impl SvgIcon {
             ) -> impl IntoView {
                 view! { cx,
                     <svg
-                        class=class
                         stroke="currentColor"
                         fill="currentColor"
                         stroke-width="0"
-                        style=format!("color: {}; {}", color, style)
                         #svg_attributes
+                        class=class
+                        style=format!("color: {}; {}", color, style)
                         width=size.clone()
                         height=size
                         xmlns="http://www.w3.org/2000/svg"
