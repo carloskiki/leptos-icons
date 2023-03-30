@@ -111,7 +111,7 @@ impl Readme {
         let section = indoc::indoc! {r#"
             ## Contributing
 
-            Contributions are more than welcomed.
+            Contributions are more than welcomed!
             Do not hesitate add icon libraries, features, etc.
 
         "#};
