@@ -13,4 +13,5 @@ leptos-icons = { path = "../../", features = [
     "FaBarsSolid",
     "ImPagebreak",
     "ImPageBreak",
+    "IoColorWand",
 ] }

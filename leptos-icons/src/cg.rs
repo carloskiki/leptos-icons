@@ -26,7 +26,7 @@ pub fn CgAbstract(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5H19V19H16L16 8H5V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 19C12.7614 19 15 16.7614 15 14C15 11.2386 12.7614 9 10 9C7.23858 9 5 11.2386 5 14C5 16.7614 7.23858 19 10 19ZM10 16C11.1046 16 12 15.1046 12 14C12 12.8954 11.1046 12 10 12C8.89543 12 8 12.8954 8 14C8 15.1046 8.89543 16 10 16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5H19V19H16L16 8H5V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 19C12.7614 19 15 16.7614 15 14C15 11.2386 12.7614 9 10 9C7.23858 9 5 11.2386 5 14C5 16.7614 7.23858 19 10 19ZM10 16C11.1046 16 12 15.1046 12 14C12 12.8954 11.1046 12 10 12C8.89543 12 8 12.8954 8 14C8 15.1046 8.89543 16 10 16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -56,7 +56,7 @@ pub fn CgAdd(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7V11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H11V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H13V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7V11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H11V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H13V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -86,7 +86,7 @@ pub fn CgAddR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C12.5523 6 13 6.44772 13 7V11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H11V7C11 6.44772 11.4477 6 12 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 22C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5ZM4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5C4.44772 4 4 4.44772 4 5V19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -116,7 +116,7 @@ pub fn CgAdidas(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23.2687 19H17.4952L10.8557 7.5L15.1858 5L23.2687 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23.2687 19H17.4952L10.8557 7.5L15.1858 5L23.2687 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -176,7 +176,7 @@ pub fn CgAlarm(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.45887 2L1 6.01478L2.33826 7.50107L6.79713 3.48629L5.45887 2Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 8H13V12H16V14H11V8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.5411 2L23 6.01478L21.6617 7.50107L17.2029 3.48629L18.5411 2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.45887 2L1 6.01478L2.33826 7.50107L6.79713 3.48629L5.45887 2Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 8H13V12H16V14H11V8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.5411 2L23 6.01478L21.6617 7.50107L17.2029 3.48629L18.5411 2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -236,7 +236,7 @@ pub fn CgAlignBottom(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 10H17V16H13V10Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 4H7V16H11V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 18H6V20H18V18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 10H17V16H13V10Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 4H7V16H11V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 18H6V20H18V18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -266,7 +266,7 @@ pub fn CgAlignCenter(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13H15V17H9V13Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7H18V11H6V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13H15V17H9V13Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7H18V11H6V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -296,7 +296,7 @@ pub fn CgAlignLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 13H14V17H8V13Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6H4V18H6V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H8V11H20V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 13H14V17H8V13Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6H4V18H6V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H8V11H20V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -326,7 +326,7 @@ pub fn CgAlignMiddle(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 9H17V15H13V9Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 6H11V18H7V6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 9H17V15H13V9Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 6H11V18H7V6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -356,7 +356,7 @@ pub fn CgAlignRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.9991 13.0039L9.99907 12.9911L9.99054 16.9911L15.9905 17.0039L15.9991 13.0039Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.978 18.0021L20.0036 6.00214L18.0036 5.99788L17.978 17.9979L19.978 18.0021Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.9964 10.9851L15.9964 11.0107L16.0049 7.0107L4.00493 6.98512L3.9964 10.9851Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.9991 13.0039L9.99907 12.9911L9.99054 16.9911L15.9905 17.0039L15.9991 13.0039Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.978 18.0021L20.0036 6.00214L18.0036 5.99788L17.978 17.9979L19.978 18.0021Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.9964 10.9851L15.9964 11.0107L16.0049 7.0107L4.00493 6.98512L3.9964 10.9851Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -386,7 +386,7 @@ pub fn CgAlignTop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.0352 7.98797L13.0374 13.988L17.0374 13.9865L17.0352 7.98653L13.0352 7.98797Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.9996 4.01189L5.99963 4.01837L6.00038 6.01837L18.0004 6.01189L17.9996 4.01189Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.0374 19.9864L11.0321 7.98637L7.03207 7.98813L7.03736 19.9881L11.0374 19.9864Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.0352 7.98797L13.0374 13.988L17.0374 13.9865L17.0352 7.98653L13.0352 7.98797Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.9996 4.01189L5.99963 4.01837L6.00038 6.01837L18.0004 6.01189L17.9996 4.01189Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.0374 19.9864L11.0321 7.98637L7.03207 7.98813L7.03736 19.9881L11.0374 19.9864Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -536,7 +536,7 @@ pub fn CgArrowAlignH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H11V17H13V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.99996 7.75732L7.41418 9.17154L5.58572 11L9.99996 11V13L5.58579 13L7.41418 14.8284L5.99996 16.2426L1.75732 12L5.99996 7.75732Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 16.2427L16.5858 14.8285L18.4143 13H14V11L18.4142 11L16.5858 9.17161L18 7.75739L22.2427 12L18 16.2427Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H11V17H13V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.99996 7.75732L7.41418 9.17154L5.58572 11L9.99996 11V13L5.58579 13L7.41418 14.8284L5.99996 16.2426L1.75732 12L5.99996 7.75732Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 16.2427L16.5858 14.8285L18.4143 13H14V11L18.4142 11L16.5858 9.17161L18 7.75739L22.2427 12L18 16.2427Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -566,7 +566,7 @@ pub fn CgArrowAlignV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11L7 13H17V11H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 18L9.17154 16.5858L11 18.4143V14H13V18.4142L14.8284 16.5858L16.2426 18L12 22.2427L7.75732 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2427 5.99996L14.8285 7.41418L13 5.58572V9.99996H11L11 5.58579L9.17161 7.41418L7.75739 5.99996L12 1.75732L16.2427 5.99996Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11L7 13H17V11H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 18L9.17154 16.5858L11 18.4143V14H13V18.4142L14.8284 16.5858L16.2426 18L12 22.2427L7.75732 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2427 5.99996L14.8285 7.41418L13 5.58572V9.99996H11L11 5.58579L9.17161 7.41418L7.75739 5.99996L12 1.75732L16.2427 5.99996Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -626,7 +626,7 @@ pub fn CgArrowBottomLeftO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10.0367L8.00002 10.0367L8 16.0367L14 16.0367L14 14.0367L11.4143 14.0366L16.7438 8.7071L15.3296 7.29289L10 12.6224L10 10.0367Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10.0367L8.00002 10.0367L8 16.0367L14 16.0367L14 14.0367L11.4143 14.0366L16.7438 8.7071L15.3296 7.29289L10 12.6224L10 10.0367Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -656,7 +656,7 @@ pub fn CgArrowBottomLeftR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10.0367H8V16.0367H14V14.0367H11.4142L16.7438 8.70712L15.3296 7.2929L10 12.6225V10.0367Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10.0367H8V16.0367H14V14.0367H11.4142L16.7438 8.70712L15.3296 7.2929L10 12.6225V10.0367Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -716,7 +716,7 @@ pub fn CgArrowBottomRightO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0367 10.0367H16.0367V16.0367H10.0367V14.0367H12.6225L7.29297 8.70713L8.70718 7.29291L14.0367 12.6225L14.0367 10.0367Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0367 10.0367H16.0367V16.0367H10.0367V14.0367H12.6225L7.29297 8.70713L8.70718 7.29291L14.0367 12.6225L14.0367 10.0367Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -746,7 +746,7 @@ pub fn CgArrowBottomRightR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0367 10.0367H16.0367V16.0367H10.0367V14.0367H12.6225L7.29297 8.70713L8.70718 7.29292L14.0367 12.6225L14.0367 10.0367Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0367 10.0367H16.0367V16.0367H10.0367V14.0367H12.6225L7.29297 8.70713L8.70718 7.29292L14.0367 12.6225L14.0367 10.0367Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -806,7 +806,7 @@ pub fn CgArrowDownO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 12.0259L16.2427 13.4402L12 17.6828L7.7574 13.4402L9.17161 12.0259L11 13.8544V6.31724H13V13.8544L14.8285 12.0259Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.7782 19.7782C15.4824 24.0739 8.51759 24.0739 4.22183 19.7782C-0.0739417 15.4824 -0.0739417 8.51759 4.22183 4.22183C8.51759 -0.0739419 15.4824 -0.0739419 19.7782 4.22183C24.0739 8.51759 24.0739 15.4824 19.7782 19.7782ZM18.364 18.364C14.8492 21.8787 9.15076 21.8787 5.63604 18.364C2.12132 14.8492 2.12132 9.15076 5.63604 5.63604C9.15076 2.12132 14.8492 2.12132 18.364 5.63604C21.8787 9.15076 21.8787 14.8492 18.364 18.364Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 12.0259L16.2427 13.4402L12 17.6828L7.7574 13.4402L9.17161 12.0259L11 13.8544V6.31724H13V13.8544L14.8285 12.0259Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.7782 19.7782C15.4824 24.0739 8.51759 24.0739 4.22183 19.7782C-0.0739417 15.4824 -0.0739417 8.51759 4.22183 4.22183C8.51759 -0.0739419 15.4824 -0.0739419 19.7782 4.22183C24.0739 8.51759 24.0739 15.4824 19.7782 19.7782ZM18.364 18.364C14.8492 21.8787 9.15076 21.8787 5.63604 18.364C2.12132 14.8492 2.12132 9.15076 5.63604 5.63604C9.15076 2.12132 14.8492 2.12132 18.364 5.63604C21.8787 9.15076 21.8787 14.8492 18.364 18.364Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -836,7 +836,7 @@ pub fn CgArrowDownR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12.0259L16.2426 13.4402L12 17.6828L7.75733 13.4402L9.17155 12.0259L11 13.8544V6.31724H13V13.8544L14.8284 12.0259Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12.0259L16.2426 13.4402L12 17.6828L7.75733 13.4402L9.17155 12.0259L11 13.8544V6.31724H13V13.8544L14.8284 12.0259Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -896,7 +896,7 @@ pub fn CgArrowLeftO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9481 14.8285L10.5339 16.2427L6.29122 12L10.5339 7.7574L11.9481 9.17161L10.1196 11H17.6568V13H10.1196L11.9481 14.8285Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.22183 19.7782C-0.0739419 15.4824 -0.0739419 8.51759 4.22183 4.22183C8.51759 -0.0739419 15.4824 -0.0739419 19.7782 4.22183C24.0739 8.51759 24.0739 15.4824 19.7782 19.7782C15.4824 24.0739 8.51759 24.0739 4.22183 19.7782ZM5.63604 18.364C2.12132 14.8492 2.12132 9.15076 5.63604 5.63604C9.15076 2.12132 14.8492 2.12132 18.364 5.63604C21.8787 9.15076 21.8787 14.8492 18.364 18.364C14.8492 21.8787 9.15076 21.8787 5.63604 18.364Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9481 14.8285L10.5339 16.2427L6.29122 12L10.5339 7.7574L11.9481 9.17161L10.1196 11H17.6568V13H10.1196L11.9481 14.8285Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4.22183 19.7782C-0.0739419 15.4824 -0.0739419 8.51759 4.22183 4.22183C8.51759 -0.0739419 15.4824 -0.0739419 19.7782 4.22183C24.0739 8.51759 24.0739 15.4824 19.7782 19.7782C15.4824 24.0739 8.51759 24.0739 4.22183 19.7782ZM5.63604 18.364C2.12132 14.8492 2.12132 9.15076 5.63604 5.63604C9.15076 2.12132 14.8492 2.12132 18.364 5.63604C21.8787 9.15076 21.8787 14.8492 18.364 18.364C14.8492 21.8787 9.15076 21.8787 5.63604 18.364Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -926,7 +926,7 @@ pub fn CgArrowLeftR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9481 14.8285L10.5339 16.2427L6.29126 12L10.5339 7.7574L11.9481 9.17161L10.1197 11H17.6568V13H10.1197L11.9481 14.8285Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19ZM19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9481 14.8285L10.5339 16.2427L6.29126 12L10.5339 7.7574L11.9481 9.17161L10.1197 11H17.6568V13H10.1197L11.9481 14.8285Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19ZM19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1586,7 +1586,7 @@ pub fn CgArrowRightO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0519 14.8285L13.4661 16.2427L17.7088 12L13.4661 7.7574L12.0519 9.17161L13.8804 11H6.34321V13H13.8803L12.0519 14.8285Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183C15.4824 -0.0739417 8.51759 -0.0739417 4.22183 4.22183C-0.0739417 8.51759 -0.0739417 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782ZM18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0519 14.8285L13.4661 16.2427L17.7088 12L13.4661 7.7574L12.0519 9.17161L13.8804 11H6.34321V13H13.8803L12.0519 14.8285Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183C15.4824 -0.0739417 8.51759 -0.0739417 4.22183 4.22183C-0.0739417 8.51759 -0.0739417 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782ZM18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1616,7 +1616,7 @@ pub fn CgArrowRightR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0519 14.8285L13.4661 16.2427L17.7087 12L13.4661 7.7574L12.0519 9.17161L13.8803 11H6.34318V13H13.8803L12.0519 14.8285Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0519 14.8285L13.4661 16.2427L17.7087 12L13.4661 7.7574L12.0519 9.17161L13.8803 11H6.34318V13H13.8803L12.0519 14.8285Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1676,7 +1676,7 @@ pub fn CgArrowTopLeftO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13.9633H8V7.96331H14V9.96331H11.4142L16.7438 15.2929L15.3296 16.7071L10 11.3775L10 13.9633Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13.9633H8V7.96331H14V9.96331H11.4142L16.7438 15.2929L15.3296 16.7071L10 11.3775L10 13.9633Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1706,7 +1706,7 @@ pub fn CgArrowTopLeftR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13.9633H8V7.96331H14V9.96331H11.4142L16.7438 15.2929L15.3296 16.7071L10 11.3775L10 13.9633Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13.9633H8V7.96331H14V9.96331H11.4142L16.7438 15.2929L15.3296 16.7071L10 11.3775L10 13.9633Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1766,7 +1766,7 @@ pub fn CgArrowTopRightO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 13.9633H16V7.96331H10V9.96331H12.5858L7.25623 15.2929L8.67044 16.7071L14 11.3775L14 13.9633Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 13.9633H16V7.96331H10V9.96331H12.5858L7.25623 15.2929L8.67044 16.7071L14 11.3775L14 13.9633Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1796,7 +1796,7 @@ pub fn CgArrowTopRightR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 13.9633H16V7.96331H10V9.96331H12.5858L7.25623 15.2929L8.67044 16.7071L14 11.3775V13.9633Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19ZM19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 13.9633H16V7.96331H10V9.96331H12.5858L7.25623 15.2929L8.67044 16.7071L14 11.3775V13.9633Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19ZM19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1856,7 +1856,7 @@ pub fn CgArrowUpO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 11.9481L16.2427 10.5339L12 6.29122L7.7574 10.5339L9.17161 11.9481L11 10.1196V17.6568H13V10.1196L14.8285 11.9481Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.7782 4.22183C15.4824 -0.0739415 8.51759 -0.0739422 4.22183 4.22183C-0.0739415 8.51759 -0.0739422 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183ZM18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 11.9481L16.2427 10.5339L12 6.29122L7.7574 10.5339L9.17161 11.9481L11 10.1196V17.6568H13V10.1196L14.8285 11.9481Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.7782 4.22183C15.4824 -0.0739415 8.51759 -0.0739422 4.22183 4.22183C-0.0739415 8.51759 -0.0739422 15.4824 4.22183 19.7782C8.51759 24.0739 15.4824 24.0739 19.7782 19.7782C24.0739 15.4824 24.0739 8.51759 19.7782 4.22183ZM18.364 5.63604C14.8492 2.12132 9.15076 2.12132 5.63604 5.63604C2.12132 9.15076 2.12132 14.8492 5.63604 18.364C9.15076 21.8787 14.8492 21.8787 18.364 18.364C21.8787 14.8492 21.8787 9.15076 18.364 5.63604Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1886,7 +1886,7 @@ pub fn CgArrowUpR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8543 11.9741L16.2686 10.5599L12.0259 6.31724L7.78327 10.5599L9.19749 11.9741L11.0259 10.1457V17.6828H13.0259V10.1457L14.8543 11.9741Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8543 11.9741L16.2686 10.5599L12.0259 6.31724L7.78327 10.5599L9.19749 11.9741L11.0259 10.1457V17.6828H13.0259V10.1457L14.8543 11.9741Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1916,7 +1916,7 @@ pub fn CgArrowsBreakeH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.24268 7H11.2427V11.0001H11.2477V13.0001H11.2427V17H9.24268V13.0001L4.82846 13L6.65685 14.8284L5.24264 16.2426L1 12L5.24264 7.75732L6.65685 9.17154L4.82839 11H9.24264L9.24268 7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2527 7.00012H13.2527V11.0001H13.2477V13.0001H13.2527V17.0001H15.2527V13.0001L19.667 13L17.8385 14.8285L19.2527 16.2427L23.4954 12L19.2527 7.75739L17.8385 9.17161L19.6669 11H15.2527L15.2527 7.00012Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.24268 7H11.2427V11.0001H11.2477V13.0001H11.2427V17H9.24268V13.0001L4.82846 13L6.65685 14.8284L5.24264 16.2426L1 12L5.24264 7.75732L6.65685 9.17154L4.82839 11H9.24264L9.24268 7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2527 7.00012H13.2527V11.0001H13.2477V13.0001H13.2527V17.0001H15.2527V13.0001L19.667 13L17.8385 14.8285L19.2527 16.2427L23.4954 12L19.2527 7.75739L17.8385 9.17161L19.6669 11H15.2527L15.2527 7.00012Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1946,7 +1946,7 @@ pub fn CgArrowsBreakeV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2427 5.24264L14.8285 6.65685L13 4.82839L13.0001 9.24268H17.0001V11.2427H7.00012V9.24268H11.0001L11 4.82846L9.17161 6.65685L7.75739 5.24264L12 1L16.2427 5.24264Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15.2527V13.2527H17V15.2527H13.0001L13 19.6669L14.8284 17.8385L16.2426 19.2527L12 23.4954L7.75732 19.2527L9.17154 17.8385L11 19.667V15.2527L7 15.2527Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2427 5.24264L14.8285 6.65685L13 4.82839L13.0001 9.24268H17.0001V11.2427H7.00012V9.24268H11.0001L11 4.82846L9.17161 6.65685L7.75739 5.24264L12 1L16.2427 5.24264Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15.2527V13.2527H17V15.2527H13.0001L13 19.6669L14.8284 17.8385L16.2426 19.2527L12 23.4954L7.75732 19.2527L9.17154 17.8385L11 19.667V15.2527L7 15.2527Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -1976,7 +1976,7 @@ pub fn CgArrowsExchange(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.99255 12.9841C4.44027 12.9841 3.99255 13.4318 3.99255 13.9841C3.99255 14.3415 4.18004 14.6551 4.46202 14.8319L7.14964 17.5195C7.54016 17.9101 8.17333 17.9101 8.56385 17.5195C8.95438 17.129 8.95438 16.4958 8.56385 16.1053L7.44263 14.9841H14.9926C15.5448 14.9841 15.9926 14.5364 15.9926 13.9841C15.9926 13.4318 15.5448 12.9841 14.9926 12.9841L5.042 12.9841C5.03288 12.984 5.02376 12.984 5.01464 12.9841H4.99255Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.0074 11.0159C19.5597 11.0159 20.0074 10.5682 20.0074 10.0159C20.0074 9.6585 19.82 9.3449 19.538 9.16807L16.8504 6.48045C16.4598 6.08993 15.8267 6.08993 15.4361 6.48045C15.0456 6.87098 15.0456 7.50414 15.4361 7.89467L16.5574 9.01589L9.00745 9.01589C8.45516 9.01589 8.00745 9.46361 8.00745 10.0159C8.00745 10.5682 8.45516 11.0159 9.00745 11.0159L18.958 11.0159C18.9671 11.016 18.9762 11.016 18.9854 11.0159H19.0074Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.99255 12.9841C4.44027 12.9841 3.99255 13.4318 3.99255 13.9841C3.99255 14.3415 4.18004 14.6551 4.46202 14.8319L7.14964 17.5195C7.54016 17.9101 8.17333 17.9101 8.56385 17.5195C8.95438 17.129 8.95438 16.4958 8.56385 16.1053L7.44263 14.9841H14.9926C15.5448 14.9841 15.9926 14.5364 15.9926 13.9841C15.9926 13.4318 15.5448 12.9841 14.9926 12.9841L5.042 12.9841C5.03288 12.984 5.02376 12.984 5.01464 12.9841H4.99255Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.0074 11.0159C19.5597 11.0159 20.0074 10.5682 20.0074 10.0159C20.0074 9.6585 19.82 9.3449 19.538 9.16807L16.8504 6.48045C16.4598 6.08993 15.8267 6.08993 15.4361 6.48045C15.0456 6.87098 15.0456 7.50414 15.4361 7.89467L16.5574 9.01589L9.00745 9.01589C8.45516 9.01589 8.00745 9.46361 8.00745 10.0159C8.00745 10.5682 8.45516 11.0159 9.00745 11.0159L18.958 11.0159C18.9671 11.016 18.9762 11.016 18.9854 11.0159H19.0074Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2006,7 +2006,7 @@ pub fn CgArrowsExchangeAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.99255 11.0159C4.44027 11.0159 3.99255 10.5682 3.99255 10.0159C3.99255 9.6585 4.18004 9.3449 4.46202 9.16807L7.14964 6.48045C7.54016 6.08993 8.17333 6.08993 8.56385 6.48045C8.95438 6.87098 8.95438 7.50414 8.56385 7.89467L7.44263 9.0159L14.9926 9.01589C15.5448 9.01589 15.9926 9.46361 15.9926 10.0159C15.9926 10.5682 15.5448 11.0159 14.9926 11.0159L5.042 11.0159C5.03288 11.016 5.02376 11.016 5.01464 11.0159H4.99255Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.0074 12.9841C19.5597 12.9841 20.0074 13.4318 20.0074 13.9841C20.0074 14.3415 19.82 14.6551 19.538 14.8319L16.8504 17.5195C16.4598 17.9101 15.8267 17.9101 15.4361 17.5195C15.0456 17.129 15.0456 16.4958 15.4361 16.1053L16.5574 14.9841H9.00745C8.45516 14.9841 8.00745 14.5364 8.00745 13.9841C8.00745 13.4318 8.45516 12.9841 9.00745 12.9841L18.958 12.9841C18.9671 12.984 18.9762 12.984 18.9854 12.9841H19.0074Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.99255 11.0159C4.44027 11.0159 3.99255 10.5682 3.99255 10.0159C3.99255 9.6585 4.18004 9.3449 4.46202 9.16807L7.14964 6.48045C7.54016 6.08993 8.17333 6.08993 8.56385 6.48045C8.95438 6.87098 8.95438 7.50414 8.56385 7.89467L7.44263 9.0159L14.9926 9.01589C15.5448 9.01589 15.9926 9.46361 15.9926 10.0159C15.9926 10.5682 15.5448 11.0159 14.9926 11.0159L5.042 11.0159C5.03288 11.016 5.02376 11.016 5.01464 11.0159H4.99255Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.0074 12.9841C19.5597 12.9841 20.0074 13.4318 20.0074 13.9841C20.0074 14.3415 19.82 14.6551 19.538 14.8319L16.8504 17.5195C16.4598 17.9101 15.8267 17.9101 15.4361 17.5195C15.0456 17.129 15.0456 16.4958 15.4361 16.1053L16.5574 14.9841H9.00745C8.45516 14.9841 8.00745 14.5364 8.00745 13.9841C8.00745 13.4318 8.45516 12.9841 9.00745 12.9841L18.958 12.9841C18.9671 12.984 18.9762 12.984 18.9854 12.9841H19.0074Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2036,7 +2036,7 @@ pub fn CgArrowsExchangeAltV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9841 4.99255C12.9841 4.44027 13.4318 3.99255 13.9841 3.99255C14.3415 3.99255 14.6551 4.18004 14.8319 4.46202L17.5195 7.14964C17.9101 7.54016 17.9101 8.17333 17.5195 8.56385C17.129 8.95438 16.4958 8.95438 16.1053 8.56385L14.9841 7.44263V14.9926C14.9841 15.5448 14.5364 15.9926 13.9841 15.9926C13.4318 15.9926 12.9841 15.5448 12.9841 14.9926V5.042C12.984 5.03288 12.984 5.02376 12.9841 5.01464V4.99255Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0159 19.0074C11.0159 19.5597 10.5682 20.0074 10.0159 20.0074C9.6585 20.0074 9.3449 19.82 9.16807 19.538L6.48045 16.8504C6.08993 16.4598 6.08993 15.8267 6.48045 15.4361C6.87098 15.0456 7.50414 15.0456 7.89467 15.4361L9.01589 16.5574V9.00745C9.01589 8.45516 9.46361 8.00745 10.0159 8.00745C10.5682 8.00745 11.0159 8.45516 11.0159 9.00745V18.958C11.016 18.9671 11.016 18.9762 11.0159 18.9854V19.0074Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9841 4.99255C12.9841 4.44027 13.4318 3.99255 13.9841 3.99255C14.3415 3.99255 14.6551 4.18004 14.8319 4.46202L17.5195 7.14964C17.9101 7.54016 17.9101 8.17333 17.5195 8.56385C17.129 8.95438 16.4958 8.95438 16.1053 8.56385L14.9841 7.44263V14.9926C14.9841 15.5448 14.5364 15.9926 13.9841 15.9926C13.4318 15.9926 12.9841 15.5448 12.9841 14.9926V5.042C12.984 5.03288 12.984 5.02376 12.9841 5.01464V4.99255Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0159 19.0074C11.0159 19.5597 10.5682 20.0074 10.0159 20.0074C9.6585 20.0074 9.3449 19.82 9.16807 19.538L6.48045 16.8504C6.08993 16.4598 6.08993 15.8267 6.48045 15.4361C6.87098 15.0456 7.50414 15.0456 7.89467 15.4361L9.01589 16.5574V9.00745C9.01589 8.45516 9.46361 8.00745 10.0159 8.00745C10.5682 8.00745 11.0159 8.45516 11.0159 9.00745V18.958C11.016 18.9671 11.016 18.9762 11.0159 18.9854V19.0074Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2066,7 +2066,7 @@ pub fn CgArrowsExchangeV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9842 15C12.9842 15.5523 13.4319 16 13.9842 16C14.3416 16 14.6552 15.8125 14.832 15.5305L17.5196 12.8429C17.9101 12.4524 17.9101 11.8192 17.5196 11.4287C17.1291 11.0382 16.4959 11.0382 16.1054 11.4287L14.9842 12.5499L14.9842 5C14.9842 4.44771 14.5364 4 13.9842 4C13.4319 4 12.9842 4.44772 12.9842 5L12.9842 14.9506C12.984 14.9597 12.984 14.9688 12.9842 14.9779V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.016 9C11.016 8.44771 10.5682 8 10.016 8C9.65856 8 9.34496 8.18748 9.16813 8.46947L6.48052 11.1571C6.08999 11.5476 6.08999 12.1808 6.48051 12.5713C6.87104 12.9618 7.5042 12.9618 7.89473 12.5713L9.01596 11.4501L9.01596 19C9.01596 19.5523 9.46367 20 10.016 20C10.5682 20 11.016 19.5523 11.016 19L11.016 9.04945C11.0161 9.04033 11.0161 9.03121 11.016 9.02208V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9842 15C12.9842 15.5523 13.4319 16 13.9842 16C14.3416 16 14.6552 15.8125 14.832 15.5305L17.5196 12.8429C17.9101 12.4524 17.9101 11.8192 17.5196 11.4287C17.1291 11.0382 16.4959 11.0382 16.1054 11.4287L14.9842 12.5499L14.9842 5C14.9842 4.44771 14.5364 4 13.9842 4C13.4319 4 12.9842 4.44772 12.9842 5L12.9842 14.9506C12.984 14.9597 12.984 14.9688 12.9842 14.9779V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.016 9C11.016 8.44771 10.5682 8 10.016 8C9.65856 8 9.34496 8.18748 9.16813 8.46947L6.48052 11.1571C6.08999 11.5476 6.08999 12.1808 6.48051 12.5713C6.87104 12.9618 7.5042 12.9618 7.89473 12.5713L9.01596 11.4501L9.01596 19C9.01596 19.5523 9.46367 20 10.016 20C10.5682 20 11.016 19.5523 11.016 19L11.016 9.04945C11.0161 9.04033 11.0161 9.03121 11.016 9.02208V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2096,7 +2096,7 @@ pub fn CgArrowsExpandDownLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 5C13 3.89543 13.8954 3 15 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5ZM15 5H19V9H15V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13H3V21H11V19H6.41424L11.7782 13.6361C12.1687 13.2456 12.1687 12.6124 11.7782 12.2219C11.3876 11.8314 10.7545 11.8314 10.3639 12.2219L5 17.5858V13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 5C13 3.89543 13.8954 3 15 3H19C20.1046 3 21 3.89543 21 5V9C21 10.1046 20.1046 11 19 11H15C13.8954 11 13 10.1046 13 9V5ZM15 5H19V9H15V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13H3V21H11V19H6.41424L11.7782 13.6361C12.1687 13.2456 12.1687 12.6124 11.7782 12.2219C11.3876 11.8314 10.7545 11.8314 10.3639 12.2219L5 17.5858V13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2126,7 +2126,7 @@ pub fn CgArrowsExpandDownRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 5C11 3.89543 10.1046 3 9 3H5C3.89543 3 3 3.89543 3 5V9C3 10.1046 3.89543 11 5 11H9C10.1046 11 11 10.1046 11 9V5ZM9 5H5V9H9V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13H21V21H13V19H17.5858L12.2218 13.6361C11.8313 13.2456 11.8313 12.6124 12.2218 12.2219C12.6124 11.8314 13.2455 11.8314 13.6361 12.2219L19 17.5858V13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 5C11 3.89543 10.1046 3 9 3H5C3.89543 3 3 3.89543 3 5V9C3 10.1046 3.89543 11 5 11H9C10.1046 11 11 10.1046 11 9V5ZM9 5H5V9H9V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13H21V21H13V19H17.5858L12.2218 13.6361C11.8313 13.2456 11.8313 12.6124 12.2218 12.2219C12.6124 11.8314 13.2455 11.8314 13.6361 12.2219L19 17.5858V13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2156,7 +2156,7 @@ pub fn CgArrowsExpandLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1005 4.10052V2.10052H2.10046L2.10046 10.1005H4.10046L4.10046 5.51471L9.87875 11.293L11.293 9.87878L5.51471 4.10052H10.1005Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.8995 13.8995H21.8995V21.8995H13.8995V19.8995H18.4853L12.7071 14.1212L14.1213 12.707L19.8995 18.4853V13.8995Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1005 4.10052V2.10052H2.10046L2.10046 10.1005H4.10046L4.10046 5.51471L9.87875 11.293L11.293 9.87878L5.51471 4.10052H10.1005Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.8995 13.8995H21.8995V21.8995H13.8995V19.8995H18.4853L12.7071 14.1212L14.1213 12.707L19.8995 18.4853V13.8995Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2186,7 +2186,7 @@ pub fn CgArrowsExpandLeftAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1005 2.10052V4.10052H5.51471L11.293 9.87878L9.87875 11.293L4.10046 5.51471L4.10046 10.1005H2.10046L2.10046 2.10052H10.1005Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.8995 13.8995H19.8995V18.4853L14.1212 12.707L12.707 14.1213L18.4853 19.8995H13.8995V21.8995H21.8995V13.8995Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2426 9.1716L14.8284 7.75739L7.7573 14.8285L9.17151 16.2427L16.2426 9.1716Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1005 2.10052V4.10052H5.51471L11.293 9.87878L9.87875 11.293L4.10046 5.51471L4.10046 10.1005H2.10046L2.10046 2.10052H10.1005Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.8995 13.8995H19.8995V18.4853L14.1212 12.707L12.707 14.1213L18.4853 19.8995H13.8995V21.8995H21.8995V13.8995Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2426 9.1716L14.8284 7.75739L7.7573 14.8285L9.17151 16.2427L16.2426 9.1716Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2216,7 +2216,7 @@ pub fn CgArrowsExpandRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8995 4.10052V2.10052H21.8995V10.1005H19.8995V5.51477L14.1213 11.293L12.7071 9.87878L18.4854 4.10052H13.8995Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.10046 13.8995H2.10046V21.8995H10.1005V19.8995H5.51468L11.2929 14.1212L9.87872 12.707L4.10046 18.4853V13.8995Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8995 4.10052V2.10052H21.8995V10.1005H19.8995V5.51477L14.1213 11.293L12.7071 9.87878L18.4854 4.10052H13.8995Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.10046 13.8995H2.10046V21.8995H10.1005V19.8995H5.51468L11.2929 14.1212L9.87872 12.707L4.10046 18.4853V13.8995Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2246,7 +2246,7 @@ pub fn CgArrowsExpandRightAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8995 2.10052V4.10052H18.4852L12.707 9.87878L14.1212 11.293L19.8995 5.51471V10.1005H21.8995V2.10052H13.8995Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.51468 19.8995H10.1005V21.8995H2.10046V13.8995H4.10046V18.4853L9.87872 12.707L11.2929 14.1213L5.51468 19.8995Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 7.75739L7.75732 9.1716L14.8284 16.2427L16.2426 14.8285L9.17154 7.75739Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8995 2.10052V4.10052H18.4852L12.707 9.87878L14.1212 11.293L19.8995 5.51471V10.1005H21.8995V2.10052H13.8995Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.51468 19.8995H10.1005V21.8995H2.10046V13.8995H4.10046V18.4853L9.87872 12.707L11.2929 14.1213L5.51468 19.8995Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 7.75739L7.75732 9.1716L14.8284 16.2427L16.2426 14.8285L9.17154 7.75739Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2276,7 +2276,7 @@ pub fn CgArrowsExpandUpLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 11H3L3 3L11 3V5L6.41419 5L11.7781 10.3639C12.1686 10.7545 12.1686 11.3876 11.7781 11.7782C11.3876 12.1687 10.7544 12.1687 10.3639 11.7782L5 6.41424L5 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 13C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15C13 13.8954 13.8954 13 15 13H19ZM19 15V19H15V15H19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 11H3L3 3L11 3V5L6.41419 5L11.7781 10.3639C12.1686 10.7545 12.1686 11.3876 11.7781 11.7782C11.3876 12.1687 10.7544 12.1687 10.3639 11.7782L5 6.41424L5 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 13C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15C13 13.8954 13.8954 13 15 13H19ZM19 15V19H15V15H19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2306,7 +2306,7 @@ pub fn CgArrowsExpandUpRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 5V3L21 3V11H19V6.41424L13.6361 11.7782C13.2456 12.1687 12.6124 12.1687 12.2219 11.7782C11.8314 11.3876 11.8314 10.7545 12.2219 10.3639L17.5858 5L13 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 13C3.89543 13 3 13.8954 3 15L3 19C3 20.1046 3.89543 21 5 21H9C10.1046 21 11 20.1046 11 19V15C11 13.8954 10.1046 13 9 13H5ZM5 15L5 19H9V15H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 5V3L21 3V11H19V6.41424L13.6361 11.7782C13.2456 12.1687 12.6124 12.1687 12.2219 11.7782C11.8314 11.3876 11.8314 10.7545 12.2219 10.3639L17.5858 5L13 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 13C3.89543 13 3 13.8954 3 15L3 19C3 20.1046 3.89543 21 5 21H9C10.1046 21 11 20.1046 11 19V15C11 13.8954 10.1046 13 9 13H5ZM5 15L5 19H9V15H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2336,7 +2336,7 @@ pub fn CgArrowsH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.65698 9.17157L4.24276 7.75735L0.00012207 12L4.24276 16.2426L5.65698 14.8284L3.82858 13H10.0001V11H3.82851L5.65698 9.17157Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0001 11V13H20.1716L18.3432 14.8284L19.7574 16.2426L24.0001 12L19.7574 7.75735L18.3432 9.17157L20.1717 11H14.0001Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.65698 9.17157L4.24276 7.75735L0.00012207 12L4.24276 16.2426L5.65698 14.8284L3.82858 13H10.0001V11H3.82851L5.65698 9.17157Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0001 11V13H20.1716L18.3432 14.8284L19.7574 16.2426L24.0001 12L19.7574 7.75735L18.3432 9.17157L20.1717 11H14.0001Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2396,7 +2396,7 @@ pub fn CgArrowsMergeAltH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1.5033 6H3.5033V11H7.6749L5.84644 9.17154L7.26066 7.75732L11.5033 12L7.26066 16.2426L5.84644 14.8284L7.67483 13H3.5033V18H1.5033V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.4967 6H22.4967V18H20.4967V13H16.3251L18.1536 14.8285L16.7393 16.2427L12.4967 12L16.7393 7.75739L18.1536 9.17161L16.3252 11H20.4967V6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1.5033 6H3.5033V11H7.6749L5.84644 9.17154L7.26066 7.75732L11.5033 12L7.26066 16.2426L5.84644 14.8284L7.67483 13H3.5033V18H1.5033V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.4967 6H22.4967V18H20.4967V13H16.3251L18.1536 14.8285L16.7393 16.2427L12.4967 12L16.7393 7.75739L18.1536 9.17161L16.3252 11H20.4967V6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2426,7 +2426,7 @@ pub fn CgArrowsMergeAltV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 1.5033V3.5033L13 3.5033V7.6749L14.8285 5.84644L16.2427 7.26066L12 11.5033L7.75739 7.26066L9.17161 5.84644L11 7.67483V3.5033L6 3.5033V1.5033L18 1.5033Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 20.4967V22.4967H6V20.4967H11V16.3251L9.17154 18.1536L7.75732 16.7393L12 12.4967L16.2426 16.7393L14.8284 18.1536L13 16.3252V20.4967H18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 1.5033V3.5033L13 3.5033V7.6749L14.8285 5.84644L16.2427 7.26066L12 11.5033L7.75739 7.26066L9.17161 5.84644L11 7.67483V3.5033L6 3.5033V1.5033L18 1.5033Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 20.4967V22.4967H6V20.4967H11V16.3251L9.17154 18.1536L7.75732 16.7393L12 12.4967L16.2426 16.7393L14.8284 18.1536L13 16.3252V20.4967H18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2456,7 +2456,7 @@ pub fn CgArrowsScrollH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.3052 12L18.1299 9.17526L16.7157 7.76105L13.891 10.5858L13.8873 10.5821L12.4731 11.9963L12.4768 12L12.4731 12.0037L13.8873 13.4179L13.891 13.4142L16.7157 16.239L18.1299 14.8248L15.3052 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1091 10.5858L10.1128 10.5821L11.527 11.9963L11.5233 12L11.527 12.0037L10.1128 13.4179L10.1091 13.4142L7.28433 16.239L5.87012 14.8248L8.69487 12L5.87012 9.17526L7.28433 7.76105L10.1091 10.5858Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.3052 12L18.1299 9.17526L16.7157 7.76105L13.891 10.5858L13.8873 10.5821L12.4731 11.9963L12.4768 12L12.4731 12.0037L13.8873 13.4179L13.891 13.4142L16.7157 16.239L18.1299 14.8248L15.3052 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1091 10.5858L10.1128 10.5821L11.527 11.9963L11.5233 12L11.527 12.0037L10.1128 13.4179L10.1091 13.4142L7.28433 16.239L5.87012 14.8248L8.69487 12L5.87012 9.17526L7.28433 7.76105L10.1091 10.5858Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2486,7 +2486,7 @@ pub fn CgArrowsScrollV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.4142 10.1091L13.4179 10.1128L12.0037 11.527L12 11.5233L11.9963 11.527L10.5821 10.1128L10.5858 10.1091L7.76105 7.28433L9.17526 5.87012L12 8.69486L14.8247 5.87012L16.239 7.28433L13.4142 10.1091Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15.3052L14.8247 18.1299L16.239 16.7157L13.4142 13.891L13.4179 13.8873L12.0037 12.4731L12 12.4767L11.9963 12.4731L10.5821 13.8873L10.5858 13.891L7.76105 16.7157L9.17526 18.1299L12 15.3052Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.4142 10.1091L13.4179 10.1128L12.0037 11.527L12 11.5233L11.9963 11.527L10.5821 10.1128L10.5858 10.1091L7.76105 7.28433L9.17526 5.87012L12 8.69486L14.8247 5.87012L16.239 7.28433L13.4142 10.1091Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15.3052L14.8247 18.1299L16.239 16.7157L13.4142 13.891L13.4179 13.8873L12.0037 12.4731L12 12.4767L11.9963 12.4731L10.5821 13.8873L10.5858 13.891L7.76105 16.7157L9.17526 18.1299L12 15.3052Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2516,7 +2516,7 @@ pub fn CgArrowsShrinkH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 7H3V17H1V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.44769 7.75732L9.86191 9.17154L8.03344 11H15.9664L14.138 9.17154L15.5522 7.75732L19.7948 12L15.5522 16.2426L14.138 14.8284L15.9664 13H8.03354L9.86194 14.8284L8.44773 16.2426L4.20505 12L8.44769 7.75732Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 7H21V17H23V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 7H3V17H1V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.44769 7.75732L9.86191 9.17154L8.03344 11H15.9664L14.138 9.17154L15.5522 7.75732L19.7948 12L15.5522 16.2426L14.138 14.8284L15.9664 13H8.03354L9.86194 14.8284L8.44773 16.2426L4.20505 12L8.44769 7.75732Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 7H21V17H23V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2546,7 +2546,7 @@ pub fn CgArrowsShrinkV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 1V3L7 3V1L17 1Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2427 8.44772L14.8285 9.86194L13 8.03347L13 15.9665L14.8285 14.138L16.2427 15.5522L12 19.7949L7.75742 15.5522L9.17163 14.138L11 15.9664L11 8.03357L9.17163 9.86194L7.75742 8.44772L12 4.20508L16.2427 8.44772Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 23V21H7V23H17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 1V3L7 3V1L17 1Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2427 8.44772L14.8285 9.86194L13 8.03347L13 15.9665L14.8285 14.138L16.2427 15.5522L12 19.7949L7.75742 15.5522L9.17163 14.138L11 15.9664L11 8.03357L9.17163 9.86194L7.75742 8.44772L12 4.20508L16.2427 8.44772Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 23V21H7V23H17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2576,7 +2576,7 @@ pub fn CgArrowsV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75739 5.04077L9.1716 6.45498L11.0001 4.62652V10H13.0001V4.62661L14.8284 6.45498L16.2426 5.04077L12 0.798126L7.75739 5.04077Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2426 18.9593L14.8284 17.545L13.0001 19.3734V14H11.0001V19.3735L9.1716 17.545L7.75739 18.9593L12 23.2019L16.2426 18.9593Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75739 5.04077L9.1716 6.45498L11.0001 4.62652V10H13.0001V4.62661L14.8284 6.45498L16.2426 5.04077L12 0.798126L7.75739 5.04077Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2426 18.9593L14.8284 17.545L13.0001 19.3734V14H11.0001V19.3735L9.1716 17.545L7.75739 18.9593L12 23.2019L16.2426 18.9593Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2636,7 +2636,7 @@ pub fn CgAssign(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6H10V4H4V10H6V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 18H6V14H4V20H10V18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 6H18V10H20V4H14V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 18H18V14H20V20H14V18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6H10V4H4V10H6V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 18H6V14H4V20H10V18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 6H18V10H20V4H14V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 18H18V14H20V20H14V18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2696,7 +2696,7 @@ pub fn CgAtlasian(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.8\" d=\"M8.50705 11.5562C8.19028 11.1038 7.78219 11.1585 7.59556 11.6783L5 18.9075H10.1778C10.6982 16.85 10.2481 14.0427 9.08063 12.3754L8.50705 11.5562Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.8745 7.12641C11.6074 8.93603 11.1992 12.0835 11.9627 14.1565L13.7126 18.9074H18.9644L14.3673 6.42648C14.1764 5.90823 13.7649 5.85485 13.4481 6.30726L12.8745 7.12641Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.8\" d=\"M8.50705 11.5562C8.19028 11.1038 7.78219 11.1585 7.59556 11.6783L5 18.9075H10.1778C10.6982 16.85 10.2481 14.0427 9.08063 12.3754L8.50705 11.5562Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.8745 7.12641C11.6074 8.93603 11.1992 12.0835 11.9627 14.1565L13.7126 18.9074H18.9644L14.3673 6.42648C14.1764 5.90823 13.7649 5.85485 13.4481 6.30726L12.8745 7.12641Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2816,7 +2816,7 @@ pub fn CgBackspace(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.7427 8.46448L19.1569 9.87869L17.0356 12L19.157 14.1214L17.7428 15.5356L15.6214 13.4142L13.5 15.5355L12.0858 14.1213L14.2072 12L12.0859 9.87878L13.5002 8.46457L15.6214 10.5858L17.7427 8.46448Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.58579 19L2.29289 12.7071C1.90237 12.3166 1.90237 11.6834 2.29289 11.2929L8.58579 5H22.5857V19H8.58579ZM9.41421 7L4.41421 12L9.41421 17H20.5857V7H9.41421Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.7427 8.46448L19.1569 9.87869L17.0356 12L19.157 14.1214L17.7428 15.5356L15.6214 13.4142L13.5 15.5355L12.0858 14.1213L14.2072 12L12.0859 9.87878L13.5002 8.46457L15.6214 10.5858L17.7427 8.46448Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.58579 19L2.29289 12.7071C1.90237 12.3166 1.90237 11.6834 2.29289 11.2929L8.58579 5H22.5857V19H8.58579ZM9.41421 7L4.41421 12L9.41421 17H20.5857V7H9.41421Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2846,7 +2846,7 @@ pub fn CgBandAid(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9389 9.76478C11.7055 10.2653 11.1105 10.4819 10.61 10.2485C10.1094 10.0151 9.89288 9.42008 10.1263 8.91954C10.3597 8.419 10.9547 8.20244 11.4552 8.43585C11.9558 8.66925 12.1723 9.26423 11.9389 9.76478Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.9195 13.8737C9.42004 14.1071 10.015 13.8905 10.2484 13.39C10.4818 12.8895 10.2653 12.2945 9.76474 12.0611C9.2642 11.8277 8.66922 12.0442 8.43581 12.5448C8.20241 13.0453 8.41896 13.6403 8.9195 13.8737Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8737 15.0805C13.6403 15.581 13.0453 15.7976 12.5447 15.5642C12.0442 15.3308 11.8276 14.7358 12.061 14.2352C12.2944 13.7347 12.8894 13.5181 13.39 13.7516C13.8905 13.985 14.1071 14.5799 13.8737 15.0805Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.2352 11.9389C14.7357 12.1723 15.3307 11.9558 15.5641 11.4552C15.7975 10.9547 15.581 10.3597 15.0804 10.1263C14.5799 9.89292 13.9849 10.1095 13.7515 10.61C13.5181 11.1106 13.7347 11.7055 14.2352 11.9389Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.0714 1.12432C14.0682 -0.276119 10.4983 1.02321 9.09783 4.02645L4.02641 14.9021C2.62598 17.9054 3.92531 21.4753 6.92855 22.8757C9.93179 24.2761 13.5017 22.9768 14.9021 19.9736L19.9735 9.09787C21.374 6.09463 20.0746 2.52475 17.0714 1.12432ZM13.9347 17.3157L17.3157 10.0653L10.0652 6.6843L6.68427 13.9348L13.9347 17.3157ZM13.0895 19.1283L5.83903 15.7474C4.90541 17.7495 5.77163 20.1295 7.77379 21.0631C9.77595 21.9967 12.1559 21.1305 13.0895 19.1283ZM16.2262 2.93693C18.2283 3.87055 19.0945 6.25047 18.1609 8.25264L10.9104 4.87169C11.8441 2.86953 14.224 2.00331 16.2262 2.93693Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9389 9.76478C11.7055 10.2653 11.1105 10.4819 10.61 10.2485C10.1094 10.0151 9.89288 9.42008 10.1263 8.91954C10.3597 8.419 10.9547 8.20244 11.4552 8.43585C11.9558 8.66925 12.1723 9.26423 11.9389 9.76478Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.9195 13.8737C9.42004 14.1071 10.015 13.8905 10.2484 13.39C10.4818 12.8895 10.2653 12.2945 9.76474 12.0611C9.2642 11.8277 8.66922 12.0442 8.43581 12.5448C8.20241 13.0453 8.41896 13.6403 8.9195 13.8737Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8737 15.0805C13.6403 15.581 13.0453 15.7976 12.5447 15.5642C12.0442 15.3308 11.8276 14.7358 12.061 14.2352C12.2944 13.7347 12.8894 13.5181 13.39 13.7516C13.8905 13.985 14.1071 14.5799 13.8737 15.0805Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.2352 11.9389C14.7357 12.1723 15.3307 11.9558 15.5641 11.4552C15.7975 10.9547 15.581 10.3597 15.0804 10.1263C14.5799 9.89292 13.9849 10.1095 13.7515 10.61C13.5181 11.1106 13.7347 11.7055 14.2352 11.9389Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.0714 1.12432C14.0682 -0.276119 10.4983 1.02321 9.09783 4.02645L4.02641 14.9021C2.62598 17.9054 3.92531 21.4753 6.92855 22.8757C9.93179 24.2761 13.5017 22.9768 14.9021 19.9736L19.9735 9.09787C21.374 6.09463 20.0746 2.52475 17.0714 1.12432ZM13.9347 17.3157L17.3157 10.0653L10.0652 6.6843L6.68427 13.9348L13.9347 17.3157ZM13.0895 19.1283L5.83903 15.7474C4.90541 17.7495 5.77163 20.1295 7.77379 21.0631C9.77595 21.9967 12.1559 21.1305 13.0895 19.1283ZM16.2262 2.93693C18.2283 3.87055 19.0945 6.25047 18.1609 8.25264L10.9104 4.87169C11.8441 2.86953 14.224 2.00331 16.2262 2.93693Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2876,7 +2876,7 @@ pub fn CgBattery(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15C5.44772 15 5 14.5523 5 14V10C5 9.44772 5.44772 9 6 9H12V15H6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 6H5C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H18C19.6569 18 21 16.6569 21 15C21.5523 15 22 14.5523 22 14V10C22 9.44772 21.5523 9 21 9C21 7.34315 19.6569 6 18 6ZM18 8H5C4.44772 8 4 8.44772 4 9V15C4 15.5523 4.44772 16 5 16H18C18.5523 16 19 15.5523 19 15V9C19 8.44772 18.5523 8 18 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15C5.44772 15 5 14.5523 5 14V10C5 9.44772 5.44772 9 6 9H12V15H6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 6H5C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H18C19.6569 18 21 16.6569 21 15C21.5523 15 22 14.5523 22 14V10C22 9.44772 21.5523 9 21 9C21 7.34315 19.6569 6 18 6ZM18 8H5C4.44772 8 4 8.44772 4 9V15C4 15.5523 4.44772 16 5 16H18C18.5523 16 19 15.5523 19 15V9C19 8.44772 18.5523 8 18 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -2936,7 +2936,7 @@ pub fn CgBatteryFull(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15C5.44772 15 5 14.5523 5 14V10C5 9.44772 5.44772 9 6 9H17C17.5523 9 18 9.44772 18 10V14C18 14.5523 17.5523 15 17 15H6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 6H5C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H18C19.6569 18 21 16.6569 21 15C21.5523 15 22 14.5523 22 14V10C22 9.44772 21.5523 9 21 9C21 7.34315 19.6569 6 18 6ZM18 8H5C4.44772 8 4 8.44772 4 9V15C4 15.5523 4.44772 16 5 16H18C18.5523 16 19 15.5523 19 15V9C19 8.44772 18.5523 8 18 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15C5.44772 15 5 14.5523 5 14V10C5 9.44772 5.44772 9 6 9H17C17.5523 9 18 9.44772 18 10V14C18 14.5523 17.5523 15 17 15H6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 6H5C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H18C19.6569 18 21 16.6569 21 15C21.5523 15 22 14.5523 22 14V10C22 9.44772 21.5523 9 21 9C21 7.34315 19.6569 6 18 6ZM18 8H5C4.44772 8 4 8.44772 4 9V15C4 15.5523 4.44772 16 5 16H18C18.5523 16 19 15.5523 19 15V9C19 8.44772 18.5523 8 18 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3056,7 +3056,7 @@ pub fn CgBlock(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.46457 14.1213C8.07404 14.5118 8.07404 15.145 8.46457 15.5355C8.85509 15.926 9.48825 15.926 9.87878 15.5355L15.5356 9.87862C15.9262 9.4881 15.9262 8.85493 15.5356 8.46441C15.1451 8.07388 14.5119 8.07388 14.1214 8.46441L8.46457 14.1213Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.34315 17.6569C9.46734 20.781 14.5327 20.781 17.6569 17.6569C20.781 14.5327 20.781 9.46734 17.6569 6.34315C14.5327 3.21895 9.46734 3.21895 6.34315 6.34315C3.21895 9.46734 3.21895 14.5327 6.34315 17.6569ZM16.2426 16.2426C13.8995 18.5858 10.1005 18.5858 7.75736 16.2426C5.41421 13.8995 5.41421 10.1005 7.75736 7.75736C10.1005 5.41421 13.8995 5.41421 16.2426 7.75736C18.5858 10.1005 18.5858 13.8995 16.2426 16.2426Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.46457 14.1213C8.07404 14.5118 8.07404 15.145 8.46457 15.5355C8.85509 15.926 9.48825 15.926 9.87878 15.5355L15.5356 9.87862C15.9262 9.4881 15.9262 8.85493 15.5356 8.46441C15.1451 8.07388 14.5119 8.07388 14.1214 8.46441L8.46457 14.1213Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.34315 17.6569C9.46734 20.781 14.5327 20.781 17.6569 17.6569C20.781 14.5327 20.781 9.46734 17.6569 6.34315C14.5327 3.21895 9.46734 3.21895 6.34315 6.34315C3.21895 9.46734 3.21895 14.5327 6.34315 17.6569ZM16.2426 16.2426C13.8995 18.5858 10.1005 18.5858 7.75736 16.2426C5.41421 13.8995 5.41421 10.1005 7.75736 7.75736C10.1005 5.41421 13.8995 5.41421 16.2426 7.75736C18.5858 10.1005 18.5858 13.8995 16.2426 16.2426Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3236,7 +3236,7 @@ pub fn CgBorderBottom(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 8H16V15H19V5H5V15H8V8Z\" fill=\"currentColor\" fill-opacity=\"0.3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 17H19V20H5V17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 8H16V15H19V5H5V15H8V8Z\" fill=\"currentColor\" fill-opacity=\"0.3\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 17H19V20H5V17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3266,7 +3266,7 @@ pub fn CgBorderLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 8V16H9L9 19H19L19 5L9 5V8H16Z\" fill=\"currentColor\" fill-opacity=\"0.3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 5L7 19H4L4 5L7 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 8V16H9L9 19H19L19 5L9 5V8H16Z\" fill=\"currentColor\" fill-opacity=\"0.3\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 5L7 19H4L4 5L7 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3296,7 +3296,7 @@ pub fn CgBorderRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 16V8H15V5L5 5L5 19H15L15 16H8Z\" fill=\"currentColor\" fill-opacity=\"0.3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 19L17 5L20 5L20 19H17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 16V8H15V5L5 5L5 19H15L15 16H8Z\" fill=\"currentColor\" fill-opacity=\"0.3\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 19L17 5L20 5L20 19H17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3326,7 +3326,7 @@ pub fn CgBorderStyleDashed(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 11H8V13H4V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 11H14V13H10V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H16V13H20V11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 11H8V13H4V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 11H14V13H10V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H16V13H20V11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3356,7 +3356,7 @@ pub fn CgBorderStyleDotted(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11H1V13H3V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11H5V13H7V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11H11V13H9V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11H13V13H15V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 11H19V13H17V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 11H21V13H23V11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11H1V13H3V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11H5V13H7V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11H11V13H9V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11H13V13H15V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 11H19V13H17V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 11H21V13H23V11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3416,7 +3416,7 @@ pub fn CgBorderTop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 16H16V9L19 9L19 19L5 19L5 9L8 9V16Z\" fill=\"currentColor\" fill-opacity=\"0.3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 7L19 7V4L5 4L5 7Z\" fill=\"#110000\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 16H16V9L19 9L19 19L5 19L5 9L8 9V16Z\" fill=\"currentColor\" fill-opacity=\"0.3\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 7L19 7V4L5 4L5 7Z\" fill=\"#110000\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3446,7 +3446,7 @@ pub fn CgBot(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1254 13H10.1254V15H14.1254V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.12537 13C9.22994 13 10.1254 12.1046 10.1254 11C10.1254 9.89543 9.22994 9 8.12537 9C7.0208 9 6.12537 9.89543 6.12537 11C6.12537 12.1046 7.0208 13 8.12537 13ZM8.12537 11.5C8.40151 11.5 8.62537 11.2761 8.62537 11C8.62537 10.7239 8.40151 10.5 8.12537 10.5C7.84922 10.5 7.62537 10.7239 7.62537 11C7.62537 11.2761 7.84922 11.5 8.12537 11.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18.1254 11C18.1254 12.1046 17.2299 13 16.1254 13C15.0208 13 14.1254 12.1046 14.1254 11C14.1254 9.89543 15.0208 9 16.1254 9C17.2299 9 18.1254 9.89543 18.1254 11ZM16.6254 11C16.6254 11.2761 16.4015 11.5 16.1254 11.5C15.8492 11.5 15.6254 11.2761 15.6254 11C15.6254 10.7239 15.8492 10.5 16.1254 10.5C16.4015 10.5 16.6254 10.7239 16.6254 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.74884 14.6663C3.73056 16.6421 5.76939 18 8.12537 18H16.1254C18.5654 18 20.6652 16.5435 21.6029 14.4525C22.3722 13.9093 22.8746 13.0133 22.8746 12C22.8746 10.9867 22.3722 10.0907 21.6029 9.54753C20.6652 7.45651 18.5654 6 16.1254 6H8.12537C5.76939 6 3.73056 7.3579 2.74884 9.33375C1.78448 9.83263 1.12537 10.8393 1.12537 12C1.12537 13.1607 1.78448 14.1674 2.74884 14.6663ZM8.12537 8H16.1254C17.5088 8 18.7282 8.70234 19.4465 9.76991C19.7227 10.4593 19.8746 11.2119 19.8746 12C19.8746 12.7881 19.7227 13.5407 19.4465 14.2301C18.7282 15.2977 17.5088 16 16.1254 16H8.12537C5.91623 16 4.12537 14.2091 4.12537 12C4.12537 9.79086 5.91623 8 8.12537 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1254 13H10.1254V15H14.1254V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.12537 13C9.22994 13 10.1254 12.1046 10.1254 11C10.1254 9.89543 9.22994 9 8.12537 9C7.0208 9 6.12537 9.89543 6.12537 11C6.12537 12.1046 7.0208 13 8.12537 13ZM8.12537 11.5C8.40151 11.5 8.62537 11.2761 8.62537 11C8.62537 10.7239 8.40151 10.5 8.12537 10.5C7.84922 10.5 7.62537 10.7239 7.62537 11C7.62537 11.2761 7.84922 11.5 8.12537 11.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18.1254 11C18.1254 12.1046 17.2299 13 16.1254 13C15.0208 13 14.1254 12.1046 14.1254 11C14.1254 9.89543 15.0208 9 16.1254 9C17.2299 9 18.1254 9.89543 18.1254 11ZM16.6254 11C16.6254 11.2761 16.4015 11.5 16.1254 11.5C15.8492 11.5 15.6254 11.2761 15.6254 11C15.6254 10.7239 15.8492 10.5 16.1254 10.5C16.4015 10.5 16.6254 10.7239 16.6254 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.74884 14.6663C3.73056 16.6421 5.76939 18 8.12537 18H16.1254C18.5654 18 20.6652 16.5435 21.6029 14.4525C22.3722 13.9093 22.8746 13.0133 22.8746 12C22.8746 10.9867 22.3722 10.0907 21.6029 9.54753C20.6652 7.45651 18.5654 6 16.1254 6H8.12537C5.76939 6 3.73056 7.3579 2.74884 9.33375C1.78448 9.83263 1.12537 10.8393 1.12537 12C1.12537 13.1607 1.78448 14.1674 2.74884 14.6663ZM8.12537 8H16.1254C17.5088 8 18.7282 8.70234 19.4465 9.76991C19.7227 10.4593 19.8746 11.2119 19.8746 12C19.8746 12.7881 19.7227 13.5407 19.4465 14.2301C18.7282 15.2977 17.5088 16 16.1254 16H8.12537C5.91623 16 4.12537 14.2091 4.12537 12C4.12537 9.79086 5.91623 8 8.12537 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3506,7 +3506,7 @@ pub fn CgBox(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C9.44769 12 9 12.4477 9 13C9 13.5523 9.44769 14 10 14H14C14.5522 14 15 13.5523 15 13C15 12.4477 14.5522 12 14 12H10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 2C2.34314 2 1 3.34314 1 5V19C1 20.6569 2.34314 22 4 22H20C21.6569 22 23 20.6569 23 19V5C23 3.34314 21.6569 2 20 2H4ZM20 4H4C3.44769 4 3 4.44769 3 5V8H21V5C21 4.44769 20.5522 4 20 4ZM3 19V10H21V19C21 19.5523 20.5522 20 20 20H4C3.44769 20 3 19.5523 3 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C9.44769 12 9 12.4477 9 13C9 13.5523 9.44769 14 10 14H14C14.5522 14 15 13.5523 15 13C15 12.4477 14.5522 12 14 12H10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 2C2.34314 2 1 3.34314 1 5V19C1 20.6569 2.34314 22 4 22H20C21.6569 22 23 20.6569 23 19V5C23 3.34314 21.6569 2 20 2H4ZM20 4H4C3.44769 4 3 4.44769 3 5V8H21V5C21 4.44769 20.5522 4 20 4ZM3 19V10H21V19C21 19.5523 20.5522 20 20 20H4C3.44769 20 3 19.5523 3 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3536,7 +3536,7 @@ pub fn CgBoy(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 14C9.55228 14 10 13.5523 10 13C10 12.4477 9.55228 12 9 12C8.44771 12 8 12.4477 8 13C8 13.5523 8.44771 14 9 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13C16 13.5523 15.5523 14 15 14C14.4477 14 14 13.5523 14 13C14 12.4477 14.4477 12 15 12C15.5523 12 16 12.4477 16 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 11.1637 19.8717 10.3574 19.6337 9.59973C18.7991 9.82556 17.9212 9.94604 17.0152 9.94604C13.2921 9.94604 10.0442 7.91139 8.32277 4.89334C5.75469 6.22486 4 8.90751 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 14C9.55228 14 10 13.5523 10 13C10 12.4477 9.55228 12 9 12C8.44771 12 8 12.4477 8 13C8 13.5523 8.44771 14 9 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13C16 13.5523 15.5523 14 15 14C14.4477 14 14 13.5523 14 13C14 12.4477 14.4477 12 15 12C15.5523 12 16 12.4477 16 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 11.1637 19.8717 10.3574 19.6337 9.59973C18.7991 9.82556 17.9212 9.94604 17.0152 9.94604C13.2921 9.94604 10.0442 7.91139 8.32277 4.89334C5.75469 6.22486 4 8.90751 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3566,7 +3566,7 @@ pub fn CgBrackets(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7V9H9V15H11V17H7V7H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15H13V17H17V7H13V9H15V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7V9H9V15H11V17H7V7H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15H13V17H17V7H13V9H15V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3596,7 +3596,7 @@ pub fn CgBriefcase(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 11H10V13H14V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5V4C7 2.89545 7.89539 2 9 2H15C16.1046 2 17 2.89545 17 4V5H20C21.6569 5 23 6.34314 23 8V18C23 19.6569 21.6569 21 20 21H4C2.34314 21 1 19.6569 1 18V8C1 6.34314 2.34314 5 4 5H7ZM9 4H15V5H9V4ZM4 7C3.44775 7 3 7.44769 3 8V14H21V8C21 7.44769 20.5522 7 20 7H4ZM3 18V16H21V18C21 18.5523 20.5522 19 20 19H4C3.44775 19 3 18.5523 3 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 11H10V13H14V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5V4C7 2.89545 7.89539 2 9 2H15C16.1046 2 17 2.89545 17 4V5H20C21.6569 5 23 6.34314 23 8V18C23 19.6569 21.6569 21 20 21H4C2.34314 21 1 19.6569 1 18V8C1 6.34314 2.34314 5 4 5H7ZM9 4H15V5H9V4ZM4 7C3.44775 7 3 7.44769 3 8V14H21V8C21 7.44769 20.5522 7 20 7H4ZM3 18V16H21V18C21 18.5523 20.5522 19 20 19H4C3.44775 19 3 18.5523 3 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3626,7 +3626,7 @@ pub fn CgBrowse(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.364 13.1214C15.2876 14.045 15.4831 15.4211 14.9504 16.5362L16.4853 18.0711C16.8758 18.4616 16.8758 19.0948 16.4853 19.4853C16.0948 19.8758 15.4616 19.8758 15.0711 19.4853L13.5361 17.9504C12.421 18.4831 11.045 18.2876 10.1213 17.364C8.94975 16.1924 8.94975 14.2929 10.1213 13.1214C11.2929 11.9498 13.1924 11.9498 14.364 13.1214ZM12.9497 15.9498C13.3403 15.5593 13.3403 14.9261 12.9497 14.5356C12.5592 14.145 11.9261 14.145 11.5355 14.5356C11.145 14.9261 11.145 15.5593 11.5355 15.9498C11.9261 16.3403 12.5592 16.3403 12.9497 15.9498Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 5H16V7H8V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H8V11H16V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 4C4 2.34315 5.34315 1 7 1H17C18.6569 1 20 2.34315 20 4V20C20 21.6569 18.6569 23 17 23H7C5.34315 23 4 21.6569 4 20V4ZM7 3H17C17.5523 3 18 3.44772 18 4V20C18 20.5523 17.5523 21 17 21H7C6.44772 21 6 20.5523 6 20V4C6 3.44772 6.44771 3 7 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.364 13.1214C15.2876 14.045 15.4831 15.4211 14.9504 16.5362L16.4853 18.0711C16.8758 18.4616 16.8758 19.0948 16.4853 19.4853C16.0948 19.8758 15.4616 19.8758 15.0711 19.4853L13.5361 17.9504C12.421 18.4831 11.045 18.2876 10.1213 17.364C8.94975 16.1924 8.94975 14.2929 10.1213 13.1214C11.2929 11.9498 13.1924 11.9498 14.364 13.1214ZM12.9497 15.9498C13.3403 15.5593 13.3403 14.9261 12.9497 14.5356C12.5592 14.145 11.9261 14.145 11.5355 14.5356C11.145 14.9261 11.145 15.5593 11.5355 15.9498C11.9261 16.3403 12.5592 16.3403 12.9497 15.9498Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 5H16V7H8V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H8V11H16V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 4C4 2.34315 5.34315 1 7 1H17C18.6569 1 20 2.34315 20 4V20C20 21.6569 18.6569 23 17 23H7C5.34315 23 4 21.6569 4 20V4ZM7 3H17C17.5523 3 18 3.44772 18 4V20C18 20.5523 17.5523 21 17 21H7C6.44772 21 6 20.5523 6 20V4C6 3.44772 6.44771 3 7 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3656,7 +3656,7 @@ pub fn CgBrowser(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 8C4.55228 8 5 7.55228 5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7C3 7.55228 3.44772 8 4 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C8 7.55228 7.55228 8 7 8C6.44772 8 6 7.55228 6 7C6 6.44772 6.44772 6 7 6C7.55228 6 8 6.44772 8 7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6C9.44771 6 9 6.44772 9 7C9 7.55228 9.44771 8 10 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V9H22V6C22 5.44772 21.5523 5 21 5ZM2 18V11H22V18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 8C4.55228 8 5 7.55228 5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7C3 7.55228 3.44772 8 4 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C8 7.55228 7.55228 8 7 8C6.44772 8 6 7.55228 6 7C6 6.44772 6.44772 6 7 6C7.55228 6 8 6.44772 8 7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6C9.44771 6 9 6.44772 9 7C9 7.55228 9.44771 8 10 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V9H22V6C22 5.44772 21.5523 5 21 5ZM2 18V11H22V18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3716,7 +3716,7 @@ pub fn CgBulb(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 9C4 11.9611 5.60879 14.5465 8 15.9297V15.9999C8 18.2091 9.79086 19.9999 12 19.9999C14.2091 19.9999 16 18.2091 16 15.9999V15.9297C18.3912 14.5465 20 11.9611 20 9C20 4.58172 16.4183 1 12 1C7.58172 1 4 4.58172 4 9ZM16 13.4722C17.2275 12.3736 18 10.777 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 10.777 6.7725 12.3736 8 13.4722L10 13.4713V16C10 17.1045 10.8954 17.9999 12 17.9999C13.1045 17.9999 14 17.1045 14 15.9999V13.4713L16 13.4722Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 21.0064V21C10.5883 21.3403 11.2714 21.5351 12 21.5351C12.7286 21.5351 13.4117 21.3403 14 21V21.0064C14 22.111 13.1046 23.0064 12 23.0064C10.8954 23.0064 10 22.111 10 21.0064Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 9C4 11.9611 5.60879 14.5465 8 15.9297V15.9999C8 18.2091 9.79086 19.9999 12 19.9999C14.2091 19.9999 16 18.2091 16 15.9999V15.9297C18.3912 14.5465 20 11.9611 20 9C20 4.58172 16.4183 1 12 1C7.58172 1 4 4.58172 4 9ZM16 13.4722C17.2275 12.3736 18 10.777 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 10.777 6.7725 12.3736 8 13.4722L10 13.4713V16C10 17.1045 10.8954 17.9999 12 17.9999C13.1045 17.9999 14 17.1045 14 15.9999V13.4713L16 13.4722Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 21.0064V21C10.5883 21.3403 11.2714 21.5351 12 21.5351C12.7286 21.5351 13.4117 21.3403 14 21V21.0064C14 22.111 13.1046 23.0064 12 23.0064C10.8954 23.0064 10 22.111 10 21.0064Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3746,7 +3746,7 @@ pub fn CgCPlusPlus(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.207 16.278C11.1241 17.343 9.63879 18 8 18C4.68629 18 2 15.3137 2 12C2 8.68629 4.68629 6 8 6C9.67492 6 11.1896 6.6863 12.278 7.79303L13.6923 6.37878C12.2418 4.91014 10.2272 4 8 4C3.58172 4 0 7.58172 0 12C0 16.4183 3.58172 20 8 20C10.1911 20 12.1764 19.1192 13.6212 17.6923L12.207 16.278Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H13V11H11V13H13V15H15V13H17V11H15V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 9H22V11H24V13H22V15H20V13H18V11H20V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.207 16.278C11.1241 17.343 9.63879 18 8 18C4.68629 18 2 15.3137 2 12C2 8.68629 4.68629 6 8 6C9.67492 6 11.1896 6.6863 12.278 7.79303L13.6923 6.37878C12.2418 4.91014 10.2272 4 8 4C3.58172 4 0 7.58172 0 12C0 16.4183 3.58172 20 8 20C10.1911 20 12.1764 19.1192 13.6212 17.6923L12.207 16.278Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H13V11H11V13H13V15H15V13H17V11H15V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 9H22V11H24V13H22V15H20V13H18V11H20V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3776,7 +3776,7 @@ pub fn CgCalculator(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 5H7V7H17V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 9H9V11H7V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13H7V15H9V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 17H9V19H7V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 9H11V11H13V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 13H13V15H11V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 17H11V19H13V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H17V11H15V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 13H15V19H17V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C3 1.89543 3.89543 1 5 1H19C20.1046 1 21 1.89543 21 3V21C21 22.1046 20.1046 23 19 23H5C3.89543 23 3 22.1046 3 21V3ZM5 3H19V21H5V3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 5H7V7H17V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 9H9V11H7V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13H7V15H9V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 17H9V19H7V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 9H11V11H13V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 13H13V15H11V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 17H11V19H13V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H17V11H15V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 13H15V19H17V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C3 1.89543 3.89543 1 5 1H19C20.1046 1 21 1.89543 21 3V21C21 22.1046 20.1046 23 19 23H5C3.89543 23 3 22.1046 3 21V3ZM5 3H19V21H5V3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3806,7 +3806,7 @@ pub fn CgCalendar(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9C7.44772 9 7 9.44771 7 10C7 10.5523 7.44772 11 8 11H16C16.5523 11 17 10.5523 17 10C17 9.44771 16.5523 9 16 9H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9C7.44772 9 7 9.44771 7 10C7 10.5523 7.44772 11 8 11H16C16.5523 11 17 10.5523 17 10C17 9.44771 16.5523 9 16 9H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3836,7 +3836,7 @@ pub fn CgCalendarDates(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12C9 12.5523 8.55228 13 8 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 17C7.44772 17 7 16.5523 7 16C7 15.4477 7.44772 15 8 15C8.55228 15 9 15.4477 9 16C9 16.5523 8.55228 17 8 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 17C15.4477 17 15 16.5523 15 16C15 15.4477 15.4477 15 16 15C16.5523 15 17 15.4477 17 16C17 16.5523 16.5523 17 16 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM18 5H6C5.44772 5 5 5.44772 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12C9 12.5523 8.55228 13 8 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 17C7.44772 17 7 16.5523 7 16C7 15.4477 7.44772 15 8 15C8.55228 15 9 15.4477 9 16C9 16.5523 8.55228 17 8 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 17C15.4477 17 15 16.5523 15 16C15 15.4477 15.4477 15 16 15C16.5523 15 17 15.4477 17 16C17 16.5523 16.5523 17 16 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM18 5H6C5.44772 5 5 5.44772 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3866,7 +3866,7 @@ pub fn CgCalendarDue(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 8C7 7.44772 7.44772 7 8 7H16C16.5523 7 17 7.44772 17 8C17 8.55228 16.5523 9 16 9H8C7.44772 9 7 8.55228 7 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C13.1046 16 14 15.1046 14 14C14 12.8954 13.1046 12 12 12C10.8954 12 10 12.8954 10 14C10 15.1046 10.8954 16 12 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM18 5H6C5.44772 5 5 5.44772 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 8C7 7.44772 7.44772 7 8 7H16C16.5523 7 17 7.44772 17 8C17 8.55228 16.5523 9 16 9H8C7.44772 9 7 8.55228 7 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C13.1046 16 14 15.1046 14 14C14 12.8954 13.1046 12 12 12C10.8954 12 10 12.8954 10 14C10 15.1046 10.8954 16 12 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM18 5H6C5.44772 5 5 5.44772 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3896,7 +3896,7 @@ pub fn CgCalendarNext(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.7249 16.5461L16.2249 13.9481L11.7249 11.35V12.9481H7.7749V14.9481H11.7249V16.5461Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM18 5H6C5.44772 5 5 5.44772 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.7249 16.5461L16.2249 13.9481L11.7249 11.35V12.9481H7.7749V14.9481H11.7249V16.5461Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM18 5H6C5.44772 5 5 5.44772 5 6V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3926,7 +3926,7 @@ pub fn CgCalendarToday(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 17C16.1046 17 17 16.1046 17 15C17 13.8954 16.1046 13 15 13C13.8954 13 13 13.8954 13 15C13 16.1046 13.8954 17 15 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 17C16.1046 17 17 16.1046 17 15C17 13.8954 16.1046 13 15 13C13.8954 13 13 13.8954 13 15C13 16.1046 13.8954 17 15 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3956,7 +3956,7 @@ pub fn CgCalendarTwo(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9H16C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -3986,7 +3986,7 @@ pub fn CgCalibrate(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0503 5C14.51 5 16.7393 5.98676 18.3638 7.58602L14.1208 11.8291C13.5824 11.3154 12.8531 11 12.0503 11C11.1963 11 10.4256 11.3568 9.87927 11.9295L5.63623 7.68651C7.26871 6.0282 9.53941 5 12.0503 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0503 19C13.7071 19 15.0503 17.6569 15.0503 16C15.0503 14.3431 13.7071 13 12.0503 13C10.3934 13 9.05029 14.3431 9.05029 16C9.05029 17.6569 10.3934 19 12.0503 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0503 5C14.51 5 16.7393 5.98676 18.3638 7.58602L14.1208 11.8291C13.5824 11.3154 12.8531 11 12.0503 11C11.1963 11 10.4256 11.3568 9.87927 11.9295L5.63623 7.68651C7.26871 6.0282 9.53941 5 12.0503 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0503 19C13.7071 19 15.0503 17.6569 15.0503 16C15.0503 14.3431 13.7071 13 12.0503 13C10.3934 13 9.05029 14.3431 9.05029 16C9.05029 17.6569 10.3934 19 12.0503 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4046,7 +4046,7 @@ pub fn CgCap(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 18V20H16V18H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.988 3.2203C13.9959 3.14796 14 3.07446 14 3C14 1.89543 13.1046 1 12 1C10.8954 1 10 1.89543 10 3C10 3.07446 10.0041 3.14796 10.012 3.2203C5.99799 4.12533 3 7.71255 3 12C3 12.3883 3.02459 12.7709 3.0723 13.1462C1.86949 13.5369 1 14.6669 1 16V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V16C23 14.6669 22.1305 13.5369 20.9277 13.1462C20.9754 12.7709 21 12.3883 21 12C21 7.71255 18.002 4.12533 13.988 3.2203ZM12 5C8.13401 5 5 8.13401 5 12C5 12.3402 5.02412 12.674 5.07063 13H18.9294C18.9759 12.674 19 12.3402 19 12C19 8.13401 15.866 5 12 5ZM3 16C3 15.4477 3.44772 15 4 15H20C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 18V20H16V18H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.988 3.2203C13.9959 3.14796 14 3.07446 14 3C14 1.89543 13.1046 1 12 1C10.8954 1 10 1.89543 10 3C10 3.07446 10.0041 3.14796 10.012 3.2203C5.99799 4.12533 3 7.71255 3 12C3 12.3883 3.02459 12.7709 3.0723 13.1462C1.86949 13.5369 1 14.6669 1 16V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V16C23 14.6669 22.1305 13.5369 20.9277 13.1462C20.9754 12.7709 21 12.3883 21 12C21 7.71255 18.002 4.12533 13.988 3.2203ZM12 5C8.13401 5 5 8.13401 5 12C5 12.3402 5.02412 12.674 5.07063 13H18.9294C18.9759 12.674 19 12.3402 19 12C19 8.13401 15.866 5 12 5ZM3 16C3 15.4477 3.44772 15 4 15H20C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4076,7 +4076,7 @@ pub fn CgCaptions(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 8V10H8V14H11V16H6V8H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8V10H15V14H18V16H13V8H18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 5C2 4.44772 2.44772 4 3 4H21C21.5523 4 22 4.44772 22 5V19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19V5ZM4 18V6H20V18H4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 8V10H8V14H11V16H6V8H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8V10H15V14H18V16H13V8H18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 5C2 4.44772 2.44772 4 3 4H21C21.5523 4 22 4.44772 22 5V19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19V5ZM4 18V6H20V18H4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4106,7 +4106,7 @@ pub fn CgCardClubs(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 13C11 14.1046 10.1046 15 9 15C7.89543 15 7 14.1046 7 13C7 11.8954 7.89543 11 9 11C10.1046 11 11 11.8954 11 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15C16.1046 15 17 14.1046 17 13C17 11.8954 16.1046 11 15 11C13.8954 11 13 11.8954 13 13C13 14.1046 13.8954 15 15 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4C3 2.34315 4.34315 1 6 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4ZM6 3H18C18.5523 3 19 3.44772 19 4V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 13C11 14.1046 10.1046 15 9 15C7.89543 15 7 14.1046 7 13C7 11.8954 7.89543 11 9 11C10.1046 11 11 11.8954 11 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15C16.1046 15 17 14.1046 17 13C17 11.8954 16.1046 11 15 11C13.8954 11 13 11.8954 13 13C13 14.1046 13.8954 15 15 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4C3 2.34315 4.34315 1 6 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4ZM6 3H18C18.5523 3 19 3.44772 19 4V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4136,7 +4136,7 @@ pub fn CgCardDiamonds(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 7.75736L7.75736 12L12 16.2426L16.2426 12L12 7.75736Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4C3 2.34315 4.34315 1 6 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4ZM6 3H18C18.5523 3 19 3.44772 19 4V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 7.75736L7.75736 12L12 16.2426L16.2426 12L12 7.75736Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4C3 2.34315 4.34315 1 6 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4ZM6 3H18C18.5523 3 19 3.44772 19 4V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4166,7 +4166,7 @@ pub fn CgCardHearts(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.14648 12.2929C8.36544 11.5118 8.36544 10.2455 9.14648 9.46444C9.92753 8.68339 11.1939 8.68339 11.9749 9.46444L12 9.48955L12.0251 9.46449C12.8061 8.68345 14.0725 8.68345 14.8535 9.46449C15.6346 10.2455 15.6346 11.5119 14.8535 12.2929L12.0251 15.1213L12 15.0962L11.9749 15.1213L9.14648 12.2929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4C3 2.34315 4.34315 1 6 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4ZM6 3H18C18.5523 3 19 3.44772 19 4V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.14648 12.2929C8.36544 11.5118 8.36544 10.2455 9.14648 9.46444C9.92753 8.68339 11.1939 8.68339 11.9749 9.46444L12 9.48955L12.0251 9.46449C12.8061 8.68345 14.0725 8.68345 14.8535 9.46449C15.6346 10.2455 15.6346 11.5119 14.8535 12.2929L12.0251 15.1213L12 15.0962L11.9749 15.1213L9.14648 12.2929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4C3 2.34315 4.34315 1 6 1H18C19.6569 1 21 2.34315 21 4V20C21 21.6569 19.6569 23 18 23H6C4.34315 23 3 21.6569 3 20V4ZM6 3H18C18.5523 3 19 3.44772 19 4V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20V4C5 3.44772 5.44772 3 6 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4196,7 +4196,7 @@ pub fn CgCardSpades(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.14648 11.7071C8.36544 12.4882 8.36544 13.7545 9.14648 14.5356C9.92753 15.3166 11.1939 15.3166 11.9749 14.5356L12 14.5104L12.0251 14.5355C12.8061 15.3166 14.0725 15.3166 14.8535 14.5355C15.6346 13.7545 15.6346 12.4881 14.8535 11.7071L12.0251 8.87865L12 8.90377L11.9749 8.87871L9.14648 11.7071Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V4C21 2.34315 19.6569 1 18 1H6C4.34315 1 3 2.34315 3 4V20ZM6 21H18C18.5523 21 19 20.5523 19 20V4C19 3.44772 18.5523 3 18 3H6C5.44772 3 5 3.44772 5 4V20C5 20.5523 5.44772 21 6 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.14648 11.7071C8.36544 12.4882 8.36544 13.7545 9.14648 14.5356C9.92753 15.3166 11.1939 15.3166 11.9749 14.5356L12 14.5104L12.0251 14.5355C12.8061 15.3166 14.0725 15.3166 14.8535 14.5355C15.6346 13.7545 15.6346 12.4881 14.8535 11.7071L12.0251 8.87865L12 8.90377L11.9749 8.87871L9.14648 11.7071Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V4C21 2.34315 19.6569 1 18 1H6C4.34315 1 3 2.34315 3 4V20ZM6 21H18C18.5523 21 19 20.5523 19 20V4C19 3.44772 18.5523 3 18 3H6C5.44772 3 5 3.44772 5 4V20C5 20.5523 5.44772 21 6 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4226,7 +4226,7 @@ pub fn CgCarousel(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V10C1 11.6569 2.34315 13 4 13H20C21.6569 13 23 11.6569 23 10V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V10C3 10.5523 3.44772 11 4 11H20C20.5523 11 21 10.5523 21 10V6C21 5.44771 20.5523 5 20 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 20C7 19.4477 7.44772 19 8 19H16C16.5523 19 17 19.4477 17 20C17 20.5523 16.5523 21 16 21H8C7.44772 21 7 20.5523 7 20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17H19C19.5523 17 20 16.5523 20 16C20 15.4477 19.5523 15 19 15H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V10C1 11.6569 2.34315 13 4 13H20C21.6569 13 23 11.6569 23 10V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V10C3 10.5523 3.44772 11 4 11H20C20.5523 11 21 10.5523 21 10V6C21 5.44771 20.5523 5 20 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 20C7 19.4477 7.44772 19 8 19H16C16.5523 19 17 19.4477 17 20C17 20.5523 16.5523 21 16 21H8C7.44772 21 7 20.5523 7 20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15C4.44772 15 4 15.4477 4 16C4 16.5523 4.44772 17 5 17H19C19.5523 17 20 16.5523 20 16C20 15.4477 19.5523 15 19 15H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4256,7 +4256,7 @@ pub fn CgCast(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 6H4V8H2V6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H15V18H20V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 13C5.86599 13 9 16.134 9 20H7C7 17.2386 4.76142 15 2 15V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 17C3.65685 17 5 18.3431 5 20H2V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 9C8.07513 9 13 13.9249 13 20H11C11 15.0294 6.97056 11 2 11V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 6H4V8H2V6C2 4.89543 2.89543 4 4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H15V18H20V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 13C5.86599 13 9 16.134 9 20H7C7 17.2386 4.76142 15 2 15V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 17C3.65685 17 5 18.3431 5 20H2V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 9C8.07513 9 13 13.9249 13 20H11C11 15.0294 6.97056 11 2 11V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4316,7 +4316,7 @@ pub fn CgChart(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.775 8C22.9242 8.65461 23 9.32542 23 10H14V1C14.6746 1 15.3454 1.07584 16 1.22504C16.4923 1.33724 16.9754 1.49094 17.4442 1.68508C18.5361 2.13738 19.5282 2.80031 20.364 3.63604C21.1997 4.47177 21.8626 5.46392 22.3149 6.55585C22.5091 7.02455 22.6628 7.5077 22.775 8ZM20.7082 8C20.6397 7.77018 20.5593 7.54361 20.4672 7.32122C20.1154 6.47194 19.5998 5.70026 18.9497 5.05025C18.2997 4.40024 17.5281 3.88463 16.6788 3.53284C16.4564 3.44073 16.2298 3.36031 16 3.2918V8H20.7082Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 14C1 9.02944 5.02944 5 10 5C10.6746 5 11.3454 5.07584 12 5.22504V12H18.775C18.9242 12.6546 19 13.3254 19 14C19 18.9706 14.9706 23 10 23C5.02944 23 1 18.9706 1 14ZM16.8035 14H10V7.19648C6.24252 7.19648 3.19648 10.2425 3.19648 14C3.19648 17.7575 6.24252 20.8035 10 20.8035C13.7575 20.8035 16.8035 17.7575 16.8035 14Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22.775 8C22.9242 8.65461 23 9.32542 23 10H14V1C14.6746 1 15.3454 1.07584 16 1.22504C16.4923 1.33724 16.9754 1.49094 17.4442 1.68508C18.5361 2.13738 19.5282 2.80031 20.364 3.63604C21.1997 4.47177 21.8626 5.46392 22.3149 6.55585C22.5091 7.02455 22.6628 7.5077 22.775 8ZM20.7082 8C20.6397 7.77018 20.5593 7.54361 20.4672 7.32122C20.1154 6.47194 19.5998 5.70026 18.9497 5.05025C18.2997 4.40024 17.5281 3.88463 16.6788 3.53284C16.4564 3.44073 16.2298 3.36031 16 3.2918V8H20.7082Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 14C1 9.02944 5.02944 5 10 5C10.6746 5 11.3454 5.07584 12 5.22504V12H18.775C18.9242 12.6546 19 13.3254 19 14C19 18.9706 14.9706 23 10 23C5.02944 23 1 18.9706 1 14ZM16.8035 14H10V7.19648C6.24252 7.19648 3.19648 10.2425 3.19648 14C3.19648 17.7575 6.24252 20.8035 10 20.8035C13.7575 20.8035 16.8035 17.7575 16.8035 14Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4376,7 +4376,7 @@ pub fn CgCheckO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.2426 16.3137L6 12.071L7.41421 10.6568L10.2426 13.4853L15.8995 7.8284L17.3137 9.24262L10.2426 16.3137Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.2426 16.3137L6 12.071L7.41421 10.6568L10.2426 13.4853L15.8995 7.8284L17.3137 9.24262L10.2426 16.3137Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4406,7 +4406,7 @@ pub fn CgCheckR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.2426 16.3137L6 12.071L7.41421 10.6568L10.2426 13.4853L15.8995 7.8284L17.3137 9.24262L10.2426 16.3137Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.2426 16.3137L6 12.071L7.41421 10.6568L10.2426 13.4853L15.8995 7.8284L17.3137 9.24262L10.2426 16.3137Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4436,7 +4436,7 @@ pub fn CgChevronDoubleDown(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75735 5.63605L6.34314 7.05026L12 12.7071L17.6569 7.05029L16.2427 5.63608L12 9.87872L7.75735 5.63605Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.34314 12.7071L7.75735 11.2929L12 15.5356L16.2427 11.2929L17.6569 12.7071L12 18.364L6.34314 12.7071Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75735 5.63605L6.34314 7.05026L12 12.7071L17.6569 7.05029L16.2427 5.63608L12 9.87872L7.75735 5.63605Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.34314 12.7071L7.75735 11.2929L12 15.5356L16.2427 11.2929L17.6569 12.7071L12 18.364L6.34314 12.7071Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4466,7 +4466,7 @@ pub fn CgChevronDoubleDownO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 8.46448L9.17154 7.05026L12 9.87869L14.8284 7.05029L16.2426 8.46451L12 12.7071L7.75732 8.46448Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.2929L7.75732 12.7071L11.9999 16.9498L16.2426 12.7071L14.8284 11.2929L12 14.1213L9.17154 11.2929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 8.46448L9.17154 7.05026L12 9.87869L14.8284 7.05029L16.2426 8.46451L12 12.7071L7.75732 8.46448Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.2929L7.75732 12.7071L11.9999 16.9498L16.2426 12.7071L14.8284 11.2929L12 14.1213L9.17154 11.2929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4496,7 +4496,7 @@ pub fn CgChevronDoubleDownR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 8.46448L9.17154 7.05026L12 9.87869L14.8284 7.05029L16.2426 8.46451L12 12.7071L7.75732 8.46448Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.2929L7.75732 12.7071L11.9999 16.9498L16.2426 12.7071L14.8284 11.2929L12 14.1213L9.17154 11.2929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 8.46448L9.17154 7.05026L12 9.87869L14.8284 7.05029L16.2426 8.46451L12 12.7071L7.75732 8.46448Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.2929L7.75732 12.7071L11.9999 16.9498L16.2426 12.7071L14.8284 11.2929L12 14.1213L9.17154 11.2929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4526,7 +4526,7 @@ pub fn CgChevronDoubleLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.3639 7.75735L16.9497 6.34314L11.2929 12L16.9497 17.6568L18.3639 16.2426L14.1213 12L18.3639 7.75735Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.2929 6.34314L12.7071 7.75735L8.46447 12L12.7071 16.2426L11.2929 17.6568L5.63605 12L11.2929 6.34314Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.3639 7.75735L16.9497 6.34314L11.2929 12L16.9497 17.6568L18.3639 16.2426L14.1213 12L18.3639 7.75735Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.2929 6.34314L12.7071 7.75735L8.46447 12L12.7071 16.2426L11.2929 17.6568L5.63605 12L11.2929 6.34314Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4556,7 +4556,7 @@ pub fn CgChevronDoubleLeftO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.7071 9.1716L11.2929 7.75739L7.05024 12L11.2929 16.2426L12.7071 14.8284L9.87869 12L12.7071 9.1716Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5355 7.75739L16.9497 9.1716L14.1213 12L16.9497 14.8284L15.5355 16.2426L11.2929 12L15.5355 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.7071 9.1716L11.2929 7.75739L7.05024 12L11.2929 16.2426L12.7071 14.8284L9.87869 12L12.7071 9.1716Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5355 7.75739L16.9497 9.1716L14.1213 12L16.9497 14.8284L15.5355 16.2426L11.2929 12L15.5355 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4586,7 +4586,7 @@ pub fn CgChevronDoubleLeftR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.7071 9.1716L11.2929 7.75739L7.05024 12L11.2929 16.2426L12.7071 14.8284L9.87869 12L12.7071 9.1716Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5355 7.75739L16.9497 9.1716L14.1213 12L16.9497 14.8284L15.5355 16.2426L11.2929 12L15.5355 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.7071 9.1716L11.2929 7.75739L7.05024 12L11.2929 16.2426L12.7071 14.8284L9.87869 12L12.7071 9.1716Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5355 7.75739L16.9497 9.1716L14.1213 12L16.9497 14.8284L15.5355 16.2426L11.2929 12L15.5355 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4616,7 +4616,7 @@ pub fn CgChevronDoubleRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4646,7 +4646,7 @@ pub fn CgChevronDoubleRightO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.46448 7.75739L7.05026 9.1716L9.87869 12L7.05029 14.8284L8.46451 16.2426L12.7071 12L8.46448 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.2929 9.1716L12.7071 7.75739L16.9498 12L12.7071 16.2426L11.2929 14.8284L14.1213 12L11.2929 9.1716Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.46448 7.75739L7.05026 9.1716L9.87869 12L7.05029 14.8284L8.46451 16.2426L12.7071 12L8.46448 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.2929 9.1716L12.7071 7.75739L16.9498 12L12.7071 16.2426L11.2929 14.8284L14.1213 12L11.2929 9.1716Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4676,7 +4676,7 @@ pub fn CgChevronDoubleRightR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.46448 7.75739L7.05026 9.1716L9.87869 12L7.05029 14.8284L8.46451 16.2426L12.7071 12L8.46448 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.2929 9.1716L12.7071 7.75739L16.9498 12L12.7071 16.2426L11.2929 14.8284L14.1213 12L11.2929 9.1716Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.46448 7.75739L7.05026 9.1716L9.87869 12L7.05029 14.8284L8.46451 16.2426L12.7071 12L8.46448 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.2929 9.1716L12.7071 7.75739L16.9498 12L12.7071 16.2426L11.2929 14.8284L14.1213 12L11.2929 9.1716Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4706,7 +4706,7 @@ pub fn CgChevronDoubleUp(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.6569 11.2929L16.2427 12.7071L12 8.46444L7.75735 12.7071L6.34314 11.2929L12 5.63605L17.6569 11.2929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.6569 16.9497L16.2427 18.3639L12 14.1213L7.75735 18.364L6.34314 16.9498L12 11.2929L17.6569 16.9497Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.6569 11.2929L16.2427 12.7071L12 8.46444L7.75735 12.7071L6.34314 11.2929L12 5.63605L17.6569 11.2929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.6569 16.9497L16.2427 18.3639L12 14.1213L7.75735 18.364L6.34314 16.9498L12 11.2929L17.6569 16.9497Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4736,7 +4736,7 @@ pub fn CgChevronDoubleUpO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12.7071L16.2426 11.2929L12 7.05027L7.75739 11.2929L9.1716 12.7071L12 9.87869L14.8284 12.7071Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 16.9497L16.2426 15.5355L12 11.2929L7.75739 15.5355L9.1716 16.9497L12 14.1213L14.8284 16.9497Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12.7071L16.2426 11.2929L12 7.05027L7.75739 11.2929L9.1716 12.7071L12 9.87869L14.8284 12.7071Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 16.9497L16.2426 15.5355L12 11.2929L7.75739 15.5355L9.1716 16.9497L12 14.1213L14.8284 16.9497Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4766,7 +4766,7 @@ pub fn CgChevronDoubleUpR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12.4813L16.2426 11.067L12 6.82444L7.75732 11.0671L9.17154 12.4813L12 9.65286L14.8284 12.4813Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 16.7239L16.2426 15.3097L12 11.0671L7.75732 15.3097L9.17154 16.7239L12 13.8955L14.8284 16.7239Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 4.77411C23 2.56497 21.2091 0.774109 19 0.774109H5C2.79086 0.774109 1 2.56497 1 4.77411V18.7741C1 20.9832 2.79086 22.7741 5 22.7741H19C21.2091 22.7741 23 20.9832 23 18.7741V4.77411ZM19 2.77411H5C3.89543 2.77411 3 3.66954 3 4.77411V18.7741C3 19.8787 3.89543 20.7741 5 20.7741H19C20.1046 20.7741 21 19.8787 21 18.7741V4.77411C21 3.66954 20.1046 2.77411 19 2.77411Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12.4813L16.2426 11.067L12 6.82444L7.75732 11.0671L9.17154 12.4813L12 9.65286L14.8284 12.4813Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 16.7239L16.2426 15.3097L12 11.0671L7.75732 15.3097L9.17154 16.7239L12 13.8955L14.8284 16.7239Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 4.77411C23 2.56497 21.2091 0.774109 19 0.774109H5C2.79086 0.774109 1 2.56497 1 4.77411V18.7741C1 20.9832 2.79086 22.7741 5 22.7741H19C21.2091 22.7741 23 20.9832 23 18.7741V4.77411ZM19 2.77411H5C3.89543 2.77411 3 3.66954 3 4.77411V18.7741C3 19.8787 3.89543 20.7741 5 20.7741H19C20.1046 20.7741 21 19.8787 21 18.7741V4.77411C21 3.66954 20.1046 2.77411 19 2.77411Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4826,7 +4826,7 @@ pub fn CgChevronDownO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75745 10.5858L9.17166 9.17154L12.0001 12L14.8285 9.17157L16.2427 10.5858L12.0001 14.8284L7.75745 10.5858Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75745 10.5858L9.17166 9.17154L12.0001 12L14.8285 9.17157L16.2427 10.5858L12.0001 14.8284L7.75745 10.5858Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4856,7 +4856,7 @@ pub fn CgChevronDownR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75739 10.5858L9.1716 9.17154L12 12L14.8284 9.17157L16.2426 10.5858L12 14.8284L7.75739 10.5858Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75739 10.5858L9.1716 9.17154L12 12L14.8284 9.17157L16.2426 10.5858L12 14.8284L7.75739 10.5858Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4916,7 +4916,7 @@ pub fn CgChevronLeftO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 7.75739L13.4142 9.1716L10.5858 12L13.4142 14.8285L12 16.2427L7.75736 12L12 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 7.75739L13.4142 9.1716L10.5858 12L13.4142 14.8285L12 16.2427L7.75736 12L12 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -4946,7 +4946,7 @@ pub fn CgChevronLeftR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7.75739L14.4142 9.1716L11.5858 12L14.4142 14.8284L13 16.2426L8.75736 12L13 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 1C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5C1 2.79086 2.79086 1 5 1H19ZM21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19L3 5C3 3.89543 3.89543 3 5 3L19 3C20.1046 3 21 3.89543 21 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7.75739L14.4142 9.1716L11.5858 12L14.4142 14.8284L13 16.2426L8.75736 12L13 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 1C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5C1 2.79086 2.79086 1 5 1H19ZM21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19L3 5C3 3.89543 3.89543 3 5 3L19 3C20.1046 3 21 3.89543 21 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5006,7 +5006,7 @@ pub fn CgChevronRightO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0858 7.75739L15.3284 12L11.0858 16.2427L9.67157 14.8285L12.5 12L9.67157 9.1716L11.0858 7.75739Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0858 7.75739L15.3284 12L11.0858 16.2427L9.67157 14.8285L12.5 12L9.67157 9.1716L11.0858 7.75739Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5036,7 +5036,7 @@ pub fn CgChevronRightR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.4853 12.0451L12.2426 7.80249L10.8284 9.2167L13.6568 12.0451L10.8284 14.8736L12.2426 16.2878L16.4853 12.0451Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.4853 12.0451L12.2426 7.80249L10.8284 9.2167L13.6568 12.0451L10.8284 14.8736L12.2426 16.2878L16.4853 12.0451Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5096,7 +5096,7 @@ pub fn CgChevronUpO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 14.8284L16.2427 13.4142L12.0001 9.17161L7.75745 13.4142L9.17166 14.8285L12.0001 12L14.8285 14.8284Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 14.8284L16.2427 13.4142L12.0001 9.17161L7.75745 13.4142L9.17166 14.8285L12.0001 12L14.8285 14.8284Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5126,7 +5126,7 @@ pub fn CgChevronUpR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 14.8284L16.2427 13.4142L12.0001 9.17161L7.75745 13.4142L9.17166 14.8285L12.0001 12L14.8285 14.8284Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 14.8284L16.2427 13.4142L12.0001 9.17161L7.75745 13.4142L9.17166 14.8285L12.0001 12L14.8285 14.8284Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5C2.79086 1 1 2.79086 1 5V19ZM5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5216,7 +5216,7 @@ pub fn CgClipboard(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H15.9595C16.5118 13 16.9595 12.5523 16.9595 12C16.9595 11.4477 16.5118 11 15.9595 11H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.04053 15.0665C7.48824 15.0665 7.04053 15.5142 7.04053 16.0665C7.04053 16.6188 7.48824 17.0665 8.04053 17.0665H16C16.5523 17.0665 17 16.6188 17 16.0665C17 15.5142 16.5523 15.0665 16 15.0665H8.04053Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM7 5H5L5 19H19V5H17V6C17 7.65685 15.6569 9 14 9H10C8.34315 9 7 7.65685 7 6V5ZM9 5V6C9 6.55228 9.44772 7 10 7H14C14.5523 7 15 6.55228 15 6V5H9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H15.9595C16.5118 13 16.9595 12.5523 16.9595 12C16.9595 11.4477 16.5118 11 15.9595 11H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.04053 15.0665C7.48824 15.0665 7.04053 15.5142 7.04053 16.0665C7.04053 16.6188 7.48824 17.0665 8.04053 17.0665H16C16.5523 17.0665 17 16.6188 17 16.0665C17 15.5142 16.5523 15.0665 16 15.0665H8.04053Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM7 5H5L5 19H19V5H17V6C17 7.65685 15.6569 9 14 9H10C8.34315 9 7 7.65685 7 6V5ZM9 5V6C9 6.55228 9.44772 7 10 7H14C14.5523 7 15 6.55228 15 6V5H9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5276,7 +5276,7 @@ pub fn CgCloseO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5306,7 +5306,7 @@ pub fn CgCloseR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3956 7.75734C16.7862 8.14786 16.7862 8.78103 16.3956 9.17155L13.4142 12.153L16.0896 14.8284C16.4802 15.2189 16.4802 15.8521 16.0896 16.2426C15.6991 16.6331 15.0659 16.6331 14.6754 16.2426L12 13.5672L9.32458 16.2426C8.93405 16.6331 8.30089 16.6331 7.91036 16.2426C7.51984 15.8521 7.51984 15.2189 7.91036 14.8284L10.5858 12.153L7.60436 9.17155C7.21383 8.78103 7.21383 8.14786 7.60436 7.75734C7.99488 7.36681 8.62805 7.36681 9.01857 7.75734L12 10.7388L14.9814 7.75734C15.372 7.36681 16.0051 7.36681 16.3956 7.75734Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3956 7.75734C16.7862 8.14786 16.7862 8.78103 16.3956 9.17155L13.4142 12.153L16.0896 14.8284C16.4802 15.2189 16.4802 15.8521 16.0896 16.2426C15.6991 16.6331 15.0659 16.6331 14.6754 16.2426L12 13.5672L9.32458 16.2426C8.93405 16.6331 8.30089 16.6331 7.91036 16.2426C7.51984 15.8521 7.51984 15.2189 7.91036 14.8284L10.5858 12.153L7.60436 9.17155C7.21383 8.78103 7.21383 8.14786 7.60436 7.75734C7.99488 7.36681 8.62805 7.36681 9.01857 7.75734L12 10.7388L14.9814 7.75734C15.372 7.36681 16.0051 7.36681 16.3956 7.75734Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5366,7 +5366,7 @@ pub fn CgCode(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.95263 16.9123L8.59323 18.3608L2.03082 12.2016L8.18994 5.63922L9.64826 7.00791L4.85783 12.112L9.95212 16.8932L9.95263 16.9123Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0474 16.9123L15.4068 18.3608L21.9692 12.2016L15.8101 5.63922L14.3517 7.00791L19.1422 12.112L14.0479 16.8932L14.0474 16.9123Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.95263 16.9123L8.59323 18.3608L2.03082 12.2016L8.18994 5.63922L9.64826 7.00791L4.85783 12.112L9.95212 16.8932L9.95263 16.9123Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0474 16.9123L15.4068 18.3608L21.9692 12.2016L15.8101 5.63922L14.3517 7.00791L19.1422 12.112L14.0479 16.8932L14.0474 16.9123Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5396,7 +5396,7 @@ pub fn CgCodeClimate(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.49506 8.1109L3.1311 14.4749L4.54532 15.8891L9.49506 10.9393L14.4448 15.8891L15.859 14.4749L9.49506 8.1109Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.5049 8.11092L12.5317 10.0842L13.9503 11.494L14.5049 10.9393L19.4547 15.8891L20.8689 14.4749L14.5049 8.11092Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.49506 8.1109L3.1311 14.4749L4.54532 15.8891L9.49506 10.9393L14.4448 15.8891L15.859 14.4749L9.49506 8.1109Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.5049 8.11092L12.5317 10.0842L13.9503 11.494L14.5049 10.9393L19.4547 15.8891L20.8689 14.4749L14.5049 8.11092Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5426,7 +5426,7 @@ pub fn CgCodeSlash(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.325 3.05011L8.66741 20.4323L10.5993 20.9499L15.2568 3.56775L13.325 3.05011Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.61197 18.3608L8.97136 16.9124L8.97086 16.8933L3.87657 12.1121L8.66699 7.00798L7.20868 5.63928L1.04956 12.2017L7.61197 18.3608Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.388 18.3608L15.0286 16.9124L15.0291 16.8933L20.1234 12.1121L15.333 7.00798L16.7913 5.63928L22.9504 12.2017L16.388 18.3608Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.325 3.05011L8.66741 20.4323L10.5993 20.9499L15.2568 3.56775L13.325 3.05011Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.61197 18.3608L8.97136 16.9124L8.97086 16.8933L3.87657 12.1121L8.66699 7.00798L7.20868 5.63928L1.04956 12.2017L7.61197 18.3608Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.388 18.3608L15.0286 16.9124L15.0291 16.8933L20.1234 12.1121L15.333 7.00798L16.7913 5.63928L22.9504 12.2017L16.388 18.3608Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5456,7 +5456,7 @@ pub fn CgCoffee(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 2.5C5.44772 2.5 5 2.94772 5 3.5V5.5C5 6.05228 5.44772 6.5 6 6.5C6.55228 6.5 7 6.05228 7 5.5V3.5C7 2.94772 6.55228 2.5 6 2.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 21.5C15.973 21.5 18.441 19.3377 18.917 16.5H19C21.2091 16.5 23 14.7091 23 12.5C23 10.2909 21.2091 8.5 19 8.5V7.5H1V15.5C1 18.8137 3.68629 21.5 7 21.5H13ZM3 9.5V15.5C3 17.7091 4.79086 19.5 7 19.5H13C15.2091 19.5 17 17.7091 17 15.5V9.5H3ZM21 12.5C21 13.6046 20.1046 14.5 19 14.5V10.5C20.1046 10.5 21 11.3954 21 12.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 3.5C9 2.94772 9.44771 2.5 10 2.5C10.5523 2.5 11 2.94772 11 3.5V5.5C11 6.05228 10.5523 6.5 10 6.5C9.44771 6.5 9 6.05228 9 5.5V3.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 2.5C13.4477 2.5 13 2.94772 13 3.5V5.5C13 6.05228 13.4477 6.5 14 6.5C14.5523 6.5 15 6.05228 15 5.5V3.5C15 2.94772 14.5523 2.5 14 2.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 2.5C5.44772 2.5 5 2.94772 5 3.5V5.5C5 6.05228 5.44772 6.5 6 6.5C6.55228 6.5 7 6.05228 7 5.5V3.5C7 2.94772 6.55228 2.5 6 2.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 21.5C15.973 21.5 18.441 19.3377 18.917 16.5H19C21.2091 16.5 23 14.7091 23 12.5C23 10.2909 21.2091 8.5 19 8.5V7.5H1V15.5C1 18.8137 3.68629 21.5 7 21.5H13ZM3 9.5V15.5C3 17.7091 4.79086 19.5 7 19.5H13C15.2091 19.5 17 17.7091 17 15.5V9.5H3ZM21 12.5C21 13.6046 20.1046 14.5 19 14.5V10.5C20.1046 10.5 21 11.3954 21 12.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 3.5C9 2.94772 9.44771 2.5 10 2.5C10.5523 2.5 11 2.94772 11 3.5V5.5C11 6.05228 10.5523 6.5 10 6.5C9.44771 6.5 9 6.05228 9 5.5V3.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 2.5C13.4477 2.5 13 2.94772 13 3.5V5.5C13 6.05228 13.4477 6.5 14 6.5C14.5523 6.5 15 6.05228 15 5.5V3.5C15 2.94772 14.5523 2.5 14 2.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5516,7 +5516,7 @@ pub fn CgColorBucket(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.20348 2.00378C9.46407 2.00378 10.5067 3.10742 10.6786 4.54241L19.1622 13.0259L11.384 20.8041C10.2124 21.9757 8.31291 21.9757 7.14134 20.8041L2.8987 16.5615C1.72713 15.3899 1.72713 13.4904 2.8987 12.3188L5.70348 9.51404V4.96099C5.70348 3.32777 6.82277 2.00378 8.20348 2.00378ZM8.70348 4.96099V6.51404L7.70348 7.51404V4.96099C7.70348 4.63435 7.92734 4.36955 8.20348 4.36955C8.47963 4.36955 8.70348 4.63435 8.70348 4.96099ZM8.70348 10.8754V9.34247L4.31291 13.733C3.92239 14.1236 3.92239 14.7567 4.31291 15.1473L8.55555 19.3899C8.94608 19.7804 9.57924 19.7804 9.96977 19.3899L16.3337 13.0259L10.7035 7.39569V10.8754C10.7035 10.9184 10.7027 10.9612 10.7012 11.0038H8.69168C8.69941 10.9625 8.70348 10.9195 8.70348 10.8754Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.8586 16.8749C15.687 18.0465 15.687 19.946 16.8586 21.1175C18.0302 22.2891 19.9297 22.2891 21.1013 21.1175C22.2728 19.946 22.2728 18.0465 21.1013 16.8749L18.9799 14.7536L16.8586 16.8749Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.20348 2.00378C9.46407 2.00378 10.5067 3.10742 10.6786 4.54241L19.1622 13.0259L11.384 20.8041C10.2124 21.9757 8.31291 21.9757 7.14134 20.8041L2.8987 16.5615C1.72713 15.3899 1.72713 13.4904 2.8987 12.3188L5.70348 9.51404V4.96099C5.70348 3.32777 6.82277 2.00378 8.20348 2.00378ZM8.70348 4.96099V6.51404L7.70348 7.51404V4.96099C7.70348 4.63435 7.92734 4.36955 8.20348 4.36955C8.47963 4.36955 8.70348 4.63435 8.70348 4.96099ZM8.70348 10.8754V9.34247L4.31291 13.733C3.92239 14.1236 3.92239 14.7567 4.31291 15.1473L8.55555 19.3899C8.94608 19.7804 9.57924 19.7804 9.96977 19.3899L16.3337 13.0259L10.7035 7.39569V10.8754C10.7035 10.9184 10.7027 10.9612 10.7012 11.0038H8.69168C8.69941 10.9625 8.70348 10.9195 8.70348 10.8754Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.8586 16.8749C15.687 18.0465 15.687 19.946 16.8586 21.1175C18.0302 22.2891 19.9297 22.2891 21.1013 21.1175C22.2728 19.946 22.2728 18.0465 21.1013 16.8749L18.9799 14.7536L16.8586 16.8749Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5546,7 +5546,7 @@ pub fn CgColorPicker(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.3847 2.87868C19.2132 1.70711 17.3137 1.70711 16.1421 2.87868L14.0202 5.00052L13.313 4.29332C12.9225 3.9028 12.2894 3.9028 11.8988 4.29332C11.5083 4.68385 11.5083 5.31701 11.8988 5.70754L17.5557 11.3644C17.9462 11.7549 18.5794 11.7549 18.9699 11.3644C19.3604 10.9739 19.3604 10.3407 18.9699 9.95018L18.2629 9.24316L20.3847 7.12132C21.5563 5.94975 21.5563 4.05025 20.3847 2.87868Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9297 7.09116L4.1515 14.8693C3.22786 15.793 3.03239 17.169 3.5651 18.2842L1.99994 19.8493L3.41415 21.2635L4.97931 19.6984C6.09444 20.2311 7.4705 20.0356 8.39414 19.112L16.1723 11.3338L11.9297 7.09116ZM13.3439 11.3338L11.9297 9.91959L5.56571 16.2835C5.17518 16.6741 5.17518 17.3072 5.56571 17.6978C5.95623 18.0883 6.5894 18.0883 6.97992 17.6978L13.3439 11.3338Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.3847 2.87868C19.2132 1.70711 17.3137 1.70711 16.1421 2.87868L14.0202 5.00052L13.313 4.29332C12.9225 3.9028 12.2894 3.9028 11.8988 4.29332C11.5083 4.68385 11.5083 5.31701 11.8988 5.70754L17.5557 11.3644C17.9462 11.7549 18.5794 11.7549 18.9699 11.3644C19.3604 10.9739 19.3604 10.3407 18.9699 9.95018L18.2629 9.24316L20.3847 7.12132C21.5563 5.94975 21.5563 4.05025 20.3847 2.87868Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9297 7.09116L4.1515 14.8693C3.22786 15.793 3.03239 17.169 3.5651 18.2842L1.99994 19.8493L3.41415 21.2635L4.97931 19.6984C6.09444 20.2311 7.4705 20.0356 8.39414 19.112L16.1723 11.3338L11.9297 7.09116ZM13.3439 11.3338L11.9297 9.91959L5.56571 16.2835C5.17518 16.6741 5.17518 17.3072 5.56571 17.6978C5.95623 18.0883 6.5894 18.0883 6.97992 17.6978L13.3439 11.3338Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5576,7 +5576,7 @@ pub fn CgComedyCentral(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5445 19C14.4105 19 17.5445 15.866 17.5445 12C17.5445 8.13401 14.4105 5 10.5445 5C8.61148 5 6.86148 5.7835 5.59473 7.05025L3.47343 4.92896L3.45544 4.94694C5.26649 3.12672 7.7739 2 10.5445 2C16.0673 2 20.5445 6.47715 20.5445 12C20.5445 17.5228 16.0673 22 10.5445 22C7.78307 22 5.28308 20.8807 3.47343 19.0711L5.59475 16.9498C6.8615 18.2165 8.61149 19 10.5445 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5445 14C11.1376 14 11.6704 13.7418 12.0367 13.3317L14.1594 15.4544C13.249 16.4068 11.966 17 10.5445 17C7.78305 17 5.54447 14.7614 5.54447 12C5.54447 9.23858 7.78305 7 10.5445 7C11.966 7 13.249 7.59323 14.1594 8.54563L12.0367 10.6683C11.6704 10.2582 11.1376 10 10.5445 10C9.4399 10 8.54447 10.8954 8.54447 12C8.54447 13.1046 9.4399 14 10.5445 14Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5445 19C14.4105 19 17.5445 15.866 17.5445 12C17.5445 8.13401 14.4105 5 10.5445 5C8.61148 5 6.86148 5.7835 5.59473 7.05025L3.47343 4.92896L3.45544 4.94694C5.26649 3.12672 7.7739 2 10.5445 2C16.0673 2 20.5445 6.47715 20.5445 12C20.5445 17.5228 16.0673 22 10.5445 22C7.78307 22 5.28308 20.8807 3.47343 19.0711L5.59475 16.9498C6.8615 18.2165 8.61149 19 10.5445 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5445 14C11.1376 14 11.6704 13.7418 12.0367 13.3317L14.1594 15.4544C13.249 16.4068 11.966 17 10.5445 17C7.78305 17 5.54447 14.7614 5.54447 12C5.54447 9.23858 7.78305 7 10.5445 7C11.966 7 13.249 7.59323 14.1594 8.54563L12.0367 10.6683C11.6704 10.2582 11.1376 10 10.5445 10C9.4399 10 8.54447 10.8954 8.54447 12C8.54447 13.1046 9.4399 14 10.5445 14Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5606,7 +5606,7 @@ pub fn CgComment(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 9H7V7H17V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13H17V11H7V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 18V2H22V18H16V22H14C11.7909 22 10 20.2091 10 18H2ZM12 16V18C12 19.1046 12.8954 20 14 20V16H20V4H4V16H12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 9H7V7H17V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13H17V11H7V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 18V2H22V18H16V22H14C11.7909 22 10 20.2091 10 18H2ZM12 16V18C12 19.1046 12.8954 20 14 20V16H20V4H4V16H12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5666,7 +5666,7 @@ pub fn CgComponents(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.7572 6.3431L11.9998 2.10046L16.2425 6.3431L11.9998 10.5857L7.7572 6.3431ZM10.5856 6.3431L11.9998 4.92889L13.4141 6.3431L11.9998 7.75732L10.5856 6.3431Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.10046 11.9999L6.3431 7.75726L10.5857 11.9999L6.3431 16.2425L2.10046 11.9999ZM4.92889 11.9999L6.3431 10.5857L7.75732 11.9999L6.3431 13.4141L4.92889 11.9999Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4142 11.9999L17.6568 16.2425L21.8995 11.9999L17.6568 7.75726L13.4142 11.9999ZM17.6568 10.5857L16.2426 11.9999L17.6568 13.4141L19.071 11.9999L17.6568 10.5857Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.7572 17.6569L11.9998 13.4142L16.2425 17.6569L11.9998 21.8995L7.7572 17.6569ZM10.5856 17.6569L11.9998 16.2427L13.4141 17.6569L11.9998 19.0711L10.5856 17.6569Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.7572 6.3431L11.9998 2.10046L16.2425 6.3431L11.9998 10.5857L7.7572 6.3431ZM10.5856 6.3431L11.9998 4.92889L13.4141 6.3431L11.9998 7.75732L10.5856 6.3431Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2.10046 11.9999L6.3431 7.75726L10.5857 11.9999L6.3431 16.2425L2.10046 11.9999ZM4.92889 11.9999L6.3431 10.5857L7.75732 11.9999L6.3431 13.4141L4.92889 11.9999Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.4142 11.9999L17.6568 16.2425L21.8995 11.9999L17.6568 7.75726L13.4142 11.9999ZM17.6568 10.5857L16.2426 11.9999L17.6568 13.4141L19.071 11.9999L17.6568 10.5857Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.7572 17.6569L11.9998 13.4142L16.2425 17.6569L11.9998 21.8995L7.7572 17.6569ZM10.5856 17.6569L11.9998 16.2427L13.4141 17.6569L11.9998 19.0711L10.5856 17.6569Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5696,7 +5696,7 @@ pub fn CgCompress(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.0954 8.42986L17.6711 7.02576L12.7568 12.0107L17.7417 16.925L19.1458 15.5007L16.644 13.0344L23.1411 13.0847L23.1565 11.0848L16.5286 11.0334L19.0954 8.42986Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.46742 15.5618L6.88341 16.9742L11.827 12.0183L6.87102 7.07476L5.45857 8.49074L8.04995 11.0756L0.843506 11.1004L0.850384 13.1004L7.94701 13.076L5.46742 15.5618Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.0954 8.42986L17.6711 7.02576L12.7568 12.0107L17.7417 16.925L19.1458 15.5007L16.644 13.0344L23.1411 13.0847L23.1565 11.0848L16.5286 11.0334L19.0954 8.42986Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.46742 15.5618L6.88341 16.9742L11.827 12.0183L6.87102 7.07476L5.45857 8.49074L8.04995 11.0756L0.843506 11.1004L0.850384 13.1004L7.94701 13.076L5.46742 15.5618Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5726,7 +5726,7 @@ pub fn CgCompressLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.97867 9.45703L4.40883 9.45423L4.40726 11.4542L11.4073 11.4597L11.4127 4.45972L9.41274 4.45815L9.40992 8.05978L3.09616 1.76935L1.68457 3.18618L7.97867 9.45703Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.5615 14.5521L19.5535 12.5521L12.5536 12.58L12.5814 19.5799L14.5814 19.572L14.5671 15.9706L20.9105 22.2307L22.3153 20.8071L15.9914 14.5663L19.5615 14.5521Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.97867 9.45703L4.40883 9.45423L4.40726 11.4542L11.4073 11.4597L11.4127 4.45972L9.41274 4.45815L9.40992 8.05978L3.09616 1.76935L1.68457 3.18618L7.97867 9.45703Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.5615 14.5521L19.5535 12.5521L12.5536 12.58L12.5814 19.5799L14.5814 19.572L14.5671 15.9706L20.9105 22.2307L22.3153 20.8071L15.9914 14.5663L19.5615 14.5521Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5756,7 +5756,7 @@ pub fn CgCompressRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.567 8.02947L20.9105 1.76929L22.3153 3.19282L15.9916 9.43352L19.5614 9.44772L19.5534 11.4477L12.5535 11.4199L12.5813 4.41992L14.5813 4.42788L14.567 8.02947Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.97879 14.5429L4.40886 14.5457L4.40729 12.5457L11.4073 12.5402L11.4128 19.5402L9.41277 19.5417L9.40995 15.9402L3.09623 22.2306L1.68463 20.8138L7.97879 14.5429Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.567 8.02947L20.9105 1.76929L22.3153 3.19282L15.9916 9.43352L19.5614 9.44772L19.5534 11.4477L12.5535 11.4199L12.5813 4.41992L14.5813 4.42788L14.567 8.02947Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.97879 14.5429L4.40886 14.5457L4.40729 12.5457L11.4073 12.5402L11.4128 19.5402L9.41277 19.5417L9.40995 15.9402L3.09623 22.2306L1.68463 20.8138L7.97879 14.5429Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5786,7 +5786,7 @@ pub fn CgCompressV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.0338 7.3559L15.4999 4.85376L16.9244 6.25768L12.0107 11.2432L7.02515 6.32948L8.42907 4.90505L11.0329 7.47139L11.0834 0.843506L13.0833 0.858735L13.0338 7.3559Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5627 18.532L16.9749 17.1159L12.0184 12.1729L7.07543 17.1295L8.49159 18.5418L11.0762 15.95L11.1019 23.1566L13.1019 23.1495L13.0765 16.0528L15.5627 18.532Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.0338 7.3559L15.4999 4.85376L16.9244 6.25768L12.0107 11.2432L7.02515 6.32948L8.42907 4.90505L11.0329 7.47139L11.0834 0.843506L13.0833 0.858735L13.0338 7.3559Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5627 18.532L16.9749 17.1159L12.0184 12.1729L7.07543 17.1295L8.49159 18.5418L11.0762 15.95L11.1019 23.1566L13.1019 23.1495L13.0765 16.0528L15.5627 18.532Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5816,7 +5816,7 @@ pub fn CgController(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 6.34313L16.2426 4.92892L12 0.686279L7.75735 4.92892L9.17156 6.34313L12 3.51471L14.8284 6.34313Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.92892 16.2426L6.34313 14.8284L3.51471 12L6.34313 9.17156L4.92892 7.75735L0.686279 12L4.92892 16.2426Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75735 19.0711L12 23.3137L16.2426 19.0711L14.8284 17.6568L12 20.4853L9.17156 17.6568L7.75735 19.0711Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.6568 9.17156L20.4853 12L17.6568 14.8284L19.0711 16.2426L23.3137 12L19.0711 7.75735L17.6568 9.17156Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 6.34313L16.2426 4.92892L12 0.686279L7.75735 4.92892L9.17156 6.34313L12 3.51471L14.8284 6.34313Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.92892 16.2426L6.34313 14.8284L3.51471 12L6.34313 9.17156L4.92892 7.75735L0.686279 12L4.92892 16.2426Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75735 19.0711L12 23.3137L16.2426 19.0711L14.8284 17.6568L12 20.4853L9.17156 17.6568L7.75735 19.0711Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.6568 9.17156L20.4853 12L17.6568 14.8284L19.0711 16.2426L23.3137 12L19.0711 7.75735L17.6568 9.17156Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5846,7 +5846,7 @@ pub fn CgCopy(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H7V5H13V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 11H7V9H13V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15H13V13H7V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 19V1H17V5H21V23H7V19H3ZM15 17V3H5V17H15ZM17 7V19H9V21H19V7H17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H7V5H13V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 11H7V9H13V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15H13V13H7V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 19V1H17V5H21V23H7V19H3ZM15 17V3H5V17H15ZM17 7V19H9V21H19V7H17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5876,7 +5876,7 @@ pub fn CgCopyright(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.392 10.4362L14.8106 9.0176C14.1031 8.38476 13.169 8 12.145 8C9.93588 8 8.14502 9.79086 8.14502 12C8.14502 14.2091 9.93588 16 12.145 16C13.2563 16 14.2617 15.5468 14.9866 14.8152L13.674 13.5026L13.4646 13.503C13.1124 13.8124 12.6506 14 12.145 14C11.0405 14 10.145 13.1046 10.145 12C10.145 10.8954 11.0405 10 12.145 10C12.6166 10 13.0501 10.1632 13.392 10.4362Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3ZM12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.392 10.4362L14.8106 9.0176C14.1031 8.38476 13.169 8 12.145 8C9.93588 8 8.14502 9.79086 8.14502 12C8.14502 14.2091 9.93588 16 12.145 16C13.2563 16 14.2617 15.5468 14.9866 14.8152L13.674 13.5026L13.4646 13.503C13.1124 13.8124 12.6506 14 12.145 14C11.0405 14 10.145 13.1046 10.145 12C10.145 10.8954 11.0405 10 12.145 10C12.6166 10 13.0501 10.1632 13.392 10.4362Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3ZM12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -5996,7 +5996,7 @@ pub fn CgCornerDoubleLeftUp(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.78372 9.25045L6.36951 7.83624L10.6121 3.59363L14.8548 7.83627L13.4406 9.25048L10.6121 6.42205L7.78372 9.25045Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.4406 13.4932L14.8548 12.0789L10.6121 7.83628L6.36951 12.0789L7.78372 13.4931L9.63052 11.6463V16.4063C9.63052 18.6155 11.4214 20.4063 13.6305 20.4063H17.6305V18.4063H13.6305C12.526 18.4063 11.6305 17.5109 11.6305 16.4063V11.6831L13.4406 13.4932Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.78372 9.25045L6.36951 7.83624L10.6121 3.59363L14.8548 7.83627L13.4406 9.25048L10.6121 6.42205L7.78372 9.25045Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.4406 13.4932L14.8548 12.0789L10.6121 7.83628L6.36951 12.0789L7.78372 13.4931L9.63052 11.6463V16.4063C9.63052 18.6155 11.4214 20.4063 13.6305 20.4063H17.6305V18.4063H13.6305C12.526 18.4063 11.6305 17.5109 11.6305 16.4063V11.6831L13.4406 13.4932Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6056,7 +6056,7 @@ pub fn CgCornerDoubleRightUp(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2163 9.25045L17.6305 7.83624L13.3879 3.59363L9.14526 7.83627L10.5595 9.25048L13.3879 6.42205L16.2163 9.25045Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5595 13.4932L9.14526 12.0789L13.3879 7.83628L17.6305 12.0789L16.2163 13.4931L14.3695 11.6463V16.4063C14.3695 18.6155 12.5786 20.4063 10.3695 20.4063H6.36951V18.4063H10.3695C11.4741 18.4063 12.3695 17.5109 12.3695 16.4063V11.6831L10.5595 13.4932Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2163 9.25045L17.6305 7.83624L13.3879 3.59363L9.14526 7.83627L10.5595 9.25048L13.3879 6.42205L16.2163 9.25045Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5595 13.4932L9.14526 12.0789L13.3879 7.83628L17.6305 12.0789L16.2163 13.4931L14.3695 11.6463V16.4063C14.3695 18.6155 12.5786 20.4063 10.3695 20.4063H6.36951V18.4063H10.3695C11.4741 18.4063 12.3695 17.5109 12.3695 16.4063V11.6831L10.5595 13.4932Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6086,7 +6086,7 @@ pub fn CgCornerDoubleUpLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.25045 7.78369L7.83624 6.36948L3.59363 10.6121L7.83627 14.8547L9.25048 13.4405L6.42205 10.6121L9.25045 7.78369Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.4932 13.4405L12.0789 14.8547L7.83627 10.6121L12.0789 6.36948L13.4931 7.78369L11.6463 9.63049L16.4063 9.63049C18.6155 9.63049 20.4063 11.4214 20.4063 13.6305L20.4063 17.6305L18.4063 17.6305L18.4063 13.6305C18.4063 12.5259 17.5109 11.6305 16.4063 11.6305L11.6831 11.6305L13.4932 13.4405Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.25045 7.78369L7.83624 6.36948L3.59363 10.6121L7.83627 14.8547L9.25048 13.4405L6.42205 10.6121L9.25045 7.78369Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.4932 13.4405L12.0789 14.8547L7.83627 10.6121L12.0789 6.36948L13.4931 7.78369L11.6463 9.63049L16.4063 9.63049C18.6155 9.63049 20.4063 11.4214 20.4063 13.6305L20.4063 17.6305L18.4063 17.6305L18.4063 13.6305C18.4063 12.5259 17.5109 11.6305 16.4063 11.6305L11.6831 11.6305L13.4932 13.4405Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6116,7 +6116,7 @@ pub fn CgCornerDoubleUpRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.7495 7.78369L16.1638 6.36948L20.4064 10.6121L16.1637 14.8547L14.7495 13.4405L17.5779 10.6121L14.7495 7.78369Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5068 13.4405L11.9211 14.8547L16.1637 10.6121L11.9211 6.36948L10.5069 7.78369L12.3537 9.63049L7.59366 9.63049C5.38452 9.63049 3.59366 11.4214 3.59366 13.6305L3.59366 17.6305L5.59366 17.6305L5.59366 13.6305C5.59366 12.5259 6.48909 11.6305 7.59366 11.6305L12.3169 11.6305L10.5068 13.4405Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.7495 7.78369L16.1638 6.36948L20.4064 10.6121L16.1637 14.8547L14.7495 13.4405L17.5779 10.6121L14.7495 7.78369Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5068 13.4405L11.9211 14.8547L16.1637 10.6121L11.9211 6.36948L10.5069 7.78369L12.3537 9.63049L7.59366 9.63049C5.38452 9.63049 3.59366 11.4214 3.59366 13.6305L3.59366 17.6305L5.59366 17.6305L5.59366 13.6305C5.59366 12.5259 6.48909 11.6305 7.59366 11.6305L12.3169 11.6305L10.5068 13.4405Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6386,7 +6386,7 @@ pub fn CgCreditCard(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 9C4 8.44772 4.44772 8 5 8H9C9.55228 8 10 8.44772 10 9C10 9.55228 9.55228 10 9 10H5C4.44772 10 4 9.55228 4 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C1.79086 3 0 4.79086 0 7V17C0 19.2091 1.79086 21 4 21H20C22.2091 21 24 19.2091 24 17V7C24 4.79086 22.2091 3 20 3H4ZM20 5H4C2.89543 5 2 5.89543 2 7V14H22V7C22 5.89543 21.1046 5 20 5ZM22 16H2V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 9C4 8.44772 4.44772 8 5 8H9C9.55228 8 10 8.44772 10 9C10 9.55228 9.55228 10 9 10H5C4.44772 10 4 9.55228 4 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C1.79086 3 0 4.79086 0 7V17C0 19.2091 1.79086 21 4 21H20C22.2091 21 24 19.2091 24 17V7C24 4.79086 22.2091 3 20 3H4ZM20 5H4C2.89543 5 2 5.89543 2 7V14H22V7C22 5.89543 21.1046 5 20 5ZM22 16H2V17C2 18.1046 2.89543 19 4 19H20C21.1046 19 22 18.1046 22 17V16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6536,7 +6536,7 @@ pub fn CgDanger(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C12.5523 6 13 6.44772 13 7V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V7C11 6.44772 11.4477 6 12 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C12.5523 6 13 6.44772 13 7V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V7C11 6.44772 11.4477 6 12 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6566,7 +6566,7 @@ pub fn CgDarkMode(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6596,7 +6596,7 @@ pub fn CgData(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 8.88916C13.6569 8.88916 15 10.2323 15 11.8892C15 13.1954 14.1652 14.3066 13 14.7185V19.8892H11V14.7185C9.83481 14.3066 9 13.1954 9 11.8892C9 10.2323 10.3431 8.88916 12 8.88916ZM12 10.8892C12.5523 10.8892 13 11.3369 13 11.8892C13 12.4414 12.5523 12.8892 12 12.8892C11.4477 12.8892 11 12.4414 11 11.8892C11 11.3369 11.4477 10.8892 12 10.8892Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05019 6.93938C5.78348 8.20612 5 9.9561 5 11.8891C5 14.0666 5.99426 16.0119 7.55355 17.2957L8.97712 15.8721C7.7757 14.9589 7 13.5146 7 11.8891C7 10.5084 7.55962 9.25841 8.46441 8.35359L7.05019 6.93938Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5355 8.35348C16.4403 9.25831 17 10.5083 17 11.8891C17 13.5146 16.2243 14.959 15.0228 15.8722L16.4463 17.2958C18.0057 16.012 19 14.0666 19 11.8891C19 9.95604 18.2165 8.20602 16.9497 6.93927L15.5355 8.35348Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 11.8891C1 8.85152 2.23119 6.10155 4.22176 4.11095L5.63598 5.52516C4.00733 7.15383 3 9.40381 3 11.8891C3 14.3743 4.00733 16.6243 5.63597 18.2529L4.22175 19.6672C2.23119 17.6766 1 14.9266 1 11.8891Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.7781 19.6673C21.7688 17.6767 23 14.9266 23 11.8891C23 8.85147 21.7688 6.10145 19.7781 4.11084L18.3639 5.52505C19.9926 7.15374 21 9.40376 21 11.8891C21 14.3744 19.9926 16.6244 18.3639 18.2531L19.7781 19.6673Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 8.88916C13.6569 8.88916 15 10.2323 15 11.8892C15 13.1954 14.1652 14.3066 13 14.7185V19.8892H11V14.7185C9.83481 14.3066 9 13.1954 9 11.8892C9 10.2323 10.3431 8.88916 12 8.88916ZM12 10.8892C12.5523 10.8892 13 11.3369 13 11.8892C13 12.4414 12.5523 12.8892 12 12.8892C11.4477 12.8892 11 12.4414 11 11.8892C11 11.3369 11.4477 10.8892 12 10.8892Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05019 6.93938C5.78348 8.20612 5 9.9561 5 11.8891C5 14.0666 5.99426 16.0119 7.55355 17.2957L8.97712 15.8721C7.7757 14.9589 7 13.5146 7 11.8891C7 10.5084 7.55962 9.25841 8.46441 8.35359L7.05019 6.93938Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5355 8.35348C16.4403 9.25831 17 10.5083 17 11.8891C17 13.5146 16.2243 14.959 15.0228 15.8722L16.4463 17.2958C18.0057 16.012 19 14.0666 19 11.8891C19 9.95604 18.2165 8.20602 16.9497 6.93927L15.5355 8.35348Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 11.8891C1 8.85152 2.23119 6.10155 4.22176 4.11095L5.63598 5.52516C4.00733 7.15383 3 9.40381 3 11.8891C3 14.3743 4.00733 16.6243 5.63597 18.2529L4.22175 19.6672C2.23119 17.6766 1 14.9266 1 11.8891Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.7781 19.6673C21.7688 17.6767 23 14.9266 23 11.8891C23 8.85147 21.7688 6.10145 19.7781 4.11084L18.3639 5.52505C19.9926 7.15374 21 9.40376 21 11.8891C21 14.3744 19.9926 16.6244 18.3639 18.2531L19.7781 19.6673Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6626,7 +6626,7 @@ pub fn CgDatabase(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9V7H7V9H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H19V7H9V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15V17H7V15H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 17H9V15H19V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 6C1 4.34315 2.34315 3 4 3H20C21.6569 3 23 4.34315 23 6V18C23 19.6569 21.6569 21 20 21H4C2.34315 21 1 19.6569 1 18V6ZM4 5H20C20.5523 5 21 5.44772 21 6V11H3V6C3 5.44772 3.44772 5 4 5ZM3 13V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V13H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9V7H7V9H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H19V7H9V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15V17H7V15H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 17H9V15H19V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 6C1 4.34315 2.34315 3 4 3H20C21.6569 3 23 4.34315 23 6V18C23 19.6569 21.6569 21 20 21H4C2.34315 21 1 19.6569 1 18V6ZM4 5H20C20.5523 5 21 5.44772 21 6V11H3V6C3 5.44772 3.44772 5 4 5ZM3 13V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V13H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6656,7 +6656,7 @@ pub fn CgDebug(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 11C10 10.4477 10.4477 10 11 10H13C13.5523 10 14 10.4477 14 11C14 11.5523 13.5523 12 13 12H11C10.4477 12 10 11.5523 10 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C10.4477 14 10 14.4477 10 15C10 15.5523 10.4477 16 11 16H13C13.5523 16 14 15.5523 14 15C14 14.4477 13.5523 14 13 14H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.09447 4.74918C8.41606 4.03243 8 3.0648 8 2H10C10 3.10457 10.8954 4 12 4C13.1046 4 14 3.10457 14 2H16C16 3.0648 15.5839 4.03243 14.9055 4.74918C16.1782 5.45491 17.1673 6.6099 17.6586 8H19C19.5523 8 20 8.44772 20 9C20 9.55229 19.5523 10 19 10H18V12H19C19.5523 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14H18V16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H17.6586C16.8349 20.3304 14.6124 22 12 22C9.38756 22 7.16508 20.3304 6.34141 18H5C4.44772 18 4 17.5523 4 17C4 16.4477 4.44772 16 5 16H6V14H5C4.44772 14 4 13.5523 4 13C4 12.4477 4.44772 12 5 12H6V10H5C4.44772 10 4 9.55229 4 9C4 8.44772 4.44772 8 5 8H6.34141C6.83274 6.6099 7.82181 5.45491 9.09447 4.74918ZM8 16V10C8 7.79086 9.79086 6 12 6C14.2091 6 16 7.79086 16 10V16C16 18.2091 14.2091 20 12 20C9.79086 20 8 18.2091 8 16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 11C10 10.4477 10.4477 10 11 10H13C13.5523 10 14 10.4477 14 11C14 11.5523 13.5523 12 13 12H11C10.4477 12 10 11.5523 10 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C10.4477 14 10 14.4477 10 15C10 15.5523 10.4477 16 11 16H13C13.5523 16 14 15.5523 14 15C14 14.4477 13.5523 14 13 14H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.09447 4.74918C8.41606 4.03243 8 3.0648 8 2H10C10 3.10457 10.8954 4 12 4C13.1046 4 14 3.10457 14 2H16C16 3.0648 15.5839 4.03243 14.9055 4.74918C16.1782 5.45491 17.1673 6.6099 17.6586 8H19C19.5523 8 20 8.44772 20 9C20 9.55229 19.5523 10 19 10H18V12H19C19.5523 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14H18V16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H17.6586C16.8349 20.3304 14.6124 22 12 22C9.38756 22 7.16508 20.3304 6.34141 18H5C4.44772 18 4 17.5523 4 17C4 16.4477 4.44772 16 5 16H6V14H5C4.44772 14 4 13.5523 4 13C4 12.4477 4.44772 12 5 12H6V10H5C4.44772 10 4 9.55229 4 9C4 8.44772 4.44772 8 5 8H6.34141C6.83274 6.6099 7.82181 5.45491 9.09447 4.74918ZM8 16V10C8 7.79086 9.79086 6 12 6C14.2091 6 16 7.79086 16 10V16C16 18.2091 14.2091 20 12 20C9.79086 20 8 18.2091 8 16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6686,7 +6686,7 @@ pub fn CgDesignmodo(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 4.05444C4.23858 4.05444 2 6.29302 2 9.05444C2 11.8159 4.23858 14.0544 7 14.0544C9.76142 14.0544 12 11.8159 12 9.05444C12 6.29302 9.76142 4.05444 7 4.05444ZM5 9.05444C5 10.159 5.89543 11.0544 7 11.0544C8.10457 11.0544 9 10.159 9 9.05444C9 7.94987 8.10457 7.05444 7 7.05444C5.89543 7.05444 5 7.94987 5 9.05444Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 10.5544H17V7.55444H22V10.5544Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.5503 16.9457C12.6786 16.9457 13.6977 16.4786 14.4249 15.7272C14.4097 15.7429 14.3943 15.7585 14.3788 15.774L16.5001 17.8954C15.2334 19.1621 13.4834 19.9457 11.5503 19.9457C9.61734 19.9457 7.86734 19.1622 6.60059 17.8954L8.72191 15.7741C9.44576 16.498 10.4458 16.9457 11.5503 16.9457Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 4.05444C4.23858 4.05444 2 6.29302 2 9.05444C2 11.8159 4.23858 14.0544 7 14.0544C9.76142 14.0544 12 11.8159 12 9.05444C12 6.29302 9.76142 4.05444 7 4.05444ZM5 9.05444C5 10.159 5.89543 11.0544 7 11.0544C8.10457 11.0544 9 10.159 9 9.05444C9 7.94987 8.10457 7.05444 7 7.05444C5.89543 7.05444 5 7.94987 5 9.05444Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 10.5544H17V7.55444H22V10.5544Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.5503 16.9457C12.6786 16.9457 13.6977 16.4786 14.4249 15.7272C14.4097 15.7429 14.3943 15.7585 14.3788 15.774L16.5001 17.8954C15.2334 19.1621 13.4834 19.9457 11.5503 19.9457C9.61734 19.9457 7.86734 19.1622 6.60059 17.8954L8.72191 15.7741C9.44576 16.498 10.4458 16.9457 11.5503 16.9457Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6716,7 +6716,7 @@ pub fn CgDesktop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 15C7.44772 15 7 15.4477 7 16C7 16.5523 7.44772 17 8 17C8.55228 17 9 16.5523 9 16C9 15.4477 8.55228 15 8 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15C15.4477 15 15 15.4477 15 16C15 16.5523 15.4477 17 16 17C16.5523 17 17 16.5523 17 16C17 15.4477 16.5523 15 16 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V7H21V6C21 5.44772 20.5523 5 20 5ZM3 18V9H21V18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 15C7.44772 15 7 15.4477 7 16C7 16.5523 7.44772 17 8 17C8.55228 17 9 16.5523 9 16C9 15.4477 8.55228 15 8 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15C15.4477 15 15 15.4477 15 16C15 16.5523 15.4477 17 16 17C16.5523 17 17 16.5523 17 16C17 15.4477 16.5523 15 16 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V7H21V6C21 5.44772 20.5523 5 20 5ZM3 18V9H21V18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6746,7 +6746,7 @@ pub fn CgDetailsLess(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 9C2.44772 9 2 9.44772 2 10C2 10.5523 2.44772 11 3 11H21C21.5523 11 22 10.5523 22 10C22 9.44772 21.5523 9 21 9H3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 13C2.44772 13 2 13.4477 2 14C2 14.5523 2.44772 15 3 15H15C15.5523 15 16 14.5523 16 14C16 13.4477 15.5523 13 15 13H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 9C2.44772 9 2 9.44772 2 10C2 10.5523 2.44772 11 3 11H21C21.5523 11 22 10.5523 22 10C22 9.44772 21.5523 9 21 9H3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 13C2.44772 13 2 13.4477 2 14C2 14.5523 2.44772 15 3 15H15C15.5523 15 16 14.5523 16 14C16 13.4477 15.5523 13 15 13H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6776,7 +6776,7 @@ pub fn CgDetailsMore(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 8C2 7.44772 2.44772 7 3 7H21C21.5523 7 22 7.44772 22 8C22 8.55228 21.5523 9 21 9H3C2.44772 9 2 8.55228 2 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 15C2.44772 15 2 15.4477 2 16C2 16.5523 2.44772 17 3 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 8C2 7.44772 2.44772 7 3 7H21C21.5523 7 22 7.44772 22 8C22 8.55228 21.5523 9 21 9H3C2.44772 9 2 8.55228 2 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 15C2.44772 15 2 15.4477 2 16C2 16.5523 2.44772 17 3 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6806,7 +6806,7 @@ pub fn CgDialpad(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 3H8.5V6H5.5V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 8H8.5V11H5.5V8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 13V16H8.5V13H5.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 3H13.5V6H10.5V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 8V11H13.5V8H10.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 13H13.5V16H10.5V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 18V21H13.5V18H10.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 3H18.5V6H15.5V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 8V11H18.5V8H15.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 13H18.5V16H15.5V13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 3H8.5V6H5.5V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 8H8.5V11H5.5V8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 13V16H8.5V13H5.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 3H13.5V6H10.5V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 8V11H13.5V8H10.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 13H13.5V16H10.5V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5 18V21H13.5V18H10.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 3H18.5V6H15.5V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 8V11H18.5V8H15.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 13H18.5V16H15.5V13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6836,7 +6836,7 @@ pub fn CgDice1(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6866,7 +6866,7 @@ pub fn CgDice2(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.2 14.9431C16.0954 14.9431 15.2 15.8385 15.2 16.9431C15.2 18.0477 16.0954 18.9431 17.2 18.9431C18.3045 18.9431 19.2 18.0477 19.2 16.9431C19.2 15.8385 18.3045 14.9431 17.2 14.9431Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.2 14.9431C16.0954 14.9431 15.2 15.8385 15.2 16.9431C15.2 18.0477 16.0954 18.9431 17.2 18.9431C18.3045 18.9431 19.2 18.0477 19.2 16.9431C19.2 15.8385 18.3045 14.9431 17.2 14.9431Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6896,7 +6896,7 @@ pub fn CgDice3(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 14.8921C15.8405 14.8921 14.9451 15.7875 14.9451 16.8921C14.9451 17.9967 15.8405 18.8921 16.9451 18.8921C18.0496 18.8921 18.9451 17.9967 18.9451 16.8921C18.9451 15.7875 18.0496 14.8921 16.9451 14.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 14.8921C15.8405 14.8921 14.9451 15.7875 14.9451 16.8921C14.9451 17.9967 15.8405 18.8921 16.9451 18.8921C18.0496 18.8921 18.9451 17.9967 18.9451 16.8921C18.9451 15.7875 18.0496 14.8921 16.9451 14.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6926,7 +6926,7 @@ pub fn CgDice4(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 5.05518C15.8405 5.05518 14.9451 5.95061 14.9451 7.05518C14.9451 8.15975 15.8405 9.05518 16.9451 9.05518C18.0496 9.05518 18.9451 8.15975 18.9451 7.05518C18.9451 5.95061 18.0496 5.05518 16.9451 5.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9451 16.8921C14.9451 15.7875 15.8405 14.8921 16.9451 14.8921C18.0496 14.8921 18.9451 15.7875 18.9451 16.8921C18.9451 17.9967 18.0496 18.8921 16.9451 18.8921C15.8405 18.8921 14.9451 17.9967 14.9451 16.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05518 14.8921C5.95061 14.8921 5.05518 15.7875 5.05518 16.8921C5.05518 17.9967 5.95061 18.8921 7.05518 18.8921C8.15975 18.8921 9.05518 17.9967 9.05518 16.8921C9.05518 15.7875 8.15975 14.8921 7.05518 14.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 5.05518C15.8405 5.05518 14.9451 5.95061 14.9451 7.05518C14.9451 8.15975 15.8405 9.05518 16.9451 9.05518C18.0496 9.05518 18.9451 8.15975 18.9451 7.05518C18.9451 5.95061 18.0496 5.05518 16.9451 5.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9451 16.8921C14.9451 15.7875 15.8405 14.8921 16.9451 14.8921C18.0496 14.8921 18.9451 15.7875 18.9451 16.8921C18.9451 17.9967 18.0496 18.8921 16.9451 18.8921C15.8405 18.8921 14.9451 17.9967 14.9451 16.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05518 14.8921C5.95061 14.8921 5.05518 15.7875 5.05518 16.8921C5.05518 17.9967 5.95061 18.8921 7.05518 18.8921C8.15975 18.8921 9.05518 17.9967 9.05518 16.8921C9.05518 15.7875 8.15975 14.8921 7.05518 14.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6956,7 +6956,7 @@ pub fn CgDice5(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9451 7.05518C14.9451 5.95061 15.8405 5.05518 16.9451 5.05518C18.0496 5.05518 18.9451 5.95061 18.9451 7.05518C18.9451 8.15975 18.0496 9.05518 16.9451 9.05518C15.8405 9.05518 14.9451 8.15975 14.9451 7.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 14.8921C15.8405 14.8921 14.9451 15.7875 14.9451 16.8921C14.9451 17.9967 15.8405 18.8921 16.9451 18.8921C18.0496 18.8921 18.9451 17.9967 18.9451 16.8921C18.9451 15.7875 18.0496 14.8921 16.9451 14.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 16.8921C5.05518 15.7875 5.95061 14.8921 7.05518 14.8921C8.15975 14.8921 9.05518 15.7875 9.05518 16.8921C9.05518 17.9967 8.15975 18.8921 7.05518 18.8921C5.95061 18.8921 5.05518 17.9967 5.05518 16.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05518 5.05518C5.95061 5.05518 5.05518 5.95061 5.05518 7.05518C5.05518 8.15975 5.95061 9.05518 7.05518 9.05518C8.15975 9.05518 9.05518 8.15975 9.05518 7.05518C9.05518 5.95061 8.15975 5.05518 7.05518 5.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9451 7.05518C14.9451 5.95061 15.8405 5.05518 16.9451 5.05518C18.0496 5.05518 18.9451 5.95061 18.9451 7.05518C18.9451 8.15975 18.0496 9.05518 16.9451 9.05518C15.8405 9.05518 14.9451 8.15975 14.9451 7.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 14.8921C15.8405 14.8921 14.9451 15.7875 14.9451 16.8921C14.9451 17.9967 15.8405 18.8921 16.9451 18.8921C18.0496 18.8921 18.9451 17.9967 18.9451 16.8921C18.9451 15.7875 18.0496 14.8921 16.9451 14.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 16.8921C5.05518 15.7875 5.95061 14.8921 7.05518 14.8921C8.15975 14.8921 9.05518 15.7875 9.05518 16.8921C9.05518 17.9967 8.15975 18.8921 7.05518 18.8921C5.95061 18.8921 5.05518 17.9967 5.05518 16.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05518 5.05518C5.95061 5.05518 5.05518 5.95061 5.05518 7.05518C5.05518 8.15975 5.95061 9.05518 7.05518 9.05518C8.15975 9.05518 9.05518 8.15975 9.05518 7.05518C9.05518 5.95061 8.15975 5.05518 7.05518 5.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 4C1 2.34315 2.34315 1 4 1H20C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4ZM4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -6986,7 +6986,7 @@ pub fn CgDice6(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 5.05518C15.8405 5.05518 14.9451 5.95061 14.9451 7.05518C14.9451 8.15975 15.8405 9.05518 16.9451 9.05518C18.0496 9.05518 18.9451 8.15975 18.9451 7.05518C18.9451 5.95061 18.0496 5.05518 16.9451 5.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9451 16.8921C14.9451 15.7875 15.8405 14.8921 16.9451 14.8921C18.0496 14.8921 18.9451 15.7875 18.9451 16.8921C18.9451 17.9967 18.0496 18.8921 16.9451 18.8921C15.8405 18.8921 14.9451 17.9967 14.9451 16.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05518 14.8921C5.95061 14.8921 5.05518 15.7875 5.05518 16.8921C5.05518 17.9967 5.95061 18.8921 7.05518 18.8921C8.15975 18.8921 9.05518 17.9967 9.05518 16.8921C9.05518 15.7875 8.15975 14.8921 7.05518 14.8921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 9.97363C15.8405 9.97363 14.9451 10.8691 14.9451 11.9736C14.9451 13.0782 15.8405 13.9736 16.9451 13.9736C18.0496 13.9736 18.9451 13.0782 18.9451 11.9736C18.9451 10.8691 18.0496 9.97363 16.9451 9.97363Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 11.9736C5.05518 10.8691 5.95061 9.97363 7.05518 9.97363C8.15975 9.97363 9.05518 10.8691 9.05518 11.9736C9.05518 13.0782 8.15975 13.9736 7.05518 13.9736C5.95061 13.9736 5.05518 13.0782 5.05518 11.9736Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 5.05518C15.8405 5.05518 14.9451 5.95061 14.9451 7.05518C14.9451 8.15975 15.8405 9.05518 16.9451 9.05518C18.0496 9.05518 18.9451 8.15975 18.9451 7.05518C18.9451 5.95061 18.0496 5.05518 16.9451 5.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9451 16.8921C14.9451 15.7875 15.8405 14.8921 16.9451 14.8921C18.0496 14.8921 18.9451 15.7875 18.9451 16.8921C18.9451 17.9967 18.0496 18.8921 16.9451 18.8921C15.8405 18.8921 14.9451 17.9967 14.9451 16.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.05518 14.8921C5.95061 14.8921 5.05518 15.7875 5.05518 16.8921C5.05518 17.9967 5.95061 18.8921 7.05518 18.8921C8.15975 18.8921 9.05518 17.9967 9.05518 16.8921C9.05518 15.7875 8.15975 14.8921 7.05518 14.8921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 7.05518C5.05518 5.95061 5.95061 5.05518 7.05518 5.05518C8.15975 5.05518 9.05518 5.95061 9.05518 7.05518C9.05518 8.15975 8.15975 9.05518 7.05518 9.05518C5.95061 9.05518 5.05518 8.15975 5.05518 7.05518Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9451 9.97363C15.8405 9.97363 14.9451 10.8691 14.9451 11.9736C14.9451 13.0782 15.8405 13.9736 16.9451 13.9736C18.0496 13.9736 18.9451 13.0782 18.9451 11.9736C18.9451 10.8691 18.0496 9.97363 16.9451 9.97363Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.05518 11.9736C5.05518 10.8691 5.95061 9.97363 7.05518 9.97363C8.15975 9.97363 9.05518 10.8691 9.05518 11.9736C9.05518 13.0782 8.15975 13.9736 7.05518 13.9736C5.95061 13.9736 5.05518 13.0782 5.05518 11.9736Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1C2.34315 1 1 2.34315 1 4V20C1 21.6569 2.34315 23 4 23H20C21.6569 23 23 21.6569 23 20V4C23 2.34315 21.6569 1 20 1H4ZM20 3H4C3.44772 3 3 3.44772 3 4V20C3 20.5523 3.44772 21 4 21H20C20.5523 21 21 20.5523 21 20V4C21 3.44772 20.5523 3 20 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7016,7 +7016,7 @@ pub fn CgDigitalocean(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C8.68629 6 6 8.68629 6 12H1C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23V18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18V13H12V18H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18V22H7V18H3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18H1V16H3V18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C8.68629 6 6 8.68629 6 12H1C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23V18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18V13H12V18H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18V22H7V18H3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18H1V16H3V18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7046,7 +7046,7 @@ pub fn CgDisc(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12C5 8.13401 8.13401 5 12 5V7C9.23858 7 7 9.23858 7 12H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 17C14.7614 17 17 14.7614 17 12H19C19 15.866 15.866 19 12 19V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12C5 8.13401 8.13401 5 12 5V7C9.23858 7 7 9.23858 7 12H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 17C14.7614 17 17 14.7614 17 12H19C19 15.866 15.866 19 12 19V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7076,7 +7076,7 @@ pub fn CgDisplayFlex(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 17V7H8V17H6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 7V17H18V7H16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 3H22V21H2V3ZM4 5V19H20V5H4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 17V7H8V17H6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 7V17H18V7H16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 3H22V21H2V3ZM4 5V19H20V5H4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7106,7 +7106,7 @@ pub fn CgDisplayFullwidth(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 5H22V3H2V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 21H22V19H2V21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 7V17H22V7H2ZM4 9H20V15H4V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 5H22V3H2V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 21H22V19H2V21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 7V17H22V7H2ZM4 9H20V15H4V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7136,7 +7136,7 @@ pub fn CgDisplayGrid(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 7V11H11V7H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H17V11H13V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13V17H17V13H13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13H11V17H7V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H21V21H3V3ZM5 5V19H19V5H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 7V11H11V7H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H17V11H13V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13V17H17V13H13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13H11V17H7V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H21V21H3V3ZM5 5V19H19V5H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7166,7 +7166,7 @@ pub fn CgDisplaySpacing(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 21V3H5V21H3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 3H17V21H7V3ZM9 5V19H15V5H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 3V21H21V3H19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 21V3H5V21H3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 3H17V21H7V3ZM9 5V19H15V5H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 3V21H21V3H19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7196,7 +7196,7 @@ pub fn CgDistributeHorizontal(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9H13V15H11V9Z\" stroke=\"currentColor\" stroke-opacity=\"0.5\" stroke-width=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5V19H7V5H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 5V19H19V5H17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9H13V15H11V9Z\" stroke=\"currentColor\" stroke-opacity=\"0.5\" stroke-width=\"2\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5V19H7V5H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 5V19H19V5H17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7226,7 +7226,7 @@ pub fn CgDistributeVertical(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11H15V13H9V11Z\" stroke=\"currentColor\" stroke-opacity=\"0.5\" stroke-width=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 7H5V5H19V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 19H5V17H19V19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11H15V13H9V11Z\" stroke=\"currentColor\" stroke-opacity=\"0.5\" stroke-width=\"2\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 7H5V5H19V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 19H5V17H19V19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7466,7 +7466,7 @@ pub fn CgDrive(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8C0.895431 8 0 8.89543 0 10V14C0 15.1046 0.89543 16 2 16H22C23.1046 16 24 15.1046 24 14V10C24 8.89543 23.1046 8 22 8H2ZM22 10H2L2 14H22V10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 11C18.4477 11 18 11.4477 18 12C18 12.5523 18.4477 13 19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 11.4477 14.4477 11 15 11C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13C14.4477 13 14 12.5523 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8C0.895431 8 0 8.89543 0 10V14C0 15.1046 0.89543 16 2 16H22C23.1046 16 24 15.1046 24 14V10C24 8.89543 23.1046 8 22 8H2ZM22 10H2L2 14H22V10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7586,7 +7586,7 @@ pub fn CgDuplicate(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 5H7V3H21V17H19V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13V11H11V13H13V15H11V17H9V15H7V13H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 7H17V21H3V7ZM5 9H15V19H5V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 5H7V3H21V17H19V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13V11H11V13H13V15H11V17H9V15H7V13H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 7H17V21H3V7ZM5 9H15V19H5V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7616,7 +7616,7 @@ pub fn CgEditBlackPoint(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12ZM12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7646,7 +7646,7 @@ pub fn CgEditContrast(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 18C10.4633 18 9.06151 17.4223 8 16.4722C6.7725 15.3736 6 13.777 6 12C6 10.223 6.7725 8.62643 8 7.52779C9.06151 6.57771 10.4633 6 12 6V18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 18C10.4633 18 9.06151 17.4223 8 16.4722C6.7725 15.3736 6 13.777 6 12C6 10.223 6.7725 8.62643 8 7.52779C9.06151 6.57771 10.4633 6 12 6V18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7706,7 +7706,7 @@ pub fn CgEditFade(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 10.5194 8.8044 9.22675 10 8.53513V15.4649C8.8044 14.7733 8 13.4806 8 12Z\" stroke=\"currentColor\" stroke-opacity=\"0.3\" stroke-width=\"4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 15.4649V8.53513C15.1956 9.22675 16 10.5194 16 12C16 13.4806 15.1956 14.7733 14 15.4649Z\" stroke=\"currentColor\" stroke-opacity=\"0.6\" stroke-width=\"4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z\" stroke=\"currentColor\" stroke-width=\"2\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 10.5194 8.8044 9.22675 10 8.53513V15.4649C8.8044 14.7733 8 13.4806 8 12Z\" stroke=\"currentColor\" stroke-opacity=\"0.3\" stroke-width=\"4\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 15.4649V8.53513C15.1956 9.22675 16 10.5194 16 12C16 13.4806 15.1956 14.7733 14 15.4649Z\" stroke=\"currentColor\" stroke-opacity=\"0.6\" stroke-width=\"4\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z\" stroke=\"currentColor\" stroke-width=\"2\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7736,7 +7736,7 @@ pub fn CgEditFlipH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7C18.5523 7 19 7.44772 19 8V16C19 16.5523 18.5523 17 18 17H15V19H18C19.6569 19 21 17.6569 21 16V8C21 6.34315 19.6569 5 18 5H15V7H18Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 3H11V21H13V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8C5 7.44772 5.44772 7 6 7H9V5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19H9V17H6C5.44772 17 5 16.5523 5 16V8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7C18.5523 7 19 7.44772 19 8V16C19 16.5523 18.5523 17 18 17H15V19H18C19.6569 19 21 17.6569 21 16V8C21 6.34315 19.6569 5 18 5H15V7H18Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 3H11V21H13V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8C5 7.44772 5.44772 7 6 7H9V5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19H9V17H6C5.44772 17 5 16.5523 5 16V8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7766,7 +7766,7 @@ pub fn CgEditFlipV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 18C17 18.5523 16.5523 19 16 19L8 19C7.44772 19 7 18.5523 7 18L7 15L5 15L5 18C5 19.6569 6.34315 21 8 21L16 21C17.6569 21 19 19.6569 19 18V15L17 15V18Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 5C16.5523 5 17 5.44772 17 6V9H19V6C19 4.34315 17.6569 3 16 3L8 3C6.34315 3 5 4.34315 5 6V9H7V6C7 5.44772 7.44772 5 8 5L16 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 13V11L3 11V13H21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 18C17 18.5523 16.5523 19 16 19L8 19C7.44772 19 7 18.5523 7 18L7 15L5 15L5 18C5 19.6569 6.34315 21 8 21L16 21C17.6569 21 19 19.6569 19 18V15L17 15V18Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 5C16.5523 5 17 5.44772 17 6V9H19V6C19 4.34315 17.6569 3 16 3L8 3C6.34315 3 5 4.34315 5 6V9H7V6C7 5.44772 7.44772 5 8 5L16 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 13V11L3 11V13H21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7796,7 +7796,7 @@ pub fn CgEditHighlight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C10.7785 6 9.64223 6.36502 8.69435 6.99194H12V7.99194H7.53501C7.00911 8.57742 6.59669 9.26689 6.33237 10.0258H12V11.0258H6.07869C6.02692 11.3428 6 11.6683 6 12C6 12.3379 6.02793 12.6693 6.08161 12.9919H12V13.9919H6.33857C6.60189 14.7404 7.00941 15.4208 7.52779 16H12V17H8.68221C9.63251 17.6318 10.7733 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6C10.7785 6 9.64223 6.36502 8.69435 6.99194H12V7.99194H7.53501C7.00911 8.57742 6.59669 9.26689 6.33237 10.0258H12V11.0258H6.07869C6.02692 11.3428 6 11.6683 6 12C6 12.3379 6.02793 12.6693 6.08161 12.9919H12V13.9919H6.33857C6.60189 14.7404 7.00941 15.4208 7.52779 16H12V17H8.68221C9.63251 17.6318 10.7733 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7856,7 +7856,7 @@ pub fn CgEditMask(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C6.47716 22 2 17.5228 2 12C2 6.47717 6.47716 2 12 2C17.5228 2 22 6.47717 22 12C22 17.5228 17.5228 22 12 22ZM9.0307 19.4308C9.01047 19.29 9 19.1462 9 19C9 17.3431 10.3431 16 12 16C13.6569 16 15 17.3431 15 19C15 19.1462 14.9895 19.29 14.9693 19.4308C16.9993 18.6189 18.619 16.9993 19.4308 14.9692C19.2901 14.9895 19.1463 15 19 15C17.3431 15 16 13.6569 16 12C16 10.3431 17.3431 9 19 9C19.0637 9 19.127 9.00195 19.1897 9.00586C19.271 9.01099 19.3514 9.01929 19.4308 9.03076C18.6189 7.00073 16.9993 5.3811 14.9693 4.56921C14.9895 4.70996 15 4.85376 15 5C15 6.65686 13.6569 8 12 8C10.3431 8 9 6.65686 9 5C9 4.85376 9.01048 4.70996 9.03072 4.56921C7.0007 5.3811 5.38106 7.00073 4.56915 9.03076C4.64857 9.01929 4.729 9.01099 4.8103 9.00586C4.87303 9.00195 4.93628 9 5 9C6.65686 9 8 10.3431 8 12C8 13.6569 6.65686 15 5 15C4.8537 15 4.70985 14.9895 4.56915 14.9692C5.38104 16.9993 7.00069 18.6189 9.0307 19.4308Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C6.47716 22 2 17.5228 2 12C2 6.47717 6.47716 2 12 2C17.5228 2 22 6.47717 22 12C22 17.5228 17.5228 22 12 22ZM9.0307 19.4308C9.01047 19.29 9 19.1462 9 19C9 17.3431 10.3431 16 12 16C13.6569 16 15 17.3431 15 19C15 19.1462 14.9895 19.29 14.9693 19.4308C16.9993 18.6189 18.619 16.9993 19.4308 14.9692C19.2901 14.9895 19.1463 15 19 15C17.3431 15 16 13.6569 16 12C16 10.3431 17.3431 9 19 9C19.0637 9 19.127 9.00195 19.1897 9.00586C19.271 9.01099 19.3514 9.01929 19.4308 9.03076C18.6189 7.00073 16.9993 5.3811 14.9693 4.56921C14.9895 4.70996 15 4.85376 15 5C15 6.65686 13.6569 8 12 8C10.3431 8 9 6.65686 9 5C9 4.85376 9.01048 4.70996 9.03072 4.56921C7.0007 5.3811 5.38106 7.00073 4.56915 9.03076C4.64857 9.01929 4.729 9.01099 4.8103 9.00586C4.87303 9.00195 4.93628 9 5 9C6.65686 9 8 10.3431 8 12C8 13.6569 6.65686 15 5 15C4.8537 15 4.70985 14.9895 4.56915 14.9692C5.38104 16.9993 7.00069 18.6189 9.0307 19.4308Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7886,7 +7886,7 @@ pub fn CgEditNoise(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.4044 17.7657C10.419 17.7803 10.4329 17.7953 10.446 17.8108C10.1948 17.7439 9.95005 17.661 9.71293 17.5634C9.95429 17.5106 10.2167 17.578 10.4044 17.7657Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.43574 16.705C8.40862 16.7321 8.37994 16.7567 8.34999 16.7788C7.95661 16.4775 7.60163 16.1285 7.29364 15.7406C7.31765 15.7068 7.3448 15.6746 7.37508 15.6443C7.66797 15.3514 8.14285 15.3514 8.43574 15.6443C8.72863 15.9372 8.72863 16.4121 8.43574 16.705Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.37104 13.6475C6.59701 13.8735 6.64864 14.2077 6.52594 14.4832C6.38527 14.1723 6.27034 13.8472 6.18387 13.5107C6.25129 13.5454 6.31455 13.591 6.37104 13.6475Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.37104 10.6753C6.29401 10.7523 6.2044 10.8091 6.10883 10.8456C6.18637 10.4523 6.30234 10.0728 6.45268 9.71119C6.66079 10.004 6.63357 10.4128 6.37104 10.6753Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.37508 8.70669C7.28995 8.62156 7.22957 8.52106 7.19392 8.41413C7.45907 8.06093 7.76228 7.73793 8.09747 7.45124C8.22139 7.48394 8.33858 7.54887 8.43574 7.64603C8.72863 7.93892 8.72863 8.41379 8.43574 8.70669C8.14285 8.99958 7.66797 8.99958 7.37508 8.70669Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.34371 6.76662C9.31335 6.73627 9.28614 6.70396 9.26208 6.6701C9.6881 6.45171 10.1437 6.28277 10.6212 6.17088C10.6397 6.38399 10.5675 6.60352 10.4044 6.76662C10.1115 7.05952 9.6366 7.05952 9.34371 6.76662Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.2872 17.8734C13.5967 17.8055 13.8973 17.7136 14.1868 17.6C13.9165 17.4914 13.5957 17.5466 13.3766 17.7657C13.3429 17.7993 13.3131 17.8354 13.2872 17.8734Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5312 16.8608C15.935 16.5658 16.3005 16.2216 16.619 15.8369C16.6005 15.8133 16.5803 15.7906 16.5586 15.7688C16.2657 15.4759 15.7908 15.4759 15.4979 15.7688C15.205 16.0617 15.205 16.5366 15.4979 16.8295C15.5088 16.8403 15.5199 16.8508 15.5312 16.8608Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.3654 14.6921C17.5637 14.2953 17.7194 13.8735 17.8264 13.4326C17.6636 13.451 17.5058 13.5227 17.3809 13.6475C17.0933 13.9351 17.0881 14.3982 17.3654 14.6921Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.8911 10.8934C17.8032 10.4272 17.6613 9.98016 17.4722 9.55885C17.4507 9.57609 17.4299 9.59469 17.4099 9.61465C17.117 9.90755 17.117 10.3824 17.4099 10.6753C17.5439 10.8093 17.7159 10.882 17.8911 10.8934Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.7556 8.35985C16.4971 8.02355 16.2038 7.71542 15.8811 7.44086C15.7407 7.46881 15.6068 7.5372 15.4979 7.64603C15.205 7.93892 15.205 8.41379 15.4979 8.70669C15.7908 8.99958 16.2657 8.99958 16.5586 8.70669C16.658 8.60729 16.7237 8.48694 16.7556 8.35985Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.4373 6.76662C14.4906 6.71331 14.5342 6.65397 14.5681 6.59079C14.1273 6.38127 13.6569 6.22392 13.1649 6.12671C13.1317 6.35331 13.2022 6.59223 13.3766 6.76662C13.6695 7.05952 14.1444 7.05952 14.4373 6.76662Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.5257 7.64603C12.8186 7.93892 12.8186 8.41379 12.5257 8.70669C12.2328 8.99958 11.7579 8.99958 11.465 8.70669C11.1721 8.41379 11.1721 7.93892 11.465 7.64603C11.7579 7.35313 12.2328 7.35313 12.5257 7.64603Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.4044 9.61465C10.6973 9.90755 10.6973 10.3824 10.4044 10.6753C10.1115 10.9682 9.6366 10.9682 9.34371 10.6753C9.05081 10.3824 9.05081 9.90755 9.34371 9.61465C9.6366 9.32176 10.1115 9.32176 10.4044 9.61465Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.43574 12.7967C8.72863 12.5038 8.72863 12.0289 8.43574 11.736C8.14285 11.4431 7.66797 11.4431 7.37508 11.736C7.08218 12.0289 7.08218 12.5038 7.37508 12.7967C7.66797 13.0895 8.14285 13.0895 8.43574 12.7967Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.4044 13.6475C10.6973 13.9404 10.6973 14.4153 10.4044 14.7082C10.1115 15.001 9.6366 15.001 9.34371 14.7082C9.05081 14.4153 9.05081 13.9404 9.34371 13.6475C9.6366 13.3546 10.1115 13.3546 10.4044 13.6475Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.5257 12.7967C12.8186 12.5038 12.8186 12.0289 12.5257 11.736C12.2328 11.4431 11.7579 11.4431 11.465 11.736C11.1721 12.0289 11.1721 12.5038 11.465 12.7967C11.7579 13.0895 12.2328 13.0895 12.5257 12.7967Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.4373 9.61465C14.7302 9.90755 14.7302 10.3824 14.4373 10.6753C14.1444 10.9682 13.6695 10.9682 13.3766 10.6753C13.0837 10.3824 13.0837 9.90755 13.3766 9.61465C13.6695 9.32176 14.1444 9.32176 14.4373 9.61465Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.5586 12.7681C16.8515 12.4752 16.8515 12.0003 16.5586 11.7074C16.2657 11.4145 15.7908 11.4145 15.4979 11.7074C15.205 12.0003 15.205 12.4752 15.4979 12.7681C15.7908 13.061 16.2657 13.061 16.5586 12.7681Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.423 13.6902C14.7159 13.9831 14.7159 14.458 14.423 14.7509C14.1301 15.0438 13.6552 15.0438 13.3623 14.7509C13.0694 14.458 13.0694 13.9831 13.3623 13.6902C13.6552 13.3973 14.1301 13.3973 14.423 13.6902Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.3159 16.705C12.6088 16.4121 12.6088 15.9372 12.3159 15.6443C12.023 15.3514 11.5482 15.3514 11.2553 15.6443C10.9624 15.9372 10.9624 16.4121 11.2553 16.705C11.5482 16.9979 12.023 16.9979 12.3159 16.705Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.4044 17.7657C10.419 17.7803 10.4329 17.7953 10.446 17.8108C10.1948 17.7439 9.95005 17.661 9.71293 17.5634C9.95429 17.5106 10.2167 17.578 10.4044 17.7657Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.43574 16.705C8.40862 16.7321 8.37994 16.7567 8.34999 16.7788C7.95661 16.4775 7.60163 16.1285 7.29364 15.7406C7.31765 15.7068 7.3448 15.6746 7.37508 15.6443C7.66797 15.3514 8.14285 15.3514 8.43574 15.6443C8.72863 15.9372 8.72863 16.4121 8.43574 16.705Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.37104 13.6475C6.59701 13.8735 6.64864 14.2077 6.52594 14.4832C6.38527 14.1723 6.27034 13.8472 6.18387 13.5107C6.25129 13.5454 6.31455 13.591 6.37104 13.6475Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.37104 10.6753C6.29401 10.7523 6.2044 10.8091 6.10883 10.8456C6.18637 10.4523 6.30234 10.0728 6.45268 9.71119C6.66079 10.004 6.63357 10.4128 6.37104 10.6753Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.37508 8.70669C7.28995 8.62156 7.22957 8.52106 7.19392 8.41413C7.45907 8.06093 7.76228 7.73793 8.09747 7.45124C8.22139 7.48394 8.33858 7.54887 8.43574 7.64603C8.72863 7.93892 8.72863 8.41379 8.43574 8.70669C8.14285 8.99958 7.66797 8.99958 7.37508 8.70669Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.34371 6.76662C9.31335 6.73627 9.28614 6.70396 9.26208 6.6701C9.6881 6.45171 10.1437 6.28277 10.6212 6.17088C10.6397 6.38399 10.5675 6.60352 10.4044 6.76662C10.1115 7.05952 9.6366 7.05952 9.34371 6.76662Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.2872 17.8734C13.5967 17.8055 13.8973 17.7136 14.1868 17.6C13.9165 17.4914 13.5957 17.5466 13.3766 17.7657C13.3429 17.7993 13.3131 17.8354 13.2872 17.8734Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5312 16.8608C15.935 16.5658 16.3005 16.2216 16.619 15.8369C16.6005 15.8133 16.5803 15.7906 16.5586 15.7688C16.2657 15.4759 15.7908 15.4759 15.4979 15.7688C15.205 16.0617 15.205 16.5366 15.4979 16.8295C15.5088 16.8403 15.5199 16.8508 15.5312 16.8608Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.3654 14.6921C17.5637 14.2953 17.7194 13.8735 17.8264 13.4326C17.6636 13.451 17.5058 13.5227 17.3809 13.6475C17.0933 13.9351 17.0881 14.3982 17.3654 14.6921Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.8911 10.8934C17.8032 10.4272 17.6613 9.98016 17.4722 9.55885C17.4507 9.57609 17.4299 9.59469 17.4099 9.61465C17.117 9.90755 17.117 10.3824 17.4099 10.6753C17.5439 10.8093 17.7159 10.882 17.8911 10.8934Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.7556 8.35985C16.4971 8.02355 16.2038 7.71542 15.8811 7.44086C15.7407 7.46881 15.6068 7.5372 15.4979 7.64603C15.205 7.93892 15.205 8.41379 15.4979 8.70669C15.7908 8.99958 16.2657 8.99958 16.5586 8.70669C16.658 8.60729 16.7237 8.48694 16.7556 8.35985Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.4373 6.76662C14.4906 6.71331 14.5342 6.65397 14.5681 6.59079C14.1273 6.38127 13.6569 6.22392 13.1649 6.12671C13.1317 6.35331 13.2022 6.59223 13.3766 6.76662C13.6695 7.05952 14.1444 7.05952 14.4373 6.76662Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.5257 7.64603C12.8186 7.93892 12.8186 8.41379 12.5257 8.70669C12.2328 8.99958 11.7579 8.99958 11.465 8.70669C11.1721 8.41379 11.1721 7.93892 11.465 7.64603C11.7579 7.35313 12.2328 7.35313 12.5257 7.64603Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.4044 9.61465C10.6973 9.90755 10.6973 10.3824 10.4044 10.6753C10.1115 10.9682 9.6366 10.9682 9.34371 10.6753C9.05081 10.3824 9.05081 9.90755 9.34371 9.61465C9.6366 9.32176 10.1115 9.32176 10.4044 9.61465Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.43574 12.7967C8.72863 12.5038 8.72863 12.0289 8.43574 11.736C8.14285 11.4431 7.66797 11.4431 7.37508 11.736C7.08218 12.0289 7.08218 12.5038 7.37508 12.7967C7.66797 13.0895 8.14285 13.0895 8.43574 12.7967Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.4044 13.6475C10.6973 13.9404 10.6973 14.4153 10.4044 14.7082C10.1115 15.001 9.6366 15.001 9.34371 14.7082C9.05081 14.4153 9.05081 13.9404 9.34371 13.6475C9.6366 13.3546 10.1115 13.3546 10.4044 13.6475Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.5257 12.7967C12.8186 12.5038 12.8186 12.0289 12.5257 11.736C12.2328 11.4431 11.7579 11.4431 11.465 11.736C11.1721 12.0289 11.1721 12.5038 11.465 12.7967C11.7579 13.0895 12.2328 13.0895 12.5257 12.7967Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.4373 9.61465C14.7302 9.90755 14.7302 10.3824 14.4373 10.6753C14.1444 10.9682 13.6695 10.9682 13.3766 10.6753C13.0837 10.3824 13.0837 9.90755 13.3766 9.61465C13.6695 9.32176 14.1444 9.32176 14.4373 9.61465Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.5586 12.7681C16.8515 12.4752 16.8515 12.0003 16.5586 11.7074C16.2657 11.4145 15.7908 11.4145 15.4979 11.7074C15.205 12.0003 15.205 12.4752 15.4979 12.7681C15.7908 13.061 16.2657 13.061 16.5586 12.7681Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.423 13.6902C14.7159 13.9831 14.7159 14.458 14.423 14.7509C14.1301 15.0438 13.6552 15.0438 13.3623 14.7509C13.0694 14.458 13.0694 13.9831 13.3623 13.6902C13.6552 13.3973 14.1301 13.3973 14.423 13.6902Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.3159 16.705C12.6088 16.4121 12.6088 15.9372 12.3159 15.6443C12.023 15.3514 11.5482 15.3514 11.2553 15.6443C10.9624 15.9372 10.9624 16.4121 11.2553 16.705C11.5482 16.9979 12.023 16.9979 12.3159 16.705Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7916,7 +7916,7 @@ pub fn CgEditShadows(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.3056 6.99194C14.3578 6.36502 13.2215 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C13.2267 18 14.3675 17.6318 15.3178 17H12V16H16.4722C16.9906 15.4208 17.3981 14.7404 17.6614 13.9919H12V12.9919H17.9184C17.9721 12.6693 18 12.3379 18 12C18 11.6683 17.9731 11.3428 17.9213 11.0258H12V10.0258H17.6676C17.4033 9.26689 16.9909 8.57742 16.465 7.99194H12V6.99194H15.3056Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.3056 6.99194C14.3578 6.36502 13.2215 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C13.2267 18 14.3675 17.6318 15.3178 17H12V16H16.4722C16.9906 15.4208 17.3981 14.7404 17.6614 13.9919H12V12.9919H17.9184C17.9721 12.6693 18 12.3379 18 12C18 11.6683 17.9731 11.3428 17.9213 11.0258H12V10.0258H17.6676C17.4033 9.26689 16.9909 8.57742 16.465 7.99194H12V6.99194H15.3056Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7946,7 +7946,7 @@ pub fn CgEditStraight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 4C15.866 4 19 7.13401 19 11H5C5 7.13401 8.13401 4 12 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13H1V11H5V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13C19 16.866 15.866 20 12 20C8.13401 20 5 16.866 5 13H19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13V11H23V13H19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 4C15.866 4 19 7.13401 19 11H5C5 7.13401 8.13401 4 12 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13H1V11H5V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13C19 16.866 15.866 20 12 20C8.13401 20 5 16.866 5 13H19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13V11H23V13H19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -7976,7 +7976,7 @@ pub fn CgEditUnmask(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 5C15 6.65685 13.6569 8 12 8C10.3431 8 9 6.65685 9 5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22C13.6569 22 15 20.6569 15 19C15 17.3431 13.6569 16 12 16C10.3431 16 9 17.3431 9 19C9 20.6569 10.3431 22 12 22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12C22 13.6569 20.6569 15 19 15C17.3431 15 16 13.6569 16 12C16 10.3431 17.3431 9 19 9C20.6569 9 22 10.3431 22 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15C6.65685 15 8 13.6569 8 12C8 10.3431 6.65685 9 5 9C3.34315 9 2 10.3431 2 12C2 13.6569 3.34315 15 5 15Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 5C15 6.65685 13.6569 8 12 8C10.3431 8 9 6.65685 9 5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22C13.6569 22 15 20.6569 15 19C15 17.3431 13.6569 16 12 16C10.3431 16 9 17.3431 9 19C9 20.6569 10.3431 22 12 22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12C22 13.6569 20.6569 15 19 15C17.3431 15 16 13.6569 16 12C16 10.3431 17.3431 9 19 9C20.6569 9 22 10.3431 22 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15C6.65685 15 8 13.6569 8 12C8 10.3431 6.65685 9 5 9C3.34315 9 2 10.3431 2 12C2 13.6569 3.34315 15 5 15Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8006,7 +8006,7 @@ pub fn CgEject(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 14.3948L18.364 12.9805L12 6.61658L5.63605 12.9805L7.05026 14.3948L12 9.445L16.9498 14.3948Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.00014 17.3835H18.0001V15.3835H6.00014V17.3835Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 14.3948L18.364 12.9805L12 6.61658L5.63605 12.9805L7.05026 14.3948L12 9.445L16.9498 14.3948Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.00014 17.3835H18.0001V15.3835H6.00014V17.3835Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8036,7 +8036,7 @@ pub fn CgEnter(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.0743 16.9498L11.6601 15.5356L14.1957 13H2V11H14.1956L11.6601 8.46451L13.0743 7.05029L18.024 12L13.0743 16.9498Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.0743 16.9498L11.6601 15.5356L14.1957 13H2V11H14.1956L11.6601 8.46451L13.0743 7.05029L18.024 12L13.0743 16.9498Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8096,7 +8096,7 @@ pub fn CgEreader(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7H16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 12C15 11.4477 15.4477 11 16 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H16C15.4477 13 15 12.5523 15 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15C15.4477 15 15 15.4477 15 16C15 16.5523 15.4477 17 16 17H19C19.5523 17 20 16.5523 20 16C20 15.4477 19.5523 15 19 15H16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H13V19H21C21.5523 19 22 18.5523 22 18V6C22 5.44772 21.5523 5 21 5ZM3 5H11V19H3C2.44772 19 2 18.5523 2 18V6C2 5.44772 2.44772 5 3 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7H16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 12C15 11.4477 15.4477 11 16 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H16C15.4477 13 15 12.5523 15 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15C15.4477 15 15 15.4477 15 16C15 16.5523 15.4477 17 16 17H19C19.5523 17 20 16.5523 20 16C20 15.4477 19.5523 15 19 15H16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H13V19H21C21.5523 19 22 18.5523 22 18V6C22 5.44772 21.5523 5 21 5ZM3 5H11V19H3C2.44772 19 2 18.5523 2 18V6C2 5.44772 2.44772 5 3 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8126,7 +8126,7 @@ pub fn CgEricsson(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.71689 5.72315C6.71581 6.18996 6.2827 7.37992 6.74951 8.381C7.21632 9.38208 8.40628 9.81519 9.40736 9.34838L20.2831 4.27696C21.2841 3.81015 21.7172 2.62019 21.2504 1.61911C20.7836 0.618028 19.5937 0.184918 18.5926 0.651729L7.71689 5.72315Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.74951 15.381C4.2827 14.3799 4.71581 13.19 5.71689 12.7231L16.5926 7.65173C17.5937 7.18492 18.7836 7.61803 19.2504 8.61911C19.7172 9.62019 19.2841 10.8101 18.2831 11.277L7.40736 16.3484C6.40628 16.8152 5.21632 16.3821 4.74951 15.381Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.74951 22.381C2.2827 21.3799 2.71581 20.19 3.71689 19.7231L14.5926 14.6517C15.5937 14.1849 16.7836 14.618 17.2504 15.6191C17.7172 16.6202 17.2841 17.8101 16.2831 18.277L5.40736 23.3484C4.40628 23.8152 3.21632 23.3821 2.74951 22.381Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.71689 5.72315C6.71581 6.18996 6.2827 7.37992 6.74951 8.381C7.21632 9.38208 8.40628 9.81519 9.40736 9.34838L20.2831 4.27696C21.2841 3.81015 21.7172 2.62019 21.2504 1.61911C20.7836 0.618028 19.5937 0.184918 18.5926 0.651729L7.71689 5.72315Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.74951 15.381C4.2827 14.3799 4.71581 13.19 5.71689 12.7231L16.5926 7.65173C17.5937 7.18492 18.7836 7.61803 19.2504 8.61911C19.7172 9.62019 19.2841 10.8101 18.2831 11.277L7.40736 16.3484C6.40628 16.8152 5.21632 16.3821 4.74951 15.381Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.74951 22.381C2.2827 21.3799 2.71581 20.19 3.71689 19.7231L14.5926 14.6517C15.5937 14.1849 16.7836 14.618 17.2504 15.6191C17.7172 16.6202 17.2841 17.8101 16.2831 18.277L5.40736 23.3484C4.40628 23.8152 3.21632 23.3821 2.74951 22.381Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8276,7 +8276,7 @@ pub fn CgExport(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 5.96781L15.5356 7.38203L13 4.84646V17.0421H11V4.84653L8.46451 7.38203L7.05029 5.96781L12 1.01807L16.9498 5.96781Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20.9819V10.9819H9V8.98193H3V22.9819H21V8.98193H15V10.9819H19V20.9819H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 5.96781L15.5356 7.38203L13 4.84646V17.0421H11V4.84653L8.46451 7.38203L7.05029 5.96781L12 1.01807L16.9498 5.96781Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20.9819V10.9819H9V8.98193H3V22.9819H21V8.98193H15V10.9819H19V20.9819H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8306,7 +8306,7 @@ pub fn CgExtension(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 3H21V11H13V3ZM15 5H19V9H15V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 21V13H11V7H3V21H17ZM9 9H5V13H9V9ZM5 19L5 15H9V19H5ZM11 19V15H15V19H11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 3H21V11H13V3ZM15 5H19V9H15V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 21V13H11V7H3V21H17ZM9 9H5V13H9V9ZM5 19L5 15H9V19H5ZM11 19V15H15V19H11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8336,7 +8336,7 @@ pub fn CgExtensionAdd(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 4H18V6H20V8H18V10H16V8H14V6H16V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 12V6H4V20H18V12H12ZM6 8H10V12H6V8ZM10 14V18H6V14H10ZM16 14V18H12V14H16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 4H18V6H20V8H18V10H16V8H14V6H16V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 12V6H4V20H18V12H12ZM6 8H10V12H6V8ZM10 14V18H6V14H10ZM16 14V18H12V14H16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8396,7 +8396,7 @@ pub fn CgExtensionRemove(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 11V5H4V19H18V11H12ZM6 7H10V11H6V7ZM10 13V17H6V13H10ZM16 13V17H12V13H16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H14V9H20V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 11V5H4V19H18V11H12ZM6 7H10V11H6V7ZM10 13V17H6V13H10ZM16 13V17H12V13H16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H14V9H20V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8426,7 +8426,7 @@ pub fn CgExternal(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8456,7 +8456,7 @@ pub fn CgEye(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C17.5915 3 22.2898 6.82432 23.6219 12C22.2898 17.1757 17.5915 21 12 21C6.40848 21 1.71018 17.1757 0.378052 12C1.71018 6.82432 6.40848 3 12 3ZM12 19C7.52443 19 3.73132 16.0581 2.45723 12C3.73132 7.94186 7.52443 5 12 5C16.4756 5 20.2687 7.94186 21.5428 12C20.2687 16.0581 16.4756 19 12 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C17.5915 3 22.2898 6.82432 23.6219 12C22.2898 17.1757 17.5915 21 12 21C6.40848 21 1.71018 17.1757 0.378052 12C1.71018 6.82432 6.40848 3 12 3ZM12 19C7.52443 19 3.73132 16.0581 2.45723 12C3.73132 7.94186 7.52443 5 12 5C16.4756 5 20.2687 7.94186 21.5428 12C20.2687 16.0581 16.4756 19 12 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8486,7 +8486,7 @@ pub fn CgEyeAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C6.40848 3 1.71018 6.82432 0.378052 12C1.71018 17.1757 6.40848 21 12 21C17.5915 21 22.2898 17.1757 23.6219 12C22.2898 6.82432 17.5915 3 12 3ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C6.40848 3 1.71018 6.82432 0.378052 12C1.71018 17.1757 6.40848 21 12 21C17.5915 21 22.2898 17.1757 23.6219 12C22.2898 6.82432 17.5915 3 12 3ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8546,7 +8546,7 @@ pub fn CgFeed(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 8C11.9997 8 11.552 8.44772 11.552 9C11.552 9.55228 11.9997 10 12.552 10H16.552C17.1043 10 17.552 9.55228 17.552 9C17.552 8.44772 17.1043 8 16.552 8H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 17C11.9997 17 11.552 17.4477 11.552 18C11.552 18.5523 11.9997 19 12.552 19H16.552C17.1043 19 17.552 18.5523 17.552 18C17.552 17.4477 17.1043 17 16.552 17H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 5C11.9997 5 11.552 5.44772 11.552 6C11.552 6.55228 11.9997 7 12.552 7H20.552C21.1043 7 21.552 6.55228 21.552 6C21.552 5.44772 21.1043 5 20.552 5H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.8\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 14C11.9997 14 11.552 14.4477 11.552 15C11.552 15.5523 11.9997 16 12.552 16H20.552C21.1043 16 21.552 15.5523 21.552 15C21.552 14.4477 21.1043 14 20.552 14H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.8\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.448 4.00208C2.89571 4.00208 2.448 4.44979 2.448 5.00208V10.0021C2.448 10.5544 2.89571 11.0021 3.448 11.0021H8.448C9.00028 11.0021 9.448 10.5544 9.448 10.0021V5.00208C9.448 4.44979 9.00028 4.00208 8.448 4.00208H3.448Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.448 12.9979C2.89571 12.9979 2.448 13.4456 2.448 13.9979V18.9979C2.448 19.5502 2.89571 19.9979 3.448 19.9979H8.448C9.00028 19.9979 9.448 19.5502 9.448 18.9979V13.9979C9.448 13.4456 9.00028 12.9979 8.448 12.9979H3.448Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 8C11.9997 8 11.552 8.44772 11.552 9C11.552 9.55228 11.9997 10 12.552 10H16.552C17.1043 10 17.552 9.55228 17.552 9C17.552 8.44772 17.1043 8 16.552 8H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 17C11.9997 17 11.552 17.4477 11.552 18C11.552 18.5523 11.9997 19 12.552 19H16.552C17.1043 19 17.552 18.5523 17.552 18C17.552 17.4477 17.1043 17 16.552 17H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 5C11.9997 5 11.552 5.44772 11.552 6C11.552 6.55228 11.9997 7 12.552 7H20.552C21.1043 7 21.552 6.55228 21.552 6C21.552 5.44772 21.1043 5 20.552 5H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.8\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.552 14C11.9997 14 11.552 14.4477 11.552 15C11.552 15.5523 11.9997 16 12.552 16H20.552C21.1043 16 21.552 15.5523 21.552 15C21.552 14.4477 21.1043 14 20.552 14H12.552Z\" fill=\"currentColor\" fill-opacity=\"0.8\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.448 4.00208C2.89571 4.00208 2.448 4.44979 2.448 5.00208V10.0021C2.448 10.5544 2.89571 11.0021 3.448 11.0021H8.448C9.00028 11.0021 9.448 10.5544 9.448 10.0021V5.00208C9.448 4.44979 9.00028 4.00208 8.448 4.00208H3.448Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.448 12.9979C2.89571 12.9979 2.448 13.4456 2.448 13.9979V18.9979C2.448 19.5502 2.89571 19.9979 3.448 19.9979H8.448C9.00028 19.9979 9.448 19.5502 9.448 18.9979V13.9979C9.448 13.4456 9.00028 12.9979 8.448 12.9979H3.448Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8576,7 +8576,7 @@ pub fn CgFigma(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 2C6.84315 2 5.5 3.34315 5.5 5C5.5 6.65685 6.84315 8 8.5 8H15.5C17.1569 8 18.5 6.65685 18.5 5C18.5 3.34315 17.1569 2 15.5 2H8.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 9C13.8431 9 12.5 10.3431 12.5 12C12.5 13.6569 13.8431 15 15.5 15C17.1569 15 18.5 13.6569 18.5 12C18.5 10.3431 17.1569 9 15.5 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 12C5.5 10.3431 6.84315 9 8.5 9H11.5V15H8.5C6.84315 15 5.5 13.6569 5.5 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 16C6.84315 16 5.5 17.3431 5.5 19C5.5 20.6569 6.84315 22 8.5 22C10.1569 22 11.5 20.6569 11.5 19V16H8.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 2C6.84315 2 5.5 3.34315 5.5 5C5.5 6.65685 6.84315 8 8.5 8H15.5C17.1569 8 18.5 6.65685 18.5 5C18.5 3.34315 17.1569 2 15.5 2H8.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 9C13.8431 9 12.5 10.3431 12.5 12C12.5 13.6569 13.8431 15 15.5 15C17.1569 15 18.5 13.6569 18.5 12C18.5 10.3431 17.1569 9 15.5 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.5 12C5.5 10.3431 6.84315 9 8.5 9H11.5V15H8.5C6.84315 15 5.5 13.6569 5.5 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 16C6.84315 16 5.5 17.3431 5.5 19C5.5 20.6569 6.84315 22 8.5 22C10.1569 22 11.5 20.6569 11.5 19V16H8.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8636,7 +8636,7 @@ pub fn CgFileAdd(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 18V16H8V14H10V12H12V14H14V16H12V18H10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 18V16H8V14H10V12H12V14H14V16H12V18H10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8666,7 +8666,7 @@ pub fn CgFileDocument(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18H17V16H7V18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 14H7V12H17V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 10H11V8H7V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8696,7 +8696,7 @@ pub fn CgFileRemove(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15H15V13H9V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15H15V13H9V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8726,7 +8726,7 @@ pub fn CgFilm(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9C6.55228 9 7 8.55228 7 8C7 7.44772 6.55228 7 6 7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 8C17 7.44772 17.4477 7 18 7C18.5523 7 19 7.44772 19 8C19 8.55228 18.5523 9 18 9C17.4477 9 17 8.55228 17 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13C6.55228 13 7 12.5523 7 12C7 11.4477 6.55228 11 6 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 12C17 11.4477 17.4477 11 18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13C17.4477 13 17 12.5523 17 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15C5.44772 15 5 15.4477 5 16C5 16.5523 5.44772 17 6 17C6.55228 17 7 16.5523 7 16C7 15.4477 6.55228 15 6 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 16C17 15.4477 17.4477 15 18 15C18.5523 15 19 15.4477 19 16C19 16.5523 18.5523 17 18 17C17.4477 17 17 16.5523 17 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9C6.55228 9 7 8.55228 7 8C7 7.44772 6.55228 7 6 7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 8C17 7.44772 17.4477 7 18 7C18.5523 7 19 7.44772 19 8C19 8.55228 18.5523 9 18 9C17.4477 9 17 8.55228 17 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13C6.55228 13 7 12.5523 7 12C7 11.4477 6.55228 11 6 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 12C17 11.4477 17.4477 11 18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13C17.4477 13 17 12.5523 17 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15C5.44772 15 5 15.4477 5 16C5 16.5523 5.44772 17 6 17C6.55228 17 7 16.5523 7 16C7 15.4477 6.55228 15 6 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 16C17 15.4477 17.4477 15 18 15C18.5523 15 19 15.4477 19 16C19 16.5523 18.5523 17 18 17C17.4477 17 17 16.5523 17 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8876,7 +8876,7 @@ pub fn CgFolderAdd(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14.5V16.5H13V14.5H15V12.5H13V10.5H11V12.5H9V14.5H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1.5C2.89543 1.5 2 2.39543 2 3.5V4.5C2 4.55666 2.00236 4.61278 2.00698 4.66825C0.838141 5.07811 0 6.19118 0 7.5V19.5C0 21.1569 1.34315 22.5 3 22.5H21C22.6569 22.5 24 21.1569 24 19.5V7.5C24 5.84315 22.6569 4.5 21 4.5H11.874C11.4299 2.77477 9.86384 1.5 8 1.5H4ZM9.73244 4.5C9.38663 3.9022 8.74028 3.5 8 3.5H4V4.5H9.73244ZM3 6.5C2.44772 6.5 2 6.94772 2 7.5V19.5C2 20.0523 2.44772 20.5 3 20.5H21C21.5523 20.5 22 20.0523 22 19.5V7.5C22 6.94772 21.5523 6.5 21 6.5H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14.5V16.5H13V14.5H15V12.5H13V10.5H11V12.5H9V14.5H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1.5C2.89543 1.5 2 2.39543 2 3.5V4.5C2 4.55666 2.00236 4.61278 2.00698 4.66825C0.838141 5.07811 0 6.19118 0 7.5V19.5C0 21.1569 1.34315 22.5 3 22.5H21C22.6569 22.5 24 21.1569 24 19.5V7.5C24 5.84315 22.6569 4.5 21 4.5H11.874C11.4299 2.77477 9.86384 1.5 8 1.5H4ZM9.73244 4.5C9.38663 3.9022 8.74028 3.5 8 3.5H4V4.5H9.73244ZM3 6.5C2.44772 6.5 2 6.94772 2 7.5V19.5C2 20.0523 2.44772 20.5 3 20.5H21C21.5523 20.5 22 20.0523 22 19.5V7.5C22 6.94772 21.5523 6.5 21 6.5H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8906,7 +8906,7 @@ pub fn CgFolderRemove(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 14.5V12.5H15V14.5H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1.5C2.89543 1.5 2 2.39543 2 3.5V4.5C2 4.55666 2.00236 4.61278 2.00698 4.66825C0.838141 5.07811 0 6.19118 0 7.5V19.5C0 21.1569 1.34315 22.5 3 22.5H21C22.6569 22.5 24 21.1569 24 19.5V7.5C24 5.84315 22.6569 4.5 21 4.5H11.874C11.4299 2.77477 9.86384 1.5 8 1.5H4ZM9.73244 4.5C9.38663 3.9022 8.74028 3.5 8 3.5H4V4.5H9.73244ZM3 6.5C2.44772 6.5 2 6.94772 2 7.5V19.5C2 20.0523 2.44772 20.5 3 20.5H21C21.5523 20.5 22 20.0523 22 19.5V7.5C22 6.94772 21.5523 6.5 21 6.5H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 14.5V12.5H15V14.5H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 1.5C2.89543 1.5 2 2.39543 2 3.5V4.5C2 4.55666 2.00236 4.61278 2.00698 4.66825C0.838141 5.07811 0 6.19118 0 7.5V19.5C0 21.1569 1.34315 22.5 3 22.5H21C22.6569 22.5 24 21.1569 24 19.5V7.5C24 5.84315 22.6569 4.5 21 4.5H11.874C11.4299 2.77477 9.86384 1.5 8 1.5H4ZM9.73244 4.5C9.38663 3.9022 8.74028 3.5 8 3.5H4V4.5H9.73244ZM3 6.5C2.44772 6.5 2 6.94772 2 7.5V19.5C2 20.0523 2.44772 20.5 3 20.5H21C21.5523 20.5 22 20.0523 22 19.5V7.5C22 6.94772 21.5523 6.5 21 6.5H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8936,7 +8936,7 @@ pub fn CgFontHeight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 5V3H3V5H21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 19V21H3V19H21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0001 7.37636C11.602 7.35207 11.2112 7.56874 11.0325 7.95204L7.65154 15.2025C7.41815 15.7031 7.6347 16.2981 8.13522 16.5315C8.63577 16.7649 9.23074 16.5484 9.46417 16.0477L9.95278 14.9999H14.0473L14.5359 16.0477C14.7693 16.5484 15.3643 16.7649 15.8648 16.5315C16.3654 16.2981 16.5819 15.7031 16.3485 15.2025L12.9676 7.95204C12.7888 7.56874 12.3981 7.35207 12.0001 7.37636ZM13.1147 12.9999H10.8854L12.0001 10.6095L13.1147 12.9999Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 5V3H3V5H21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 19V21H3V19H21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0001 7.37636C11.602 7.35207 11.2112 7.56874 11.0325 7.95204L7.65154 15.2025C7.41815 15.7031 7.6347 16.2981 8.13522 16.5315C8.63577 16.7649 9.23074 16.5484 9.46417 16.0477L9.95278 14.9999H14.0473L14.5359 16.0477C14.7693 16.5484 15.3643 16.7649 15.8648 16.5315C16.3654 16.2981 16.5819 15.7031 16.3485 15.2025L12.9676 7.95204C12.7888 7.56874 12.3981 7.35207 12.0001 7.37636ZM13.1147 12.9999H10.8854L12.0001 10.6095L13.1147 12.9999Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -8966,7 +8966,7 @@ pub fn CgFontSpacing(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 21H21V3H19L19 21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 21H3V3H5L5 21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.46416 16.0479L9.95281 14.9999H14.0473L14.5359 16.0478C14.7693 16.5484 15.3643 16.7649 15.8649 16.5315C16.3654 16.2981 16.582 15.7031 16.3485 15.2026L12.9676 7.95213C12.7888 7.56877 12.398 7.35199 11.9999 7.37637C11.6019 7.35214 11.2112 7.5689 11.0325 7.95216L7.65155 15.2026C7.41814 15.7032 7.6347 16.2981 8.13524 16.5315C8.63578 16.7649 9.23076 16.5484 9.46416 16.0479ZM12.0001 10.6096L10.8854 12.9999H13.1147L12.0001 10.6096Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 21H21V3H19L19 21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 21H3V3H5L5 21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.46416 16.0479L9.95281 14.9999H14.0473L14.5359 16.0478C14.7693 16.5484 15.3643 16.7649 15.8649 16.5315C16.3654 16.2981 16.582 15.7031 16.3485 15.2026L12.9676 7.95213C12.7888 7.56877 12.398 7.35199 11.9999 7.37637C11.6019 7.35214 11.2112 7.5689 11.0325 7.95216L7.65155 15.2026C7.41814 15.7032 7.6347 16.2981 8.13524 16.5315C8.63578 16.7649 9.23076 16.5484 9.46416 16.0479ZM12.0001 10.6096L10.8854 12.9999H13.1147L12.0001 10.6096Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9026,7 +9026,7 @@ pub fn CgFormatCenter(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 13C3.44772 13 3 13.4477 3 14C3 14.5523 3.44772 15 4 15H20C20.5523 15 21 14.5523 21 14C21 13.4477 20.5523 13 20 13H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10C6 9.44772 6.44772 9 7 9H17C17.5523 9 18 9.44772 18 10C18 10.5523 17.5523 11 17 11H7C6.44772 11 6 10.5523 6 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 17C6.44772 17 6 17.4477 6 18C6 18.5523 6.44772 19 7 19H17C17.5523 19 18 18.5523 18 18C18 17.4477 17.5523 17 17 17H7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 13C3.44772 13 3 13.4477 3 14C3 14.5523 3.44772 15 4 15H20C20.5523 15 21 14.5523 21 14C21 13.4477 20.5523 13 20 13H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10C6 9.44772 6.44772 9 7 9H17C17.5523 9 18 9.44772 18 10C18 10.5523 17.5523 11 17 11H7C6.44772 11 6 10.5523 6 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 17C6.44772 17 6 17.4477 6 18C6 18.5523 6.44772 19 7 19H17C17.5523 19 18 18.5523 18 18C18 17.4477 17.5523 17 17 17H7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9056,7 +9056,7 @@ pub fn CgFormatColor(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.9479 3.20946C12.7721 2.83236 12.391 2.61645 11.9997 2.63269C11.6086 2.61666 11.2278 2.83255 11.0521 3.20948L5.1354 15.8978C4.90199 16.3983 5.11855 16.9933 5.61909 17.2267C6.11963 17.4601 6.71461 17.2436 6.94801 16.743L8.39869 13.632H15.6013L17.052 16.743C17.2854 17.2435 17.8804 17.4601 18.3809 17.2267C18.8814 16.9933 19.098 16.3983 18.8646 15.8978L12.9479 3.20946ZM14.6687 11.632L12 5.909L9.33131 11.632H14.6687Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 19.3682C5.44772 19.3682 5 19.816 5 20.3682C5 20.9205 5.44772 21.3682 6 21.3682H18C18.5523 21.3682 19 20.9205 19 20.3682C19 19.816 18.5523 19.3682 18 19.3682H6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.9479 3.20946C12.7721 2.83236 12.391 2.61645 11.9997 2.63269C11.6086 2.61666 11.2278 2.83255 11.0521 3.20948L5.1354 15.8978C4.90199 16.3983 5.11855 16.9933 5.61909 17.2267C6.11963 17.4601 6.71461 17.2436 6.94801 16.743L8.39869 13.632H15.6013L17.052 16.743C17.2854 17.2435 17.8804 17.4601 18.3809 17.2267C18.8814 16.9933 19.098 16.3983 18.8646 15.8978L12.9479 3.20946ZM14.6687 11.632L12 5.909L9.33131 11.632H14.6687Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 19.3682C5.44772 19.3682 5 19.816 5 20.3682C5 20.9205 5.44772 21.3682 6 21.3682H18C18.5523 21.3682 19 20.9205 19 20.3682C19 19.816 18.5523 19.3682 18 19.3682H6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9116,7 +9116,7 @@ pub fn CgFormatIndentDecrease(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H4V5H20V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H12V9H20V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15H20V13H12V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9L4 12L9 15V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17V19H20V17H4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H4V5H20V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H12V9H20V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15H20V13H12V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9L4 12L9 15V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17V19H20V17H4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9146,7 +9146,7 @@ pub fn CgFormatIndentIncrease(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H4V5H20V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H12V9H20V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15H20V13H12V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 15L9 12L4 9V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17V19H20V17H4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7H4V5H20V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H12V9H20V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15H20V13H12V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 15L9 12L4 9V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17V19H20V17H4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9206,7 +9206,7 @@ pub fn CgFormatJustify(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 9C3.44772 9 3 9.44772 3 10C3 10.5523 3.44772 11 4 11H20C20.5523 11 21 10.5523 21 10C21 9.44772 20.5523 9 20 9H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 14C3 13.4477 3.44772 13 4 13H20C20.5523 13 21 13.4477 21 14C21 14.5523 20.5523 15 20 15H4C3.44772 15 3 14.5523 3 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17C3.44772 17 3 17.4477 3 18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18C21 17.4477 20.5523 17 20 17H4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 9C3.44772 9 3 9.44772 3 10C3 10.5523 3.44772 11 4 11H20C20.5523 11 21 10.5523 21 10C21 9.44772 20.5523 9 20 9H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 14C3 13.4477 3.44772 13 4 13H20C20.5523 13 21 13.4477 21 14C21 14.5523 20.5523 15 20 15H4C3.44772 15 3 14.5523 3 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17C3.44772 17 3 17.4477 3 18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18C21 17.4477 20.5523 17 20 17H4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9236,7 +9236,7 @@ pub fn CgFormatLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 9C3.44772 9 3 9.44772 3 10C3 10.5523 3.44772 11 4 11H12C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 14C3 13.4477 3.44772 13 4 13H20C20.5523 13 21 13.4477 21 14C21 14.5523 20.5523 15 20 15H4C3.44772 15 3 14.5523 3 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17C3.44772 17 3 17.4477 3 18C3 18.5523 3.44772 19 4 19H12C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17H4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 9C3.44772 9 3 9.44772 3 10C3 10.5523 3.44772 11 4 11H12C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 14C3 13.4477 3.44772 13 4 13H20C20.5523 13 21 13.4477 21 14C21 14.5523 20.5523 15 20 15H4C3.44772 15 3 14.5523 3 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 17C3.44772 17 3 17.4477 3 18C3 18.5523 3.44772 19 4 19H12C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17H4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9266,7 +9266,7 @@ pub fn CgFormatLineHeight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.09668 6.99707H7.17358L4.17358 3.99707L1.17358 6.99707H3.09668V17.0031H1.15881L4.15881 20.0031L7.15881 17.0031H5.09668V6.99707Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.8412 7H8.84119V5H22.8412V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.8412 11H8.84119V9H22.8412V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.84119 15H22.8412V13H8.84119V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.8412 19H8.84119V17H22.8412V19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.09668 6.99707H7.17358L4.17358 3.99707L1.17358 6.99707H3.09668V17.0031H1.15881L4.15881 20.0031L7.15881 17.0031H5.09668V6.99707Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.8412 7H8.84119V5H22.8412V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.8412 11H8.84119V9H22.8412V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.84119 15H22.8412V13H8.84119V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.8412 19H8.84119V17H22.8412V19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9296,7 +9296,7 @@ pub fn CgFormatRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 5C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5H20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 9C20.5523 9 21 9.44772 21 10C21 10.5523 20.5523 11 20 11H12C11.4477 11 11 10.5523 11 10C11 9.44772 11.4477 9 12 9H20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 14C21 13.4477 20.5523 13 20 13H4C3.44772 13 3 13.4477 3 14C3 14.5523 3.44772 15 4 15H20C20.5523 15 21 14.5523 21 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 17C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H12C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17H20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 5C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6C3 5.44772 3.44772 5 4 5H20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 9C20.5523 9 21 9.44772 21 10C21 10.5523 20.5523 11 20 11H12C11.4477 11 11 10.5523 11 10C11 9.44772 11.4477 9 12 9H20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 14C21 13.4477 20.5523 13 20 13H4C3.44772 13 3 13.4477 3 14C3 14.5523 3.44772 15 4 15H20C20.5523 15 21 14.5523 21 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 17C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H12C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17H20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9326,7 +9326,7 @@ pub fn CgFormatSeparator(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<g xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\"><path d=\"M16 5C16.5523 5 17 4.55229 17 4C17 3.44772 16.5523 3 16 3H8C7.44771 3 7 3.44772 7 4C7 4.55228 7.44771 5 8 5L16 5Z\" fill=\"currentColor\" /><path d=\"M16 7C16.5523 7 17 7.44772 17 8C17 8.55229 16.5523 9 16 9H8C7.44771 9 7 8.55229 7 8C7 7.44772 7.44771 7 8 7H16Z\" fill=\"currentColor\" /><path d=\"M17 12C17 12.5523 16.5523 13 16 13L8 13C7.44771 13 7 12.5523 7 12C7 11.4477 7.44771 11 8 11L16 11C16.5523 11 17 11.4477 17 12Z\" fill=\"currentColor\" /><path d=\"M16 21C16.5523 21 17 20.5523 17 20C17 19.4477 16.5523 19 16 19L8 19C7.44771 19 7 19.4477 7 20C7 20.5523 7.44771 21 8 21H16Z\" fill=\"currentColor\" /></g><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21 16C21 16.5523 20.5523 17 20 17L4 17C3.44772 17 3 16.5523 3 16C3 15.4477 3.44772 15 4 15L20 15C20.5523 15 21 15.4477 21 16Z\" fill=\"currentColor\" />"
+        "<g xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\">\n  <path d=\"M16 5C16.5523 5 17 4.55229 17 4C17 3.44772 16.5523 3 16 3H8C7.44771 3 7 3.44772 7 4C7 4.55228 7.44771 5 8 5L16 5Z\" fill=\"currentColor\" />\n  <path d=\"M16 7C16.5523 7 17 7.44772 17 8C17 8.55229 16.5523 9 16 9H8C7.44771 9 7 8.55229 7 8C7 7.44772 7.44771 7 8 7H16Z\" fill=\"currentColor\" />\n  <path d=\"M17 12C17 12.5523 16.5523 13 16 13L8 13C7.44771 13 7 12.5523 7 12C7 11.4477 7.44771 11 8 11L16 11C16.5523 11 17 11.4477 17 12Z\" fill=\"currentColor\" />\n  <path d=\"M16 21C16.5523 21 17 20.5523 17 20C17 19.4477 16.5523 19 16 19L8 19C7.44771 19 7 19.4477 7 20C7 20.5523 7.44771 21 8 21H16Z\" fill=\"currentColor\" />\n</g>\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21 16C21 16.5523 20.5523 17 20 17L4 17C3.44772 17 3 16.5523 3 16C3 15.4477 3.44772 15 4 15L20 15C20.5523 15 21 15.4477 21 16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9386,7 +9386,7 @@ pub fn CgFormatStrike(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H17V5H7V7H11V10H13V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 19V14H13V19H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13H19V11H5V13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7H17V5H7V7H11V10H13V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 19V14H13V19H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13H19V11H5V13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9416,7 +9416,7 @@ pub fn CgFormatText(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.5 3H3V6.5H4V4H6.5V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 4V3H11V4H8.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 4H15.5V3H13V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.5 3V4H20V6.5H21V3H17.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 8.5H20V11H21V8.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 13H20V15.5H21V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 17.5H20V20H17.5V21H21V17.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 21V20H13V21H15.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 21V20H8.5V21H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.5 21V20H4V17.5H3V21H6.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 15.5H4V13H3V15.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11H4V8.5H3V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9.5H7V7.5H17V9.5H13V16.5H11V9.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.5 3H3V6.5H4V4H6.5V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 4V3H11V4H8.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 4H15.5V3H13V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.5 3V4H20V6.5H21V3H17.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 8.5H20V11H21V8.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 13H20V15.5H21V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 17.5H20V20H17.5V21H21V17.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 21V20H13V21H15.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 21V20H8.5V21H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.5 21V20H4V17.5H3V21H6.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 15.5H4V13H3V15.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11H4V8.5H3V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9.5H7V7.5H17V9.5H13V16.5H11V9.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9446,7 +9446,7 @@ pub fn CgFormatUnderline(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10V4H8V10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10V4H18V10C18 13.3137 15.3137 16 12 16C8.68629 16 6 13.3137 6 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18C6.44772 18 6 18.4477 6 19C6 19.5523 6.44771 20 7 20H17C17.5523 20 18 19.5523 18 19C18 18.4477 17.5523 18 17 18H7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10V4H8V10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10V4H18V10C18 13.3137 15.3137 16 12 16C8.68629 16 6 13.3137 6 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18C6.44772 18 6 18.4477 6 19C6 19.5523 6.44771 20 7 20H17C17.5523 20 18 19.5523 18 19C18 18.4477 17.5523 18 17 18H7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9506,7 +9506,7 @@ pub fn CgFramer(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 21L12 9L6 9L6 15L12 21Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 9V3H6L12 9H6V15H18L12 9H18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 21L12 9L6 9L6 15L12 21Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 9V3H6L12 9H6V15H18L12 9H18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9536,7 +9536,7 @@ pub fn CgGames(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.7121 11.2929C19.3216 10.9024 18.6885 10.9024 18.2979 11.2929C17.9074 11.6834 17.9074 12.3166 18.2979 12.7071C18.6885 13.0976 19.3216 13.0976 19.7121 12.7071C20.1027 12.3166 20.1027 11.6834 19.7121 11.2929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.4695 11.2929C15.0789 10.9024 14.4458 10.9024 14.0553 11.2929C13.6647 11.6834 13.6647 12.3166 14.0553 12.7071C14.4458 13.0976 15.0789 13.0976 15.4695 12.7071C15.86 12.3166 15.86 11.6834 15.4695 11.2929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.1766 9.17156C16.5671 8.78103 17.2003 8.78103 17.5908 9.17156C17.9813 9.56208 17.9813 10.1952 17.5908 10.5858C17.2003 10.9763 16.5671 10.9763 16.1766 10.5858C15.7861 10.1952 15.7861 9.56208 16.1766 9.17156Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.7121 11.2929C19.3216 10.9024 18.6885 10.9024 18.2979 11.2929C17.9074 11.6834 17.9074 12.3166 18.2979 12.7071C18.6885 13.0976 19.3216 13.0976 19.7121 12.7071C20.1027 12.3166 20.1027 11.6834 19.7121 11.2929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.1766 13.4142C16.5671 13.0237 17.2003 13.0237 17.5908 13.4142C17.9813 13.8048 17.9813 14.4379 17.5908 14.8284C17.2003 15.219 16.5671 15.219 16.1766 14.8284C15.7861 14.4379 15.7861 13.8048 16.1766 13.4142Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 13H4V11H6V9H8V11H10V13H8V15H6V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9626,7 +9626,7 @@ pub fn CgGhost(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 4H15V8H3V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 8H17V4H21V8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 10H21V14H3V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 16H3V20H11V16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 16V20H21V16H13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 4H15V8H3V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 8H17V4H21V8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 10H21V14H3V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 16H3V20H11V16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 16V20H21V16H13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9656,7 +9656,7 @@ pub fn CgGhostCharacter(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9759 9C10.9759 9.55228 10.5282 10 9.97589 10C9.42361 10 8.97589 9.55228 8.97589 9C8.97589 8.44771 9.42361 8 9.97589 8C10.5282 8 10.9759 8.44771 10.9759 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.9712 10C14.5235 10 14.9712 9.55228 14.9712 9C14.9712 8.44771 14.5235 8 13.9712 8C13.4189 8 12.9712 8.44771 12.9712 9C12.9712 9.55228 13.4189 10 13.9712 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 20.9999V10C19 6.13401 15.866 3 12 3C8.13401 3 5 6.13401 5 10V21L7.82846 21L9.24264 19.5858L10.6569 21L13.3433 21L14.7574 19.5858L16.1717 21L19 20.9999ZM17 10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10V19L9.24264 16.7573L12 19.5147L14.7574 16.7573L17 18.9999V10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9759 9C10.9759 9.55228 10.5282 10 9.97589 10C9.42361 10 8.97589 9.55228 8.97589 9C8.97589 8.44771 9.42361 8 9.97589 8C10.5282 8 10.9759 8.44771 10.9759 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.9712 10C14.5235 10 14.9712 9.55228 14.9712 9C14.9712 8.44771 14.5235 8 13.9712 8C13.4189 8 12.9712 8.44771 12.9712 9C12.9712 9.55228 13.4189 10 13.9712 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 20.9999V10C19 6.13401 15.866 3 12 3C8.13401 3 5 6.13401 5 10V21L7.82846 21L9.24264 19.5858L10.6569 21L13.3433 21L14.7574 19.5858L16.1717 21L19 20.9999ZM17 10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10V19L9.24264 16.7573L12 19.5147L14.7574 16.7573L17 18.9999V10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9716,7 +9716,7 @@ pub fn CgGirl(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0244 2.00003L12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.74235 17.9425 2.43237 12.788 2.03059L12.7886 2.0282C12.5329 2.00891 12.278 1.99961 12.0244 2.00003ZM12 20C16.4183 20 20 16.4183 20 12C20 11.3014 19.9105 10.6237 19.7422 9.97775C16.1597 10.2313 12.7359 8.52461 10.7605 5.60246C9.31322 7.07886 7.2982 7.99666 5.06879 8.00253C4.38902 9.17866 4 10.5439 4 12C4 16.4183 7.58172 20 12 20ZM11.9785 4.00003L12.0236 4.00003L12 4L11.9785 4.00003Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 12C10 12.5523 9.55228 13 9 13C8.44772 13 8 12.5523 8 12C8 11.4477 8.44772 11 9 11C9.55228 11 10 11.4477 10 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.0244 2.00003L12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.74235 17.9425 2.43237 12.788 2.03059L12.7886 2.0282C12.5329 2.00891 12.278 1.99961 12.0244 2.00003ZM12 20C16.4183 20 20 16.4183 20 12C20 11.3014 19.9105 10.6237 19.7422 9.97775C16.1597 10.2313 12.7359 8.52461 10.7605 5.60246C9.31322 7.07886 7.2982 7.99666 5.06879 8.00253C4.38902 9.17866 4 10.5439 4 12C4 16.4183 7.58172 20 12 20ZM11.9785 4.00003L12.0236 4.00003L12 4L11.9785 4.00003Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9866,7 +9866,7 @@ pub fn CgGitter(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 1.5H7V14.5H5V1.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 4.5H11V22.5H9V4.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 4.5H13V22.5H15V4.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 4.5H19V14.5H17V4.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 1.5H7V14.5H5V1.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 4.5H11V22.5H9V4.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 4.5H13V22.5H15V4.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 4.5H19V14.5H17V4.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -9956,7 +9956,7 @@ pub fn CgGlobe(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.85327 8C6.85327 5.23858 9.09185 3 11.8533 3C14.6147 3 16.8533 5.23858 16.8533 8C16.8533 10.7614 14.6147 13 11.8533 13C9.09185 13 6.85327 10.7614 6.85327 8ZM11.8533 11C10.1964 11 8.85327 9.65685 8.85327 8C8.85327 6.34315 10.1964 5 11.8533 5C13.5101 5 14.8533 6.34315 14.8533 8C14.8533 9.65685 13.5101 11 11.8533 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.1294C6.25216 14.2031 8.4189 15.6624 10.9414 15.9486V18H8.85327V20H14.8533V18H12.9414V15.9266C16.8449 15.3958 19.8532 12.0492 19.8532 8.00001C19.8532 6.43638 19.4046 4.97752 18.6291 3.74512L16.9253 4.79326C17.513 5.72084 17.8532 6.82069 17.8532 8.00001C17.8532 11.3137 15.167 14 11.8532 14C9.66611 14 7.75231 12.8298 6.70381 11.0813L5 12.1294Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.85327 8C6.85327 5.23858 9.09185 3 11.8533 3C14.6147 3 16.8533 5.23858 16.8533 8C16.8533 10.7614 14.6147 13 11.8533 13C9.09185 13 6.85327 10.7614 6.85327 8ZM11.8533 11C10.1964 11 8.85327 9.65685 8.85327 8C8.85327 6.34315 10.1964 5 11.8533 5C13.5101 5 14.8533 6.34315 14.8533 8C14.8533 9.65685 13.5101 11 11.8533 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.1294C6.25216 14.2031 8.4189 15.6624 10.9414 15.9486V18H8.85327V20H14.8533V18H12.9414V15.9266C16.8449 15.3958 19.8532 12.0492 19.8532 8.00001C19.8532 6.43638 19.4046 4.97752 18.6291 3.74512L16.9253 4.79326C17.513 5.72084 17.8532 6.82069 17.8532 8.00001C17.8532 11.3137 15.167 14 11.8532 14C9.66611 14 7.75231 12.8298 6.70381 11.0813L5 12.1294Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10046,7 +10046,7 @@ pub fn CgGoogleTasks(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.7679 5.71447C17.4779 4.86832 18.7394 4.75795 19.5856 5.46796C20.4317 6.17796 20.5421 7.43947 19.8321 8.28562L10.833 19.0102C10.123 19.8564 8.86153 19.9668 8.01538 19.2568C7.16923 18.5468 7.05886 17.2852 7.76886 16.4391L16.7679 5.71447Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12.7396C3 11.6351 3.89543 10.7396 5 10.7396C6.10457 10.7396 7 11.6351 7 12.7396C7 13.8442 6.10457 14.7396 5 14.7396C3.89543 14.7396 3 13.8442 3 12.7396Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.7679 5.71447C17.4779 4.86832 18.7394 4.75795 19.5856 5.46796C20.4317 6.17796 20.5421 7.43947 19.8321 8.28562L10.833 19.0102C10.123 19.8564 8.86153 19.9668 8.01538 19.2568C7.16923 18.5468 7.05886 17.2852 7.76886 16.4391L16.7679 5.71447Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12.7396C3 11.6351 3.89543 10.7396 5 10.7396C6.10457 10.7396 7 11.6351 7 12.7396C7 13.8442 6.10457 14.7396 5 14.7396C3.89543 14.7396 3 13.8442 3 12.7396Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10076,7 +10076,7 @@ pub fn CgGym(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.2739 9.86883L16.8325 4.95392L18.4708 3.80676L21.9122 8.72167L20.2739 9.86883Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.3901 12.4086L16.6694 9.95121L8.47783 15.687L10.1985 18.1444L8.56023 19.2916L3.97162 12.7383L5.60992 11.5912L7.33068 14.0487L15.5222 8.31291L13.8015 5.8554L15.4398 4.70825L20.0284 11.2615L18.3901 12.4086Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.7651 7.08331L22.4034 5.93616L21.2562 4.29785L19.6179 5.445L20.7651 7.08331Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.16753 19.046L3.72607 14.131L2.08777 15.2782L5.52923 20.1931L7.16753 19.046Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.38208 18.5549L2.74377 19.702L1.59662 18.0637L3.23492 16.9166L4.38208 18.5549Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.2739 9.86883L16.8325 4.95392L18.4708 3.80676L21.9122 8.72167L20.2739 9.86883Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.3901 12.4086L16.6694 9.95121L8.47783 15.687L10.1985 18.1444L8.56023 19.2916L3.97162 12.7383L5.60992 11.5912L7.33068 14.0487L15.5222 8.31291L13.8015 5.8554L15.4398 4.70825L20.0284 11.2615L18.3901 12.4086Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.7651 7.08331L22.4034 5.93616L21.2562 4.29785L19.6179 5.445L20.7651 7.08331Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.16753 19.046L3.72607 14.131L2.08777 15.2782L5.52923 20.1931L7.16753 19.046Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.38208 18.5549L2.74377 19.702L1.59662 18.0637L3.23492 16.9166L4.38208 18.5549Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10196,7 +10196,7 @@ pub fn CgHello(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.5 12C17.5 13.576 16.8371 14.9972 15.7749 16C14.7899 16.9299 13.4615 17.5 12 17.5C10.5385 17.5 9.21007 16.9299 8.22506 16C7.16289 14.9972 6.5 13.576 6.5 12H17.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 7C1 3.68629 3.68629 1 7 1H17C20.3137 1 23 3.68629 23 7V17C23 20.3137 20.3137 23 17 23H1V7ZM3.75 12C3.75 7.44365 7.44365 3.75 12 3.75C16.5563 3.75 20.25 7.44365 20.25 12C20.25 16.5563 16.5563 20.25 12 20.25C7.44365 20.25 3.75 16.5563 3.75 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.5 12C17.5 13.576 16.8371 14.9972 15.7749 16C14.7899 16.9299 13.4615 17.5 12 17.5C10.5385 17.5 9.21007 16.9299 8.22506 16C7.16289 14.9972 6.5 13.576 6.5 12H17.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 7C1 3.68629 3.68629 1 7 1H17C20.3137 1 23 3.68629 23 7V17C23 20.3137 20.3137 23 17 23H1V7ZM3.75 12C3.75 7.44365 7.44365 3.75 12 3.75C16.5563 3.75 20.25 7.44365 20.25 12C20.25 16.5563 16.5563 20.25 12 20.25C7.44365 20.25 3.75 16.5563 3.75 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10286,7 +10286,7 @@ pub fn CgHomeScreen(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 5C10 5.55228 9.55228 6 9 6C8.44771 6 8 5.55228 8 5C8 4.44772 8.44771 4 9 4C9.55228 4 10 4.44772 10 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9C9.55228 9 10 8.55228 10 8C10 7.44772 9.55228 7 9 7C8.44771 7 8 7.44772 8 8C8 8.55228 8.44771 9 9 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 19C10 19.5523 9.55228 20 9 20C8.44771 20 8 19.5523 8 19C8 18.4477 8.44771 18 9 18C9.55228 18 10 18.4477 10 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 12C9.55228 12 10 11.5523 10 11C10 10.4477 9.55228 10 9 10C8.44771 10 8 10.4477 8 11C8 11.5523 8.44771 12 9 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 5C13 5.55228 12.5523 6 12 6C11.4477 6 11 5.55228 11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19C11 18.4477 11.4477 18 12 18C12.5523 18 13 18.4477 13 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 6C15.5523 6 16 5.55228 16 5C16 4.44772 15.5523 4 15 4C14.4477 4 14 4.44772 14 5C14 5.55228 14.4477 6 15 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 8C16 8.55228 15.5523 9 15 9C14.4477 9 14 8.55228 14 8C14 7.44772 14.4477 7 15 7C15.5523 7 16 7.44772 16 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 20C15.5523 20 16 19.5523 16 19C16 18.4477 15.5523 18 15 18C14.4477 18 14 18.4477 14 19C14 19.5523 14.4477 20 15 20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 1C6.34315 1 5 2.34315 5 4V20C5 21.6569 6.34315 23 8 23H16C17.6569 23 19 21.6569 19 20V4C19 2.34315 17.6569 1 16 1H8ZM16 3H8C7.44771 3 7 3.44772 7 4V20C7 20.5523 7.44772 21 8 21H16C16.5523 21 17 20.5523 17 20V4C17 3.44772 16.5523 3 16 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 5C10 5.55228 9.55228 6 9 6C8.44771 6 8 5.55228 8 5C8 4.44772 8.44771 4 9 4C9.55228 4 10 4.44772 10 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9C9.55228 9 10 8.55228 10 8C10 7.44772 9.55228 7 9 7C8.44771 7 8 7.44772 8 8C8 8.55228 8.44771 9 9 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 19C10 19.5523 9.55228 20 9 20C8.44771 20 8 19.5523 8 19C8 18.4477 8.44771 18 9 18C9.55228 18 10 18.4477 10 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 12C9.55228 12 10 11.5523 10 11C10 10.4477 9.55228 10 9 10C8.44771 10 8 10.4477 8 11C8 11.5523 8.44771 12 9 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 5C13 5.55228 12.5523 6 12 6C11.4477 6 11 5.55228 11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19C11 18.4477 11.4477 18 12 18C12.5523 18 13 18.4477 13 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 6C15.5523 6 16 5.55228 16 5C16 4.44772 15.5523 4 15 4C14.4477 4 14 4.44772 14 5C14 5.55228 14.4477 6 15 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 8C16 8.55228 15.5523 9 15 9C14.4477 9 14 8.55228 14 8C14 7.44772 14.4477 7 15 7C15.5523 7 16 7.44772 16 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 20C15.5523 20 16 19.5523 16 19C16 18.4477 15.5523 18 15 18C14.4477 18 14 18.4477 14 19C14 19.5523 14.4477 20 15 20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 1C6.34315 1 5 2.34315 5 4V20C5 21.6569 6.34315 23 8 23H16C17.6569 23 19 21.6569 19 20V4C19 2.34315 17.6569 1 16 1H8ZM16 3H8C7.44771 3 7 3.44772 7 4V20C7 20.5523 7.44772 21 8 21H16C16.5523 21 17 20.5523 17 20V4C17 3.44772 16.5523 3 16 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10346,7 +10346,7 @@ pub fn CgIfDesign(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 5H14V19H10V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 19V10H9V19H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 5H19V9H15V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 10H15V14H19V10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 5H14V19H10V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 19V10H9V19H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 5H19V9H15V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 10H15V14H19V10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10376,7 +10376,7 @@ pub fn CgImage(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 7C5.34315 7 4 8.34315 4 10C4 11.6569 5.34315 13 7 13C8.65685 13 10 11.6569 10 10C10 8.34315 8.65685 7 7 7ZM6 10C6 9.44772 6.44772 9 7 9C7.55228 9 8 9.44772 8 10C8 10.5523 7.55228 11 7 11C6.44772 11 6 10.5523 6 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V18C2 18.5523 2.44772 19 3 19H7.31374L14.1924 12.1214C15.364 10.9498 17.2635 10.9498 18.435 12.1214L22 15.6863V6C22 5.44772 21.5523 5 21 5ZM21 19H10.1422L15.6066 13.5356C15.9971 13.145 16.6303 13.145 17.0208 13.5356L21.907 18.4217C21.7479 18.7633 21.4016 19 21 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 7C5.34315 7 4 8.34315 4 10C4 11.6569 5.34315 13 7 13C8.65685 13 10 11.6569 10 10C10 8.34315 8.65685 7 7 7ZM6 10C6 9.44772 6.44772 9 7 9C7.55228 9 8 9.44772 8 10C8 10.5523 7.55228 11 7 11C6.44772 11 6 10.5523 6 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V18C2 18.5523 2.44772 19 3 19H7.31374L14.1924 12.1214C15.364 10.9498 17.2635 10.9498 18.435 12.1214L22 15.6863V6C22 5.44772 21.5523 5 21 5ZM21 19H10.1422L15.6066 13.5356C15.9971 13.145 16.6303 13.145 17.0208 13.5356L21.907 18.4217C21.7479 18.7633 21.4016 19 21 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10406,7 +10406,7 @@ pub fn CgImport(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9.98193V19.9819H19V9.98193H15V7.98193H21V21.9819H3V7.98193H9V9.98193H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.0001 2H11.0001V14.0531L8.46451 11.5175L7.05029 12.9317L12 17.8815L16.9498 12.9317L15.5356 11.5175L13.0001 14.053V2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9.98193V19.9819H19V9.98193H15V7.98193H21V21.9819H3V7.98193H9V9.98193H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.0001 2H11.0001V14.0531L8.46451 11.5175L7.05029 12.9317L12 17.8815L16.9498 12.9317L15.5356 11.5175L13.0001 14.053V2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10466,7 +10466,7 @@ pub fn CgIndieHackers(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6H7V18H4V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 6H13V10.5H17V6H20V18H17V13.5H13V18H10V6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6H7V18H4V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 6H13V10.5H17V6H20V18H17V13.5H13V18H10V6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10526,7 +10526,7 @@ pub fn CgInfo(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 10.9794C11 10.4271 11.4477 9.97937 12 9.97937C12.5523 9.97937 13 10.4271 13 10.9794V16.9794C13 17.5317 12.5523 17.9794 12 17.9794C11.4477 17.9794 11 17.5317 11 16.9794V10.9794Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6.05115C11.4477 6.05115 11 6.49886 11 7.05115C11 7.60343 11.4477 8.05115 12 8.05115C12.5523 8.05115 13 7.60343 13 7.05115C13 6.49886 12.5523 6.05115 12 6.05115Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 10.9794C11 10.4271 11.4477 9.97937 12 9.97937C12.5523 9.97937 13 10.4271 13 10.9794V16.9794C13 17.5317 12.5523 17.9794 12 17.9794C11.4477 17.9794 11 17.5317 11 16.9794V10.9794Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6.05115C11.4477 6.05115 11 6.49886 11 7.05115C11 7.60343 11.4477 8.05115 12 8.05115C12.5523 8.05115 13 7.60343 13 7.05115C13 6.49886 12.5523 6.05115 12 6.05115Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10556,7 +10556,7 @@ pub fn CgInpicture(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 12H14V17H20V12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 6C1 4.89543 1.89543 4 3 4H21C22.1046 4 23 4.89543 23 6V18C23 19.1046 22.1046 20 21 20H3C1.89543 20 1 19.1046 1 18V6ZM3 6H21V18H3L3 6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 12H14V17H20V12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 6C1 4.89543 1.89543 4 3 4H21C22.1046 4 23 4.89543 23 6V18C23 19.1046 22.1046 20 21 20H3C1.89543 20 1 19.1046 1 18V6ZM3 6H21V18H3L3 6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10586,7 +10586,7 @@ pub fn CgInsertAfter(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 4C12.5523 4 13 4.44772 13 5V8H16C16.5523 8 17 8.44772 17 9C17 9.55228 16.5523 10 16 10H13V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V10H8C7.44772 10 7 9.55228 7 9C7 8.44772 7.44772 8 8 8H11V5C11 4.44772 11.4477 4 12 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 19C3 18.4477 3.44772 18 4 18H20C20.5523 18 21 18.4477 21 19C21 19.5523 20.5523 20 20 20H4C3.44772 20 3 19.5523 3 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 4C12.5523 4 13 4.44772 13 5V8H16C16.5523 8 17 8.44772 17 9C17 9.55228 16.5523 10 16 10H13V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V10H8C7.44772 10 7 9.55228 7 9C7 8.44772 7.44772 8 8 8H11V5C11 4.44772 11.4477 4 12 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 19C3 18.4477 3.44772 18 4 18H20C20.5523 18 21 18.4477 21 19C21 19.5523 20.5523 20 20 20H4C3.44772 20 3 19.5523 3 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10616,7 +10616,7 @@ pub fn CgInsertAfterO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 8C8.44772 8 8 8.44772 8 9C8 9.55229 8.44772 10 9 10H11V12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12V10H15C15.5523 10 16 9.55229 16 9C16 8.44772 15.5523 8 15 8H13V6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6V8H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 9C4 4.58172 7.58172 1 12 1C16.4183 1 20 4.58172 20 9C20 13.4183 16.4183 17 12 17C7.58172 17 4 13.4183 4 9ZM12 15C8.68629 15 6 12.3137 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9C18 12.3137 15.3137 15 12 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20C4.44772 20 4 20.4477 4 21C4 21.5523 4.44772 22 5 22H19C19.5523 22 20 21.5523 20 21C20 20.4477 19.5523 20 19 20H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 8C8.44772 8 8 8.44772 8 9C8 9.55229 8.44772 10 9 10H11V12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12V10H15C15.5523 10 16 9.55229 16 9C16 8.44772 15.5523 8 15 8H13V6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6V8H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 9C4 4.58172 7.58172 1 12 1C16.4183 1 20 4.58172 20 9C20 13.4183 16.4183 17 12 17C7.58172 17 4 13.4183 4 9ZM12 15C8.68629 15 6 12.3137 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9C18 12.3137 15.3137 15 12 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20C4.44772 20 4 20.4477 4 21C4 21.5523 4.44772 22 5 22H19C19.5523 22 20 21.5523 20 21C20 20.4477 19.5523 20 19 20H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10646,7 +10646,7 @@ pub fn CgInsertAfterR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 8C8.44772 8 8 8.44772 8 9C8 9.55229 8.44772 10 9 10H11V12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12V10H15C15.5523 10 16 9.55229 16 9C16 8.44772 15.5523 8 15 8H13V6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6V8H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 4C4 2.34315 5.34315 1 7 1H17C18.6569 1 20 2.34315 20 4V14C20 15.6569 18.6569 17 17 17H7C5.34315 17 4 15.6569 4 14V4ZM7 3H17C17.5523 3 18 3.44772 18 4V14C18 14.5523 17.5523 15 17 15H7C6.44772 15 6 14.5523 6 14V4C6 3.44772 6.44772 3 7 3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20C4.44772 20 4 20.4477 4 21C4 21.5523 4.44772 22 5 22H19C19.5523 22 20 21.5523 20 21C20 20.4477 19.5523 20 19 20H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 8C8.44772 8 8 8.44772 8 9C8 9.55229 8.44772 10 9 10H11V12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12V10H15C15.5523 10 16 9.55229 16 9C16 8.44772 15.5523 8 15 8H13V6C13 5.44772 12.5523 5 12 5C11.4477 5 11 5.44772 11 6V8H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 4C4 2.34315 5.34315 1 7 1H17C18.6569 1 20 2.34315 20 4V14C20 15.6569 18.6569 17 17 17H7C5.34315 17 4 15.6569 4 14V4ZM7 3H17C17.5523 3 18 3.44772 18 4V14C18 14.5523 17.5523 15 17 15H7C6.44772 15 6 14.5523 6 14V4C6 3.44772 6.44772 3 7 3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20C4.44772 20 4 20.4477 4 21C4 21.5523 4.44772 22 5 22H19C19.5523 22 20 21.5523 20 21C20 20.4477 19.5523 20 19 20H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10676,7 +10676,7 @@ pub fn CgInsertBefore(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 5C3 5.55228 3.44772 6 4 6H20C20.5523 6 21 5.55228 21 5C21 4.44772 20.5523 4 20 4H4C3.44772 4 3 4.44772 3 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 20C12.5523 20 13 19.5523 13 19V16H16C16.5523 16 17 15.5523 17 15C17 14.4477 16.5523 14 16 14H13V11C13 10.4477 12.5523 10 12 10C11.4477 10 11 10.4477 11 11V14H8C7.44772 14 7 14.4477 7 15C7 15.5523 7.44772 16 8 16H11V19C11 19.5523 11.4477 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 5C3 5.55228 3.44772 6 4 6H20C20.5523 6 21 5.55228 21 5C21 4.44772 20.5523 4 20 4H4C3.44772 4 3 4.44772 3 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 20C12.5523 20 13 19.5523 13 19V16H16C16.5523 16 17 15.5523 17 15C17 14.4477 16.5523 14 16 14H13V11C13 10.4477 12.5523 10 12 10C11.4477 10 11 10.4477 11 11V14H8C7.44772 14 7 14.4477 7 15C7 15.5523 7.44772 16 8 16H11V19C11 19.5523 11.4477 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10706,7 +10706,7 @@ pub fn CgInsertBeforeO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 3C4.44772 3 4 2.55228 4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2C20 2.55228 19.5523 3 19 3H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 14.5523 8 14C8 13.4477 8.44772 13 9 13H11V11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V13H15C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V15H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 14C4 18.4183 7.58172 22 12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14ZM12 8C8.68629 8 6 10.6863 6 14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14C18 10.6863 15.3137 8 12 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 3C4.44772 3 4 2.55228 4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2C20 2.55228 19.5523 3 19 3H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 14.5523 8 14C8 13.4477 8.44772 13 9 13H11V11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V13H15C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V15H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 14C4 18.4183 7.58172 22 12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14ZM12 8C8.68629 8 6 10.6863 6 14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14C18 10.6863 15.3137 8 12 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10736,7 +10736,7 @@ pub fn CgInsertBeforeR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 3C4.44772 3 4 2.55228 4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2C20 2.55228 19.5523 3 19 3H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 14.5523 8 14C8 13.4477 8.44772 13 9 13H11V11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V13H15C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V15H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V9C20 7.34315 18.6569 6 17 6H7C5.34315 6 4 7.34315 4 9V19ZM17 20C17.5523 20 18 19.5523 18 19V9C18 8.44772 17.5523 8 17 8H7C6.44772 8 6 8.44772 6 9V19C6 19.5523 6.44772 20 7 20H17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 3C4.44772 3 4 2.55228 4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2C20 2.55228 19.5523 3 19 3H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 14.5523 8 14C8 13.4477 8.44772 13 9 13H11V11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11V13H15C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15H13V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V15H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V9C20 7.34315 18.6569 6 17 6H7C5.34315 6 4 7.34315 4 9V19ZM17 20C17.5523 20 18 19.5523 18 19V9C18 8.44772 17.5523 8 17 8H7C6.44772 8 6 8.44772 6 9V19C6 19.5523 6.44772 20 7 20H17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10796,7 +10796,7 @@ pub fn CgInstagram(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10826,7 +10826,7 @@ pub fn CgInternal(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.7084 4.41165L10.4586 14.6986H14.0488V16.6986H7.04883V9.69861H9.04883V13.2799L19.2916 3L20.7084 4.41165Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 4.70581V6.70581H5V18.7058H17V12.7058H19V20.7058H3V4.70581H11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.7084 4.41165L10.4586 14.6986H14.0488V16.6986H7.04883V9.69861H9.04883V13.2799L19.2916 3L20.7084 4.41165Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 4.70581V6.70581H5V18.7058H17V12.7058H19V20.7058H3V4.70581H11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10886,7 +10886,7 @@ pub fn CgKeyboard(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9C8.55228 9 9 8.55228 9 8C9 7.44772 8.55228 7 8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9C8.55228 9 9 8.55228 9 8C9 7.44772 8.55228 7 8 7C7.44772 7 7 7.44772 7 8C7 8.55228 7.44772 9 8 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8C11 8.55228 11.4477 9 12 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9C16.5523 9 17 8.55228 17 8C17 7.44772 16.5523 7 16 7C15.4477 7 15 7.44772 15 8C15 8.55228 15.4477 9 16 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10916,7 +10916,7 @@ pub fn CgKeyhole(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 12.8293C14.1652 12.4175 15 11.3062 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.3062 9.83481 12.4175 11 12.8293V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V12.8293ZM11 10C11 10.5523 11.4477 11 12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 12.8293C14.1652 12.4175 15 11.3062 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.3062 9.83481 12.4175 11 12.8293V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16V12.8293ZM11 10C11 10.5523 11.4477 11 12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10946,7 +10946,7 @@ pub fn CgLaptop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V14C21 15.1046 20.1046 16 19 16H5C3.89543 16 3 15.1046 3 14V6ZM5 6H19V14H5V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 18C1.44772 18 1 18.4477 1 19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19C23 18.4477 22.5523 18 22 18H2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V14C21 15.1046 20.1046 16 19 16H5C3.89543 16 3 15.1046 3 14V6ZM5 6H19V14H5V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 18C1.44772 18 1 18.4477 1 19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19C23 18.4477 22.5523 18 22 18H2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -10976,7 +10976,7 @@ pub fn CgLastpass(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 6C20.4477 6 20 6.44771 20 7V17C20 17.5523 20.4477 18 21 18C21.5523 18 22 17.5523 22 17V7C22 6.44772 21.5523 6 21 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14C5.10457 14 6 13.1046 6 12C6 10.8954 5.10457 10 4 10C2.89543 10 2 10.8954 2 12C2 13.1046 2.89543 14 4 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 12C12 13.1046 11.1046 14 10 14C8.89543 14 8 13.1046 8 12C8 10.8954 8.89543 10 10 10C11.1046 10 12 10.8954 12 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 14C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10C14.8954 10 14 10.8954 14 12C14 13.1046 14.8954 14 16 14Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 6C20.4477 6 20 6.44771 20 7V17C20 17.5523 20.4477 18 21 18C21.5523 18 22 17.5523 22 17V7C22 6.44772 21.5523 6 21 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14C5.10457 14 6 13.1046 6 12C6 10.8954 5.10457 10 4 10C2.89543 10 2 10.8954 2 12C2 13.1046 2.89543 14 4 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 12C12 13.1046 11.1046 14 10 14C8.89543 14 8 13.1046 8 12C8 10.8954 8.89543 10 10 10C11.1046 10 12 10.8954 12 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 14C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10C14.8954 10 14 10.8954 14 12C14 13.1046 14.8954 14 16 14Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11006,7 +11006,7 @@ pub fn CgLayoutGrid(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H7V11H11V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 13H7V17H11V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13H17V17H13V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7H13V11H17V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H7V11H11V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 13H7V17H11V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13H17V17H13V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7H13V11H17V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11036,7 +11036,7 @@ pub fn CgLayoutGridSmall(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 7H9V9H7V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H13V9H11V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7H15V9H17V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11H9V13H7V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 11H11V13H13V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11H17V13H15V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15H7V17H9V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15H13V17H11V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 15H15V17H17V15Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 7H9V9H7V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H13V9H11V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7H15V9H17V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11H9V13H7V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 11H11V13H13V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11H17V13H15V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15H7V17H9V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15H13V17H11V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 15H15V17H17V15Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11066,7 +11066,7 @@ pub fn CgLayoutList(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 7H7V9H9V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13V11H9V13H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15V17H9V15H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15V17H17V15H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 13V11H11V13H17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7V9H11V7H17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 7H7V9H9V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13V11H9V13H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15V17H9V15H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15V17H17V15H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 13V11H11V13H17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7V9H11V7H17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11126,7 +11126,7 @@ pub fn CgLinear(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.03509 12.9431C3.24245 14.9227 4.10472 16.8468 5.62188 18.364C7.13904 19.8811 9.0631 20.7434 11.0428 20.9508L3.03509 12.9431Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11.4938L12.4921 20.9858C13.2976 20.9407 14.0981 20.7879 14.8704 20.5273L3.4585 9.11548C3.19793 9.88771 3.0451 10.6883 3 11.4938Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.86722 8.10999L15.8758 20.1186C16.4988 19.8201 17.0946 19.4458 17.6493 18.9956L4.99021 6.33659C4.54006 6.89125 4.16573 7.487 3.86722 8.10999Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.66301 5.59517C9.18091 2.12137 14.8488 2.135 18.3498 5.63604C21.8508 9.13708 21.8645 14.8049 18.3907 18.3228L5.66301 5.59517Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.03509 12.9431C3.24245 14.9227 4.10472 16.8468 5.62188 18.364C7.13904 19.8811 9.0631 20.7434 11.0428 20.9508L3.03509 12.9431Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11.4938L12.4921 20.9858C13.2976 20.9407 14.0981 20.7879 14.8704 20.5273L3.4585 9.11548C3.19793 9.88771 3.0451 10.6883 3 11.4938Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.86722 8.10999L15.8758 20.1186C16.4988 19.8201 17.0946 19.4458 17.6493 18.9956L4.99021 6.33659C4.54006 6.89125 4.16573 7.487 3.86722 8.10999Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.66301 5.59517C9.18091 2.12137 14.8488 2.135 18.3498 5.63604C21.8508 9.13708 21.8645 14.8049 18.3907 18.3228L5.66301 5.59517Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11156,7 +11156,7 @@ pub fn CgLink(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12L16.2426 13.4142L19.071 10.5858C20.6331 9.02365 20.6331 6.49099 19.071 4.9289C17.509 3.3668 14.9763 3.3668 13.4142 4.9289L10.5858 7.75732L12 9.17154L14.8284 6.34311C15.6095 5.56206 16.8758 5.56206 17.6568 6.34311C18.4379 7.12416 18.4379 8.39049 17.6568 9.17154L14.8284 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14.8285L13.4142 16.2427L10.5858 19.0711C9.02372 20.6332 6.49106 20.6332 4.92896 19.0711C3.36686 17.509 3.36686 14.9764 4.92896 13.4143L7.75739 10.5858L9.1716 12L6.34317 14.8285C5.56212 15.6095 5.56212 16.8758 6.34317 17.6569C7.12422 18.4379 8.39055 18.4379 9.1716 17.6569L12 14.8285Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 10.5857C15.219 10.1952 15.219 9.56199 14.8285 9.17147C14.4379 8.78094 13.8048 8.78094 13.4142 9.17147L9.1716 13.4141C8.78107 13.8046 8.78107 14.4378 9.1716 14.8283C9.56212 15.2188 10.1953 15.2188 10.5858 14.8283L14.8285 10.5857Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 12L16.2426 13.4142L19.071 10.5858C20.6331 9.02365 20.6331 6.49099 19.071 4.9289C17.509 3.3668 14.9763 3.3668 13.4142 4.9289L10.5858 7.75732L12 9.17154L14.8284 6.34311C15.6095 5.56206 16.8758 5.56206 17.6568 6.34311C18.4379 7.12416 18.4379 8.39049 17.6568 9.17154L14.8284 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14.8285L13.4142 16.2427L10.5858 19.0711C9.02372 20.6332 6.49106 20.6332 4.92896 19.0711C3.36686 17.509 3.36686 14.9764 4.92896 13.4143L7.75739 10.5858L9.1716 12L6.34317 14.8285C5.56212 15.6095 5.56212 16.8758 6.34317 17.6569C7.12422 18.4379 8.39055 18.4379 9.1716 17.6569L12 14.8285Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8285 10.5857C15.219 10.1952 15.219 9.56199 14.8285 9.17147C14.4379 8.78094 13.8048 8.78094 13.4142 9.17147L9.1716 13.4141C8.78107 13.8046 8.78107 14.4378 9.1716 14.8283C9.56212 15.2188 10.1953 15.2188 10.5858 14.8283L14.8285 10.5857Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11246,7 +11246,7 @@ pub fn CgLivePhoto(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9805 21.9525C12.6579 21.9839 12.3308 22 12 22C11.6692 22 11.3421 21.9839 11.0194 21.9525L11.2132 19.9619C11.4715 19.9871 11.7339 20 12 20C12.2661 20 12.5285 19.9871 12.7868 19.9619L12.9805 21.9525Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.09617 21.5719L9.67608 19.6578C9.17124 19.5048 8.68725 19.3031 8.22951 19.058L7.28519 20.821C7.8578 21.1277 8.46374 21.3803 9.09617 21.5719Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.65597 19.7304L6.92562 18.1851C6.5202 17.852 6.14801 17.4798 5.81491 17.0744L4.2696 18.344C4.68539 18.8501 5.1499 19.3146 5.65597 19.7304Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.17901 16.7148L4.94204 15.7705C4.69686 15.3127 4.49516 14.8288 4.34221 14.3239L2.42813 14.9038C2.61974 15.5363 2.87231 16.1422 3.17901 16.7148Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.04746 12.9805L4.03806 12.7868C4.01292 12.5285 4 12.2661 4 12C4 11.7339 4.01292 11.4715 4.03806 11.2132L2.04746 11.0195C2.01607 11.3421 2 11.6692 2 12C2 12.3308 2.01607 12.6579 2.04746 12.9805Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.42813 9.09617L4.34221 9.67608C4.49517 9.17124 4.69686 8.68725 4.94204 8.22951L3.17901 7.28519C2.87231 7.8578 2.61974 8.46374 2.42813 9.09617Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.2696 5.65597L5.81491 6.92562C6.14801 6.5202 6.5202 6.14801 6.92562 5.81491L5.65597 4.2696C5.14991 4.68539 4.68539 5.1499 4.2696 5.65597Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.2852 3.17901L8.22951 4.94204C8.68726 4.69686 9.17124 4.49516 9.67608 4.34221L9.09617 2.42813C8.46374 2.61974 7.8578 2.87231 7.2852 3.17901Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0195 2.04746C11.3421 2.01607 11.6692 2 12 2C12.3308 2 12.6579 2.01607 12.9805 2.04746L12.7868 4.03806C12.5285 4.01292 12.2661 4 12 4C11.7339 4 11.4715 4.01292 11.2132 4.03806L11.0195 2.04746Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9038 2.42813L14.3239 4.34221C14.8288 4.49517 15.3127 4.69686 15.7705 4.94204L16.7148 3.17901C16.1422 2.87231 15.5363 2.61974 14.9038 2.42813Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.344 4.2696L17.0744 5.81491C17.4798 6.14801 17.852 6.5202 18.1851 6.92562L19.7304 5.65597C19.3146 5.14991 18.8501 4.68539 18.344 4.2696Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.821 7.2852L19.058 8.22951C19.3031 8.68726 19.5048 9.17124 19.6578 9.67608L21.5719 9.09617C21.3803 8.46374 21.1277 7.8578 20.821 7.2852Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.9525 11.0195L19.9619 11.2132C19.9871 11.4715 20 11.7339 20 12C20 12.2661 19.9871 12.5285 19.9619 12.7868L21.9525 12.9806C21.9839 12.6579 22 12.3308 22 12C22 11.6692 21.9839 11.3421 21.9525 11.0195Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.5719 14.9038L19.6578 14.3239C19.5048 14.8288 19.3031 15.3127 19.058 15.7705L20.821 16.7148C21.1277 16.1422 21.3803 15.5363 21.5719 14.9038Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.7304 18.344L18.1851 17.0744C17.852 17.4798 17.4798 17.852 17.0744 18.1851L18.344 19.7304C18.8501 19.3146 19.3146 18.8501 19.7304 18.344Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.7148 20.821L15.7705 19.058C15.3127 19.3031 14.8288 19.5048 14.3239 19.6578L14.9038 21.5719C15.5363 21.3803 16.1422 21.1277 16.7148 20.821Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12ZM12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9805 21.9525C12.6579 21.9839 12.3308 22 12 22C11.6692 22 11.3421 21.9839 11.0194 21.9525L11.2132 19.9619C11.4715 19.9871 11.7339 20 12 20C12.2661 20 12.5285 19.9871 12.7868 19.9619L12.9805 21.9525Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.09617 21.5719L9.67608 19.6578C9.17124 19.5048 8.68725 19.3031 8.22951 19.058L7.28519 20.821C7.8578 21.1277 8.46374 21.3803 9.09617 21.5719Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.65597 19.7304L6.92562 18.1851C6.5202 17.852 6.14801 17.4798 5.81491 17.0744L4.2696 18.344C4.68539 18.8501 5.1499 19.3146 5.65597 19.7304Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.17901 16.7148L4.94204 15.7705C4.69686 15.3127 4.49516 14.8288 4.34221 14.3239L2.42813 14.9038C2.61974 15.5363 2.87231 16.1422 3.17901 16.7148Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.04746 12.9805L4.03806 12.7868C4.01292 12.5285 4 12.2661 4 12C4 11.7339 4.01292 11.4715 4.03806 11.2132L2.04746 11.0195C2.01607 11.3421 2 11.6692 2 12C2 12.3308 2.01607 12.6579 2.04746 12.9805Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.42813 9.09617L4.34221 9.67608C4.49517 9.17124 4.69686 8.68725 4.94204 8.22951L3.17901 7.28519C2.87231 7.8578 2.61974 8.46374 2.42813 9.09617Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.2696 5.65597L5.81491 6.92562C6.14801 6.5202 6.5202 6.14801 6.92562 5.81491L5.65597 4.2696C5.14991 4.68539 4.68539 5.1499 4.2696 5.65597Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.2852 3.17901L8.22951 4.94204C8.68726 4.69686 9.17124 4.49516 9.67608 4.34221L9.09617 2.42813C8.46374 2.61974 7.8578 2.87231 7.2852 3.17901Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0195 2.04746C11.3421 2.01607 11.6692 2 12 2C12.3308 2 12.6579 2.01607 12.9805 2.04746L12.7868 4.03806C12.5285 4.01292 12.2661 4 12 4C11.7339 4 11.4715 4.01292 11.2132 4.03806L11.0195 2.04746Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.9038 2.42813L14.3239 4.34221C14.8288 4.49517 15.3127 4.69686 15.7705 4.94204L16.7148 3.17901C16.1422 2.87231 15.5363 2.61974 14.9038 2.42813Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.344 4.2696L17.0744 5.81491C17.4798 6.14801 17.852 6.5202 18.1851 6.92562L19.7304 5.65597C19.3146 5.14991 18.8501 4.68539 18.344 4.2696Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.821 7.2852L19.058 8.22951C19.3031 8.68726 19.5048 9.17124 19.6578 9.67608L21.5719 9.09617C21.3803 8.46374 21.1277 7.8578 20.821 7.2852Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.9525 11.0195L19.9619 11.2132C19.9871 11.4715 20 11.7339 20 12C20 12.2661 19.9871 12.5285 19.9619 12.7868L21.9525 12.9806C21.9839 12.6579 22 12.3308 22 12C22 11.6692 21.9839 11.3421 21.9525 11.0195Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.5719 14.9038L19.6578 14.3239C19.5048 14.8288 19.3031 15.3127 19.058 15.7705L20.821 16.7148C21.1277 16.1422 21.3803 15.5363 21.5719 14.9038Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.7304 18.344L18.1851 17.0744C17.852 17.4798 17.4798 17.852 17.0744 18.1851L18.344 19.7304C18.8501 19.3146 19.3146 18.8501 19.7304 18.344Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.7148 20.821L15.7705 19.058C15.3127 19.3031 14.8288 19.5048 14.3239 19.6578L14.9038 21.5719C15.5363 21.3803 16.1422 21.1277 16.7148 20.821Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12ZM12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6ZM8 12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11306,7 +11306,7 @@ pub fn CgLoadbarAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.3\" x=\"3\" y=\"10\" width=\"18\" height=\"4\" rx=\"2\" fill=\"currentColor\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"7\" y=\"10\" width=\"10\" height=\"4\" rx=\"2\" fill=\"currentColor\" />"
+        "<rect xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.3\" x=\"3\" y=\"10\" width=\"18\" height=\"4\" rx=\"2\" fill=\"currentColor\" />\n<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"7\" y=\"10\" width=\"10\" height=\"4\" rx=\"2\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11336,7 +11336,7 @@ pub fn CgLoadbarDoc(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 5H7C6.44772 5 6 5.44772 6 6V18C6 18.5523 6.44772 19 7 19H17C17.5523 19 18 18.5523 18 18V6C18 5.44772 17.5523 5 17 5ZM7 3C5.34315 3 4 4.34315 4 6V18C4 19.6569 5.34315 21 7 21H17C18.6569 21 20 19.6569 20 18V6C20 4.34315 18.6569 3 17 3H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7H16V9H8V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11H16V13H8V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 15H13V17H8V15Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 5H7C6.44772 5 6 5.44772 6 6V18C6 18.5523 6.44772 19 7 19H17C17.5523 19 18 18.5523 18 18V6C18 5.44772 17.5523 5 17 5ZM7 3C5.34315 3 4 4.34315 4 6V18C4 19.6569 5.34315 21 7 21H17C18.6569 21 20 19.6569 20 18V6C20 4.34315 18.6569 3 17 3H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7H16V9H8V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11H16V13H8V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 15H13V17H8V15Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11366,7 +11366,7 @@ pub fn CgLoadbarSound(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 6H13V18H11V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13H9V18H7V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H17V18H15V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 6H13V18H11V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13H9V18H7V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H17V18H15V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11456,7 +11456,7 @@ pub fn CgLogIn(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.4857 20H19.4857C20.5903 20 21.4857 19.1046 21.4857 18V6C21.4857 4.89543 20.5903 4 19.4857 4H15.4857V6H19.4857V18H15.4857V20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1582 17.385L8.73801 15.9768L12.6572 12.0242L3.51428 12.0242C2.96199 12.0242 2.51428 11.5765 2.51428 11.0242C2.51429 10.4719 2.962 10.0242 3.51429 10.0242L12.6765 10.0242L8.69599 6.0774L10.1042 4.6572L16.4951 10.9941L10.1582 17.385Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.4857 20H19.4857C20.5903 20 21.4857 19.1046 21.4857 18V6C21.4857 4.89543 20.5903 4 19.4857 4H15.4857V6H19.4857V18H15.4857V20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1582 17.385L8.73801 15.9768L12.6572 12.0242L3.51428 12.0242C2.96199 12.0242 2.51428 11.5765 2.51428 11.0242C2.51429 10.4719 2.962 10.0242 3.51429 10.0242L12.6765 10.0242L8.69599 6.0774L10.1042 4.6572L16.4951 10.9941L10.1582 17.385Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11486,7 +11486,7 @@ pub fn CgLogOff(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 4.00894C13.0002 3.45665 12.5527 3.00876 12.0004 3.00854C11.4481 3.00833 11.0002 3.45587 11 4.00815L10.9968 12.0116C10.9966 12.5639 11.4442 13.0118 11.9965 13.012C12.5487 13.0122 12.9966 12.5647 12.9968 12.0124L13 4.00894Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 12.9917C4 10.7826 4.89541 8.7826 6.34308 7.33488L7.7573 8.7491C6.67155 9.83488 6 11.3349 6 12.9917C6 16.3054 8.68629 18.9917 12 18.9917C15.3137 18.9917 18 16.3054 18 12.9917C18 11.3348 17.3284 9.83482 16.2426 8.74903L17.6568 7.33481C19.1046 8.78253 20 10.7825 20 12.9917C20 17.41 16.4183 20.9917 12 20.9917C7.58172 20.9917 4 17.41 4 12.9917Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 4.00894C13.0002 3.45665 12.5527 3.00876 12.0004 3.00854C11.4481 3.00833 11.0002 3.45587 11 4.00815L10.9968 12.0116C10.9966 12.5639 11.4442 13.0118 11.9965 13.012C12.5487 13.0122 12.9966 12.5647 12.9968 12.0124L13 4.00894Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 12.9917C4 10.7826 4.89541 8.7826 6.34308 7.33488L7.7573 8.7491C6.67155 9.83488 6 11.3349 6 12.9917C6 16.3054 8.68629 18.9917 12 18.9917C15.3137 18.9917 18 16.3054 18 12.9917C18 11.3348 17.3284 9.83482 16.2426 8.74903L17.6568 7.33481C19.1046 8.78253 20 10.7825 20 12.9917C20 17.41 16.4183 20.9917 12 20.9917C7.58172 20.9917 4 17.41 4 12.9917Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11516,7 +11516,7 @@ pub fn CgLogOut(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.51428 20H4.51428C3.40971 20 2.51428 19.1046 2.51428 18V6C2.51428 4.89543 3.40971 4 4.51428 4H8.51428V6H4.51428V18H8.51428V20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.51428 20H4.51428C3.40971 20 2.51428 19.1046 2.51428 18V6C2.51428 4.89543 3.40971 4 4.51428 4H8.51428V6H4.51428V18H8.51428V20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.8418 17.385L15.262 15.9768L11.3428 12.0242L20.4857 12.0242C21.038 12.0242 21.4857 11.5765 21.4857 11.0242C21.4857 10.4719 21.038 10.0242 20.4857 10.0242L11.3236 10.0242L15.304 6.0774L13.8958 4.6572L7.5049 10.9941L13.8418 17.385Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11546,7 +11546,7 @@ pub fn CgLoupe(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 11V8H13V11H16V13H13V16H11V13H8V11H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 16.9706 7.02944 21 12 21H18C19.6569 21 21 19.6569 21 18V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 11V8H13V11H16V13H13V16H11V13H8V11H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 16.9706 7.02944 21 12 21H18C19.6569 21 21 19.6569 21 18V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11576,7 +11576,7 @@ pub fn CgMagnet(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 2.5H4V5.5H8V2.5Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 2.5H16V5.5H20V2.5Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7.5H4V13.5C4 17.9183 7.58172 21.5 12 21.5C16.4183 21.5 20 17.9183 20 13.5V7.5H16V13.5C16 15.7091 14.2091 17.5 12 17.5C9.79086 17.5 8 15.7091 8 13.5V7.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 2.5H4V5.5H8V2.5Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 2.5H16V5.5H20V2.5Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 7.5H4V13.5C4 17.9183 7.58172 21.5 12 21.5C16.4183 21.5 20 17.9183 20 13.5V7.5H16V13.5C16 15.7091 14.2091 17.5 12 17.5C9.79086 17.5 8 15.7091 8 13.5V7.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11726,7 +11726,7 @@ pub fn CgMathDivide(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11756,7 +11756,7 @@ pub fn CgMathEqual(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9C4.44772 9 4 9.44771 4 10C4 10.5523 4.44772 11 5 11H19C19.5523 11 20 10.5523 20 10C20 9.44771 19.5523 9 19 9H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13C4.44772 13 4 13.4477 4 14C4 14.5523 4.44772 15 5 15H19C19.5523 15 20 14.5523 20 14C20 13.4477 19.5523 13 19 13H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9C4.44772 9 4 9.44771 4 10C4 10.5523 4.44772 11 5 11H19C19.5523 11 20 10.5523 20 10C20 9.44771 19.5523 9 19 9H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 13C4.44772 13 4 13.4477 4 14C4 14.5523 4.44772 15 5 15H19C19.5523 15 20 14.5523 20 14C20 13.4477 19.5523 13 19 13H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11816,7 +11816,7 @@ pub fn CgMathPercent(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2426 6.34319C16.6331 5.95266 17.2663 5.95266 17.6568 6.34319C18.0474 6.73371 18.0474 7.36688 17.6568 7.7574L7.75734 17.6569C7.36681 18.0474 6.73365 18.0474 6.34313 17.6569C5.9526 17.2664 5.9526 16.6332 6.34313 16.2427L16.2426 6.34319Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.87866 9.87872C9.09761 10.6598 7.83128 10.6598 7.05023 9.87872C6.26918 9.09767 6.26918 7.83134 7.05023 7.05029C7.83128 6.26924 9.09761 6.26924 9.87866 7.05029C10.6597 7.83134 10.6597 9.09767 9.87866 9.87872Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1213 16.9498C14.9023 17.7308 16.1687 17.7308 16.9497 16.9498C17.7308 16.1687 17.7308 14.9024 16.9497 14.1214C16.1687 13.3403 14.9023 13.3403 14.1213 14.1214C13.3403 14.9024 13.3403 16.1687 14.1213 16.9498Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.2426 6.34319C16.6331 5.95266 17.2663 5.95266 17.6568 6.34319C18.0474 6.73371 18.0474 7.36688 17.6568 7.7574L7.75734 17.6569C7.36681 18.0474 6.73365 18.0474 6.34313 17.6569C5.9526 17.2664 5.9526 16.6332 6.34313 16.2427L16.2426 6.34319Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.87866 9.87872C9.09761 10.6598 7.83128 10.6598 7.05023 9.87872C6.26918 9.09767 6.26918 7.83134 7.05023 7.05029C7.83128 6.26924 9.09761 6.26924 9.87866 7.05029C10.6597 7.83134 10.6597 9.09767 9.87866 9.87872Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1213 16.9498C14.9023 17.7308 16.1687 17.7308 16.9497 16.9498C17.7308 16.1687 17.7308 14.9024 16.9497 14.1214C16.1687 13.3403 14.9023 13.3403 14.1213 14.1214C13.3403 14.9024 13.3403 16.1687 14.1213 16.9498Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11876,7 +11876,7 @@ pub fn CgMaximize(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3H9V5H5V9H3V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 21H9V19H5V15H3V21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 21H21V15H19V19H15V21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 3H15V5H19V9H21V3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3H9V5H5V9H3V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 21H9V19H5V15H3V21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 21H21V15H19V19H15V21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 3H15V5H19V9H21V3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11906,7 +11906,7 @@ pub fn CgMaximizeAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3H9V5H6.46173L11.3047 9.84298L9.8905 11.2572L5 6.3667V9H3V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 21H9V19H6.3764L11.3046 14.0718L9.89038 12.6576L5 17.548V15H3V21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 21H21V15H19V17.5244L14.1332 12.6576L12.719 14.0718L17.6472 19H15V21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 3H15V5H17.5619L12.7189 9.84301L14.1331 11.2572L19 6.39032V9H21V3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3H9V5H6.46173L11.3047 9.84298L9.8905 11.2572L5 6.3667V9H3V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 21H9V19H6.3764L11.3046 14.0718L9.89038 12.6576L5 17.548V15H3V21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 21H21V15H19V17.5244L14.1332 12.6576L12.719 14.0718L17.6472 19H15V21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 3H15V5H17.5619L12.7189 9.84301L14.1331 11.2572L19 6.39032V9H21V3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11936,7 +11936,7 @@ pub fn CgMaze(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.3709 9.59273L8.77816 7L1 14.7782L3.59272 17.3709L11.3709 9.59273Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2218 7L23 14.7782L20.424 17.3542L15.2218 12.152L10.0197 17.3542L7.44367 14.7782L15.2218 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.3709 9.59273L8.77816 7L1 14.7782L3.59272 17.3709L11.3709 9.59273Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2218 7L23 14.7782L20.424 17.3542L15.2218 12.152L10.0197 17.3542L7.44367 14.7782L15.2218 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11966,7 +11966,7 @@ pub fn CgMediaLive(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12ZM13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12ZM13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -11996,7 +11996,7 @@ pub fn CgMediaPodcast(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.6361 20.364C4.00738 18.7353 3 16.4853 3 14C3 9.02944 7.02944 5 12 5C16.9706 5 21 9.02944 21 14C21 16.4853 19.9926 18.7353 18.364 20.3639L19.7782 21.7782C21.7688 19.7875 23 17.0376 23 14C23 7.92487 18.0751 3 12 3C5.92487 3 1 7.92487 1 14C1 17.0376 2.23124 19.7876 4.22189 21.7782L5.6361 20.364Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 18.9497C18.2165 17.683 19 15.933 19 14C19 10.134 15.866 7 12 7C8.13401 7 5 10.134 5 14C5 15.933 5.78353 17.6831 7.05031 18.9498L8.46453 17.5356C7.55967 16.6308 7 15.3807 7 14C7 11.2386 9.23858 9 12 9C14.7614 9 17 11.2386 17 14C17 15.3807 16.4404 16.6307 15.5356 17.5355L16.9498 18.9497Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1213 16.1213C14.6642 15.5784 15 14.8284 15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 14.8285 9.33581 15.5785 9.87874 16.1214L11.293 14.7072C11.112 14.5262 11 14.2762 11 14C11 13.4477 11.4477 13 12 13C12.5523 13 13 13.4477 13 14C13 14.2761 12.8881 14.5261 12.7071 14.7071L14.1213 16.1213Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.6361 20.364C4.00738 18.7353 3 16.4853 3 14C3 9.02944 7.02944 5 12 5C16.9706 5 21 9.02944 21 14C21 16.4853 19.9926 18.7353 18.364 20.3639L19.7782 21.7782C21.7688 19.7875 23 17.0376 23 14C23 7.92487 18.0751 3 12 3C5.92487 3 1 7.92487 1 14C1 17.0376 2.23124 19.7876 4.22189 21.7782L5.6361 20.364Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 18.9497C18.2165 17.683 19 15.933 19 14C19 10.134 15.866 7 12 7C8.13401 7 5 10.134 5 14C5 15.933 5.78353 17.6831 7.05031 18.9498L8.46453 17.5356C7.55967 16.6308 7 15.3807 7 14C7 11.2386 9.23858 9 12 9C14.7614 9 17 11.2386 17 14C17 15.3807 16.4404 16.6307 15.5356 17.5355L16.9498 18.9497Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1213 16.1213C14.6642 15.5784 15 14.8284 15 14C15 12.3431 13.6569 11 12 11C10.3431 11 9 12.3431 9 14C9 14.8285 9.33581 15.5785 9.87874 16.1214L11.293 14.7072C11.112 14.5262 11 14.2762 11 14C11 13.4477 11.4477 13 12 13C12.5523 13 13 13.4477 13 14C13 14.2761 12.8881 14.5261 12.7071 14.7071L14.1213 16.1213Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12026,7 +12026,7 @@ pub fn CgMenu(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12056,7 +12056,7 @@ pub fn CgMenuBoxed(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.01562 6.98193C7.46334 6.98193 7.01562 7.43285 7.01562 7.98513C7.01562 8.53742 7.46334 8.98833 8.01563 8.98833H15.9659C16.5182 8.98833 16.9659 8.53742 16.9659 7.98513C16.9659 7.43285 16.5182 6.98193 15.9659 6.98193H8.01562Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.01562 12C7.01562 11.4477 7.46334 10.9968 8.01562 10.9968H15.9659C16.5182 10.9968 16.9659 11.4477 16.9659 12C16.9659 12.5523 16.5182 13.0032 15.9659 13.0032H8.01563C7.46334 13.0032 7.01562 12.5523 7.01562 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.0249 15.0122C7.47262 15.0122 7.0249 15.4631 7.0249 16.0154C7.0249 16.5677 7.47262 17.0186 8.0249 17.0186H15.9752C16.5275 17.0186 16.9752 16.5677 16.9752 16.0154C16.9752 15.4631 16.5275 15.0122 15.9752 15.0122H8.0249Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.01562 6.98193C7.46334 6.98193 7.01562 7.43285 7.01562 7.98513C7.01562 8.53742 7.46334 8.98833 8.01563 8.98833H15.9659C16.5182 8.98833 16.9659 8.53742 16.9659 7.98513C16.9659 7.43285 16.5182 6.98193 15.9659 6.98193H8.01562Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.01562 12C7.01562 11.4477 7.46334 10.9968 8.01562 10.9968H15.9659C16.5182 10.9968 16.9659 11.4477 16.9659 12C16.9659 12.5523 16.5182 13.0032 15.9659 13.0032H8.01563C7.46334 13.0032 7.01562 12.5523 7.01562 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.0249 15.0122C7.47262 15.0122 7.0249 15.4631 7.0249 16.0154C7.0249 16.5677 7.47262 17.0186 8.0249 17.0186H15.9752C16.5275 17.0186 16.9752 16.5677 16.9752 16.0154C16.9752 15.4631 16.5275 15.0122 15.9752 15.0122H8.0249Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12086,7 +12086,7 @@ pub fn CgMenuCake(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8C13.1046 8 14 7.10457 14 6C14 4.89543 13.1046 4 12 4C10.8954 4 10 4.89543 10 6C10 7.10457 10.8954 8 12 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 10C4.44772 10 4 10.4477 4 11C4 11.5523 4.44772 12 5 12H19C19.5523 12 20 11.5523 20 11C20 10.4477 19.5523 10 19 10H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 15C4 14.4477 4.44772 14 5 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H5C4.44772 16 4 15.5523 4 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 18C4.44772 18 4 18.4477 4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8C13.1046 8 14 7.10457 14 6C14 4.89543 13.1046 4 12 4C10.8954 4 10 4.89543 10 6C10 7.10457 10.8954 8 12 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 10C4.44772 10 4 10.4477 4 11C4 11.5523 4.44772 12 5 12H19C19.5523 12 20 11.5523 20 11C20 10.4477 19.5523 10 19 10H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 15C4 14.4477 4.44772 14 5 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H5C4.44772 16 4 15.5523 4 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 18C4.44772 18 4 18.4477 4 19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19C20 18.4477 19.5523 18 19 18H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12116,7 +12116,7 @@ pub fn CgMenuCheese(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H10.2625L7.61456 15.6479L4.96662 13H4C3.44772 13 3 12.5523 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H10.2625L7.61456 15.6479L4.96662 13H4C3.44772 13 3 12.5523 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12146,7 +12146,7 @@ pub fn CgMenuGridO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 6C8 7.10457 7.10457 8 6 8C4.89543 8 4 7.10457 4 6C4 4.89543 4.89543 4 6 4C7.10457 4 8 4.89543 8 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 13.1046 7.10457 14 6 14C4.89543 14 4 13.1046 4 12C4 10.8954 4.89543 10 6 10C7.10457 10 8 10.8954 8 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 20C7.10457 20 8 19.1046 8 18C8 16.8954 7.10457 16 6 16C4.89543 16 4 16.8954 4 18C4 19.1046 4.89543 20 6 20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 6C14 7.10457 13.1046 8 12 8C10.8954 8 10 7.10457 10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18C10 16.8954 10.8954 16 12 16C13.1046 16 14 16.8954 14 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8C19.1046 8 20 7.10457 20 6C20 4.89543 19.1046 4 18 4C16.8954 4 16 4.89543 16 6C16 7.10457 16.8954 8 18 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 12C20 13.1046 19.1046 14 18 14C16.8954 14 16 13.1046 16 12C16 10.8954 16.8954 10 18 10C19.1046 10 20 10.8954 20 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 20C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16C16.8954 16 16 16.8954 16 18C16 19.1046 16.8954 20 18 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 6C8 7.10457 7.10457 8 6 8C4.89543 8 4 7.10457 4 6C4 4.89543 4.89543 4 6 4C7.10457 4 8 4.89543 8 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 13.1046 7.10457 14 6 14C4.89543 14 4 13.1046 4 12C4 10.8954 4.89543 10 6 10C7.10457 10 8 10.8954 8 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 20C7.10457 20 8 19.1046 8 18C8 16.8954 7.10457 16 6 16C4.89543 16 4 16.8954 4 18C4 19.1046 4.89543 20 6 20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 6C14 7.10457 13.1046 8 12 8C10.8954 8 10 7.10457 10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18C10 16.8954 10.8954 16 12 16C13.1046 16 14 16.8954 14 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8C19.1046 8 20 7.10457 20 6C20 4.89543 19.1046 4 18 4C16.8954 4 16 4.89543 16 6C16 7.10457 16.8954 8 18 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 12C20 13.1046 19.1046 14 18 14C16.8954 14 16 13.1046 16 12C16 10.8954 16.8954 10 18 10C19.1046 10 20 10.8954 20 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 20C19.1046 20 20 19.1046 20 18C20 16.8954 19.1046 16 18 16C16.8954 16 16 16.8954 16 18C16 19.1046 16.8954 20 18 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12176,7 +12176,7 @@ pub fn CgMenuGridR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 4H8V8H4V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 10H8V14H4V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 16H4V20H8V16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 4H14V8H10V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 10H10V14H14V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 16H14V20H10V16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 4H16V8H20V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10H20V14H16V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 16H16V20H20V16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 4H8V8H4V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 10H8V14H4V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 16H4V20H8V16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 4H14V8H10V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 10H10V14H14V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 16H14V20H10V16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 4H16V8H20V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10H20V14H16V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 16H16V20H20V16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12206,7 +12206,7 @@ pub fn CgMenuHotdog(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 6C5.34315 6 4 7.34315 4 9H20C20 7.34315 18.6569 6 17 6H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18C5.34315 18 4 16.6569 4 15H20C20 16.6569 18.6569 18 17 18H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H21C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 6C5.34315 6 4 7.34315 4 9H20C20 7.34315 18.6569 6 17 6H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 18C5.34315 18 4 16.6569 4 15H20C20 16.6569 18.6569 18 17 18H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H21C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12236,7 +12236,7 @@ pub fn CgMenuLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12266,7 +12266,7 @@ pub fn CgMenuLeftAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 18C4 17.4477 4.44772 17 5 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H13C13.5523 13 14 12.5523 14 12C14 11.4477 13.5523 11 13 11H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 18C4 17.4477 4.44772 17 5 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H13C13.5523 13 14 12.5523 14 12C14 11.4477 13.5523 11 13 11H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12296,7 +12296,7 @@ pub fn CgMenuMotion(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C11.4477 5 11 5.44772 11 6C11 6.55228 11.4477 7 12 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18C3 17.4477 3.44772 17 4 17H12C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19H4C3.44772 19 3 18.5523 3 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C11.4477 5 11 5.44772 11 6C11 6.55228 11.4477 7 12 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18C3 17.4477 3.44772 17 4 17H12C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19H4C3.44772 19 3 18.5523 3 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12326,7 +12326,7 @@ pub fn CgMenuOreos(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 3C5.34315 3 4 4.34315 4 6H20C20 4.34315 18.6569 3 17 3H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11C5.34315 11 4 9.65685 4 8H20C20 9.65685 18.6569 11 17 11H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13C5.34315 13 4 14.3431 4 16H20C20 14.3431 18.6569 13 17 13H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 21C5.34315 21 4 19.6569 4 18H20C20 19.6569 18.6569 21 17 21H7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 3C5.34315 3 4 4.34315 4 6H20C20 4.34315 18.6569 3 17 3H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11C5.34315 11 4 9.65685 4 8H20C20 9.65685 18.6569 11 17 11H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13C5.34315 13 4 14.3431 4 16H20C20 14.3431 18.6569 13 17 13H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 21C5.34315 21 4 19.6569 4 18H20C20 19.6569 18.6569 21 17 21H7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12356,7 +12356,7 @@ pub fn CgMenuRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12386,7 +12386,7 @@ pub fn CgMenuRightAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 18C4 17.4477 4.44772 17 5 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 11C10.4477 11 10 11.4477 10 12C10 12.5523 10.4477 13 11 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 18C4 17.4477 4.44772 17 5 17H19C19.5523 17 20 17.4477 20 18C20 18.5523 19.5523 19 19 19H5C4.44772 19 4 18.5523 4 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 11C10.4477 11 10 11.4477 10 12C10 12.5523 10.4477 13 11 13H19C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11H11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12416,7 +12416,7 @@ pub fn CgMenuRound(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 6.9834C7.44772 6.9834 7 7.43111 7 7.9834C7 8.53568 7.44772 8.9834 8 8.9834H16C16.5523 8.9834 17 8.53568 17 7.9834C17 7.43111 16.5523 6.9834 16 6.9834H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 15.017C7.44772 15.017 7 15.4647 7 16.017C7 16.5693 7.44772 17.017 8 17.017H16C16.5523 17.017 17 16.5693 17 16.017C17 15.4647 16.5523 15.017 16 15.017H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 6.9834C7.44772 6.9834 7 7.43111 7 7.9834C7 8.53568 7.44772 8.9834 8 8.9834H16C16.5523 8.9834 17 8.53568 17 7.9834C17 7.43111 16.5523 6.9834 16 6.9834H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 15.017C7.44772 15.017 7 15.4647 7 16.017C7 16.5693 7.44772 17.017 8 17.017H16C16.5523 17.017 17 16.5693 17 16.017C17 15.4647 16.5523 15.017 16 15.017H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12446,7 +12446,7 @@ pub fn CgMergeHorizontal(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8.9757L16.2426 4.73306L14.8284 3.31885L12 6.14727L9.17157 3.31885L7.75736 4.73306L12 8.9757Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 11.9998C5 11.4475 5.44772 10.9997 6 10.9997H18C18.5523 10.9997 19 11.4475 19 11.9998C19 12.552 18.5523 12.9998 18 12.9998H6C5.44772 12.9998 5 12.552 5 11.9998Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15.0242L7.75736 19.2668L9.17157 20.681L12 17.8526L14.8284 20.681L16.2426 19.2668L12 15.0242Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8.9757L16.2426 4.73306L14.8284 3.31885L12 6.14727L9.17157 3.31885L7.75736 4.73306L12 8.9757Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 11.9998C5 11.4475 5.44772 10.9997 6 10.9997H18C18.5523 10.9997 19 11.4475 19 11.9998C19 12.552 18.5523 12.9998 18 12.9998H6C5.44772 12.9998 5 12.552 5 11.9998Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15.0242L7.75736 19.2668L9.17157 20.681L12 17.8526L14.8284 20.681L16.2426 19.2668L12 15.0242Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12476,7 +12476,7 @@ pub fn CgMergeVertical(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.97576 12L4.73312 7.75736L3.31891 9.17157L6.14734 12L3.31891 14.8284L4.73312 16.2426L8.97576 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9998 19C11.4475 19 10.9998 18.5523 10.9998 18V6C10.9998 5.44772 11.4475 5 11.9998 5C12.5521 5 12.9998 5.44772 12.9998 6V18C12.9998 18.5523 12.5521 19 11.9998 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.0242 12L19.2669 16.2426L20.6811 14.8284L17.8527 12L20.6811 9.17157L19.2669 7.75736L15.0242 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.97576 12L4.73312 7.75736L3.31891 9.17157L6.14734 12L3.31891 14.8284L4.73312 16.2426L8.97576 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9998 19C11.4475 19 10.9998 18.5523 10.9998 18V6C10.9998 5.44772 11.4475 5 11.9998 5C12.5521 5 12.9998 5.44772 12.9998 6V18C12.9998 18.5523 12.5521 19 11.9998 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.0242 12L19.2669 16.2426L20.6811 14.8284L17.8527 12L20.6811 9.17157L19.2669 7.75736L15.0242 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12506,7 +12506,7 @@ pub fn CgMic(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 4C9 2.34315 10.3431 1 12 1C13.6569 1 15 2.34315 15 4V12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12V4ZM13 4V12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12V4C11 3.44772 11.4477 3 12 3C12.5523 3 13 3.44772 13 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 12C18 14.973 15.8377 17.441 13 17.917V21H17V23H7V21H11V17.917C8.16229 17.441 6 14.973 6 12V9H8V12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12V9H18V12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 4C9 2.34315 10.3431 1 12 1C13.6569 1 15 2.34315 15 4V12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12V4ZM13 4V12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12V4C11 3.44772 11.4477 3 12 3C12.5523 3 13 3.44772 13 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 12C18 14.973 15.8377 17.441 13 17.917V21H17V23H7V21H11V17.917C8.16229 17.441 6 14.973 6 12V9H8V12C8 14.2091 9.79086 16 12 16C14.2091 16 16 14.2091 16 12V9H18V12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12536,7 +12536,7 @@ pub fn CgMicrobit(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 12C19 13.1046 18.1046 14 17 14C15.8954 14 15 13.1046 15 12C15 10.8954 15.8954 10 17 10C18.1046 10 19 10.8954 19 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 8H7C4.79086 8 3 9.79086 3 12C3 14.2091 4.79086 16 7 16H17C19.2091 16 21 14.2091 21 12C21 9.79086 19.2091 8 17 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 12C19 13.1046 18.1046 14 17 14C15.8954 14 15 13.1046 15 12C15 10.8954 15.8954 10 17 10C18.1046 10 19 10.8954 19 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 5C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12C24 8.13401 20.866 5 17 5H7ZM17 8H7C4.79086 8 3 9.79086 3 12C3 14.2091 4.79086 16 7 16H17C19.2091 16 21 14.2091 21 12C21 9.79086 19.2091 8 17 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12566,7 +12566,7 @@ pub fn CgMicrosoft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3H11V11H3V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 13H11V21H3V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 3H21V11H13V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13H21V21H13V13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3H11V11H3V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 13H11V21H3V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 3H21V11H13V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13H21V21H13V13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12626,7 +12626,7 @@ pub fn CgMinimize(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H3V7H7V3H9V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15H3V17H7V21H9V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 15H15V21H17V17H21V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9.00012H21V7.00012H17V3.00012H15V9.00012Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H3V7H7V3H9V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15H3V17H7V21H9V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 15H15V21H17V17H21V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9.00012H21V7.00012H17V3.00012H15V9.00012Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12656,7 +12656,7 @@ pub fn CgMinimizeAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.0735 2L21.4877 3.41421L15.6378 9.26416H18.1824V11.2642H12.1824V5.26416H14.1824V7.89111L20.0735 2Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.1824 12.2642V18.2642H9.1824V15.8422L3.41421 21.6104L2 20.1962L7.93203 14.2642H5.1824V12.2642H11.1824Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.0735 2L21.4877 3.41421L15.6378 9.26416H18.1824V11.2642H12.1824V5.26416H14.1824V7.89111L20.0735 2Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.1824 12.2642V18.2642H9.1824V15.8422L3.41421 21.6104L2 20.1962L7.93203 14.2642H5.1824V12.2642H11.1824Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12686,7 +12686,7 @@ pub fn CgModem(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 16.6341C18 17.1864 17.5523 17.6341 17 17.6341C16.4477 17.6341 16 17.1864 16 16.6341C16 16.0819 16.4477 15.6341 17 15.6341C17.5523 15.6341 18 16.0819 18 16.6341Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.86603 3.13414C5.38773 2.858 4.77614 3.02187 4.5 3.50017C4.22386 3.97846 4.38773 4.59005 4.86603 4.86619L18.3205 12.6341H2V16.6341C2 18.8433 3.79086 20.6341 6 20.6341H18C20.2091 20.6341 22 18.8433 22 16.6341V12.6341L5.86603 3.13414ZM20 14.6341H4V16.6341C4 17.7387 4.89543 18.6341 6 18.6341H18C19.1046 18.6341 20 17.7387 20 16.6341V14.6341Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 16.6341C18 17.1864 17.5523 17.6341 17 17.6341C16.4477 17.6341 16 17.1864 16 16.6341C16 16.0819 16.4477 15.6341 17 15.6341C17.5523 15.6341 18 16.0819 18 16.6341Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.86603 3.13414C5.38773 2.858 4.77614 3.02187 4.5 3.50017C4.22386 3.97846 4.38773 4.59005 4.86603 4.86619L18.3205 12.6341H2V16.6341C2 18.8433 3.79086 20.6341 6 20.6341H18C20.2091 20.6341 22 18.8433 22 16.6341V12.6341L5.86603 3.13414ZM20 14.6341H4V16.6341C4 17.7387 4.89543 18.6341 6 18.6341H18C19.1046 18.6341 20 17.7387 20 16.6341V14.6341Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12716,7 +12716,7 @@ pub fn CgMonday(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.77857 6.13915C7.7289 4.78193 9.59953 4.45209 10.9568 5.40242C12.314 6.35275 12.6438 8.22339 11.6935 9.58061L5.95771 17.7721C5.00738 19.1293 3.13674 19.4592 1.77953 18.5089C0.422312 17.5585 0.0924684 15.6879 1.0428 14.3307L6.77857 6.13915Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2678 6.22811C16.2182 4.8709 18.0888 4.54105 19.446 5.49138C20.8032 6.44172 21.1331 8.31235 20.1827 9.66957L14.447 17.8611C13.4966 19.2183 11.626 19.5481 10.2688 18.5978C8.91158 17.6475 8.58173 15.7768 9.53207 14.4196L15.2678 6.22811Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.5 18.8596C22.1569 18.8596 23.5 17.5165 23.5 15.8596C23.5 14.2028 22.1569 12.8596 20.5 12.8596C18.8431 12.8596 17.5 14.2028 17.5 15.8596C17.5 17.5165 18.8431 18.8596 20.5 18.8596Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.77857 6.13915C7.7289 4.78193 9.59953 4.45209 10.9568 5.40242C12.314 6.35275 12.6438 8.22339 11.6935 9.58061L5.95771 17.7721C5.00738 19.1293 3.13674 19.4592 1.77953 18.5089C0.422312 17.5585 0.0924684 15.6879 1.0428 14.3307L6.77857 6.13915Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2678 6.22811C16.2182 4.8709 18.0888 4.54105 19.446 5.49138C20.8032 6.44172 21.1331 8.31235 20.1827 9.66957L14.447 17.8611C13.4966 19.2183 11.626 19.5481 10.2688 18.5978C8.91158 17.6475 8.58173 15.7768 9.53207 14.4196L15.2678 6.22811Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.5 18.8596C22.1569 18.8596 23.5 17.5165 23.5 15.8596C23.5 14.2028 22.1569 12.8596 20.5 12.8596C18.8431 12.8596 17.5 14.2028 17.5 15.8596C17.5 17.5165 18.8431 18.8596 20.5 18.8596Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12776,7 +12776,7 @@ pub fn CgMore(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 15C6.65685 15 8 13.6569 8 12C8 10.3431 6.65685 9 5 9C3.34315 9 2 10.3431 2 12C2 13.6569 3.34315 15 5 15ZM5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15ZM12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 13.6569 20.6569 15 19 15C17.3431 15 16 13.6569 16 12C16 10.3431 17.3431 9 19 9C20.6569 9 22 10.3431 22 12ZM20 12C20 12.5523 19.5523 13 19 13C18.4477 13 18 12.5523 18 12C18 11.4477 18.4477 11 19 11C19.5523 11 20 11.4477 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 15C6.65685 15 8 13.6569 8 12C8 10.3431 6.65685 9 5 9C3.34315 9 2 10.3431 2 12C2 13.6569 3.34315 15 5 15ZM5 13C5.55228 13 6 12.5523 6 12C6 11.4477 5.55228 11 5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15ZM12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 13.6569 20.6569 15 19 15C17.3431 15 16 13.6569 16 12C16 10.3431 17.3431 9 19 9C20.6569 9 22 10.3431 22 12ZM20 12C20 12.5523 19.5523 13 19 13C18.4477 13 18 12.5523 18 12C18 11.4477 18.4477 11 19 11C19.5523 11 20 11.4477 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12806,7 +12806,7 @@ pub fn CgMoreAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 13.1046 7.10457 14 6 14C4.89543 14 4 13.1046 4 12C4 10.8954 4.89543 10 6 10C7.10457 10 8 10.8954 8 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 14C19.1046 14 20 13.1046 20 12C20 10.8954 19.1046 10 18 10C16.8954 10 16 10.8954 16 12C16 13.1046 16.8954 14 18 14Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 13.1046 7.10457 14 6 14C4.89543 14 4 13.1046 4 12C4 10.8954 4.89543 10 6 10C7.10457 10 8 10.8954 8 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 14C19.1046 14 20 13.1046 20 12C20 10.8954 19.1046 10 18 10C16.8954 10 16 10.8954 16 12C16 13.1046 16.8954 14 18 14Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12836,7 +12836,7 @@ pub fn CgMoreO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 14C18.1046 14 19 13.1046 19 12C19 10.8954 18.1046 10 17 10C15.8954 10 15 10.8954 15 12C15 13.1046 15.8954 14 17 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 14C18.1046 14 19 13.1046 19 12C19 10.8954 18.1046 10 17 10C15.8954 10 15 10.8954 15 12C15 13.1046 15.8954 14 17 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12866,7 +12866,7 @@ pub fn CgMoreR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 14C18.1046 14 19 13.1046 19 12C19 10.8954 18.1046 10 17 10C15.8954 10 15 10.8954 15 12C15 13.1046 15.8954 14 17 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 5C0 3.34315 1.34315 2 3 2H21C22.6569 2 24 3.34315 24 5V19C24 20.6569 22.6569 22 21 22H3C1.34315 22 0 20.6569 0 19V5ZM3 4H21C21.5523 4 22 4.44772 22 5V19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19V5C2 4.44772 2.44771 4 3 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 14C18.1046 14 19 13.1046 19 12C19 10.8954 18.1046 10 17 10C15.8954 10 15 10.8954 15 12C15 13.1046 15.8954 14 17 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 5C0 3.34315 1.34315 2 3 2H21C22.6569 2 24 3.34315 24 5V19C24 20.6569 22.6569 22 21 22H3C1.34315 22 0 20.6569 0 19V5ZM3 4H21C21.5523 4 22 4.44772 22 5V19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19V5C2 4.44772 2.44771 4 3 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12926,7 +12926,7 @@ pub fn CgMoreVerticalAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 6C14 7.10457 13.1046 8 12 8C10.8954 8 10 7.10457 10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18C10 16.8954 10.8954 16 12 16C13.1046 16 14 16.8954 14 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 6C14 7.10457 13.1046 8 12 8C10.8954 8 10 7.10457 10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18C10 16.8954 10.8954 16 12 16C13.1046 16 14 16.8954 14 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12956,7 +12956,7 @@ pub fn CgMoreVerticalO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C13.1046 9 14 8.10457 14 7C14 5.89543 13.1046 5 12 5C10.8954 5 10 5.89543 10 7C10 8.10457 10.8954 9 12 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C13.1046 9 14 8.10457 14 7C14 5.89543 13.1046 5 12 5C10.8954 5 10 5.89543 10 7C10 8.10457 10.8954 9 12 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -12986,7 +12986,7 @@ pub fn CgMoreVerticalR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C13.1046 9 14 8.10457 14 7C14 5.89543 13.1046 5 12 5C10.8954 5 10 5.89543 10 7C10 8.10457 10.8954 9 12 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 3C2 1.34315 3.34315 0 5 0H19C20.6569 0 22 1.34315 22 3V21C22 22.6569 20.6569 24 19 24H5C3.34315 24 2 22.6569 2 21V3ZM5 2H19C19.5523 2 20 2.44771 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3C4 2.44772 4.44772 2 5 2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9C13.1046 9 14 8.10457 14 7C14 5.89543 13.1046 5 12 5C10.8954 5 10 5.89543 10 7C10 8.10457 10.8954 9 12 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C13.1046 19 14 18.1046 14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17C10 18.1046 10.8954 19 12 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 3C2 1.34315 3.34315 0 5 0H19C20.6569 0 22 1.34315 22 3V21C22 22.6569 20.6569 24 19 24H5C3.34315 24 2 22.6569 2 21V3ZM5 2H19C19.5523 2 20 2.44771 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3C4 2.44772 4.44772 2 5 2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13016,7 +13016,7 @@ pub fn CgMouse(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C11.4477 5 11 5.44772 11 6V10C11 10.5523 11.4477 11 12 11C12.5523 11 13 10.5523 13 10V6C13 5.44772 12.5523 5 12 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V16C20 20.4183 16.4183 24 12 24C7.58172 24 4 20.4183 4 16V8ZM18 8V16C18 19.3137 15.3137 22 12 22C8.68629 22 6 19.3137 6 16V8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C11.4477 5 11 5.44772 11 6V10C11 10.5523 11.4477 11 12 11C12.5523 11 13 10.5523 13 10V6C13 5.44772 12.5523 5 12 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V16C20 20.4183 16.4183 24 12 24C7.58172 24 4 20.4183 4 16V8ZM18 8V16C18 19.3137 15.3137 22 12 22C8.68629 22 6 19.3137 6 16V8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13046,7 +13046,7 @@ pub fn CgMoveDown(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 5H9V13H7V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 5H17V13H15V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0001 5H13.0001V14.9999H16.0355L12.0356 19.071L8.03564 14.9999H11.0001V5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 5H9V13H7V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 5H17V13H15V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0001 5H13.0001V14.9999H16.0355L12.0356 19.071L8.03564 14.9999H11.0001V5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13076,7 +13076,7 @@ pub fn CgMoveLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.071 17V15H11.071V17H19.071Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.071 9V7H11.071V9H19.071Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.071 12.9999V10.9999H9.07109V7.96454L5 11.9644L9.07109 15.9644V12.9999H19.071Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.071 17V15H11.071V17H19.071Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.071 9V7H11.071V9H19.071Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.071 12.9999V10.9999H9.07109V7.96454L5 11.9644L9.07109 15.9644V12.9999H19.071Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13106,7 +13106,7 @@ pub fn CgMoveRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 17V15H13V17H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9V7H13V9H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.9999V10.9999H14.9999V7.96454L19.071 11.9644L14.9999 15.9644V12.9999H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 17V15H13V17H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 9V7H13V9H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.9999V10.9999H14.9999V7.96454L19.071 11.9644L14.9999 15.9644V12.9999H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13136,7 +13136,7 @@ pub fn CgMoveTask(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.9641 7H10.9641V9H18.9641V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 8.82864V15.1714L9.9642 12L6 8.82864Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.9641 11H10.9641V13H18.9641V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9641 15H18.9641V17H10.9641V15Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.9641 7H10.9641V9H18.9641V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 8.82864V15.1714L9.9642 12L6 8.82864Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.9641 11H10.9641V13H18.9641V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9641 15H18.9641V17H10.9641V15Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13166,7 +13166,7 @@ pub fn CgMoveUp(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 19.071H15V11.071H17V19.071Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 19.071H7V11.071H9V19.071Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9999 19.071H10.9999V9.07109H7.96454L11.9644 5L15.9644 9.07109H12.9999V19.071Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 19.071H15V11.071H17V19.071Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 19.071H7V11.071H9V19.071Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9999 19.071H10.9999V9.07109H7.96454L11.9644 5L15.9644 9.07109H12.9999V19.071Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13256,7 +13256,7 @@ pub fn CgMusicSpeaker(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 18.939C14.2091 18.939 16 17.1482 16 14.939C16 12.7299 14.2091 10.939 12 10.939C9.79086 10.939 8 12.7299 8 14.939C8 17.1482 9.79086 18.939 12 18.939ZM12 16.939C13.1046 16.939 14 16.0436 14 14.939C14 13.8345 13.1046 12.939 12 12.939C10.8954 12.939 10 13.8345 10 14.939C10 16.0436 10.8954 16.939 12 16.939Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9.04401C13.1046 9.04401 14 8.14858 14 7.04401C14 5.93944 13.1046 5.04401 12 5.04401C10.8954 5.04401 10 5.93944 10 7.04401C10 8.14858 10.8954 9.04401 12 9.04401Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 1C5.34315 1 4 2.34315 4 4V20C4 21.6569 5.34315 23 7 23H17C18.6569 23 20 21.6569 20 20V4C20 2.34315 18.6569 1 17 1H7ZM17 3H7C6.44772 3 6 3.44772 6 4V20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20V4C18 3.44772 17.5523 3 17 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 18.939C14.2091 18.939 16 17.1482 16 14.939C16 12.7299 14.2091 10.939 12 10.939C9.79086 10.939 8 12.7299 8 14.939C8 17.1482 9.79086 18.939 12 18.939ZM12 16.939C13.1046 16.939 14 16.0436 14 14.939C14 13.8345 13.1046 12.939 12 12.939C10.8954 12.939 10 13.8345 10 14.939C10 16.0436 10.8954 16.939 12 16.939Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 9.04401C13.1046 9.04401 14 8.14858 14 7.04401C14 5.93944 13.1046 5.04401 12 5.04401C10.8954 5.04401 10 5.93944 10 7.04401C10 8.14858 10.8954 9.04401 12 9.04401Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 1C5.34315 1 4 2.34315 4 4V20C4 21.6569 5.34315 23 7 23H17C18.6569 23 20 21.6569 20 20V4C20 2.34315 18.6569 1 17 1H7ZM17 3H7C6.44772 3 6 3.44772 6 4V20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20V4C18 3.44772 17.5523 3 17 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13286,7 +13286,7 @@ pub fn CgNametag(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14V20H10V18H6V14H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9V15H15V9H9ZM13 11H11V13H13V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 10V4H10V6H6V10H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 10V4H14V6H18V10H20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 14V20H14V18H18V14H20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14V20H10V18H6V14H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9V15H15V9H9ZM13 11H11V13H13V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 10V4H10V6H6V10H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 10V4H14V6H18V10H20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 14V20H14V18H18V14H20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13316,7 +13316,7 @@ pub fn CgNotes(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6C6 5.44772 6.44772 5 7 5H17C17.5523 5 18 5.44772 18 6C18 6.55228 17.5523 7 17 7H7C6.44771 7 6 6.55228 6 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10C6 9.44771 6.44772 9 7 9H17C17.5523 9 18 9.44771 18 10C18 10.5523 17.5523 11 17 11H7C6.44771 11 6 10.5523 6 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13C6.44772 13 6 13.4477 6 14C6 14.5523 6.44771 15 7 15H17C17.5523 15 18 14.5523 18 14C18 13.4477 17.5523 13 17 13H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 18C6 17.4477 6.44772 17 7 17H11C11.5523 17 12 17.4477 12 18C12 18.5523 11.5523 19 11 19H7C6.44772 19 6 18.5523 6 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 4C2 2.34315 3.34315 1 5 1H19C20.6569 1 22 2.34315 22 4V20C22 21.6569 20.6569 23 19 23H5C3.34315 23 2 21.6569 2 20V4ZM5 3H19C19.5523 3 20 3.44771 20 4V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V4C4 3.44772 4.44771 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6C6 5.44772 6.44772 5 7 5H17C17.5523 5 18 5.44772 18 6C18 6.55228 17.5523 7 17 7H7C6.44771 7 6 6.55228 6 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10C6 9.44771 6.44772 9 7 9H17C17.5523 9 18 9.44771 18 10C18 10.5523 17.5523 11 17 11H7C6.44771 11 6 10.5523 6 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 13C6.44772 13 6 13.4477 6 14C6 14.5523 6.44771 15 7 15H17C17.5523 15 18 14.5523 18 14C18 13.4477 17.5523 13 17 13H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 18C6 17.4477 6.44772 17 7 17H11C11.5523 17 12 17.4477 12 18C12 18.5523 11.5523 19 11 19H7C6.44772 19 6 18.5523 6 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 4C2 2.34315 3.34315 1 5 1H19C20.6569 1 22 2.34315 22 4V20C22 21.6569 20.6569 23 19 23H5C3.34315 23 2 21.6569 2 20V4ZM5 3H19C19.5523 3 20 3.44771 20 4V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V4C4 3.44772 4.44771 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13346,7 +13346,7 @@ pub fn CgNotifications(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7C20 8.65685 18.6569 10 17 10C15.3431 10 14 8.65685 14 7C14 5.34315 15.3431 4 17 4C18.6569 4 20 5.34315 20 7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6H4V20H18V12H16V18H6V8H12V6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 7C20 8.65685 18.6569 10 17 10C15.3431 10 14 8.65685 14 7C14 5.34315 15.3431 4 17 4C18.6569 4 20 5.34315 20 7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 6H4V20H18V12H16V18H6V8H12V6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13436,7 +13436,7 @@ pub fn CgOpenCollective(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.6818 15.7529L18.8116 17.8827C20.1752 16.3052 21 14.249 21 12.0001C21 9.78747 20.2016 7.76133 18.8771 6.19409L16.7444 8.32671C17.5315 9.34177 18 10.6162 18 12.0001C18 13.4203 17.5066 14.7253 16.6818 15.7529Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.6734 16.7445C14.6583 17.5315 13.3839 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C13.4202 6 14.7252 6.49344 15.7528 7.31823L17.8826 5.18843C16.3051 3.82482 14.2489 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C14.2126 21 16.2387 20.2016 17.806 18.8771L15.6734 16.7445Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.6818 15.7529L18.8116 17.8827C20.1752 16.3052 21 14.249 21 12.0001C21 9.78747 20.2016 7.76133 18.8771 6.19409L16.7444 8.32671C17.5315 9.34177 18 10.6162 18 12.0001C18 13.4203 17.5066 14.7253 16.6818 15.7529Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.6734 16.7445C14.6583 17.5315 13.3839 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C13.4202 6 14.7252 6.49344 15.7528 7.31823L17.8826 5.18843C16.3051 3.82482 14.2489 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C14.2126 21 16.2387 20.2016 17.806 18.8771L15.6734 16.7445Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13466,7 +13466,7 @@ pub fn CgOptions(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 3C8.86384 3 10.4299 4.27477 10.874 6H19V8H10.874C10.4299 9.72523 8.86384 11 7 11C4.79086 11 3 9.20914 3 7C3 4.79086 4.79086 3 7 3ZM7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 20C15.1362 20 13.5701 18.7252 13.126 17H5V15H13.126C13.5701 13.2748 15.1362 12 17 12C19.2091 12 21 13.7909 21 16C21 18.2091 19.2091 20 17 20ZM17 18C18.1046 18 19 17.1046 19 16C19 14.8954 18.1046 14 17 14C15.8954 14 15 14.8954 15 16C15 17.1046 15.8954 18 17 18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 3C8.86384 3 10.4299 4.27477 10.874 6H19V8H10.874C10.4299 9.72523 8.86384 11 7 11C4.79086 11 3 9.20914 3 7C3 4.79086 4.79086 3 7 3ZM7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 20C15.1362 20 13.5701 18.7252 13.126 17H5V15H13.126C13.5701 13.2748 15.1362 12 17 12C19.2091 12 21 13.7909 21 16C21 18.2091 19.2091 20 17 20ZM17 18C18.1046 18 19 17.1046 19 16C19 14.8954 18.1046 14 17 14C15.8954 14 15 14.8954 15 16C15 17.1046 15.8954 18 17 18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13496,7 +13496,7 @@ pub fn CgOrganisation(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 15H19V17H17V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 11H17V13H19V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 7H23V21H1V3H13V7ZM8 5H11V7H8V5ZM11 19V17H8V19H11ZM11 15V13H8V15H11ZM11 11V9H8V11H11ZM21 19V9H13V11H15V13H13V15H15V17H13V19H21ZM3 19V17H6V19H3ZM3 15H6V13H3V15ZM6 11V9H3V11H6ZM3 7H6V5H3V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 15H19V17H17V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 11H17V13H19V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 7H23V21H1V3H13V7ZM8 5H11V7H8V5ZM11 19V17H8V19H11ZM11 15V13H8V15H11ZM11 11V9H8V11H11ZM21 19V9H13V11H15V13H13V15H15V17H13V19H21ZM3 19V17H6V19H3ZM3 15H6V13H3V15ZM6 11V9H3V11H6ZM3 7H6V5H3V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13526,7 +13526,7 @@ pub fn CgOverflow(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.2\" d=\"M22 11C22 13.6522 20.9464 16.1957 19.0711 18.0711C17.1957 19.9464 14.6522 21 12 21C9.34784 21 6.8043 19.9464 4.92893 18.0711C3.05357 16.1957 2 13.6522 2 11L22 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.3\" d=\"M20 11C20 13.1217 19.1571 15.1566 17.6569 16.6569C16.1566 18.1571 14.1217 19 12 19C9.87827 19 7.84344 18.1571 6.34315 16.6569C4.84286 15.1566 4 13.1217 4 11L20 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11C20 8.87827 19.1571 6.84344 17.6569 5.34315C16.1566 3.84285 14.1217 3 12 3C9.87827 3 7.84344 3.84285 6.34315 5.34315C4.84286 6.84344 4 8.87827 4 11L20 11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.2\" d=\"M22 11C22 13.6522 20.9464 16.1957 19.0711 18.0711C17.1957 19.9464 14.6522 21 12 21C9.34784 21 6.8043 19.9464 4.92893 18.0711C3.05357 16.1957 2 13.6522 2 11L22 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.3\" d=\"M20 11C20 13.1217 19.1571 15.1566 17.6569 16.6569C16.1566 18.1571 14.1217 19 12 19C9.87827 19 7.84344 18.1571 6.34315 16.6569C4.84286 15.1566 4 13.1217 4 11L20 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11C20 8.87827 19.1571 6.84344 17.6569 5.34315C16.1566 3.84285 14.1217 3 12 3C9.87827 3 7.84344 3.84285 6.34315 5.34315C4.84286 6.84344 4 8.87827 4 11L20 11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13556,7 +13556,7 @@ pub fn CgPacman(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0636 8C14.6159 8 15.0636 7.55228 15.0636 7C15.0636 6.44772 14.6159 6 14.0636 6C13.5113 6 13.0636 6.44772 13.0636 7C13.0636 7.55228 13.5113 8 14.0636 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 3C15.1523 3 17.1281 3.7555 18.6768 5.01576L20.124 6.46299L18.8288 7.75818L18.828 7.75738L14.5854 12L18.2236 15.6383L18.2224 15.6396L20.1273 17.5445L18.7144 18.9575L18.7122 18.9553C17.1583 20.2329 15.1687 21 13 21C8.02944 21 4 16.9706 4 12C4 7.02944 8.02944 3 13 3ZM11.7569 12L17.2893 17.5323C16.1044 18.4523 14.6162 19 13 19C9.13401 19 6 15.866 6 12C6 8.13401 9.13401 5 13 5C14.6162 5 16.1045 5.54772 17.2893 6.46768L11.7569 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0636 8C14.6159 8 15.0636 7.55228 15.0636 7C15.0636 6.44772 14.6159 6 14.0636 6C13.5113 6 13.0636 6.44772 13.0636 7C13.0636 7.55228 13.5113 8 14.0636 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 3C15.1523 3 17.1281 3.7555 18.6768 5.01576L20.124 6.46299L18.8288 7.75818L18.828 7.75738L14.5854 12L18.2236 15.6383L18.2224 15.6396L20.1273 17.5445L18.7144 18.9575L18.7122 18.9553C17.1583 20.2329 15.1687 21 13 21C8.02944 21 4 16.9706 4 12C4 7.02944 8.02944 3 13 3ZM11.7569 12L17.2893 17.5323C16.1044 18.4523 14.6162 19 13 19C9.13401 19 6 15.866 6 12C6 8.13401 9.13401 5 13 5C14.6162 5 16.1045 5.54772 17.2893 6.46768L11.7569 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13586,7 +13586,7 @@ pub fn CgPassword(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12C6 12.5523 5.55228 13 5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11C5.55228 11 6 11.4477 6 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44771 11 8 11.4477 8 12C8 12.5523 8.44771 13 9 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 12.5523 13.5523 13 13 13C12.4477 13 12 12.5523 12 12C12 11.4477 12.4477 11 13 11C13.5523 11 14 11.4477 14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H16V13H20V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 6C0.895431 6 0 6.89543 0 8V16C0 17.1046 0.89543 18 2 18H22C23.1046 18 24 17.1046 24 16V8C24 6.89543 23.1046 6 22 6H2ZM22 8H2L2 16H22V8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12C6 12.5523 5.55228 13 5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11C5.55228 11 6 11.4477 6 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44771 11 8 11.4477 8 12C8 12.5523 8.44771 13 9 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12C14 12.5523 13.5523 13 13 13C12.4477 13 12 12.5523 12 12C12 11.4477 12.4477 11 13 11C13.5523 11 14 11.4477 14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 11H16V13H20V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 6C0.895431 6 0 6.89543 0 8V16C0 17.1046 0.89543 18 2 18H22C23.1046 18 24 17.1046 24 16V8C24 6.89543 23.1046 6 22 6H2ZM22 8H2L2 16H22V8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13646,7 +13646,7 @@ pub fn CgPathCrop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\" x=\"6\" y=\"6\" width=\"8\" height=\"8\" stroke=\"currentColor\" stroke-width=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9H19V19H9V9ZM15 11H17V17H11V15H15V11Z\" fill=\"currentColor\" />"
+        "<rect xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\" x=\"6\" y=\"6\" width=\"8\" height=\"8\" stroke=\"currentColor\" stroke-width=\"2\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 9H19V19H9V9ZM15 11H17V17H11V15H15V11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13676,7 +13676,7 @@ pub fn CgPathDivide(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5H15V9H9V15H5V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15V19H19V9H15V15H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10H14V14H10V10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5H15V9H9V15H5V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15V19H19V9H15V15H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10H14V14H10V10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13826,7 +13826,7 @@ pub fn CgPathTrim(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5H15V8H8V15H5V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 9H9V19H19V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5H15V8H8V15H5V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 9H9V19H19V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13886,7 +13886,7 @@ pub fn CgPatreon(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\" d=\"M21 10C21 13.3137 18.3137 16 15 16C11.6863 16 9 13.3137 9 10C9 6.68629 11.6863 4 15 4C18.3137 4 21 6.68629 21 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 4H7V20H3V4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\" d=\"M21 10C21 13.3137 18.3137 16 15 16C11.6863 16 9 13.3137 9 10C9 6.68629 11.6863 4 15 4C18.3137 4 21 6.68629 21 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 4H7V20H3V4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -13946,7 +13946,7 @@ pub fn CgPen(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21.2635 2.29289C20.873 1.90237 20.2398 1.90237 19.8493 2.29289L18.9769 3.16525C17.8618 2.63254 16.4857 2.82801 15.5621 3.75165L4.95549 14.3582L10.6123 20.0151L21.2189 9.4085C22.1426 8.48486 22.338 7.1088 21.8053 5.99367L22.6777 5.12132C23.0682 4.7308 23.0682 4.09763 22.6777 3.70711L21.2635 2.29289ZM16.9955 10.8035L10.6123 17.1867L7.78392 14.3582L14.1671 7.9751L16.9955 10.8035ZM18.8138 8.98525L19.8047 7.99429C20.1953 7.60376 20.1953 6.9706 19.8047 6.58007L18.3905 5.16586C18 4.77534 17.3668 4.77534 16.9763 5.16586L15.9853 6.15683L18.8138 8.98525Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 22.9502L4.12171 15.1717L9.77817 20.8289L2 22.9502Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21.2635 2.29289C20.873 1.90237 20.2398 1.90237 19.8493 2.29289L18.9769 3.16525C17.8618 2.63254 16.4857 2.82801 15.5621 3.75165L4.95549 14.3582L10.6123 20.0151L21.2189 9.4085C22.1426 8.48486 22.338 7.1088 21.8053 5.99367L22.6777 5.12132C23.0682 4.7308 23.0682 4.09763 22.6777 3.70711L21.2635 2.29289ZM16.9955 10.8035L10.6123 17.1867L7.78392 14.3582L14.1671 7.9751L16.9955 10.8035ZM18.8138 8.98525L19.8047 7.99429C20.1953 7.60376 20.1953 6.9706 19.8047 6.58007L18.3905 5.16586C18 4.77534 17.3668 4.77534 16.9763 5.16586L15.9853 6.15683L18.8138 8.98525Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 22.9502L4.12171 15.1717L9.77817 20.8289L2 22.9502Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14216,7 +14216,7 @@ pub fn CgPerformance(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 9V13.1707C9.83481 13.5825 9 14.6938 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.6938 14.1652 13.5825 13 13.1707V9H11ZM11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C15.866 5 19 8.13401 19 12V13H17V12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12V13H5V12C5 8.13401 8.13401 5 12 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 9V13.1707C9.83481 13.5825 9 14.6938 9 16C9 17.6569 10.3431 19 12 19C13.6569 19 15 17.6569 15 16C15 14.6938 14.1652 13.5825 13 13.1707V9H11ZM11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C15.866 5 19 8.13401 19 12V13H17V12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12V13H5V12C5 8.13401 8.13401 5 12 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14276,7 +14276,7 @@ pub fn CgPhone(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 10V5C2 4.44775 2.44772 4 3 4H8C8.55228 4 9 4.44775 9 5V9C9 9.55225 8.55228 10 8 10H6C6 14.4182 9.58173 18 14 18V16C14 15.4478 14.4477 15 15 15H19C19.5523 15 20 15.4478 20 16V21C20 21.5522 19.5523 22 19 22H14C7.37259 22 2 16.6274 2 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.5433 9.70386C17.8448 10.4319 18 11.2122 18 12H16.2C16.2 11.4485 16.0914 10.9023 15.8803 10.3928C15.6692 9.88306 15.3599 9.42017 14.9698 9.03027C14.5798 8.64014 14.1169 8.33081 13.6073 8.11963C13.0977 7.90869 12.5515 7.80005 12 7.80005V6C12.7879 6 13.5681 6.15527 14.2961 6.45679C15.024 6.7583 15.6855 7.2002 16.2426 7.75732C16.7998 8.31445 17.2418 8.97583 17.5433 9.70386Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 10V5C2 4.44775 2.44772 4 3 4H8C8.55228 4 9 4.44775 9 5V9C9 9.55225 8.55228 10 8 10H6C6 14.4182 9.58173 18 14 18V16C14 15.4478 14.4477 15 15 15H19C19.5523 15 20 15.4478 20 16V21C20 21.5522 19.5523 22 19 22H14C7.37259 22 2 16.6274 2 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.5433 9.70386C17.8448 10.4319 18 11.2122 18 12H16.2C16.2 11.4485 16.0914 10.9023 15.8803 10.3928C15.6692 9.88306 15.3599 9.42017 14.9698 9.03027C14.5798 8.64014 14.1169 8.33081 13.6073 8.11963C13.0977 7.90869 12.5515 7.80005 12 7.80005V6C12.7879 6 13.5681 6.15527 14.2961 6.45679C15.024 6.7583 15.6855 7.2002 16.2426 7.75732C16.7998 8.31445 17.2418 8.97583 17.5433 9.70386Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14306,7 +14306,7 @@ pub fn CgPhotoscan(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 8C9.55228 8 10 7.55228 10 7C10 6.44772 9.55228 6 9 6C8.44772 6 8 6.44772 8 7C8 7.55228 8.44772 8 9 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 3C18.1046 3 19 3.89543 19 5V19C19 20.1046 18.1046 21 17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H17ZM12.4649 5H17V16H7L7 10.4649C7.58835 10.8052 8.27143 11 9 11C11.2091 11 13 9.20914 13 7C13 6.27143 12.8052 5.58835 12.4649 5ZM9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 8C9.55228 8 10 7.55228 10 7C10 6.44772 9.55228 6 9 6C8.44772 6 8 6.44772 8 7C8 7.55228 8.44772 8 9 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 3C18.1046 3 19 3.89543 19 5V19C19 20.1046 18.1046 21 17 21H7C5.89543 21 5 20.1046 5 19V5C5 3.89543 5.89543 3 7 3H17ZM12.4649 5H17V16H7L7 10.4649C7.58835 10.8052 8.27143 11 9 11C11.2091 11 13 9.20914 13 7C13 6.27143 12.8052 5.58835 12.4649 5ZM9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14396,7 +14396,7 @@ pub fn CgPin(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.06298 10.063 6.27212 12.2721 6.27212C14.4813 6.27212 16.2721 8.06298 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16755 11.1676 8.27212 12.2721 8.27212C13.3767 8.27212 14.2721 9.16755 14.2721 10.2721Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.79417 16.5183C2.19424 13.0909 2.05438 7.39409 5.48178 3.79417C8.90918 0.194243 14.6059 0.054383 18.2059 3.48178C21.8058 6.90918 21.9457 12.6059 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.97318 6.93028 5.17324C9.59603 2.3733 14.0268 2.26452 16.8268 4.93028C19.6267 7.59603 19.7355 12.0268 17.0698 14.8268Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2721 10.2721C16.2721 12.4813 14.4813 14.2721 12.2721 14.2721C10.063 14.2721 8.27214 12.4813 8.27214 10.2721C8.27214 8.06298 10.063 6.27212 12.2721 6.27212C14.4813 6.27212 16.2721 8.06298 16.2721 10.2721ZM14.2721 10.2721C14.2721 11.3767 13.3767 12.2721 12.2721 12.2721C11.1676 12.2721 10.2721 11.3767 10.2721 10.2721C10.2721 9.16755 11.1676 8.27212 12.2721 8.27212C13.3767 8.27212 14.2721 9.16755 14.2721 10.2721Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.79417 16.5183C2.19424 13.0909 2.05438 7.39409 5.48178 3.79417C8.90918 0.194243 14.6059 0.054383 18.2059 3.48178C21.8058 6.90918 21.9457 12.6059 18.5183 16.2059L12.3124 22.7241L5.79417 16.5183ZM17.0698 14.8268L12.243 19.8965L7.17324 15.0698C4.3733 12.404 4.26452 7.97318 6.93028 5.17324C9.59603 2.3733 14.0268 2.26452 16.8268 4.93028C19.6267 7.59603 19.7355 12.0268 17.0698 14.8268Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14426,7 +14426,7 @@ pub fn CgPinAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 9C18 11.973 15.8377 14.441 13 14.917V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V14.917C8.16229 14.441 6 11.973 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9ZM12 13C14.2091 13 16 11.2091 16 9C16 6.79086 14.2091 5 12 5C9.79086 5 8 6.79086 8 9C8 11.2091 9.79086 13 12 13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 9C18 11.973 15.8377 14.441 13 14.917V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V14.917C8.16229 14.441 6 11.973 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9ZM12 13C14.2091 13 16 11.2091 16 9C16 6.79086 14.2091 5 12 5C9.79086 5 8 6.79086 8 9C8 11.2091 9.79086 13 12 13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14456,7 +14456,7 @@ pub fn CgPinBottom(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 9C18 11.973 15.8377 14.441 13 14.917V20H16C16.5523 20 17 20.4477 17 21C17 21.5523 16.5523 22 16 22H8C7.44772 22 7 21.5523 7 21C7 20.4477 7.44772 20 8 20H11V14.917C8.16229 14.441 6 11.973 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9ZM12 13C14.2091 13 16 11.2091 16 9C16 6.79086 14.2091 5 12 5C9.79086 5 8 6.79086 8 9C8 11.2091 9.79086 13 12 13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 9C18 11.973 15.8377 14.441 13 14.917V20H16C16.5523 20 17 20.4477 17 21C17 21.5523 16.5523 22 16 22H8C7.44772 22 7 21.5523 7 21C7 20.4477 7.44772 20 8 20H11V14.917C8.16229 14.441 6 11.973 6 9C6 5.68629 8.68629 3 12 3C15.3137 3 18 5.68629 18 9ZM12 13C14.2091 13 16 11.2091 16 9C16 6.79086 14.2091 5 12 5C9.79086 5 8 6.79086 8 9C8 11.2091 9.79086 13 12 13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14486,7 +14486,7 @@ pub fn CgPinTop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14C13.1046 14 14 14.8954 14 16C14 17.1046 13.1046 18 12 18C10.8954 18 10 17.1046 10 16C10 14.8954 10.8954 14 12 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 5C7.44772 5 7 4.55228 7 4C7 3.44772 7.44772 3 8 3H16C16.5523 3 17 3.44772 17 4C17 4.55228 16.5523 5 16 5H13V10.083C15.8377 10.559 18 13.027 18 16C18 19.3137 15.3137 22 12 22C8.68629 22 6 19.3137 6 16C6 13.027 8.16229 10.559 11 10.083V5H8ZM12 12C14.2091 12 16 13.7909 16 16C16 18.2091 14.2091 20 12 20C9.79086 20 8 18.2091 8 16C8 13.7909 9.79086 12 12 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 14C13.1046 14 14 14.8954 14 16C14 17.1046 13.1046 18 12 18C10.8954 18 10 17.1046 10 16C10 14.8954 10.8954 14 12 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 5C7.44772 5 7 4.55228 7 4C7 3.44772 7.44772 3 8 3H16C16.5523 3 17 3.44772 17 4C17 4.55228 16.5523 5 16 5H13V10.083C15.8377 10.559 18 13.027 18 16C18 19.3137 15.3137 22 12 22C8.68629 22 6 19.3137 6 16C6 13.027 8.16229 10.559 11 10.083V5H8ZM12 12C14.2091 12 16 13.7909 16 16C16 18.2091 14.2091 20 12 20C9.79086 20 8 18.2091 8 16C8 13.7909 9.79086 12 12 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14516,7 +14516,7 @@ pub fn CgPlayBackwards(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 7H5V17H2V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12L13.0023 7.00003V17L6 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.0023 7.00003L14 12L21.0023 17V7.00003Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 7H5V17H2V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12L13.0023 7.00003V17L6 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.0023 7.00003L14 12L21.0023 17V7.00003Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14576,7 +14576,7 @@ pub fn CgPlayButtonO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 12L10 16.3301V7.66987L16 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 12L10 16.3301V7.66987L16 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14606,7 +14606,7 @@ pub fn CgPlayButtonR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 12L10 16.3301V7.66987L16 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 12L10 16.3301V7.66987L16 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14636,7 +14636,7 @@ pub fn CgPlayForwards(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.0023 17H18.0023V7H21.0023V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.0023 12L10 17V7L17.0023 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 17L9.00232 12L2 7V17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.0023 17H18.0023V7H21.0023V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.0023 12L10 17V7L17.0023 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 17L9.00232 12L2 7V17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14666,7 +14666,7 @@ pub fn CgPlayList(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 5H4V7H16V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H4V11H16V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 13H12V15H4V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 16L14 13V19L20 16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 5H4V7H16V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H4V11H16V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 13H12V15H4V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 16L14 13V19L20 16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14696,7 +14696,7 @@ pub fn CgPlayListAdd(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 5H14V7H2V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 9H14V11H2V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13H2V15H10V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H18V13H22V15H18V19H16V15H12V13H16V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 5H14V7H2V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 9H14V11H2V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13H2V15H10V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H18V13H22V15H18V19H16V15H12V13H16V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14726,7 +14726,7 @@ pub fn CgPlayListCheck(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 6H3V8H15V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 10H3V12H15V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 14H11V16H3V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9905 15.025L13.4049 13.6106L15.526 15.7321L19.7687 11.4895L21.1829 12.9037L15.526 18.5606L11.9905 15.025Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 6H3V8H15V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 10H3V12H15V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 14H11V16H3V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9905 15.025L13.4049 13.6106L15.526 15.7321L19.7687 11.4895L21.1829 12.9037L15.526 18.5606L11.9905 15.025Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14756,7 +14756,7 @@ pub fn CgPlayListRemove(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.9644 4.63379H3.96442V6.63379H15.9644V4.63379Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.9644 8.63379H3.96442V10.6338H15.9644V8.63379Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.96442 12.6338H11.9644V14.6338H3.96442V12.6338Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9645 13.7093L14.3787 12.295L16.5 14.4163L18.6213 12.2951L20.0355 13.7093L17.9142 15.8305L20.0356 17.9519L18.6214 19.3661L16.5 17.2447L14.3786 19.3661L12.9644 17.9519L15.0858 15.8305L12.9645 13.7093Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.9644 4.63379H3.96442V6.63379H15.9644V4.63379Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.9644 8.63379H3.96442V10.6338H15.9644V8.63379Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.96442 12.6338H11.9644V14.6338H3.96442V12.6338Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.9645 13.7093L14.3787 12.295L16.5 14.4163L18.6213 12.2951L20.0355 13.7093L17.9142 15.8305L20.0356 17.9519L18.6214 19.3661L16.5 17.2447L14.3786 19.3661L12.9644 17.9519L15.0858 15.8305L12.9645 13.7093Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14786,7 +14786,7 @@ pub fn CgPlayListSearch(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.8787 4.87866H3.87872V6.87866H15.8787V4.87866Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.8787 8.87866H3.87872V10.8787H15.8787V8.87866Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.87872 12.8787H11.8787V14.8787H3.87872V12.8787Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.7574 12.7573C12.5858 13.9289 12.5858 15.8284 13.7574 17C14.681 17.9236 16.0571 18.1191 17.1722 17.5864L18.7071 19.1213L20.1213 17.7071L18.5864 16.1722C19.1191 15.057 18.9236 13.681 18 12.7573C16.8284 11.5858 14.9289 11.5858 13.7574 12.7573ZM15.1716 15.5858C15.5621 15.9763 16.1953 15.9763 16.5858 15.5858C16.9763 15.1952 16.9763 14.5621 16.5858 14.1716C16.1953 13.781 15.5621 13.781 15.1716 14.1716C14.7811 14.5621 14.7811 15.1952 15.1716 15.5858Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.8787 4.87866H3.87872V6.87866H15.8787V4.87866Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.8787 8.87866H3.87872V10.8787H15.8787V8.87866Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.87872 12.8787H11.8787V14.8787H3.87872V12.8787Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.7574 12.7573C12.5858 13.9289 12.5858 15.8284 13.7574 17C14.681 17.9236 16.0571 18.1191 17.1722 17.5864L18.7071 19.1213L20.1213 17.7071L18.5864 16.1722C19.1191 15.057 18.9236 13.681 18 12.7573C16.8284 11.5858 14.9289 11.5858 13.7574 12.7573ZM15.1716 15.5858C15.5621 15.9763 16.1953 15.9763 16.5858 15.5858C16.9763 15.1952 16.9763 14.5621 16.5858 14.1716C16.1953 13.781 15.5621 13.781 15.1716 14.1716C14.7811 14.5621 14.7811 15.1952 15.1716 15.5858Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14816,7 +14816,7 @@ pub fn CgPlayPause(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H8V17H11V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 17H16V7H13V17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H8V17H11V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 17H16V7H13V17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14846,7 +14846,7 @@ pub fn CgPlayPauseO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H11V15H9V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15H13V9H15V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H11V15H9V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15H13V9H15V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14876,7 +14876,7 @@ pub fn CgPlayPauseR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H11V15H9V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15H13V9H15V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H11V15H9V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 15H13V9H15V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14936,7 +14936,7 @@ pub fn CgPlayStopO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H9V15H15V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H9V15H15V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14966,7 +14966,7 @@ pub fn CgPlayStopR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H9V15H15V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9H9V15H15V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -14996,7 +14996,7 @@ pub fn CgPlayTrackNext(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 17L14 12L6 7V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7H15V12V17H18V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 17L14 12L6 7V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7H15V12V17H18V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15056,7 +15056,7 @@ pub fn CgPlayTrackNextR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9C15 8.44772 15.4477 8 16 8C16.5523 8 17 8.44772 17 9V15C17 15.5523 16.5523 16 16 16C15.4477 16 15 15.5523 15 15V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12L8 15.4641V8.5359L14 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9C15 8.44772 15.4477 8 16 8C16.5523 8 17 8.44772 17 9V15C17 15.5523 16.5523 16 16 16C15.4477 16 15 15.5523 15 15V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 12L8 15.4641V8.5359L14 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15086,7 +15086,7 @@ pub fn CgPlayTrackPrev(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 17L10 12L18 7V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7H9V17H6V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 17L10 12L18 7V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7H9V17H6V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15116,7 +15116,7 @@ pub fn CgPlayTrackPrevO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 8C8.55228 8 9 8.44772 9 9V15C9 15.5523 8.55228 16 8 16C7.44771 16 7 15.5523 7 15V9C7 8.44772 7.44771 8 8 8ZM16 15.4641L10 12L16 8.5359V15.4641Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 8C8.55228 8 9 8.44772 9 9V15C9 15.5523 8.55228 16 8 16C7.44771 16 7 15.5523 7 15V9C7 8.44772 7.44771 8 8 8ZM16 15.4641L10 12L16 8.5359V15.4641Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15146,7 +15146,7 @@ pub fn CgPlayTrackPrevR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 8C8.55228 8 9 8.44772 9 9V15C9 15.5523 8.55228 16 8 16C7.44771 16 7 15.5523 7 15V9C7 8.44772 7.44771 8 8 8ZM16 15.4641L10 12L16 8.5359V15.4641Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 8C8.55228 8 9 8.44772 9 9V15C9 15.5523 8.55228 16 8 16C7.44771 16 7 15.5523 7 15V9C7 8.44772 7.44771 8 8 8ZM16 15.4641L10 12L16 8.5359V15.4641Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15296,7 +15296,7 @@ pub fn CgPoll(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 4H5C4.44771 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44771 19.5523 4 19 4ZM5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H13V17H11V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 13H17V17H15V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 10H9V17H7V10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 4H5C4.44771 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44771 19.5523 4 19 4ZM5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 7H13V17H11V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 13H17V17H15V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 10H9V17H7V10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15416,7 +15416,7 @@ pub fn CgProfile(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5C14.2091 5 16 6.79086 16 9ZM14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 14.0902 3.71255 16.014 4.90798 17.5417C6.55245 15.3889 9.14627 14 12.0645 14C14.9448 14 17.5092 15.3531 19.1565 17.4583C20.313 15.9443 21 14.0524 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 21C9.84977 21 7.87565 20.2459 6.32767 18.9878C7.59352 17.1812 9.69106 16 12.0645 16C14.4084 16 16.4833 17.1521 17.7538 18.9209C16.1939 20.2191 14.1881 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5C14.2091 5 16 6.79086 16 9ZM14 9C14 10.1046 13.1046 11 12 11C10.8954 11 10 10.1046 10 9C10 7.89543 10.8954 7 12 7C13.1046 7 14 7.89543 14 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 14.0902 3.71255 16.014 4.90798 17.5417C6.55245 15.3889 9.14627 14 12.0645 14C14.9448 14 17.5092 15.3531 19.1565 17.4583C20.313 15.9443 21 14.0524 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12ZM12 21C9.84977 21 7.87565 20.2459 6.32767 18.9878C7.59352 17.1812 9.69106 16 12.0645 16C14.4084 16 16.4833 17.1521 17.7538 18.9209C16.1939 20.2191 14.1881 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15446,7 +15446,7 @@ pub fn CgPullClear(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6H2V16C2 17.1046 2.89543 18 4 18H20C21.1046 18 22 17.1046 22 16V6H20V16H4V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12H18V14H6V12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8H6V10H18V8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6H2V16C2 17.1046 2.89543 18 4 18H20C21.1046 18 22 17.1046 22 16V6H20V16H4V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12H18V14H6V12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8H6V10H18V8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15476,7 +15476,7 @@ pub fn CgPushChevronDown(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 7.41421L6.41421 6L12.0711 11.6569L17.7279 6L19.1421 7.41421L12.0711 14.4853L5 7.41421Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 16.3432H5V18.3432H19V16.3432Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 7.41421L6.41421 6L12.0711 11.6569L17.7279 6L19.1421 7.41421L12.0711 14.4853L5 7.41421Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 16.3432H5V18.3432H19V16.3432Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15506,7 +15506,7 @@ pub fn CgPushChevronDownO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 14V16H8V14H16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 8.70261L9.17153 7.2884L12 10.1168L14.8284 7.28842L16.2426 8.70264L11.9999 12.9453L7.75732 8.70261Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 14V16H8V14H16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.75732 8.70261L9.17153 7.2884L12 10.1168L14.8284 7.28842L16.2426 8.70264L11.9999 12.9453L7.75732 8.70261Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15536,7 +15536,7 @@ pub fn CgPushChevronDownR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 7.28839L7.75732 8.7026L11.9999 12.9453L16.2426 8.70263L14.8284 7.28842L12 10.1168L9.17154 7.28839Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.00001 14H16V16H8.00001V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 7.28839L7.75732 8.7026L11.9999 12.9453L16.2426 8.70263L14.8284 7.28842L12 10.1168L9.17154 7.28839Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.00001 14H16V16H8.00001V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15566,7 +15566,7 @@ pub fn CgPushChevronLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.929 5L18.3432 6.41421L12.6863 12.0711L18.3432 17.7279L16.929 19.1421L9.85789 12.0711L16.929 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 19V5H6V19H8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.929 5L18.3432 6.41421L12.6863 12.0711L18.3432 17.7279L16.929 19.1421L9.85789 12.0711L16.929 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 19V5H6V19H8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15596,7 +15596,7 @@ pub fn CgPushChevronLeftO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 16H8V8H10V16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2974 7.75732L16.7116 9.17153L13.8832 12L16.7116 14.8284L15.2974 16.2426L11.0547 11.9999L15.2974 7.75732Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 16H8V8H10V16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.2974 7.75732L16.7116 9.17153L13.8832 12L16.7116 14.8284L15.2974 16.2426L11.0547 11.9999L15.2974 7.75732Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12ZM3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15626,7 +15626,7 @@ pub fn CgPushChevronLeftR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.6743 9.1716L15.26 7.75739L11.0174 12L15.26 16.2426L16.6742 14.8284L13.8458 12L16.6743 9.1716Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.96265 8.00007V16.0001H7.96265V8.00007H9.96265Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.6743 9.1716L15.26 7.75739L11.0174 12L15.26 16.2426L16.6742 14.8284L13.8458 12L16.6743 9.1716Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.96265 8.00007V16.0001H7.96265V8.00007H9.96265Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15656,7 +15656,7 @@ pub fn CgPushChevronRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.41421 5L6 6.41421L11.6569 12.0711L6 17.7279L7.41421 19.1421L14.4853 12.0711L7.41421 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3432 19V5H18.3432V19H16.3432Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.41421 5L6 6.41421L11.6569 12.0711L6 17.7279L7.41421 19.1421L14.4853 12.0711L7.41421 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3432 19V5H18.3432V19H16.3432Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15686,7 +15686,7 @@ pub fn CgPushChevronRightO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 8H16V16H14V8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.70261 16.2427L7.2884 14.8285L10.1168 12L7.28842 9.17164L8.70264 7.75743L12.9453 12.0001L8.70261 16.2427Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 8H16V16H14V8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.70261 16.2427L7.2884 14.8285L10.1168 12L7.28842 9.17164L8.70264 7.75743L12.9453 12.0001L8.70261 16.2427Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12ZM21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15716,7 +15716,7 @@ pub fn CgPushChevronRightR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.64429 14.8284L9.0585 16.2426L13.3012 12L9.05853 7.75739L7.64432 9.1716L10.4727 12L7.64429 14.8284Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.3559 16L14.3559 7.99996H16.3559V16H14.3559Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.64429 14.8284L9.0585 16.2426L13.3012 12L9.05853 7.75739L7.64432 9.1716L10.4727 12L7.64429 14.8284Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.3559 16L14.3559 7.99996H16.3559V16H14.3559Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15746,7 +15746,7 @@ pub fn CgPushChevronUp(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16.929L6.41421 18.3432L12.0711 12.6863L17.7279 18.3432L19.1421 16.929L12.0711 9.85789L5 16.929Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 8H5V6H19V8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16.929L6.41421 18.3432L12.0711 12.6863L17.7279 18.3432L19.1421 16.929L12.0711 9.85789L5 16.929Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 8H5V6H19V8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15836,7 +15836,7 @@ pub fn CgPushDown(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0001 1H13.0001V15.4853L16.2428 12.2427L17.657 13.6569L12.0001 19.3137L6.34326 13.6569L7.75748 12.2427L11.0001 15.4853V1Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 20.2877H6V22.2877H18V20.2877Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0001 1H13.0001V15.4853L16.2428 12.2427L17.657 13.6569L12.0001 19.3137L6.34326 13.6569L7.75748 12.2427L11.0001 15.4853V1Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 20.2877H6V22.2877H18V20.2877Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15866,7 +15866,7 @@ pub fn CgPushLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.2877 11.0001V13.0001H7.80237L11.045 16.2428L9.63079 17.657L3.97394 12.0001L9.63079 6.34326L11.045 7.75748L7.80236 11.0001H22.2877Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18V6H1V18H3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.2877 11.0001V13.0001H7.80237L11.045 16.2428L9.63079 17.657L3.97394 12.0001L9.63079 6.34326L11.045 7.75748L7.80236 11.0001H22.2877Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18V6H1V18H3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15896,7 +15896,7 @@ pub fn CgPushRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 12.9999V10.9999H15.4853L12.2427 7.75724L13.6569 6.34303L19.3137 11.9999L13.6569 17.6567L12.2427 16.2425L15.4853 12.9999H1Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.2877 6V18H22.2877V6H20.2877Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 12.9999V10.9999H15.4853L12.2427 7.75724L13.6569 6.34303L19.3137 11.9999L13.6569 17.6567L12.2427 16.2425L15.4853 12.9999H1Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.2877 6V18H22.2877V6H20.2877Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -15986,7 +15986,7 @@ pub fn CgQuote(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16016,7 +16016,7 @@ pub fn CgQuoteO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 5H4V19H20V5ZM4 3C2.89543 3 2 3.89543 2 5V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V5C22 3.89543 21.1046 3 20 3H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.06723 9.19629H12.0672L9.93267 14.8038H6.93267L9.06723 9.19629Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0672 9.19629H17.0672L14.9327 14.8038H11.9327L14.0672 9.19629Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 5H4V19H20V5ZM4 3C2.89543 3 2 3.89543 2 5V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V5C22 3.89543 21.1046 3 20 3H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.06723 9.19629H12.0672L9.93267 14.8038H6.93267L9.06723 9.19629Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.0672 9.19629H17.0672L14.9327 14.8038H11.9327L14.0672 9.19629Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16076,7 +16076,7 @@ pub fn CgRadioChecked(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16106,7 +16106,7 @@ pub fn CgRatio(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6V12H6V8L10 8V6H4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 18H14V16H18V12H20V18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 2C1.79086 2 0 3.79086 0 6V18C0 20.2091 1.79086 22 4 22H20C22.2091 22 24 20.2091 24 18V6C24 3.79086 22.2091 2 20 2H4ZM20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 6V12H6V8L10 8V6H4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 18H14V16H18V12H20V18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 2C1.79086 2 0 3.79086 0 6V18C0 20.2091 1.79086 22 4 22H20C22.2091 22 24 20.2091 24 18V6C24 3.79086 22.2091 2 20 2H4ZM20 4H4C2.89543 4 2 4.89543 2 6V18C2 19.1046 2.89543 20 4 20H20C21.1046 20 22 19.1046 22 18V6C22 4.89543 21.1046 4 20 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16196,7 +16196,7 @@ pub fn CgRecord(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16256,7 +16256,7 @@ pub fn CgRemote(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.0514 4.32178L18.4656 5.73599L14.223 9.97863L18.4656 14.2213L17.0514 15.6355L11.3946 9.97863L17.0514 4.32178Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.94864 19.6785L5.53442 18.2643L9.77706 14.0216L5.53442 9.77897L6.94864 8.36476L12.6055 14.0216L6.94864 19.6785Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.0514 4.32178L18.4656 5.73599L14.223 9.97863L18.4656 14.2213L17.0514 15.6355L11.3946 9.97863L17.0514 4.32178Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.94864 19.6785L5.53442 18.2643L9.77706 14.0216L5.53442 9.77897L6.94864 8.36476L12.6055 14.0216L6.94864 19.6785Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16286,7 +16286,7 @@ pub fn CgRemove(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16316,7 +16316,7 @@ pub fn CgRemoveR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16346,7 +16346,7 @@ pub fn CgRename(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 4H8V6H5C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H8V20H10V4ZM8 8V16H5C4.44772 16 4 15.5523 4 15V9C4 8.44772 4.44772 8 5 8H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 16H12V18H19C20.6569 18 22 16.6569 22 15V9C22 7.34315 20.6569 6 19 6H12V8H19C19.5523 8 20 8.44771 20 9V15C20 15.5523 19.5523 16 19 16Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 4H8V6H5C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H8V20H10V4ZM8 8V16H5C4.44772 16 4 15.5523 4 15V9C4 8.44772 4.44772 8 5 8H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 16H12V18H19C20.6569 18 22 16.6569 22 15V9C22 7.34315 20.6569 6 19 6H12V8H19C19.5523 8 20 8.44771 20 9V15C20 15.5523 19.5523 16 19 16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16376,7 +16376,7 @@ pub fn CgReorder(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 4C3 3.44772 3.44772 3 4 3H12C12.5523 3 13 3.44772 13 4C13 4.55228 12.5523 5 12 5H4C3.44772 5 3 4.55228 3 4Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 11.4477 3.44772 11 4 11H12C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 16C3 15.4477 3.44772 15 4 15H12C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17H4C3.44772 17 3 16.5523 3 16Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 20C3 19.4477 3.44772 19 4 19H12C12.5523 19 13 19.4477 13 20C13 20.5523 12.5523 21 12 21H4C3.44772 21 3 20.5523 3 20Z\" fill=\"currentColor\" fill-opacity=\"0.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.1707 9C15.5825 10.1652 16.6938 11 18 11C19.6569 11 21 9.65685 21 8C21 6.34315 19.6569 5 18 5C16.6938 5 15.5825 5.83481 15.1707 7H4C3.44772 7 3 7.44772 3 8C3 8.55228 3.44772 9 4 9H15.1707ZM19 8C19 8.55228 18.5523 9 18 9C17.4477 9 17 8.55228 17 8C17 7.44772 17.4477 7 18 7C18.5523 7 19 7.44772 19 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 4C3 3.44772 3.44772 3 4 3H12C12.5523 3 13 3.44772 13 4C13 4.55228 12.5523 5 12 5H4C3.44772 5 3 4.55228 3 4Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 11.4477 3.44772 11 4 11H12C12.5523 11 13 11.4477 13 12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 16C3 15.4477 3.44772 15 4 15H12C12.5523 15 13 15.4477 13 16C13 16.5523 12.5523 17 12 17H4C3.44772 17 3 16.5523 3 16Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 20C3 19.4477 3.44772 19 4 19H12C12.5523 19 13 19.4477 13 20C13 20.5523 12.5523 21 12 21H4C3.44772 21 3 20.5523 3 20Z\" fill=\"currentColor\" fill-opacity=\"0.5\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.1707 9C15.5825 10.1652 16.6938 11 18 11C19.6569 11 21 9.65685 21 8C21 6.34315 19.6569 5 18 5C16.6938 5 15.5825 5.83481 15.1707 7H4C3.44772 7 3 7.44772 3 8C3 8.55228 3.44772 9 4 9H15.1707ZM19 8C19 8.55228 18.5523 9 18 9C17.4477 9 17 8.55228 17 8C17 7.44772 17.4477 7 18 7C18.5523 7 19 7.44772 19 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16406,7 +16406,7 @@ pub fn CgRepeat(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.3701 7.99993L13.8701 10.598V8.99993H6.88989V12.9999H4.88989V6.99993H13.8701V5.40186L18.3701 7.99993Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1299 16.9999H19.1101V10.9999H17.1101V14.9999H10.1299V13.4019L5.62988 15.9999L10.1299 18.598V16.9999Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.3701 7.99993L13.8701 10.598V8.99993H6.88989V12.9999H4.88989V6.99993H13.8701V5.40186L18.3701 7.99993Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.1299 16.9999H19.1101V10.9999H17.1101V14.9999H10.1299V13.4019L5.62988 15.9999L10.1299 18.598V16.9999Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16436,7 +16436,7 @@ pub fn CgRing(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.34326 3.68567C6.83159 3.19735 7.36734 2.78535 7.93569 2.44968C10.4352 0.97348 13.5651 0.97348 16.0645 2.44968C16.6329 2.78535 17.1686 3.19735 17.657 3.68567L12.0001 9.34253L6.34326 3.68567ZM12.0001 6.5141L9.4131 3.92709C11.0447 3.14768 12.9556 3.14768 14.5871 3.92709L12.0001 6.5141Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12.6576C2 9.52653 3.43899 6.73156 5.69172 4.89796L7.11528 6.32152C5.22043 7.78449 4 10.0785 4 12.6576C4 17.0759 7.58172 20.6576 12 20.6576C16.4183 20.6576 20 17.0759 20 12.6576C20 10.0785 18.7796 7.78451 16.8847 6.32154L18.3083 4.89798C20.561 6.73158 22 9.52654 22 12.6576C22 18.1804 17.5228 22.6576 12 22.6576C6.47715 22.6576 2 18.1804 2 12.6576Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.34326 3.68567C6.83159 3.19735 7.36734 2.78535 7.93569 2.44968C10.4352 0.97348 13.5651 0.97348 16.0645 2.44968C16.6329 2.78535 17.1686 3.19735 17.657 3.68567L12.0001 9.34253L6.34326 3.68567ZM12.0001 6.5141L9.4131 3.92709C11.0447 3.14768 12.9556 3.14768 14.5871 3.92709L12.0001 6.5141Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12.6576C2 9.52653 3.43899 6.73156 5.69172 4.89796L7.11528 6.32152C5.22043 7.78449 4 10.0785 4 12.6576C4 17.0759 7.58172 20.6576 12 20.6576C16.4183 20.6576 20 17.0759 20 12.6576C20 10.0785 18.7796 7.78451 16.8847 6.32154L18.3083 4.89798C20.561 6.73158 22 9.52654 22 12.6576C22 18.1804 17.5228 22.6576 12 22.6576C6.47715 22.6576 2 18.1804 2 12.6576Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16466,7 +16466,7 @@ pub fn CgRowFirst(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<g xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\"><path d=\"M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13H14C14.5523 13 15 12.5523 15 12C15 11.4477 14.5523 11 14 11H6Z\" fill=\"currentColor\" /><path d=\"M6 15C5.44772 15 5 15.4477 5 16C5 16.5523 5.44772 17 6 17H14C14.5523 17 15 16.5523 15 16C15 15.4477 14.5523 15 14 15H6Z\" fill=\"currentColor\" /></g><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8C5 7.44772 5.44772 7 6 7H18C18.5523 7 19 7.44772 19 8C19 8.55228 18.5523 9 18 9H6C5.44772 9 5 8.55228 5 8Z\" fill=\"currentColor\" />"
+        "<g xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\">\n  <path d=\"M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13H14C14.5523 13 15 12.5523 15 12C15 11.4477 14.5523 11 14 11H6Z\" fill=\"currentColor\" />\n  <path d=\"M6 15C5.44772 15 5 15.4477 5 16C5 16.5523 5.44772 17 6 17H14C14.5523 17 15 16.5523 15 16C15 15.4477 14.5523 15 14 15H6Z\" fill=\"currentColor\" />\n</g>\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8C5 7.44772 5.44772 7 6 7H18C18.5523 7 19 7.44772 19 8C19 8.55228 18.5523 9 18 9H6C5.44772 9 5 8.55228 5 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16496,7 +16496,7 @@ pub fn CgRowLast(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<g xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\"><path d=\"M6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H14C14.5523 11 15 11.4477 15 12C15 12.5523 14.5523 13 14 13H6Z\" fill=\"currentColor\" /><path d=\"M6 9C5.44772 9 5 8.55228 5 8C5 7.44772 5.44772 7 6 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H6Z\" fill=\"currentColor\" /></g><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16C5 16.5523 5.44772 17 6 17H18C18.5523 17 19 16.5523 19 16C19 15.4477 18.5523 15 18 15H6C5.44772 15 5 15.4477 5 16Z\" fill=\"currentColor\" />"
+        "<g xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\">\n  <path d=\"M6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H14C14.5523 11 15 11.4477 15 12C15 12.5523 14.5523 13 14 13H6Z\" fill=\"currentColor\" />\n  <path d=\"M6 9C5.44772 9 5 8.55228 5 8C5 7.44772 5.44772 7 6 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H6Z\" fill=\"currentColor\" />\n</g>\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16C5 16.5523 5.44772 17 6 17H18C18.5523 17 19 16.5523 19 16C19 15.4477 18.5523 15 18 15H6C5.44772 15 5 15.4477 5 16Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16556,7 +16556,7 @@ pub fn CgSandClock(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 6H11V7C11 7.55228 11.4477 8 12 8C12.5523 8 13 7.55228 13 7V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2V4H7V7C7 9.76142 9.23858 12 12 12C9.23858 12 7 14.2386 7 17V20H6V22H18V20H17V17C17 14.2386 14.7614 12 12 12C14.7614 12 17 9.76142 17 7V4H18V2H6ZM9 4H15V7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7V4ZM9 17V20H15V17C15 15.3431 13.6569 14 12 14C10.3431 14 9 15.3431 9 17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 6H11V7C11 7.55228 11.4477 8 12 8C12.5523 8 13 7.55228 13 7V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6 2V4H7V7C7 9.76142 9.23858 12 12 12C9.23858 12 7 14.2386 7 17V20H6V22H18V20H17V17C17 14.2386 14.7614 12 12 12C14.7614 12 17 9.76142 17 7V4H18V2H6ZM9 4H15V7C15 8.65685 13.6569 10 12 10C10.3431 10 9 8.65685 9 7V4ZM9 17V20H15V17C15 15.3431 13.6569 14 12 14C10.3431 14 9 15.3431 9 17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16586,7 +16586,7 @@ pub fn CgScan(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 3H13V21H11V3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8C5 7.44771 5.44772 7 6 7H9V5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19H9V17H6C5.44772 17 5 16.5523 5 16V8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 8C19 7.44771 18.5523 7 18 7H15V5H18C19.6569 5 21 6.34315 21 8V16C21 17.6569 19.6569 19 18 19H15V17H18C18.5523 17 19 16.5523 19 16V8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 3H13V21H11V3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8C5 7.44771 5.44772 7 6 7H9V5H6C4.34315 5 3 6.34315 3 8V16C3 17.6569 4.34315 19 6 19H9V17H6C5.44772 17 5 16.5523 5 16V8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 8C19 7.44771 18.5523 7 18 7H15V5H18C19.6569 5 21 6.34315 21 8V16C21 17.6569 19.6569 19 18 19H15V17H18C18.5523 17 19 16.5523 19 16V8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16646,7 +16646,7 @@ pub fn CgScreenMirror(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8H19V14H16V16H21V6H3V16H8V14H5V8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3301 19L12 13L7.66987 19H16.3301Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 8H19V14H16V16H21V6H3V16H8V14H5V8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.3301 19L12 13L7.66987 19H16.3301Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16676,7 +16676,7 @@ pub fn CgScreenShot(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8V6H8V10H10V8H12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 14H16V18H12V16H14V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3ZM6 20V4H18V20H6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 8V6H8V10H10V8H12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 14H16V18H12V16H14V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C4 2.44772 4.44772 2 5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3ZM6 20V4H18V20H6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16736,7 +16736,7 @@ pub fn CgScrollH(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.18188 9.17154L5.76766 7.75732L1.52502 12L5.76766 16.2426L7.18188 14.8284L4.35345 12L7.18188 9.17154Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.8181 14.8284L18.2323 16.2426L22.4749 12L18.2323 7.75733L16.8181 9.17155L19.6465 12L16.8181 14.8284Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.9999 12C14.9999 13.6569 13.6567 15 11.9999 15C10.343 15 8.99988 13.6569 8.99988 12C8.99988 10.3431 10.343 9 11.9999 9C13.6567 9 14.9999 10.3431 14.9999 12ZM12.9999 12C12.9999 12.5523 12.5522 13 11.9999 13C11.4476 13 10.9999 12.5523 10.9999 12C10.9999 11.4477 11.4476 11 11.9999 11C12.5522 11 12.9999 11.4477 12.9999 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.18188 9.17154L5.76766 7.75732L1.52502 12L5.76766 16.2426L7.18188 14.8284L4.35345 12L7.18188 9.17154Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.8181 14.8284L18.2323 16.2426L22.4749 12L18.2323 7.75733L16.8181 9.17155L19.6465 12L16.8181 14.8284Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.9999 12C14.9999 13.6569 13.6567 15 11.9999 15C10.343 15 8.99988 13.6569 8.99988 12C8.99988 10.3431 10.343 9 11.9999 9C13.6567 9 14.9999 10.3431 14.9999 12ZM12.9999 12C12.9999 12.5523 12.5522 13 11.9999 13C11.4476 13 10.9999 12.5523 10.9999 12C10.9999 11.4477 11.4476 11 11.9999 11C12.5522 11 12.9999 11.4477 12.9999 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16766,7 +16766,7 @@ pub fn CgScrollV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 16.8182L7.75732 18.2324L12 22.475L16.2426 18.2324L14.8284 16.8182L12 19.6466L9.17154 16.8182Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 7.182L16.2426 5.76779L12 1.52515L7.75733 5.76779L9.17155 7.182L12 4.35357L14.8284 7.182Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 9.00018C13.6569 9.00018 15 10.3433 15 12.0002C15 13.657 13.6569 15.0002 12 15.0002C10.3431 15.0002 9 13.657 9 12.0002C9 10.3433 10.3431 9.00018 12 9.00018ZM12 11.0002C12.5523 11.0002 13 11.4479 13 12.0002C13 12.5525 12.5523 13.0002 12 13.0002C11.4477 13.0002 11 12.5525 11 12.0002C11 11.4479 11.4477 11.0002 12 11.0002Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 16.8182L7.75732 18.2324L12 22.475L16.2426 18.2324L14.8284 16.8182L12 19.6466L9.17154 16.8182Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.8284 7.182L16.2426 5.76779L12 1.52515L7.75733 5.76779L9.17155 7.182L12 4.35357L14.8284 7.182Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 9.00018C13.6569 9.00018 15 10.3433 15 12.0002C15 13.657 13.6569 15.0002 12 15.0002C10.3431 15.0002 9 13.657 9 12.0002C9 10.3433 10.3431 9.00018 12 9.00018ZM12 11.0002C12.5523 11.0002 13 11.4479 13 12.0002C13 12.5525 12.5523 13.0002 12 13.0002C11.4477 13.0002 11 12.5525 11 12.0002C11 11.4479 11.4477 11.0002 12 11.0002Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16826,7 +16826,7 @@ pub fn CgSearchFound(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.66542 10.2366L9.19751 8.951L10.4831 10.4831L13.5473 7.91194L14.8328 9.44402L10.2366 13.3007L7.66542 10.2366Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2071 4.89344C19.0923 7.77862 19.3131 12.3193 16.8693 15.4578C16.8846 15.4713 16.8996 15.4854 16.9143 15.5L21.1569 19.7427C21.5474 20.1332 21.5474 20.7664 21.1569 21.1569C20.7664 21.5474 20.1332 21.5474 19.7427 21.1569L15.5 16.9143C15.4854 16.8996 15.4713 16.8846 15.4578 16.8693C12.3193 19.3131 7.77862 19.0923 4.89344 16.2071C1.76924 13.083 1.76924 8.01763 4.89344 4.89344C8.01763 1.76924 13.083 1.76924 16.2071 4.89344ZM14.7929 14.7929C17.1361 12.4498 17.1361 8.6508 14.7929 6.30765C12.4498 3.96451 8.6508 3.96451 6.30765 6.30765C3.96451 8.6508 3.96451 12.4498 6.30765 14.7929C8.6508 17.1361 12.4498 17.1361 14.7929 14.7929Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.66542 10.2366L9.19751 8.951L10.4831 10.4831L13.5473 7.91194L14.8328 9.44402L10.2366 13.3007L7.66542 10.2366Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2071 4.89344C19.0923 7.77862 19.3131 12.3193 16.8693 15.4578C16.8846 15.4713 16.8996 15.4854 16.9143 15.5L21.1569 19.7427C21.5474 20.1332 21.5474 20.7664 21.1569 21.1569C20.7664 21.5474 20.1332 21.5474 19.7427 21.1569L15.5 16.9143C15.4854 16.8996 15.4713 16.8846 15.4578 16.8693C12.3193 19.3131 7.77862 19.0923 4.89344 16.2071C1.76924 13.083 1.76924 8.01763 4.89344 4.89344C8.01763 1.76924 13.083 1.76924 16.2071 4.89344ZM14.7929 14.7929C17.1361 12.4498 17.1361 8.6508 14.7929 6.30765C12.4498 3.96451 8.6508 3.96451 6.30765 6.30765C3.96451 8.6508 3.96451 12.4498 6.30765 14.7929C8.6508 17.1361 12.4498 17.1361 14.7929 14.7929Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16856,7 +16856,7 @@ pub fn CgSearchLoading(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.55024 10.5503C8.55024 11.1026 8.10253 11.5503 7.55024 11.5503C6.99796 11.5503 6.55024 11.1026 6.55024 10.5503C6.55024 9.99801 6.99796 9.55029 7.55024 9.55029C8.10253 9.55029 8.55024 9.99801 8.55024 10.5503Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5502 11.5503C11.1025 11.5503 11.5502 11.1026 11.5502 10.5503C11.5502 9.99801 11.1025 9.55029 10.5502 9.55029C9.99796 9.55029 9.55024 9.99801 9.55024 10.5503C9.55024 11.1026 9.99796 11.5503 10.5502 11.5503Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.5502 11.5503C14.1025 11.5503 14.5502 11.1026 14.5502 10.5503C14.5502 9.99801 14.1025 9.55029 13.5502 9.55029C12.998 9.55029 12.5502 9.99801 12.5502 10.5503C12.5502 11.1026 12.998 11.5503 13.5502 11.5503Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2071 4.89344C19.0922 7.7786 19.313 12.3192 16.8693 15.4577C16.8846 15.4712 16.8996 15.4853 16.9142 15.4999L21.1568 19.7426C21.5473 20.1331 21.5473 20.7663 21.1568 21.1568C20.7663 21.5473 20.1331 21.5473 19.7426 21.1568L15.5 16.9141C15.4853 16.8995 15.4713 16.8846 15.4578 16.8693C12.3193 19.3131 7.77858 19.0923 4.89338 16.2071C1.76918 13.083 1.76918 8.01763 4.89338 4.89344C8.01757 1.76924 13.0829 1.76924 16.2071 4.89344ZM6.30759 14.7929C8.65074 17.1361 12.4497 17.1361 14.7929 14.7929C17.136 12.4498 17.136 8.6508 14.7929 6.30765C12.4497 3.96451 8.65074 3.96451 6.30759 6.30765C3.96445 8.6508 3.96445 12.4498 6.30759 14.7929Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.55024 10.5503C8.55024 11.1026 8.10253 11.5503 7.55024 11.5503C6.99796 11.5503 6.55024 11.1026 6.55024 10.5503C6.55024 9.99801 6.99796 9.55029 7.55024 9.55029C8.10253 9.55029 8.55024 9.99801 8.55024 10.5503Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5502 11.5503C11.1025 11.5503 11.5502 11.1026 11.5502 10.5503C11.5502 9.99801 11.1025 9.55029 10.5502 9.55029C9.99796 9.55029 9.55024 9.99801 9.55024 10.5503C9.55024 11.1026 9.99796 11.5503 10.5502 11.5503Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.5502 11.5503C14.1025 11.5503 14.5502 11.1026 14.5502 10.5503C14.5502 9.99801 14.1025 9.55029 13.5502 9.55029C12.998 9.55029 12.5502 9.99801 12.5502 10.5503C12.5502 11.1026 12.998 11.5503 13.5502 11.5503Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2071 4.89344C19.0922 7.7786 19.313 12.3192 16.8693 15.4577C16.8846 15.4712 16.8996 15.4853 16.9142 15.4999L21.1568 19.7426C21.5473 20.1331 21.5473 20.7663 21.1568 21.1568C20.7663 21.5473 20.1331 21.5473 19.7426 21.1568L15.5 16.9141C15.4853 16.8995 15.4713 16.8846 15.4578 16.8693C12.3193 19.3131 7.77858 19.0923 4.89338 16.2071C1.76918 13.083 1.76918 8.01763 4.89338 4.89344C8.01757 1.76924 13.0829 1.76924 16.2071 4.89344ZM6.30759 14.7929C8.65074 17.1361 12.4497 17.1361 14.7929 14.7929C17.136 12.4498 17.136 8.6508 14.7929 6.30765C12.4497 3.96451 8.65074 3.96451 6.30759 6.30765C3.96445 8.6508 3.96445 12.4498 6.30759 14.7929Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16886,7 +16886,7 @@ pub fn CgSelect(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 9.65685L7.41421 11.0711L11.6569 6.82843L15.8995 11.0711L17.3137 9.65685L11.6569 4L6 9.65685Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 14.4433L7.41421 13.0291L11.6569 17.2717L15.8995 13.0291L17.3137 14.4433L11.6569 20.1001L6 14.4433Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 9.65685L7.41421 11.0711L11.6569 6.82843L15.8995 11.0711L17.3137 9.65685L11.6569 4L6 9.65685Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 14.4433L7.41421 13.0291L11.6569 17.2717L15.8995 13.0291L17.3137 14.4433L11.6569 20.1001L6 14.4433Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16916,7 +16916,7 @@ pub fn CgSelectO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.508L7.75732 10.0938L12 5.85114L16.2426 10.0938L14.8284 11.508L12 8.67956L9.17154 11.508Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 12.492L7.75732 13.9062L12 18.1489L16.2426 13.9062L14.8284 12.492L12 15.3204L9.17154 12.492Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.508L7.75732 10.0938L12 5.85114L16.2426 10.0938L14.8284 11.508L12 8.67956L9.17154 11.508Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 12.492L7.75732 13.9062L12 18.1489L16.2426 13.9062L14.8284 12.492L12 15.3204L9.17154 12.492Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16946,7 +16946,7 @@ pub fn CgSelectR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.508L7.75732 10.0938L12 5.85113L16.2426 10.0938L14.8284 11.508L12 8.67956L9.17154 11.508Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 12.492L7.75732 13.9062L12 18.1489L16.2426 13.9062L14.8284 12.492L12 15.3204L9.17154 12.492Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 11.508L7.75732 10.0938L12 5.85113L16.2426 10.0938L14.8284 11.508L12 8.67956L9.17154 11.508Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.17154 12.492L7.75732 13.9062L12 18.1489L16.2426 13.9062L14.8284 12.492L12 15.3204L9.17154 12.492Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1 5C1 2.79086 2.79086 1 5 1H19C21.2091 1 23 2.79086 23 5V19C23 21.2091 21.2091 23 19 23H5C2.79086 23 1 21.2091 1 19V5ZM5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -16976,7 +16976,7 @@ pub fn CgServer(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 6C8.44772 6 8 6.44772 8 7C8 7.55228 8.44772 8 9 8H15C15.5523 8 16 7.55228 16 7C16 6.44772 15.5523 6 15 6H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 10C8.44772 10 8 10.4477 8 11C8 11.5523 8.44772 12 9 12H15C15.5523 12 16 11.5523 16 11C16 10.4477 15.5523 10 15 10H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 5C4 3.34315 5.34315 2 7 2H17C18.6569 2 20 3.34315 20 5V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5ZM7 4H17C17.5523 4 18 4.44772 18 5V19C18 19.5523 17.5523 20 17 20H7C6.44772 20 6 19.5523 6 19V5C6 4.44772 6.44771 4 7 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 6C8.44772 6 8 6.44772 8 7C8 7.55228 8.44772 8 9 8H15C15.5523 8 16 7.55228 16 7C16 6.44772 15.5523 6 15 6H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 10C8.44772 10 8 10.4477 8 11C8 11.5523 8.44772 12 9 12H15C15.5523 12 16 11.5523 16 11C16 10.4477 15.5523 10 15 10H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 5C4 3.34315 5.34315 2 7 2H17C18.6569 2 20 3.34315 20 5V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5ZM7 4H17C17.5523 4 18 4.44772 18 5V19C18 19.5523 17.5523 20 17 20H7C6.44772 20 6 19.5523 6 19V5C6 4.44772 6.44771 4 7 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17006,7 +17006,7 @@ pub fn CgServerless(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.7872 6H5V9H10.6953L11.7872 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.96735 11H5V14H8.87544L9.96735 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0038 14L12.0957 11H20V14H11.0038Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.1475 16H5V19H7.05559L8.1475 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.18394 19L10.2759 16H20V19H9.18394Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.8236 9L13.9156 6H20V9H12.8236Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.7872 6H5V9H10.6953L11.7872 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.96735 11H5V14H8.87544L9.96735 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.0038 14L12.0957 11H20V14H11.0038Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.1475 16H5V19H7.05559L8.1475 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.18394 19L10.2759 16H20V19H9.18394Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.8236 9L13.9156 6H20V9H12.8236Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17336,7 +17336,7 @@ pub fn CgShoppingCart(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.79166 2H1V4H4.2184L6.9872 16.6776H7V17H20V16.7519L22.1932 7.09095L22.5308 6H6.6552L6.08485 3.38852L5.79166 2ZM19.9869 8H7.092L8.62081 15H18.3978L19.9869 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 22C11.1046 22 12 21.1046 12 20C12 18.8954 11.1046 18 10 18C8.89543 18 8 18.8954 8 20C8 21.1046 8.89543 22 10 22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20C15 18.8954 15.8954 18 17 18C18.1046 18 19 18.8954 19 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.79166 2H1V4H4.2184L6.9872 16.6776H7V17H20V16.7519L22.1932 7.09095L22.5308 6H6.6552L6.08485 3.38852L5.79166 2ZM19.9869 8H7.092L8.62081 15H18.3978L19.9869 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 22C11.1046 22 12 21.1046 12 20C12 18.8954 11.1046 18 10 18C8.89543 18 8 18.8954 8 20C8 21.1046 8.89543 22 10 22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 20C19 21.1046 18.1046 22 17 22C15.8954 22 15 21.1046 15 20C15 18.8954 15.8954 18 17 18C18.1046 18 19 18.8954 19 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17366,7 +17366,7 @@ pub fn CgShortcut(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.1925 7.70711C15.8019 7.31658 15.1688 7.31658 14.7782 7.70711L7.70718 14.7782C7.31665 15.1687 7.31665 15.8019 7.70718 16.1924C8.0977 16.5829 8.73087 16.5829 9.12139 16.1924L16.1925 9.12132C16.583 8.7308 16.583 8.09763 16.1925 7.70711Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.1925 7.70711C15.8019 7.31658 15.1688 7.31658 14.7782 7.70711L7.70718 14.7782C7.31665 15.1687 7.31665 15.8019 7.70718 16.1924C8.0977 16.5829 8.73087 16.5829 9.12139 16.1924L16.1925 9.12132C16.583 8.7308 16.583 8.09763 16.1925 7.70711Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6ZM6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17396,7 +17396,7 @@ pub fn CgShutterstock(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 17C12 17.5523 12.4477 18 13 18H17C17.5523 18 18 17.5523 18 17V13C18 12.4477 17.5523 12 17 12H16V16H12V17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 6C11.5523 6 12 6.44772 12 7V8H8V12H7C6.44772 12 6 11.5523 6 11V7C6 6.44772 6.44772 6 7 6H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5ZM19 4H5C4.44771 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44771 19.5523 4 19 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 17C12 17.5523 12.4477 18 13 18H17C17.5523 18 18 17.5523 18 17V13C18 12.4477 17.5523 12 17 12H16V16H12V17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 6C11.5523 6 12 6.44772 12 7V8H8V12H7C6.44772 12 6 11.5523 6 11V7C6 6.44772 6.44772 6 7 6H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5ZM19 4H5C4.44771 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44771 19.5523 4 19 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17426,7 +17426,7 @@ pub fn CgSidebar(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21 20H7V4H21V20ZM19 18H9V6H19V18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 20H5V4H3V20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21 20H7V4H21V20ZM19 18H9V6H19V18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 20H5V4H3V20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17486,7 +17486,7 @@ pub fn CgSidebarRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4H17V20H3V4ZM5 6H15V18H5V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 4H19V20H21V4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 4H17V20H3V4ZM5 6H15V18H5V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 4H19V20H21V4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17516,7 +17516,7 @@ pub fn CgSignal(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 7C15 6.44772 15.4477 6 16 6C16.5523 6 17 6.44772 17 7V17C17 17.5523 16.5523 18 16 18C15.4477 18 15 17.5523 15 17V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15C7 14.4477 7.44772 14 8 14C8.55228 14 9 14.4477 9 15V17C9 17.5523 8.55228 18 8 18C7.44772 18 7 17.5523 7 17V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 10C11.4477 10 11 10.4477 11 11V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V11C13 10.4477 12.5523 10 12 10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 7C15 6.44772 15.4477 6 16 6C16.5523 6 17 6.44772 17 7V17C17 17.5523 16.5523 18 16 18C15.4477 18 15 17.5523 15 17V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15C7 14.4477 7.44772 14 8 14C8.55228 14 9 14.4477 9 15V17C9 17.5523 8.55228 18 8 18C7.44772 18 7 17.5523 7 17V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 10C11.4477 10 11 10.4477 11 11V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V11C13 10.4477 12.5523 10 12 10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17576,7 +17576,7 @@ pub fn CgSketch(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.20879 3H18.903L20.1118 10.2527L12.0559 21.1858L4 10.2527L5.20879 3ZM6.90304 5L6.11184 9.74726L12.0559 17.8142L18 9.74726L17.2088 5H6.90304Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.05592 8H16.0559V10H8.05592V8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.20879 3H18.903L20.1118 10.2527L12.0559 21.1858L4 10.2527L5.20879 3ZM6.90304 5L6.11184 9.74726L12.0559 17.8142L18 9.74726L17.2088 5H6.90304Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.05592 8H16.0559V10H8.05592V8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17696,7 +17696,7 @@ pub fn CgSmartHomeCooker(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 16C15 17.6569 13.6569 19 12 19C10.3431 19 9 17.6569 9 16C9 14.3431 10.3431 13 12 13C13.6569 13 15 14.3431 15 16ZM13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 1H9V3H11V5H7C4.79086 5 3 6.79086 3 9V19C3 21.2091 4.79086 23 7 23H17C19.2091 23 21 21.2091 21 19V9C21 6.79086 19.2091 5 17 5H13V3H15V1ZM17 7H7C5.89543 7 5 7.89543 5 9H19C19 7.89543 18.1046 7 17 7ZM19 11H5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 16C15 17.6569 13.6569 19 12 19C10.3431 19 9 17.6569 9 16C9 14.3431 10.3431 13 12 13C13.6569 13 15 14.3431 15 16ZM13 16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16C11 15.4477 11.4477 15 12 15C12.5523 15 13 15.4477 13 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 1H9V3H11V5H7C4.79086 5 3 6.79086 3 9V19C3 21.2091 4.79086 23 7 23H17C19.2091 23 21 21.2091 21 19V9C21 6.79086 19.2091 5 17 5H13V3H15V1ZM17 7H7C5.89543 7 5 7.89543 5 9H19C19 7.89543 18.1046 7 17 7ZM19 11H5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17726,7 +17726,7 @@ pub fn CgSmartHomeHeat(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H10V15H7C5.34315 15 4 13.6569 4 12C4 10.3431 5.34315 9 7 9H17C18.6569 9 20 10.3431 20 12C20 13.6569 18.6569 15 17 15H14V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 12C0 8.13401 3.13401 5 7 5H17C20.866 5 24 8.13401 24 12C24 15.866 20.866 19 17 19H7C3.13401 19 0 15.866 0 12ZM7 7H17C19.7614 7 22 9.23858 22 12C22 14.7614 19.7614 17 17 17H7C4.23858 17 2 14.7614 2 12C2 9.23858 4.23858 7 7 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H10V15H7C5.34315 15 4 13.6569 4 12C4 10.3431 5.34315 9 7 9H17C18.6569 9 20 10.3431 20 12C20 13.6569 18.6569 15 17 15H14V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 12C0 8.13401 3.13401 5 7 5H17C20.866 5 24 8.13401 24 12C24 15.866 20.866 19 17 19H7C3.13401 19 0 15.866 0 12ZM7 7H17C19.7614 7 22 9.23858 22 12C22 14.7614 19.7614 17 17 17H7C4.23858 17 2 14.7614 2 12C2 9.23858 4.23858 7 7 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17756,7 +17756,7 @@ pub fn CgSmartHomeLight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.03435 6.5C7.03435 3.73858 9.27293 1.5 12.0344 1.5C14.7958 1.5 17.0344 3.73858 17.0344 6.5V10.5C17.0344 13.2614 14.7958 15.5 12.0344 15.5C9.27293 15.5 7.03435 13.2614 7.03435 10.5V6.5ZM15.0344 6.5V10.5C15.0344 12.1569 13.6912 13.5 12.0344 13.5C10.3775 13.5 9.03435 12.1569 9.03435 10.5V6.5C9.03435 4.84315 10.3775 3.5 12.0344 3.5C13.6912 3.5 15.0344 4.84315 15.0344 6.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0344 16.5C11.4821 16.5 11.0344 16.9477 11.0344 17.5V21.5C11.0344 22.0523 11.4821 22.5 12.0344 22.5C12.5866 22.5 13.0344 22.0523 13.0344 21.5V17.5C13.0344 16.9477 12.5866 16.5 12.0344 16.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.74433 16.4397C7.93323 15.9207 8.50707 15.6531 9.02605 15.842C9.54502 16.0309 9.81261 16.6048 9.62372 17.1237L8.25564 20.8825C8.06675 21.4015 7.4929 21.6691 6.97393 21.4802C6.45495 21.2913 6.18736 20.7174 6.37625 20.1985L7.74433 16.4397Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.974 15.8421C14.4551 16.031 14.1875 16.6048 14.3764 17.1238L15.7445 20.8825C15.9333 21.4015 16.5072 21.6691 17.0262 21.4802C17.5451 21.2913 17.8127 20.7175 17.6238 20.1985L16.2558 16.4397C16.0669 15.9208 15.493 15.6532 14.974 15.8421Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.03435 6.5C7.03435 3.73858 9.27293 1.5 12.0344 1.5C14.7958 1.5 17.0344 3.73858 17.0344 6.5V10.5C17.0344 13.2614 14.7958 15.5 12.0344 15.5C9.27293 15.5 7.03435 13.2614 7.03435 10.5V6.5ZM15.0344 6.5V10.5C15.0344 12.1569 13.6912 13.5 12.0344 13.5C10.3775 13.5 9.03435 12.1569 9.03435 10.5V6.5C9.03435 4.84315 10.3775 3.5 12.0344 3.5C13.6912 3.5 15.0344 4.84315 15.0344 6.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0344 16.5C11.4821 16.5 11.0344 16.9477 11.0344 17.5V21.5C11.0344 22.0523 11.4821 22.5 12.0344 22.5C12.5866 22.5 13.0344 22.0523 13.0344 21.5V17.5C13.0344 16.9477 12.5866 16.5 12.0344 16.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.74433 16.4397C7.93323 15.9207 8.50707 15.6531 9.02605 15.842C9.54502 16.0309 9.81261 16.6048 9.62372 17.1237L8.25564 20.8825C8.06675 21.4015 7.4929 21.6691 6.97393 21.4802C6.45495 21.2913 6.18736 20.7174 6.37625 20.1985L7.74433 16.4397Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.974 15.8421C14.4551 16.031 14.1875 16.6048 14.3764 17.1238L15.7445 20.8825C15.9333 21.4015 16.5072 21.6691 17.0262 21.4802C17.5451 21.2913 17.8127 20.7175 17.6238 20.1985L16.2558 16.4397C16.0669 15.9208 15.493 15.6532 14.974 15.8421Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17786,7 +17786,7 @@ pub fn CgSmartHomeRefrigerator(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 6C9 5.44772 9.44772 5 10 5C10.5523 5 11 5.44772 11 6V8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13C9.44772 13 9 13.4477 9 14V16C9 16.5523 9.44772 17 10 17C10.5523 17 11 16.5523 11 16V14C11 13.4477 10.5523 13 10 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 4C5 2.34315 6.34315 1 8 1H16C17.6569 1 19 2.34315 19 4V20C19 21.6569 17.6569 23 16 23H8C6.34315 23 5 21.6569 5 20V4ZM8 3H16C16.5523 3 17 3.44772 17 4V10H7V4C7 3.44772 7.44772 3 8 3ZM7 12H17V20C17 20.5523 16.5523 21 16 21H8C7.44772 21 7 20.5523 7 20V12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 6C9 5.44772 9.44772 5 10 5C10.5523 5 11 5.44772 11 6V8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13C9.44772 13 9 13.4477 9 14V16C9 16.5523 9.44772 17 10 17C10.5523 17 11 16.5523 11 16V14C11 13.4477 10.5523 13 10 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 4C5 2.34315 6.34315 1 8 1H16C17.6569 1 19 2.34315 19 4V20C19 21.6569 17.6569 23 16 23H8C6.34315 23 5 21.6569 5 20V4ZM8 3H16C16.5523 3 17 3.44772 17 4V10H7V4C7 3.44772 7.44772 3 8 3ZM7 12H17V20C17 20.5523 16.5523 21 16 21H8C7.44772 21 7 20.5523 7 20V12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17846,7 +17846,7 @@ pub fn CgSmartphone(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 16H11V18H13V16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V4ZM7 4H17V20H7L7 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 16H11V18H13V16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V4ZM7 4H17V20H7L7 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17876,7 +17876,7 @@ pub fn CgSmartphoneChip(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 22C9 22.5523 8.55228 23 8 23C7.44772 23 7 22.5523 7 22C7 21.4477 7.44772 21 8 21C8.55228 21 9 21.4477 9 22ZM13 22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22C11 21.4477 11.4477 21 12 21C12.5523 21 13 21.4477 13 22ZM16 23C16.5523 23 17 22.5523 17 22C17 21.4477 16.5523 21 16 21C15.4477 21 15 21.4477 15 22C15 22.5523 15.4477 23 16 23Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 2C9 2.55228 8.55228 3 8 3C7.44772 3 7 2.55228 7 2C7 1.44772 7.44772 1 8 1C8.55228 1 9 1.44772 9 2ZM13 2C13 2.55228 12.5523 3 12 3C11.4477 3 11 2.55228 11 2C11 1.44772 11.4477 1 12 1C12.5523 1 13 1.44772 13 2ZM16 3C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1C15.4477 1 15 1.44772 15 2C15 2.55228 15.4477 3 16 3ZM9 22C9 22.5523 8.55228 23 8 23C7.44772 23 7 22.5523 7 22C7 21.4477 7.44772 21 8 21C8.55228 21 9 21.4477 9 22ZM13 22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22C11 21.4477 11.4477 21 12 21C12.5523 21 13 21.4477 13 22ZM16 23C16.5523 23 17 22.5523 17 22C17 21.4477 16.5523 21 16 21C15.4477 21 15 21.4477 15 22C15 22.5523 15.4477 23 16 23ZM23 16C23 15.4477 22.5523 15 22 15C21.4477 15 21 15.4477 21 16C21 16.5523 21.4477 17 22 17C22.5523 17 23 16.5523 23 16ZM23 12C23 11.4477 22.5523 11 22 11C21.4477 11 21 11.4477 21 12C21 12.5523 21.4477 13 22 13C22.5523 13 23 12.5523 23 12ZM22 7C22.5523 7 23 7.44771 23 8C23 8.55229 22.5523 9 22 9C21.4477 9 21 8.55229 21 8C21 7.44771 21.4477 7 22 7ZM2 15C2.55228 15 3 15.4477 3 16C3 16.5523 2.55228 17 2 17C1.44772 17 1 16.5523 1 16C1 15.4477 1.44772 15 2 15ZM2 11C2.55228 11 3 11.4477 3 12C3 12.5523 2.55228 13 2 13C1.44772 13 1 12.5523 1 12C1 11.4477 1.44772 11 2 11ZM3 8C3 7.44771 2.55228 7 2 7C1.44772 7 1 7.44771 1 8C1 8.55229 1.44772 9 2 9C2.55228 9 3 8.55229 3 8ZM17 6H7C6.44772 6 6 6.44772 6 7V17C6 17.5523 6.44772 18 7 18H17C17.5523 18 18 17.5523 18 17V7C18 6.44772 17.5523 6 17 6ZM7 4C5.34315 4 4 5.34315 4 7V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V7C20 5.34315 18.6569 4 17 4H7ZM14 10H10V14H14V10ZM8 8V16H16V8H8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 22C9 22.5523 8.55228 23 8 23C7.44772 23 7 22.5523 7 22C7 21.4477 7.44772 21 8 21C8.55228 21 9 21.4477 9 22ZM13 22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22C11 21.4477 11.4477 21 12 21C12.5523 21 13 21.4477 13 22ZM16 23C16.5523 23 17 22.5523 17 22C17 21.4477 16.5523 21 16 21C15.4477 21 15 21.4477 15 22C15 22.5523 15.4477 23 16 23Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 2C9 2.55228 8.55228 3 8 3C7.44772 3 7 2.55228 7 2C7 1.44772 7.44772 1 8 1C8.55228 1 9 1.44772 9 2ZM13 2C13 2.55228 12.5523 3 12 3C11.4477 3 11 2.55228 11 2C11 1.44772 11.4477 1 12 1C12.5523 1 13 1.44772 13 2ZM16 3C16.5523 3 17 2.55228 17 2C17 1.44772 16.5523 1 16 1C15.4477 1 15 1.44772 15 2C15 2.55228 15.4477 3 16 3ZM9 22C9 22.5523 8.55228 23 8 23C7.44772 23 7 22.5523 7 22C7 21.4477 7.44772 21 8 21C8.55228 21 9 21.4477 9 22ZM13 22C13 22.5523 12.5523 23 12 23C11.4477 23 11 22.5523 11 22C11 21.4477 11.4477 21 12 21C12.5523 21 13 21.4477 13 22ZM16 23C16.5523 23 17 22.5523 17 22C17 21.4477 16.5523 21 16 21C15.4477 21 15 21.4477 15 22C15 22.5523 15.4477 23 16 23ZM23 16C23 15.4477 22.5523 15 22 15C21.4477 15 21 15.4477 21 16C21 16.5523 21.4477 17 22 17C22.5523 17 23 16.5523 23 16ZM23 12C23 11.4477 22.5523 11 22 11C21.4477 11 21 11.4477 21 12C21 12.5523 21.4477 13 22 13C22.5523 13 23 12.5523 23 12ZM22 7C22.5523 7 23 7.44771 23 8C23 8.55229 22.5523 9 22 9C21.4477 9 21 8.55229 21 8C21 7.44771 21.4477 7 22 7ZM2 15C2.55228 15 3 15.4477 3 16C3 16.5523 2.55228 17 2 17C1.44772 17 1 16.5523 1 16C1 15.4477 1.44772 15 2 15ZM2 11C2.55228 11 3 11.4477 3 12C3 12.5523 2.55228 13 2 13C1.44772 13 1 12.5523 1 12C1 11.4477 1.44772 11 2 11ZM3 8C3 7.44771 2.55228 7 2 7C1.44772 7 1 7.44771 1 8C1 8.55229 1.44772 9 2 9C2.55228 9 3 8.55229 3 8ZM17 6H7C6.44772 6 6 6.44772 6 7V17C6 17.5523 6.44772 18 7 18H17C17.5523 18 18 17.5523 18 17V7C18 6.44772 17.5523 6 17 6ZM7 4C5.34315 4 4 5.34315 4 7V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V7C20 5.34315 18.6569 4 17 4H7ZM14 10H10V14H14V10ZM8 8V16H16V8H8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17906,7 +17906,7 @@ pub fn CgSmartphoneRam(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 4C9 4.55228 8.55228 5 8 5C7.44772 5 7 4.55228 7 4C7 3.44772 7.44772 3 8 3C8.55228 3 9 3.44772 9 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3C11.4477 3 11 3.44772 11 4C11 4.55228 11.4477 5 12 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 4C17 4.55228 16.5523 5 16 5C15.4477 5 15 4.55228 15 4C15 3.44772 15.4477 3 16 3C16.5523 3 17 3.44772 17 4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 5C20.5523 5 21 4.55228 21 4C21 3.44772 20.5523 3 20 3C19.4477 3 19 3.44772 19 4C19 4.55228 19.4477 5 20 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20C5 20.5523 4.55228 21 4 21C3.44772 21 3 20.5523 3 20C3 19.4477 3.44772 19 4 19C4.55228 19 5 19.4477 5 20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 21C12.5523 21 13 20.5523 13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20C11 20.5523 11.4477 21 12 21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 20C17 20.5523 16.5523 21 16 21C15.4477 21 15 20.5523 15 20C15 19.4477 15.4477 19 16 19C16.5523 19 17 19.4477 17 20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 21C20.5523 21 21 20.5523 21 20C21 19.4477 20.5523 19 20 19C19.4477 19 19 19.4477 19 20C19 20.5523 19.4477 21 20 21Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12C5.55228 12 6 11.5523 6 11C6 10.4477 5.55228 10 5 10C4.44772 10 4 10.4477 4 11C4 11.5523 4.44772 12 5 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 13C20 13.5523 19.5523 14 19 14C18.4477 14 18 13.5523 18 13C18 12.4477 18.4477 12 19 12C19.5523 12 20 12.4477 20 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 9C0 7.34315 1.34315 6 3 6H21C22.6569 6 24 7.34315 24 9V15C24 16.6569 22.6569 18 21 18H3C1.34315 18 0 16.6569 0 15V9ZM3 8H21C21.5523 8 22 8.44772 22 9V15C22 15.5523 21.5523 16 21 16H3C2.44772 16 2 15.5523 2 15V9C2 8.44772 2.44772 8 3 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 4C5 4.55228 4.55228 5 4 5C3.44772 5 3 4.55228 3 4C3 3.44772 3.44772 3 4 3C4.55228 3 5 3.44772 5 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 4C9 4.55228 8.55228 5 8 5C7.44772 5 7 4.55228 7 4C7 3.44772 7.44772 3 8 3C8.55228 3 9 3.44772 9 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 5C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3C11.4477 3 11 3.44772 11 4C11 4.55228 11.4477 5 12 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 4C17 4.55228 16.5523 5 16 5C15.4477 5 15 4.55228 15 4C15 3.44772 15.4477 3 16 3C16.5523 3 17 3.44772 17 4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 5C20.5523 5 21 4.55228 21 4C21 3.44772 20.5523 3 20 3C19.4477 3 19 3.44772 19 4C19 4.55228 19.4477 5 20 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 20C5 20.5523 4.55228 21 4 21C3.44772 21 3 20.5523 3 20C3 19.4477 3.44772 19 4 19C4.55228 19 5 19.4477 5 20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 21C12.5523 21 13 20.5523 13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20C11 20.5523 11.4477 21 12 21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 20C17 20.5523 16.5523 21 16 21C15.4477 21 15 20.5523 15 20C15 19.4477 15.4477 19 16 19C16.5523 19 17 19.4477 17 20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 21C20.5523 21 21 20.5523 21 20C21 19.4477 20.5523 19 20 19C19.4477 19 19 19.4477 19 20C19 20.5523 19.4477 21 20 21Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12C5.55228 12 6 11.5523 6 11C6 10.4477 5.55228 10 5 10C4.44772 10 4 10.4477 4 11C4 11.5523 4.44772 12 5 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 13C20 13.5523 19.5523 14 19 14C18.4477 14 18 13.5523 18 13C18 12.4477 18.4477 12 19 12C19.5523 12 20 12.4477 20 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 9C0 7.34315 1.34315 6 3 6H21C22.6569 6 24 7.34315 24 9V15C24 16.6569 22.6569 18 21 18H3C1.34315 18 0 16.6569 0 15V9ZM3 8H21C21.5523 8 22 8.44772 22 9V15C22 15.5523 21.5523 16 21 16H3C2.44772 16 2 15.5523 2 15V9C2 8.44772 2.44772 8 3 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17936,7 +17936,7 @@ pub fn CgSmartphoneShake(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 14H11V16H13V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 7C8 5.89543 8.89543 5 10 5H14C15.1046 5 16 5.89543 16 7V17C16 18.1046 15.1046 19 14 19H10C8.89543 19 8 18.1046 8 17V7ZM10 7H14V17H10V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 9H20V15H18V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M0 14H2V10H0V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15H4V9H6V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M24 10H22V14H24V10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 14H11V16H13V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 7C8 5.89543 8.89543 5 10 5H14C15.1046 5 16 5.89543 16 7V17C16 18.1046 15.1046 19 14 19H10C8.89543 19 8 18.1046 8 17V7ZM10 7H14V17H10V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 9H20V15H18V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M0 14H2V10H0V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 15H4V9H6V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M24 10H22V14H24V10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17966,7 +17966,7 @@ pub fn CgSmile(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13H14C14 14.1046 13.1046 15 12 15C10.8954 15 10 14.1046 10 13H8C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44771 8.44772 9 9 9C9.55228 9 10 9.44771 10 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11C15.5523 11 16 10.5523 16 10C16 9.44771 15.5523 9 15 9C14.4477 9 14 9.44771 14 10C14 10.5523 14.4477 11 15 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13H14C14 14.1046 13.1046 15 12 15C10.8954 15 10 14.1046 10 13H8C8 15.2091 9.79086 17 12 17C14.2091 17 16 15.2091 16 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44771 8.44772 9 9 9C9.55228 9 10 9.44771 10 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11C15.5523 11 16 10.5523 16 10C16 9.44771 15.5523 9 15 9C14.4477 9 14 9.44771 14 10C14 10.5523 14.4477 11 15 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -17996,7 +17996,7 @@ pub fn CgSmileMouthOpen(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 17C14.2091 17 16 15.2091 16 13H8C8 15.2091 9.79086 17 12 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44772 8.44772 9 9 9C9.55228 9 10 9.44772 10 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9C14.4477 9 14 9.44772 14 10C14 10.5523 14.4477 11 15 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 17C14.2091 17 16 15.2091 16 13H8C8 15.2091 9.79086 17 12 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44772 8.44772 9 9 9C9.55228 9 10 9.44772 10 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9C14.4477 9 14 9.44772 14 10C14 10.5523 14.4477 11 15 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18026,7 +18026,7 @@ pub fn CgSmileNeutral(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10C8 10.5523 8.44772 11 9 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44772 14.4477 9 15 9C15.5523 9 16 9.44772 16 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10C8 10.5523 8.44772 11 9 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44772 14.4477 9 15 9C15.5523 9 16 9.44772 16 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18056,7 +18056,7 @@ pub fn CgSmileNoMouth(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44772 8.44772 9 9 9C9.55228 9 10 9.44772 10 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9C14.4477 9 14 9.44772 14 10C14 10.5523 14.4477 11 15 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44772 8.44772 9 9 9C9.55228 9 10 9.44772 10 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 11C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9C14.4477 9 14 9.44772 14 10C14 10.5523 14.4477 11 15 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18086,7 +18086,7 @@ pub fn CgSmileNone(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9C7.44772 9 7 9.44772 7 10C7 10.5523 7.44772 11 8 11H9C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9C14.4477 9 14 9.44772 14 10C14 10.5523 14.4477 11 15 11H16C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9H15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9C7.44772 9 7 9.44772 7 10C7 10.5523 7.44772 11 8 11H9C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9C14.4477 9 14 9.44772 14 10C14 10.5523 14.4477 11 15 11H16C16.5523 11 17 10.5523 17 10C17 9.44772 16.5523 9 16 9H15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 15C8.44772 15 8 15.4477 8 16C8 16.5523 8.44772 17 9 17H15C15.5523 17 16 16.5523 16 16C16 15.4477 15.5523 15 15 15H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18116,7 +18116,7 @@ pub fn CgSmileSad(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10C8 10.5523 8.44772 11 9 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17H8C8 14.7909 9.79086 13 12 13C14.2091 13 16 14.7909 16 17H14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44772 14.4477 9 15 9C15.5523 9 16 9.44772 16 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 11C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10C8 10.5523 8.44772 11 9 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17H8C8 14.7909 9.79086 13 12 13C14.2091 13 16 14.7909 16 17H14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44772 14.4477 9 15 9C15.5523 9 16 9.44772 16 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18146,7 +18146,7 @@ pub fn CgSmileUpside(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 11H14C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11H8C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 14C10 13.4477 9.55228 13 9 13C8.44772 13 8 13.4477 8 14C8 14.5523 8.44772 15 9 15C9.55228 15 10 14.5523 10 14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 13C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14C14 13.4477 14.4477 13 15 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12ZM20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 11H14C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11H8C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 14C10 13.4477 9.55228 13 9 13C8.44772 13 8 13.4477 8 14C8 14.5523 8.44772 15 9 15C9.55228 15 10 14.5523 10 14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 13C15.5523 13 16 13.4477 16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14C14 13.4477 14.4477 13 15 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12ZM20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18176,7 +18176,7 @@ pub fn CgSoftwareDownload(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5V12.1578L16.2428 8.91501L17.657 10.3292L12.0001 15.9861L6.34326 10.3292L7.75748 8.91501L11 12.1575V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5V12.1578L16.2428 8.91501L17.657 10.3292L12.0001 15.9861L6.34326 10.3292L7.75748 8.91501L11 12.1575V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18206,7 +18206,7 @@ pub fn CgSoftwareUpload(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18236,7 +18236,7 @@ pub fn CgSortAz(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 8C6 7.44772 6.44772 7 7 7H17C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9H7C6.44772 9 6 8.55228 6 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H9C8.44772 13 8 12.5523 8 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15C10.4477 15 10 15.4477 10 16C10 16.5523 10.4477 17 11 17H13C13.5523 17 14 16.5523 14 16C14 15.4477 13.5523 15 13 15H11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 8C6 7.44772 6.44772 7 7 7H17C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9H7C6.44772 9 6 8.55228 6 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 11.4477 8.44772 11 9 11H15C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H9C8.44772 13 8 12.5523 8 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15C10.4477 15 10 15.4477 10 16C10 16.5523 10.4477 17 11 17H13C13.5523 17 14 16.5523 14 16C14 15.4477 13.5523 15 13 15H11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18266,7 +18266,7 @@ pub fn CgSortZa(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 16C6 16.5523 6.44772 17 7 17H17C17.5523 17 18 16.5523 18 16C18 15.4477 17.5523 15 17 15H7C6.44772 15 6 15.4477 6 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 12.5523 8.44772 13 9 13H15C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11H9C8.44772 11 8 11.4477 8 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9C10.4477 9 10 8.55229 10 8C10 7.44771 10.4477 7 11 7H13C13.5523 7 14 7.44771 14 8C14 8.55229 13.5523 9 13 9H11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 16C6 16.5523 6.44772 17 7 17H17C17.5523 17 18 16.5523 18 16C18 15.4477 17.5523 15 17 15H7C6.44772 15 6 15.4477 6 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 12C8 12.5523 8.44772 13 9 13H15C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11H9C8.44772 11 8 11.4477 8 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9C10.4477 9 10 8.55229 10 8C10 7.44771 10.4477 7 11 7H13C13.5523 7 14 7.44771 14 8C14 8.55229 13.5523 9 13 9H11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18296,7 +18296,7 @@ pub fn CgSpaceBetween(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 5L15 5L15 19H19V17H17L17 7L19 7V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5L9 5L9 19H5L5 17H7L7 7H5L5 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7V17H11L11 7H13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 5L15 5L15 19H19V17H17L17 7L19 7V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5L9 5L9 19H5L5 17H7L7 7H5L5 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7V17H11L11 7H13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18326,7 +18326,7 @@ pub fn CgSpaceBetweenV(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5V9H19V5H17V7H7V5H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 19V15H19V19H17V17H7V19H5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11H17V13H7V11Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5V9H19V5H17V7H7V5H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 19V15H19V19H17V17H7V19H5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11H17V13H7V11Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18386,7 +18386,7 @@ pub fn CgSpinner(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.2\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.2\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18446,7 +18446,7 @@ pub fn CgSpinnerTwo(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.2\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22C17.5228 22 22 17.5228 22 12H19C19 15.866 15.866 19 12 19V22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.2\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22C17.5228 22 22 17.5228 22 12H19C19 15.866 15.866 19 12 19V22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18476,7 +18476,7 @@ pub fn CgSpinnerTwoAlt(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22C17.5228 22 22 17.5228 22 12H19C19 15.866 15.866 19 12 19V22Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22C17.5228 22 22 17.5228 22 12H19C19 15.866 15.866 19 12 19V22Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18506,7 +18506,7 @@ pub fn CgSquare(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 10H10V14H14V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 9C5 6.79086 6.79086 5 9 5H15C17.2091 5 19 6.79086 19 9V15C19 17.2091 17.2091 19 15 19H9C6.79086 19 5 17.2091 5 15V9ZM9 8H15C15.5523 8 16 8.44772 16 9V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15V9C8 8.44772 8.44772 8 9 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 10H10V14H14V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5 9C5 6.79086 6.79086 5 9 5H15C17.2091 5 19 6.79086 19 9V15C19 17.2091 17.2091 19 15 19H9C6.79086 19 5 17.2091 5 15V9ZM9 8H15C15.5523 8 16 8.44772 16 9V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15V9C8 8.44772 8.44772 8 9 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18536,7 +18536,7 @@ pub fn CgStack(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 4V16H22V2H8V4H20Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8V22H16V8H2ZM14 10H4V20H14V10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7H5V5H19V19H17V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 4V16H22V2H8V4H20Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8V22H16V8H2ZM14 10H4V20H14V10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 7H5V5H19V19H17V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18596,7 +18596,7 @@ pub fn CgStopwatch(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.6214 2.55029L21.4498 5.37872L20.0356 6.79293L17.2071 3.96451L18.6214 2.55029Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.8225 8.60055H10.8225V12.6005H12.8225V8.60055Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.18633 18.8137C8.70105 22.3285 14.3995 22.3285 17.9143 18.8137C21.429 15.299 21.429 9.60055 17.9143 6.08583C14.3995 2.57111 8.70105 2.57111 5.18633 6.08583C1.67161 9.60054 1.67161 15.299 5.18633 18.8137ZM6.60054 17.3995C9.33422 20.1332 13.7664 20.1332 16.5 17.3995C19.2337 14.6659 19.2337 10.2337 16.5 7.50004C13.7664 4.76637 9.33422 4.76637 6.60054 7.50004C3.86688 10.2337 3.86688 14.6659 6.60054 17.3995Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.6214 2.55029L21.4498 5.37872L20.0356 6.79293L17.2071 3.96451L18.6214 2.55029Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.8225 8.60055H10.8225V12.6005H12.8225V8.60055Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.18633 18.8137C8.70105 22.3285 14.3995 22.3285 17.9143 18.8137C21.429 15.299 21.429 9.60055 17.9143 6.08583C14.3995 2.57111 8.70105 2.57111 5.18633 6.08583C1.67161 9.60054 1.67161 15.299 5.18633 18.8137ZM6.60054 17.3995C9.33422 20.1332 13.7664 20.1332 16.5 17.3995C19.2337 14.6659 19.2337 10.2337 16.5 7.50004C13.7664 4.76637 9.33422 4.76637 6.60054 7.50004C3.86688 10.2337 3.86688 14.6659 6.60054 17.3995Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18626,7 +18626,7 @@ pub fn CgStories(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 6H9C8.44772 6 8 6.44772 8 7V17C8 17.5523 8.44772 18 9 18H15C15.5523 18 16 17.5523 16 17V7C16 6.44772 15.5523 6 15 6ZM9 4C7.34315 4 6 5.34315 6 7V17C6 18.6569 7.34315 20 9 20H15C16.6569 20 18 18.6569 18 17V7C18 5.34315 16.6569 4 15 4H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 6C2 5.44772 2.44772 5 3 5C3.55228 5 4 5.44772 4 6V18C4 18.5523 3.55228 19 3 19C2.44772 19 2 18.5523 2 18V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 6C20 5.44772 20.4477 5 21 5C21.5523 5 22 5.44772 22 6V18C22 18.5523 21.5523 19 21 19C20.4477 19 20 18.5523 20 18V6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 6H9C8.44772 6 8 6.44772 8 7V17C8 17.5523 8.44772 18 9 18H15C15.5523 18 16 17.5523 16 17V7C16 6.44772 15.5523 6 15 6ZM9 4C7.34315 4 6 5.34315 6 7V17C6 18.6569 7.34315 20 9 20H15C16.6569 20 18 18.6569 18 17V7C18 5.34315 16.6569 4 15 4H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 6C2 5.44772 2.44772 5 3 5C3.55228 5 4 5.44772 4 6V18C4 18.5523 3.55228 19 3 19C2.44772 19 2 18.5523 2 18V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 6C20 5.44772 20.4477 5 21 5C21.5523 5 22 5.44772 22 6V18C22 18.5523 21.5523 19 21 19C20.4477 19 20 18.5523 20 18V6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18656,7 +18656,7 @@ pub fn CgStudio(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 13H13V17H17V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H21V21H3V3ZM5 5H19V19H5V5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 13H13V17H17V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3H21V21H3V3ZM5 5H19V19H5V5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18686,7 +18686,7 @@ pub fn CgStyle(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 21V13H21V21H13ZM15 15H19L19 19H15V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 11L3 3L11 3V11H3ZM5 5L9 5V9L5 9L5 5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 6V12H16V8L12 8V6L18 6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 18H6L6 12H8L8 16H12V18Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 21V13H21V21H13ZM15 15H19L19 19H15V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 11L3 3L11 3V11H3ZM5 5L9 5V9L5 9L5 5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 6V12H16V8L12 8V6L18 6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 18H6L6 12H8L8 16H12V18Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18716,7 +18716,7 @@ pub fn CgSun(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 0H13V4.06189C12.6724 4.02104 12.3387 4 12 4C11.6613 4 11.3276 4.02104 11 4.06189V0ZM7.0943 5.68018L4.22173 2.80761L2.80752 4.22183L5.6801 7.09441C6.09071 6.56618 6.56608 6.0908 7.0943 5.68018ZM4.06189 11H0V13H4.06189C4.02104 12.6724 4 12.3387 4 12C4 11.6613 4.02104 11.3276 4.06189 11ZM5.6801 16.9056L2.80751 19.7782L4.22173 21.1924L7.0943 18.3198C6.56608 17.9092 6.09071 17.4338 5.6801 16.9056ZM11 19.9381V24H13V19.9381C12.6724 19.979 12.3387 20 12 20C11.6613 20 11.3276 19.979 11 19.9381ZM16.9056 18.3199L19.7781 21.1924L21.1923 19.7782L18.3198 16.9057C17.9092 17.4339 17.4338 17.9093 16.9056 18.3199ZM19.9381 13H24V11H19.9381C19.979 11.3276 20 11.6613 20 12C20 12.3387 19.979 12.6724 19.9381 13ZM18.3198 7.0943L21.1923 4.22183L19.7781 2.80762L16.9056 5.6801C17.4338 6.09071 17.9092 6.56608 18.3198 7.0943Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 0H13V4.06189C12.6724 4.02104 12.3387 4 12 4C11.6613 4 11.3276 4.02104 11 4.06189V0ZM7.0943 5.68018L4.22173 2.80761L2.80752 4.22183L5.6801 7.09441C6.09071 6.56618 6.56608 6.0908 7.0943 5.68018ZM4.06189 11H0V13H4.06189C4.02104 12.6724 4 12.3387 4 12C4 11.6613 4.02104 11.3276 4.06189 11ZM5.6801 16.9056L2.80751 19.7782L4.22173 21.1924L7.0943 18.3198C6.56608 17.9092 6.09071 17.4338 5.6801 16.9056ZM11 19.9381V24H13V19.9381C12.6724 19.979 12.3387 20 12 20C11.6613 20 11.3276 19.979 11 19.9381ZM16.9056 18.3199L19.7781 21.1924L21.1923 19.7782L18.3198 16.9057C17.9092 17.4339 17.4338 17.9093 16.9056 18.3199ZM19.9381 13H24V11H19.9381C19.979 11.3276 20 11.6613 20 12C20 12.3387 19.979 12.6724 19.9381 13ZM18.3198 7.0943L21.1923 4.22183L19.7781 2.80762L16.9056 5.6801C17.4338 6.09071 17.9092 6.56608 18.3198 7.0943Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18776,7 +18776,7 @@ pub fn CgSwap(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13V11.5H10V9.5H16V8L19 10.5L16 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 17V15.5H14V13.5H8V12L5 14.5L8 17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13V11.5H10V9.5H16V8L19 10.5L16 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 17V15.5H14V13.5H8V12L5 14.5L8 17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18806,7 +18806,7 @@ pub fn CgSwapVertical(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16H13.5L13.5 10H15.5L15.5 16H17L14.5 19L12 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 8H9.5L9.5 14H11.5L11.5 8H13L10.5 5L8 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 16H13.5L13.5 10H15.5L15.5 16H17L14.5 19L12 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 8H9.5L9.5 14H11.5L11.5 8H13L10.5 5L8 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18836,7 +18836,7 @@ pub fn CgSweden(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 4H10V11H23V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 13V20H10V13H23Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 13V20H1V13H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 11V4H8V11H1Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 4H10V11H23V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 13V20H10V13H23Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 13V20H1V13H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 11V4H8V11H1Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18896,7 +18896,7 @@ pub fn CgSync(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.56079 10.6418L6.35394 3.94971L8.25402 5.84979C11.7312 3.6588 16.3814 4.07764 19.41 7.1063L17.9958 8.52052C15.7536 6.27827 12.3686 5.87519 9.71551 7.31128L11.2529 8.84869L4.56079 10.6418Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.4392 13.3581L17.646 20.0502L15.7459 18.1501C12.2688 20.3411 7.61857 19.9223 4.58991 16.8936L6.00413 15.4794C8.24638 17.7217 11.6313 18.1247 14.2844 16.6887L12.747 15.1512L19.4392 13.3581Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.56079 10.6418L6.35394 3.94971L8.25402 5.84979C11.7312 3.6588 16.3814 4.07764 19.41 7.1063L17.9958 8.52052C15.7536 6.27827 12.3686 5.87519 9.71551 7.31128L11.2529 8.84869L4.56079 10.6418Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.4392 13.3581L17.646 20.0502L15.7459 18.1501C12.2688 20.3411 7.61857 19.9223 4.58991 16.8936L6.00413 15.4794C8.24638 17.7217 11.6313 18.1247 14.2844 16.6887L12.747 15.1512L19.4392 13.3581Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18956,7 +18956,7 @@ pub fn CgTag(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8V16C2 16.5523 2.44772 17 3 17H16.6202C16.9121 17 17.1895 16.8724 17.3795 16.6508L20.808 12.6508C21.129 12.2763 21.129 11.7237 20.808 11.3492L17.3795 7.34921C17.1895 7.12756 16.9121 7 16.6202 7H3C2.44772 7 2 7.44772 2 8ZM0 8V16C0 17.6569 1.34315 19 3 19H16.6202C17.496 19 18.328 18.6173 18.898 17.9524L22.3265 13.9524C23.2895 12.8289 23.2895 11.1711 22.3265 10.0476L18.898 6.04763C18.328 5.38269 17.496 5 16.6202 5H3C1.34315 5 0 6.34315 0 8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13ZM15 15C16.6569 15 18 13.6569 18 12C18 10.3431 16.6569 9 15 9C13.3431 9 12 10.3431 12 12C12 13.6569 13.3431 15 15 15Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8V16C2 16.5523 2.44772 17 3 17H16.6202C16.9121 17 17.1895 16.8724 17.3795 16.6508L20.808 12.6508C21.129 12.2763 21.129 11.7237 20.808 11.3492L17.3795 7.34921C17.1895 7.12756 16.9121 7 16.6202 7H3C2.44772 7 2 7.44772 2 8ZM0 8V16C0 17.6569 1.34315 19 3 19H16.6202C17.496 19 18.328 18.6173 18.898 17.9524L22.3265 13.9524C23.2895 12.8289 23.2895 11.1711 22.3265 10.0476L18.898 6.04763C18.328 5.38269 17.496 5 16.6202 5H3C1.34315 5 0 6.34315 0 8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13ZM15 15C16.6569 15 18 13.6569 18 12C18 10.3431 16.6569 9 15 9C13.3431 9 12 10.3431 12 12C12 13.6569 13.3431 15 15 15Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -18986,7 +18986,7 @@ pub fn CgTally(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.66124 2.67117C3.71341 2.4 3.97956 2.18018 4.2557 2.18018H6.2557C6.53184 2.18018 6.71341 2.4 6.66124 2.67117L5.33877 9.54511C5.2866 9.81628 5.02045 10.0361 4.74431 10.0361H2.74431C2.46817 10.0361 2.2866 9.81628 2.33877 9.54511L3.66124 2.67117Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.66124 2.67117C8.71341 2.4 8.97956 2.18018 9.2557 2.18018H11.2557C11.5318 2.18018 11.7134 2.4 11.6612 2.67117L8.07168 21.329C8.01951 21.6002 7.75336 21.82 7.47722 21.82H5.47722C5.20108 21.82 5.01951 21.6002 5.07168 21.329L8.66124 2.67117Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.6612 2.67117C13.7134 2.4 13.9796 2.18018 14.2557 2.18018H16.2557C16.5318 2.18018 16.7134 2.4 16.6612 2.67117L13.0717 21.329C13.0195 21.6002 12.7534 21.82 12.4772 21.82H10.4772C10.2011 21.82 10.0195 21.6002 10.0717 21.329L13.6612 2.67117Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.6612 2.67117C18.7134 2.4 18.9796 2.18018 19.2557 2.18018H21.2557C21.5318 2.18018 21.7134 2.4 21.6612 2.67117L20.3388 9.54511C20.2866 9.81628 20.0205 10.0361 19.7443 10.0361H17.7443C17.4682 10.0361 17.2866 9.81628 17.3388 9.54511L18.6612 2.67117Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.66124 2.67117C3.71341 2.4 3.97956 2.18018 4.2557 2.18018H6.2557C6.53184 2.18018 6.71341 2.4 6.66124 2.67117L5.33877 9.54511C5.2866 9.81628 5.02045 10.0361 4.74431 10.0361H2.74431C2.46817 10.0361 2.2866 9.81628 2.33877 9.54511L3.66124 2.67117Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.66124 2.67117C8.71341 2.4 8.97956 2.18018 9.2557 2.18018H11.2557C11.5318 2.18018 11.7134 2.4 11.6612 2.67117L8.07168 21.329C8.01951 21.6002 7.75336 21.82 7.47722 21.82H5.47722C5.20108 21.82 5.01951 21.6002 5.07168 21.329L8.66124 2.67117Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.6612 2.67117C13.7134 2.4 13.9796 2.18018 14.2557 2.18018H16.2557C16.5318 2.18018 16.7134 2.4 16.6612 2.67117L13.0717 21.329C13.0195 21.6002 12.7534 21.82 12.4772 21.82H10.4772C10.2011 21.82 10.0195 21.6002 10.0717 21.329L13.6612 2.67117Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.6612 2.67117C18.7134 2.4 18.9796 2.18018 19.2557 2.18018H21.2557C21.5318 2.18018 21.7134 2.4 21.6612 2.67117L20.3388 9.54511C20.2866 9.81628 20.0205 10.0361 19.7443 10.0361H17.7443C17.4682 10.0361 17.2866 9.81628 17.3388 9.54511L18.6612 2.67117Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19016,7 +19016,7 @@ pub fn CgTapDouble(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.9236 18V14C14.9236 12.3431 13.5804 11 11.9236 11C10.2667 11 8.92355 12.3431 8.92355 14V18C8.92355 19.6569 10.2667 21 11.9236 21C13.5804 21 14.9236 19.6569 14.9236 18ZM11.9236 9C9.16213 9 6.92355 11.2386 6.92355 14V18C6.92355 20.7614 9.16213 23 11.9236 23C14.685 23 16.9236 20.7614 16.9236 18V14C16.9236 11.2386 14.685 9 11.9236 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9236 14C10.9236 13.4477 11.3713 13 11.9236 13C12.4758 13 12.9236 13.4477 12.9236 14V17H10.9236V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9235 1C14.7023 1 17.2164 2.13339 19.0286 3.96311L17.6144 5.37735C16.1641 3.90955 14.15 3 11.9235 3C9.77436 3 7.82311 3.84749 6.38577 5.22651L4.97131 3.81205C6.7708 2.07122 9.22207 1 11.9235 1Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9233 5C13.5809 5 15.1038 5.5761 16.3029 6.53898L14.8768 7.9651C14.0493 7.35833 13.0281 7 11.9233 7C10.848 7 9.85204 7.33943 9.03662 7.91699L7.60779 6.48816C8.79686 5.55586 10.2952 5 11.9233 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14.9236 18V14C14.9236 12.3431 13.5804 11 11.9236 11C10.2667 11 8.92355 12.3431 8.92355 14V18C8.92355 19.6569 10.2667 21 11.9236 21C13.5804 21 14.9236 19.6569 14.9236 18ZM11.9236 9C9.16213 9 6.92355 11.2386 6.92355 14V18C6.92355 20.7614 9.16213 23 11.9236 23C14.685 23 16.9236 20.7614 16.9236 18V14C16.9236 11.2386 14.685 9 11.9236 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9236 14C10.9236 13.4477 11.3713 13 11.9236 13C12.4758 13 12.9236 13.4477 12.9236 14V17H10.9236V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11.9235 1C14.7023 1 17.2164 2.13339 19.0286 3.96311L17.6144 5.37735C16.1641 3.90955 14.15 3 11.9235 3C9.77436 3 7.82311 3.84749 6.38577 5.22651L4.97131 3.81205C6.7708 2.07122 9.22207 1 11.9235 1Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9233 5C13.5809 5 15.1038 5.5761 16.3029 6.53898L14.8768 7.9651C14.0493 7.35833 13.0281 7 11.9233 7C10.848 7 9.85204 7.33943 9.03662 7.91699L7.60779 6.48816C8.79686 5.55586 10.2952 5 11.9233 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19046,7 +19046,7 @@ pub fn CgTapSingle(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0491 3.11401C14.1927 3.11401 16.1393 3.95706 17.5756 5.32967L16.1609 6.74437C15.087 5.73346 13.6404 5.11401 12.0491 5.11401C10.4086 5.11401 8.92183 5.77243 7.83868 6.83944L6.42444 5.42519C7.86954 3.99627 9.85631 3.11401 12.0491 3.11401Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9767 11.886C10.9767 11.3337 11.4244 10.886 11.9767 10.886C12.529 10.886 12.9767 11.3337 12.9767 11.886V13.886H10.9767V11.886Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9767 6.88599C9.21526 6.88599 6.97668 9.12456 6.97668 11.886V15.886C6.97668 18.6474 9.21526 20.886 11.9767 20.886C14.7381 20.886 16.9767 18.6474 16.9767 15.886V11.886C16.9767 9.12456 14.7381 6.88599 11.9767 6.88599ZM14.9767 15.886V11.886C14.9767 10.2291 13.6335 8.88599 11.9767 8.88599C10.3198 8.88599 8.97668 10.2291 8.97668 11.886V15.886C8.97668 17.5428 10.3198 18.886 11.9767 18.886C13.6335 18.886 14.9767 17.5428 14.9767 15.886Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12.0491 3.11401C14.1927 3.11401 16.1393 3.95706 17.5756 5.32967L16.1609 6.74437C15.087 5.73346 13.6404 5.11401 12.0491 5.11401C10.4086 5.11401 8.92183 5.77243 7.83868 6.83944L6.42444 5.42519C7.86954 3.99627 9.85631 3.11401 12.0491 3.11401Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.9767 11.886C10.9767 11.3337 11.4244 10.886 11.9767 10.886C12.529 10.886 12.9767 11.3337 12.9767 11.886V13.886H10.9767V11.886Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.9767 6.88599C9.21526 6.88599 6.97668 9.12456 6.97668 11.886V15.886C6.97668 18.6474 9.21526 20.886 11.9767 20.886C14.7381 20.886 16.9767 18.6474 16.9767 15.886V11.886C16.9767 9.12456 14.7381 6.88599 11.9767 6.88599ZM14.9767 15.886V11.886C14.9767 10.2291 13.6335 8.88599 11.9767 8.88599C10.3198 8.88599 8.97668 10.2291 8.97668 11.886V15.886C8.97668 17.5428 10.3198 18.886 11.9767 18.886C13.6335 18.886 14.9767 17.5428 14.9767 15.886Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19076,7 +19076,7 @@ pub fn CgTemplate(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3V9H21V3H3ZM19 5H5V7H19V5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 11V21H11V11H3ZM9 13H5V19H9V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 11H13V13H21V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 15H21V17H13V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 19H13V21H21V19Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 3V9H21V3H3ZM19 5H5V7H19V5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 11V21H11V11H3ZM9 13H5V19H9V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 11H13V13H21V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 15H21V17H13V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 19H13V21H21V19Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19136,7 +19136,7 @@ pub fn CgTerminal(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.0333 14.8284L6.44751 16.2426L10.6902 12L6.44751 7.75733L5.0333 9.17155L7.86172 12L5.0333 14.8284Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 14H11V16H15V14Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 2C0.895431 2 0 2.89543 0 4V20C0 21.1046 0.89543 22 2 22H22C23.1046 22 24 21.1046 24 20V4C24 2.89543 23.1046 2 22 2H2ZM22 4H2L2 20H22V4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.0333 14.8284L6.44751 16.2426L10.6902 12L6.44751 7.75733L5.0333 9.17155L7.86172 12L5.0333 14.8284Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 14H11V16H15V14Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 2C0.895431 2 0 2.89543 0 4V20C0 21.1046 0.89543 22 2 22H22C23.1046 22 24 21.1046 24 20V4C24 2.89543 23.1046 2 22 2H2ZM22 4H2L2 20H22V4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19166,7 +19166,7 @@ pub fn CgTerrain(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 10L3 18H13L8 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5286 10.7543L13.5 6L21 18H15.0572L10.5286 10.7543Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 10L3 18H13L8 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.5286 10.7543L13.5 6L21 18H15.0572L10.5286 10.7543Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19196,7 +19196,7 @@ pub fn CgThermometer(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 5.63615C17.3403 5.24563 17.9735 5.24563 18.364 5.63615C18.7545 6.02668 18.7545 6.65984 18.364 7.05037L11.2929 14.1214C10.9024 14.512 10.2693 14.512 9.87873 14.1214C9.48821 13.7309 9.48821 13.0977 9.87873 12.7072L16.9498 5.63615Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.82813 17.5862C9.7695 18.8725 12.4109 18.6603 14.1214 16.9499L21.1924 9.8788C23.1451 7.92617 23.1451 4.76035 21.1924 2.80773C19.2398 0.855106 16.074 0.855106 14.1214 2.80773L7.0503 9.8788C5.33984 11.5893 5.12771 14.2307 6.41392 16.172L2.80766 19.7783C2.41714 20.1688 2.41714 20.802 2.80766 21.1925C3.19819 21.583 3.83135 21.583 4.22188 21.1925L7.82813 17.5862ZM12.7072 15.5356L19.7782 8.46458C20.9498 7.29301 20.9498 5.39351 19.7782 4.22194C18.6067 3.05037 16.7072 3.05037 15.5356 4.22194L8.46452 11.293C7.29294 12.4646 7.29294 14.3641 8.46452 15.5356C9.63609 16.7072 11.5356 16.7072 12.7072 15.5356Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.9498 5.63615C17.3403 5.24563 17.9735 5.24563 18.364 5.63615C18.7545 6.02668 18.7545 6.65984 18.364 7.05037L11.2929 14.1214C10.9024 14.512 10.2693 14.512 9.87873 14.1214C9.48821 13.7309 9.48821 13.0977 9.87873 12.7072L16.9498 5.63615Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.82813 17.5862C9.7695 18.8725 12.4109 18.6603 14.1214 16.9499L21.1924 9.8788C23.1451 7.92617 23.1451 4.76035 21.1924 2.80773C19.2398 0.855106 16.074 0.855106 14.1214 2.80773L7.0503 9.8788C5.33984 11.5893 5.12771 14.2307 6.41392 16.172L2.80766 19.7783C2.41714 20.1688 2.41714 20.802 2.80766 21.1925C3.19819 21.583 3.83135 21.583 4.22188 21.1925L7.82813 17.5862ZM12.7072 15.5356L19.7782 8.46458C20.9498 7.29301 20.9498 5.39351 19.7782 4.22194C18.6067 3.05037 16.7072 3.05037 15.5356 4.22194L8.46452 11.293C7.29294 12.4646 7.29294 14.3641 8.46452 15.5356C9.63609 16.7072 11.5356 16.7072 12.7072 15.5356Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19226,7 +19226,7 @@ pub fn CgThermostat(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17C11.4477 17 11 17.4477 11 18C11 18.5523 11.4477 19 12 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 13.9997C16.2144 14.9119 17 16.3642 17 18C17 20.7614 14.7614 23 12 23C9.23858 23 7 20.7614 7 18C7 16.3642 7.78555 14.9119 9 13.9997V4C9 2.34315 10.3431 1 12 1C13.6569 1 15 2.34315 15 4V13.9997ZM13 4V15.1707C14.1652 15.5826 15 16.6938 15 18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18C9 16.6938 9.83481 15.5826 11 15.1707V4C11 3.44772 11.4477 3 12 3C12.5523 3 13 3.44772 13 4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C12.5523 19 13 18.5523 13 18C13 17.4477 12.5523 17 12 17C11.4477 17 11 17.4477 11 18C11 18.5523 11.4477 19 12 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15 13.9997C16.2144 14.9119 17 16.3642 17 18C17 20.7614 14.7614 23 12 23C9.23858 23 7 20.7614 7 18C7 16.3642 7.78555 14.9119 9 13.9997V4C9 2.34315 10.3431 1 12 1C13.6569 1 15 2.34315 15 4V13.9997ZM13 4V15.1707C14.1652 15.5826 15 16.6938 15 18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18C9 16.6938 9.83481 15.5826 11 15.1707V4C11 3.44772 11.4477 3 12 3C12.5523 3 13 3.44772 13 4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19256,7 +19256,7 @@ pub fn CgTikcode(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 5H5V9H9V5ZM3 3V11H11V3H3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 5H15V9H19V5ZM13 3V11H21V3H13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 15H5V19H9V15ZM3 13V21H11V13H3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13H15V21H13V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13H18V21H16V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13H21V21H19V13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 5H5V9H9V5ZM3 3V11H11V3H3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 5H15V9H19V5ZM13 3V11H21V3H13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 15H5V19H9V15ZM3 13V21H11V13H3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13H15V21H13V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 13H18V21H16V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 13H21V21H19V13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19286,7 +19286,7 @@ pub fn CgTime(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 7H11V12H16V14H9V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 7H11V12H16V14H9V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19316,7 +19316,7 @@ pub fn CgTimelapse(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C10.067 19 8.31704 18.2165 7.05029 16.9498L12 12L12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19C10.067 19 8.31704 18.2165 7.05029 16.9498L12 12L12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19346,7 +19346,7 @@ pub fn CgTimer(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 5.07089C16.3923 5.55612 19 8.47353 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 9.96159 5.87128 8.12669 7.26175 6.84738L5.84658 5.43221C4.09461 7.0743 3 9.40932 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C11.662 3 11.3283 3.01863 11 3.05493V9.08551H13V5.07089Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.70711 8.70708C7.31658 9.0976 7.31658 9.73077 7.70711 10.1213L10.5355 12.9497C10.9261 13.3402 11.5592 13.3402 11.9497 12.9497C12.3403 12.5592 12.3403 11.926 11.9497 11.5355L9.12132 8.70708C8.7308 8.31655 8.09763 8.31655 7.70711 8.70708Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 5.07089C16.3923 5.55612 19 8.47353 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 9.96159 5.87128 8.12669 7.26175 6.84738L5.84658 5.43221C4.09461 7.0743 3 9.40932 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C11.662 3 11.3283 3.01863 11 3.05493V9.08551H13V5.07089Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7.70711 8.70708C7.31658 9.0976 7.31658 9.73077 7.70711 10.1213L10.5355 12.9497C10.9261 13.3402 11.5592 13.3402 11.9497 12.9497C12.3403 12.5592 12.3403 11.926 11.9497 11.5355L9.12132 8.70708C8.7308 8.31655 8.09763 8.31655 7.70711 8.70708Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19376,7 +19376,7 @@ pub fn CgToday(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\" x=\"7\" y=\"9\" width=\"10\" height=\"10\" rx=\"1\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 3H6C5.44772 3 5 3.44772 5 4V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V4C19 3.44772 18.5523 3 18 3ZM6 1C4.34315 1 3 2.34315 3 4V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V4C21 2.34315 19.6569 1 18 1H6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 6C7 5.44772 7.44772 5 8 5H12C12.5523 5 13 5.44772 13 6C13 6.55228 12.5523 7 12 7H8C7.44772 7 7 6.55228 7 6Z\" fill=\"currentColor\" />"
+        "<rect xmlns=\"http://www.w3.org/2000/svg\" opacity=\"0.5\" x=\"7\" y=\"9\" width=\"10\" height=\"10\" rx=\"1\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M18 3H6C5.44772 3 5 3.44772 5 4V20C5 20.5523 5.44772 21 6 21H18C18.5523 21 19 20.5523 19 20V4C19 3.44772 18.5523 3 18 3ZM6 1C4.34315 1 3 2.34315 3 4V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V4C21 2.34315 19.6569 1 18 1H6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 6C7 5.44772 7.44772 5 8 5H12C12.5523 5 13 5.44772 13 6C13 6.55228 12.5523 7 12 7H8C7.44772 7 7 6.55228 7 6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19406,7 +19406,7 @@ pub fn CgToggleOff(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 15C18.6569 15 20 13.6569 20 12C20 10.3431 18.6569 9 17 9C15.3431 9 14 10.3431 14 12C14 13.6569 15.3431 15 17 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 12C0 8.13401 3.13401 5 7 5H17C20.866 5 24 8.13401 24 12C24 15.866 20.866 19 17 19H7C3.13401 19 0 15.866 0 12ZM7 7H17C19.7614 7 22 9.23858 22 12C22 14.7614 19.7614 17 17 17H7C4.23858 17 2 14.7614 2 12C2 9.23858 4.23858 7 7 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 15C18.6569 15 20 13.6569 20 12C20 10.3431 18.6569 9 17 9C15.3431 9 14 10.3431 14 12C14 13.6569 15.3431 15 17 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 12C0 8.13401 3.13401 5 7 5H17C20.866 5 24 8.13401 24 12C24 15.866 20.866 19 17 19H7C3.13401 19 0 15.866 0 12ZM7 7H17C19.7614 7 22 9.23858 22 12C22 14.7614 19.7614 17 17 17H7C4.23858 17 2 14.7614 2 12C2 9.23858 4.23858 7 7 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19436,7 +19436,7 @@ pub fn CgToggleOn(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15C5.34315 15 4 13.6569 4 12C4 10.3431 5.34315 9 7 9C8.65685 9 10 10.3431 10 12C10 13.6569 8.65685 15 7 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 8.13401 20.866 5 17 5H7C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 15C5.34315 15 4 13.6569 4 12C4 10.3431 5.34315 9 7 9C8.65685 9 10 10.3431 10 12C10 13.6569 8.65685 15 7 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 8.13401 20.866 5 17 5H7C3.13401 5 0 8.13401 0 12C0 15.866 3.13401 19 7 19H17C20.866 19 24 15.866 24 12ZM17 7H7C4.23858 7 2 9.23858 2 12C2 14.7614 4.23858 17 7 17H17C19.7614 17 22 14.7614 22 12C22 9.23858 19.7614 7 17 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19466,7 +19466,7 @@ pub fn CgToggleSquare(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9C9.55228 9 10 9.44772 10 10V14C10 14.5523 9.55228 15 9 15H5C4.44772 15 4 14.5523 4 14V10C4 9.44772 4.44772 9 5 9H9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 7C24 5.89543 23.1046 5 22 5H2C0.89543 5 0 5.89543 0 7V17C0 18.1046 0.895432 19 2 19H22C23.1046 19 24 18.1046 24 17V7ZM22 7H2V17H22V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9C9.55228 9 10 9.44772 10 10V14C10 14.5523 9.55228 15 9 15H5C4.44772 15 4 14.5523 4 14V10C4 9.44772 4.44772 9 5 9H9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 7C24 5.89543 23.1046 5 22 5H2C0.89543 5 0 5.89543 0 7V17C0 18.1046 0.895432 19 2 19H22C23.1046 19 24 18.1046 24 17V7ZM22 7H2V17H22V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19496,7 +19496,7 @@ pub fn CgToggleSquareOff(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9C14.4477 9 14 9.44772 14 10V14C14 14.5523 14.4477 15 15 15H19C19.5523 15 20 14.5523 20 14V10C20 9.44772 19.5523 9 19 9H15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 7C0 5.89543 0.895431 5 2 5H22C23.1046 5 24 5.89543 24 7V17C24 18.1046 23.1046 19 22 19H2C0.89543 19 0 18.1046 0 17V7ZM2 7H22V17H2L2 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 9C14.4477 9 14 9.44772 14 10V14C14 14.5523 14.4477 15 15 15H19C19.5523 15 20 14.5523 20 14V10C20 9.44772 19.5523 9 19 9H15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 7C0 5.89543 0.895431 5 2 5H22C23.1046 5 24 5.89543 24 7V17C24 18.1046 23.1046 19 22 19H2C0.89543 19 0 18.1046 0 17V7ZM2 7H22V17H2L2 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19526,7 +19526,7 @@ pub fn CgToolbarBottom(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 13H6V15H18V13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 13H6V15H18V13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19556,7 +19556,7 @@ pub fn CgToolbarLeft(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9H6V15H8V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 9H6V15H8V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 8C2 6.34315 3.34315 5 5 5H19C20.6569 5 22 6.34315 22 8V16C22 17.6569 20.6569 19 19 19H5C3.34315 19 2 17.6569 2 16V8ZM5 7H19C19.5523 7 20 7.44771 20 8V16C20 16.5523 19.5523 17 19 17H5C4.44772 17 4 16.5523 4 16V8C4 7.44772 4.44772 7 5 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19586,7 +19586,7 @@ pub fn CgToolbarRight(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H18V15H16V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 8C22 6.34315 20.6569 5 19 5H5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H19C20.6569 19 22 17.6569 22 16V8ZM19 7H5C4.44772 7 4 7.44771 4 8V16C4 16.5523 4.44772 17 5 17H19C19.5523 17 20 16.5523 20 16V8C20 7.44772 19.5523 7 19 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 9H18V15H16V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 8C22 6.34315 20.6569 5 19 5H5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H19C20.6569 19 22 17.6569 22 16V8ZM19 7H5C4.44772 7 4 7.44771 4 8V16C4 16.5523 4.44772 17 5 17H19C19.5523 17 20 16.5523 20 16V8C20 7.44772 19.5523 7 19 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19616,7 +19616,7 @@ pub fn CgToolbarTop(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 11H6V9H18V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 16C2 17.6569 3.34315 19 5 19H19C20.6569 19 22 17.6569 22 16V8C22 6.34315 20.6569 5 19 5H5C3.34315 5 2 6.34315 2 8V16ZM5 17H19C19.5523 17 20 16.5523 20 16V8C20 7.44772 19.5523 7 19 7H5C4.44772 7 4 7.44771 4 8V16C4 16.5523 4.44772 17 5 17Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 11H6V9H18V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 16C2 17.6569 3.34315 19 5 19H19C20.6569 19 22 17.6569 22 16V8C22 6.34315 20.6569 5 19 5H5C3.34315 5 2 6.34315 2 8V16ZM5 17H19C19.5523 17 20 16.5523 20 16V8C20 7.44772 19.5523 7 19 7H5C4.44772 7 4 7.44771 4 8V16C4 16.5523 4.44772 17 5 17Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19706,7 +19706,7 @@ pub fn CgTrack(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C12.5523 3 13 3.44772 13 4V5.07089C16.0657 5.5094 18.4906 7.93431 18.9291 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H18.9291C18.4906 16.0657 16.0657 18.4906 13 18.9291V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V18.9291C7.93431 18.4906 5.5094 16.0657 5.07089 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H5.07089C5.5094 7.93431 7.93431 5.5094 11 5.07089V4C11 3.44772 11.4477 3 12 3ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12 3C12.5523 3 13 3.44772 13 4V5.07089C16.0657 5.5094 18.4906 7.93431 18.9291 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H18.9291C18.4906 16.0657 16.0657 18.4906 13 18.9291V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V18.9291C7.93431 18.4906 5.5094 16.0657 5.07089 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H5.07089C5.5094 7.93431 7.93431 5.5094 11 5.07089V4C11 3.44772 11.4477 3 12 3ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19736,7 +19736,7 @@ pub fn CgTranscript(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16C5 15.4477 5.44772 15 6 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H6C5.44772 17 5 16.5523 5 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H10C9.44772 13 9 12.5523 9 12C9 11.4477 9.44772 11 10 11H18Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 16C16 15.4477 16.4477 15 17 15H18C18.5523 15 19 15.4477 19 16C19 16.5523 18.5523 17 18 17H17C16.4477 17 16 16.5523 16 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11C7.55228 11 8 11.4477 8 12C8 12.5523 7.55228 13 7 13H6C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44771 20.5523 5 20 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16C5 15.4477 5.44772 15 6 15H14C14.5523 15 15 15.4477 15 16C15 16.5523 14.5523 17 14 17H6C5.44772 17 5 16.5523 5 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H10C9.44772 13 9 12.5523 9 12C9 11.4477 9.44772 11 10 11H18Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 16C16 15.4477 16.4477 15 17 15H18C18.5523 15 19 15.4477 19 16C19 16.5523 18.5523 17 18 17H17C16.4477 17 16 16.5523 16 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11C7.55228 11 8 11.4477 8 12C8 12.5523 7.55228 13 7 13H6C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44771 20.5523 5 20 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19766,7 +19766,7 @@ pub fn CgTrash(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 5V4C17 2.89543 16.1046 2 15 2H9C7.89543 2 7 2.89543 7 4V5H4C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H5V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H17ZM15 4H9V5H15V4ZM17 7H7V18C7 18.5523 7.44772 19 8 19H16C16.5523 19 17 18.5523 17 18V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H11V17H9V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 9H15V17H13V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17 5V4C17 2.89543 16.1046 2 15 2H9C7.89543 2 7 2.89543 7 4V5H4C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H5V18C5 19.6569 6.34315 21 8 21H16C17.6569 21 19 19.6569 19 18V7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H17ZM15 4H9V5H15V4ZM17 7H7V18C7 18.5523 7.44772 19 8 19H16C16.5523 19 17 18.5523 17 18V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9H11V17H9V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 9H15V17H13V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19886,7 +19886,7 @@ pub fn CgTrello(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7C6 6.44771 6.44772 6 7 6H10C10.5523 6 11 6.44772 11 7V17C11 17.5523 10.5523 18 10 18H7C6.44772 18 6 17.5523 6 17V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7C13 6.44772 13.4477 6 14 6H17C17.5523 6 18 6.44772 18 7V13C18 13.5523 17.5523 14 17 14H14C13.4477 14 13 13.5523 13 13V7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 4C2 2.89543 2.89543 2 4 2H20C21.1046 2 22 2.89543 22 4V20C22 21.1046 21.1046 22 20 22H4C2.89543 22 2 21.1046 2 20V4ZM4 4H20V20H4V4Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7C6 6.44771 6.44772 6 7 6H10C10.5523 6 11 6.44772 11 7V17C11 17.5523 10.5523 18 10 18H7C6.44772 18 6 17.5523 6 17V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 7C13 6.44772 13.4477 6 14 6H17C17.5523 6 18 6.44772 18 7V13C18 13.5523 17.5523 14 17 14H14C13.4477 14 13 13.5523 13 13V7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M2 4C2 2.89543 2.89543 2 4 2H20C21.1046 2 22 2.89543 22 4V20C22 21.1046 21.1046 22 20 22H4C2.89543 22 2 21.1046 2 20V4ZM4 4H20V20H4V4Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -19976,7 +19976,7 @@ pub fn CgTrophy(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 15.9C15.2822 15.4367 17 13.419 17 11V4H7V11C7 13.419 8.71776 15.4367 11 15.9V18H9V20H15V18H13V15.9ZM9 6H15V11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 6H20V11H18V6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6H4V11H6V6Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 15.9C15.2822 15.4367 17 13.419 17 11V4H7V11C7 13.419 8.71776 15.4367 11 15.9V18H9V20H15V18H13V15.9ZM9 6H15V11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 6H20V11H18V6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 6H4V11H6V6Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20006,7 +20006,7 @@ pub fn CgTv(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 6.11861L9.4131 4.70551L11.5371 6.82954L14.3667 4L15.7782 5.41151L13.3137 7.87598H18C19.1046 7.87598 20 8.77141 20 9.87598V16.876C20 17.9805 19.1046 18.876 18 18.876H6C4.89543 18.876 4 17.9805 4 16.876V9.87598C4 8.77141 4.89543 7.87598 6 7.87598H9.75736L8 6.11861ZM18 9.87598H6V16.876H18V9.87598Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 19.876H16V20.876H8V19.876Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 6.11861L9.4131 4.70551L11.5371 6.82954L14.3667 4L15.7782 5.41151L13.3137 7.87598H18C19.1046 7.87598 20 8.77141 20 9.87598V16.876C20 17.9805 19.1046 18.876 18 18.876H6C4.89543 18.876 4 17.9805 4 16.876V9.87598C4 8.77141 4.89543 7.87598 6 7.87598H9.75736L8 6.11861ZM18 9.87598H6V16.876H18V9.87598Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 19.876H16V20.876H8V19.876Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20036,7 +20036,7 @@ pub fn CgTwilio(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 9C17 10.1046 16.1046 11 15 11C13.8954 11 13 10.1046 13 9C13 7.89543 13.8954 7 15 7C16.1046 7 17 7.89543 17 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 17C16.1046 17 17 16.1046 17 15C17 13.8954 16.1046 13 15 13C13.8954 13 13 13.8954 13 15C13 16.1046 13.8954 17 15 17Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15C11 16.1046 10.1046 17 9 17C7.89543 17 7 16.1046 7 15C7 13.8954 7.89543 13 9 13C10.1046 13 11 13.8954 11 15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 9C11 10.1046 10.1046 11 9 11C7.89543 11 7 10.1046 7 9C7 7.89543 7.89543 7 9 7C10.1046 7 11 7.89543 11 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 9C17 10.1046 16.1046 11 15 11C13.8954 11 13 10.1046 13 9C13 7.89543 13.8954 7 15 7C16.1046 7 17 7.89543 17 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 17C16.1046 17 17 16.1046 17 15C17 13.8954 16.1046 13 15 13C13.8954 13 13 13.8954 13 15C13 16.1046 13.8954 17 15 17Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 15C11 16.1046 10.1046 17 9 17C7.89543 17 7 16.1046 7 15C7 13.8954 7.89543 13 9 13C10.1046 13 11 13.8954 11 15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20096,7 +20096,7 @@ pub fn CgUiKit(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 6H10C9.44772 6 9 6.44772 9 7V17C9 17.5523 9.44772 18 10 18H14C14.5523 18 15 17.5523 15 17V7C15 6.44772 14.5523 6 14 6ZM10 4C8.34315 4 7 5.34315 7 7V17C7 18.6569 8.34315 20 10 20H14C15.6569 20 17 18.6569 17 17V7C17 5.34315 15.6569 4 14 4H10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7.45936L3.4932 7.04156C1.6646 6.73679 0 8.14692 0 10.0007V14.918C0 16.7718 1.6646 18.1819 3.4932 17.8772L6 17.4594V15.4318L3.1644 15.9044C2.55487 16.006 2 15.5359 2 14.918V10.0007C2 9.3828 2.55487 8.91276 3.1644 9.01435L6 9.48695V7.45936Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7.45936L20.5068 7.04156C22.3354 6.73679 24 8.14692 24 10.0007V14.918C24 16.7718 22.3354 18.1819 20.5068 17.8772L18 17.4594V15.4318L20.8356 15.9044C21.4451 16.006 22 15.5359 22 14.918V10.0007C22 9.3828 21.4451 8.91276 20.8356 9.01435L18 9.48695V7.45936Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 6H10C9.44772 6 9 6.44772 9 7V17C9 17.5523 9.44772 18 10 18H14C14.5523 18 15 17.5523 15 17V7C15 6.44772 14.5523 6 14 6ZM10 4C8.34315 4 7 5.34315 7 7V17C7 18.6569 8.34315 20 10 20H14C15.6569 20 17 18.6569 17 17V7C17 5.34315 15.6569 4 14 4H10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7.45936L3.4932 7.04156C1.6646 6.73679 0 8.14692 0 10.0007V14.918C0 16.7718 1.6646 18.1819 3.4932 17.8772L6 17.4594V15.4318L3.1644 15.9044C2.55487 16.006 2 15.5359 2 14.918V10.0007C2 9.3828 2.55487 8.91276 3.1644 9.01435L6 9.48695V7.45936Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7.45936L20.5068 7.04156C22.3354 6.73679 24 8.14692 24 10.0007V14.918C24 16.7718 22.3354 18.1819 20.5068 17.8772L18 17.4594V15.4318L20.8356 15.9044C21.4451 16.006 22 15.5359 22 14.918V10.0007C22 9.3828 21.4451 8.91276 20.8356 9.01435L18 9.48695V7.45936Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20276,7 +20276,7 @@ pub fn CgUnsplash(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 4.5H9V8.5H15V4.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 10.5H9V14.5H15V10.5H20V19.5H4V10.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 4.5H9V8.5H15V4.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 10.5H9V14.5H15V10.5H20V19.5H4V10.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20306,7 +20306,7 @@ pub fn CgUsb(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 4.5H11V6.5H10V4.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 4.5H13V6.5H14V4.5Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 8.5V1.5H17V8.5H19V19.5C19 21.1569 17.6569 22.5 16 22.5H8C6.34315 22.5 5 21.1569 5 19.5V8.5H7ZM9 3.5H15V8.5H9V3.5ZM17 10.5H7V19.5C7 20.0523 7.44772 20.5 8 20.5H16C16.5523 20.5 17 20.0523 17 19.5V10.5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 4.5H11V6.5H10V4.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 4.5H13V6.5H14V4.5Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7 8.5V1.5H17V8.5H19V19.5C19 21.1569 17.6569 22.5 16 22.5H8C6.34315 22.5 5 21.1569 5 19.5V8.5H7ZM9 3.5H15V8.5H9V3.5ZM17 10.5H7V19.5C7 20.0523 7.44772 20.5 8 20.5H16C16.5523 20.5 17 20.0523 17 19.5V10.5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20336,7 +20336,7 @@ pub fn CgUsbC(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 9.23858 5.23858 7 8 7H16C18.7614 7 21 9.23858 21 12C21 14.7614 18.7614 17 16 17H8C5.23858 17 3 14.7614 3 12ZM8 9H16C17.6569 9 19 10.3431 19 12C19 13.6569 17.6569 15 16 15H8C6.34315 15 5 13.6569 5 12C5 10.3431 6.34315 9 8 9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13H16C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11H8Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3 12C3 9.23858 5.23858 7 8 7H16C18.7614 7 21 9.23858 21 12C21 14.7614 18.7614 17 16 17H8C5.23858 17 3 14.7614 3 12ZM8 9H16C17.6569 9 19 10.3431 19 12C19 13.6569 17.6569 15 16 15H8C6.34315 15 5 13.6569 5 12C5 10.3431 6.34315 9 8 9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20366,7 +20366,7 @@ pub fn CgUser(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20396,7 +20396,7 @@ pub fn CgUserAdd(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 7H20V9H22V11H20V13H18V11H16V9H18V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20426,7 +20426,7 @@ pub fn CgUserList(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 11H16V13H22V11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15H22V17H16V15Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 7H16V9H22V7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 11H16V13H22V11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 15H22V17H16V15Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 7H16V9H22V7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20456,7 +20456,7 @@ pub fn CgUserRemove(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 9H16V11H22V9Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8 11C10.2091 11 12 9.20914 12 7C12 4.79086 10.2091 3 8 3C5.79086 3 4 4.79086 4 7C4 9.20914 5.79086 11 8 11ZM8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 14C11.5523 14 12 14.4477 12 15V21H14V15C14 13.3431 12.6569 12 11 12H5C3.34315 12 2 13.3431 2 15V21H4V15C4 14.4477 4.44772 14 5 14H11Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 9H16V11H22V9Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20486,7 +20486,7 @@ pub fn CgUserlane(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 4H21V10H15V4Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12H17C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12H3Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10C7.65685 10 9 8.65685 9 7C9 5.34315 7.65685 4 6 4C4.34315 4 3 5.34315 3 7C3 8.65685 4.34315 10 6 10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 4H21V10H15V4Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12H17C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12H3Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 10C7.65685 10 9 8.65685 9 7C9 5.34315 7.65685 4 6 4C4.34315 4 3 5.34315 3 7C3 8.65685 4.34315 10 6 10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20726,7 +20726,7 @@ pub fn CgVinyl(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12ZM16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20786,7 +20786,7 @@ pub fn CgVoicemailO(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 12C11 12.3506 10.9398 12.6872 10.8293 13H13.1707C13.0602 12.6872 13 12.3506 13 12C13 10.3431 14.3431 9 16 9C17.6569 9 19 10.3431 19 12C19 13.6569 17.6569 15 16 15H8C6.34315 15 5 13.6569 5 12C5 10.3431 6.34315 9 8 9C9.65685 9 11 10.3431 11 12ZM9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12ZM17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11 12C11 12.3506 10.9398 12.6872 10.8293 13H13.1707C13.0602 12.6872 13 12.3506 13 12C13 10.3431 14.3431 9 16 9C17.6569 9 19 10.3431 19 12C19 13.6569 17.6569 15 16 15H8C6.34315 15 5 13.6569 5 12C5 10.3431 6.34315 9 8 9C9.65685 9 11 10.3431 11 12ZM9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12ZM17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20816,7 +20816,7 @@ pub fn CgVoicemailR(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.5 12C11.5 12.3506 11.4398 12.6872 11.3293 13H13.6707C13.5602 12.6872 13.5 12.3506 13.5 12C13.5 10.3431 14.8431 9 16.5 9C18.1569 9 19.5 10.3431 19.5 12C19.5 13.6569 18.1569 15 16.5 15H8.5C6.84315 15 5.5 13.6569 5.5 12C5.5 10.3431 6.84315 9 8.5 9C10.1569 9 11.5 10.3431 11.5 12ZM9.5 12C9.5 12.5523 9.05228 13 8.5 13C7.94772 13 7.5 12.5523 7.5 12C7.5 11.4477 7.94772 11 8.5 11C9.05228 11 9.5 11.4477 9.5 12ZM17.5 12C17.5 12.5523 17.0523 13 16.5 13C15.9477 13 15.5 12.5523 15.5 12C15.5 11.4477 15.9477 11 16.5 11C17.0523 11 17.5 11.4477 17.5 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.5 8C1.5 6.34315 2.84315 5 4.5 5H19.5C21.1569 5 22.5 6.34315 22.5 8V16C22.5 17.6569 21.1569 19 19.5 19H4.5C2.84315 19 1.5 17.6569 1.5 16V8ZM4.5 7H19.5C20.0523 7 20.5 7.44772 20.5 8V16C20.5 16.5523 20.0523 17 19.5 17H4.5C3.94772 17 3.5 16.5523 3.5 16V8C3.5 7.44772 3.94772 7 4.5 7Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M11.5 12C11.5 12.3506 11.4398 12.6872 11.3293 13H13.6707C13.5602 12.6872 13.5 12.3506 13.5 12C13.5 10.3431 14.8431 9 16.5 9C18.1569 9 19.5 10.3431 19.5 12C19.5 13.6569 18.1569 15 16.5 15H8.5C6.84315 15 5.5 13.6569 5.5 12C5.5 10.3431 6.84315 9 8.5 9C10.1569 9 11.5 10.3431 11.5 12ZM9.5 12C9.5 12.5523 9.05228 13 8.5 13C7.94772 13 7.5 12.5523 7.5 12C7.5 11.4477 7.94772 11 8.5 11C9.05228 11 9.5 11.4477 9.5 12ZM17.5 12C17.5 12.5523 17.0523 13 16.5 13C15.9477 13 15.5 12.5523 15.5 12C15.5 11.4477 15.9477 11 16.5 11C17.0523 11 17.5 11.4477 17.5 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M1.5 8C1.5 6.34315 2.84315 5 4.5 5H19.5C21.1569 5 22.5 6.34315 22.5 8V16C22.5 17.6569 21.1569 19 19.5 19H4.5C2.84315 19 1.5 17.6569 1.5 16V8ZM4.5 7H19.5C20.0523 7 20.5 7.44772 20.5 8V16C20.5 16.5523 20.0523 17 19.5 17H4.5C3.94772 17 3.5 16.5523 3.5 16V8C3.5 7.44772 3.94772 7 4.5 7Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20846,7 +20846,7 @@ pub fn CgVolume(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M24 12C24 16.4183 20.4183 20 16 20V18C19.3137 18 22 15.3137 22 12C22 8.68629 19.3137 6 16 6V4C20.4183 4 24 7.58172 24 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 12C20 14.2091 18.2091 16 16 16V14C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10V8C18.2091 8 20 9.79086 20 12Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 16L15 20V4L9 8H5C2.79086 8 1 9.79086 1 12C1 14.2091 2.79086 16 5 16H9ZM5 10H9L13 7.5V16.5L9 14H5C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M24 12C24 16.4183 20.4183 20 16 20V18C19.3137 18 22 15.3137 22 12C22 8.68629 19.3137 6 16 6V4C20.4183 4 24 7.58172 24 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 12C20 14.2091 18.2091 16 16 16V14C17.1046 14 18 13.1046 18 12C18 10.8954 17.1046 10 16 10V8C18.2091 8 20 9.79086 20 12Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9 16L15 20V4L9 8H5C2.79086 8 1 9.79086 1 12C1 14.2091 2.79086 16 5 16H9ZM5 10H9L13 7.5V16.5L9 14H5C3.89543 14 3 13.1046 3 12C3 10.8954 3.89543 10 5 10Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20876,7 +20876,7 @@ pub fn CgWebcam(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 10C13 10.5523 12.5523 11 12 11C11.4477 11 11 10.5523 11 10C11 9.44772 11.4477 9 12 9C12.5523 9 13 9.44772 13 10Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 14.9C15.2822 14.4367 17 12.419 17 10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10C7 12.419 8.71776 14.4367 11 14.9V17H7V19H17V17H13V14.9ZM12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 10C13 10.5523 12.5523 11 12 11C11.4477 11 11 10.5523 11 10C11 9.44772 11.4477 9 12 9C12.5523 9 13 9.44772 13 10Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 14.9C15.2822 14.4367 17 12.419 17 10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10C7 12.419 8.71776 14.4367 11 14.9V17H7V19H17V17H13V14.9ZM12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20906,7 +20906,7 @@ pub fn CgWebsite(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 7C13.4477 7 13 7.44772 13 8V16C13 16.5523 13.4477 17 14 17H18C18.5523 17 19 16.5523 19 16V8C19 7.44772 18.5523 7 18 7H14ZM17 9H15V15H17V9Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H10C10.5523 9 11 8.55228 11 8C11 7.44772 10.5523 7 10 7H6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13H10C10.5523 13 11 12.5523 11 12C11 11.4477 10.5523 11 10 11H6Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16C5 15.4477 5.44772 15 6 15H10C10.5523 15 11 15.4477 11 16C11 16.5523 10.5523 17 10 17H6C5.44772 17 5 16.5523 5 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M14 7C13.4477 7 13 7.44772 13 8V16C13 16.5523 13.4477 17 14 17H18C18.5523 17 19 16.5523 19 16V8C19 7.44772 18.5523 7 18 7H14ZM17 9H15V15H17V9Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H10C10.5523 9 11 8.55228 11 8C11 7.44772 10.5523 7 10 7H6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13H10C10.5523 13 11 12.5523 11 12C11 11.4477 10.5523 11 10 11H6Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16C5 15.4477 5.44772 15 6 15H10C10.5523 15 11 15.4477 11 16C11 16.5523 10.5523 17 10 17H6C5.44772 17 5 16.5523 5 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
@@ -20996,7 +20996,7 @@ pub fn CgYinyang(
         stroke_width = "0" style = format!("{} color: {};", style, color) width = "24"
         height = "24" viewBox = "0 0 24 24" fill = "none" width = size.clone() height =
         size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 16C14 17.1046 13.1046 18 12 18C10.8954 18 10 17.1046 10 16C10 14.8954 10.8954 14 12 14C13.1046 14 14 14.8954 14 16Z\" fill=\"currentColor\" /><path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.2091 20 16 18.2091 16 16C16 13.7909 14.2091 12 12 12ZM14 8C14 9.10457 13.1046 10 12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8Z\" fill=\"currentColor\" />"
+        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 16C14 17.1046 13.1046 18 12 18C10.8954 18 10 17.1046 10 16C10 14.8954 10.8954 14 12 14C13.1046 14 14 14.8954 14 16Z\" fill=\"currentColor\" />\n<path xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C14.2091 20 16 18.2091 16 16C16 13.7909 14.2091 12 12 12ZM14 8C14 9.10457 13.1046 10 12 10C10.8954 10 10 9.10457 10 8C10 6.89543 10.8954 6 12 6C13.1046 6 14 6.89543 14 8Z\" fill=\"currentColor\" />"
         > < title > { title } < / title > < / svg >
     }
 }
