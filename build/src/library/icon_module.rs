@@ -1,4 +1,4 @@
-use std::path::{Path, PathBuf};
+use std::{borrow::Cow, path::PathBuf};
 
 use anyhow::Result;
 use tokio::{
@@ -9,18 +9,25 @@ use tracing::error;
 
 #[derive(Debug)]
 pub(crate) struct IconModule {
-    /// Path to the module file. For example: src/my_module.rs.
+    /// Name of the module. FOr example: "my_module".
+    name: String,
+    /// Path to the module file. For example: "src/my_module.rs".
     path: PathBuf,
 }
 
 impl IconModule {
-    pub fn new<P: AsRef<Path>>(root: PathBuf, name: P) -> IconModule {
-        let mut path = root.join(name.as_ref());
+    pub fn new(root: PathBuf, name: Cow<str>) -> IconModule {
+        let name = name.into_owned();
+        let mut path = root.join(&name);
         path.set_extension("rs");
         if path.exists() {
             error!(?path, "Can not create IconModule. Path already exists");
         }
-        IconModule { path }
+        IconModule { name, path }
+    }
+
+    pub fn name(&self) -> &str {
+        &self.name
     }
 
     pub async fn open_for_write(&mut self) -> Result<BufWriter<File>> {

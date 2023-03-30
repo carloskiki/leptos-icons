@@ -2,7 +2,7 @@ use std::{path::PathBuf, sync::Arc};
 
 use anyhow::Result;
 use strum::IntoEnumIterator;
-use tokio::{io::AsyncWriteExt, sync::RwLock};
+use tokio::sync::RwLock;
 use tracing::{error, info};
 
 use crate::{
@@ -66,7 +66,6 @@ impl Library {
         self.icons_md.init().await?;
 
         let features = Arc::new(RwLock::new(Vec::<Feature>::new()));
-        let modules = Arc::new(RwLock::new(Vec::<String>::new()));
         let package_icon_metadata = Arc::new(RwLock::new(
             PackageType::iter().map(|p| (p, vec![])).collect::<Vec<_>>(),
         ));
@@ -78,7 +77,6 @@ impl Library {
             .map(|package| {
                 let package_type = package.ty;
                 let features = features.clone();
-                let modules = modules.clone();
                 let package_icon_metadata = package_icon_metadata.clone();
                 let src_root = src_root.clone();
                 let src_dir = src_dir.clone();
@@ -130,12 +128,6 @@ impl Library {
                         }
                     }
 
-                    info!(?package_type, "Collecting module name.");
-                    {
-                        let mut lock = modules.write().await;
-                        lock.push(package.meta.short_name.clone().into_owned());
-                    }
-
                     // Generate leptos icon components. Note that these sorted correctly, as the icons were already sorted.
                     info!(?package_type, "Generating leptos icon components.");
                     let icon_components = icons
@@ -149,9 +141,9 @@ impl Library {
                     info!(
                         ?package_type,
                         num_components = icon_components.len(),
-                        "Writing leptos icon components into module."
+                        "Creating library module containing leptos icon components."
                     );
-                    let mut module = IconModule::new(src_root, package.meta.short_name.as_ref());
+                    let mut module = IconModule::new(src_root, package.meta.short_name);
                     module
                         .write_components(icon_components.iter().map(|it| it.0.as_bytes()))
                         .await?;
@@ -173,23 +165,11 @@ impl Library {
         // Unpack src_dir, as it is no longer in shared access at this point...
         self.src_dir = Arc::try_unwrap(src_dir).expect("single owner").into_inner();
 
-        let mut modules = modules.write().await;
-        let num_modules = modules.len();
-
-        info!(num_modules, "Sorting modules to avoid churn.");
-        modules.sort();
-
-        info!(num_modules, "Writing modules to lib.rs.");
-        let mut lib_rs = self.src_dir.lib_rs().append().await?;
-        for module_name in modules.iter() {
-            lib_rs.write_all("pub mod ".as_bytes()).await?;
-            lib_rs.write_all(module_name.as_bytes()).await?;
-            lib_rs.write_all(";\n".as_bytes()).await?;
-        }
-        lib_rs.flush().await.map_err(|err| {
-            error!(?err, "Could not flush lib.rs file after writing.");
-            err
-        })?;
+        info!(
+            num_modules = self.src_dir.modules().len(),
+            "Writing modules to lib.rs."
+        );
+        self.src_dir.write_module_declarations().await?;
 
         let features = {
             let mut lock = features.write().await;
