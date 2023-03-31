@@ -58,7 +58,7 @@ impl Readme {
     }
 
     #[instrument(level = "info")]
-    pub(crate) async fn init(&self) -> Result<()> {
+    pub async fn init(&self) -> Result<()> {
         info!("Writing BASE_README content.");
         self.create_file()
             .await?
@@ -82,7 +82,7 @@ impl Readme {
         ))
     }
 
-    pub(crate) async fn write_usage(&self) -> Result<()> {
+    pub async fn write_usage(&self) -> Result<()> {
         info!("Writing usage section.");
         let section = indoc::indoc! {r#"
             ## Usage
@@ -106,14 +106,13 @@ impl Readme {
         Ok(())
     }
 
-    pub(crate) async fn write_contribution(&self) -> Result<()> {
+    pub async fn write_contribution(&self) -> Result<()> {
         info!("Writing contribution section.");
         let section = indoc::indoc! {r#"
             ## Contributing
 
             Contributions are more than welcomed!
             Do not hesitate add icon libraries, features, etc.
-
         "#};
         let mut file = self.append().await?;
         file.write_all(section.as_bytes()).await?;
@@ -124,7 +123,7 @@ impl Readme {
         Ok(())
     }
 
-    pub(crate) async fn write_package_table(&self) -> Result<()> {
+    pub async fn write_package_table(&self) -> Result<()> {
         info!("Writing package table.");
 
         struct TableEntry {
@@ -160,13 +159,10 @@ impl Readme {
                             name: _,
                             commit_ref: _,
                             version_hint,
-                        } => format!(
-                            "{}",
-                            version_hint
-                                .clone()
-                                .map(|it| it.to_string())
-                                .unwrap_or("unknown".to_owned())
-                        ),
+                        } => version_hint
+                            .clone()
+                            .map(|it| it.to_string())
+                            .unwrap_or("unknown".to_owned()),
                         GitTarget::Tag { name: _, version } => {
                             format!("{version}")
                         }
@@ -198,12 +194,12 @@ impl Readme {
         }
 
         let section_header = indoc! { r#"
-                ## Icon Packages
+            ## Icon Packages
 
-                Licenses of the icons provided through these libraries were extracted with best intent,
-                but must only be taken as a hint. Please check the individual icon repositories for up-to-date license information.
+            Licenses of the icons provided through these libraries were extracted with best intent,
+            but must only be taken as a hint. Please check the individual icon repositories for up-to-date license information.
 
-            "#};
+        "#};
 
         let mut file = self.append().await?;
         file.write_all(section_header.as_bytes()).await?;
@@ -227,50 +223,28 @@ impl Readme {
         for entry in entries {
             file.write_all("| ".as_bytes()).await?;
             file.write_all(entry.name.as_bytes()).await?;
-            file.write_all(
-                std::iter::repeat(' ')
-                    .take(longest_name - entry.name.len())
-                    .collect::<String>()
-                    .as_bytes(),
-            )
-            .await?;
+            file.write_all(" ".repeat(longest_name - entry.name.len()).as_bytes())
+                .await?;
 
             file.write_all(" | ".as_bytes()).await?;
             file.write_all(entry.version.as_bytes()).await?;
-            file.write_all(
-                std::iter::repeat(' ')
-                    .take(longest_version - entry.version.len())
-                    .collect::<String>()
-                    .as_bytes(),
-            )
-            .await?;
+            file.write_all(" ".repeat(longest_version - entry.version.len()).as_bytes())
+                .await?;
 
             file.write_all(" | ".as_bytes()).await?;
             file.write_all(entry.source.as_bytes()).await?;
-            file.write_all(
-                std::iter::repeat(' ')
-                    .take(longest_source - entry.source.len())
-                    .collect::<String>()
-                    .as_bytes(),
-            )
-            .await?;
+            file.write_all(" ".repeat(longest_source - entry.source.len()).as_bytes())
+                .await?;
 
             file.write_all(" | ".as_bytes()).await?;
             file.write_all(entry.license.as_bytes()).await?;
-            file.write_all(
-                std::iter::repeat(' ')
-                    .take(longest_license - entry.license.len())
-                    .collect::<String>()
-                    .as_bytes(),
-            )
-            .await?;
+            file.write_all(" ".repeat(longest_license - entry.license.len()).as_bytes())
+                .await?;
 
             file.write_all(" | ".as_bytes()).await?;
             file.write_all(entry.short_name.as_bytes()).await?;
             file.write_all(
-                std::iter::repeat(' ')
-                    .take(longest_short_name - entry.short_name.len())
-                    .collect::<String>()
+                " ".repeat(longest_short_name - entry.short_name.len())
                     .as_bytes(),
             )
             .await?;

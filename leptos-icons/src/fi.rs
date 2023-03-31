@@ -5,9 +5,12 @@ use leptos::*;
 #[component]
 pub fn FiActivity(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -17,18 +20,16 @@ pub fn FiActivity(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiActivity"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"22 12 18 12 15 21 9 3 6 12 2 12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "22 12 18 12 15 21 9 3 6 12 2 12" /> < / svg >
     }
 }
 #[cfg(feature = "FiAirplay")]
@@ -36,9 +37,12 @@ pub fn FiActivity(
 #[component]
 pub fn FiAirplay(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -48,18 +52,17 @@ pub fn FiAirplay(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAirplay"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"12 15 17 21 7 21 12 15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1" /> <
+        polygon points = "12 15 17 21 7 21 12 15" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlertCircle")]
@@ -67,9 +70,12 @@ pub fn FiAirplay(
 #[component]
 pub fn FiAlertCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -79,18 +85,17 @@ pub fn FiAlertCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlertCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "12" y1 = "8" x2 = "12" y2 = "12" /> < line x1 = "12" y1
+        = "16" x2 = "12.01" y2 = "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlertOctagon")]
@@ -98,9 +103,12 @@ pub fn FiAlertCircle(
 #[component]
 pub fn FiAlertOctagon(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -110,18 +118,18 @@ pub fn FiAlertOctagon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlertOctagon"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"16\" x2=\"12.01\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" /> <
+        line x1 = "12" y1 = "8" x2 = "12" y2 = "12" /> < line x1 = "12" y1 = "16" x2 =
+        "12.01" y2 = "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlertTriangle")]
@@ -129,9 +137,12 @@ pub fn FiAlertOctagon(
 #[component]
 pub fn FiAlertTriangle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -141,18 +152,18 @@ pub fn FiAlertTriangle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlertTriangle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"9\" x2=\"12\" y2=\"13\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        /> < line x1 = "12" y1 = "9" x2 = "12" y2 = "13" /> < line x1 = "12" y1 = "17" x2
+        = "12.01" y2 = "17" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlignCenter")]
@@ -160,9 +171,12 @@ pub fn FiAlertTriangle(
 #[component]
 pub fn FiAlignCenter(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -172,18 +186,18 @@ pub fn FiAlignCenter(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlignCenter"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"10\" x2=\"6\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"18\" x2=\"6\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "18" y1 = "10" x2
+        = "6" y2 = "10" /> < line x1 = "21" y1 = "6" x2 = "3" y2 = "6" /> < line x1 =
+        "21" y1 = "14" x2 = "3" y2 = "14" /> < line x1 = "18" y1 = "18" x2 = "6" y2 =
+        "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlignJustify")]
@@ -191,9 +205,12 @@ pub fn FiAlignCenter(
 #[component]
 pub fn FiAlignJustify(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -203,18 +220,18 @@ pub fn FiAlignJustify(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlignJustify"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"10\" x2=\"3\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"18\" x2=\"3\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "21" y1 = "10" x2
+        = "3" y2 = "10" /> < line x1 = "21" y1 = "6" x2 = "3" y2 = "6" /> < line x1 =
+        "21" y1 = "14" x2 = "3" y2 = "14" /> < line x1 = "21" y1 = "18" x2 = "3" y2 =
+        "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlignLeft")]
@@ -222,9 +239,12 @@ pub fn FiAlignJustify(
 #[component]
 pub fn FiAlignLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -234,18 +254,18 @@ pub fn FiAlignLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlignLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"10\" x2=\"3\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"18\" x2=\"3\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "17" y1 = "10" x2
+        = "3" y2 = "10" /> < line x1 = "21" y1 = "6" x2 = "3" y2 = "6" /> < line x1 =
+        "21" y1 = "14" x2 = "3" y2 = "14" /> < line x1 = "17" y1 = "18" x2 = "3" y2 =
+        "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiAlignRight")]
@@ -253,9 +273,12 @@ pub fn FiAlignLeft(
 #[component]
 pub fn FiAlignRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -265,18 +288,18 @@ pub fn FiAlignRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAlignRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"10\" x2=\"7\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"6\" x2=\"3\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"14\" x2=\"3\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"18\" x2=\"7\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "21" y1 = "10" x2
+        = "7" y2 = "10" /> < line x1 = "21" y1 = "6" x2 = "3" y2 = "6" /> < line x1 =
+        "21" y1 = "14" x2 = "3" y2 = "14" /> < line x1 = "21" y1 = "18" x2 = "7" y2 =
+        "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiAnchor")]
@@ -284,9 +307,12 @@ pub fn FiAlignRight(
 #[component]
 pub fn FiAnchor(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -296,18 +322,17 @@ pub fn FiAnchor(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAnchor"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"5\" r=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22\" x2=\"12\" y2=\"8\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12H2a10 10 0 0 0 20 0h-3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "5" r
+        = "3" /> < line x1 = "12" y1 = "22" x2 = "12" y2 = "8" /> < path d =
+        "M5 12H2a10 10 0 0 0 20 0h-3" /> < / svg >
     }
 }
 #[cfg(feature = "FiAperture")]
@@ -315,9 +340,12 @@ pub fn FiAnchor(
 #[component]
 pub fn FiAperture(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -327,18 +355,20 @@ pub fn FiAperture(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAperture"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14.31\" y1=\"8\" x2=\"20.05\" y2=\"17.94\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9.69\" y1=\"8\" x2=\"21.17\" y2=\"8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"7.38\" y1=\"12\" x2=\"13.12\" y2=\"2.06\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9.69\" y1=\"16\" x2=\"3.95\" y2=\"6.06\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14.31\" y1=\"16\" x2=\"2.83\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16.62\" y1=\"12\" x2=\"10.88\" y2=\"21.94\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "14.31" y1 = "8" x2 = "20.05" y2 = "17.94" /> < line x1 =
+        "9.69" y1 = "8" x2 = "21.17" y2 = "8" /> < line x1 = "7.38" y1 = "12" x2 =
+        "13.12" y2 = "2.06" /> < line x1 = "9.69" y1 = "16" x2 = "3.95" y2 = "6.06" /> <
+        line x1 = "14.31" y1 = "16" x2 = "2.83" y2 = "16" /> < line x1 = "16.62" y1 =
+        "12" x2 = "10.88" y2 = "21.94" /> < / svg >
     }
 }
 #[cfg(feature = "FiArchive")]
@@ -346,9 +376,12 @@ pub fn FiAperture(
 #[component]
 pub fn FiArchive(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -358,18 +391,17 @@ pub fn FiArchive(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArchive"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"21 8 21 21 3 21 3 8\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"3\" width=\"22\" height=\"5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"12\" x2=\"14\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "21 8 21 21 3 21 3 8" /> < rect x = "1" y = "3" width = "22" height = "5" /> <
+        line x1 = "10" y1 = "12" x2 = "14" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowDown")]
@@ -377,9 +409,12 @@ pub fn FiArchive(
 #[component]
 pub fn FiArrowDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -389,18 +424,16 @@ pub fn FiArrowDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"19 12 12 19 5 12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "12" y1 = "5" x2
+        = "12" y2 = "19" /> < polyline points = "19 12 12 19 5 12" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowDownCircle")]
@@ -408,9 +441,12 @@ pub fn FiArrowDown(
 #[component]
 pub fn FiArrowDownCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -420,18 +456,17 @@ pub fn FiArrowDownCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowDownCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"8 12 12 16 16 12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polyline points = "8 12 12 16 16 12" /> < line x1 = "12" y1 = "8"
+        x2 = "12" y2 = "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowDownLeft")]
@@ -439,9 +474,12 @@ pub fn FiArrowDownCircle(
 #[component]
 pub fn FiArrowDownLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -451,18 +489,16 @@ pub fn FiArrowDownLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowDownLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"7\" x2=\"7\" y2=\"17\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 17 7 17 7 7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "17" y1 = "7" x2
+        = "7" y2 = "17" /> < polyline points = "17 17 7 17 7 7" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowDownRight")]
@@ -470,9 +506,12 @@ pub fn FiArrowDownLeft(
 #[component]
 pub fn FiArrowDownRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -482,18 +521,16 @@ pub fn FiArrowDownRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowDownRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"7\" y1=\"7\" x2=\"17\" y2=\"17\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 7 17 17 7 17\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "7" y1 = "7" x2 =
+        "17" y2 = "17" /> < polyline points = "17 7 17 17 7 17" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowLeft")]
@@ -501,9 +538,12 @@ pub fn FiArrowDownRight(
 #[component]
 pub fn FiArrowLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -513,18 +553,16 @@ pub fn FiArrowLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"19\" y1=\"12\" x2=\"5\" y2=\"12\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"12 19 5 12 12 5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "19" y1 = "12" x2
+        = "5" y2 = "12" /> < polyline points = "12 19 5 12 12 5" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowLeftCircle")]
@@ -532,9 +570,12 @@ pub fn FiArrowLeft(
 #[component]
 pub fn FiArrowLeftCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -544,18 +585,17 @@ pub fn FiArrowLeftCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowLeftCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"12 8 8 12 12 16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"12\" x2=\"8\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polyline points = "12 8 8 12 12 16" /> < line x1 = "16" y1 = "12"
+        x2 = "8" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowRight")]
@@ -563,9 +603,12 @@ pub fn FiArrowLeftCircle(
 #[component]
 pub fn FiArrowRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -575,18 +618,16 @@ pub fn FiArrowRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"12 5 19 12 12 19\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "5" y1 = "12" x2
+        = "19" y2 = "12" /> < polyline points = "12 5 19 12 12 19" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowRightCircle")]
@@ -594,9 +635,12 @@ pub fn FiArrowRight(
 #[component]
 pub fn FiArrowRightCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -606,18 +650,17 @@ pub fn FiArrowRightCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowRightCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"12 16 16 12 12 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polyline points = "12 16 16 12 12 8" /> < line x1 = "8" y1 = "12"
+        x2 = "16" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowUp")]
@@ -625,9 +668,12 @@ pub fn FiArrowRightCircle(
 #[component]
 pub fn FiArrowUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -637,18 +683,16 @@ pub fn FiArrowUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"19\" x2=\"12\" y2=\"5\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"5 12 12 5 19 12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "12" y1 = "19" x2
+        = "12" y2 = "5" /> < polyline points = "5 12 12 5 19 12" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowUpCircle")]
@@ -656,9 +700,12 @@ pub fn FiArrowUp(
 #[component]
 pub fn FiArrowUpCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -668,18 +715,17 @@ pub fn FiArrowUpCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowUpCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 12 12 8 8 12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"16\" x2=\"12\" y2=\"8\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polyline points = "16 12 12 8 8 12" /> < line x1 = "12" y1 = "16"
+        x2 = "12" y2 = "8" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowUpLeft")]
@@ -687,9 +733,12 @@ pub fn FiArrowUpCircle(
 #[component]
 pub fn FiArrowUpLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -699,18 +748,16 @@ pub fn FiArrowUpLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowUpLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"17\" x2=\"7\" y2=\"7\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 17 7 7 17 7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "17" y1 = "17" x2
+        = "7" y2 = "7" /> < polyline points = "7 17 7 7 17 7" /> < / svg >
     }
 }
 #[cfg(feature = "FiArrowUpRight")]
@@ -718,9 +765,12 @@ pub fn FiArrowUpLeft(
 #[component]
 pub fn FiArrowUpRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -730,18 +780,16 @@ pub fn FiArrowUpRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiArrowUpRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"7\" y1=\"17\" x2=\"17\" y2=\"7\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 7 17 7 17 17\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "7" y1 = "17" x2
+        = "17" y2 = "7" /> < polyline points = "7 7 17 7 17 17" /> < / svg >
     }
 }
 #[cfg(feature = "FiAtSign")]
@@ -749,9 +797,12 @@ pub fn FiArrowUpRight(
 #[component]
 pub fn FiAtSign(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -761,18 +812,17 @@ pub fn FiAtSign(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAtSign"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "4" /> < path d = "M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiAward")]
@@ -780,9 +830,12 @@ pub fn FiAtSign(
 #[component]
 pub fn FiAward(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -792,18 +845,17 @@ pub fn FiAward(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiAward"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"8\" r=\"7\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"8.21 13.89 7 23 12 20 17 23 15.79 13.88\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "8" r
+        = "7" /> < polyline points = "8.21 13.89 7 23 12 20 17 23 15.79 13.88" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiBarChart")]
@@ -811,9 +863,12 @@ pub fn FiAward(
 #[component]
 pub fn FiBarChart(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -823,18 +878,17 @@ pub fn FiBarChart(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBarChart"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"20\" x2=\"12\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"20\" x2=\"18\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"20\" x2=\"6\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "12" y1 = "20" x2
+        = "12" y2 = "10" /> < line x1 = "18" y1 = "20" x2 = "18" y2 = "4" /> < line x1 =
+        "6" y1 = "20" x2 = "6" y2 = "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiBarChart2")]
@@ -842,9 +896,12 @@ pub fn FiBarChart(
 #[component]
 pub fn FiBarChart2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -854,18 +911,17 @@ pub fn FiBarChart2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBarChart2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"20\" x2=\"18\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"20\" x2=\"12\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"20\" x2=\"6\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "18" y1 = "20" x2
+        = "18" y2 = "10" /> < line x1 = "12" y1 = "20" x2 = "12" y2 = "4" /> < line x1 =
+        "6" y1 = "20" x2 = "6" y2 = "14" /> < / svg >
     }
 }
 #[cfg(feature = "FiBattery")]
@@ -873,9 +929,12 @@ pub fn FiBarChart2(
 #[component]
 pub fn FiBattery(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -885,18 +944,17 @@ pub fn FiBattery(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBattery"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"6\" width=\"18\" height=\"12\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"13\" x2=\"23\" y2=\"11\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "1" y = "6" width
+        = "18" height = "12" rx = "2" ry = "2" /> < line x1 = "23" y1 = "13" x2 = "23" y2
+        = "11" /> < / svg >
     }
 }
 #[cfg(feature = "FiBatteryCharging")]
@@ -904,9 +962,12 @@ pub fn FiBattery(
 #[component]
 pub fn FiBatteryCharging(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -916,18 +977,18 @@ pub fn FiBatteryCharging(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBatteryCharging"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"13\" x2=\"23\" y2=\"11\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"11 6 7 12 13 12 9 18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"
+        /> < line x1 = "23" y1 = "13" x2 = "23" y2 = "11" /> < polyline points =
+        "11 6 7 12 13 12 9 18" /> < / svg >
     }
 }
 #[cfg(feature = "FiBell")]
@@ -935,9 +996,12 @@ pub fn FiBatteryCharging(
 #[component]
 pub fn FiBell(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -947,18 +1011,17 @@ pub fn FiBell(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBell"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.73 21a2 2 0 0 1-3.46 0\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /> < path d =
+        "M13.73 21a2 2 0 0 1-3.46 0" /> < / svg >
     }
 }
 #[cfg(feature = "FiBellOff")]
@@ -966,9 +1029,12 @@ pub fn FiBell(
 #[component]
 pub fn FiBellOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -978,18 +1044,19 @@ pub fn FiBellOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBellOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13.73 21a2 2 0 0 1-3.46 0\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.63 13A17.89 17.89 0 0 1 18 8\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8a6 6 0 0 0-9.33-5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M13.73 21a2 2 0 0 1-3.46 0" /> < path d = "M18.63 13A17.89 17.89 0 0 1 18 8" />
+        < path d = "M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14" /> < path d =
+        "M18 8a6 6 0 0 0-9.33-5" /> < line x1 = "1" y1 = "1" x2 = "23" y2 = "23" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiBluetooth")]
@@ -997,9 +1064,12 @@ pub fn FiBellOff(
 #[component]
 pub fn FiBluetooth(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1009,18 +1079,16 @@ pub fn FiBluetooth(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBluetooth"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5" /> < / svg >
     }
 }
 #[cfg(feature = "FiBold")]
@@ -1028,9 +1096,12 @@ pub fn FiBluetooth(
 #[component]
 pub fn FiBold(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1040,18 +1111,17 @@ pub fn FiBold(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBold"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z" /> < path d =
+        "M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z" /> < / svg >
     }
 }
 #[cfg(feature = "FiBook")]
@@ -1059,9 +1129,12 @@ pub fn FiBold(
 #[component]
 pub fn FiBook(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1071,18 +1144,17 @@ pub fn FiBook(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBook"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 19.5A2.5 2.5 0 0 1 6.5 17H20\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /> < path d =
+        "M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /> < / svg >
     }
 }
 #[cfg(feature = "FiBookOpen")]
@@ -1090,9 +1162,12 @@ pub fn FiBook(
 #[component]
 pub fn FiBookOpen(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1102,18 +1177,17 @@ pub fn FiBookOpen(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBookOpen"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /> < path d =
+        "M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /> < / svg >
     }
 }
 #[cfg(feature = "FiBookmark")]
@@ -1121,9 +1195,12 @@ pub fn FiBookOpen(
 #[component]
 pub fn FiBookmark(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1133,18 +1210,16 @@ pub fn FiBookmark(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBookmark"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" /> < / svg >
     }
 }
 #[cfg(feature = "FiBox")]
@@ -1152,9 +1227,12 @@ pub fn FiBookmark(
 #[component]
 pub fn FiBox(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1164,18 +1242,18 @@ pub fn FiBox(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBox"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"3.27 6.96 12 12.01 20.73 6.96\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+        /> < polyline points = "3.27 6.96 12 12.01 20.73 6.96" /> < line x1 = "12" y1 =
+        "22.08" x2 = "12" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiBriefcase")]
@@ -1183,9 +1261,12 @@ pub fn FiBox(
 #[component]
 pub fn FiBriefcase(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1195,18 +1276,17 @@ pub fn FiBriefcase(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiBriefcase"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "2" y = "7" width
+        = "20" height = "14" rx = "2" ry = "2" /> < path d =
+        "M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /> < / svg >
     }
 }
 #[cfg(feature = "FiCalendar")]
@@ -1214,9 +1294,12 @@ pub fn FiBriefcase(
 #[component]
 pub fn FiCalendar(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1226,18 +1309,18 @@ pub fn FiCalendar(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCalendar"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"4\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"2\" x2=\"16\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"2\" x2=\"8\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "4" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "16" y1 = "2" x2 = "16" y2
+        = "6" /> < line x1 = "8" y1 = "2" x2 = "8" y2 = "6" /> < line x1 = "3" y1 = "10"
+        x2 = "21" y2 = "10" /> < / svg >
     }
 }
 #[cfg(feature = "FiCamera")]
@@ -1245,9 +1328,12 @@ pub fn FiCalendar(
 #[component]
 pub fn FiCamera(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1257,18 +1343,17 @@ pub fn FiCamera(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCamera"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"13\" r=\"4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+        /> < circle cx = "12" cy = "13" r = "4" /> < / svg >
     }
 }
 #[cfg(feature = "FiCameraOff")]
@@ -1276,9 +1361,12 @@ pub fn FiCamera(
 #[component]
 pub fn FiCameraOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1288,18 +1376,18 @@ pub fn FiCameraOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCameraOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m3-3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "1" y1 = "1" x2 =
+        "23" y2 = "23" /> < path d =
+        "M21 21H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3m3-3h6l2 3h4a2 2 0 0 1 2 2v9.34m-7.72-2.06a4 4 0 1 1-5.56-5.56"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiCast")]
@@ -1307,9 +1395,12 @@ pub fn FiCameraOff(
 #[component]
 pub fn FiCast(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1319,18 +1410,17 @@ pub fn FiCast(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCast"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"20\" x2=\"2.01\" y2=\"20\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"
+        /> < line x1 = "2" y1 = "20" x2 = "2.01" y2 = "20" /> < / svg >
     }
 }
 #[cfg(feature = "FiCheck")]
@@ -1338,9 +1428,12 @@ pub fn FiCast(
 #[component]
 pub fn FiCheck(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1350,18 +1443,16 @@ pub fn FiCheck(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCheck"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"20 6 9 17 4 12\" />" > <
-        title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "20 6 9 17 4 12" /> < / svg >
     }
 }
 #[cfg(feature = "FiCheckCircle")]
@@ -1369,9 +1460,12 @@ pub fn FiCheck(
 #[component]
 pub fn FiCheckCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1381,18 +1475,17 @@ pub fn FiCheckCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCheckCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"22 4 12 14.01 9 11.01\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22 11.08V12a10 10 0 1 1-5.93-9.14" /> < polyline points =
+        "22 4 12 14.01 9 11.01" /> < / svg >
     }
 }
 #[cfg(feature = "FiCheckSquare")]
@@ -1400,9 +1493,12 @@ pub fn FiCheckCircle(
 #[component]
 pub fn FiCheckSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1412,18 +1508,17 @@ pub fn FiCheckSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCheckSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 11 12 14 22 4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "9 11 12 14 22 4" /> < path d =
+        "M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronDown")]
@@ -1431,9 +1526,12 @@ pub fn FiCheckSquare(
 #[component]
 pub fn FiChevronDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1443,18 +1541,16 @@ pub fn FiChevronDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"6 9 12 15 18 9\" />" > <
-        title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "6 9 12 15 18 9" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronLeft")]
@@ -1462,9 +1558,12 @@ pub fn FiChevronDown(
 #[component]
 pub fn FiChevronLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1474,18 +1573,16 @@ pub fn FiChevronLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"15 18 9 12 15 6\" />" >
-        < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "15 18 9 12 15 6" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronRight")]
@@ -1493,9 +1590,12 @@ pub fn FiChevronLeft(
 #[component]
 pub fn FiChevronRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1505,18 +1605,16 @@ pub fn FiChevronRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 18 15 12 9 6\" />" > <
-        title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "9 18 15 12 9 6" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronUp")]
@@ -1524,9 +1622,12 @@ pub fn FiChevronRight(
 #[component]
 pub fn FiChevronUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1536,18 +1637,16 @@ pub fn FiChevronUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"18 15 12 9 6 15\" />" >
-        < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "18 15 12 9 6 15" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronsDown")]
@@ -1555,9 +1654,12 @@ pub fn FiChevronUp(
 #[component]
 pub fn FiChevronsDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1567,18 +1669,16 @@ pub fn FiChevronsDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronsDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 13 12 18 17 13\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 6 12 11 17 6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "7 13 12 18 17 13" /> < polyline points = "7 6 12 11 17 6" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronsLeft")]
@@ -1586,9 +1686,12 @@ pub fn FiChevronsDown(
 #[component]
 pub fn FiChevronsLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1598,18 +1701,16 @@ pub fn FiChevronsLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronsLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"11 17 6 12 11 7\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"18 17 13 12 18 7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "11 17 6 12 11 7" /> < polyline points = "18 17 13 12 18 7" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronsRight")]
@@ -1617,9 +1718,12 @@ pub fn FiChevronsLeft(
 #[component]
 pub fn FiChevronsRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1629,18 +1733,16 @@ pub fn FiChevronsRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronsRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"13 17 18 12 13 7\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"6 17 11 12 6 7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "13 17 18 12 13 7" /> < polyline points = "6 17 11 12 6 7" /> < / svg >
     }
 }
 #[cfg(feature = "FiChevronsUp")]
@@ -1648,9 +1750,12 @@ pub fn FiChevronsRight(
 #[component]
 pub fn FiChevronsUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1660,18 +1765,16 @@ pub fn FiChevronsUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChevronsUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 11 12 6 7 11\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 18 12 13 7 18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "17 11 12 6 7 11" /> < polyline points = "17 18 12 13 7 18" /> < / svg >
     }
 }
 #[cfg(feature = "FiChrome")]
@@ -1679,9 +1782,12 @@ pub fn FiChevronsUp(
 #[component]
 pub fn FiChrome(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1691,18 +1797,18 @@ pub fn FiChrome(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiChrome"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21.17\" y1=\"8\" x2=\"12\" y2=\"8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3.95\" y1=\"6.06\" x2=\"8.54\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10.88\" y1=\"21.94\" x2=\"15.46\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < circle cx = "12" cy = "12" r = "4" /> < line x1 = "21.17" y1 = "8"
+        x2 = "12" y2 = "8" /> < line x1 = "3.95" y1 = "6.06" x2 = "8.54" y2 = "14" /> <
+        line x1 = "10.88" y1 = "21.94" x2 = "15.46" y2 = "14" /> < / svg >
     }
 }
 #[cfg(feature = "FiCircle")]
@@ -1710,9 +1816,12 @@ pub fn FiChrome(
 #[component]
 pub fn FiCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1722,18 +1831,16 @@ pub fn FiCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" />" >
-        < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < / svg >
     }
 }
 #[cfg(feature = "FiClipboard")]
@@ -1741,9 +1848,12 @@ pub fn FiCircle(
 #[component]
 pub fn FiClipboard(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1753,18 +1863,17 @@ pub fn FiClipboard(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiClipboard"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"8\" y=\"2\" width=\"8\" height=\"4\" rx=\"1\" ry=\"1\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <
+        rect x = "8" y = "2" width = "8" height = "4" rx = "1" ry = "1" /> < / svg >
     }
 }
 #[cfg(feature = "FiClock")]
@@ -1772,9 +1881,12 @@ pub fn FiClipboard(
 #[component]
 pub fn FiClock(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1784,18 +1896,16 @@ pub fn FiClock(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiClock"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"12 6 12 12 16 14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polyline points = "12 6 12 12 16 14" /> < / svg >
     }
 }
 #[cfg(feature = "FiCloud")]
@@ -1803,9 +1913,12 @@ pub fn FiClock(
 #[component]
 pub fn FiCloud(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1815,18 +1928,16 @@ pub fn FiCloud(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCloud"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" /> < / svg >
     }
 }
 #[cfg(feature = "FiCloudDrizzle")]
@@ -1834,9 +1945,12 @@ pub fn FiCloud(
 #[component]
 pub fn FiCloudDrizzle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1846,18 +1960,20 @@ pub fn FiCloudDrizzle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCloudDrizzle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"19\" x2=\"8\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"13\" x2=\"8\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"19\" x2=\"16\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"13\" x2=\"16\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"15\" x2=\"12\" y2=\"17\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "8" y1 = "19" x2
+        = "8" y2 = "21" /> < line x1 = "8" y1 = "13" x2 = "8" y2 = "15" /> < line x1 =
+        "16" y1 = "19" x2 = "16" y2 = "21" /> < line x1 = "16" y1 = "13" x2 = "16" y2 =
+        "15" /> < line x1 = "12" y1 = "21" x2 = "12" y2 = "23" /> < line x1 = "12" y1 =
+        "15" x2 = "12" y2 = "17" /> < path d =
+        "M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25" /> < / svg >
     }
 }
 #[cfg(feature = "FiCloudLightning")]
@@ -1865,9 +1981,12 @@ pub fn FiCloudDrizzle(
 #[component]
 pub fn FiCloudLightning(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1877,18 +1996,17 @@ pub fn FiCloudLightning(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCloudLightning"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"13 11 9 17 15 17 11 23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9" /> < polyline points =
+        "13 11 9 17 15 17 11 23" /> < / svg >
     }
 }
 #[cfg(feature = "FiCloudOff")]
@@ -1896,9 +2014,12 @@ pub fn FiCloudLightning(
 #[component]
 pub fn FiCloudOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1908,18 +2029,17 @@ pub fn FiCloudOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCloudOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22.61 16.95A5 5 0 0 0 18 10h-1.26a8 8 0 0 0-7.05-6M5 5a8 8 0 0 0 4 15h9a5 5 0 0 0 1.7-.3"
+        /> < line x1 = "1" y1 = "1" x2 = "23" y2 = "23" /> < / svg >
     }
 }
 #[cfg(feature = "FiCloudRain")]
@@ -1927,9 +2047,12 @@ pub fn FiCloudOff(
 #[component]
 pub fn FiCloudRain(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1939,18 +2062,18 @@ pub fn FiCloudRain(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCloudRain"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"13\" x2=\"16\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"13\" x2=\"8\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"15\" x2=\"12\" y2=\"23\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "16" y1 = "13" x2
+        = "16" y2 = "21" /> < line x1 = "8" y1 = "13" x2 = "8" y2 = "21" /> < line x1 =
+        "12" y1 = "15" x2 = "12" y2 = "23" /> < path d =
+        "M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25" /> < / svg >
     }
 }
 #[cfg(feature = "FiCloudSnow")]
@@ -1958,9 +2081,12 @@ pub fn FiCloudRain(
 #[component]
 pub fn FiCloudSnow(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -1970,18 +2096,20 @@ pub fn FiCloudSnow(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCloudSnow"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"16\" x2=\"8.01\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"20\" x2=\"8.01\" y2=\"20\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22\" x2=\"12.01\" y2=\"22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"16\" x2=\"16.01\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"20\" x2=\"16.01\" y2=\"20\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25" /> < line x1 = "8" y1 = "16"
+        x2 = "8.01" y2 = "16" /> < line x1 = "8" y1 = "20" x2 = "8.01" y2 = "20" /> <
+        line x1 = "12" y1 = "18" x2 = "12.01" y2 = "18" /> < line x1 = "12" y1 = "22" x2
+        = "12.01" y2 = "22" /> < line x1 = "16" y1 = "16" x2 = "16.01" y2 = "16" /> <
+        line x1 = "16" y1 = "20" x2 = "16.01" y2 = "20" /> < / svg >
     }
 }
 #[cfg(feature = "FiCode")]
@@ -1989,9 +2117,12 @@ pub fn FiCloudSnow(
 #[component]
 pub fn FiCode(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2001,18 +2132,16 @@ pub fn FiCode(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCode"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 18 22 12 16 6\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"8 6 2 12 8 18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "16 18 22 12 16 6" /> < polyline points = "8 6 2 12 8 18" /> < / svg >
     }
 }
 #[cfg(feature = "FiCodepen")]
@@ -2020,9 +2149,12 @@ pub fn FiCode(
 #[component]
 pub fn FiCodepen(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2032,18 +2164,19 @@ pub fn FiCodepen(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCodepen"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22\" x2=\"12\" y2=\"15.5\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"22 8.5 12 15.5 2 8.5\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"2 15.5 12 8.5 22 15.5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"2\" x2=\"12\" y2=\"8.5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" /> < line x1 = "12" y1 = "22" x2 =
+        "12" y2 = "15.5" /> < polyline points = "22 8.5 12 15.5 2 8.5" /> < polyline
+        points = "2 15.5 12 8.5 22 15.5" /> < line x1 = "12" y1 = "2" x2 = "12" y2 =
+        "8.5" /> < / svg >
     }
 }
 #[cfg(feature = "FiCodesandbox")]
@@ -2051,9 +2184,12 @@ pub fn FiCodepen(
 #[component]
 pub fn FiCodesandbox(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2063,18 +2199,20 @@ pub fn FiCodesandbox(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCodesandbox"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7.5 4.21 12 6.81 16.5 4.21\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7.5 19.79 7.5 14.6 3 12\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"21 12 16.5 14.6 16.5 19.79\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"3.27 6.96 12 12.01 20.73 6.96\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+        /> < polyline points = "7.5 4.21 12 6.81 16.5 4.21" /> < polyline points =
+        "7.5 19.79 7.5 14.6 3 12" /> < polyline points = "21 12 16.5 14.6 16.5 19.79" />
+        < polyline points = "3.27 6.96 12 12.01 20.73 6.96" /> < line x1 = "12" y1 =
+        "22.08" x2 = "12" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiCoffee")]
@@ -2082,9 +2220,12 @@ pub fn FiCodesandbox(
 #[component]
 pub fn FiCoffee(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2094,18 +2235,19 @@ pub fn FiCoffee(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCoffee"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        viewBox = "0 0 24 24" width = "24" height = "24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 8h1a4 4 0 0 1 0 8h-1\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"1\" x2=\"6\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"1\" x2=\"10\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14\" y1=\"1\" x2=\"14\" y2=\"4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18 8h1a4 4 0 0 1 0 8h-1" /> < path d =
+        "M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /> < line x1 = "6" y1 = "1" x2 = "6"
+        y2 = "4" /> < line x1 = "10" y1 = "1" x2 = "10" y2 = "4" /> < line x1 = "14" y1 =
+        "1" x2 = "14" y2 = "4" /> < / svg >
     }
 }
 #[cfg(feature = "FiColumns")]
@@ -2113,9 +2255,12 @@ pub fn FiCoffee(
 #[component]
 pub fn FiColumns(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2125,18 +2270,17 @@ pub fn FiColumns(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiColumns"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiCommand")]
@@ -2144,9 +2288,12 @@ pub fn FiColumns(
 #[component]
 pub fn FiCommand(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2156,18 +2303,17 @@ pub fn FiCommand(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCommand"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiCompass")]
@@ -2175,9 +2321,12 @@ pub fn FiCommand(
 #[component]
 pub fn FiCompass(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2187,18 +2336,17 @@ pub fn FiCompass(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCompass"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polygon points =
+        "16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /> < / svg >
     }
 }
 #[cfg(feature = "FiCopy")]
@@ -2206,9 +2354,12 @@ pub fn FiCompass(
 #[component]
 pub fn FiCopy(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2218,18 +2369,17 @@ pub fn FiCopy(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCopy"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\" ry=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "9" y = "9" width
+        = "13" height = "13" rx = "2" ry = "2" /> < path d =
+        "M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerDownLeft")]
@@ -2237,9 +2387,12 @@ pub fn FiCopy(
 #[component]
 pub fn FiCornerDownLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2249,18 +2402,16 @@ pub fn FiCornerDownLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerDownLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 10 4 15 9 20\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 4v7a4 4 0 0 1-4 4H4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "9 10 4 15 9 20" /> < path d = "M20 4v7a4 4 0 0 1-4 4H4" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerDownRight")]
@@ -2268,9 +2419,12 @@ pub fn FiCornerDownLeft(
 #[component]
 pub fn FiCornerDownRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2280,18 +2434,16 @@ pub fn FiCornerDownRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerDownRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"15 10 20 15 15 20\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 4v7a4 4 0 0 0 4 4h12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "15 10 20 15 15 20" /> < path d = "M4 4v7a4 4 0 0 0 4 4h12" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerLeftDown")]
@@ -2299,9 +2451,12 @@ pub fn FiCornerDownRight(
 #[component]
 pub fn FiCornerLeftDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2311,18 +2466,16 @@ pub fn FiCornerLeftDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerLeftDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"14 15 9 20 4 15\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 4h-7a4 4 0 0 0-4 4v12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "14 15 9 20 4 15" /> < path d = "M20 4h-7a4 4 0 0 0-4 4v12" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerLeftUp")]
@@ -2330,9 +2483,12 @@ pub fn FiCornerLeftDown(
 #[component]
 pub fn FiCornerLeftUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2342,18 +2498,16 @@ pub fn FiCornerLeftUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerLeftUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"14 9 9 4 4 9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 20h-7a4 4 0 0 1-4-4V4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "14 9 9 4 4 9" /> < path d = "M20 20h-7a4 4 0 0 1-4-4V4" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerRightDown")]
@@ -2361,9 +2515,12 @@ pub fn FiCornerLeftUp(
 #[component]
 pub fn FiCornerRightDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2373,18 +2530,16 @@ pub fn FiCornerRightDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerRightDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"10 15 15 20 20 15\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 4h7a4 4 0 0 1 4 4v12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "10 15 15 20 20 15" /> < path d = "M4 4h7a4 4 0 0 1 4 4v12" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerRightUp")]
@@ -2392,9 +2547,12 @@ pub fn FiCornerRightDown(
 #[component]
 pub fn FiCornerRightUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2404,18 +2562,16 @@ pub fn FiCornerRightUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerRightUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"10 9 15 4 20 9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 20h7a4 4 0 0 0 4-4V4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "10 9 15 4 20 9" /> < path d = "M4 20h7a4 4 0 0 0 4-4V4" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerUpLeft")]
@@ -2423,9 +2579,12 @@ pub fn FiCornerRightUp(
 #[component]
 pub fn FiCornerUpLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2435,18 +2594,16 @@ pub fn FiCornerUpLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerUpLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 14 4 9 9 4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 20v-7a4 4 0 0 0-4-4H4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "9 14 4 9 9 4" /> < path d = "M20 20v-7a4 4 0 0 0-4-4H4" /> < / svg >
     }
 }
 #[cfg(feature = "FiCornerUpRight")]
@@ -2454,9 +2611,12 @@ pub fn FiCornerUpLeft(
 #[component]
 pub fn FiCornerUpRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2466,18 +2626,16 @@ pub fn FiCornerUpRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCornerUpRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"15 14 20 9 15 4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 20v-7a4 4 0 0 1 4-4h12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "15 14 20 9 15 4" /> < path d = "M4 20v-7a4 4 0 0 1 4-4h12" /> < / svg >
     }
 }
 #[cfg(feature = "FiCpu")]
@@ -2485,9 +2643,12 @@ pub fn FiCornerUpRight(
 #[component]
 pub fn FiCpu(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2497,18 +2658,22 @@ pub fn FiCpu(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCpu"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" ry=\"2\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"9\" y=\"9\" width=\"6\" height=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"1\" x2=\"9\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"1\" x2=\"15\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"20\" x2=\"9\" y2=\"23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"20\" x2=\"15\" y2=\"23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"20\" y1=\"9\" x2=\"23\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"20\" y1=\"14\" x2=\"23\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"9\" x2=\"4\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"14\" x2=\"4\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "4" y = "4" width
+        = "16" height = "16" rx = "2" ry = "2" /> < rect x = "9" y = "9" width = "6"
+        height = "6" /> < line x1 = "9" y1 = "1" x2 = "9" y2 = "4" /> < line x1 = "15" y1
+        = "1" x2 = "15" y2 = "4" /> < line x1 = "9" y1 = "20" x2 = "9" y2 = "23" /> <
+        line x1 = "15" y1 = "20" x2 = "15" y2 = "23" /> < line x1 = "20" y1 = "9" x2 =
+        "23" y2 = "9" /> < line x1 = "20" y1 = "14" x2 = "23" y2 = "14" /> < line x1 =
+        "1" y1 = "9" x2 = "4" y2 = "9" /> < line x1 = "1" y1 = "14" x2 = "4" y2 = "14" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiCreditCard")]
@@ -2516,9 +2681,12 @@ pub fn FiCpu(
 #[component]
 pub fn FiCreditCard(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2528,18 +2696,17 @@ pub fn FiCreditCard(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCreditCard"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "1" y = "4" width
+        = "22" height = "16" rx = "2" ry = "2" /> < line x1 = "1" y1 = "10" x2 = "23" y2
+        = "10" /> < / svg >
     }
 }
 #[cfg(feature = "FiCrop")]
@@ -2547,9 +2714,12 @@ pub fn FiCreditCard(
 #[component]
 pub fn FiCrop(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2559,18 +2729,17 @@ pub fn FiCrop(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCrop"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6.13 1L6 16a2 2 0 0 0 2 2h15\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 6.13L16 6a2 2 0 0 1 2 2v15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M6.13 1L6 16a2 2 0 0 0 2 2h15" /> < path d = "M1 6.13L16 6a2 2 0 0 1 2 2v15" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiCrosshair")]
@@ -2578,9 +2747,12 @@ pub fn FiCrop(
 #[component]
 pub fn FiCrosshair(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2590,18 +2762,18 @@ pub fn FiCrosshair(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiCrosshair"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"22\" y1=\"12\" x2=\"18\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"12\" x2=\"2\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"6\" x2=\"12\" y2=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22\" x2=\"12\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "22" y1 = "12" x2 = "18" y2 = "12" /> < line x1 = "6" y1
+        = "12" x2 = "2" y2 = "12" /> < line x1 = "12" y1 = "6" x2 = "12" y2 = "2" /> <
+        line x1 = "12" y1 = "22" x2 = "12" y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiDatabase")]
@@ -2609,9 +2781,12 @@ pub fn FiCrosshair(
 #[component]
 pub fn FiDatabase(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2621,18 +2796,17 @@ pub fn FiDatabase(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDatabase"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<ellipse xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < ellipse cx = "12" cy = "5"
+        rx = "9" ry = "3" /> < path d = "M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /> < path d =
+        "M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" /> < / svg >
     }
 }
 #[cfg(feature = "FiDelete")]
@@ -2640,9 +2814,12 @@ pub fn FiDatabase(
 #[component]
 pub fn FiDelete(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2652,18 +2829,17 @@ pub fn FiDelete(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDelete"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"9\" x2=\"12\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"9\" x2=\"18\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" /> < line x1 = "18" y1 = "9"
+        x2 = "12" y2 = "15" /> < line x1 = "12" y1 = "9" x2 = "18" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiDisc")]
@@ -2671,9 +2847,12 @@ pub fn FiDelete(
 #[component]
 pub fn FiDisc(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2683,18 +2862,16 @@ pub fn FiDisc(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDisc"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < circle cx = "12" cy = "12" r = "3" /> < / svg >
     }
 }
 #[cfg(feature = "FiDivide")]
@@ -2702,9 +2879,12 @@ pub fn FiDisc(
 #[component]
 pub fn FiDivide(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2714,18 +2894,17 @@ pub fn FiDivide(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDivide"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"6\" r=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"18\" r=\"2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "6" r
+        = "2" /> < line x1 = "5" y1 = "12" x2 = "19" y2 = "12" /> < circle cx = "12" cy =
+        "18" r = "2" /> < / svg >
     }
 }
 #[cfg(feature = "FiDivideCircle")]
@@ -2733,9 +2912,12 @@ pub fn FiDivide(
 #[component]
 pub fn FiDivideCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2745,18 +2927,18 @@ pub fn FiDivideCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDivideCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"16\" x2=\"12\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "8" y1 = "12" x2
+        = "16" y2 = "12" /> < line x1 = "12" y1 = "16" x2 = "12" y2 = "16" /> < line x1 =
+        "12" y1 = "8" x2 = "12" y2 = "8" /> < circle cx = "12" cy = "12" r = "10" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiDivideSquare")]
@@ -2764,9 +2946,12 @@ pub fn FiDivideCircle(
 #[component]
 pub fn FiDivideSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2776,18 +2961,18 @@ pub fn FiDivideSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDivideSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"16\" x2=\"12\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"8\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "8" y1 = "12" x2 = "16" y2
+        = "12" /> < line x1 = "12" y1 = "16" x2 = "12" y2 = "16" /> < line x1 = "12" y1 =
+        "8" x2 = "12" y2 = "8" /> < / svg >
     }
 }
 #[cfg(feature = "FiDollarSign")]
@@ -2795,9 +2980,12 @@ pub fn FiDivideSquare(
 #[component]
 pub fn FiDollarSign(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2807,18 +2995,17 @@ pub fn FiDollarSign(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDollarSign"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"1\" x2=\"12\" y2=\"23\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "12" y1 = "1" x2
+        = "12" y2 = "23" /> < path d =
+        "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /> < / svg >
     }
 }
 #[cfg(feature = "FiDownload")]
@@ -2826,9 +3013,12 @@ pub fn FiDollarSign(
 #[component]
 pub fn FiDownload(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2838,18 +3028,17 @@ pub fn FiDownload(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDownload"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 10 12 15 17 10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> < polyline points =
+        "7 10 12 15 17 10" /> < line x1 = "12" y1 = "15" x2 = "12" y2 = "3" /> < / svg >
     }
 }
 #[cfg(feature = "FiDownloadCloud")]
@@ -2857,9 +3046,12 @@ pub fn FiDownload(
 #[component]
 pub fn FiDownloadCloud(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2869,18 +3061,17 @@ pub fn FiDownloadCloud(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDownloadCloud"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"8 17 12 21 16 17\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "8 17 12 21 16 17" /> < line x1 = "12" y1 = "12" x2 = "12" y2 = "21" /> < path d
+        = "M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29" /> < / svg >
     }
 }
 #[cfg(feature = "FiDribbble")]
@@ -2888,9 +3079,12 @@ pub fn FiDownloadCloud(
 #[component]
 pub fn FiDribbble(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2900,18 +3094,18 @@ pub fn FiDribbble(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDribbble"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < path d =
+        "M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiDroplet")]
@@ -2919,9 +3113,12 @@ pub fn FiDribbble(
 #[component]
 pub fn FiDroplet(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2931,18 +3128,16 @@ pub fn FiDroplet(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiDroplet"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" /> < / svg >
     }
 }
 #[cfg(feature = "FiEdit")]
@@ -2950,9 +3145,12 @@ pub fn FiDroplet(
 #[component]
 pub fn FiEdit(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2962,18 +3160,17 @@ pub fn FiEdit(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiEdit"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /> < path d =
+        "M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /> < / svg >
     }
 }
 #[cfg(feature = "FiEdit2")]
@@ -2981,9 +3178,12 @@ pub fn FiEdit(
 #[component]
 pub fn FiEdit2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -2993,18 +3193,16 @@ pub fn FiEdit2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiEdit2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" /> < / svg >
     }
 }
 #[cfg(feature = "FiEdit3")]
@@ -3012,9 +3210,12 @@ pub fn FiEdit2(
 #[component]
 pub fn FiEdit3(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3024,18 +3225,16 @@ pub fn FiEdit3(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiEdit3"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 20h9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d = "M12 20h9" /> <
+        path d = "M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /> < / svg >
     }
 }
 #[cfg(feature = "FiExternalLink")]
@@ -3043,9 +3242,12 @@ pub fn FiEdit3(
 #[component]
 pub fn FiExternalLink(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3055,18 +3257,17 @@ pub fn FiExternalLink(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiExternalLink"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"15 3 21 3 21 9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"14\" x2=\"21\" y2=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /> < polyline points =
+        "15 3 21 3 21 9" /> < line x1 = "10" y1 = "14" x2 = "21" y2 = "3" /> < / svg >
     }
 }
 #[cfg(feature = "FiEye")]
@@ -3074,9 +3275,12 @@ pub fn FiExternalLink(
 #[component]
 pub fn FiEye(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3086,18 +3290,17 @@ pub fn FiEye(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiEye"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /> < circle cx = "12" cy = "12" r
+        = "3" /> < / svg >
     }
 }
 #[cfg(feature = "FiEyeOff")]
@@ -3105,9 +3308,12 @@ pub fn FiEye(
 #[component]
 pub fn FiEyeOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3117,18 +3323,17 @@ pub fn FiEyeOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiEyeOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+        /> < line x1 = "1" y1 = "1" x2 = "23" y2 = "23" /> < / svg >
     }
 }
 #[cfg(feature = "FiFacebook")]
@@ -3136,9 +3341,12 @@ pub fn FiEyeOff(
 #[component]
 pub fn FiFacebook(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3148,18 +3356,16 @@ pub fn FiFacebook(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFacebook"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /> < / svg >
     }
 }
 #[cfg(feature = "FiFastForward")]
@@ -3167,9 +3373,12 @@ pub fn FiFacebook(
 #[component]
 pub fn FiFastForward(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3179,18 +3388,16 @@ pub fn FiFastForward(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFastForward"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"13 19 22 12 13 5 13 19\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"2 19 11 12 2 5 2 19\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "13 19 22 12 13 5 13 19" /> < polygon points = "2 19 11 12 2 5 2 19" /> < / svg >
     }
 }
 #[cfg(feature = "FiFeather")]
@@ -3198,9 +3405,12 @@ pub fn FiFastForward(
 #[component]
 pub fn FiFeather(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3210,18 +3420,17 @@ pub fn FiFeather(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFeather"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"8\" x2=\"2\" y2=\"22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17.5\" y1=\"15\" x2=\"9\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /> < line x1 = "16" y1 = "8" x2
+        = "2" y2 = "22" /> < line x1 = "17.5" y1 = "15" x2 = "9" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiFigma")]
@@ -3229,9 +3438,12 @@ pub fn FiFeather(
 #[component]
 pub fn FiFigma(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3241,18 +3453,20 @@ pub fn FiFigma(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFigma"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" /> < path d =
+        "M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" /> < path d =
+        "M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" /> < path d =
+        "M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" /> < path d =
+        "M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" /> < / svg >
     }
 }
 #[cfg(feature = "FiFile")]
@@ -3260,9 +3474,12 @@ pub fn FiFigma(
 #[component]
 pub fn FiFile(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3272,18 +3489,17 @@ pub fn FiFile(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFile"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"13 2 13 9 20 9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /> < polyline points
+        = "13 2 13 9 20 9" /> < / svg >
     }
 }
 #[cfg(feature = "FiFileMinus")]
@@ -3291,9 +3507,12 @@ pub fn FiFile(
 #[component]
 pub fn FiFileMinus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3303,18 +3522,17 @@ pub fn FiFileMinus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFileMinus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"14 2 14 8 20 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"15\" x2=\"15\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> < polyline points
+        = "14 2 14 8 20 8" /> < line x1 = "9" y1 = "15" x2 = "15" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiFilePlus")]
@@ -3322,9 +3540,12 @@ pub fn FiFileMinus(
 #[component]
 pub fn FiFilePlus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3334,18 +3555,18 @@ pub fn FiFilePlus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFilePlus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"14 2 14 8 20 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"18\" x2=\"12\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"15\" x2=\"15\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> < polyline points
+        = "14 2 14 8 20 8" /> < line x1 = "12" y1 = "18" x2 = "12" y2 = "12" /> < line x1
+        = "9" y1 = "15" x2 = "15" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiFileText")]
@@ -3353,9 +3574,12 @@ pub fn FiFilePlus(
 #[component]
 pub fn FiFileText(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3365,18 +3589,19 @@ pub fn FiFileText(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFileText"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"14 2 14 8 20 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"13\" x2=\"8\" y2=\"13\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"17\" x2=\"8\" y2=\"17\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"10 9 9 9 8 9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /> < polyline points
+        = "14 2 14 8 20 8" /> < line x1 = "16" y1 = "13" x2 = "8" y2 = "13" /> < line x1
+        = "16" y1 = "17" x2 = "8" y2 = "17" /> < polyline points = "10 9 9 9 8 9" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiFilm")]
@@ -3384,9 +3609,12 @@ pub fn FiFileText(
 #[component]
 pub fn FiFilm(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3396,18 +3624,20 @@ pub fn FiFilm(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFilm"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"2.18\" ry=\"2.18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"7\" y1=\"2\" x2=\"7\" y2=\"22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"2\" x2=\"17\" y2=\"22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"7\" x2=\"7\" y2=\"7\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"17\" x2=\"7\" y2=\"17\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"17\" x2=\"22\" y2=\"17\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"7\" x2=\"22\" y2=\"7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "2" y = "2" width
+        = "20" height = "20" rx = "2.18" ry = "2.18" /> < line x1 = "7" y1 = "2" x2 = "7"
+        y2 = "22" /> < line x1 = "17" y1 = "2" x2 = "17" y2 = "22" /> < line x1 = "2" y1
+        = "12" x2 = "22" y2 = "12" /> < line x1 = "2" y1 = "7" x2 = "7" y2 = "7" /> <
+        line x1 = "2" y1 = "17" x2 = "7" y2 = "17" /> < line x1 = "17" y1 = "17" x2 =
+        "22" y2 = "17" /> < line x1 = "17" y1 = "7" x2 = "22" y2 = "7" /> < / svg >
     }
 }
 #[cfg(feature = "FiFilter")]
@@ -3415,9 +3645,12 @@ pub fn FiFilm(
 #[component]
 pub fn FiFilter(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3427,18 +3660,16 @@ pub fn FiFilter(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFilter"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /> < / svg >
     }
 }
 #[cfg(feature = "FiFlag")]
@@ -3446,9 +3677,12 @@ pub fn FiFilter(
 #[component]
 pub fn FiFlag(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3458,18 +3692,17 @@ pub fn FiFlag(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFlag"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"22\" x2=\"4\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /> < line x1 = "4" y1
+        = "22" x2 = "4" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiFolder")]
@@ -3477,9 +3710,12 @@ pub fn FiFlag(
 #[component]
 pub fn FiFolder(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3489,18 +3725,17 @@ pub fn FiFolder(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFolder"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiFolderMinus")]
@@ -3508,9 +3743,12 @@ pub fn FiFolder(
 #[component]
 pub fn FiFolderMinus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3520,18 +3758,17 @@ pub fn FiFolderMinus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFolderMinus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+        < line x1 = "9" y1 = "14" x2 = "15" y2 = "14" /> < / svg >
     }
 }
 #[cfg(feature = "FiFolderPlus")]
@@ -3539,9 +3776,12 @@ pub fn FiFolderMinus(
 #[component]
 pub fn FiFolderPlus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3551,18 +3791,18 @@ pub fn FiFolderPlus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFolderPlus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"11\" x2=\"12\" y2=\"17\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+        < line x1 = "12" y1 = "11" x2 = "12" y2 = "17" /> < line x1 = "9" y1 = "14" x2 =
+        "15" y2 = "14" /> < / svg >
     }
 }
 #[cfg(feature = "FiFramer")]
@@ -3570,9 +3810,12 @@ pub fn FiFolderPlus(
 #[component]
 pub fn FiFramer(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3582,18 +3825,16 @@ pub fn FiFramer(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFramer"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 16V9h14V2H5l14 14h-7m-7 0l7 7v-7m-7 0h7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M5 16V9h14V2H5l14 14h-7m-7 0l7 7v-7m-7 0h7" /> < / svg >
     }
 }
 #[cfg(feature = "FiFrown")]
@@ -3601,9 +3842,12 @@ pub fn FiFramer(
 #[component]
 pub fn FiFrown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3613,18 +3857,17 @@ pub fn FiFrown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiFrown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        viewBox = "0 0 24 24" width = "24" height = "24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 16s-1.5-2-4-2-4 2-4 2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < path d = "M16 16s-1.5-2-4-2-4 2-4 2" /> < line x1 = "9" y1 = "9" x2
+        = "9.01" y2 = "9" /> < line x1 = "15" y1 = "9" x2 = "15.01" y2 = "9" /> < / svg >
     }
 }
 #[cfg(feature = "FiGift")]
@@ -3632,9 +3875,12 @@ pub fn FiFrown(
 #[component]
 pub fn FiGift(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3644,18 +3890,19 @@ pub fn FiGift(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGift"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"20 12 20 22 4 22 4 12\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"7\" width=\"20\" height=\"5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22\" x2=\"12\" y2=\"7\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "20 12 20 22 4 22 4 12" /> < rect x = "2" y = "7" width = "20" height = "5" /> <
+        line x1 = "12" y1 = "22" x2 = "12" y2 = "7" /> < path d =
+        "M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z" /> < path d =
+        "M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" /> < / svg >
     }
 }
 #[cfg(feature = "FiGitBranch")]
@@ -3663,9 +3910,12 @@ pub fn FiGift(
 #[component]
 pub fn FiGitBranch(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3675,18 +3925,17 @@ pub fn FiGitBranch(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGitBranch"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"3\" x2=\"6\" y2=\"15\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18\" cy=\"6\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"18\" r=\"3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 9a9 9 0 0 1-9 9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "6" y1 = "3" x2 =
+        "6" y2 = "15" /> < circle cx = "18" cy = "6" r = "3" /> < circle cx = "6" cy =
+        "18" r = "3" /> < path d = "M18 9a9 9 0 0 1-9 9" /> < / svg >
     }
 }
 #[cfg(feature = "FiGitCommit")]
@@ -3694,9 +3943,12 @@ pub fn FiGitBranch(
 #[component]
 pub fn FiGitCommit(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3706,18 +3958,17 @@ pub fn FiGitCommit(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGitCommit"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1.05\" y1=\"12\" x2=\"7\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17.01\" y1=\"12\" x2=\"22.96\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "4" /> < line x1 = "1.05" y1 = "12" x2 = "7" y2 = "12" /> < line x1 = "17.01"
+        y1 = "12" x2 = "22.96" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiGitMerge")]
@@ -3725,9 +3976,12 @@ pub fn FiGitCommit(
 #[component]
 pub fn FiGitMerge(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3737,18 +3991,17 @@ pub fn FiGitMerge(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGitMerge"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18\" cy=\"18\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"6\" r=\"3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 21V9a9 9 0 0 0 9 9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "18" cy = "18"
+        r = "3" /> < circle cx = "6" cy = "6" r = "3" /> < path d =
+        "M6 21V9a9 9 0 0 0 9 9" /> < / svg >
     }
 }
 #[cfg(feature = "FiGitPullRequest")]
@@ -3756,9 +4009,12 @@ pub fn FiGitMerge(
 #[component]
 pub fn FiGitPullRequest(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3768,18 +4024,18 @@ pub fn FiGitPullRequest(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGitPullRequest"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18\" cy=\"18\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"6\" r=\"3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 6h3a2 2 0 0 1 2 2v7\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"9\" x2=\"6\" y2=\"21\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "18" cy = "18"
+        r = "3" /> < circle cx = "6" cy = "6" r = "3" /> < path d =
+        "M13 6h3a2 2 0 0 1 2 2v7" /> < line x1 = "6" y1 = "9" x2 = "6" y2 = "21" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiGithub")]
@@ -3787,9 +4043,12 @@ pub fn FiGitPullRequest(
 #[component]
 pub fn FiGithub(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3799,18 +4058,17 @@ pub fn FiGithub(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGithub"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiGitlab")]
@@ -3818,9 +4076,12 @@ pub fn FiGithub(
 #[component]
 pub fn FiGitlab(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3830,18 +4091,17 @@ pub fn FiGitlab(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGitlab"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiGlobe")]
@@ -3849,9 +4109,12 @@ pub fn FiGitlab(
 #[component]
 pub fn FiGlobe(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3861,18 +4124,18 @@ pub fn FiGlobe(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGlobe"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "2" y1 = "12" x2 = "22" y2 = "12" /> < path d =
+        "M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiGrid")]
@@ -3880,9 +4143,12 @@ pub fn FiGlobe(
 #[component]
 pub fn FiGrid(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3892,18 +4158,18 @@ pub fn FiGrid(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiGrid"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"7\" height=\"7\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"14\" y=\"3\" width=\"7\" height=\"7\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"14\" y=\"14\" width=\"7\" height=\"7\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"14\" width=\"7\" height=\"7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "7" height = "7" /> < rect x = "14" y = "3" width = "7" height = "7" /> < rect
+        x = "14" y = "14" width = "7" height = "7" /> < rect x = "3" y = "14" width = "7"
+        height = "7" /> < / svg >
     }
 }
 #[cfg(feature = "FiHardDrive")]
@@ -3911,9 +4177,12 @@ pub fn FiGrid(
 #[component]
 pub fn FiHardDrive(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3923,18 +4192,19 @@ pub fn FiHardDrive(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHardDrive"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"22\" y1=\"12\" x2=\"2\" y2=\"12\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"16\" x2=\"6.01\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"16\" x2=\"10.01\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "22" y1 = "12" x2
+        = "2" y2 = "12" /> < path d =
+        "M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+        /> < line x1 = "6" y1 = "16" x2 = "6.01" y2 = "16" /> < line x1 = "10" y1 = "16"
+        x2 = "10.01" y2 = "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiHash")]
@@ -3942,9 +4212,12 @@ pub fn FiHardDrive(
 #[component]
 pub fn FiHash(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3954,18 +4227,18 @@ pub fn FiHash(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHash"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"9\" x2=\"20\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"15\" x2=\"20\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"3\" x2=\"8\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"3\" x2=\"14\" y2=\"21\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "4" y1 = "9" x2 =
+        "20" y2 = "9" /> < line x1 = "4" y1 = "15" x2 = "20" y2 = "15" /> < line x1 =
+        "10" y1 = "3" x2 = "8" y2 = "21" /> < line x1 = "16" y1 = "3" x2 = "14" y2 = "21"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiHeadphones")]
@@ -3973,9 +4246,12 @@ pub fn FiHash(
 #[component]
 pub fn FiHeadphones(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -3985,18 +4261,18 @@ pub fn FiHeadphones(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHeadphones"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 18v-6a9 9 0 0 1 18 0v6\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M3 18v-6a9 9 0 0 1 18 0v6" /> < path d =
+        "M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiHeart")]
@@ -4004,9 +4280,12 @@ pub fn FiHeadphones(
 #[component]
 pub fn FiHeart(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4016,18 +4295,17 @@ pub fn FiHeart(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHeart"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiHelpCircle")]
@@ -4035,9 +4313,12 @@ pub fn FiHeart(
 #[component]
 pub fn FiHelpCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4047,18 +4328,17 @@ pub fn FiHelpCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHelpCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"17\" x2=\"12.01\" y2=\"17\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < path d = "M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> < line x1 = "12"
+        y1 = "17" x2 = "12.01" y2 = "17" /> < / svg >
     }
 }
 #[cfg(feature = "FiHexagon")]
@@ -4066,9 +4346,12 @@ pub fn FiHelpCircle(
 #[component]
 pub fn FiHexagon(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4078,18 +4361,17 @@ pub fn FiHexagon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHexagon"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiHome")]
@@ -4097,9 +4379,12 @@ pub fn FiHexagon(
 #[component]
 pub fn FiHome(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4109,18 +4394,17 @@ pub fn FiHome(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiHome"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 22 9 12 15 12 15 22\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /> < polyline points =
+        "9 22 9 12 15 12 15 22" /> < / svg >
     }
 }
 #[cfg(feature = "FiImage")]
@@ -4128,9 +4412,12 @@ pub fn FiHome(
 #[component]
 pub fn FiImage(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4140,18 +4427,17 @@ pub fn FiImage(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiImage"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"8.5\" cy=\"8.5\" r=\"1.5\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"21 15 16 10 5 21\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < circle cx = "8.5" cy = "8.5" r =
+        "1.5" /> < polyline points = "21 15 16 10 5 21" /> < / svg >
     }
 }
 #[cfg(feature = "FiInbox")]
@@ -4159,9 +4445,12 @@ pub fn FiImage(
 #[component]
 pub fn FiInbox(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4171,18 +4460,18 @@ pub fn FiInbox(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiInbox"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"22 12 16 12 14 15 10 15 8 12 2 12\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "22 12 16 12 14 15 10 15 8 12 2 12" /> < path d =
+        "M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiInfo")]
@@ -4190,9 +4479,12 @@ pub fn FiInbox(
 #[component]
 pub fn FiInfo(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4202,18 +4494,17 @@ pub fn FiInfo(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiInfo"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"16\" x2=\"12\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12.01\" y2=\"8\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "12" y1 = "16" x2 = "12" y2 = "12" /> < line x1 = "12" y1
+        = "8" x2 = "12.01" y2 = "8" /> < / svg >
     }
 }
 #[cfg(feature = "FiInstagram")]
@@ -4221,9 +4512,12 @@ pub fn FiInfo(
 #[component]
 pub fn FiInstagram(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4233,18 +4527,18 @@ pub fn FiInstagram(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiInstagram"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "2" y = "2" width
+        = "20" height = "20" rx = "5" ry = "5" /> < path d =
+        "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /> < line x1 = "17.5" y1 =
+        "6.5" x2 = "17.51" y2 = "6.5" /> < / svg >
     }
 }
 #[cfg(feature = "FiItalic")]
@@ -4252,9 +4546,12 @@ pub fn FiInstagram(
 #[component]
 pub fn FiItalic(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4264,18 +4561,17 @@ pub fn FiItalic(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiItalic"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"19\" y1=\"4\" x2=\"10\" y2=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14\" y1=\"20\" x2=\"5\" y2=\"20\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"4\" x2=\"9\" y2=\"20\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "19" y1 = "4" x2
+        = "10" y2 = "4" /> < line x1 = "14" y1 = "20" x2 = "5" y2 = "20" /> < line x1 =
+        "15" y1 = "4" x2 = "9" y2 = "20" /> < / svg >
     }
 }
 #[cfg(feature = "FiKey")]
@@ -4283,9 +4579,12 @@ pub fn FiItalic(
 #[component]
 pub fn FiKey(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4295,18 +4594,17 @@ pub fn FiKey(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiKey"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiLayers")]
@@ -4314,9 +4612,12 @@ pub fn FiKey(
 #[component]
 pub fn FiLayers(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4326,18 +4627,17 @@ pub fn FiLayers(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLayers"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"12 2 2 7 12 12 22 7 12 2\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"2 17 12 22 22 17\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"2 12 12 17 22 12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "12 2 2 7 12 12 22 7 12 2" /> < polyline points = "2 17 12 22 22 17" /> <
+        polyline points = "2 12 12 17 22 12" /> < / svg >
     }
 }
 #[cfg(feature = "FiLayout")]
@@ -4345,9 +4645,12 @@ pub fn FiLayers(
 #[component]
 pub fn FiLayout(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4357,18 +4660,17 @@ pub fn FiLayout(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLayout"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"21\" x2=\"9\" y2=\"9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "3" y1 = "9" x2 = "21" y2 =
+        "9" /> < line x1 = "9" y1 = "21" x2 = "9" y2 = "9" /> < / svg >
     }
 }
 #[cfg(feature = "FiLifeBuoy")]
@@ -4376,9 +4678,12 @@ pub fn FiLayout(
 #[component]
 pub fn FiLifeBuoy(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4388,18 +4693,20 @@ pub fn FiLifeBuoy(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLifeBuoy"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.93\" y1=\"4.93\" x2=\"9.17\" y2=\"9.17\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14.83\" y1=\"14.83\" x2=\"19.07\" y2=\"19.07\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14.83\" y1=\"9.17\" x2=\"19.07\" y2=\"4.93\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14.83\" y1=\"9.17\" x2=\"18.36\" y2=\"5.64\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.93\" y1=\"19.07\" x2=\"9.17\" y2=\"14.83\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < circle cx = "12" cy = "12" r = "4" /> < line x1 = "4.93" y1 =
+        "4.93" x2 = "9.17" y2 = "9.17" /> < line x1 = "14.83" y1 = "14.83" x2 = "19.07"
+        y2 = "19.07" /> < line x1 = "14.83" y1 = "9.17" x2 = "19.07" y2 = "4.93" /> <
+        line x1 = "14.83" y1 = "9.17" x2 = "18.36" y2 = "5.64" /> < line x1 = "4.93" y1 =
+        "19.07" x2 = "9.17" y2 = "14.83" /> < / svg >
     }
 }
 #[cfg(feature = "FiLink")]
@@ -4407,9 +4714,12 @@ pub fn FiLifeBuoy(
 #[component]
 pub fn FiLink(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4419,18 +4729,17 @@ pub fn FiLink(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLink"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> < path d =
+        "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /> < / svg >
     }
 }
 #[cfg(feature = "FiLink2")]
@@ -4438,9 +4747,12 @@ pub fn FiLink(
 #[component]
 pub fn FiLink2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4450,18 +4762,17 @@ pub fn FiLink2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLink2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />
+        < line x1 = "8" y1 = "12" x2 = "16" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiLinkedin")]
@@ -4469,9 +4780,12 @@ pub fn FiLink2(
 #[component]
 pub fn FiLinkedin(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4481,18 +4795,18 @@ pub fn FiLinkedin(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLinkedin"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"9\" width=\"4\" height=\"12\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"4\" cy=\"4\" r=\"2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+        /> < rect x = "2" y = "9" width = "4" height = "12" /> < circle cx = "4" cy = "4"
+        r = "2" /> < / svg >
     }
 }
 #[cfg(feature = "FiList")]
@@ -4500,9 +4814,12 @@ pub fn FiLinkedin(
 #[component]
 pub fn FiList(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4512,18 +4829,19 @@ pub fn FiList(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiList"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"6\" x2=\"21\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"21\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"18\" x2=\"21\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"6\" x2=\"3.01\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"12\" x2=\"3.01\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"18\" x2=\"3.01\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "8" y1 = "6" x2 =
+        "21" y2 = "6" /> < line x1 = "8" y1 = "12" x2 = "21" y2 = "12" /> < line x1 = "8"
+        y1 = "18" x2 = "21" y2 = "18" /> < line x1 = "3" y1 = "6" x2 = "3.01" y2 = "6" />
+        < line x1 = "3" y1 = "12" x2 = "3.01" y2 = "12" /> < line x1 = "3" y1 = "18" x2 =
+        "3.01" y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiLoader")]
@@ -4531,9 +4849,12 @@ pub fn FiList(
 #[component]
 pub fn FiLoader(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4543,18 +4864,21 @@ pub fn FiLoader(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLoader"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"2\" x2=\"12\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"18\" x2=\"12\" y2=\"22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.93\" y1=\"4.93\" x2=\"7.76\" y2=\"7.76\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16.24\" y1=\"16.24\" x2=\"19.07\" y2=\"19.07\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"12\" x2=\"6\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"12\" x2=\"22\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.93\" y1=\"19.07\" x2=\"7.76\" y2=\"16.24\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16.24\" y1=\"7.76\" x2=\"19.07\" y2=\"4.93\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "12" y1 = "2" x2
+        = "12" y2 = "6" /> < line x1 = "12" y1 = "18" x2 = "12" y2 = "22" /> < line x1 =
+        "4.93" y1 = "4.93" x2 = "7.76" y2 = "7.76" /> < line x1 = "16.24" y1 = "16.24" x2
+        = "19.07" y2 = "19.07" /> < line x1 = "2" y1 = "12" x2 = "6" y2 = "12" /> < line
+        x1 = "18" y1 = "12" x2 = "22" y2 = "12" /> < line x1 = "4.93" y1 = "19.07" x2 =
+        "7.76" y2 = "16.24" /> < line x1 = "16.24" y1 = "7.76" x2 = "19.07" y2 = "4.93"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiLock")]
@@ -4562,9 +4886,12 @@ pub fn FiLoader(
 #[component]
 pub fn FiLock(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4574,18 +4901,17 @@ pub fn FiLock(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLock"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11V7a5 5 0 0 1 10 0v4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "11" width
+        = "18" height = "11" rx = "2" ry = "2" /> < path d = "M7 11V7a5 5 0 0 1 10 0v4"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiLogIn")]
@@ -4593,9 +4919,12 @@ pub fn FiLock(
 #[component]
 pub fn FiLogIn(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4605,18 +4934,17 @@ pub fn FiLogIn(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLogIn"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"10 17 15 12 10 7\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"12\" x2=\"3\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /> < polyline points =
+        "10 17 15 12 10 7" /> < line x1 = "15" y1 = "12" x2 = "3" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiLogOut")]
@@ -4624,9 +4952,12 @@ pub fn FiLogIn(
 #[component]
 pub fn FiLogOut(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4636,18 +4967,17 @@ pub fn FiLogOut(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiLogOut"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 17 21 12 16 7\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"12\" x2=\"9\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /> < polyline points =
+        "16 17 21 12 16 7" /> < line x1 = "21" y1 = "12" x2 = "9" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiMail")]
@@ -4655,9 +4985,12 @@ pub fn FiLogOut(
 #[component]
 pub fn FiMail(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4667,18 +5000,17 @@ pub fn FiMail(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMail"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"22,6 12,13 2,6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+        < polyline points = "22,6 12,13 2,6" /> < / svg >
     }
 }
 #[cfg(feature = "FiMap")]
@@ -4686,9 +5018,12 @@ pub fn FiMail(
 #[component]
 pub fn FiMap(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4698,18 +5033,17 @@ pub fn FiMap(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMap"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"2\" x2=\"8\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"6\" x2=\"16\" y2=\"22\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6" /> < line x1 = "8" y1 = "2" x2 =
+        "8" y2 = "18" /> < line x1 = "16" y1 = "6" x2 = "16" y2 = "22" /> < / svg >
     }
 }
 #[cfg(feature = "FiMapPin")]
@@ -4717,9 +5051,12 @@ pub fn FiMap(
 #[component]
 pub fn FiMapPin(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4729,18 +5066,17 @@ pub fn FiMapPin(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMapPin"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"10\" r=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /> < circle cx = "12" cy = "10"
+        r = "3" /> < / svg >
     }
 }
 #[cfg(feature = "FiMaximize")]
@@ -4748,9 +5084,12 @@ pub fn FiMapPin(
 #[component]
 pub fn FiMaximize(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4760,18 +5099,17 @@ pub fn FiMaximize(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMaximize"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiMaximize2")]
@@ -4779,9 +5117,12 @@ pub fn FiMaximize(
 #[component]
 pub fn FiMaximize2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4791,18 +5132,18 @@ pub fn FiMaximize2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMaximize2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"15 3 21 3 21 9\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 21 3 21 3 15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"3\" x2=\"14\" y2=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "15 3 21 3 21 9" /> < polyline points = "9 21 3 21 3 15" /> < line x1 = "21" y1 =
+        "3" x2 = "14" y2 = "10" /> < line x1 = "3" y1 = "21" x2 = "10" y2 = "14" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiMeh")]
@@ -4810,9 +5151,12 @@ pub fn FiMaximize2(
 #[component]
 pub fn FiMeh(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4822,18 +5166,18 @@ pub fn FiMeh(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMeh"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        viewBox = "0 0 24 24" width = "24" height = "24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"15\" x2=\"16\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "8" y1 = "15" x2 = "16" y2 = "15" /> < line x1 = "9" y1 =
+        "9" x2 = "9.01" y2 = "9" /> < line x1 = "15" y1 = "9" x2 = "15.01" y2 = "9" /> <
+        / svg >
     }
 }
 #[cfg(feature = "FiMenu")]
@@ -4841,9 +5185,12 @@ pub fn FiMeh(
 #[component]
 pub fn FiMenu(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4853,18 +5200,17 @@ pub fn FiMenu(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMenu"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "3" y1 = "12" x2
+        = "21" y2 = "12" /> < line x1 = "3" y1 = "6" x2 = "21" y2 = "6" /> < line x1 =
+        "3" y1 = "18" x2 = "21" y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiMessageCircle")]
@@ -4872,9 +5218,12 @@ pub fn FiMenu(
 #[component]
 pub fn FiMessageCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4884,18 +5233,17 @@ pub fn FiMessageCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMessageCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiMessageSquare")]
@@ -4903,9 +5251,12 @@ pub fn FiMessageCircle(
 #[component]
 pub fn FiMessageSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4915,18 +5266,16 @@ pub fn FiMessageSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMessageSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /> < / svg >
     }
 }
 #[cfg(feature = "FiMic")]
@@ -4934,9 +5283,12 @@ pub fn FiMessageSquare(
 #[component]
 pub fn FiMic(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4946,18 +5298,18 @@ pub fn FiMic(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMic"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 10v2a7 7 0 0 1-14 0v-2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" /> < path d =
+        "M19 10v2a7 7 0 0 1-14 0v-2" /> < line x1 = "12" y1 = "19" x2 = "12" y2 = "23" />
+        < line x1 = "8" y1 = "23" x2 = "16" y2 = "23" /> < / svg >
     }
 }
 #[cfg(feature = "FiMicOff")]
@@ -4965,9 +5317,12 @@ pub fn FiMic(
 #[component]
 pub fn FiMicOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -4977,18 +5332,20 @@ pub fn FiMicOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMicOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"19\" x2=\"12\" y2=\"23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"23\" x2=\"16\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "1" y1 = "1" x2 =
+        "23" y2 = "23" /> < path d =
+        "M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6" /> < path d =
+        "M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23" /> < line x1 = "12" y1 =
+        "19" x2 = "12" y2 = "23" /> < line x1 = "8" y1 = "23" x2 = "16" y2 = "23" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiMinimize")]
@@ -4996,9 +5353,12 @@ pub fn FiMicOff(
 #[component]
 pub fn FiMinimize(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5008,18 +5368,17 @@ pub fn FiMinimize(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMinimize"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiMinimize2")]
@@ -5027,9 +5386,12 @@ pub fn FiMinimize(
 #[component]
 pub fn FiMinimize2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5039,18 +5401,18 @@ pub fn FiMinimize2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMinimize2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"4 14 10 14 10 20\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"20 10 14 10 14 4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14\" y1=\"10\" x2=\"21\" y2=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"21\" x2=\"10\" y2=\"14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "4 14 10 14 10 20" /> < polyline points = "20 10 14 10 14 4" /> < line x1 = "14"
+        y1 = "10" x2 = "21" y2 = "3" /> < line x1 = "3" y1 = "21" x2 = "10" y2 = "14" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiMinus")]
@@ -5058,9 +5420,12 @@ pub fn FiMinimize2(
 #[component]
 pub fn FiMinus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5070,18 +5435,16 @@ pub fn FiMinus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMinus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "5" y1 = "12" x2
+        = "19" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiMinusCircle")]
@@ -5089,9 +5452,12 @@ pub fn FiMinus(
 #[component]
 pub fn FiMinusCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5101,18 +5467,16 @@ pub fn FiMinusCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMinusCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "8" y1 = "12" x2 = "16" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiMinusSquare")]
@@ -5120,9 +5484,12 @@ pub fn FiMinusCircle(
 #[component]
 pub fn FiMinusSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5132,18 +5499,17 @@ pub fn FiMinusSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMinusSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "8" y1 = "12" x2 = "16" y2
+        = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiMonitor")]
@@ -5151,9 +5517,12 @@ pub fn FiMinusSquare(
 #[component]
 pub fn FiMonitor(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5163,18 +5532,17 @@ pub fn FiMonitor(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMonitor"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"21\" x2=\"16\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"17\" x2=\"12\" y2=\"21\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "2" y = "3" width
+        = "20" height = "14" rx = "2" ry = "2" /> < line x1 = "8" y1 = "21" x2 = "16" y2
+        = "21" /> < line x1 = "12" y1 = "17" x2 = "12" y2 = "21" /> < / svg >
     }
 }
 #[cfg(feature = "FiMoon")]
@@ -5182,9 +5550,12 @@ pub fn FiMonitor(
 #[component]
 pub fn FiMoon(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5194,18 +5565,16 @@ pub fn FiMoon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMoon"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /> < / svg >
     }
 }
 #[cfg(feature = "FiMoreHorizontal")]
@@ -5213,9 +5582,12 @@ pub fn FiMoon(
 #[component]
 pub fn FiMoreHorizontal(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5225,18 +5597,17 @@ pub fn FiMoreHorizontal(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMoreHorizontal"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"1\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"19\" cy=\"12\" r=\"1\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"5\" cy=\"12\" r=\"1\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "1" /> < circle cx = "19" cy = "12" r = "1" /> < circle cx = "5" cy = "12" r
+        = "1" /> < / svg >
     }
 }
 #[cfg(feature = "FiMoreVertical")]
@@ -5244,9 +5615,12 @@ pub fn FiMoreHorizontal(
 #[component]
 pub fn FiMoreVertical(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5256,18 +5630,17 @@ pub fn FiMoreVertical(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMoreVertical"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"1\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"5\" r=\"1\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"19\" r=\"1\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "1" /> < circle cx = "12" cy = "5" r = "1" /> < circle cx = "12" cy = "19" r
+        = "1" /> < / svg >
     }
 }
 #[cfg(feature = "FiMousePointer")]
@@ -5275,9 +5648,12 @@ pub fn FiMoreVertical(
 #[component]
 pub fn FiMousePointer(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5287,18 +5663,17 @@ pub fn FiMousePointer(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMousePointer"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M13 13l6 6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" /> < path d = "M13 13l6 6" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiMove")]
@@ -5306,9 +5681,12 @@ pub fn FiMousePointer(
 #[component]
 pub fn FiMove(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5318,18 +5696,19 @@ pub fn FiMove(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMove"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"5 9 2 12 5 15\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"9 5 12 2 15 5\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"15 19 12 22 9 19\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"19 9 22 12 19 15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"2\" y1=\"12\" x2=\"22\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"2\" x2=\"12\" y2=\"22\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "5 9 2 12 5 15" /> < polyline points = "9 5 12 2 15 5" /> < polyline points =
+        "15 19 12 22 9 19" /> < polyline points = "19 9 22 12 19 15" /> < line x1 = "2"
+        y1 = "12" x2 = "22" y2 = "12" /> < line x1 = "12" y1 = "2" x2 = "12" y2 = "22" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiMusic")]
@@ -5337,9 +5716,12 @@ pub fn FiMove(
 #[component]
 pub fn FiMusic(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5349,18 +5731,17 @@ pub fn FiMusic(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiMusic"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 18V5l12-2v13\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"18\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18\" cy=\"16\" r=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d = "M9 18V5l12-2v13"
+        /> < circle cx = "6" cy = "18" r = "3" /> < circle cx = "18" cy = "16" r = "3" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiNavigation")]
@@ -5368,9 +5749,12 @@ pub fn FiMusic(
 #[component]
 pub fn FiNavigation(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5380,18 +5764,16 @@ pub fn FiNavigation(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiNavigation"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"3 11 22 2 13 21 11 13 3 11\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "3 11 22 2 13 21 11 13 3 11" /> < / svg >
     }
 }
 #[cfg(feature = "FiNavigation2")]
@@ -5399,9 +5781,12 @@ pub fn FiNavigation(
 #[component]
 pub fn FiNavigation2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5411,18 +5796,16 @@ pub fn FiNavigation2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiNavigation2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"12 2 19 21 12 17 5 21 12 2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "12 2 19 21 12 17 5 21 12 2" /> < / svg >
     }
 }
 #[cfg(feature = "FiOctagon")]
@@ -5430,9 +5813,12 @@ pub fn FiNavigation2(
 #[component]
 pub fn FiOctagon(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5442,18 +5828,17 @@ pub fn FiOctagon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiOctagon"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiPackage")]
@@ -5461,9 +5846,12 @@ pub fn FiOctagon(
 #[component]
 pub fn FiPackage(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5473,18 +5861,19 @@ pub fn FiPackage(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPackage"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16.5\" y1=\"9.4\" x2=\"7.5\" y2=\"4.21\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"3.27 6.96 12 12.01 20.73 6.96\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "16.5" y1 = "9.4"
+        x2 = "7.5" y2 = "4.21" /> < path d =
+        "M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+        /> < polyline points = "3.27 6.96 12 12.01 20.73 6.96" /> < line x1 = "12" y1 =
+        "22.08" x2 = "12" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiPaperclip")]
@@ -5492,9 +5881,12 @@ pub fn FiPackage(
 #[component]
 pub fn FiPaperclip(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5504,18 +5896,17 @@ pub fn FiPaperclip(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPaperclip"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPause")]
@@ -5523,9 +5914,12 @@ pub fn FiPaperclip(
 #[component]
 pub fn FiPause(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5535,18 +5929,17 @@ pub fn FiPause(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPause"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"6\" y=\"4\" width=\"4\" height=\"16\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"14\" y=\"4\" width=\"4\" height=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "6" y = "4" width
+        = "4" height = "16" /> < rect x = "14" y = "4" width = "4" height = "16" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiPauseCircle")]
@@ -5554,9 +5947,12 @@ pub fn FiPause(
 #[component]
 pub fn FiPauseCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5566,18 +5962,17 @@ pub fn FiPauseCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPauseCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"15\" x2=\"10\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14\" y1=\"15\" x2=\"14\" y2=\"9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "10" y1 = "15" x2 = "10" y2 = "9" /> < line x1 = "14" y1
+        = "15" x2 = "14" y2 = "9" /> < / svg >
     }
 }
 #[cfg(feature = "FiPenTool")]
@@ -5585,9 +5980,12 @@ pub fn FiPauseCircle(
 #[component]
 pub fn FiPenTool(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5597,18 +5995,18 @@ pub fn FiPenTool(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPenTool"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 19l7-7 3 3-7 7-3-3z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M2 2l7.586 7.586\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"11\" cy=\"11\" r=\"2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M12 19l7-7 3 3-7 7-3-3z" /> < path d = "M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"
+        /> < path d = "M2 2l7.586 7.586" /> < circle cx = "11" cy = "11" r = "2" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiPercent")]
@@ -5616,9 +6014,12 @@ pub fn FiPenTool(
 #[component]
 pub fn FiPercent(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5628,18 +6029,17 @@ pub fn FiPercent(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPercent"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6.5\" cy=\"6.5\" r=\"2.5\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"17.5\" cy=\"17.5\" r=\"2.5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "19" y1 = "5" x2
+        = "5" y2 = "19" /> < circle cx = "6.5" cy = "6.5" r = "2.5" /> < circle cx =
+        "17.5" cy = "17.5" r = "2.5" /> < / svg >
     }
 }
 #[cfg(feature = "FiPhone")]
@@ -5647,9 +6047,12 @@ pub fn FiPercent(
 #[component]
 pub fn FiPhone(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5659,18 +6062,17 @@ pub fn FiPhone(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhone"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPhoneCall")]
@@ -5678,9 +6080,12 @@ pub fn FiPhone(
 #[component]
 pub fn FiPhoneCall(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5690,18 +6095,17 @@ pub fn FiPhoneCall(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhoneCall"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPhoneForwarded")]
@@ -5709,9 +6113,12 @@ pub fn FiPhoneCall(
 #[component]
 pub fn FiPhoneForwarded(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5721,18 +6128,18 @@ pub fn FiPhoneForwarded(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhoneForwarded"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"19 1 23 5 19 9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"5\" x2=\"23\" y2=\"5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "19 1 23 5 19 9" /> < line x1 = "15" y1 = "5" x2 = "23" y2 = "5" /> < path d =
+        "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPhoneIncoming")]
@@ -5740,9 +6147,12 @@ pub fn FiPhoneForwarded(
 #[component]
 pub fn FiPhoneIncoming(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5752,18 +6162,18 @@ pub fn FiPhoneIncoming(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhoneIncoming"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 2 16 8 22 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"1\" x2=\"16\" y2=\"8\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "16 2 16 8 22 8" /> < line x1 = "23" y1 = "1" x2 = "16" y2 = "8" /> < path d =
+        "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPhoneMissed")]
@@ -5771,9 +6181,12 @@ pub fn FiPhoneIncoming(
 #[component]
 pub fn FiPhoneMissed(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5783,18 +6196,18 @@ pub fn FiPhoneMissed(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhoneMissed"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"1\" x2=\"17\" y2=\"7\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"1\" x2=\"23\" y2=\"7\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "23" y1 = "1" x2
+        = "17" y2 = "7" /> < line x1 = "17" y1 = "1" x2 = "23" y2 = "7" /> < path d =
+        "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPhoneOff")]
@@ -5802,9 +6215,12 @@ pub fn FiPhoneMissed(
 #[component]
 pub fn FiPhoneOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5814,18 +6230,17 @@ pub fn FiPhoneOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhoneOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"1\" x2=\"1\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67m-2.67-3.34a19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"
+        /> < line x1 = "23" y1 = "1" x2 = "1" y2 = "23" /> < / svg >
     }
 }
 #[cfg(feature = "FiPhoneOutgoing")]
@@ -5833,9 +6248,12 @@ pub fn FiPhoneOff(
 #[component]
 pub fn FiPhoneOutgoing(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5845,18 +6263,18 @@ pub fn FiPhoneOutgoing(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPhoneOutgoing"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"23 7 23 1 17 1\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"16\" y1=\"8\" x2=\"23\" y2=\"1\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "23 7 23 1 17 1" /> < line x1 = "16" y1 = "8" x2 = "23" y2 = "1" /> < path d =
+        "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPieChart")]
@@ -5864,9 +6282,12 @@ pub fn FiPhoneOutgoing(
 #[component]
 pub fn FiPieChart(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5876,18 +6297,17 @@ pub fn FiPieChart(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPieChart"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21.21 15.89A10 10 0 1 1 8 2.83\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22 12A10 10 0 0 0 12 2v10z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21.21 15.89A10 10 0 1 1 8 2.83" /> < path d = "M22 12A10 10 0 0 0 12 2v10z" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiPlay")]
@@ -5895,9 +6315,12 @@ pub fn FiPieChart(
 #[component]
 pub fn FiPlay(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5907,18 +6330,16 @@ pub fn FiPlay(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPlay"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"5 3 19 12 5 21 5 3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "5 3 19 12 5 21 5 3" /> < / svg >
     }
 }
 #[cfg(feature = "FiPlayCircle")]
@@ -5926,9 +6347,12 @@ pub fn FiPlay(
 #[component]
 pub fn FiPlayCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5938,18 +6362,16 @@ pub fn FiPlayCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPlayCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"10 8 16 12 10 16 10 8\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < polygon points = "10 8 16 12 10 16 10 8" /> < / svg >
     }
 }
 #[cfg(feature = "FiPlus")]
@@ -5957,9 +6379,12 @@ pub fn FiPlayCircle(
 #[component]
 pub fn FiPlus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -5969,18 +6394,16 @@ pub fn FiPlus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPlus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "12" y1 = "5" x2
+        = "12" y2 = "19" /> < line x1 = "5" y1 = "12" x2 = "19" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiPlusCircle")]
@@ -5988,9 +6411,12 @@ pub fn FiPlus(
 #[component]
 pub fn FiPlusCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6000,18 +6426,17 @@ pub fn FiPlusCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPlusCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "12" y1 = "8" x2 = "12" y2 = "16" /> < line x1 = "8" y1 =
+        "12" x2 = "16" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiPlusSquare")]
@@ -6019,9 +6444,12 @@ pub fn FiPlusCircle(
 #[component]
 pub fn FiPlusSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6031,18 +6459,17 @@ pub fn FiPlusSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPlusSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8\" y1=\"12\" x2=\"16\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "12" y1 = "8" x2 = "12" y2
+        = "16" /> < line x1 = "8" y1 = "12" x2 = "16" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiPocket")]
@@ -6050,9 +6477,12 @@ pub fn FiPlusSquare(
 #[component]
 pub fn FiPocket(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6062,18 +6492,17 @@ pub fn FiPocket(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPocket"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"8 10 12 14 16 10\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z" />
+        < polyline points = "8 10 12 14 16 10" /> < / svg >
     }
 }
 #[cfg(feature = "FiPower")]
@@ -6081,9 +6510,12 @@ pub fn FiPocket(
 #[component]
 pub fn FiPower(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6093,18 +6525,17 @@ pub fn FiPower(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPower"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M18.36 6.64a9 9 0 1 1-12.73 0\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"2\" x2=\"12\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M18.36 6.64a9 9 0 1 1-12.73 0" /> < line x1 = "12" y1 = "2" x2 = "12" y2 = "12"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiPrinter")]
@@ -6112,9 +6543,12 @@ pub fn FiPower(
 #[component]
 pub fn FiPrinter(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6124,18 +6558,18 @@ pub fn FiPrinter(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiPrinter"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"6 9 6 2 18 2 18 9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"6\" y=\"14\" width=\"12\" height=\"8\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "6 9 6 2 18 2 18 9" /> < path d =
+        "M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /> <
+        rect x = "6" y = "14" width = "12" height = "8" /> < / svg >
     }
 }
 #[cfg(feature = "FiRadio")]
@@ -6143,9 +6577,12 @@ pub fn FiPrinter(
 #[component]
 pub fn FiRadio(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6155,18 +6592,18 @@ pub fn FiRadio(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRadio"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "2" /> < path d =
+        "M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiRefreshCcw")]
@@ -6174,9 +6611,12 @@ pub fn FiRadio(
 #[component]
 pub fn FiRefreshCcw(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6186,18 +6626,18 @@ pub fn FiRefreshCcw(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRefreshCcw"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"1 4 1 10 7 10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"23 20 23 14 17 14\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "1 4 1 10 7 10" /> < polyline points = "23 20 23 14 17 14" /> < path d =
+        "M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiRefreshCw")]
@@ -6205,9 +6645,12 @@ pub fn FiRefreshCcw(
 #[component]
 pub fn FiRefreshCw(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6217,18 +6660,18 @@ pub fn FiRefreshCw(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRefreshCw"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"23 4 23 10 17 10\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"1 20 1 14 7 14\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "23 4 23 10 17 10" /> < polyline points = "1 20 1 14 7 14" /> < path d =
+        "M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiRepeat")]
@@ -6236,9 +6679,12 @@ pub fn FiRefreshCw(
 #[component]
 pub fn FiRepeat(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6248,18 +6694,17 @@ pub fn FiRepeat(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRepeat"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 1 21 5 17 9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3 11V9a4 4 0 0 1 4-4h14\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 23 3 19 7 15\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 13v2a4 4 0 0 1-4 4H3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "17 1 21 5 17 9" /> < path d = "M3 11V9a4 4 0 0 1 4-4h14" /> < polyline points =
+        "7 23 3 19 7 15" /> < path d = "M21 13v2a4 4 0 0 1-4 4H3" /> < / svg >
     }
 }
 #[cfg(feature = "FiRewind")]
@@ -6267,9 +6712,12 @@ pub fn FiRepeat(
 #[component]
 pub fn FiRewind(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6279,18 +6727,17 @@ pub fn FiRewind(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRewind"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"11 19 2 12 11 5 11 19\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"22 19 13 12 22 5 22 19\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "11 19 2 12 11 5 11 19" /> < polygon points = "22 19 13 12 22 5 22 19" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiRotateCcw")]
@@ -6298,9 +6745,12 @@ pub fn FiRewind(
 #[component]
 pub fn FiRotateCcw(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6310,18 +6760,16 @@ pub fn FiRotateCcw(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRotateCcw"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"1 4 1 10 7 10\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.51 15a9 9 0 1 0 2.13-9.36L1 10\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "1 4 1 10 7 10" /> < path d = "M3.51 15a9 9 0 1 0 2.13-9.36L1 10" /> < / svg >
     }
 }
 #[cfg(feature = "FiRotateCw")]
@@ -6329,9 +6777,12 @@ pub fn FiRotateCcw(
 #[component]
 pub fn FiRotateCw(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6341,18 +6792,17 @@ pub fn FiRotateCw(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRotateCw"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"23 4 23 10 17 10\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.49 15a9 9 0 1 1-2.12-9.36L23 10\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "23 4 23 10 17 10" /> < path d = "M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiRss")]
@@ -6360,9 +6810,12 @@ pub fn FiRotateCw(
 #[component]
 pub fn FiRss(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6372,18 +6825,17 @@ pub fn FiRss(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiRss"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 11a9 9 0 0 1 9 9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 4a16 16 0 0 1 16 16\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"5\" cy=\"19\" r=\"1\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M4 11a9 9 0 0 1 9 9" /> < path d = "M4 4a16 16 0 0 1 16 16" /> < circle cx = "5"
+        cy = "19" r = "1" /> < / svg >
     }
 }
 #[cfg(feature = "FiSave")]
@@ -6391,9 +6843,12 @@ pub fn FiRss(
 #[component]
 pub fn FiSave(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6403,18 +6858,18 @@ pub fn FiSave(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSave"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 21 17 13 7 13 7 21\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"7 3 7 8 15 8\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" /> < polyline
+        points = "17 21 17 13 7 13 7 21" /> < polyline points = "7 3 7 8 15 8" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiScissors")]
@@ -6422,9 +6877,12 @@ pub fn FiSave(
 #[component]
 pub fn FiScissors(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6434,18 +6892,18 @@ pub fn FiScissors(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiScissors"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"6\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"18\" r=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"20\" y1=\"4\" x2=\"8.12\" y2=\"15.88\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14.47\" y1=\"14.48\" x2=\"20\" y2=\"20\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8.12\" y1=\"8.12\" x2=\"12\" y2=\"12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "6" cy = "6" r
+        = "3" /> < circle cx = "6" cy = "18" r = "3" /> < line x1 = "20" y1 = "4" x2 =
+        "8.12" y2 = "15.88" /> < line x1 = "14.47" y1 = "14.48" x2 = "20" y2 = "20" /> <
+        line x1 = "8.12" y1 = "8.12" x2 = "12" y2 = "12" /> < / svg >
     }
 }
 #[cfg(feature = "FiSearch")]
@@ -6453,9 +6911,12 @@ pub fn FiScissors(
 #[component]
 pub fn FiSearch(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6465,18 +6926,16 @@ pub fn FiSearch(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSearch"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"11\" cy=\"11\" r=\"8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "11" cy = "11"
+        r = "8" /> < line x1 = "21" y1 = "21" x2 = "16.65" y2 = "16.65" /> < / svg >
     }
 }
 #[cfg(feature = "FiSend")]
@@ -6484,9 +6943,12 @@ pub fn FiSearch(
 #[component]
 pub fn FiSend(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6496,18 +6958,16 @@ pub fn FiSend(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSend"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"22\" y1=\"2\" x2=\"11\" y2=\"13\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"22 2 15 22 11 13 2 9 22 2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "22" y1 = "2" x2
+        = "11" y2 = "13" /> < polygon points = "22 2 15 22 11 13 2 9 22 2" /> < / svg >
     }
 }
 #[cfg(feature = "FiServer")]
@@ -6515,9 +6975,12 @@ pub fn FiSend(
 #[component]
 pub fn FiServer(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6527,18 +6990,18 @@ pub fn FiServer(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiServer"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"2\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"14\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"6\" x2=\"6.01\" y2=\"6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"18\" x2=\"6.01\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "2" y = "2" width
+        = "20" height = "8" rx = "2" ry = "2" /> < rect x = "2" y = "14" width = "20"
+        height = "8" rx = "2" ry = "2" /> < line x1 = "6" y1 = "6" x2 = "6.01" y2 = "6"
+        /> < line x1 = "6" y1 = "18" x2 = "6.01" y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiSettings")]
@@ -6546,9 +7009,12 @@ pub fn FiServer(
 #[component]
 pub fn FiSettings(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6558,18 +7024,18 @@ pub fn FiSettings(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSettings"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"3\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "3" /> < path d =
+        "M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiShare")]
@@ -6577,9 +7043,12 @@ pub fn FiSettings(
 #[component]
 pub fn FiShare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6589,18 +7058,17 @@ pub fn FiShare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 6 12 2 8 6\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"2\" x2=\"12\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /> < polyline points =
+        "16 6 12 2 8 6" /> < line x1 = "12" y1 = "2" x2 = "12" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiShare2")]
@@ -6608,9 +7076,12 @@ pub fn FiShare(
 #[component]
 pub fn FiShare2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6620,18 +7091,18 @@ pub fn FiShare2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShare2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18\" cy=\"5\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"6\" cy=\"12\" r=\"3\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18\" cy=\"19\" r=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"8.59\" y1=\"13.51\" x2=\"15.42\" y2=\"17.49\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15.41\" y1=\"6.51\" x2=\"8.59\" y2=\"10.49\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "18" cy = "5" r
+        = "3" /> < circle cx = "6" cy = "12" r = "3" /> < circle cx = "18" cy = "19" r =
+        "3" /> < line x1 = "8.59" y1 = "13.51" x2 = "15.42" y2 = "17.49" /> < line x1 =
+        "15.41" y1 = "6.51" x2 = "8.59" y2 = "10.49" /> < / svg >
     }
 }
 #[cfg(feature = "FiShield")]
@@ -6639,9 +7110,12 @@ pub fn FiShare2(
 #[component]
 pub fn FiShield(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6651,18 +7125,16 @@ pub fn FiShield(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShield"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /> < / svg >
     }
 }
 #[cfg(feature = "FiShieldOff")]
@@ -6670,9 +7142,12 @@ pub fn FiShield(
 #[component]
 pub fn FiShieldOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6682,18 +7157,18 @@ pub fn FiShieldOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShieldOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M4.73 4.73L4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18" /> < path d =
+        "M4.73 4.73L4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38" /> < line x1 = "1"
+        y1 = "1" x2 = "23" y2 = "23" /> < / svg >
     }
 }
 #[cfg(feature = "FiShoppingBag")]
@@ -6701,9 +7176,12 @@ pub fn FiShieldOff(
 #[component]
 pub fn FiShoppingBag(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6713,18 +7191,17 @@ pub fn FiShoppingBag(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShoppingBag"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 10a4 4 0 0 1-8 0\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /> < line x1 = "3" y1 = "6"
+        x2 = "21" y2 = "6" /> < path d = "M16 10a4 4 0 0 1-8 0" /> < / svg >
     }
 }
 #[cfg(feature = "FiShoppingCart")]
@@ -6732,9 +7209,12 @@ pub fn FiShoppingBag(
 #[component]
 pub fn FiShoppingCart(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6744,18 +7224,17 @@ pub fn FiShoppingCart(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShoppingCart"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"9\" cy=\"21\" r=\"1\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"20\" cy=\"21\" r=\"1\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "9" cy = "21" r
+        = "1" /> < circle cx = "20" cy = "21" r = "1" /> < path d =
+        "M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /> < / svg >
     }
 }
 #[cfg(feature = "FiShuffle")]
@@ -6763,9 +7242,12 @@ pub fn FiShoppingCart(
 #[component]
 pub fn FiShuffle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6775,18 +7257,18 @@ pub fn FiShuffle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiShuffle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 3 21 3 21 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"20\" x2=\"21\" y2=\"3\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"21 16 21 21 16 21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"15\" x2=\"21\" y2=\"21\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"4\" x2=\"9\" y2=\"9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "16 3 21 3 21 8" /> < line x1 = "4" y1 = "20" x2 = "21" y2 = "3" /> < polyline
+        points = "21 16 21 21 16 21" /> < line x1 = "15" y1 = "15" x2 = "21" y2 = "21" />
+        < line x1 = "4" y1 = "4" x2 = "9" y2 = "9" /> < / svg >
     }
 }
 #[cfg(feature = "FiSidebar")]
@@ -6794,9 +7276,12 @@ pub fn FiShuffle(
 #[component]
 pub fn FiSidebar(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6806,18 +7291,17 @@ pub fn FiSidebar(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSidebar"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"3\" x2=\"9\" y2=\"21\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "9" y1 = "3" x2 = "9" y2 =
+        "21" /> < / svg >
     }
 }
 #[cfg(feature = "FiSkipBack")]
@@ -6825,9 +7309,12 @@ pub fn FiSidebar(
 #[component]
 pub fn FiSkipBack(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6837,18 +7324,17 @@ pub fn FiSkipBack(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSkipBack"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"19 20 9 12 19 4 19 20\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"5\" y1=\"19\" x2=\"5\" y2=\"5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "19 20 9 12 19 4 19 20" /> < line x1 = "5" y1 = "19" x2 = "5" y2 = "5" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiSkipForward")]
@@ -6856,9 +7342,12 @@ pub fn FiSkipBack(
 #[component]
 pub fn FiSkipForward(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6868,18 +7357,17 @@ pub fn FiSkipForward(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSkipForward"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"5 4 15 12 5 20 5 4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"19\" y1=\"5\" x2=\"19\" y2=\"19\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "5 4 15 12 5 20 5 4" /> < line x1 = "19" y1 = "5" x2 = "19" y2 = "19" /> < / svg
+        >
     }
 }
 #[cfg(feature = "FiSlack")]
@@ -6887,9 +7375,12 @@ pub fn FiSkipForward(
 #[component]
 pub fn FiSlack(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6899,18 +7390,30 @@ pub fn FiSlack(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSlack"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"
+        /> < path d =
+        "M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" /> < path
+        d =
+        "M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"
+        /> < path d =
+        "M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" /> < path d
+        =
+        "M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"
+        /> < path d =
+        "M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" /> < path
+        d =
+        "M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"
+        /> < path d = "M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiSlash")]
@@ -6918,9 +7421,12 @@ pub fn FiSlack(
 #[component]
 pub fn FiSlash(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6930,18 +7436,16 @@ pub fn FiSlash(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSlash"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.93\" y1=\"4.93\" x2=\"19.07\" y2=\"19.07\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "4.93" y1 = "4.93" x2 = "19.07" y2 = "19.07" /> < / svg >
     }
 }
 #[cfg(feature = "FiSliders")]
@@ -6949,9 +7453,12 @@ pub fn FiSlash(
 #[component]
 pub fn FiSliders(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6961,18 +7468,21 @@ pub fn FiSliders(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSliders"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"21\" x2=\"4\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"10\" x2=\"4\" y2=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"21\" x2=\"12\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"8\" x2=\"12\" y2=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"20\" y1=\"21\" x2=\"20\" y2=\"16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"20\" y1=\"12\" x2=\"20\" y2=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"14\" x2=\"7\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"8\" x2=\"15\" y2=\"8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"16\" x2=\"23\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "4" y1 = "21" x2
+        = "4" y2 = "14" /> < line x1 = "4" y1 = "10" x2 = "4" y2 = "3" /> < line x1 =
+        "12" y1 = "21" x2 = "12" y2 = "12" /> < line x1 = "12" y1 = "8" x2 = "12" y2 =
+        "3" /> < line x1 = "20" y1 = "21" x2 = "20" y2 = "16" /> < line x1 = "20" y1 =
+        "12" x2 = "20" y2 = "3" /> < line x1 = "1" y1 = "14" x2 = "7" y2 = "14" /> < line
+        x1 = "9" y1 = "8" x2 = "15" y2 = "8" /> < line x1 = "17" y1 = "16" x2 = "23" y2 =
+        "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiSmartphone")]
@@ -6980,9 +7490,12 @@ pub fn FiSliders(
 #[component]
 pub fn FiSmartphone(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -6992,18 +7505,17 @@ pub fn FiSmartphone(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSmartphone"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "5" y = "2" width
+        = "14" height = "20" rx = "2" ry = "2" /> < line x1 = "12" y1 = "18" x2 = "12.01"
+        y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiSmile")]
@@ -7011,9 +7523,12 @@ pub fn FiSmartphone(
 #[component]
 pub fn FiSmile(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7023,18 +7538,17 @@ pub fn FiSmile(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSmile"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        viewBox = "0 0 24 24" width = "24" height = "24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8 14s1.5 2 4 2 4-2 4-2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"9\" x2=\"9.01\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"9\" x2=\"15.01\" y2=\"9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < path d = "M8 14s1.5 2 4 2 4-2 4-2" /> < line x1 = "9" y1 = "9" x2 =
+        "9.01" y2 = "9" /> < line x1 = "15" y1 = "9" x2 = "15.01" y2 = "9" /> < / svg >
     }
 }
 #[cfg(feature = "FiSpeaker")]
@@ -7042,9 +7556,12 @@ pub fn FiSmile(
 #[component]
 pub fn FiSpeaker(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7054,18 +7571,17 @@ pub fn FiSpeaker(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSpeaker"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" ry=\"2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"14\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"6\" x2=\"12.01\" y2=\"6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "4" y = "2" width
+        = "16" height = "20" rx = "2" ry = "2" /> < circle cx = "12" cy = "14" r = "4" />
+        < line x1 = "12" y1 = "6" x2 = "12.01" y2 = "6" /> < / svg >
     }
 }
 #[cfg(feature = "FiSquare")]
@@ -7073,9 +7589,12 @@ pub fn FiSpeaker(
 #[component]
 pub fn FiSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7085,18 +7604,16 @@ pub fn FiSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < / svg >
     }
 }
 #[cfg(feature = "FiStar")]
@@ -7104,9 +7621,12 @@ pub fn FiSquare(
 #[component]
 pub fn FiStar(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7116,18 +7636,17 @@ pub fn FiStar(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiStar"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiStopCircle")]
@@ -7135,9 +7654,12 @@ pub fn FiStar(
 #[component]
 pub fn FiStopCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7147,18 +7669,16 @@ pub fn FiStopCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiStopCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"9\" y=\"9\" width=\"6\" height=\"6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < rect x = "9" y = "9" width = "6" height = "6" /> < / svg >
     }
 }
 #[cfg(feature = "FiSun")]
@@ -7166,9 +7686,12 @@ pub fn FiStopCircle(
 #[component]
 pub fn FiSun(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7178,18 +7701,21 @@ pub fn FiSun(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSun"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"21\" x2=\"12\" y2=\"23\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.22\" y1=\"4.22\" x2=\"5.64\" y2=\"5.64\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18.36\" y1=\"18.36\" x2=\"19.78\" y2=\"19.78\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"12\" x2=\"3\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"12\" x2=\"23\" y2=\"12\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.22\" y1=\"19.78\" x2=\"5.64\" y2=\"18.36\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18.36\" y1=\"5.64\" x2=\"19.78\" y2=\"4.22\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "5" /> < line x1 = "12" y1 = "1" x2 = "12" y2 = "3" /> < line x1 = "12" y1 =
+        "21" x2 = "12" y2 = "23" /> < line x1 = "4.22" y1 = "4.22" x2 = "5.64" y2 =
+        "5.64" /> < line x1 = "18.36" y1 = "18.36" x2 = "19.78" y2 = "19.78" /> < line x1
+        = "1" y1 = "12" x2 = "3" y2 = "12" /> < line x1 = "21" y1 = "12" x2 = "23" y2 =
+        "12" /> < line x1 = "4.22" y1 = "19.78" x2 = "5.64" y2 = "18.36" /> < line x1 =
+        "18.36" y1 = "5.64" x2 = "19.78" y2 = "4.22" /> < / svg >
     }
 }
 #[cfg(feature = "FiSunrise")]
@@ -7197,9 +7723,12 @@ pub fn FiSun(
 #[component]
 pub fn FiSunrise(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7209,18 +7738,20 @@ pub fn FiSunrise(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSunrise"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 18a5 5 0 0 0-10 0\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"2\" x2=\"12\" y2=\"9\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.22\" y1=\"10.22\" x2=\"5.64\" y2=\"11.64\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"18\" x2=\"3\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"18\" x2=\"23\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18.36\" y1=\"11.64\" x2=\"19.78\" y2=\"10.22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"22\" x2=\"1\" y2=\"22\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"8 6 12 2 16 6\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M17 18a5 5 0 0 0-10 0" /> < line x1 = "12" y1 = "2" x2 = "12" y2 = "9" /> < line
+        x1 = "4.22" y1 = "10.22" x2 = "5.64" y2 = "11.64" /> < line x1 = "1" y1 = "18" x2
+        = "3" y2 = "18" /> < line x1 = "21" y1 = "18" x2 = "23" y2 = "18" /> < line x1 =
+        "18.36" y1 = "11.64" x2 = "19.78" y2 = "10.22" /> < line x1 = "23" y1 = "22" x2 =
+        "1" y2 = "22" /> < polyline points = "8 6 12 2 16 6" /> < / svg >
     }
 }
 #[cfg(feature = "FiSunset")]
@@ -7228,9 +7759,12 @@ pub fn FiSunrise(
 #[component]
 pub fn FiSunset(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7240,18 +7774,20 @@ pub fn FiSunset(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiSunset"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 18a5 5 0 0 0-10 0\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"9\" x2=\"12\" y2=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4.22\" y1=\"10.22\" x2=\"5.64\" y2=\"11.64\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"18\" x2=\"3\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"21\" y1=\"18\" x2=\"23\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18.36\" y1=\"11.64\" x2=\"19.78\" y2=\"10.22\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"22\" x2=\"1\" y2=\"22\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 5 12 9 8 5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M17 18a5 5 0 0 0-10 0" /> < line x1 = "12" y1 = "9" x2 = "12" y2 = "2" /> < line
+        x1 = "4.22" y1 = "10.22" x2 = "5.64" y2 = "11.64" /> < line x1 = "1" y1 = "18" x2
+        = "3" y2 = "18" /> < line x1 = "21" y1 = "18" x2 = "23" y2 = "18" /> < line x1 =
+        "18.36" y1 = "11.64" x2 = "19.78" y2 = "10.22" /> < line x1 = "23" y1 = "22" x2 =
+        "1" y2 = "22" /> < polyline points = "16 5 12 9 8 5" /> < / svg >
     }
 }
 #[cfg(feature = "FiTable")]
@@ -7259,9 +7795,12 @@ pub fn FiSunset(
 #[component]
 pub fn FiTable(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7271,18 +7810,17 @@ pub fn FiTable(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTable"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiTablet")]
@@ -7290,9 +7828,12 @@ pub fn FiTable(
 #[component]
 pub fn FiTablet(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7302,18 +7843,17 @@ pub fn FiTablet(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTablet"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"4\" y=\"2\" width=\"16\" height=\"20\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"18\" x2=\"12.01\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "4" y = "2" width
+        = "16" height = "20" rx = "2" ry = "2" /> < line x1 = "12" y1 = "18" x2 = "12.01"
+        y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiTag")]
@@ -7321,9 +7861,12 @@ pub fn FiTablet(
 #[component]
 pub fn FiTag(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7333,18 +7876,17 @@ pub fn FiTag(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTag"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"7\" y1=\"7\" x2=\"7.01\" y2=\"7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+        /> < line x1 = "7" y1 = "7" x2 = "7.01" y2 = "7" /> < / svg >
     }
 }
 #[cfg(feature = "FiTarget")]
@@ -7352,9 +7894,12 @@ pub fn FiTag(
 #[component]
 pub fn FiTarget(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7364,18 +7909,17 @@ pub fn FiTarget(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTarget"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"6\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < circle cx = "12" cy = "12" r = "6" /> < circle cx = "12" cy = "12"
+        r = "2" /> < / svg >
     }
 }
 #[cfg(feature = "FiTerminal")]
@@ -7383,9 +7927,12 @@ pub fn FiTarget(
 #[component]
 pub fn FiTerminal(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7395,18 +7942,16 @@ pub fn FiTerminal(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTerminal"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"4 17 10 11 4 5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"19\" x2=\"20\" y2=\"19\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "4 17 10 11 4 5" /> < line x1 = "12" y1 = "19" x2 = "20" y2 = "19" /> < / svg >
     }
 }
 #[cfg(feature = "FiThermometer")]
@@ -7414,9 +7959,12 @@ pub fn FiTerminal(
 #[component]
 pub fn FiThermometer(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7426,18 +7974,16 @@ pub fn FiThermometer(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiThermometer"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" /> < / svg >
     }
 }
 #[cfg(feature = "FiThumbsDown")]
@@ -7445,9 +7991,12 @@ pub fn FiThermometer(
 #[component]
 pub fn FiThumbsDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7457,18 +8006,17 @@ pub fn FiThumbsDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiThumbsDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiThumbsUp")]
@@ -7476,9 +8024,12 @@ pub fn FiThumbsDown(
 #[component]
 pub fn FiThumbsUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7488,18 +8039,17 @@ pub fn FiThumbsUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiThumbsUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiToggleLeft")]
@@ -7507,9 +8057,12 @@ pub fn FiThumbsUp(
 #[component]
 pub fn FiToggleLeft(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7519,18 +8072,17 @@ pub fn FiToggleLeft(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiToggleLeft"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"5\" width=\"22\" height=\"14\" rx=\"7\" ry=\"7\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"8\" cy=\"12\" r=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "1" y = "5" width
+        = "22" height = "14" rx = "7" ry = "7" /> < circle cx = "8" cy = "12" r = "3" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiToggleRight")]
@@ -7538,9 +8090,12 @@ pub fn FiToggleLeft(
 #[component]
 pub fn FiToggleRight(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7550,18 +8105,17 @@ pub fn FiToggleRight(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiToggleRight"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"5\" width=\"22\" height=\"14\" rx=\"7\" ry=\"7\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"16\" cy=\"12\" r=\"3\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "1" y = "5" width
+        = "22" height = "14" rx = "7" ry = "7" /> < circle cx = "16" cy = "12" r = "3" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiTool")]
@@ -7569,9 +8123,12 @@ pub fn FiToggleRight(
 #[component]
 pub fn FiTool(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7581,18 +8138,17 @@ pub fn FiTool(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTool"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiTrash")]
@@ -7600,9 +8156,12 @@ pub fn FiTool(
 #[component]
 pub fn FiTrash(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7612,18 +8171,18 @@ pub fn FiTrash(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTrash"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"3 6 5 6 21 6\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "3 6 5 6 21 6" /> < path d =
+        "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiTrash2")]
@@ -7631,9 +8190,12 @@ pub fn FiTrash(
 #[component]
 pub fn FiTrash2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7643,18 +8205,19 @@ pub fn FiTrash2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTrash2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"3 6 5 6 21 6\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"10\" y1=\"11\" x2=\"10\" y2=\"17\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"14\" y1=\"11\" x2=\"14\" y2=\"17\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "3 6 5 6 21 6" /> < path d =
+        "M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+        /> < line x1 = "10" y1 = "11" x2 = "10" y2 = "17" /> < line x1 = "14" y1 = "11"
+        x2 = "14" y2 = "17" /> < / svg >
     }
 }
 #[cfg(feature = "FiTrello")]
@@ -7662,9 +8225,12 @@ pub fn FiTrash2(
 #[component]
 pub fn FiTrello(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7674,18 +8240,17 @@ pub fn FiTrello(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTrello"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        viewBox = "0 0 24 24" width = "24" height = "24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"7\" y=\"7\" width=\"3\" height=\"9\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"14\" y=\"7\" width=\"3\" height=\"5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < rect x = "7" y = "7" width = "3"
+        height = "9" /> < rect x = "14" y = "7" width = "3" height = "5" /> < / svg >
     }
 }
 #[cfg(feature = "FiTrendingDown")]
@@ -7693,9 +8258,12 @@ pub fn FiTrello(
 #[component]
 pub fn FiTrendingDown(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7705,18 +8273,17 @@ pub fn FiTrendingDown(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTrendingDown"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"23 18 13.5 8.5 8.5 13.5 1 6\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 18 23 18 23 12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "23 18 13.5 8.5 8.5 13.5 1 6" /> < polyline points = "17 18 23 18 23 12" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiTrendingUp")]
@@ -7724,9 +8291,12 @@ pub fn FiTrendingDown(
 #[component]
 pub fn FiTrendingUp(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7736,18 +8306,17 @@ pub fn FiTrendingUp(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTrendingUp"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"23 6 13.5 15.5 8.5 10.5 1 18\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 6 23 6 23 12\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "23 6 13.5 15.5 8.5 10.5 1 18" /> < polyline points = "17 6 23 6 23 12" /> < /
+        svg >
     }
 }
 #[cfg(feature = "FiTriangle")]
@@ -7755,9 +8324,12 @@ pub fn FiTrendingUp(
 #[component]
 pub fn FiTriangle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7767,18 +8339,17 @@ pub fn FiTriangle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTriangle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiTruck")]
@@ -7786,9 +8357,12 @@ pub fn FiTriangle(
 #[component]
 pub fn FiTruck(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7798,18 +8372,18 @@ pub fn FiTruck(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTruck"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"3\" width=\"15\" height=\"13\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"16 8 20 8 23 11 23 16 16 16 16 8\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"5.5\" cy=\"18.5\" r=\"2.5\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18.5\" cy=\"18.5\" r=\"2.5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "1" y = "3" width
+        = "15" height = "13" /> < polygon points = "16 8 20 8 23 11 23 16 16 16 16 8" />
+        < circle cx = "5.5" cy = "18.5" r = "2.5" /> < circle cx = "18.5" cy = "18.5" r =
+        "2.5" /> < / svg >
     }
 }
 #[cfg(feature = "FiTv")]
@@ -7817,9 +8391,12 @@ pub fn FiTruck(
 #[component]
 pub fn FiTv(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7829,18 +8406,17 @@ pub fn FiTv(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTv"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"2\" y=\"7\" width=\"20\" height=\"15\" rx=\"2\" ry=\"2\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 2 12 7 7 2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "2" y = "7" width
+        = "20" height = "15" rx = "2" ry = "2" /> < polyline points = "17 2 12 7 7 2" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiTwitch")]
@@ -7848,9 +8424,12 @@ pub fn FiTv(
 #[component]
 pub fn FiTwitch(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7860,18 +8439,16 @@ pub fn FiTwitch(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTwitch"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 2H3v16h5v4l4-4h5l4-4V2zM11 11V7M16 11V7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 2H3v16h5v4l4-4h5l4-4V2zM11 11V7M16 11V7" /> < / svg >
     }
 }
 #[cfg(feature = "FiTwitter")]
@@ -7879,9 +8456,12 @@ pub fn FiTwitch(
 #[component]
 pub fn FiTwitter(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7891,18 +8471,17 @@ pub fn FiTwitter(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiTwitter"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiType")]
@@ -7910,9 +8489,12 @@ pub fn FiTwitter(
 #[component]
 pub fn FiType(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7922,18 +8504,17 @@ pub fn FiType(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiType"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"4 7 4 4 20 4 20 7\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"20\" x2=\"15\" y2=\"20\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"4\" x2=\"12\" y2=\"20\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "4 7 4 4 20 4 20 7" /> < line x1 = "9" y1 = "20" x2 = "15" y2 = "20" /> < line x1
+        = "12" y1 = "4" x2 = "12" y2 = "20" /> < / svg >
     }
 }
 #[cfg(feature = "FiUmbrella")]
@@ -7941,9 +8522,12 @@ pub fn FiType(
 #[component]
 pub fn FiUmbrella(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7953,18 +8537,16 @@ pub fn FiUmbrella(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUmbrella"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7" /> < / svg >
     }
 }
 #[cfg(feature = "FiUnderline")]
@@ -7972,9 +8554,12 @@ pub fn FiUmbrella(
 #[component]
 pub fn FiUnderline(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -7984,18 +8569,17 @@ pub fn FiUnderline(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUnderline"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"4\" y1=\"21\" x2=\"20\" y2=\"21\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3" /> < line x1 = "4" y1 = "21" x2 = "20" y2
+        = "21" /> < / svg >
     }
 }
 #[cfg(feature = "FiUnlock")]
@@ -8003,9 +8587,12 @@ pub fn FiUnderline(
 #[component]
 pub fn FiUnlock(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8015,18 +8602,17 @@ pub fn FiUnlock(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUnlock"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"11\" width=\"18\" height=\"11\" rx=\"2\" ry=\"2\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M7 11V7a5 5 0 0 1 9.9-1\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "11" width
+        = "18" height = "11" rx = "2" ry = "2" /> < path d = "M7 11V7a5 5 0 0 1 9.9-1" />
+        < / svg >
     }
 }
 #[cfg(feature = "FiUpload")]
@@ -8034,9 +8620,12 @@ pub fn FiUnlock(
 #[component]
 pub fn FiUpload(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8046,18 +8635,17 @@ pub fn FiUpload(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUpload"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 8 12 3 7 8\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"3\" x2=\"12\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> < polyline points =
+        "17 8 12 3 7 8" /> < line x1 = "12" y1 = "3" x2 = "12" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiUploadCloud")]
@@ -8065,9 +8653,12 @@ pub fn FiUpload(
 #[component]
 pub fn FiUploadCloud(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8077,18 +8668,18 @@ pub fn FiUploadCloud(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUploadCloud"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 16 12 12 8 16\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"12\" x2=\"12\" y2=\"21\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"16 16 12 12 8 16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "16 16 12 12 8 16" /> < line x1 = "12" y1 = "12" x2 = "12" y2 = "21" /> < path d
+        = "M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" /> < polyline points =
+        "16 16 12 12 8 16" /> < / svg >
     }
 }
 #[cfg(feature = "FiUser")]
@@ -8096,9 +8687,12 @@ pub fn FiUploadCloud(
 #[component]
 pub fn FiUser(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8108,18 +8702,17 @@ pub fn FiUser(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUser"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"7\" r=\"4\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /> < circle cx = "12" cy = "7" r =
+        "4" /> < / svg >
     }
 }
 #[cfg(feature = "FiUserCheck")]
@@ -8127,9 +8720,12 @@ pub fn FiUser(
 #[component]
 pub fn FiUserCheck(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8139,18 +8735,17 @@ pub fn FiUserCheck(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUserCheck"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"8.5\" cy=\"7\" r=\"4\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"17 11 19 13 23 9\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> < circle cx = "8.5" cy = "7" r =
+        "4" /> < polyline points = "17 11 19 13 23 9" /> < / svg >
     }
 }
 #[cfg(feature = "FiUserMinus")]
@@ -8158,9 +8753,12 @@ pub fn FiUserCheck(
 #[component]
 pub fn FiUserMinus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8170,18 +8768,17 @@ pub fn FiUserMinus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUserMinus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"8.5\" cy=\"7\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"11\" x2=\"17\" y2=\"11\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> < circle cx = "8.5" cy = "7" r =
+        "4" /> < line x1 = "23" y1 = "11" x2 = "17" y2 = "11" /> < / svg >
     }
 }
 #[cfg(feature = "FiUserPlus")]
@@ -8189,9 +8786,12 @@ pub fn FiUserMinus(
 #[component]
 pub fn FiUserPlus(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8201,18 +8801,18 @@ pub fn FiUserPlus(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUserPlus"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"8.5\" cy=\"7\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"20\" y1=\"8\" x2=\"20\" y2=\"14\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"11\" x2=\"17\" y2=\"11\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> < circle cx = "8.5" cy = "7" r =
+        "4" /> < line x1 = "20" y1 = "8" x2 = "20" y2 = "14" /> < line x1 = "23" y1 =
+        "11" x2 = "17" y2 = "11" /> < / svg >
     }
 }
 #[cfg(feature = "FiUserX")]
@@ -8220,9 +8820,12 @@ pub fn FiUserPlus(
 #[component]
 pub fn FiUserX(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8232,18 +8835,18 @@ pub fn FiUserX(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUserX"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"8.5\" cy=\"7\" r=\"4\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"8\" x2=\"23\" y2=\"13\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"8\" x2=\"18\" y2=\"13\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> < circle cx = "8.5" cy = "7" r =
+        "4" /> < line x1 = "18" y1 = "8" x2 = "23" y2 = "13" /> < line x1 = "23" y1 = "8"
+        x2 = "18" y2 = "13" /> < / svg >
     }
 }
 #[cfg(feature = "FiUsers")]
@@ -8251,9 +8854,12 @@ pub fn FiUserX(
 #[component]
 pub fn FiUsers(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8263,18 +8869,18 @@ pub fn FiUsers(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiUsers"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"9\" cy=\"7\" r=\"4\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M23 21v-2a4 4 0 0 0-3-3.87\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 3.13a4 4 0 0 1 0 7.75\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /> < circle cx = "9" cy = "7" r = "4"
+        /> < path d = "M23 21v-2a4 4 0 0 0-3-3.87" /> < path d =
+        "M16 3.13a4 4 0 0 1 0 7.75" /> < / svg >
     }
 }
 #[cfg(feature = "FiVideo")]
@@ -8282,9 +8888,12 @@ pub fn FiUsers(
 #[component]
 pub fn FiVideo(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8294,18 +8903,17 @@ pub fn FiVideo(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVideo"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"23 7 16 12 23 17 23 7\" /><rect xmlns=\"http://www.w3.org/2000/svg\" x=\"1\" y=\"5\" width=\"15\" height=\"14\" rx=\"2\" ry=\"2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "23 7 16 12 23 17 23 7" /> < rect x = "1" y = "5" width = "15" height = "14" rx =
+        "2" ry = "2" /> < / svg >
     }
 }
 #[cfg(feature = "FiVideoOff")]
@@ -8313,9 +8921,12 @@ pub fn FiVideo(
 #[component]
 pub fn FiVideoOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8325,18 +8936,17 @@ pub fn FiVideoOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVideoOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10"
+        /> < line x1 = "1" y1 = "1" x2 = "23" y2 = "23" /> < / svg >
     }
 }
 #[cfg(feature = "FiVoicemail")]
@@ -8344,9 +8954,12 @@ pub fn FiVideoOff(
 #[component]
 pub fn FiVoicemail(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8356,18 +8969,17 @@ pub fn FiVoicemail(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVoicemail"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"5.5\" cy=\"11.5\" r=\"4.5\" /><circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"18.5\" cy=\"11.5\" r=\"4.5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"5.5\" y1=\"16\" x2=\"18.5\" y2=\"16\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "5.5" cy =
+        "11.5" r = "4.5" /> < circle cx = "18.5" cy = "11.5" r = "4.5" /> < line x1 =
+        "5.5" y1 = "16" x2 = "18.5" y2 = "16" /> < / svg >
     }
 }
 #[cfg(feature = "FiVolume")]
@@ -8375,9 +8987,12 @@ pub fn FiVoicemail(
 #[component]
 pub fn FiVolume(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8387,18 +9002,16 @@ pub fn FiVolume(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVolume"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "11 5 6 9 2 9 2 15 6 15 11 19 11 5" /> < / svg >
     }
 }
 #[cfg(feature = "FiVolume1")]
@@ -8406,9 +9019,12 @@ pub fn FiVolume(
 #[component]
 pub fn FiVolume1(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8418,18 +9034,17 @@ pub fn FiVolume1(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVolume1"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M15.54 8.46a5 5 0 0 1 0 7.07\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "11 5 6 9 2 9 2 15 6 15 11 19 11 5" /> < path d = "M15.54 8.46a5 5 0 0 1 0 7.07"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiVolume2")]
@@ -8437,9 +9052,12 @@ pub fn FiVolume1(
 #[component]
 pub fn FiVolume2(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8449,18 +9067,17 @@ pub fn FiVolume2(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVolume2"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "11 5 6 9 2 9 2 15 6 15 11 19 11 5" /> < path d =
+        "M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" /> < / svg >
     }
 }
 #[cfg(feature = "FiVolumeX")]
@@ -8468,9 +9085,12 @@ pub fn FiVolume2(
 #[component]
 pub fn FiVolumeX(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8480,18 +9100,17 @@ pub fn FiVolumeX(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiVolumeX"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"11 5 6 9 2 9 2 15 6 15 11 19 11 5\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"23\" y1=\"9\" x2=\"17\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"17\" y1=\"9\" x2=\"23\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "11 5 6 9 2 9 2 15 6 15 11 19 11 5" /> < line x1 = "23" y1 = "9" x2 = "17" y2 =
+        "15" /> < line x1 = "17" y1 = "9" x2 = "23" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiWatch")]
@@ -8499,9 +9118,12 @@ pub fn FiVolumeX(
 #[component]
 pub fn FiWatch(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8511,18 +9133,18 @@ pub fn FiWatch(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiWatch"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"7\" /><polyline xmlns=\"http://www.w3.org/2000/svg\" points=\"12 9 12 12 13.5 13.5\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "7" /> < polyline points = "12 9 12 12 13.5 13.5" /> < path d =
+        "M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiWifi")]
@@ -8530,9 +9152,12 @@ pub fn FiWatch(
 #[component]
 pub fn FiWifi(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8542,18 +9167,18 @@ pub fn FiWifi(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiWifi"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.55a11 11 0 0 1 14.08 0\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1.42 9a16 16 0 0 1 21.16 0\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M5 12.55a11 11 0 0 1 14.08 0" /> < path d = "M1.42 9a16 16 0 0 1 21.16 0" /> <
+        path d = "M8.53 16.11a6 6 0 0 1 6.95 0" /> < line x1 = "12" y1 = "20" x2 =
+        "12.01" y2 = "20" /> < / svg >
     }
 }
 #[cfg(feature = "FiWifiOff")]
@@ -8561,9 +9186,12 @@ pub fn FiWifi(
 #[component]
 pub fn FiWifiOff(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8573,18 +9201,20 @@ pub fn FiWifiOff(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiWifiOff"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"1\" y1=\"1\" x2=\"23\" y2=\"23\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M16.72 11.06A10.94 10.94 0 0 1 19 12.55\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M5 12.55a10.94 10.94 0 0 1 5.17-2.39\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M10.71 5.05A16 16 0 0 1 22.58 9\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1.42 9a15.91 15.91 0 0 1 4.7-2.88\" /><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M8.53 16.11a6 6 0 0 1 6.95 0\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "1" y1 = "1" x2 =
+        "23" y2 = "23" /> < path d = "M16.72 11.06A10.94 10.94 0 0 1 19 12.55" /> < path
+        d = "M5 12.55a10.94 10.94 0 0 1 5.17-2.39" /> < path d =
+        "M10.71 5.05A16 16 0 0 1 22.58 9" /> < path d =
+        "M1.42 9a15.91 15.91 0 0 1 4.7-2.88" /> < path d = "M8.53 16.11a6 6 0 0 1 6.95 0"
+        /> < line x1 = "12" y1 = "20" x2 = "12.01" y2 = "20" /> < / svg >
     }
 }
 #[cfg(feature = "FiWind")]
@@ -8592,9 +9222,12 @@ pub fn FiWifiOff(
 #[component]
 pub fn FiWind(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8604,18 +9237,17 @@ pub fn FiWind(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiWind"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"
+        /> < / svg >
     }
 }
 #[cfg(feature = "FiX")]
@@ -8623,9 +9255,12 @@ pub fn FiWind(
 #[component]
 pub fn FiX(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8635,18 +9270,16 @@ pub fn FiX(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiX"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<line xmlns=\"http://www.w3.org/2000/svg\" x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < line x1 = "18" y1 = "6" x2
+        = "6" y2 = "18" /> < line x1 = "6" y1 = "6" x2 = "18" y2 = "18" /> < / svg >
     }
 }
 #[cfg(feature = "FiXCircle")]
@@ -8654,9 +9287,12 @@ pub fn FiX(
 #[component]
 pub fn FiXCircle(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8666,18 +9302,17 @@ pub fn FiXCircle(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiXCircle"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<circle xmlns=\"http://www.w3.org/2000/svg\" cx=\"12\" cy=\"12\" r=\"10\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < circle cx = "12" cy = "12"
+        r = "10" /> < line x1 = "15" y1 = "9" x2 = "9" y2 = "15" /> < line x1 = "9" y1 =
+        "9" x2 = "15" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiXOctagon")]
@@ -8685,9 +9320,12 @@ pub fn FiXCircle(
 #[component]
 pub fn FiXOctagon(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8697,18 +9335,18 @@ pub fn FiXOctagon(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiXOctagon"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2" /> <
+        line x1 = "15" y1 = "9" x2 = "9" y2 = "15" /> < line x1 = "9" y1 = "9" x2 = "15"
+        y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiXSquare")]
@@ -8716,9 +9354,12 @@ pub fn FiXOctagon(
 #[component]
 pub fn FiXSquare(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8728,18 +9369,17 @@ pub fn FiXSquare(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiXSquare"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<rect xmlns=\"http://www.w3.org/2000/svg\" x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"9\" y1=\"9\" x2=\"15\" y2=\"15\" /><line xmlns=\"http://www.w3.org/2000/svg\" x1=\"15\" y1=\"9\" x2=\"9\" y2=\"15\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < rect x = "3" y = "3" width
+        = "18" height = "18" rx = "2" ry = "2" /> < line x1 = "9" y1 = "9" x2 = "15" y2 =
+        "15" /> < line x1 = "15" y1 = "9" x2 = "9" y2 = "15" /> < / svg >
     }
 }
 #[cfg(feature = "FiYoutube")]
@@ -8747,9 +9387,12 @@ pub fn FiXSquare(
 #[component]
 pub fn FiYoutube(
     cx: Scope,
-    /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
-    size: String,
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
     class: String,
@@ -8759,17 +9402,82 @@ pub fn FiYoutube(
     /// HTML style attribute.
     #[prop(into, optional)]
     style: String,
-    /// Accessibility title.
-    #[prop(into, optional)]
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiYoutube"))]
     title: String,
 ) -> impl IntoView {
     view! {
-        cx, < svg stroke = "currentColor" fill = "currentColor" stroke - width = "0"
-        width = "24" height = "24" viewBox = "0 0 24 24" fill = "none" stroke =
-        "currentColor" stroke - width = "2" stroke - linecap = "round" stroke - linejoin
-        = "round" class = class style = format!("color: {}; {}", color, style) width =
-        size.clone() height = size xmlns = "http://www.w3.org/2000/svg" inner_html =
-        "<path xmlns=\"http://www.w3.org/2000/svg\" d=\"M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z\" /><polygon xmlns=\"http://www.w3.org/2000/svg\" points=\"9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02\" />"
-        > < title > { title } < / title > < / svg >
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < path d =
+        "M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+        /> < polygon points = "9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /> < / svg >
+    }
+}
+#[cfg(feature = "FiZap")]
+///This icon requires the feature `FiZap` to be enabled.
+#[component]
+pub fn FiZap(
+    cx: Scope,
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
+    /// HTML class attribute.
+    #[prop(into, optional)]
+    class: String,
+    /// Color of the icon. For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into, optional, default = String::from("currentColor"))]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into, optional)]
+    style: String,
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiZap"))]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polygon points =
+        "13 2 3 14 12 14 11 22 21 10 12 10 13 2" /> < / svg >
+    }
+}
+#[cfg(feature = "FiZapOff")]
+///This icon requires the feature `FiZapOff` to be enabled.
+#[component]
+pub fn FiZapOff(
+    cx: Scope,
+    /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    width: String,
+    /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+    #[prop(into, optional, default = String::from("1em"))]
+    height: String,
+    /// HTML class attribute.
+    #[prop(into, optional)]
+    class: String,
+    /// Color of the icon. For twotone icons, the secondary color has an opacity (alpha value) of 0.4.
+    #[prop(into, optional, default = String::from("currentColor"))]
+    color: String,
+    /// HTML style attribute.
+    #[prop(into, optional)]
+    style: String,
+    /// ARIA accessibility title.
+    #[prop(into, optional, default = String::from("FiZapOff"))]
+    title: String,
+) -> impl IntoView {
+    view! {
+        cx, < svg class = class style = format!(" {}", style) width = width height =
+        height viewBox = "0 0 24 24" stroke - linecap = "round" stroke - linejoin =
+        "round" stroke - width = "2" stroke = "currentColor" fill = "none" role =
+        "graphics-symbol" > < title > { title } < / title > < polyline points =
+        "12.41 6.75 13 2 10.57 4.92" /> < polyline points = "18.57 12.91 21 10 15.66 10"
+        /> < polyline points = "8 8 3 14 12 14 11 22 16 16" /> < line x1 = "1" y1 = "1"
+        x2 = "23" y2 = "23" /> < / svg >
     }
 }
