@@ -9,7 +9,7 @@ fn main() {
     console_error_panic_hook::set_once();
     mount_to_body(|cx| {
         view! { cx,
-            <div>
+            <div style="font-size: 2em; color: #8f39d3;">
                 <Bs1Circle />
                 <FaBarsSolid />
                 <ImPagebreak />
