@@ -67,8 +67,36 @@ impl SvgIcon {
 
         let doc_comment = format!("This icon requires the feature `{feature_name}` to be enabled.");
         let component_ident = Ident::new(component_name, Span::call_site());
-        let svg_content = &self.svg.content;
-        let svg_attributes = attributes_token_stream(&self.svg.attributes)?;
+        let svg_content: TokenStream =
+            self.svg.content.parse().map_err(|err| {
+                anyhow::anyhow!("Error parsing svg content into TokenStream: {err}")
+            })?;
+
+        let x_attribute = attribute_token_stream(&self.svg.svg_attributes.x)?;
+        let y_attribute = attribute_token_stream(&self.svg.svg_attributes.y)?;
+        let view_box_attribute = attribute_token_stream(&self.svg.svg_attributes.view_box)?;
+        let stroke_linecap_attribute =
+            attribute_token_stream(&self.svg.svg_attributes.stroke_linecap)?;
+        let stroke_linejoin_attribute =
+            attribute_token_stream(&self.svg.svg_attributes.stroke_linejoin)?;
+        let stroke_width_attribute = attribute_token_stream(&self.svg.svg_attributes.stroke_width)?;
+        // We are fine is stroke is not set for the svg.
+        let stroke_attribute = attribute_token_stream(&self.svg.svg_attributes.stroke)?;
+        // Fill should most likely always default to use the "currentColor".
+        let fill_attribute = attribute_token_stream_opt(&self.svg.svg_attributes.fill)?
+            .unwrap_or_else(|| quote!(fill = "currentColor"));
+        let style_attribute = self
+            .svg
+            .svg_attributes
+            .style
+            .clone()
+            .map(|it| it.value)
+            .unwrap_or_default();
+        // role="graphics-symbol" should be used for icons.
+        let role_attribute = attribute_token_stream_opt(&self.svg.svg_attributes.role)?
+            .unwrap_or_else(|| quote!(role = "graphics-symbol"));
+
+        let style_format_string = format!("{style_attribute} {{}}");
 
         let tokens = quote! {
             #[cfg(feature = #feature_name)]
@@ -76,9 +104,12 @@ impl SvgIcon {
             #[component]
             pub fn #component_ident(
                 cx: Scope,
-                /// The size of the icon (The side length of the square surrounding the icon). Defaults to "1em".
+                /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
                 #[prop(into, optional, default = String::from("1em"))]
-                size: String,
+                width: String,
+                /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
+                #[prop(into, optional, default = String::from("1em"))]
+                height: String,
                 /// HTML class attribute.
                 #[prop(into, optional)]
                 class: String,
@@ -88,24 +119,30 @@ impl SvgIcon {
                 /// HTML style attribute.
                 #[prop(into, optional)]
                 style: String,
-                /// Accessibility title.
-                #[prop(into, optional)]
+                /// ARIA accessibility title.
+                #[prop(into, optional, default = String::from(#component_name))]
                 title: String,
             ) -> impl IntoView {
                 view! { cx,
+                    // As of https://stackoverflow.com/questions/18467982/are-svg-parameters-such-as-xmlns-and-version-needed, version and namespace information is not required for an inline-svg.
                     <svg
                         class=class
-                        stroke="currentColor"
-                        fill="currentColor"
-                        stroke_width="0"
-                        style=format!("{} color: {};", style, color)
-                        #svg_attributes
-                        width=size.clone()
-                        height=size
-                        xmlns="http://www.w3.org/2000/svg"
-                        inner_html=#svg_content
+                        style=format!(#style_format_string, style)
+                        #x_attribute
+                        #y_attribute
+                        width=width
+                        height=height
+                        #view_box_attribute
+                        #stroke_linecap_attribute
+                        #stroke_linejoin_attribute
+                        #stroke_width_attribute
+                        #stroke_attribute
+                        #fill_attribute
+                        #role_attribute
                     >
+                        // Title should be the first child!
                         <title>{title}</title>
+                        #svg_content
                     </svg>
                 }
             }
@@ -251,8 +288,22 @@ pub(crate) fn parse_raw_icon_name(
     }
 }
 
-fn attributes_token_stream(attributes: &[OwnedAttribute]) -> Result<TokenStream> {
-    attributes
+fn attribute_token_stream_opt(attribute: &Option<OwnedAttribute>) -> Result<Option<TokenStream>> {
+    if let Some(attribute) = attribute {
+        let attribute_val = &attribute.value;
+        let attr_ident: TokenStream = attribute
+            .name
+            .local_name
+            .parse()
+            .map_err(|_| anyhow::anyhow!("could not convert attributes to token stream"))?;
+        Ok(Some(quote!(#attr_ident=#attribute_val)))
+    } else {
+        Ok(None)
+    }
+}
+
+fn attribute_token_stream(attribute: &Option<OwnedAttribute>) -> Result<TokenStream> {
+    attribute
         .iter()
         .map(|attribute| {
             let attribute_val = &attribute.value;
