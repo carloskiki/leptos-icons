@@ -1,22 +1,18 @@
-use std::{path::PathBuf, sync::Arc};
+use std::{path::PathBuf, sync::Arc, vec};
 
 use anyhow::Result;
-use strum::IntoEnumIterator;
 use tokio::sync::RwLock;
 use tracing::{error, info};
 
 use crate::{
-    feature::Feature,
-    icon::IconMetadata,
+    icon::{IconMetadata, SvgIcon},
     library::{
-        cargo_toml::CargoToml, icon_module::IconModule, icons_md::Icons, lib_rs::LibRs,
-        readme_md::Readme, src_dir::SrcDir,
+        cargo_toml::CargoToml, icons_md::Icons, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir,
     },
     package::{Package, PackageType},
 };
 
 mod cargo_toml;
-mod icon_module;
 mod icons_md;
 mod lib_rs;
 mod readme_md;
@@ -50,7 +46,6 @@ impl Library {
                 lib_rs: LibRs {
                     path: root.join("src").join("lib.rs"),
                 },
-                icon_modules: Vec::new(),
             },
         }
     }
@@ -65,21 +60,13 @@ impl Library {
         self.icons_md.remove().await?;
         self.icons_md.init().await?;
 
-        let features = Arc::new(RwLock::new(Vec::<Feature>::new()));
-        let package_icon_metadata = Arc::new(RwLock::new(
-            PackageType::iter().map(|p| (p, vec![])).collect::<Vec<_>>(),
-        ));
-        let src_root = self.src_dir.path.clone();
-        let src_dir: Arc<RwLock<SrcDir>> = Arc::new(RwLock::new(self.src_dir));
+        let all_icons = Arc::new(RwLock::new(Vec::<SvgIcon>::new()));
 
         let handles = Package::all()
             .into_iter()
             .map(|package| {
                 let package_type = package.ty;
-                let features = features.clone();
-                let package_icon_metadata = package_icon_metadata.clone();
-                let src_root = src_root.clone();
-                let src_dir = src_dir.clone();
+                let all_icons = all_icons.clone();
                 tokio::spawn(async move {
                     if clean {
                         package.remove().await?;
@@ -101,55 +88,11 @@ impl Library {
                         error!(?package_type, ?err, "Could not get icons.");
                         err
                     })?;
-                    icons.sort_by(|icon_a, icon_b| icon_a.feature.name.cmp(&icon_b.feature.name));
 
-                    info!(?package_type, "Collecting icon metadata.");
+                    info!(?package_type, "Collecting icons.");
                     {
-                        let meta = icons
-                            .iter()
-                            .map(|icon| IconMetadata {
-                                name: icon.feature.name.clone(),
-                                categories: icon.categories.clone(),
-                            })
-                            .collect::<Vec<_>>();
-
-                        let mut lock = package_icon_metadata.write().await;
-                        lock.iter_mut()
-                            .find(|(p, _vec)| *p == package.ty)
-                            .expect("should have been initialized")
-                            .1 = meta;
-                    }
-
-                    info!(?package_type, "Collecting feature names.");
-                    {
-                        let mut lock = features.write().await;
-                        for icon in &icons {
-                            lock.push(icon.feature.clone());
-                        }
-                    }
-
-                    // Generate leptos icon components. Note that these sorted correctly, as the icons were already sorted.
-                    info!(?package_type, "Generating leptos icon components.");
-                    let icon_components = icons
-                        .into_iter()
-                        .map(|icon| {
-                            icon.create_leptos_icon_component().unwrap() // TODO:: Error handling
-                        })
-                        .collect::<Vec<_>>();
-
-                    // Writing leptos icon components.
-                    info!(
-                        ?package_type,
-                        num_components = icon_components.len(),
-                        "Creating library module containing leptos icon components."
-                    );
-                    let mut module = IconModule::new(src_root, package.meta.short_name);
-                    module
-                        .write_components(icon_components.iter().map(|it| it.0.as_bytes()))
-                        .await?;
-                    {
-                        let mut lock = src_dir.write().await;
-                        lock.add_module(module);
+                        let mut lock = all_icons.write().await;
+                        lock.append(&mut icons);
                     }
 
                     Ok::<(), anyhow::Error>(())
@@ -162,23 +105,19 @@ impl Library {
             }
         }
 
-        // Unpack src_dir, as it is no longer in shared access at this point...
-        self.src_dir = Arc::try_unwrap(src_dir).expect("single owner").into_inner();
-
-        info!(
-            num_modules = self.src_dir.modules().len(),
-            "Writing modules to lib.rs."
-        );
-        self.src_dir.write_module_declarations().await?;
-
-        let features = {
-            let mut lock = features.write().await;
+        let all_icons = {
+            let mut lock = all_icons.write().await;
             let num_features = lock.len();
             info!(num_features, "Sorting features to avoid churn.");
-            lock.sort();
+            lock.sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
             std::mem::take(&mut *lock)
         };
-        self.cargo_toml.append_features(features).await?;
+        self.src_dir.lib_rs.write_enum(&all_icons).await?;
+        self.src_dir
+            .lib_rs
+            .write_leptos_icon_component(&all_icons)
+            .await?;
+        self.cargo_toml.append_features(&all_icons).await?;
 
         info!("Writing README.md.");
         self.readme_md.write_usage().await?;
@@ -186,10 +125,24 @@ impl Library {
         self.readme_md.write_contribution().await?;
 
         info!("Writing ICONS.md.");
-        let package_icon_metadata = {
-            let mut lock = package_icon_metadata.write().await;
-            std::mem::take(&mut *lock)
-        };
+        let mut package_icon_metadata: Vec<(PackageType, Vec<IconMetadata>)> =
+            Package::all().into_iter().map(|p| (p.ty, vec![])).collect();
+        for package in Package::all() {
+            let meta = all_icons
+                .iter()
+                .filter(|icon| icon.source == package.ty)
+                .map(|icon| IconMetadata {
+                    name: icon.feature.name.clone(),
+                    categories: icon.categories.clone(),
+                })
+                .collect::<Vec<_>>();
+
+            package_icon_metadata
+                .iter_mut()
+                .find(|(p, _vec)| *p == package.ty)
+                .expect("should have been initialized")
+                .1 = meta;
+        }
         self.icons_md
             .write_icon_table(package_icon_metadata)
             .await?;

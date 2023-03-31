@@ -1,10 +1,5 @@
 use leptos::*;
-use leptos_icons::ai::*;
-use leptos_icons::bi::*;
-use leptos_icons::bs::*;
-use leptos_icons::fa::*;
-use leptos_icons::im::*;
-use leptos_icons::io::*;
+use leptos_icons::*;
 
 fn main() {
     _ = console_log::init_with_level(log::Level::Debug);
@@ -12,14 +7,22 @@ fn main() {
     mount_to_body(|cx| {
         view! { cx,
             <div style="font-size: 8em; color: #8f39d3;">
-                <AiPushpinTwotone />
-                <BiGraphql />
-                <Bs1Circle />
-                <FaBarsSolid />
-                <ImPagebreak />
-                <ImPageBreak />
-                <IoColorWand />
+                <LeptosIcon icon=Icon::BiGraphql width="2em" height="2em" />
+                <LeptosIcon icon=Icon::AiPushpinTwotone />
+                <LeptosIcon icon=Icon::BiGraphql />
+                <LeptosIcon icon=Icon::Bs1Circle />
+                <LeptosIcon icon=Icon::FaBarsSolid />
+                <LeptosIcon icon=Icon::ImPagebreak />
+                <LeptosIcon icon=Icon::ImPageBreak />
+                <MyIcon icon=Icon::IoColorWand />
             </div>
         }
     })
+}
+
+#[component]
+fn MyIcon(cx: Scope, icon: Icon) -> impl IntoView {
+    view! { cx,
+        <LeptosIcon icon=icon style="color: red"/>
+    }
 }

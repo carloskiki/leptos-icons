@@ -11,7 +11,6 @@ use crate::library::Library;
 
 mod feature;
 mod icon;
-mod leptos;
 mod git;
 mod library;
 mod package;

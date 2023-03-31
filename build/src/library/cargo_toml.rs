@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, info, instrument};
 
-use crate::feature::Feature;
+use crate::icon::SvgIcon;
 
 const BASE_CARGO_TOML: &str = indoc::indoc!(
     r#"
@@ -83,16 +83,16 @@ impl CargoToml {
         ))
     }
 
-    #[instrument(level = "info", skip(features))]
-    pub(crate) async fn append_features(&mut self, features: Vec<Feature>) -> Result<()> {
+    #[instrument(level = "info", skip(icons))]
+    pub(crate) async fn append_features(&mut self, icons: &[SvgIcon]) -> Result<()> {
         info!(
-            num_features = features.len(),
+            num_features = icons.len(),
             "Writing features to Cargo.toml."
         );
         let mut cargo_file = self.append().await?;
-        for feature in features.iter() {
+        for icon in icons.iter() {
             cargo_file
-                .write_all(format!("{} = []\n", &feature.name).as_bytes())
+                .write_all(format!("{} = []\n", &icon.feature.name).as_bytes())
                 .await?;
         }
         cargo_file.flush().await.map_err(|err| {
