@@ -113,7 +113,6 @@ impl Readme {
 
             Contributions are more than welcomed!
             Do not hesitate add icon libraries, features, etc.
-
         "#};
         let mut file = self.append().await?;
         file.write_all(section.as_bytes()).await?;

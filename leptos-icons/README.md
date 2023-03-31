@@ -52,4 +52,3 @@ but must only be taken as a hint. Please check the individual icon repositories 
 
 Contributions are more than welcomed!
 Do not hesitate add icon libraries, features, etc.
-
