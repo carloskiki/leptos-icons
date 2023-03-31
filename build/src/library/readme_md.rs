@@ -1,4 +1,5 @@
 use anyhow::Result;
+use indoc::indoc;
 use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, info, instrument};
@@ -110,21 +111,9 @@ impl Readme {
         let section = indoc::indoc! {r#"
             ## Contributing
 
-            Non-inclusive list of crucial missing features:
+            Contributions are more than welcomed!
+            Do not hesitate add icon libraries, features, etc.
 
-            - Better Docs
-            - Arbitrary props passing
-            - remove useless categories (e.g. vscode-light/dark, sizes?)
-            - ssr optimizations?
-
-            Bugs:
-
-            - Tabler Icon's "Pagebreak" and "PageBreak" icons have the same file name.
-            - Icon names starting with digits
-            - Tracing feature ([#1][i1])
-            - "stroke-width" attribute
-
-            [i1]: https://github.com/Carlosted/leptos-icons/issues/1
         "#};
         let mut file = self.append().await?;
         file.write_all(section.as_bytes()).await?;
@@ -205,8 +194,16 @@ impl Readme {
             });
         }
 
+        let section_header = indoc! { r#"
+            ## Icon Packages
+
+            Licenses of the icons provided through these libraries were extracted with best intent,
+            but must only be taken as a hint. Please check the individual icon repositories for up-to-date license information.
+
+        "#};
+
         let mut file = self.append().await?;
-        file.write_all("## Icon Packages\n\n".as_bytes()).await?;
+        file.write_all(section_header.as_bytes()).await?;
 
         let longest_name = entries
             .iter()

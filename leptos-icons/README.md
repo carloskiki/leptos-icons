@@ -26,6 +26,9 @@ leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features 
 
 ## Icon Packages
 
+Licenses of the icons provided through these libraries were extracted with best intent,
+but must only be taken as a hint. Please check the individual icon repositories for up-to-date license information.
+
 | Icon Library     | Version | Source                                                                                                                    | License             | Short name |
 | ---              | ---     | ---                                                                                                                       | ---                 | ---        |
 | Ant Design Icons | 5.3.2   | Git: <https://github.com/ant-design/ant-design-icons> - Branch: master - Commit: 7c804893b4ac698d5713b2b59f3d044eb8f5128f | MIT,                | ai         |
@@ -47,18 +50,6 @@ leptos-icons = { git = "https://github.com/Carlosted/leptos-icons.git" features 
 
 ## Contributing
 
-Non-inclusive list of crucial missing features:
+Contributions are more than welcomed!
+Do not hesitate add icon libraries, features, etc.
 
-- Better Docs
-- Arbitrary props passing
-- remove useless categories (e.g. vscode-light/dark, sizes?)
-- ssr optimizations?
-
-Bugs:
-
-- Tabler Icon's "Pagebreak" and "PageBreak" icons have the same file name.
-- Icon names starting with digits
-- Tracing feature ([#1][i1])
-- "stroke-width" attribute
-
-[i1]: https://github.com/Carlosted/leptos-icons/issues/1
