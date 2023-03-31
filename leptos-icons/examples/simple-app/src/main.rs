@@ -1,4 +1,6 @@
 use leptos::*;
+use leptos_icons::ai::*;
+use leptos_icons::bi::*;
 use leptos_icons::bs::*;
 use leptos_icons::fa::*;
 use leptos_icons::im::*;
@@ -9,7 +11,9 @@ fn main() {
     console_error_panic_hook::set_once();
     mount_to_body(|cx| {
         view! { cx,
-            <div style="font-size: 2em; color: #8f39d3;">
+            <div style="font-size: 8em; color: #8f39d3;">
+                <AiPushpinTwotone />
+                <BiGraphql />
                 <Bs1Circle />
                 <FaBarsSolid />
                 <ImPagebreak />
