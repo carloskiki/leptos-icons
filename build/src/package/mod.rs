@@ -164,23 +164,9 @@ impl PackageType {
             return false;
         }
         match self {
-            PackageType::AntDesignIcons => true,
-            PackageType::FontAwesome => true,
-            PackageType::WeatherIcons => true,
-            PackageType::Feather => true,
-            PackageType::VSCodeIcons => true,
-            PackageType::BootstrapIcons => true,
             // SVG's located in the "logos" directory are distinct from files in the "regular" and "solid" directories. We may not use that as a category.
             PackageType::BoxIcons => str != "logos",
-            PackageType::IcoMoonFree => true,
-            PackageType::Ionicons => true,
-            PackageType::RemixIcon => true,
-            PackageType::SimpleIcons => true,
-            PackageType::Typicons => true,
-            PackageType::Heroicons => true,
-            PackageType::CssGg => true,
-            PackageType::TablerIcons => true,
-            PackageType::GithubOcticons => true,
+            _ => true,
         }
     }
 
