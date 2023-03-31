@@ -177,7 +177,9 @@ impl ParsedSvg {
                                 .write(xml::writer::XmlEvent::StartElement {
                                     name,
                                     attributes,
-                                    // With the namespace present, xmlns and xlink would be added to all path elements inside the svg. We do not want that.
+                                    // namespace will be non empty, when the initially read svg element contained that information.
+                                    // We are only writing the inner parts of an svg (we reconstruct an <svg> element around that later)
+                                    // and therefore do not want namespace information to be emitted on any child element.
                                     namespace: Cow::Owned(Namespace::empty()),
                                 })
                                 .map_err(|err| anyhow!("Error writing XML event: {err}"))?
