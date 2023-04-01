@@ -5,13 +5,13 @@ use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
 use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
-use tracing::{error, info};
+use tracing::{error, trace};
 use xml::attribute::OwnedAttribute;
 
 use crate::icon::SvgIcon;
 
 #[derive(Debug, Snafu)]
-pub enum Error {
+pub(crate) enum Error {
     #[snafu(display("Unable to create file {path:?}"))]
     CreateFile {
         source: io::Error,
@@ -27,7 +27,7 @@ pub(crate) struct LibRs {
 
 impl LibRs {
     pub async fn init(&self) -> Result<(), Error> {
-        info!(path = ?self.path, "Creating new lib.rs file.");
+        trace!(path = ?self.path, "Creating new lib.rs file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
             .write(true)

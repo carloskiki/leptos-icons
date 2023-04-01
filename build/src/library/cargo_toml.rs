@@ -1,7 +1,7 @@
 use anyhow::Result;
 use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
-use tracing::{error, info, instrument};
+use tracing::{error, instrument, trace};
 
 use crate::icon::SvgIcon;
 
@@ -39,7 +39,7 @@ pub(crate) struct CargoToml {
 impl CargoToml {
     #[instrument(level = "info")]
     async fn create_file(&mut self) -> Result<tokio::fs::File> {
-        info!("Creating file.");
+        trace!("Creating file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
             .write(true)
@@ -55,21 +55,25 @@ impl CargoToml {
     #[instrument(level = "info")]
     pub(crate) async fn reset(&mut self, lib_name: &str) -> Result<()> {
         if self.path.exists() {
-            info!("Removing file.");
+            trace!("Removing file.");
             tokio::fs::remove_file(&self.path).await?;
         }
 
-        info!("Writing BASE_CARGO_TOML content.");
+        trace!("Writing BASE_CARGO_TOML content.");
         self.create_file()
             .await?
-            .write_all(BASE_CARGO_TOML.replace("{{package-name}}", lib_name).as_bytes())
+            .write_all(
+                BASE_CARGO_TOML
+                    .replace("{{package-name}}", lib_name)
+                    .as_bytes(),
+            )
             .await
             .map_err(Into::into)
     }
 
     #[instrument(level = "info", skip_all)]
     async fn append(&mut self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
-        info!("Creating file.");
+        trace!("Creating file.");
         Ok(tokio::io::BufWriter::new(
             tokio::fs::OpenOptions::new()
                 .append(true)
@@ -84,7 +88,7 @@ impl CargoToml {
 
     #[instrument(level = "info", skip(icons))]
     pub(crate) async fn append_features(&mut self, icons: &[SvgIcon]) -> Result<()> {
-        info!(
+        trace!(
             num_features = icons.len(),
             "Writing features to Cargo.toml."
         );

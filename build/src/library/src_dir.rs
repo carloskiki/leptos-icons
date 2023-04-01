@@ -1,12 +1,12 @@
 use std::{io, path::PathBuf};
 
 use snafu::{prelude::*, Backtrace};
-use tracing::info;
+use tracing::trace;
 
 use super::lib_rs::{self, LibRs};
 
 #[derive(Debug, Snafu)]
-pub enum Error {
+pub(crate) enum Error {
     #[snafu(display("Unable to remove src directory {path:?}"))]
     RemoveDir {
         source: io::Error,
@@ -36,7 +36,7 @@ impl SrcDir {
     /// Removes and recreates a fresh src directory containing a fresh lib.rs file.
     pub async fn reset(&mut self) -> Result<(), Error> {
         if self.path.exists() {
-            info!(path = ?self.path, "Removing existing src directory");
+            trace!(path = ?self.path, "Removing existing src directory");
             tokio::fs::remove_dir_all(&self.path)
                 .await
                 .with_context(|_| RemoveDirSnafu {
@@ -44,7 +44,7 @@ impl SrcDir {
                 })?;
         }
 
-        info!(path = ?self.path, "Creating new src directory");
+        trace!(path = ?self.path, "Creating new src directory");
         tokio::fs::create_dir(&self.path)
             .await
             .with_context(|_| CreateDirSnafu {

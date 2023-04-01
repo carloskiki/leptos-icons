@@ -1,6 +1,6 @@
 use anyhow::Result;
 use std::{path::PathBuf, str::FromStr};
-use tracing::{info, instrument, warn};
+use tracing::{debug, instrument, trace, warn};
 
 use crate::{
     icon::{Category, IconSize, SvgIcon},
@@ -21,7 +21,7 @@ struct SearchDir {
 
 #[instrument(level = "info", skip(package), fields(package = ?package.ty))]
 pub(crate) async fn read_icons(package: &Package<Downloaded>) -> Result<Vec<SvgIcon>> {
-    info!("Reading icon data...");
+    trace!("Reading icon data...");
     let mut icons = Vec::new();
 
     let mut search_dirs = Vec::<SearchDir>::new();
@@ -45,7 +45,7 @@ pub(crate) async fn read_icons(package: &Package<Downloaded>) -> Result<Vec<SvgI
 
             // We found a nested directory which should also be searched.
             if entry.file_type().await?.is_dir() {
-                info!(additional_dir = ?entry_path, "Found additional directory.");
+                debug!(additional_dir = ?entry_path, "Found additional directory.");
 
                 let file_name = entry_path
                     .file_name()
@@ -98,6 +98,6 @@ pub(crate) async fn read_icons(package: &Package<Downloaded>) -> Result<Vec<SvgI
         }
     }
 
-    info!(num_icons = icons.len(), "Finished retrieving icon names.");
+    trace!(num_icons = icons.len(), "Finished retrieving icon names.");
     Ok(icons)
 }

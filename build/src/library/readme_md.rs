@@ -2,7 +2,7 @@ use anyhow::Result;
 use indoc::indoc;
 use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
-use tracing::{error, info, instrument};
+use tracing::{error, instrument, trace};
 
 use crate::package::{GitTarget, Package, PackageSource};
 
@@ -34,7 +34,7 @@ pub(crate) struct Readme {
 impl Readme {
     #[instrument(level = "info")]
     async fn create_file(&self) -> Result<tokio::fs::File> {
-        info!("Creating file.");
+        trace!("Creating file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
             .write(true)
@@ -50,11 +50,11 @@ impl Readme {
     #[instrument(level = "info")]
     pub async fn reset(&self) -> Result<()> {
         if self.path.exists() {
-            info!("Removing file.");
+            trace!("Removing file.");
             tokio::fs::remove_file(&self.path).await?;
         }
 
-        info!("Writing BASE_README content.");
+        trace!("Writing BASE_README content.");
         self.create_file()
             .await?
             .write_all(BASE_README.as_bytes())
@@ -64,7 +64,7 @@ impl Readme {
 
     #[instrument(level = "info")]
     async fn append(&self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
-        info!("Creating file.");
+        trace!("Creating file.");
         Ok(tokio::io::BufWriter::new(
             tokio::fs::OpenOptions::new()
                 .append(true)
@@ -78,7 +78,7 @@ impl Readme {
     }
 
     pub async fn write_usage(&self) -> Result<()> {
-        info!("Writing usage section.");
+        trace!("Writing usage section.");
         let section = indoc::indoc! {r#"
             ## Usage
 
@@ -102,7 +102,7 @@ impl Readme {
     }
 
     pub async fn write_contribution(&self) -> Result<()> {
-        info!("Writing contribution section.");
+        trace!("Writing contribution section.");
         let section = indoc::indoc! {r#"
             ## Contributing
 
@@ -119,7 +119,7 @@ impl Readme {
     }
 
     pub async fn write_package_table(&self) -> Result<()> {
-        info!("Writing package table.");
+        trace!("Writing package table.");
 
         struct TableEntry {
             name: String,

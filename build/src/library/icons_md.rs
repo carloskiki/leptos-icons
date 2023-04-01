@@ -1,7 +1,7 @@
 use anyhow::Result;
 use std::{borrow::Cow, path::PathBuf};
 use tokio::io::AsyncWriteExt;
-use tracing::{error, info, instrument};
+use tracing::{error, instrument, trace};
 
 use crate::{icon::SvgIcon, package::PackageType};
 
@@ -19,7 +19,7 @@ pub(crate) struct Icons {
 impl Icons {
     #[instrument(level = "info")]
     async fn create_file(&self) -> Result<tokio::fs::File> {
-        info!("Creating file.");
+        trace!("Creating file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
             .write(true)
@@ -35,11 +35,11 @@ impl Icons {
     #[instrument(level = "info")]
     pub(crate) async fn reset(&self) -> Result<()> {
         if self.path.exists() {
-            info!("Removing file.");
+            trace!("Removing file.");
             tokio::fs::remove_file(&self.path).await?;
         }
 
-        info!("Writing BASE_ICONS content.");
+        trace!("Writing BASE_ICONS content.");
         self.create_file()
             .await?
             .write_all(BASE_ICONS.as_bytes())
@@ -49,7 +49,7 @@ impl Icons {
 
     #[instrument(level = "info")]
     async fn append(&self) -> Result<tokio::io::BufWriter<tokio::fs::File>> {
-        info!("Creating file.");
+        trace!("Creating file.");
         Ok(tokio::io::BufWriter::new(
             tokio::fs::OpenOptions::new()
                 .append(true)
@@ -67,8 +67,7 @@ impl Icons {
         package: PackageType,
         icons: &[SvgIcon],
     ) -> Result<()> {
-        info!("Writing icon table.");
-
+        trace!("Writing icon table.");
         let mut file = self.append().await?;
 
         struct TableEntry<'a> {
