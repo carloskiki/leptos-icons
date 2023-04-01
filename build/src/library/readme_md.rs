@@ -33,16 +33,6 @@ pub(crate) struct Readme {
 
 impl Readme {
     #[instrument(level = "info")]
-    pub async fn remove(&self) -> Result<()> {
-        if self.path.exists() {
-            info!("Removing file.");
-            tokio::fs::remove_file(&self.path).await.map_err(Into::into)
-        } else {
-            Ok(())
-        }
-    }
-
-    #[instrument(level = "info")]
     async fn create_file(&self) -> Result<tokio::fs::File> {
         info!("Creating file.");
         tokio::fs::OpenOptions::new()
@@ -58,7 +48,12 @@ impl Readme {
     }
 
     #[instrument(level = "info")]
-    pub async fn init(&self) -> Result<()> {
+    pub async fn reset(&self) -> Result<()> {
+        if self.path.exists() {
+            info!("Removing file.");
+            tokio::fs::remove_file(&self.path).await?;
+        }
+
         info!("Writing BASE_README content.");
         self.create_file()
             .await?

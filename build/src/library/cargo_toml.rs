@@ -12,7 +12,7 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
     # ------------------------------------------------------------------------------------------
 
     [package]
-    name = "leptos-icons"
+    name = "{{package-name}}"
     version = "0.0.1"
     authors = ["Charles Edward Gagnon"]
     edition = "2021"
@@ -38,12 +38,6 @@ pub(crate) struct CargoToml {
 
 impl CargoToml {
     #[instrument(level = "info")]
-    pub async fn remove(&mut self) -> Result<()> {
-        info!("Removing file.");
-        tokio::fs::remove_file(&self.path).await.map_err(Into::into)
-    }
-
-    #[instrument(level = "info")]
     async fn create_file(&mut self) -> Result<tokio::fs::File> {
         info!("Creating file.");
         tokio::fs::OpenOptions::new()
@@ -59,11 +53,16 @@ impl CargoToml {
     }
 
     #[instrument(level = "info")]
-    pub(crate) async fn init(&mut self) -> Result<()> {
+    pub(crate) async fn reset(&mut self, lib_name: &str) -> Result<()> {
+        if self.path.exists() {
+            info!("Removing file.");
+            tokio::fs::remove_file(&self.path).await?;
+        }
+
         info!("Writing BASE_CARGO_TOML content.");
         self.create_file()
             .await?
-            .write_all(BASE_CARGO_TOML.as_bytes())
+            .write_all(BASE_CARGO_TOML.replace("{{package-name}}", lib_name).as_bytes())
             .await
             .map_err(Into::into)
     }

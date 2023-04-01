@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::{command, Parser};
-use tracing::info;
+use tracing::{error, info};
 use tracing_subscriber::filter::Targets;
 use tracing_subscriber::fmt::format::{Format, Pretty};
 use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
@@ -8,10 +8,11 @@ use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::{Layer, Registry};
 
 use crate::library::Library;
+use crate::package::Package;
 
 mod feature;
-mod icon;
 mod git;
+mod icon;
 mod library;
 mod package;
 mod path;
@@ -42,8 +43,42 @@ async fn main() -> Result<()> {
 
     let start = time::OffsetDateTime::now_utc();
 
-    let lib = Library::new(path::leptos_icons_crate(""));
-    lib.generate(args.clean).await?;
+    let handles = Package::all()
+        .into_iter()
+        .map(|package| {
+            tokio::spawn(async move {
+                if args.clean {
+                    package.remove().await?;
+                }
+
+                // Download the package.
+                let package_type = package.ty;
+                let package = package.download().map_err(|err| {
+                    error!(
+                        ?package_type,
+                        ?err,
+                        "Downloading the package failed unexpectedly."
+                    );
+                    err
+                })?;
+
+                // Generate the library for that package.
+                let lib_name = format!("leptos-icons-{}", package.meta.short_name);
+                let lib_path = path::library_crate(&lib_name, "");
+                let mut lib = Library::new(package, lib_name, lib_path);
+
+                lib.generate().await?;
+
+                Ok::<Library, anyhow::Error>(lib)
+            })
+        })
+        .collect::<Vec<_>>();
+    for handle in handles {
+        if let Err(err) = handle.await.unwrap() {
+            error!(?err, "Could not process package successfully.");
+            return Err(err)
+        }
+    }
 
     let end = time::OffsetDateTime::now_utc();
     info!(
@@ -80,7 +115,7 @@ fn init_tracing(level: tracing::level_filters::LevelFilter) {
 /// This may prevent unwanted file operations in wrong directories.
 fn assert_paths() {
     let build_crate_root = path::build_crate("");
-    let leptos_icons_crate_root = path::leptos_icons_crate("");
+    let leptos_icons_crate_root = path::library_crate("leptos-icons", "");
     info!(?build_crate_root, "Using");
     info!(?leptos_icons_crate_root, "Using");
 

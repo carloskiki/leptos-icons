@@ -14,7 +14,6 @@ mod svg;
 
 #[derive(Debug, Clone)]
 pub(crate) struct SvgIcon {
-    pub source: PackageType,
     pub svg: svg::ParsedSvg,
     pub categories: Vec<Category>,
     pub feature: Feature,
@@ -48,17 +47,11 @@ impl SvgIcon {
         let svg = tokio::fs::read_to_string(path).await?;
 
         Ok(SvgIcon {
-            source: package.ty,
             svg: ParsedSvg::parse(svg.as_bytes())?,
             categories,
             feature,
         })
     }
-}
-
-pub(crate) struct IconMetadata {
-    pub name: String, // Both the component and feature name!
-    pub categories: Vec<Category>,
 }
 
 #[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone)]

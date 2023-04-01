@@ -1,13 +1,24 @@
-use std::path::PathBuf;
+use std::{io, path::PathBuf};
 
 use anyhow::Result;
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
+use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
 use tracing::{error, info};
 use xml::attribute::OwnedAttribute;
 
 use crate::icon::SvgIcon;
+
+#[derive(Debug, Snafu)]
+pub enum Error {
+    #[snafu(display("Unable to create file {path:?}"))]
+    CreateFile {
+        source: io::Error,
+        path: PathBuf,
+        backtrace: Backtrace,
+    },
+}
 
 #[derive(Debug)]
 pub(crate) struct LibRs {
@@ -15,13 +26,16 @@ pub(crate) struct LibRs {
 }
 
 impl LibRs {
-    pub async fn init(&self) -> Result<()> {
+    pub async fn init(&self) -> Result<(), Error> {
         info!(path = ?self.path, "Creating new lib.rs file.");
         tokio::fs::OpenOptions::new()
             .create_new(true)
             .write(true)
             .open(&self.path)
-            .await?;
+            .await
+            .with_context(|_| CreateFileSnafu {
+                path: self.path.clone(),
+            })?;
         Ok(())
     }
 
@@ -40,7 +54,7 @@ impl LibRs {
         ))
     }
 
-    pub async fn write_enum(&mut self, icons: &[SvgIcon]) -> Result<()> {
+    pub fn build_enum(icons: &[SvgIcon]) -> Result<String> {
         let variants = icons.iter().map(|icon| {
             let feature_name = &icon.feature.name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
@@ -60,11 +74,15 @@ impl LibRs {
             error!(?err, "Error parsing enum to token stream");
             err
         })?;
-        let icon_enum_code = prettyplease::unparse(&tokens_file);
+        Ok(prettyplease::unparse(&tokens_file))
+    }
+
+    pub async fn write_enum(&mut self, icons: &[SvgIcon]) -> Result<()> {
+        let code = Self::build_enum(icons)?;
 
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;
-        writer.write_all(icon_enum_code.as_bytes()).await?;
+        writer.write_all(code.as_bytes()).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
             err
@@ -72,7 +90,7 @@ impl LibRs {
         Ok(())
     }
 
-    pub async fn write_leptos_icon_component(&mut self, icons: &[SvgIcon]) -> Result<()> {
+    pub fn create_icon_component(icons: &[SvgIcon]) -> Result<String> {
         let match_arms = icons.iter().map(|icon| {
             let feature_name = &icon.feature.name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
@@ -171,7 +189,11 @@ impl LibRs {
         };
 
         let tokens_file: syn::File = syn::parse2(tokens)?;
-        let icon_component_code = prettyplease::unparse(&tokens_file);
+        Ok(prettyplease::unparse(&tokens_file))
+    }
+
+    pub async fn write_leptos_icon_component(&mut self, icons: &[SvgIcon]) -> Result<()> {
+        let code = Self::create_icon_component(icons)?;
 
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;
@@ -180,7 +202,7 @@ impl LibRs {
             .write_all("use leptos::*;\n\n".as_bytes())
             .await
             .unwrap();
-        writer.write_all(icon_component_code.as_bytes()).await?;
+        writer.write_all(code.as_bytes()).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
             err
