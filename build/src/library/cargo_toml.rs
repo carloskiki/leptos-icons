@@ -25,7 +25,7 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
 
     [dependencies]
     leptos = { version = "0.2", default-features = false }
-    serde = { version = "1", features = ["derive"] }
+    serde = { version = "1", features = ["derive"], optional = true }
 
     [features]
     serde = ["dep:serde"]
