@@ -8076,23 +8076,30 @@ use leptos::*;
 
 #[component]
 pub fn LeptosIcon(
+    #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
+    #[allow(unused)]
     icon: Icon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
+    #[allow(unused)]
     width: String,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
+    #[allow(unused)]
     height: String,
     /// HTML class attribute.
     #[prop(into, optional)]
+    #[allow(unused)]
     class: String,
     /// HTML style attribute.
     #[prop(into, optional)]
+    #[allow(unused)]
     style: String,
     /// ARIA accessibility title.
     #[prop(into, optional_no_strip)]
+    #[allow(unused)]
     title: Option<String>,
 ) -> impl IntoView {
     match icon {
