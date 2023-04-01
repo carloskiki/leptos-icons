@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum AiIcon {
     #[cfg(feature = "AiAccountBookFilled")]
     AiAccountBookFilled,
     #[cfg(feature = "AiAccountBookOutlined")]
@@ -1601,12 +1601,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosAiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: AiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -1630,7 +1630,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "AiAccountBookFilled")]
-        Icon::AiAccountBookFilled => {
+        AiIcon::AiAccountBookFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1642,7 +1642,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAccountBookOutlined")]
-        Icon::AiAccountBookOutlined => {
+        AiIcon::AiAccountBookOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1654,7 +1654,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAccountBookTwotone")]
-        Icon::AiAccountBookTwotone => {
+        AiIcon::AiAccountBookTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1671,7 +1671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAimOutlined")]
-        Icon::AiAimOutlined => {
+        AiIcon::AiAimOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1686,7 +1686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlertFilled")]
-        Icon::AiAlertFilled => {
+        AiIcon::AiAlertFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1698,7 +1698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlertOutlined")]
-        Icon::AiAlertOutlined => {
+        AiIcon::AiAlertOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1710,7 +1710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlertTwotone")]
-        Icon::AiAlertTwotone => {
+        AiIcon::AiAlertTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1724,7 +1724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlibabaOutlined")]
-        Icon::AiAlibabaOutlined => {
+        AiIcon::AiAlibabaOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1736,7 +1736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlignCenterOutlined")]
-        Icon::AiAlignCenterOutlined => {
+        AiIcon::AiAlignCenterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1748,7 +1748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlignLeftOutlined")]
-        Icon::AiAlignLeftOutlined => {
+        AiIcon::AiAlignLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1760,7 +1760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlignRightOutlined")]
-        Icon::AiAlignRightOutlined => {
+        AiIcon::AiAlignRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1772,7 +1772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlipayCircleFilled")]
-        Icon::AiAlipayCircleFilled => {
+        AiIcon::AiAlipayCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1784,7 +1784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlipayCircleOutlined")]
-        Icon::AiAlipayCircleOutlined => {
+        AiIcon::AiAlipayCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1796,7 +1796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlipayOutlined")]
-        Icon::AiAlipayOutlined => {
+        AiIcon::AiAlipayOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1808,7 +1808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAlipaySquareFilled")]
-        Icon::AiAlipaySquareFilled => {
+        AiIcon::AiAlipaySquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1820,7 +1820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAliwangwangFilled")]
-        Icon::AiAliwangwangFilled => {
+        AiIcon::AiAliwangwangFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1832,7 +1832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAliwangwangOutlined")]
-        Icon::AiAliwangwangOutlined => {
+        AiIcon::AiAliwangwangOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1844,7 +1844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAliyunOutlined")]
-        Icon::AiAliyunOutlined => {
+        AiIcon::AiAliyunOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1856,7 +1856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAmazonCircleFilled")]
-        Icon::AiAmazonCircleFilled => {
+        AiIcon::AiAmazonCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1868,7 +1868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAmazonOutlined")]
-        Icon::AiAmazonOutlined => {
+        AiIcon::AiAmazonOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1880,7 +1880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAmazonSquareFilled")]
-        Icon::AiAmazonSquareFilled => {
+        AiIcon::AiAmazonSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1892,7 +1892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAndroidFilled")]
-        Icon::AiAndroidFilled => {
+        AiIcon::AiAndroidFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1904,7 +1904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAndroidOutlined")]
-        Icon::AiAndroidOutlined => {
+        AiIcon::AiAndroidOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1916,7 +1916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAntCloudOutlined")]
-        Icon::AiAntCloudOutlined => {
+        AiIcon::AiAntCloudOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1928,7 +1928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAntDesignOutlined")]
-        Icon::AiAntDesignOutlined => {
+        AiIcon::AiAntDesignOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1940,7 +1940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiApartmentOutlined")]
-        Icon::AiApartmentOutlined => {
+        AiIcon::AiApartmentOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1952,7 +1952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiApiFilled")]
-        Icon::AiApiFilled => {
+        AiIcon::AiApiFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1964,7 +1964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiApiOutlined")]
-        Icon::AiApiOutlined => {
+        AiIcon::AiApiOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1976,7 +1976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiApiTwotone")]
-        Icon::AiApiTwotone => {
+        AiIcon::AiApiTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -1990,7 +1990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAppleFilled")]
-        Icon::AiAppleFilled => {
+        AiIcon::AiAppleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2002,7 +2002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAppleOutlined")]
-        Icon::AiAppleOutlined => {
+        AiIcon::AiAppleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2014,7 +2014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAppstoreAddOutlined")]
-        Icon::AiAppstoreAddOutlined => {
+        AiIcon::AiAppstoreAddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2027,7 +2027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAppstoreFilled")]
-        Icon::AiAppstoreFilled => {
+        AiIcon::AiAppstoreFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2039,7 +2039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAppstoreOutlined")]
-        Icon::AiAppstoreOutlined => {
+        AiIcon::AiAppstoreOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2051,7 +2051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAppstoreTwotone")]
-        Icon::AiAppstoreTwotone => {
+        AiIcon::AiAppstoreTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2065,7 +2065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAreaChartOutlined")]
-        Icon::AiAreaChartOutlined => {
+        AiIcon::AiAreaChartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2077,7 +2077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiArrowDownOutlined")]
-        Icon::AiArrowDownOutlined => {
+        AiIcon::AiArrowDownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2089,7 +2089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiArrowLeftOutlined")]
-        Icon::AiArrowLeftOutlined => {
+        AiIcon::AiArrowLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2101,7 +2101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiArrowRightOutlined")]
-        Icon::AiArrowRightOutlined => {
+        AiIcon::AiArrowRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2113,7 +2113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiArrowUpOutlined")]
-        Icon::AiArrowUpOutlined => {
+        AiIcon::AiArrowUpOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2125,7 +2125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiArrowsAltOutlined")]
-        Icon::AiArrowsAltOutlined => {
+        AiIcon::AiArrowsAltOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2137,7 +2137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAudioFilled")]
-        Icon::AiAudioFilled => {
+        AiIcon::AiAudioFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2149,7 +2149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAudioMutedOutlined")]
-        Icon::AiAudioMutedOutlined => {
+        AiIcon::AiAudioMutedOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2164,7 +2164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAudioOutlined")]
-        Icon::AiAudioOutlined => {
+        AiIcon::AiAudioOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2176,7 +2176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAudioTwotone")]
-        Icon::AiAudioTwotone => {
+        AiIcon::AiAudioTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2192,7 +2192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiAuditOutlined")]
-        Icon::AiAuditOutlined => {
+        AiIcon::AiAuditOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2204,7 +2204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBackwardFilled")]
-        Icon::AiBackwardFilled => {
+        AiIcon::AiBackwardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2216,7 +2216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBackwardOutlined")]
-        Icon::AiBackwardOutlined => {
+        AiIcon::AiBackwardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2228,7 +2228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBankFilled")]
-        Icon::AiBankFilled => {
+        AiIcon::AiBankFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2240,7 +2240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBankOutlined")]
-        Icon::AiBankOutlined => {
+        AiIcon::AiBankOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2252,7 +2252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBankTwotone")]
-        Icon::AiBankTwotone => {
+        AiIcon::AiBankTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2265,7 +2265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBarChartOutlined")]
-        Icon::AiBarChartOutlined => {
+        AiIcon::AiBarChartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2277,7 +2277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBarcodeOutlined")]
-        Icon::AiBarcodeOutlined => {
+        AiIcon::AiBarcodeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2289,7 +2289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBarsOutlined")]
-        Icon::AiBarsOutlined => {
+        AiIcon::AiBarsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2301,7 +2301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBehanceCircleFilled")]
-        Icon::AiBehanceCircleFilled => {
+        AiIcon::AiBehanceCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2313,7 +2313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBehanceOutlined")]
-        Icon::AiBehanceOutlined => {
+        AiIcon::AiBehanceOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2325,7 +2325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBehanceSquareFilled")]
-        Icon::AiBehanceSquareFilled => {
+        AiIcon::AiBehanceSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2337,7 +2337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBehanceSquareOutlined")]
-        Icon::AiBehanceSquareOutlined => {
+        AiIcon::AiBehanceSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2349,7 +2349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBellFilled")]
-        Icon::AiBellFilled => {
+        AiIcon::AiBellFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2361,7 +2361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBellOutlined")]
-        Icon::AiBellOutlined => {
+        AiIcon::AiBellOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2373,7 +2373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBellTwotone")]
-        Icon::AiBellTwotone => {
+        AiIcon::AiBellTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2387,7 +2387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBgColorsOutlined")]
-        Icon::AiBgColorsOutlined => {
+        AiIcon::AiBgColorsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2399,7 +2399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBlockOutlined")]
-        Icon::AiBlockOutlined => {
+        AiIcon::AiBlockOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2411,7 +2411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBoldOutlined")]
-        Icon::AiBoldOutlined => {
+        AiIcon::AiBoldOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2423,7 +2423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBookFilled")]
-        Icon::AiBookFilled => {
+        AiIcon::AiBookFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2435,7 +2435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBookOutlined")]
-        Icon::AiBookOutlined => {
+        AiIcon::AiBookOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2447,7 +2447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBookTwotone")]
-        Icon::AiBookTwotone => {
+        AiIcon::AiBookTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2462,7 +2462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderBottomOutlined")]
-        Icon::AiBorderBottomOutlined => {
+        AiIcon::AiBorderBottomOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2474,7 +2474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderHorizontalOutlined")]
-        Icon::AiBorderHorizontalOutlined => {
+        AiIcon::AiBorderHorizontalOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2486,7 +2486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderInnerOutlined")]
-        Icon::AiBorderInnerOutlined => {
+        AiIcon::AiBorderInnerOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2498,7 +2498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderLeftOutlined")]
-        Icon::AiBorderLeftOutlined => {
+        AiIcon::AiBorderLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2510,7 +2510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderOuterOutlined")]
-        Icon::AiBorderOuterOutlined => {
+        AiIcon::AiBorderOuterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2522,7 +2522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderOutlined")]
-        Icon::AiBorderOutlined => {
+        AiIcon::AiBorderOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2534,7 +2534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderRightOutlined")]
-        Icon::AiBorderRightOutlined => {
+        AiIcon::AiBorderRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2546,7 +2546,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderTopOutlined")]
-        Icon::AiBorderTopOutlined => {
+        AiIcon::AiBorderTopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2558,7 +2558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderVerticleOutlined")]
-        Icon::AiBorderVerticleOutlined => {
+        AiIcon::AiBorderVerticleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2570,7 +2570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBorderlessTableOutlined")]
-        Icon::AiBorderlessTableOutlined => {
+        AiIcon::AiBorderlessTableOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2583,7 +2583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBoxPlotFilled")]
-        Icon::AiBoxPlotFilled => {
+        AiIcon::AiBoxPlotFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2595,7 +2595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBoxPlotOutlined")]
-        Icon::AiBoxPlotOutlined => {
+        AiIcon::AiBoxPlotOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2607,7 +2607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBoxPlotTwotone")]
-        Icon::AiBoxPlotTwotone => {
+        AiIcon::AiBoxPlotTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2620,7 +2620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBranchesOutlined")]
-        Icon::AiBranchesOutlined => {
+        AiIcon::AiBranchesOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2632,7 +2632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBugFilled")]
-        Icon::AiBugFilled => {
+        AiIcon::AiBugFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2646,7 +2646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBugOutlined")]
-        Icon::AiBugOutlined => {
+        AiIcon::AiBugOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2660,7 +2660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBugTwotone")]
-        Icon::AiBugTwotone => {
+        AiIcon::AiBugTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2674,7 +2674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBuildFilled")]
-        Icon::AiBuildFilled => {
+        AiIcon::AiBuildFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2686,7 +2686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBuildOutlined")]
-        Icon::AiBuildOutlined => {
+        AiIcon::AiBuildOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2698,7 +2698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBuildTwotone")]
-        Icon::AiBuildTwotone => {
+        AiIcon::AiBuildTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2711,7 +2711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBulbFilled")]
-        Icon::AiBulbFilled => {
+        AiIcon::AiBulbFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2723,7 +2723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBulbOutlined")]
-        Icon::AiBulbOutlined => {
+        AiIcon::AiBulbOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2735,7 +2735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiBulbTwotone")]
-        Icon::AiBulbTwotone => {
+        AiIcon::AiBulbTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2749,7 +2749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCalculatorFilled")]
-        Icon::AiCalculatorFilled => {
+        AiIcon::AiCalculatorFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2761,7 +2761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCalculatorOutlined")]
-        Icon::AiCalculatorOutlined => {
+        AiIcon::AiCalculatorOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2773,7 +2773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCalculatorTwotone")]
-        Icon::AiCalculatorTwotone => {
+        AiIcon::AiCalculatorTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2789,7 +2789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCalendarFilled")]
-        Icon::AiCalendarFilled => {
+        AiIcon::AiCalendarFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2801,7 +2801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCalendarOutlined")]
-        Icon::AiCalendarOutlined => {
+        AiIcon::AiCalendarOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2813,7 +2813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCalendarTwotone")]
-        Icon::AiCalendarTwotone => {
+        AiIcon::AiCalendarTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2827,7 +2827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCameraFilled")]
-        Icon::AiCameraFilled => {
+        AiIcon::AiCameraFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2839,7 +2839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCameraOutlined")]
-        Icon::AiCameraOutlined => {
+        AiIcon::AiCameraOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2851,7 +2851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCameraTwotone")]
-        Icon::AiCameraTwotone => {
+        AiIcon::AiCameraTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2867,7 +2867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCarFilled")]
-        Icon::AiCarFilled => {
+        AiIcon::AiCarFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2879,7 +2879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCarOutlined")]
-        Icon::AiCarOutlined => {
+        AiIcon::AiCarOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2891,7 +2891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCarTwotone")]
-        Icon::AiCarTwotone => {
+        AiIcon::AiCarTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2907,7 +2907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretDownFilled")]
-        Icon::AiCaretDownFilled => {
+        AiIcon::AiCaretDownFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2919,7 +2919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretDownOutlined")]
-        Icon::AiCaretDownOutlined => {
+        AiIcon::AiCaretDownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2931,7 +2931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretLeftFilled")]
-        Icon::AiCaretLeftFilled => {
+        AiIcon::AiCaretLeftFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2943,7 +2943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretLeftOutlined")]
-        Icon::AiCaretLeftOutlined => {
+        AiIcon::AiCaretLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2955,7 +2955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretRightFilled")]
-        Icon::AiCaretRightFilled => {
+        AiIcon::AiCaretRightFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2967,7 +2967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretRightOutlined")]
-        Icon::AiCaretRightOutlined => {
+        AiIcon::AiCaretRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2979,7 +2979,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretUpFilled")]
-        Icon::AiCaretUpFilled => {
+        AiIcon::AiCaretUpFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -2991,7 +2991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCaretUpOutlined")]
-        Icon::AiCaretUpOutlined => {
+        AiIcon::AiCaretUpOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3003,7 +3003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCarryOutFilled")]
-        Icon::AiCarryOutFilled => {
+        AiIcon::AiCarryOutFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3015,7 +3015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCarryOutOutlined")]
-        Icon::AiCarryOutOutlined => {
+        AiIcon::AiCarryOutOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3027,7 +3027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCarryOutTwotone")]
-        Icon::AiCarryOutTwotone => {
+        AiIcon::AiCarryOutTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3043,7 +3043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckCircleFilled")]
-        Icon::AiCheckCircleFilled => {
+        AiIcon::AiCheckCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3055,7 +3055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckCircleOutlined")]
-        Icon::AiCheckCircleOutlined => {
+        AiIcon::AiCheckCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3069,7 +3069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckCircleTwotone")]
-        Icon::AiCheckCircleTwotone => {
+        AiIcon::AiCheckCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3085,7 +3085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckOutlined")]
-        Icon::AiCheckOutlined => {
+        AiIcon::AiCheckOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3097,7 +3097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckSquareFilled")]
-        Icon::AiCheckSquareFilled => {
+        AiIcon::AiCheckSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3109,7 +3109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckSquareOutlined")]
-        Icon::AiCheckSquareOutlined => {
+        AiIcon::AiCheckSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3123,7 +3123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCheckSquareTwotone")]
-        Icon::AiCheckSquareTwotone => {
+        AiIcon::AiCheckSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3139,7 +3139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiChromeFilled")]
-        Icon::AiChromeFilled => {
+        AiIcon::AiChromeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3151,7 +3151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiChromeOutlined")]
-        Icon::AiChromeOutlined => {
+        AiIcon::AiChromeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3163,7 +3163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCiCircleFilled")]
-        Icon::AiCiCircleFilled => {
+        AiIcon::AiCiCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3175,7 +3175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCiCircleOutlined")]
-        Icon::AiCiCircleOutlined => {
+        AiIcon::AiCiCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3187,7 +3187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCiCircleTwotone")]
-        Icon::AiCiCircleTwotone => {
+        AiIcon::AiCiCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3203,7 +3203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCiOutlined")]
-        Icon::AiCiOutlined => {
+        AiIcon::AiCiOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3215,7 +3215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCiTwotone")]
-        Icon::AiCiTwotone => {
+        AiIcon::AiCiTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3231,7 +3231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiClearOutlined")]
-        Icon::AiClearOutlined => {
+        AiIcon::AiClearOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3244,7 +3244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiClockCircleFilled")]
-        Icon::AiClockCircleFilled => {
+        AiIcon::AiClockCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3256,7 +3256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiClockCircleOutlined")]
-        Icon::AiClockCircleOutlined => {
+        AiIcon::AiClockCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3270,7 +3270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiClockCircleTwotone")]
-        Icon::AiClockCircleTwotone => {
+        AiIcon::AiClockCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3286,7 +3286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseCircleFilled")]
-        Icon::AiCloseCircleFilled => {
+        AiIcon::AiCloseCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3298,7 +3298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseCircleOutlined")]
-        Icon::AiCloseCircleOutlined => {
+        AiIcon::AiCloseCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3312,7 +3312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseCircleTwotone")]
-        Icon::AiCloseCircleTwotone => {
+        AiIcon::AiCloseCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3328,7 +3328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseOutlined")]
-        Icon::AiCloseOutlined => {
+        AiIcon::AiCloseOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3340,7 +3340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseSquareFilled")]
-        Icon::AiCloseSquareFilled => {
+        AiIcon::AiCloseSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3352,7 +3352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseSquareOutlined")]
-        Icon::AiCloseSquareOutlined => {
+        AiIcon::AiCloseSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3366,7 +3366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloseSquareTwotone")]
-        Icon::AiCloseSquareTwotone => {
+        AiIcon::AiCloseSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3382,7 +3382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudDownloadOutlined")]
-        Icon::AiCloudDownloadOutlined => {
+        AiIcon::AiCloudDownloadOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3396,7 +3396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudFilled")]
-        Icon::AiCloudFilled => {
+        AiIcon::AiCloudFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3408,7 +3408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudOutlined")]
-        Icon::AiCloudOutlined => {
+        AiIcon::AiCloudOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3420,7 +3420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudServerOutlined")]
-        Icon::AiCloudServerOutlined => {
+        AiIcon::AiCloudServerOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3436,7 +3436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudSyncOutlined")]
-        Icon::AiCloudSyncOutlined => {
+        AiIcon::AiCloudSyncOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3450,7 +3450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudTwotone")]
-        Icon::AiCloudTwotone => {
+        AiIcon::AiCloudTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3464,7 +3464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCloudUploadOutlined")]
-        Icon::AiCloudUploadOutlined => {
+        AiIcon::AiCloudUploadOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3478,7 +3478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiClusterOutlined")]
-        Icon::AiClusterOutlined => {
+        AiIcon::AiClusterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3490,7 +3490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodeFilled")]
-        Icon::AiCodeFilled => {
+        AiIcon::AiCodeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3502,7 +3502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodeOutlined")]
-        Icon::AiCodeOutlined => {
+        AiIcon::AiCodeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3514,7 +3514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodeSandboxCircleFilled")]
-        Icon::AiCodeSandboxCircleFilled => {
+        AiIcon::AiCodeSandboxCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3526,7 +3526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodeSandboxOutlined")]
-        Icon::AiCodeSandboxOutlined => {
+        AiIcon::AiCodeSandboxOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3538,7 +3538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodeSandboxSquareFilled")]
-        Icon::AiCodeSandboxSquareFilled => {
+        AiIcon::AiCodeSandboxSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3550,7 +3550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodeTwotone")]
-        Icon::AiCodeTwotone => {
+        AiIcon::AiCodeTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3566,7 +3566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodepenCircleFilled")]
-        Icon::AiCodepenCircleFilled => {
+        AiIcon::AiCodepenCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3578,7 +3578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodepenCircleOutlined")]
-        Icon::AiCodepenCircleOutlined => {
+        AiIcon::AiCodepenCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3590,7 +3590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodepenOutlined")]
-        Icon::AiCodepenOutlined => {
+        AiIcon::AiCodepenOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3602,7 +3602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCodepenSquareFilled")]
-        Icon::AiCodepenSquareFilled => {
+        AiIcon::AiCodepenSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3614,7 +3614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCoffeeOutlined")]
-        Icon::AiCoffeeOutlined => {
+        AiIcon::AiCoffeeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3626,7 +3626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiColumnHeightOutlined")]
-        Icon::AiColumnHeightOutlined => {
+        AiIcon::AiColumnHeightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3638,7 +3638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiColumnWidthOutlined")]
-        Icon::AiColumnWidthOutlined => {
+        AiIcon::AiColumnWidthOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3650,7 +3650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCommentOutlined")]
-        Icon::AiCommentOutlined => {
+        AiIcon::AiCommentOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3667,7 +3667,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCompassFilled")]
-        Icon::AiCompassFilled => {
+        AiIcon::AiCompassFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3679,7 +3679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCompassOutlined")]
-        Icon::AiCompassOutlined => {
+        AiIcon::AiCompassOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3691,7 +3691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCompassTwotone")]
-        Icon::AiCompassTwotone => {
+        AiIcon::AiCompassTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3707,7 +3707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCompressOutlined")]
-        Icon::AiCompressOutlined => {
+        AiIcon::AiCompressOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3720,7 +3720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiConsoleSqlOutlined")]
-        Icon::AiConsoleSqlOutlined => {
+        AiIcon::AiConsoleSqlOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3737,7 +3737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiContactsFilled")]
-        Icon::AiContactsFilled => {
+        AiIcon::AiContactsFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3749,7 +3749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiContactsOutlined")]
-        Icon::AiContactsOutlined => {
+        AiIcon::AiContactsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3761,7 +3761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiContactsTwotone")]
-        Icon::AiContactsTwotone => {
+        AiIcon::AiContactsTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3779,7 +3779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiContainerFilled")]
-        Icon::AiContainerFilled => {
+        AiIcon::AiContainerFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3791,7 +3791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiContainerOutlined")]
-        Icon::AiContainerOutlined => {
+        AiIcon::AiContainerOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3803,7 +3803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiContainerTwotone")]
-        Icon::AiContainerTwotone => {
+        AiIcon::AiContainerTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3822,7 +3822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiControlFilled")]
-        Icon::AiControlFilled => {
+        AiIcon::AiControlFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3834,7 +3834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiControlOutlined")]
-        Icon::AiControlOutlined => {
+        AiIcon::AiControlOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3846,7 +3846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiControlTwotone")]
-        Icon::AiControlTwotone => {
+        AiIcon::AiControlTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3864,7 +3864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyFilled")]
-        Icon::AiCopyFilled => {
+        AiIcon::AiCopyFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3876,7 +3876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyOutlined")]
-        Icon::AiCopyOutlined => {
+        AiIcon::AiCopyOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3888,7 +3888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyTwotone")]
-        Icon::AiCopyTwotone => {
+        AiIcon::AiCopyTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3903,7 +3903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyrightCircleFilled")]
-        Icon::AiCopyrightCircleFilled => {
+        AiIcon::AiCopyrightCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3915,7 +3915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyrightCircleOutlined")]
-        Icon::AiCopyrightCircleOutlined => {
+        AiIcon::AiCopyrightCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3927,7 +3927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyrightCircleTwotone")]
-        Icon::AiCopyrightCircleTwotone => {
+        AiIcon::AiCopyrightCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3944,7 +3944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyrightOutlined")]
-        Icon::AiCopyrightOutlined => {
+        AiIcon::AiCopyrightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3956,7 +3956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCopyrightTwotone")]
-        Icon::AiCopyrightTwotone => {
+        AiIcon::AiCopyrightTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3972,7 +3972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCreditCardFilled")]
-        Icon::AiCreditCardFilled => {
+        AiIcon::AiCreditCardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3984,7 +3984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCreditCardOutlined")]
-        Icon::AiCreditCardOutlined => {
+        AiIcon::AiCreditCardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -3996,7 +3996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCreditCardTwotone")]
-        Icon::AiCreditCardTwotone => {
+        AiIcon::AiCreditCardTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4013,7 +4013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCrownFilled")]
-        Icon::AiCrownFilled => {
+        AiIcon::AiCrownFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4025,7 +4025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCrownOutlined")]
-        Icon::AiCrownOutlined => {
+        AiIcon::AiCrownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4037,7 +4037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCrownTwotone")]
-        Icon::AiCrownTwotone => {
+        AiIcon::AiCrownTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4055,7 +4055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCustomerServiceFilled")]
-        Icon::AiCustomerServiceFilled => {
+        AiIcon::AiCustomerServiceFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4067,7 +4067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCustomerServiceOutlined")]
-        Icon::AiCustomerServiceOutlined => {
+        AiIcon::AiCustomerServiceOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4079,7 +4079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiCustomerServiceTwotone")]
-        Icon::AiCustomerServiceTwotone => {
+        AiIcon::AiCustomerServiceTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4092,7 +4092,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDashOutlined")]
-        Icon::AiDashOutlined => {
+        AiIcon::AiDashOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4103,7 +4103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDashboardFilled")]
-        Icon::AiDashboardFilled => {
+        AiIcon::AiDashboardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4115,7 +4115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDashboardOutlined")]
-        Icon::AiDashboardOutlined => {
+        AiIcon::AiDashboardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4127,7 +4127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDashboardTwotone")]
-        Icon::AiDashboardTwotone => {
+        AiIcon::AiDashboardTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4146,7 +4146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDatabaseFilled")]
-        Icon::AiDatabaseFilled => {
+        AiIcon::AiDatabaseFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4158,7 +4158,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDatabaseOutlined")]
-        Icon::AiDatabaseOutlined => {
+        AiIcon::AiDatabaseOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4170,7 +4170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDatabaseTwotone")]
-        Icon::AiDatabaseTwotone => {
+        AiIcon::AiDatabaseTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4186,7 +4186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeleteColumnOutlined")]
-        Icon::AiDeleteColumnOutlined => {
+        AiIcon::AiDeleteColumnOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4199,7 +4199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeleteFilled")]
-        Icon::AiDeleteFilled => {
+        AiIcon::AiDeleteFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4211,7 +4211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeleteOutlined")]
-        Icon::AiDeleteOutlined => {
+        AiIcon::AiDeleteOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4223,7 +4223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeleteRowOutlined")]
-        Icon::AiDeleteRowOutlined => {
+        AiIcon::AiDeleteRowOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4236,7 +4236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeleteTwotone")]
-        Icon::AiDeleteTwotone => {
+        AiIcon::AiDeleteTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4249,7 +4249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeliveredProcedureOutlined")]
-        Icon::AiDeliveredProcedureOutlined => {
+        AiIcon::AiDeliveredProcedureOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4262,7 +4262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDeploymentUnitOutlined")]
-        Icon::AiDeploymentUnitOutlined => {
+        AiIcon::AiDeploymentUnitOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4274,7 +4274,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDesktopOutlined")]
-        Icon::AiDesktopOutlined => {
+        AiIcon::AiDesktopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4286,7 +4286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDiffFilled")]
-        Icon::AiDiffFilled => {
+        AiIcon::AiDiffFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4298,7 +4298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDiffOutlined")]
-        Icon::AiDiffOutlined => {
+        AiIcon::AiDiffOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4310,7 +4310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDiffTwotone")]
-        Icon::AiDiffTwotone => {
+        AiIcon::AiDiffTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4328,7 +4328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDingdingOutlined")]
-        Icon::AiDingdingOutlined => {
+        AiIcon::AiDingdingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4340,7 +4340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDingtalkCircleFilled")]
-        Icon::AiDingtalkCircleFilled => {
+        AiIcon::AiDingtalkCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4352,7 +4352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDingtalkOutlined")]
-        Icon::AiDingtalkOutlined => {
+        AiIcon::AiDingtalkOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4364,7 +4364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDingtalkSquareFilled")]
-        Icon::AiDingtalkSquareFilled => {
+        AiIcon::AiDingtalkSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4376,7 +4376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDisconnectOutlined")]
-        Icon::AiDisconnectOutlined => {
+        AiIcon::AiDisconnectOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4388,7 +4388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDislikeFilled")]
-        Icon::AiDislikeFilled => {
+        AiIcon::AiDislikeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4400,7 +4400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDislikeOutlined")]
-        Icon::AiDislikeOutlined => {
+        AiIcon::AiDislikeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4412,7 +4412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDislikeTwotone")]
-        Icon::AiDislikeTwotone => {
+        AiIcon::AiDislikeTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4426,7 +4426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDollarCircleFilled")]
-        Icon::AiDollarCircleFilled => {
+        AiIcon::AiDollarCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4438,7 +4438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDollarCircleOutlined")]
-        Icon::AiDollarCircleOutlined => {
+        AiIcon::AiDollarCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4450,7 +4450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDollarCircleTwotone")]
-        Icon::AiDollarCircleTwotone => {
+        AiIcon::AiDollarCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4469,7 +4469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDollarOutlined")]
-        Icon::AiDollarOutlined => {
+        AiIcon::AiDollarOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4481,7 +4481,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDollarTwotone")]
-        Icon::AiDollarTwotone => {
+        AiIcon::AiDollarTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4499,7 +4499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDotChartOutlined")]
-        Icon::AiDotChartOutlined => {
+        AiIcon::AiDotChartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4511,7 +4511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDoubleLeftOutlined")]
-        Icon::AiDoubleLeftOutlined => {
+        AiIcon::AiDoubleLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4523,7 +4523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDoubleRightOutlined")]
-        Icon::AiDoubleRightOutlined => {
+        AiIcon::AiDoubleRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4535,7 +4535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownCircleFilled")]
-        Icon::AiDownCircleFilled => {
+        AiIcon::AiDownCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4547,7 +4547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownCircleOutlined")]
-        Icon::AiDownCircleOutlined => {
+        AiIcon::AiDownCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4561,7 +4561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownCircleTwotone")]
-        Icon::AiDownCircleTwotone => {
+        AiIcon::AiDownCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4578,7 +4578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownOutlined")]
-        Icon::AiDownOutlined => {
+        AiIcon::AiDownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4590,7 +4590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownSquareFilled")]
-        Icon::AiDownSquareFilled => {
+        AiIcon::AiDownSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4602,7 +4602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownSquareOutlined")]
-        Icon::AiDownSquareOutlined => {
+        AiIcon::AiDownSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4616,7 +4616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownSquareTwotone")]
-        Icon::AiDownSquareTwotone => {
+        AiIcon::AiDownSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4632,7 +4632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDownloadOutlined")]
-        Icon::AiDownloadOutlined => {
+        AiIcon::AiDownloadOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4644,7 +4644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDragOutlined")]
-        Icon::AiDragOutlined => {
+        AiIcon::AiDragOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4656,7 +4656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDribbbleCircleFilled")]
-        Icon::AiDribbbleCircleFilled => {
+        AiIcon::AiDribbbleCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4668,7 +4668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDribbbleOutlined")]
-        Icon::AiDribbbleOutlined => {
+        AiIcon::AiDribbbleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4680,7 +4680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDribbbleSquareFilled")]
-        Icon::AiDribbbleSquareFilled => {
+        AiIcon::AiDribbbleSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4692,7 +4692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDribbbleSquareOutlined")]
-        Icon::AiDribbbleSquareOutlined => {
+        AiIcon::AiDribbbleSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4704,7 +4704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDropboxCircleFilled")]
-        Icon::AiDropboxCircleFilled => {
+        AiIcon::AiDropboxCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4716,7 +4716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDropboxOutlined")]
-        Icon::AiDropboxOutlined => {
+        AiIcon::AiDropboxOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4728,7 +4728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiDropboxSquareFilled")]
-        Icon::AiDropboxSquareFilled => {
+        AiIcon::AiDropboxSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4740,7 +4740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEditFilled")]
-        Icon::AiEditFilled => {
+        AiIcon::AiEditFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4752,7 +4752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEditOutlined")]
-        Icon::AiEditOutlined => {
+        AiIcon::AiEditOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4764,7 +4764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEditTwotone")]
-        Icon::AiEditTwotone => {
+        AiIcon::AiEditTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4777,7 +4777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEllipsisOutlined")]
-        Icon::AiEllipsisOutlined => {
+        AiIcon::AiEllipsisOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4789,7 +4789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEnterOutlined")]
-        Icon::AiEnterOutlined => {
+        AiIcon::AiEnterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4801,7 +4801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEnvironmentFilled")]
-        Icon::AiEnvironmentFilled => {
+        AiIcon::AiEnvironmentFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4813,7 +4813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEnvironmentOutlined")]
-        Icon::AiEnvironmentOutlined => {
+        AiIcon::AiEnvironmentOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4825,7 +4825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEnvironmentTwotone")]
-        Icon::AiEnvironmentTwotone => {
+        AiIcon::AiEnvironmentTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4842,7 +4842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEuroCircleFilled")]
-        Icon::AiEuroCircleFilled => {
+        AiIcon::AiEuroCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4854,7 +4854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEuroCircleOutlined")]
-        Icon::AiEuroCircleOutlined => {
+        AiIcon::AiEuroCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4866,7 +4866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEuroCircleTwotone")]
-        Icon::AiEuroCircleTwotone => {
+        AiIcon::AiEuroCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4882,7 +4882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEuroOutlined")]
-        Icon::AiEuroOutlined => {
+        AiIcon::AiEuroOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4894,7 +4894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEuroTwotone")]
-        Icon::AiEuroTwotone => {
+        AiIcon::AiEuroTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4910,7 +4910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExceptionOutlined")]
-        Icon::AiExceptionOutlined => {
+        AiIcon::AiExceptionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4922,7 +4922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExclamationCircleFilled")]
-        Icon::AiExclamationCircleFilled => {
+        AiIcon::AiExclamationCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4934,7 +4934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExclamationCircleOutlined")]
-        Icon::AiExclamationCircleOutlined => {
+        AiIcon::AiExclamationCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4948,7 +4948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExclamationCircleTwotone")]
-        Icon::AiExclamationCircleTwotone => {
+        AiIcon::AiExclamationCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4965,7 +4965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExclamationOutlined")]
-        Icon::AiExclamationOutlined => {
+        AiIcon::AiExclamationOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4977,7 +4977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExpandAltOutlined")]
-        Icon::AiExpandAltOutlined => {
+        AiIcon::AiExpandAltOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -4989,7 +4989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExpandOutlined")]
-        Icon::AiExpandOutlined => {
+        AiIcon::AiExpandOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5002,7 +5002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExperimentFilled")]
-        Icon::AiExperimentFilled => {
+        AiIcon::AiExperimentFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5014,7 +5014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExperimentOutlined")]
-        Icon::AiExperimentOutlined => {
+        AiIcon::AiExperimentOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5026,7 +5026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExperimentTwotone")]
-        Icon::AiExperimentTwotone => {
+        AiIcon::AiExperimentTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5043,7 +5043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiExportOutlined")]
-        Icon::AiExportOutlined => {
+        AiIcon::AiExportOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5055,7 +5055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEyeFilled")]
-        Icon::AiEyeFilled => {
+        AiIcon::AiEyeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5067,7 +5067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEyeInvisibleFilled")]
-        Icon::AiEyeInvisibleFilled => {
+        AiIcon::AiEyeInvisibleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5083,7 +5083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEyeInvisibleOutlined")]
-        Icon::AiEyeInvisibleOutlined => {
+        AiIcon::AiEyeInvisibleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5097,7 +5097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEyeInvisibleTwotone")]
-        Icon::AiEyeInvisibleTwotone => {
+        AiIcon::AiEyeInvisibleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5118,7 +5118,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEyeOutlined")]
-        Icon::AiEyeOutlined => {
+        AiIcon::AiEyeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5130,7 +5130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiEyeTwotone")]
-        Icon::AiEyeTwotone => {
+        AiIcon::AiEyeTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5148,7 +5148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFacebookFilled")]
-        Icon::AiFacebookFilled => {
+        AiIcon::AiFacebookFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5160,7 +5160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFacebookOutlined")]
-        Icon::AiFacebookOutlined => {
+        AiIcon::AiFacebookOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5172,7 +5172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFallOutlined")]
-        Icon::AiFallOutlined => {
+        AiIcon::AiFallOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5184,7 +5184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFastBackwardFilled")]
-        Icon::AiFastBackwardFilled => {
+        AiIcon::AiFastBackwardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5196,7 +5196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFastBackwardOutlined")]
-        Icon::AiFastBackwardOutlined => {
+        AiIcon::AiFastBackwardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5208,7 +5208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFastForwardFilled")]
-        Icon::AiFastForwardFilled => {
+        AiIcon::AiFastForwardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5220,7 +5220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFastForwardOutlined")]
-        Icon::AiFastForwardOutlined => {
+        AiIcon::AiFastForwardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5232,7 +5232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFieldBinaryOutlined")]
-        Icon::AiFieldBinaryOutlined => {
+        AiIcon::AiFieldBinaryOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5245,7 +5245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFieldNumberOutlined")]
-        Icon::AiFieldNumberOutlined => {
+        AiIcon::AiFieldNumberOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5258,7 +5258,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFieldStringOutlined")]
-        Icon::AiFieldStringOutlined => {
+        AiIcon::AiFieldStringOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5275,7 +5275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFieldTimeOutlined")]
-        Icon::AiFieldTimeOutlined => {
+        AiIcon::AiFieldTimeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5290,7 +5290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileAddFilled")]
-        Icon::AiFileAddFilled => {
+        AiIcon::AiFileAddFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5302,7 +5302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileAddOutlined")]
-        Icon::AiFileAddOutlined => {
+        AiIcon::AiFileAddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5314,7 +5314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileAddTwotone")]
-        Icon::AiFileAddTwotone => {
+        AiIcon::AiFileAddTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5330,7 +5330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileDoneOutlined")]
-        Icon::AiFileDoneOutlined => {
+        AiIcon::AiFileDoneOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5342,7 +5342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileExcelFilled")]
-        Icon::AiFileExcelFilled => {
+        AiIcon::AiFileExcelFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5354,7 +5354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileExcelOutlined")]
-        Icon::AiFileExcelOutlined => {
+        AiIcon::AiFileExcelOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5366,7 +5366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileExcelTwotone")]
-        Icon::AiFileExcelTwotone => {
+        AiIcon::AiFileExcelTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5383,7 +5383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileExclamationFilled")]
-        Icon::AiFileExclamationFilled => {
+        AiIcon::AiFileExclamationFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5395,7 +5395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileExclamationOutlined")]
-        Icon::AiFileExclamationOutlined => {
+        AiIcon::AiFileExclamationOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5407,7 +5407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileExclamationTwotone")]
-        Icon::AiFileExclamationTwotone => {
+        AiIcon::AiFileExclamationTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5424,7 +5424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileFilled")]
-        Icon::AiFileFilled => {
+        AiIcon::AiFileFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5436,7 +5436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileGifOutlined")]
-        Icon::AiFileGifOutlined => {
+        AiIcon::AiFileGifOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5453,7 +5453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileImageFilled")]
-        Icon::AiFileImageFilled => {
+        AiIcon::AiFileImageFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5465,7 +5465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileImageOutlined")]
-        Icon::AiFileImageOutlined => {
+        AiIcon::AiFileImageOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5477,7 +5477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileImageTwotone")]
-        Icon::AiFileImageTwotone => {
+        AiIcon::AiFileImageTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5494,7 +5494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileJpgOutlined")]
-        Icon::AiFileJpgOutlined => {
+        AiIcon::AiFileJpgOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5506,7 +5506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileMarkdownFilled")]
-        Icon::AiFileMarkdownFilled => {
+        AiIcon::AiFileMarkdownFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5518,7 +5518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileMarkdownOutlined")]
-        Icon::AiFileMarkdownOutlined => {
+        AiIcon::AiFileMarkdownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5530,7 +5530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileMarkdownTwotone")]
-        Icon::AiFileMarkdownTwotone => {
+        AiIcon::AiFileMarkdownTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5547,7 +5547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileOutlined")]
-        Icon::AiFileOutlined => {
+        AiIcon::AiFileOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5559,7 +5559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilePdfFilled")]
-        Icon::AiFilePdfFilled => {
+        AiIcon::AiFilePdfFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5571,7 +5571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilePdfOutlined")]
-        Icon::AiFilePdfOutlined => {
+        AiIcon::AiFilePdfOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5583,7 +5583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilePdfTwotone")]
-        Icon::AiFilePdfTwotone => {
+        AiIcon::AiFilePdfTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5603,7 +5603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilePptFilled")]
-        Icon::AiFilePptFilled => {
+        AiIcon::AiFilePptFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5615,7 +5615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilePptOutlined")]
-        Icon::AiFilePptOutlined => {
+        AiIcon::AiFilePptOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5627,7 +5627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilePptTwotone")]
-        Icon::AiFilePptTwotone => {
+        AiIcon::AiFilePptTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5645,7 +5645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileProtectOutlined")]
-        Icon::AiFileProtectOutlined => {
+        AiIcon::AiFileProtectOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5657,7 +5657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileSearchOutlined")]
-        Icon::AiFileSearchOutlined => {
+        AiIcon::AiFileSearchOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5669,7 +5669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileSyncOutlined")]
-        Icon::AiFileSyncOutlined => {
+        AiIcon::AiFileSyncOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5681,7 +5681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileTextFilled")]
-        Icon::AiFileTextFilled => {
+        AiIcon::AiFileTextFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5693,7 +5693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileTextOutlined")]
-        Icon::AiFileTextOutlined => {
+        AiIcon::AiFileTextOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5705,7 +5705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileTextTwotone")]
-        Icon::AiFileTextTwotone => {
+        AiIcon::AiFileTextTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5721,7 +5721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileTwotone")]
-        Icon::AiFileTwotone => {
+        AiIcon::AiFileTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5734,7 +5734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileUnknownFilled")]
-        Icon::AiFileUnknownFilled => {
+        AiIcon::AiFileUnknownFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5746,7 +5746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileUnknownOutlined")]
-        Icon::AiFileUnknownOutlined => {
+        AiIcon::AiFileUnknownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5758,7 +5758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileUnknownTwotone")]
-        Icon::AiFileUnknownTwotone => {
+        AiIcon::AiFileUnknownTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5775,7 +5775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileWordFilled")]
-        Icon::AiFileWordFilled => {
+        AiIcon::AiFileWordFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5787,7 +5787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileWordOutlined")]
-        Icon::AiFileWordOutlined => {
+        AiIcon::AiFileWordOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5799,7 +5799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileWordTwotone")]
-        Icon::AiFileWordTwotone => {
+        AiIcon::AiFileWordTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5815,7 +5815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileZipFilled")]
-        Icon::AiFileZipFilled => {
+        AiIcon::AiFileZipFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5827,7 +5827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileZipOutlined")]
-        Icon::AiFileZipOutlined => {
+        AiIcon::AiFileZipOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5839,7 +5839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFileZipTwotone")]
-        Icon::AiFileZipTwotone => {
+        AiIcon::AiFileZipTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5856,7 +5856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilterFilled")]
-        Icon::AiFilterFilled => {
+        AiIcon::AiFilterFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5868,7 +5868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilterOutlined")]
-        Icon::AiFilterOutlined => {
+        AiIcon::AiFilterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5880,7 +5880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFilterTwotone")]
-        Icon::AiFilterTwotone => {
+        AiIcon::AiFilterTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5894,7 +5894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFireFilled")]
-        Icon::AiFireFilled => {
+        AiIcon::AiFireFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5906,7 +5906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFireOutlined")]
-        Icon::AiFireOutlined => {
+        AiIcon::AiFireOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5918,7 +5918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFireTwotone")]
-        Icon::AiFireTwotone => {
+        AiIcon::AiFireTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5932,7 +5932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFlagFilled")]
-        Icon::AiFlagFilled => {
+        AiIcon::AiFlagFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5944,7 +5944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFlagOutlined")]
-        Icon::AiFlagOutlined => {
+        AiIcon::AiFlagOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5956,7 +5956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFlagTwotone")]
-        Icon::AiFlagTwotone => {
+        AiIcon::AiFlagTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5970,7 +5970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderAddFilled")]
-        Icon::AiFolderAddFilled => {
+        AiIcon::AiFolderAddFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5982,7 +5982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderAddOutlined")]
-        Icon::AiFolderAddOutlined => {
+        AiIcon::AiFolderAddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -5994,7 +5994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderAddTwotone")]
-        Icon::AiFolderAddTwotone => {
+        AiIcon::AiFolderAddTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6011,7 +6011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderFilled")]
-        Icon::AiFolderFilled => {
+        AiIcon::AiFolderFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6023,7 +6023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderOpenFilled")]
-        Icon::AiFolderOpenFilled => {
+        AiIcon::AiFolderOpenFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6035,7 +6035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderOpenOutlined")]
-        Icon::AiFolderOpenOutlined => {
+        AiIcon::AiFolderOpenOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6047,7 +6047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderOpenTwotone")]
-        Icon::AiFolderOpenTwotone => {
+        AiIcon::AiFolderOpenTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6060,7 +6060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderOutlined")]
-        Icon::AiFolderOutlined => {
+        AiIcon::AiFolderOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6072,7 +6072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderTwotone")]
-        Icon::AiFolderTwotone => {
+        AiIcon::AiFolderTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6085,7 +6085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFolderViewOutlined")]
-        Icon::AiFolderViewOutlined => {
+        AiIcon::AiFolderViewOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6102,7 +6102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFontColorsOutlined")]
-        Icon::AiFontColorsOutlined => {
+        AiIcon::AiFontColorsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6114,7 +6114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFontSizeOutlined")]
-        Icon::AiFontSizeOutlined => {
+        AiIcon::AiFontSizeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6126,7 +6126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiForkOutlined")]
-        Icon::AiForkOutlined => {
+        AiIcon::AiForkOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6138,7 +6138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFormOutlined")]
-        Icon::AiFormOutlined => {
+        AiIcon::AiFormOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6152,7 +6152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFormatPainterFilled")]
-        Icon::AiFormatPainterFilled => {
+        AiIcon::AiFormatPainterFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6165,7 +6165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFormatPainterOutlined")]
-        Icon::AiFormatPainterOutlined => {
+        AiIcon::AiFormatPainterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6178,7 +6178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiForwardFilled")]
-        Icon::AiForwardFilled => {
+        AiIcon::AiForwardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6190,7 +6190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiForwardOutlined")]
-        Icon::AiForwardOutlined => {
+        AiIcon::AiForwardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6202,7 +6202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFrownFilled")]
-        Icon::AiFrownFilled => {
+        AiIcon::AiFrownFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6214,7 +6214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFrownOutlined")]
-        Icon::AiFrownOutlined => {
+        AiIcon::AiFrownOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6226,7 +6226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFrownTwotone")]
-        Icon::AiFrownTwotone => {
+        AiIcon::AiFrownTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6242,7 +6242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFullscreenExitOutlined")]
-        Icon::AiFullscreenExitOutlined => {
+        AiIcon::AiFullscreenExitOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6254,7 +6254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFullscreenOutlined")]
-        Icon::AiFullscreenOutlined => {
+        AiIcon::AiFullscreenOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6266,7 +6266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFunctionOutlined")]
-        Icon::AiFunctionOutlined => {
+        AiIcon::AiFunctionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6279,7 +6279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFundFilled")]
-        Icon::AiFundFilled => {
+        AiIcon::AiFundFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6291,7 +6291,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFundOutlined")]
-        Icon::AiFundOutlined => {
+        AiIcon::AiFundOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6303,7 +6303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFundProjectionScreenOutlined")]
-        Icon::AiFundProjectionScreenOutlined => {
+        AiIcon::AiFundProjectionScreenOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6318,7 +6318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFundTwotone")]
-        Icon::AiFundTwotone => {
+        AiIcon::AiFundTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6334,7 +6334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFundViewOutlined")]
-        Icon::AiFundViewOutlined => {
+        AiIcon::AiFundViewOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6353,7 +6353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFunnelPlotFilled")]
-        Icon::AiFunnelPlotFilled => {
+        AiIcon::AiFunnelPlotFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6365,7 +6365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFunnelPlotOutlined")]
-        Icon::AiFunnelPlotOutlined => {
+        AiIcon::AiFunnelPlotOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6377,7 +6377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiFunnelPlotTwotone")]
-        Icon::AiFunnelPlotTwotone => {
+        AiIcon::AiFunnelPlotTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6392,7 +6392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGatewayOutlined")]
-        Icon::AiGatewayOutlined => {
+        AiIcon::AiGatewayOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6404,7 +6404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGifOutlined")]
-        Icon::AiGifOutlined => {
+        AiIcon::AiGifOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6417,7 +6417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGiftFilled")]
-        Icon::AiGiftFilled => {
+        AiIcon::AiGiftFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6429,7 +6429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGiftOutlined")]
-        Icon::AiGiftOutlined => {
+        AiIcon::AiGiftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6441,7 +6441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGiftTwotone")]
-        Icon::AiGiftTwotone => {
+        AiIcon::AiGiftTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6455,7 +6455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGithubFilled")]
-        Icon::AiGithubFilled => {
+        AiIcon::AiGithubFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6467,7 +6467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGithubOutlined")]
-        Icon::AiGithubOutlined => {
+        AiIcon::AiGithubOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6479,7 +6479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGitlabFilled")]
-        Icon::AiGitlabFilled => {
+        AiIcon::AiGitlabFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6491,7 +6491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGitlabOutlined")]
-        Icon::AiGitlabOutlined => {
+        AiIcon::AiGitlabOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6503,7 +6503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGlobalOutlined")]
-        Icon::AiGlobalOutlined => {
+        AiIcon::AiGlobalOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6515,7 +6515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoldFilled")]
-        Icon::AiGoldFilled => {
+        AiIcon::AiGoldFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6527,7 +6527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoldOutlined")]
-        Icon::AiGoldOutlined => {
+        AiIcon::AiGoldOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6539,7 +6539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoldTwotone")]
-        Icon::AiGoldTwotone => {
+        AiIcon::AiGoldTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6553,7 +6553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoldenFilled")]
-        Icon::AiGoldenFilled => {
+        AiIcon::AiGoldenFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6565,7 +6565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoogleCircleFilled")]
-        Icon::AiGoogleCircleFilled => {
+        AiIcon::AiGoogleCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6577,7 +6577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoogleOutlined")]
-        Icon::AiGoogleOutlined => {
+        AiIcon::AiGoogleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6589,7 +6589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGooglePlusCircleFilled")]
-        Icon::AiGooglePlusCircleFilled => {
+        AiIcon::AiGooglePlusCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6601,7 +6601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGooglePlusOutlined")]
-        Icon::AiGooglePlusOutlined => {
+        AiIcon::AiGooglePlusOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6613,7 +6613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGooglePlusSquareFilled")]
-        Icon::AiGooglePlusSquareFilled => {
+        AiIcon::AiGooglePlusSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6625,7 +6625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGoogleSquareFilled")]
-        Icon::AiGoogleSquareFilled => {
+        AiIcon::AiGoogleSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6637,7 +6637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiGroupOutlined")]
-        Icon::AiGroupOutlined => {
+        AiIcon::AiGroupOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6652,7 +6652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHddFilled")]
-        Icon::AiHddFilled => {
+        AiIcon::AiHddFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6664,7 +6664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHddOutlined")]
-        Icon::AiHddOutlined => {
+        AiIcon::AiHddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6676,7 +6676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHddTwotone")]
-        Icon::AiHddTwotone => {
+        AiIcon::AiHddTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6692,7 +6692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHeartFilled")]
-        Icon::AiHeartFilled => {
+        AiIcon::AiHeartFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6704,7 +6704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHeartOutlined")]
-        Icon::AiHeartOutlined => {
+        AiIcon::AiHeartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6716,7 +6716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHeartTwotone")]
-        Icon::AiHeartTwotone => {
+        AiIcon::AiHeartTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6730,7 +6730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHeatMapOutlined")]
-        Icon::AiHeatMapOutlined => {
+        AiIcon::AiHeatMapOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6742,7 +6742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHighlightFilled")]
-        Icon::AiHighlightFilled => {
+        AiIcon::AiHighlightFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6754,7 +6754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHighlightOutlined")]
-        Icon::AiHighlightOutlined => {
+        AiIcon::AiHighlightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6766,7 +6766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHighlightTwotone")]
-        Icon::AiHighlightTwotone => {
+        AiIcon::AiHighlightTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6781,7 +6781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHistoryOutlined")]
-        Icon::AiHistoryOutlined => {
+        AiIcon::AiHistoryOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6793,7 +6793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHolderOutlined")]
-        Icon::AiHolderOutlined => {
+        AiIcon::AiHolderOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6805,7 +6805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHomeFilled")]
-        Icon::AiHomeFilled => {
+        AiIcon::AiHomeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6817,7 +6817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHomeOutlined")]
-        Icon::AiHomeOutlined => {
+        AiIcon::AiHomeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6829,7 +6829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHomeTwotone")]
-        Icon::AiHomeTwotone => {
+        AiIcon::AiHomeTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6843,7 +6843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHourglassFilled")]
-        Icon::AiHourglassFilled => {
+        AiIcon::AiHourglassFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6855,7 +6855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHourglassOutlined")]
-        Icon::AiHourglassOutlined => {
+        AiIcon::AiHourglassOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6867,7 +6867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHourglassTwotone")]
-        Icon::AiHourglassTwotone => {
+        AiIcon::AiHourglassTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6882,7 +6882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHtml5Filled")]
-        Icon::AiHtml5Filled => {
+        AiIcon::AiHtml5Filled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6894,7 +6894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHtml5Outlined")]
-        Icon::AiHtml5Outlined => {
+        AiIcon::AiHtml5Outlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6906,7 +6906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiHtml5Twotone")]
-        Icon::AiHtml5Twotone => {
+        AiIcon::AiHtml5Twotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6922,7 +6922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIdcardFilled")]
-        Icon::AiIdcardFilled => {
+        AiIcon::AiIdcardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6934,7 +6934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIdcardOutlined")]
-        Icon::AiIdcardOutlined => {
+        AiIcon::AiIdcardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6946,7 +6946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIdcardTwotone")]
-        Icon::AiIdcardTwotone => {
+        AiIcon::AiIdcardTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6964,7 +6964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIeCircleFilled")]
-        Icon::AiIeCircleFilled => {
+        AiIcon::AiIeCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6976,7 +6976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIeOutlined")]
-        Icon::AiIeOutlined => {
+        AiIcon::AiIeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -6988,7 +6988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIeSquareFilled")]
-        Icon::AiIeSquareFilled => {
+        AiIcon::AiIeSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7000,7 +7000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiImportOutlined")]
-        Icon::AiImportOutlined => {
+        AiIcon::AiImportOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7012,7 +7012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInboxOutlined")]
-        Icon::AiInboxOutlined => {
+        AiIcon::AiInboxOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7024,7 +7024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInfoCircleFilled")]
-        Icon::AiInfoCircleFilled => {
+        AiIcon::AiInfoCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7036,7 +7036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInfoCircleOutlined")]
-        Icon::AiInfoCircleOutlined => {
+        AiIcon::AiInfoCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7050,7 +7050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInfoCircleTwotone")]
-        Icon::AiInfoCircleTwotone => {
+        AiIcon::AiInfoCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7066,7 +7066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInfoOutlined")]
-        Icon::AiInfoOutlined => {
+        AiIcon::AiInfoOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7078,7 +7078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsertRowAboveOutlined")]
-        Icon::AiInsertRowAboveOutlined => {
+        AiIcon::AiInsertRowAboveOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7091,7 +7091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsertRowBelowOutlined")]
-        Icon::AiInsertRowBelowOutlined => {
+        AiIcon::AiInsertRowBelowOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7104,7 +7104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsertRowLeftOutlined")]
-        Icon::AiInsertRowLeftOutlined => {
+        AiIcon::AiInsertRowLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7117,7 +7117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsertRowRightOutlined")]
-        Icon::AiInsertRowRightOutlined => {
+        AiIcon::AiInsertRowRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7130,7 +7130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInstagramFilled")]
-        Icon::AiInstagramFilled => {
+        AiIcon::AiInstagramFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7142,7 +7142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInstagramOutlined")]
-        Icon::AiInstagramOutlined => {
+        AiIcon::AiInstagramOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7154,7 +7154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsuranceFilled")]
-        Icon::AiInsuranceFilled => {
+        AiIcon::AiInsuranceFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7166,7 +7166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsuranceOutlined")]
-        Icon::AiInsuranceOutlined => {
+        AiIcon::AiInsuranceOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7178,7 +7178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInsuranceTwotone")]
-        Icon::AiInsuranceTwotone => {
+        AiIcon::AiInsuranceTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7195,7 +7195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInteractionFilled")]
-        Icon::AiInteractionFilled => {
+        AiIcon::AiInteractionFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7207,7 +7207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInteractionOutlined")]
-        Icon::AiInteractionOutlined => {
+        AiIcon::AiInteractionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7219,7 +7219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiInteractionTwotone")]
-        Icon::AiInteractionTwotone => {
+        AiIcon::AiInteractionTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7235,7 +7235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiIssuesCloseOutlined")]
-        Icon::AiIssuesCloseOutlined => {
+        AiIcon::AiIssuesCloseOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7247,7 +7247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiItalicOutlined")]
-        Icon::AiItalicOutlined => {
+        AiIcon::AiItalicOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7259,7 +7259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiKeyOutlined")]
-        Icon::AiKeyOutlined => {
+        AiIcon::AiKeyOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7271,7 +7271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLaptopOutlined")]
-        Icon::AiLaptopOutlined => {
+        AiIcon::AiLaptopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7283,7 +7283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLayoutFilled")]
-        Icon::AiLayoutFilled => {
+        AiIcon::AiLayoutFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7295,7 +7295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLayoutOutlined")]
-        Icon::AiLayoutOutlined => {
+        AiIcon::AiLayoutOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7307,7 +7307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLayoutTwotone")]
-        Icon::AiLayoutTwotone => {
+        AiIcon::AiLayoutTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7321,7 +7321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftCircleFilled")]
-        Icon::AiLeftCircleFilled => {
+        AiIcon::AiLeftCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7333,7 +7333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftCircleOutlined")]
-        Icon::AiLeftCircleOutlined => {
+        AiIcon::AiLeftCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7347,7 +7347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftCircleTwotone")]
-        Icon::AiLeftCircleTwotone => {
+        AiIcon::AiLeftCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7364,7 +7364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftOutlined")]
-        Icon::AiLeftOutlined => {
+        AiIcon::AiLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7376,7 +7376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftSquareFilled")]
-        Icon::AiLeftSquareFilled => {
+        AiIcon::AiLeftSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7388,7 +7388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftSquareOutlined")]
-        Icon::AiLeftSquareOutlined => {
+        AiIcon::AiLeftSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7402,7 +7402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLeftSquareTwotone")]
-        Icon::AiLeftSquareTwotone => {
+        AiIcon::AiLeftSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7418,7 +7418,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLikeFilled")]
-        Icon::AiLikeFilled => {
+        AiIcon::AiLikeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7430,7 +7430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLikeOutlined")]
-        Icon::AiLikeOutlined => {
+        AiIcon::AiLikeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7442,7 +7442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLikeTwotone")]
-        Icon::AiLikeTwotone => {
+        AiIcon::AiLikeTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7456,7 +7456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLineChartOutlined")]
-        Icon::AiLineChartOutlined => {
+        AiIcon::AiLineChartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7468,7 +7468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLineHeightOutlined")]
-        Icon::AiLineHeightOutlined => {
+        AiIcon::AiLineHeightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7480,7 +7480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLineOutlined")]
-        Icon::AiLineOutlined => {
+        AiIcon::AiLineOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7492,7 +7492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLinkOutlined")]
-        Icon::AiLinkOutlined => {
+        AiIcon::AiLinkOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7504,7 +7504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLinkedinFilled")]
-        Icon::AiLinkedinFilled => {
+        AiIcon::AiLinkedinFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7516,7 +7516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLinkedinOutlined")]
-        Icon::AiLinkedinOutlined => {
+        AiIcon::AiLinkedinOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7528,7 +7528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLoading3QuartersOutlined")]
-        Icon::AiLoading3QuartersOutlined => {
+        AiIcon::AiLoading3QuartersOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7540,7 +7540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLoadingOutlined")]
-        Icon::AiLoadingOutlined => {
+        AiIcon::AiLoadingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7552,7 +7552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLockFilled")]
-        Icon::AiLockFilled => {
+        AiIcon::AiLockFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7564,7 +7564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLockOutlined")]
-        Icon::AiLockOutlined => {
+        AiIcon::AiLockOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7576,7 +7576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLockTwotone")]
-        Icon::AiLockTwotone => {
+        AiIcon::AiLockTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7592,7 +7592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLoginOutlined")]
-        Icon::AiLoginOutlined => {
+        AiIcon::AiLoginOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7604,7 +7604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiLogoutOutlined")]
-        Icon::AiLogoutOutlined => {
+        AiIcon::AiLogoutOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7616,7 +7616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMacCommandFilled")]
-        Icon::AiMacCommandFilled => {
+        AiIcon::AiMacCommandFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7633,7 +7633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMacCommandOutlined")]
-        Icon::AiMacCommandOutlined => {
+        AiIcon::AiMacCommandOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7648,7 +7648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMailFilled")]
-        Icon::AiMailFilled => {
+        AiIcon::AiMailFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7660,7 +7660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMailOutlined")]
-        Icon::AiMailOutlined => {
+        AiIcon::AiMailOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7672,7 +7672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMailTwotone")]
-        Icon::AiMailTwotone => {
+        AiIcon::AiMailTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7687,7 +7687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiManOutlined")]
-        Icon::AiManOutlined => {
+        AiIcon::AiManOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7699,7 +7699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMedicineBoxFilled")]
-        Icon::AiMedicineBoxFilled => {
+        AiIcon::AiMedicineBoxFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7711,7 +7711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMedicineBoxOutlined")]
-        Icon::AiMedicineBoxOutlined => {
+        AiIcon::AiMedicineBoxOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7723,7 +7723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMedicineBoxTwotone")]
-        Icon::AiMedicineBoxTwotone => {
+        AiIcon::AiMedicineBoxTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7740,7 +7740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMediumCircleFilled")]
-        Icon::AiMediumCircleFilled => {
+        AiIcon::AiMediumCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7752,7 +7752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMediumOutlined")]
-        Icon::AiMediumOutlined => {
+        AiIcon::AiMediumOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7764,7 +7764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMediumSquareFilled")]
-        Icon::AiMediumSquareFilled => {
+        AiIcon::AiMediumSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7776,7 +7776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMediumWorkmarkOutlined")]
-        Icon::AiMediumWorkmarkOutlined => {
+        AiIcon::AiMediumWorkmarkOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7788,7 +7788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMehFilled")]
-        Icon::AiMehFilled => {
+        AiIcon::AiMehFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7800,7 +7800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMehOutlined")]
-        Icon::AiMehOutlined => {
+        AiIcon::AiMehOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7812,7 +7812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMehTwotone")]
-        Icon::AiMehTwotone => {
+        AiIcon::AiMehTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7828,7 +7828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMenuFoldOutlined")]
-        Icon::AiMenuFoldOutlined => {
+        AiIcon::AiMenuFoldOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7840,7 +7840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMenuOutlined")]
-        Icon::AiMenuOutlined => {
+        AiIcon::AiMenuOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7852,7 +7852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMenuUnfoldOutlined")]
-        Icon::AiMenuUnfoldOutlined => {
+        AiIcon::AiMenuUnfoldOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7864,7 +7864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMergeCellsOutlined")]
-        Icon::AiMergeCellsOutlined => {
+        AiIcon::AiMergeCellsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7877,7 +7877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMessageFilled")]
-        Icon::AiMessageFilled => {
+        AiIcon::AiMessageFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7889,7 +7889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMessageOutlined")]
-        Icon::AiMessageOutlined => {
+        AiIcon::AiMessageOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7901,7 +7901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMessageTwotone")]
-        Icon::AiMessageTwotone => {
+        AiIcon::AiMessageTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7917,7 +7917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusCircleFilled")]
-        Icon::AiMinusCircleFilled => {
+        AiIcon::AiMinusCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7929,7 +7929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusCircleOutlined")]
-        Icon::AiMinusCircleOutlined => {
+        AiIcon::AiMinusCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7943,7 +7943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusCircleTwotone")]
-        Icon::AiMinusCircleTwotone => {
+        AiIcon::AiMinusCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7959,7 +7959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusOutlined")]
-        Icon::AiMinusOutlined => {
+        AiIcon::AiMinusOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7971,7 +7971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusSquareFilled")]
-        Icon::AiMinusSquareFilled => {
+        AiIcon::AiMinusSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7983,7 +7983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusSquareOutlined")]
-        Icon::AiMinusSquareOutlined => {
+        AiIcon::AiMinusSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -7997,7 +7997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMinusSquareTwotone")]
-        Icon::AiMinusSquareTwotone => {
+        AiIcon::AiMinusSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8013,7 +8013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMobileFilled")]
-        Icon::AiMobileFilled => {
+        AiIcon::AiMobileFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8025,7 +8025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMobileOutlined")]
-        Icon::AiMobileOutlined => {
+        AiIcon::AiMobileOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8037,7 +8037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMobileTwotone")]
-        Icon::AiMobileTwotone => {
+        AiIcon::AiMobileTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8052,7 +8052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMoneyCollectFilled")]
-        Icon::AiMoneyCollectFilled => {
+        AiIcon::AiMoneyCollectFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8064,7 +8064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMoneyCollectOutlined")]
-        Icon::AiMoneyCollectOutlined => {
+        AiIcon::AiMoneyCollectOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8076,7 +8076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMoneyCollectTwotone")]
-        Icon::AiMoneyCollectTwotone => {
+        AiIcon::AiMoneyCollectTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8093,7 +8093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMonitorOutlined")]
-        Icon::AiMonitorOutlined => {
+        AiIcon::AiMonitorOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8105,7 +8105,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiMoreOutlined")]
-        Icon::AiMoreOutlined => {
+        AiIcon::AiMoreOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8117,7 +8117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNodeCollapseOutlined")]
-        Icon::AiNodeCollapseOutlined => {
+        AiIcon::AiNodeCollapseOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8130,7 +8130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNodeExpandOutlined")]
-        Icon::AiNodeExpandOutlined => {
+        AiIcon::AiNodeExpandOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8143,7 +8143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNodeIndexOutlined")]
-        Icon::AiNodeIndexOutlined => {
+        AiIcon::AiNodeIndexOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8156,7 +8156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNotificationFilled")]
-        Icon::AiNotificationFilled => {
+        AiIcon::AiNotificationFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8168,7 +8168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNotificationOutlined")]
-        Icon::AiNotificationOutlined => {
+        AiIcon::AiNotificationOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8180,7 +8180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNotificationTwotone")]
-        Icon::AiNotificationTwotone => {
+        AiIcon::AiNotificationTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8195,7 +8195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiNumberOutlined")]
-        Icon::AiNumberOutlined => {
+        AiIcon::AiNumberOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8207,7 +8207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiOneToOneOutlined")]
-        Icon::AiOneToOneOutlined => {
+        AiIcon::AiOneToOneOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8224,7 +8224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiOrderedListOutlined")]
-        Icon::AiOrderedListOutlined => {
+        AiIcon::AiOrderedListOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8236,7 +8236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPaperClipOutlined")]
-        Icon::AiPaperClipOutlined => {
+        AiIcon::AiPaperClipOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8248,7 +8248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPartitionOutlined")]
-        Icon::AiPartitionOutlined => {
+        AiIcon::AiPartitionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8261,7 +8261,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPauseCircleFilled")]
-        Icon::AiPauseCircleFilled => {
+        AiIcon::AiPauseCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8273,7 +8273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPauseCircleOutlined")]
-        Icon::AiPauseCircleOutlined => {
+        AiIcon::AiPauseCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8285,7 +8285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPauseCircleTwotone")]
-        Icon::AiPauseCircleTwotone => {
+        AiIcon::AiPauseCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8301,7 +8301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPauseOutlined")]
-        Icon::AiPauseOutlined => {
+        AiIcon::AiPauseOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8313,7 +8313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPayCircleFilled")]
-        Icon::AiPayCircleFilled => {
+        AiIcon::AiPayCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8325,7 +8325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPayCircleOutlined")]
-        Icon::AiPayCircleOutlined => {
+        AiIcon::AiPayCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8337,7 +8337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPercentageOutlined")]
-        Icon::AiPercentageOutlined => {
+        AiIcon::AiPercentageOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8349,7 +8349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPhoneFilled")]
-        Icon::AiPhoneFilled => {
+        AiIcon::AiPhoneFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8361,7 +8361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPhoneOutlined")]
-        Icon::AiPhoneOutlined => {
+        AiIcon::AiPhoneOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8373,7 +8373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPhoneTwotone")]
-        Icon::AiPhoneTwotone => {
+        AiIcon::AiPhoneTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8387,7 +8387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPicCenterOutlined")]
-        Icon::AiPicCenterOutlined => {
+        AiIcon::AiPicCenterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8399,7 +8399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPicLeftOutlined")]
-        Icon::AiPicLeftOutlined => {
+        AiIcon::AiPicLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8411,7 +8411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPicRightOutlined")]
-        Icon::AiPicRightOutlined => {
+        AiIcon::AiPicRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8423,7 +8423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPictureFilled")]
-        Icon::AiPictureFilled => {
+        AiIcon::AiPictureFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8435,7 +8435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPictureOutlined")]
-        Icon::AiPictureOutlined => {
+        AiIcon::AiPictureOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8447,7 +8447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPictureTwotone")]
-        Icon::AiPictureTwotone => {
+        AiIcon::AiPictureTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8466,7 +8466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPieChartFilled")]
-        Icon::AiPieChartFilled => {
+        AiIcon::AiPieChartFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8478,7 +8478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPieChartOutlined")]
-        Icon::AiPieChartOutlined => {
+        AiIcon::AiPieChartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8490,7 +8490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPieChartTwotone")]
-        Icon::AiPieChartTwotone => {
+        AiIcon::AiPieChartTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8510,7 +8510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlayCircleFilled")]
-        Icon::AiPlayCircleFilled => {
+        AiIcon::AiPlayCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8522,7 +8522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlayCircleOutlined")]
-        Icon::AiPlayCircleOutlined => {
+        AiIcon::AiPlayCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8536,7 +8536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlayCircleTwotone")]
-        Icon::AiPlayCircleTwotone => {
+        AiIcon::AiPlayCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8552,7 +8552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlaySquareFilled")]
-        Icon::AiPlaySquareFilled => {
+        AiIcon::AiPlaySquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8564,7 +8564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlaySquareOutlined")]
-        Icon::AiPlaySquareOutlined => {
+        AiIcon::AiPlaySquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8578,7 +8578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlaySquareTwotone")]
-        Icon::AiPlaySquareTwotone => {
+        AiIcon::AiPlaySquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8594,7 +8594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusCircleFilled")]
-        Icon::AiPlusCircleFilled => {
+        AiIcon::AiPlusCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8606,7 +8606,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusCircleOutlined")]
-        Icon::AiPlusCircleOutlined => {
+        AiIcon::AiPlusCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8620,7 +8620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusCircleTwotone")]
-        Icon::AiPlusCircleTwotone => {
+        AiIcon::AiPlusCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8636,7 +8636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusOutlined")]
-        Icon::AiPlusOutlined => {
+        AiIcon::AiPlusOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8651,7 +8651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusSquareFilled")]
-        Icon::AiPlusSquareFilled => {
+        AiIcon::AiPlusSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8663,7 +8663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusSquareOutlined")]
-        Icon::AiPlusSquareOutlined => {
+        AiIcon::AiPlusSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8677,7 +8677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPlusSquareTwotone")]
-        Icon::AiPlusSquareTwotone => {
+        AiIcon::AiPlusSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8693,7 +8693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPoundCircleFilled")]
-        Icon::AiPoundCircleFilled => {
+        AiIcon::AiPoundCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8705,7 +8705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPoundCircleOutlined")]
-        Icon::AiPoundCircleOutlined => {
+        AiIcon::AiPoundCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8717,7 +8717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPoundCircleTwotone")]
-        Icon::AiPoundCircleTwotone => {
+        AiIcon::AiPoundCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8733,7 +8733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPoundOutlined")]
-        Icon::AiPoundOutlined => {
+        AiIcon::AiPoundOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8745,7 +8745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPoweroffOutlined")]
-        Icon::AiPoweroffOutlined => {
+        AiIcon::AiPoweroffOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8757,7 +8757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPrinterFilled")]
-        Icon::AiPrinterFilled => {
+        AiIcon::AiPrinterFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8769,7 +8769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPrinterOutlined")]
-        Icon::AiPrinterOutlined => {
+        AiIcon::AiPrinterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8781,7 +8781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPrinterTwotone")]
-        Icon::AiPrinterTwotone => {
+        AiIcon::AiPrinterTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8797,7 +8797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiProfileFilled")]
-        Icon::AiProfileFilled => {
+        AiIcon::AiProfileFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8809,7 +8809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiProfileOutlined")]
-        Icon::AiProfileOutlined => {
+        AiIcon::AiProfileOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8821,7 +8821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiProfileTwotone")]
-        Icon::AiProfileTwotone => {
+        AiIcon::AiProfileTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8837,7 +8837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiProjectFilled")]
-        Icon::AiProjectFilled => {
+        AiIcon::AiProjectFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8849,7 +8849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiProjectOutlined")]
-        Icon::AiProjectOutlined => {
+        AiIcon::AiProjectOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8861,7 +8861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiProjectTwotone")]
-        Icon::AiProjectTwotone => {
+        AiIcon::AiProjectTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8877,7 +8877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPropertySafetyFilled")]
-        Icon::AiPropertySafetyFilled => {
+        AiIcon::AiPropertySafetyFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8889,7 +8889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPropertySafetyOutlined")]
-        Icon::AiPropertySafetyOutlined => {
+        AiIcon::AiPropertySafetyOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8901,7 +8901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPropertySafetyTwotone")]
-        Icon::AiPropertySafetyTwotone => {
+        AiIcon::AiPropertySafetyTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8918,7 +8918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPullRequestOutlined")]
-        Icon::AiPullRequestOutlined => {
+        AiIcon::AiPullRequestOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8930,7 +8930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPushpinFilled")]
-        Icon::AiPushpinFilled => {
+        AiIcon::AiPushpinFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8942,7 +8942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPushpinOutlined")]
-        Icon::AiPushpinOutlined => {
+        AiIcon::AiPushpinOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8954,7 +8954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiPushpinTwotone")]
-        Icon::AiPushpinTwotone => {
+        AiIcon::AiPushpinTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8968,7 +8968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQqCircleFilled")]
-        Icon::AiQqCircleFilled => {
+        AiIcon::AiQqCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8980,7 +8980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQqOutlined")]
-        Icon::AiQqOutlined => {
+        AiIcon::AiQqOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -8992,7 +8992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQqSquareFilled")]
-        Icon::AiQqSquareFilled => {
+        AiIcon::AiQqSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9004,7 +9004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQrcodeOutlined")]
-        Icon::AiQrcodeOutlined => {
+        AiIcon::AiQrcodeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9016,7 +9016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQuestionCircleFilled")]
-        Icon::AiQuestionCircleFilled => {
+        AiIcon::AiQuestionCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9028,7 +9028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQuestionCircleOutlined")]
-        Icon::AiQuestionCircleOutlined => {
+        AiIcon::AiQuestionCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9042,7 +9042,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQuestionCircleTwotone")]
-        Icon::AiQuestionCircleTwotone => {
+        AiIcon::AiQuestionCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9059,7 +9059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiQuestionOutlined")]
-        Icon::AiQuestionOutlined => {
+        AiIcon::AiQuestionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9071,7 +9071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRadarChartOutlined")]
-        Icon::AiRadarChartOutlined => {
+        AiIcon::AiRadarChartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9083,7 +9083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRadiusBottomleftOutlined")]
-        Icon::AiRadiusBottomleftOutlined => {
+        AiIcon::AiRadiusBottomleftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9095,7 +9095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRadiusBottomrightOutlined")]
-        Icon::AiRadiusBottomrightOutlined => {
+        AiIcon::AiRadiusBottomrightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9107,7 +9107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRadiusSettingOutlined")]
-        Icon::AiRadiusSettingOutlined => {
+        AiIcon::AiRadiusSettingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9119,7 +9119,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRadiusUpleftOutlined")]
-        Icon::AiRadiusUpleftOutlined => {
+        AiIcon::AiRadiusUpleftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9131,7 +9131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRadiusUprightOutlined")]
-        Icon::AiRadiusUprightOutlined => {
+        AiIcon::AiRadiusUprightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9143,7 +9143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiReadFilled")]
-        Icon::AiReadFilled => {
+        AiIcon::AiReadFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9155,7 +9155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiReadOutlined")]
-        Icon::AiReadOutlined => {
+        AiIcon::AiReadOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9167,7 +9167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiReconciliationFilled")]
-        Icon::AiReconciliationFilled => {
+        AiIcon::AiReconciliationFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9179,7 +9179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiReconciliationOutlined")]
-        Icon::AiReconciliationOutlined => {
+        AiIcon::AiReconciliationOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9191,7 +9191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiReconciliationTwotone")]
-        Icon::AiReconciliationTwotone => {
+        AiIcon::AiReconciliationTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9211,7 +9211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedEnvelopeFilled")]
-        Icon::AiRedEnvelopeFilled => {
+        AiIcon::AiRedEnvelopeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9223,7 +9223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedEnvelopeOutlined")]
-        Icon::AiRedEnvelopeOutlined => {
+        AiIcon::AiRedEnvelopeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9235,7 +9235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedEnvelopeTwotone")]
-        Icon::AiRedEnvelopeTwotone => {
+        AiIcon::AiRedEnvelopeTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9253,7 +9253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedditCircleFilled")]
-        Icon::AiRedditCircleFilled => {
+        AiIcon::AiRedditCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9265,7 +9265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedditOutlined")]
-        Icon::AiRedditOutlined => {
+        AiIcon::AiRedditOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9277,7 +9277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedditSquareFilled")]
-        Icon::AiRedditSquareFilled => {
+        AiIcon::AiRedditSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9289,7 +9289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRedoOutlined")]
-        Icon::AiRedoOutlined => {
+        AiIcon::AiRedoOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9301,7 +9301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiReloadOutlined")]
-        Icon::AiReloadOutlined => {
+        AiIcon::AiReloadOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9313,7 +9313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRestFilled")]
-        Icon::AiRestFilled => {
+        AiIcon::AiRestFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9325,7 +9325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRestOutlined")]
-        Icon::AiRestOutlined => {
+        AiIcon::AiRestOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9339,7 +9339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRestTwotone")]
-        Icon::AiRestTwotone => {
+        AiIcon::AiRestTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9355,7 +9355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRetweetOutlined")]
-        Icon::AiRetweetOutlined => {
+        AiIcon::AiRetweetOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9367,7 +9367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightCircleFilled")]
-        Icon::AiRightCircleFilled => {
+        AiIcon::AiRightCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9379,7 +9379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightCircleOutlined")]
-        Icon::AiRightCircleOutlined => {
+        AiIcon::AiRightCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9393,7 +9393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightCircleTwotone")]
-        Icon::AiRightCircleTwotone => {
+        AiIcon::AiRightCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9410,7 +9410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightOutlined")]
-        Icon::AiRightOutlined => {
+        AiIcon::AiRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9422,7 +9422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightSquareFilled")]
-        Icon::AiRightSquareFilled => {
+        AiIcon::AiRightSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9434,7 +9434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightSquareOutlined")]
-        Icon::AiRightSquareOutlined => {
+        AiIcon::AiRightSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9448,7 +9448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRightSquareTwotone")]
-        Icon::AiRightSquareTwotone => {
+        AiIcon::AiRightSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9464,7 +9464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRiseOutlined")]
-        Icon::AiRiseOutlined => {
+        AiIcon::AiRiseOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9476,7 +9476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRobotFilled")]
-        Icon::AiRobotFilled => {
+        AiIcon::AiRobotFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9489,7 +9489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRobotOutlined")]
-        Icon::AiRobotOutlined => {
+        AiIcon::AiRobotOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9501,7 +9501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRocketFilled")]
-        Icon::AiRocketFilled => {
+        AiIcon::AiRocketFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9513,7 +9513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRocketOutlined")]
-        Icon::AiRocketOutlined => {
+        AiIcon::AiRocketOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9525,7 +9525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRocketTwotone")]
-        Icon::AiRocketTwotone => {
+        AiIcon::AiRocketTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9539,7 +9539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRollbackOutlined")]
-        Icon::AiRollbackOutlined => {
+        AiIcon::AiRollbackOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9551,7 +9551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRotateLeftOutlined")]
-        Icon::AiRotateLeftOutlined => {
+        AiIcon::AiRotateLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9566,7 +9566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiRotateRightOutlined")]
-        Icon::AiRotateRightOutlined => {
+        AiIcon::AiRotateRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9581,7 +9581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSafetyCertificateFilled")]
-        Icon::AiSafetyCertificateFilled => {
+        AiIcon::AiSafetyCertificateFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9593,7 +9593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSafetyCertificateOutlined")]
-        Icon::AiSafetyCertificateOutlined => {
+        AiIcon::AiSafetyCertificateOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9605,7 +9605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSafetyCertificateTwotone")]
-        Icon::AiSafetyCertificateTwotone => {
+        AiIcon::AiSafetyCertificateTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9622,7 +9622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSafetyOutlined")]
-        Icon::AiSafetyOutlined => {
+        AiIcon::AiSafetyOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9636,7 +9636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSaveFilled")]
-        Icon::AiSaveFilled => {
+        AiIcon::AiSaveFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9648,7 +9648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSaveOutlined")]
-        Icon::AiSaveOutlined => {
+        AiIcon::AiSaveOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9660,7 +9660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSaveTwotone")]
-        Icon::AiSaveTwotone => {
+        AiIcon::AiSaveTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9676,7 +9676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiScanOutlined")]
-        Icon::AiScanOutlined => {
+        AiIcon::AiScanOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9688,7 +9688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiScheduleFilled")]
-        Icon::AiScheduleFilled => {
+        AiIcon::AiScheduleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9700,7 +9700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiScheduleOutlined")]
-        Icon::AiScheduleOutlined => {
+        AiIcon::AiScheduleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9712,7 +9712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiScheduleTwotone")]
-        Icon::AiScheduleTwotone => {
+        AiIcon::AiScheduleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9730,7 +9730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiScissorOutlined")]
-        Icon::AiScissorOutlined => {
+        AiIcon::AiScissorOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9742,7 +9742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSearchOutlined")]
-        Icon::AiSearchOutlined => {
+        AiIcon::AiSearchOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9754,7 +9754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSecurityScanFilled")]
-        Icon::AiSecurityScanFilled => {
+        AiIcon::AiSecurityScanFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9766,7 +9766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSecurityScanOutlined")]
-        Icon::AiSecurityScanOutlined => {
+        AiIcon::AiSecurityScanOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9778,7 +9778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSecurityScanTwotone")]
-        Icon::AiSecurityScanTwotone => {
+        AiIcon::AiSecurityScanTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9797,7 +9797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSelectOutlined")]
-        Icon::AiSelectOutlined => {
+        AiIcon::AiSelectOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9809,7 +9809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSendOutlined")]
-        Icon::AiSendOutlined => {
+        AiIcon::AiSendOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9822,7 +9822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSettingFilled")]
-        Icon::AiSettingFilled => {
+        AiIcon::AiSettingFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9834,7 +9834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSettingOutlined")]
-        Icon::AiSettingOutlined => {
+        AiIcon::AiSettingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9846,7 +9846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSettingTwotone")]
-        Icon::AiSettingTwotone => {
+        AiIcon::AiSettingTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9864,7 +9864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShakeOutlined")]
-        Icon::AiShakeOutlined => {
+        AiIcon::AiShakeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9876,7 +9876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShareAltOutlined")]
-        Icon::AiShareAltOutlined => {
+        AiIcon::AiShareAltOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9888,7 +9888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShopFilled")]
-        Icon::AiShopFilled => {
+        AiIcon::AiShopFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9900,7 +9900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShopOutlined")]
-        Icon::AiShopOutlined => {
+        AiIcon::AiShopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9912,7 +9912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShopTwotone")]
-        Icon::AiShopTwotone => {
+        AiIcon::AiShopTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9926,7 +9926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShoppingCartOutlined")]
-        Icon::AiShoppingCartOutlined => {
+        AiIcon::AiShoppingCartOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9938,7 +9938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShoppingFilled")]
-        Icon::AiShoppingFilled => {
+        AiIcon::AiShoppingFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9950,7 +9950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShoppingOutlined")]
-        Icon::AiShoppingOutlined => {
+        AiIcon::AiShoppingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9962,7 +9962,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShoppingTwotone")]
-        Icon::AiShoppingTwotone => {
+        AiIcon::AiShoppingTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9976,7 +9976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiShrinkOutlined")]
-        Icon::AiShrinkOutlined => {
+        AiIcon::AiShrinkOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -9988,7 +9988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSignalFilled")]
-        Icon::AiSignalFilled => {
+        AiIcon::AiSignalFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10001,7 +10001,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSisternodeOutlined")]
-        Icon::AiSisternodeOutlined => {
+        AiIcon::AiSisternodeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10014,7 +10014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSketchCircleFilled")]
-        Icon::AiSketchCircleFilled => {
+        AiIcon::AiSketchCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10026,7 +10026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSketchOutlined")]
-        Icon::AiSketchOutlined => {
+        AiIcon::AiSketchOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10038,7 +10038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSketchSquareFilled")]
-        Icon::AiSketchSquareFilled => {
+        AiIcon::AiSketchSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10050,7 +10050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSkinFilled")]
-        Icon::AiSkinFilled => {
+        AiIcon::AiSkinFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10062,7 +10062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSkinOutlined")]
-        Icon::AiSkinOutlined => {
+        AiIcon::AiSkinOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10074,7 +10074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSkinTwotone")]
-        Icon::AiSkinTwotone => {
+        AiIcon::AiSkinTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10088,7 +10088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSkypeFilled")]
-        Icon::AiSkypeFilled => {
+        AiIcon::AiSkypeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10100,7 +10100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSkypeOutlined")]
-        Icon::AiSkypeOutlined => {
+        AiIcon::AiSkypeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10112,7 +10112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlackCircleFilled")]
-        Icon::AiSlackCircleFilled => {
+        AiIcon::AiSlackCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10124,7 +10124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlackOutlined")]
-        Icon::AiSlackOutlined => {
+        AiIcon::AiSlackOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10136,7 +10136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlackSquareFilled")]
-        Icon::AiSlackSquareFilled => {
+        AiIcon::AiSlackSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10148,7 +10148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlackSquareOutlined")]
-        Icon::AiSlackSquareOutlined => {
+        AiIcon::AiSlackSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10161,7 +10161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlidersFilled")]
-        Icon::AiSlidersFilled => {
+        AiIcon::AiSlidersFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10173,7 +10173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlidersOutlined")]
-        Icon::AiSlidersOutlined => {
+        AiIcon::AiSlidersOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10185,7 +10185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSlidersTwotone")]
-        Icon::AiSlidersTwotone => {
+        AiIcon::AiSlidersTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10199,7 +10199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSmallDashOutlined")]
-        Icon::AiSmallDashOutlined => {
+        AiIcon::AiSmallDashOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10211,7 +10211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSmileFilled")]
-        Icon::AiSmileFilled => {
+        AiIcon::AiSmileFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10223,7 +10223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSmileOutlined")]
-        Icon::AiSmileOutlined => {
+        AiIcon::AiSmileOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10235,7 +10235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSmileTwotone")]
-        Icon::AiSmileTwotone => {
+        AiIcon::AiSmileTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10251,7 +10251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSnippetsFilled")]
-        Icon::AiSnippetsFilled => {
+        AiIcon::AiSnippetsFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10263,7 +10263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSnippetsOutlined")]
-        Icon::AiSnippetsOutlined => {
+        AiIcon::AiSnippetsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10275,7 +10275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSnippetsTwotone")]
-        Icon::AiSnippetsTwotone => {
+        AiIcon::AiSnippetsTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10288,7 +10288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSolutionOutlined")]
-        Icon::AiSolutionOutlined => {
+        AiIcon::AiSolutionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10300,7 +10300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSortAscendingOutlined")]
-        Icon::AiSortAscendingOutlined => {
+        AiIcon::AiSortAscendingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10312,7 +10312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSortDescendingOutlined")]
-        Icon::AiSortDescendingOutlined => {
+        AiIcon::AiSortDescendingOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10324,7 +10324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSoundFilled")]
-        Icon::AiSoundFilled => {
+        AiIcon::AiSoundFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10336,7 +10336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSoundOutlined")]
-        Icon::AiSoundOutlined => {
+        AiIcon::AiSoundOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10348,7 +10348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSoundTwotone")]
-        Icon::AiSoundTwotone => {
+        AiIcon::AiSoundTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10361,7 +10361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSplitCellsOutlined")]
-        Icon::AiSplitCellsOutlined => {
+        AiIcon::AiSplitCellsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10374,7 +10374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStarFilled")]
-        Icon::AiStarFilled => {
+        AiIcon::AiStarFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10386,7 +10386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStarOutlined")]
-        Icon::AiStarOutlined => {
+        AiIcon::AiStarOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10398,7 +10398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStarTwotone")]
-        Icon::AiStarTwotone => {
+        AiIcon::AiStarTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10412,7 +10412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStepBackwardFilled")]
-        Icon::AiStepBackwardFilled => {
+        AiIcon::AiStepBackwardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10424,7 +10424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStepBackwardOutlined")]
-        Icon::AiStepBackwardOutlined => {
+        AiIcon::AiStepBackwardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10436,7 +10436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStepForwardFilled")]
-        Icon::AiStepForwardFilled => {
+        AiIcon::AiStepForwardFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10448,7 +10448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStepForwardOutlined")]
-        Icon::AiStepForwardOutlined => {
+        AiIcon::AiStepForwardOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10460,7 +10460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStockOutlined")]
-        Icon::AiStockOutlined => {
+        AiIcon::AiStockOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10472,7 +10472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStopFilled")]
-        Icon::AiStopFilled => {
+        AiIcon::AiStopFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10484,7 +10484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStopOutlined")]
-        Icon::AiStopOutlined => {
+        AiIcon::AiStopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10496,7 +10496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStopTwotone")]
-        Icon::AiStopTwotone => {
+        AiIcon::AiStopTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10510,7 +10510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiStrikethroughOutlined")]
-        Icon::AiStrikethroughOutlined => {
+        AiIcon::AiStrikethroughOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10522,7 +10522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSubnodeOutlined")]
-        Icon::AiSubnodeOutlined => {
+        AiIcon::AiSubnodeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10535,7 +10535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSwapLeftOutlined")]
-        Icon::AiSwapLeftOutlined => {
+        AiIcon::AiSwapLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10547,7 +10547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSwapOutlined")]
-        Icon::AiSwapOutlined => {
+        AiIcon::AiSwapOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10559,7 +10559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSwapRightOutlined")]
-        Icon::AiSwapRightOutlined => {
+        AiIcon::AiSwapRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10571,7 +10571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSwitcherFilled")]
-        Icon::AiSwitcherFilled => {
+        AiIcon::AiSwitcherFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10583,7 +10583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSwitcherOutlined")]
-        Icon::AiSwitcherOutlined => {
+        AiIcon::AiSwitcherOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10595,7 +10595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSwitcherTwotone")]
-        Icon::AiSwitcherTwotone => {
+        AiIcon::AiSwitcherTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10610,7 +10610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiSyncOutlined")]
-        Icon::AiSyncOutlined => {
+        AiIcon::AiSyncOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10622,7 +10622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTableOutlined")]
-        Icon::AiTableOutlined => {
+        AiIcon::AiTableOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10634,7 +10634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTabletFilled")]
-        Icon::AiTabletFilled => {
+        AiIcon::AiTabletFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10646,7 +10646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTabletOutlined")]
-        Icon::AiTabletOutlined => {
+        AiIcon::AiTabletOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10658,7 +10658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTabletTwotone")]
-        Icon::AiTabletTwotone => {
+        AiIcon::AiTabletTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10673,7 +10673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTagFilled")]
-        Icon::AiTagFilled => {
+        AiIcon::AiTagFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10685,7 +10685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTagOutlined")]
-        Icon::AiTagOutlined => {
+        AiIcon::AiTagOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10697,7 +10697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTagTwotone")]
-        Icon::AiTagTwotone => {
+        AiIcon::AiTagTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10713,7 +10713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTagsFilled")]
-        Icon::AiTagsFilled => {
+        AiIcon::AiTagsFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10725,7 +10725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTagsOutlined")]
-        Icon::AiTagsOutlined => {
+        AiIcon::AiTagsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10737,7 +10737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTagsTwotone")]
-        Icon::AiTagsTwotone => {
+        AiIcon::AiTagsTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10755,7 +10755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTaobaoCircleFilled")]
-        Icon::AiTaobaoCircleFilled => {
+        AiIcon::AiTaobaoCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10767,7 +10767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTaobaoCircleOutlined")]
-        Icon::AiTaobaoCircleOutlined => {
+        AiIcon::AiTaobaoCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10779,7 +10779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTaobaoOutlined")]
-        Icon::AiTaobaoOutlined => {
+        AiIcon::AiTaobaoOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10791,7 +10791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTaobaoSquareFilled")]
-        Icon::AiTaobaoSquareFilled => {
+        AiIcon::AiTaobaoSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10803,7 +10803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTeamOutlined")]
-        Icon::AiTeamOutlined => {
+        AiIcon::AiTeamOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10815,7 +10815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiThunderboltFilled")]
-        Icon::AiThunderboltFilled => {
+        AiIcon::AiThunderboltFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10827,7 +10827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiThunderboltOutlined")]
-        Icon::AiThunderboltOutlined => {
+        AiIcon::AiThunderboltOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10839,7 +10839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiThunderboltTwotone")]
-        Icon::AiThunderboltTwotone => {
+        AiIcon::AiThunderboltTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10853,7 +10853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiToTopOutlined")]
-        Icon::AiToTopOutlined => {
+        AiIcon::AiToTopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10865,7 +10865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiToolFilled")]
-        Icon::AiToolFilled => {
+        AiIcon::AiToolFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10877,7 +10877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiToolOutlined")]
-        Icon::AiToolOutlined => {
+        AiIcon::AiToolOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10889,7 +10889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiToolTwotone")]
-        Icon::AiToolTwotone => {
+        AiIcon::AiToolTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10903,7 +10903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrademarkCircleFilled")]
-        Icon::AiTrademarkCircleFilled => {
+        AiIcon::AiTrademarkCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10915,7 +10915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrademarkCircleOutlined")]
-        Icon::AiTrademarkCircleOutlined => {
+        AiIcon::AiTrademarkCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10927,7 +10927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrademarkCircleTwotone")]
-        Icon::AiTrademarkCircleTwotone => {
+        AiIcon::AiTrademarkCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10946,7 +10946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrademarkOutlined")]
-        Icon::AiTrademarkOutlined => {
+        AiIcon::AiTrademarkOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10958,7 +10958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTransactionOutlined")]
-        Icon::AiTransactionOutlined => {
+        AiIcon::AiTransactionOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10970,7 +10970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTranslationOutlined")]
-        Icon::AiTranslationOutlined => {
+        AiIcon::AiTranslationOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10985,7 +10985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrophyFilled")]
-        Icon::AiTrophyFilled => {
+        AiIcon::AiTrophyFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -10997,7 +10997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrophyOutlined")]
-        Icon::AiTrophyOutlined => {
+        AiIcon::AiTrophyOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11009,7 +11009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTrophyTwotone")]
-        Icon::AiTrophyTwotone => {
+        AiIcon::AiTrophyTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11023,7 +11023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTwitterCircleFilled")]
-        Icon::AiTwitterCircleFilled => {
+        AiIcon::AiTwitterCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11035,7 +11035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTwitterOutlined")]
-        Icon::AiTwitterOutlined => {
+        AiIcon::AiTwitterOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11047,7 +11047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiTwitterSquareFilled")]
-        Icon::AiTwitterSquareFilled => {
+        AiIcon::AiTwitterSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11059,7 +11059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUnderlineOutlined")]
-        Icon::AiUnderlineOutlined => {
+        AiIcon::AiUnderlineOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11071,7 +11071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUndoOutlined")]
-        Icon::AiUndoOutlined => {
+        AiIcon::AiUndoOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11083,7 +11083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUngroupOutlined")]
-        Icon::AiUngroupOutlined => {
+        AiIcon::AiUngroupOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11096,7 +11096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUnlockFilled")]
-        Icon::AiUnlockFilled => {
+        AiIcon::AiUnlockFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11108,7 +11108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUnlockOutlined")]
-        Icon::AiUnlockOutlined => {
+        AiIcon::AiUnlockOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11120,7 +11120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUnlockTwotone")]
-        Icon::AiUnlockTwotone => {
+        AiIcon::AiUnlockTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11136,7 +11136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUnorderedListOutlined")]
-        Icon::AiUnorderedListOutlined => {
+        AiIcon::AiUnorderedListOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11148,7 +11148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpCircleFilled")]
-        Icon::AiUpCircleFilled => {
+        AiIcon::AiUpCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11160,7 +11160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpCircleOutlined")]
-        Icon::AiUpCircleOutlined => {
+        AiIcon::AiUpCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11174,7 +11174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpCircleTwotone")]
-        Icon::AiUpCircleTwotone => {
+        AiIcon::AiUpCircleTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11190,7 +11190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpOutlined")]
-        Icon::AiUpOutlined => {
+        AiIcon::AiUpOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11202,7 +11202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpSquareFilled")]
-        Icon::AiUpSquareFilled => {
+        AiIcon::AiUpSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11214,7 +11214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpSquareOutlined")]
-        Icon::AiUpSquareOutlined => {
+        AiIcon::AiUpSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11228,7 +11228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUpSquareTwotone")]
-        Icon::AiUpSquareTwotone => {
+        AiIcon::AiUpSquareTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11244,7 +11244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUploadOutlined")]
-        Icon::AiUploadOutlined => {
+        AiIcon::AiUploadOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11256,7 +11256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUsbFilled")]
-        Icon::AiUsbFilled => {
+        AiIcon::AiUsbFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11268,7 +11268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUsbOutlined")]
-        Icon::AiUsbOutlined => {
+        AiIcon::AiUsbOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11280,7 +11280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUsbTwotone")]
-        Icon::AiUsbTwotone => {
+        AiIcon::AiUsbTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11296,7 +11296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUserAddOutlined")]
-        Icon::AiUserAddOutlined => {
+        AiIcon::AiUserAddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11308,7 +11308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUserDeleteOutlined")]
-        Icon::AiUserDeleteOutlined => {
+        AiIcon::AiUserDeleteOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11320,7 +11320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUserOutlined")]
-        Icon::AiUserOutlined => {
+        AiIcon::AiUserOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11332,7 +11332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUserSwitchOutlined")]
-        Icon::AiUserSwitchOutlined => {
+        AiIcon::AiUserSwitchOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11345,7 +11345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUsergroupAddOutlined")]
-        Icon::AiUsergroupAddOutlined => {
+        AiIcon::AiUsergroupAddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11357,7 +11357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiUsergroupDeleteOutlined")]
-        Icon::AiUsergroupDeleteOutlined => {
+        AiIcon::AiUsergroupDeleteOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11369,7 +11369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVerifiedOutlined")]
-        Icon::AiVerifiedOutlined => {
+        AiIcon::AiVerifiedOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11386,7 +11386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVerticalAlignBottomOutlined")]
-        Icon::AiVerticalAlignBottomOutlined => {
+        AiIcon::AiVerticalAlignBottomOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11398,7 +11398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVerticalAlignMiddleOutlined")]
-        Icon::AiVerticalAlignMiddleOutlined => {
+        AiIcon::AiVerticalAlignMiddleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11410,7 +11410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVerticalAlignTopOutlined")]
-        Icon::AiVerticalAlignTopOutlined => {
+        AiIcon::AiVerticalAlignTopOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11422,7 +11422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVerticalLeftOutlined")]
-        Icon::AiVerticalLeftOutlined => {
+        AiIcon::AiVerticalLeftOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11434,7 +11434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVerticalRightOutlined")]
-        Icon::AiVerticalRightOutlined => {
+        AiIcon::AiVerticalRightOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11446,7 +11446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVideoCameraAddOutlined")]
-        Icon::AiVideoCameraAddOutlined => {
+        AiIcon::AiVideoCameraAddOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11463,7 +11463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVideoCameraFilled")]
-        Icon::AiVideoCameraFilled => {
+        AiIcon::AiVideoCameraFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11475,7 +11475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVideoCameraOutlined")]
-        Icon::AiVideoCameraOutlined => {
+        AiIcon::AiVideoCameraOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11487,7 +11487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiVideoCameraTwotone")]
-        Icon::AiVideoCameraTwotone => {
+        AiIcon::AiVideoCameraTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11504,7 +11504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWalletFilled")]
-        Icon::AiWalletFilled => {
+        AiIcon::AiWalletFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11516,7 +11516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWalletOutlined")]
-        Icon::AiWalletOutlined => {
+        AiIcon::AiWalletOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11528,7 +11528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWalletTwotone")]
-        Icon::AiWalletTwotone => {
+        AiIcon::AiWalletTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11545,7 +11545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWarningFilled")]
-        Icon::AiWarningFilled => {
+        AiIcon::AiWarningFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11557,7 +11557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWarningOutlined")]
-        Icon::AiWarningOutlined => {
+        AiIcon::AiWarningOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11569,7 +11569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWarningTwotone")]
-        Icon::AiWarningTwotone => {
+        AiIcon::AiWarningTwotone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11585,7 +11585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWechatFilled")]
-        Icon::AiWechatFilled => {
+        AiIcon::AiWechatFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11597,7 +11597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWechatOutlined")]
-        Icon::AiWechatOutlined => {
+        AiIcon::AiWechatOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11609,7 +11609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWeiboCircleFilled")]
-        Icon::AiWeiboCircleFilled => {
+        AiIcon::AiWeiboCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11621,7 +11621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWeiboCircleOutlined")]
-        Icon::AiWeiboCircleOutlined => {
+        AiIcon::AiWeiboCircleOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11633,7 +11633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWeiboOutlined")]
-        Icon::AiWeiboOutlined => {
+        AiIcon::AiWeiboOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11645,7 +11645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWeiboSquareFilled")]
-        Icon::AiWeiboSquareFilled => {
+        AiIcon::AiWeiboSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11657,7 +11657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWeiboSquareOutlined")]
-        Icon::AiWeiboSquareOutlined => {
+        AiIcon::AiWeiboSquareOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11669,7 +11669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWhatsAppOutlined")]
-        Icon::AiWhatsAppOutlined => {
+        AiIcon::AiWhatsAppOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11684,7 +11684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWifiOutlined")]
-        Icon::AiWifiOutlined => {
+        AiIcon::AiWifiOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11696,7 +11696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWindowsFilled")]
-        Icon::AiWindowsFilled => {
+        AiIcon::AiWindowsFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11708,7 +11708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWindowsOutlined")]
-        Icon::AiWindowsOutlined => {
+        AiIcon::AiWindowsOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11720,7 +11720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiWomanOutlined")]
-        Icon::AiWomanOutlined => {
+        AiIcon::AiWomanOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11732,7 +11732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiYahooFilled")]
-        Icon::AiYahooFilled => {
+        AiIcon::AiYahooFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11744,7 +11744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiYahooOutlined")]
-        Icon::AiYahooOutlined => {
+        AiIcon::AiYahooOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11756,7 +11756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiYoutubeFilled")]
-        Icon::AiYoutubeFilled => {
+        AiIcon::AiYoutubeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11768,7 +11768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiYoutubeOutlined")]
-        Icon::AiYoutubeOutlined => {
+        AiIcon::AiYoutubeOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11780,7 +11780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiYuqueFilled")]
-        Icon::AiYuqueFilled => {
+        AiIcon::AiYuqueFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11792,7 +11792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiYuqueOutlined")]
-        Icon::AiYuqueOutlined => {
+        AiIcon::AiYuqueOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11804,7 +11804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiZhihuCircleFilled")]
-        Icon::AiZhihuCircleFilled => {
+        AiIcon::AiZhihuCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11816,7 +11816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiZhihuOutlined")]
-        Icon::AiZhihuOutlined => {
+        AiIcon::AiZhihuOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11828,7 +11828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiZhihuSquareFilled")]
-        Icon::AiZhihuSquareFilled => {
+        AiIcon::AiZhihuSquareFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11840,7 +11840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiZoomInOutlined")]
-        Icon::AiZoomInOutlined => {
+        AiIcon::AiZoomInOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =
@@ -11852,7 +11852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "AiZoomOutOutlined")]
-        Icon::AiZoomOutOutlined => {
+        AiIcon::AiZoomOutOutlined => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 1024 1024" fill = "currentColor" role =

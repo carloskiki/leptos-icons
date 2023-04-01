@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum FiIcon {
     #[cfg(feature = "FiActivity")]
     FiActivity,
     #[cfg(feature = "FiAirplay")]
@@ -597,12 +597,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosFiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: FiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -626,7 +626,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "FiActivity")]
-        Icon::FiActivity => {
+        FiIcon::FiActivity => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -638,7 +638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAirplay")]
-        Icon::FiAirplay => {
+        FiIcon::FiAirplay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -651,7 +651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlertCircle")]
-        Icon::FiAlertCircle => {
+        FiIcon::FiAlertCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -664,7 +664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlertOctagon")]
-        Icon::FiAlertOctagon => {
+        FiIcon::FiAlertOctagon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -678,7 +678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlertTriangle")]
-        Icon::FiAlertTriangle => {
+        FiIcon::FiAlertTriangle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -692,7 +692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlignCenter")]
-        Icon::FiAlignCenter => {
+        FiIcon::FiAlignCenter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -706,7 +706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlignJustify")]
-        Icon::FiAlignJustify => {
+        FiIcon::FiAlignJustify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -720,7 +720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlignLeft")]
-        Icon::FiAlignLeft => {
+        FiIcon::FiAlignLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -734,7 +734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAlignRight")]
-        Icon::FiAlignRight => {
+        FiIcon::FiAlignRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -748,7 +748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAnchor")]
-        Icon::FiAnchor => {
+        FiIcon::FiAnchor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -761,7 +761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAperture")]
-        Icon::FiAperture => {
+        FiIcon::FiAperture => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -777,7 +777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArchive")]
-        Icon::FiArchive => {
+        FiIcon::FiArchive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -790,7 +790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowDown")]
-        Icon::FiArrowDown => {
+        FiIcon::FiArrowDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -802,7 +802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowDownCircle")]
-        Icon::FiArrowDownCircle => {
+        FiIcon::FiArrowDownCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -815,7 +815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowDownLeft")]
-        Icon::FiArrowDownLeft => {
+        FiIcon::FiArrowDownLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -827,7 +827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowDownRight")]
-        Icon::FiArrowDownRight => {
+        FiIcon::FiArrowDownRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -839,7 +839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowLeft")]
-        Icon::FiArrowLeft => {
+        FiIcon::FiArrowLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -851,7 +851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowLeftCircle")]
-        Icon::FiArrowLeftCircle => {
+        FiIcon::FiArrowLeftCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -864,7 +864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowRight")]
-        Icon::FiArrowRight => {
+        FiIcon::FiArrowRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -876,7 +876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowRightCircle")]
-        Icon::FiArrowRightCircle => {
+        FiIcon::FiArrowRightCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -889,7 +889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowUp")]
-        Icon::FiArrowUp => {
+        FiIcon::FiArrowUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -901,7 +901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowUpCircle")]
-        Icon::FiArrowUpCircle => {
+        FiIcon::FiArrowUpCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -914,7 +914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowUpLeft")]
-        Icon::FiArrowUpLeft => {
+        FiIcon::FiArrowUpLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -926,7 +926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiArrowUpRight")]
-        Icon::FiArrowUpRight => {
+        FiIcon::FiArrowUpRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -938,7 +938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAtSign")]
-        Icon::FiAtSign => {
+        FiIcon::FiAtSign => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -951,7 +951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiAward")]
-        Icon::FiAward => {
+        FiIcon::FiAward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -964,7 +964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBarChart")]
-        Icon::FiBarChart => {
+        FiIcon::FiBarChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -977,7 +977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBarChart2")]
-        Icon::FiBarChart2 => {
+        FiIcon::FiBarChart2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -990,7 +990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBattery")]
-        Icon::FiBattery => {
+        FiIcon::FiBattery => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1003,7 +1003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBatteryCharging")]
-        Icon::FiBatteryCharging => {
+        FiIcon::FiBatteryCharging => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1017,7 +1017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBell")]
-        Icon::FiBell => {
+        FiIcon::FiBell => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1030,7 +1030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBellOff")]
-        Icon::FiBellOff => {
+        FiIcon::FiBellOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1046,7 +1046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBluetooth")]
-        Icon::FiBluetooth => {
+        FiIcon::FiBluetooth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1058,7 +1058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBold")]
-        Icon::FiBold => {
+        FiIcon::FiBold => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1071,7 +1071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBook")]
-        Icon::FiBook => {
+        FiIcon::FiBook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1085,7 +1085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBookOpen")]
-        Icon::FiBookOpen => {
+        FiIcon::FiBookOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1098,7 +1098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBookmark")]
-        Icon::FiBookmark => {
+        FiIcon::FiBookmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1110,7 +1110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBox")]
-        Icon::FiBox => {
+        FiIcon::FiBox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1124,7 +1124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiBriefcase")]
-        Icon::FiBriefcase => {
+        FiIcon::FiBriefcase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1137,7 +1137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCalendar")]
-        Icon::FiCalendar => {
+        FiIcon::FiCalendar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1151,7 +1151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCamera")]
-        Icon::FiCamera => {
+        FiIcon::FiCamera => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1164,7 +1164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCameraOff")]
-        Icon::FiCameraOff => {
+        FiIcon::FiCameraOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1178,7 +1178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCast")]
-        Icon::FiCast => {
+        FiIcon::FiCast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1191,7 +1191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCheck")]
-        Icon::FiCheck => {
+        FiIcon::FiCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1203,7 +1203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCheckCircle")]
-        Icon::FiCheckCircle => {
+        FiIcon::FiCheckCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1216,7 +1216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCheckSquare")]
-        Icon::FiCheckSquare => {
+        FiIcon::FiCheckSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1229,7 +1229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronDown")]
-        Icon::FiChevronDown => {
+        FiIcon::FiChevronDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1241,7 +1241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronLeft")]
-        Icon::FiChevronLeft => {
+        FiIcon::FiChevronLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1253,7 +1253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronRight")]
-        Icon::FiChevronRight => {
+        FiIcon::FiChevronRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1265,7 +1265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronUp")]
-        Icon::FiChevronUp => {
+        FiIcon::FiChevronUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1277,7 +1277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronsDown")]
-        Icon::FiChevronsDown => {
+        FiIcon::FiChevronsDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1289,7 +1289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronsLeft")]
-        Icon::FiChevronsLeft => {
+        FiIcon::FiChevronsLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1301,7 +1301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronsRight")]
-        Icon::FiChevronsRight => {
+        FiIcon::FiChevronsRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1313,7 +1313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChevronsUp")]
-        Icon::FiChevronsUp => {
+        FiIcon::FiChevronsUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1325,7 +1325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiChrome")]
-        Icon::FiChrome => {
+        FiIcon::FiChrome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1340,7 +1340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCircle")]
-        Icon::FiCircle => {
+        FiIcon::FiCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1352,7 +1352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiClipboard")]
-        Icon::FiClipboard => {
+        FiIcon::FiClipboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1366,7 +1366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiClock")]
-        Icon::FiClock => {
+        FiIcon::FiClock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1378,7 +1378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCloud")]
-        Icon::FiCloud => {
+        FiIcon::FiCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1390,7 +1390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCloudDrizzle")]
-        Icon::FiCloudDrizzle => {
+        FiIcon::FiCloudDrizzle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1406,7 +1406,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCloudLightning")]
-        Icon::FiCloudLightning => {
+        FiIcon::FiCloudLightning => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1419,7 +1419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCloudOff")]
-        Icon::FiCloudOff => {
+        FiIcon::FiCloudOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1432,7 +1432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCloudRain")]
-        Icon::FiCloudRain => {
+        FiIcon::FiCloudRain => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1446,7 +1446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCloudSnow")]
-        Icon::FiCloudSnow => {
+        FiIcon::FiCloudSnow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1463,7 +1463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCode")]
-        Icon::FiCode => {
+        FiIcon::FiCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1475,7 +1475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCodepen")]
-        Icon::FiCodepen => {
+        FiIcon::FiCodepen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1490,7 +1490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCodesandbox")]
-        Icon::FiCodesandbox => {
+        FiIcon::FiCodesandbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1507,7 +1507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCoffee")]
-        Icon::FiCoffee => {
+        FiIcon::FiCoffee => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1522,7 +1522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiColumns")]
-        Icon::FiColumns => {
+        FiIcon::FiColumns => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1535,7 +1535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCommand")]
-        Icon::FiCommand => {
+        FiIcon::FiCommand => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1548,7 +1548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCompass")]
-        Icon::FiCompass => {
+        FiIcon::FiCompass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1561,7 +1561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCopy")]
-        Icon::FiCopy => {
+        FiIcon::FiCopy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1574,7 +1574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerDownLeft")]
-        Icon::FiCornerDownLeft => {
+        FiIcon::FiCornerDownLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1586,7 +1586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerDownRight")]
-        Icon::FiCornerDownRight => {
+        FiIcon::FiCornerDownRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1598,7 +1598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerLeftDown")]
-        Icon::FiCornerLeftDown => {
+        FiIcon::FiCornerLeftDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1610,7 +1610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerLeftUp")]
-        Icon::FiCornerLeftUp => {
+        FiIcon::FiCornerLeftUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1622,7 +1622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerRightDown")]
-        Icon::FiCornerRightDown => {
+        FiIcon::FiCornerRightDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1634,7 +1634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerRightUp")]
-        Icon::FiCornerRightUp => {
+        FiIcon::FiCornerRightUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1646,7 +1646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerUpLeft")]
-        Icon::FiCornerUpLeft => {
+        FiIcon::FiCornerUpLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1658,7 +1658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCornerUpRight")]
-        Icon::FiCornerUpRight => {
+        FiIcon::FiCornerUpRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1670,7 +1670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCpu")]
-        Icon::FiCpu => {
+        FiIcon::FiCpu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1688,7 +1688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCreditCard")]
-        Icon::FiCreditCard => {
+        FiIcon::FiCreditCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1701,7 +1701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCrop")]
-        Icon::FiCrop => {
+        FiIcon::FiCrop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1714,7 +1714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiCrosshair")]
-        Icon::FiCrosshair => {
+        FiIcon::FiCrosshair => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1728,7 +1728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDatabase")]
-        Icon::FiDatabase => {
+        FiIcon::FiDatabase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1741,7 +1741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDelete")]
-        Icon::FiDelete => {
+        FiIcon::FiDelete => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1755,7 +1755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDisc")]
-        Icon::FiDisc => {
+        FiIcon::FiDisc => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1767,7 +1767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDivide")]
-        Icon::FiDivide => {
+        FiIcon::FiDivide => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1780,7 +1780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDivideCircle")]
-        Icon::FiDivideCircle => {
+        FiIcon::FiDivideCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1794,7 +1794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDivideSquare")]
-        Icon::FiDivideSquare => {
+        FiIcon::FiDivideSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1808,7 +1808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDollarSign")]
-        Icon::FiDollarSign => {
+        FiIcon::FiDollarSign => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1821,7 +1821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDownload")]
-        Icon::FiDownload => {
+        FiIcon::FiDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1835,7 +1835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDownloadCloud")]
-        Icon::FiDownloadCloud => {
+        FiIcon::FiDownloadCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1849,7 +1849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDribbble")]
-        Icon::FiDribbble => {
+        FiIcon::FiDribbble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1863,7 +1863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiDroplet")]
-        Icon::FiDroplet => {
+        FiIcon::FiDroplet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1875,7 +1875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiEdit")]
-        Icon::FiEdit => {
+        FiIcon::FiEdit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1888,7 +1888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiEdit2")]
-        Icon::FiEdit2 => {
+        FiIcon::FiEdit2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1900,7 +1900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiEdit3")]
-        Icon::FiEdit3 => {
+        FiIcon::FiEdit3 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1912,7 +1912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiExternalLink")]
-        Icon::FiExternalLink => {
+        FiIcon::FiExternalLink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1926,7 +1926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiEye")]
-        Icon::FiEye => {
+        FiIcon::FiEye => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1939,7 +1939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiEyeOff")]
-        Icon::FiEyeOff => {
+        FiIcon::FiEyeOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1952,7 +1952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFacebook")]
-        Icon::FiFacebook => {
+        FiIcon::FiFacebook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1965,7 +1965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFastForward")]
-        Icon::FiFastForward => {
+        FiIcon::FiFastForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1978,7 +1978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFeather")]
-        Icon::FiFeather => {
+        FiIcon::FiFeather => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -1992,7 +1992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFigma")]
-        Icon::FiFigma => {
+        FiIcon::FiFigma => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2008,7 +2008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFile")]
-        Icon::FiFile => {
+        FiIcon::FiFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2021,7 +2021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFileMinus")]
-        Icon::FiFileMinus => {
+        FiIcon::FiFileMinus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2035,7 +2035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFilePlus")]
-        Icon::FiFilePlus => {
+        FiIcon::FiFilePlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2050,7 +2050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFileText")]
-        Icon::FiFileText => {
+        FiIcon::FiFileText => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2065,7 +2065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFilm")]
-        Icon::FiFilm => {
+        FiIcon::FiFilm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2082,7 +2082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFilter")]
-        Icon::FiFilter => {
+        FiIcon::FiFilter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2094,7 +2094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFlag")]
-        Icon::FiFlag => {
+        FiIcon::FiFlag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2107,7 +2107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFolder")]
-        Icon::FiFolder => {
+        FiIcon::FiFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2120,7 +2120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFolderMinus")]
-        Icon::FiFolderMinus => {
+        FiIcon::FiFolderMinus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2133,7 +2133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFolderPlus")]
-        Icon::FiFolderPlus => {
+        FiIcon::FiFolderPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2147,7 +2147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFramer")]
-        Icon::FiFramer => {
+        FiIcon::FiFramer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2159,7 +2159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiFrown")]
-        Icon::FiFrown => {
+        FiIcon::FiFrown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2173,7 +2173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGift")]
-        Icon::FiGift => {
+        FiIcon::FiGift => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2188,7 +2188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGitBranch")]
-        Icon::FiGitBranch => {
+        FiIcon::FiGitBranch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2201,7 +2201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGitCommit")]
-        Icon::FiGitCommit => {
+        FiIcon::FiGitCommit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2214,7 +2214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGitMerge")]
-        Icon::FiGitMerge => {
+        FiIcon::FiGitMerge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2227,7 +2227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGitPullRequest")]
-        Icon::FiGitPullRequest => {
+        FiIcon::FiGitPullRequest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2241,7 +2241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGithub")]
-        Icon::FiGithub => {
+        FiIcon::FiGithub => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2254,7 +2254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGitlab")]
-        Icon::FiGitlab => {
+        FiIcon::FiGitlab => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2267,7 +2267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGlobe")]
-        Icon::FiGlobe => {
+        FiIcon::FiGlobe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2281,7 +2281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiGrid")]
-        Icon::FiGrid => {
+        FiIcon::FiGrid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2295,7 +2295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHardDrive")]
-        Icon::FiHardDrive => {
+        FiIcon::FiHardDrive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2310,7 +2310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHash")]
-        Icon::FiHash => {
+        FiIcon::FiHash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2324,7 +2324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHeadphones")]
-        Icon::FiHeadphones => {
+        FiIcon::FiHeadphones => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2338,7 +2338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHeart")]
-        Icon::FiHeart => {
+        FiIcon::FiHeart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2351,7 +2351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHelpCircle")]
-        Icon::FiHelpCircle => {
+        FiIcon::FiHelpCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2364,7 +2364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHexagon")]
-        Icon::FiHexagon => {
+        FiIcon::FiHexagon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2377,7 +2377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiHome")]
-        Icon::FiHome => {
+        FiIcon::FiHome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2390,7 +2390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiImage")]
-        Icon::FiImage => {
+        FiIcon::FiImage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2403,7 +2403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiInbox")]
-        Icon::FiInbox => {
+        FiIcon::FiInbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2417,7 +2417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiInfo")]
-        Icon::FiInfo => {
+        FiIcon::FiInfo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2430,7 +2430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiInstagram")]
-        Icon::FiInstagram => {
+        FiIcon::FiInstagram => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2444,7 +2444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiItalic")]
-        Icon::FiItalic => {
+        FiIcon::FiItalic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2457,7 +2457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiKey")]
-        Icon::FiKey => {
+        FiIcon::FiKey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2470,7 +2470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLayers")]
-        Icon::FiLayers => {
+        FiIcon::FiLayers => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2483,7 +2483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLayout")]
-        Icon::FiLayout => {
+        FiIcon::FiLayout => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2496,7 +2496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLifeBuoy")]
-        Icon::FiLifeBuoy => {
+        FiIcon::FiLifeBuoy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2512,7 +2512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLink")]
-        Icon::FiLink => {
+        FiIcon::FiLink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2526,7 +2526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLink2")]
-        Icon::FiLink2 => {
+        FiIcon::FiLink2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2539,7 +2539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLinkedin")]
-        Icon::FiLinkedin => {
+        FiIcon::FiLinkedin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2553,7 +2553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiList")]
-        Icon::FiList => {
+        FiIcon::FiList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2568,7 +2568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLoader")]
-        Icon::FiLoader => {
+        FiIcon::FiLoader => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2585,7 +2585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLock")]
-        Icon::FiLock => {
+        FiIcon::FiLock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2598,7 +2598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLogIn")]
-        Icon::FiLogIn => {
+        FiIcon::FiLogIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2612,7 +2612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiLogOut")]
-        Icon::FiLogOut => {
+        FiIcon::FiLogOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2626,7 +2626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMail")]
-        Icon::FiMail => {
+        FiIcon::FiMail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2639,7 +2639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMap")]
-        Icon::FiMap => {
+        FiIcon::FiMap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2653,7 +2653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMapPin")]
-        Icon::FiMapPin => {
+        FiIcon::FiMapPin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2666,7 +2666,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMaximize")]
-        Icon::FiMaximize => {
+        FiIcon::FiMaximize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2679,7 +2679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMaximize2")]
-        Icon::FiMaximize2 => {
+        FiIcon::FiMaximize2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2693,7 +2693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMeh")]
-        Icon::FiMeh => {
+        FiIcon::FiMeh => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2707,7 +2707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMenu")]
-        Icon::FiMenu => {
+        FiIcon::FiMenu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2720,7 +2720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMessageCircle")]
-        Icon::FiMessageCircle => {
+        FiIcon::FiMessageCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2733,7 +2733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMessageSquare")]
-        Icon::FiMessageSquare => {
+        FiIcon::FiMessageSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2746,7 +2746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMic")]
-        Icon::FiMic => {
+        FiIcon::FiMic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2760,7 +2760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMicOff")]
-        Icon::FiMicOff => {
+        FiIcon::FiMicOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2776,7 +2776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMinimize")]
-        Icon::FiMinimize => {
+        FiIcon::FiMinimize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2789,7 +2789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMinimize2")]
-        Icon::FiMinimize2 => {
+        FiIcon::FiMinimize2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2803,7 +2803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMinus")]
-        Icon::FiMinus => {
+        FiIcon::FiMinus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2815,7 +2815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMinusCircle")]
-        Icon::FiMinusCircle => {
+        FiIcon::FiMinusCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2827,7 +2827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMinusSquare")]
-        Icon::FiMinusSquare => {
+        FiIcon::FiMinusSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2840,7 +2840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMonitor")]
-        Icon::FiMonitor => {
+        FiIcon::FiMonitor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2853,7 +2853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMoon")]
-        Icon::FiMoon => {
+        FiIcon::FiMoon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2865,7 +2865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMoreHorizontal")]
-        Icon::FiMoreHorizontal => {
+        FiIcon::FiMoreHorizontal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2878,7 +2878,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMoreVertical")]
-        Icon::FiMoreVertical => {
+        FiIcon::FiMoreVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2891,7 +2891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMousePointer")]
-        Icon::FiMousePointer => {
+        FiIcon::FiMousePointer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2904,7 +2904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMove")]
-        Icon::FiMove => {
+        FiIcon::FiMove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2919,7 +2919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiMusic")]
-        Icon::FiMusic => {
+        FiIcon::FiMusic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2932,7 +2932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiNavigation")]
-        Icon::FiNavigation => {
+        FiIcon::FiNavigation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2944,7 +2944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiNavigation2")]
-        Icon::FiNavigation2 => {
+        FiIcon::FiNavigation2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2956,7 +2956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiOctagon")]
-        Icon::FiOctagon => {
+        FiIcon::FiOctagon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2969,7 +2969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPackage")]
-        Icon::FiPackage => {
+        FiIcon::FiPackage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2984,7 +2984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPaperclip")]
-        Icon::FiPaperclip => {
+        FiIcon::FiPaperclip => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -2997,7 +2997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPause")]
-        Icon::FiPause => {
+        FiIcon::FiPause => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3010,7 +3010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPauseCircle")]
-        Icon::FiPauseCircle => {
+        FiIcon::FiPauseCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3023,7 +3023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPenTool")]
-        Icon::FiPenTool => {
+        FiIcon::FiPenTool => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3037,7 +3037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPercent")]
-        Icon::FiPercent => {
+        FiIcon::FiPercent => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3050,7 +3050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhone")]
-        Icon::FiPhone => {
+        FiIcon::FiPhone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3063,7 +3063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhoneCall")]
-        Icon::FiPhoneCall => {
+        FiIcon::FiPhoneCall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3076,7 +3076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhoneForwarded")]
-        Icon::FiPhoneForwarded => {
+        FiIcon::FiPhoneForwarded => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3091,7 +3091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhoneIncoming")]
-        Icon::FiPhoneIncoming => {
+        FiIcon::FiPhoneIncoming => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3106,7 +3106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhoneMissed")]
-        Icon::FiPhoneMissed => {
+        FiIcon::FiPhoneMissed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3121,7 +3121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhoneOff")]
-        Icon::FiPhoneOff => {
+        FiIcon::FiPhoneOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3134,7 +3134,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPhoneOutgoing")]
-        Icon::FiPhoneOutgoing => {
+        FiIcon::FiPhoneOutgoing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3149,7 +3149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPieChart")]
-        Icon::FiPieChart => {
+        FiIcon::FiPieChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3162,7 +3162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPlay")]
-        Icon::FiPlay => {
+        FiIcon::FiPlay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3174,7 +3174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPlayCircle")]
-        Icon::FiPlayCircle => {
+        FiIcon::FiPlayCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3186,7 +3186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPlus")]
-        Icon::FiPlus => {
+        FiIcon::FiPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3198,7 +3198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPlusCircle")]
-        Icon::FiPlusCircle => {
+        FiIcon::FiPlusCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3211,7 +3211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPlusSquare")]
-        Icon::FiPlusSquare => {
+        FiIcon::FiPlusSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3225,7 +3225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPocket")]
-        Icon::FiPocket => {
+        FiIcon::FiPocket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3238,7 +3238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPower")]
-        Icon::FiPower => {
+        FiIcon::FiPower => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3251,7 +3251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiPrinter")]
-        Icon::FiPrinter => {
+        FiIcon::FiPrinter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3265,7 +3265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRadio")]
-        Icon::FiRadio => {
+        FiIcon::FiRadio => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3279,7 +3279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRefreshCcw")]
-        Icon::FiRefreshCcw => {
+        FiIcon::FiRefreshCcw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3293,7 +3293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRefreshCw")]
-        Icon::FiRefreshCw => {
+        FiIcon::FiRefreshCw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3307,7 +3307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRepeat")]
-        Icon::FiRepeat => {
+        FiIcon::FiRepeat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3320,7 +3320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRewind")]
-        Icon::FiRewind => {
+        FiIcon::FiRewind => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3333,7 +3333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRotateCcw")]
-        Icon::FiRotateCcw => {
+        FiIcon::FiRotateCcw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3346,7 +3346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRotateCw")]
-        Icon::FiRotateCw => {
+        FiIcon::FiRotateCw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3359,7 +3359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiRss")]
-        Icon::FiRss => {
+        FiIcon::FiRss => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3372,7 +3372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSave")]
-        Icon::FiSave => {
+        FiIcon::FiSave => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3386,7 +3386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiScissors")]
-        Icon::FiScissors => {
+        FiIcon::FiScissors => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3400,7 +3400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSearch")]
-        Icon::FiSearch => {
+        FiIcon::FiSearch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3412,7 +3412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSend")]
-        Icon::FiSend => {
+        FiIcon::FiSend => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3424,7 +3424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiServer")]
-        Icon::FiServer => {
+        FiIcon::FiServer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3438,7 +3438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSettings")]
-        Icon::FiSettings => {
+        FiIcon::FiSettings => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3452,7 +3452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShare")]
-        Icon::FiShare => {
+        FiIcon::FiShare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3466,7 +3466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShare2")]
-        Icon::FiShare2 => {
+        FiIcon::FiShare2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3480,7 +3480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShield")]
-        Icon::FiShield => {
+        FiIcon::FiShield => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3492,7 +3492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShieldOff")]
-        Icon::FiShieldOff => {
+        FiIcon::FiShieldOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3506,7 +3506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShoppingBag")]
-        Icon::FiShoppingBag => {
+        FiIcon::FiShoppingBag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3520,7 +3520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShoppingCart")]
-        Icon::FiShoppingCart => {
+        FiIcon::FiShoppingCart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3534,7 +3534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiShuffle")]
-        Icon::FiShuffle => {
+        FiIcon::FiShuffle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3548,7 +3548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSidebar")]
-        Icon::FiSidebar => {
+        FiIcon::FiSidebar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3561,7 +3561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSkipBack")]
-        Icon::FiSkipBack => {
+        FiIcon::FiSkipBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3574,7 +3574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSkipForward")]
-        Icon::FiSkipForward => {
+        FiIcon::FiSkipForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3587,7 +3587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSlack")]
-        Icon::FiSlack => {
+        FiIcon::FiSlack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3614,7 +3614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSlash")]
-        Icon::FiSlash => {
+        FiIcon::FiSlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3626,7 +3626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSliders")]
-        Icon::FiSliders => {
+        FiIcon::FiSliders => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3643,7 +3643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSmartphone")]
-        Icon::FiSmartphone => {
+        FiIcon::FiSmartphone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3656,7 +3656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSmile")]
-        Icon::FiSmile => {
+        FiIcon::FiSmile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3670,7 +3670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSpeaker")]
-        Icon::FiSpeaker => {
+        FiIcon::FiSpeaker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3683,7 +3683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSquare")]
-        Icon::FiSquare => {
+        FiIcon::FiSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3695,7 +3695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiStar")]
-        Icon::FiStar => {
+        FiIcon::FiStar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3708,7 +3708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiStopCircle")]
-        Icon::FiStopCircle => {
+        FiIcon::FiStopCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3720,7 +3720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSun")]
-        Icon::FiSun => {
+        FiIcon::FiSun => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3738,7 +3738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSunrise")]
-        Icon::FiSunrise => {
+        FiIcon::FiSunrise => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3755,7 +3755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiSunset")]
-        Icon::FiSunset => {
+        FiIcon::FiSunset => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3772,7 +3772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTable")]
-        Icon::FiTable => {
+        FiIcon::FiTable => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3785,7 +3785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTablet")]
-        Icon::FiTablet => {
+        FiIcon::FiTablet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3798,7 +3798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTag")]
-        Icon::FiTag => {
+        FiIcon::FiTag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3811,7 +3811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTarget")]
-        Icon::FiTarget => {
+        FiIcon::FiTarget => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3824,7 +3824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTerminal")]
-        Icon::FiTerminal => {
+        FiIcon::FiTerminal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3837,7 +3837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiThermometer")]
-        Icon::FiThermometer => {
+        FiIcon::FiThermometer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3849,7 +3849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiThumbsDown")]
-        Icon::FiThumbsDown => {
+        FiIcon::FiThumbsDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3862,7 +3862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiThumbsUp")]
-        Icon::FiThumbsUp => {
+        FiIcon::FiThumbsUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3875,7 +3875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiToggleLeft")]
-        Icon::FiToggleLeft => {
+        FiIcon::FiToggleLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3888,7 +3888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiToggleRight")]
-        Icon::FiToggleRight => {
+        FiIcon::FiToggleRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3901,7 +3901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTool")]
-        Icon::FiTool => {
+        FiIcon::FiTool => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3914,7 +3914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTrash")]
-        Icon::FiTrash => {
+        FiIcon::FiTrash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3928,7 +3928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTrash2")]
-        Icon::FiTrash2 => {
+        FiIcon::FiTrash2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3943,7 +3943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTrello")]
-        Icon::FiTrello => {
+        FiIcon::FiTrello => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3957,7 +3957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTrendingDown")]
-        Icon::FiTrendingDown => {
+        FiIcon::FiTrendingDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3970,7 +3970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTrendingUp")]
-        Icon::FiTrendingUp => {
+        FiIcon::FiTrendingUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3983,7 +3983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTriangle")]
-        Icon::FiTriangle => {
+        FiIcon::FiTriangle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -3996,7 +3996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTruck")]
-        Icon::FiTruck => {
+        FiIcon::FiTruck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4010,7 +4010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTv")]
-        Icon::FiTv => {
+        FiIcon::FiTv => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4023,7 +4023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTwitch")]
-        Icon::FiTwitch => {
+        FiIcon::FiTwitch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4035,7 +4035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiTwitter")]
-        Icon::FiTwitter => {
+        FiIcon::FiTwitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4048,7 +4048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiType")]
-        Icon::FiType => {
+        FiIcon::FiType => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4061,7 +4061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUmbrella")]
-        Icon::FiUmbrella => {
+        FiIcon::FiUmbrella => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4073,7 +4073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUnderline")]
-        Icon::FiUnderline => {
+        FiIcon::FiUnderline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4086,7 +4086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUnlock")]
-        Icon::FiUnlock => {
+        FiIcon::FiUnlock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4099,7 +4099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUpload")]
-        Icon::FiUpload => {
+        FiIcon::FiUpload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4113,7 +4113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUploadCloud")]
-        Icon::FiUploadCloud => {
+        FiIcon::FiUploadCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4127,7 +4127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUser")]
-        Icon::FiUser => {
+        FiIcon::FiUser => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4140,7 +4140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUserCheck")]
-        Icon::FiUserCheck => {
+        FiIcon::FiUserCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4153,7 +4153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUserMinus")]
-        Icon::FiUserMinus => {
+        FiIcon::FiUserMinus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4167,7 +4167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUserPlus")]
-        Icon::FiUserPlus => {
+        FiIcon::FiUserPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4181,7 +4181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUserX")]
-        Icon::FiUserX => {
+        FiIcon::FiUserX => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4195,7 +4195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiUsers")]
-        Icon::FiUsers => {
+        FiIcon::FiUsers => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4209,7 +4209,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVideo")]
-        Icon::FiVideo => {
+        FiIcon::FiVideo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4222,7 +4222,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVideoOff")]
-        Icon::FiVideoOff => {
+        FiIcon::FiVideoOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4235,7 +4235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVoicemail")]
-        Icon::FiVoicemail => {
+        FiIcon::FiVoicemail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4248,7 +4248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVolume")]
-        Icon::FiVolume => {
+        FiIcon::FiVolume => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4260,7 +4260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVolume1")]
-        Icon::FiVolume1 => {
+        FiIcon::FiVolume1 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4273,7 +4273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVolume2")]
-        Icon::FiVolume2 => {
+        FiIcon::FiVolume2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4287,7 +4287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiVolumeX")]
-        Icon::FiVolumeX => {
+        FiIcon::FiVolumeX => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4301,7 +4301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiWatch")]
-        Icon::FiWatch => {
+        FiIcon::FiWatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4315,7 +4315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiWifi")]
-        Icon::FiWifi => {
+        FiIcon::FiWifi => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4330,7 +4330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiWifiOff")]
-        Icon::FiWifiOff => {
+        FiIcon::FiWifiOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4347,7 +4347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiWind")]
-        Icon::FiWind => {
+        FiIcon::FiWind => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4360,7 +4360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiX")]
-        Icon::FiX => {
+        FiIcon::FiX => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4372,7 +4372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiXCircle")]
-        Icon::FiXCircle => {
+        FiIcon::FiXCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4385,7 +4385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiXOctagon")]
-        Icon::FiXOctagon => {
+        FiIcon::FiXOctagon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4399,7 +4399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiXSquare")]
-        Icon::FiXSquare => {
+        FiIcon::FiXSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4412,7 +4412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiYoutube")]
-        Icon::FiYoutube => {
+        FiIcon::FiYoutube => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4426,7 +4426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiZap")]
-        Icon::FiZap => {
+        FiIcon::FiZap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4438,7 +4438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiZapOff")]
-        Icon::FiZapOff => {
+        FiIcon::FiZapOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4453,7 +4453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiZoomIn")]
-        Icon::FiZoomIn => {
+        FiIcon::FiZoomIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -
@@ -4467,7 +4467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FiZoomOut")]
-        Icon::FiZoomOut => {
+        FiIcon::FiZoomOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" stroke - linecap = "round" stroke -

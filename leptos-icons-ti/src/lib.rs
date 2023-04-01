@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum TiIcon {
     #[cfg(feature = "TiAdjustBrightness")]
     TiAdjustBrightness,
     #[cfg(feature = "TiAdjustContrast")]
@@ -695,12 +695,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosTiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: TiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -724,7 +724,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "TiAdjustBrightness")]
-        Icon::TiAdjustBrightness => {
+        TiIcon::TiAdjustBrightness => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -736,7 +736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiAdjustContrast")]
-        Icon::TiAdjustContrast => {
+        TiIcon::TiAdjustContrast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -748,7 +748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiAnchor")]
-        Icon::TiAnchor => {
+        TiIcon::TiAnchor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -760,7 +760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiAnchorOutline")]
-        Icon::TiAnchorOutline => {
+        TiIcon::TiAnchorOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -773,7 +773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArchive")]
-        Icon::TiArchive => {
+        TiIcon::TiArchive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -785,7 +785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowBack")]
-        Icon::TiArrowBack => {
+        TiIcon::TiArrowBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -797,7 +797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowBackOutline")]
-        Icon::TiArrowBackOutline => {
+        TiIcon::TiArrowBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -809,7 +809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowDown")]
-        Icon::TiArrowDown => {
+        TiIcon::TiArrowDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -821,7 +821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowDownOutline")]
-        Icon::TiArrowDownOutline => {
+        TiIcon::TiArrowDownOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -833,7 +833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowDownThick")]
-        Icon::TiArrowDownThick => {
+        TiIcon::TiArrowDownThick => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -845,7 +845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowForward")]
-        Icon::TiArrowForward => {
+        TiIcon::TiArrowForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -857,7 +857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowForwardOutline")]
-        Icon::TiArrowForwardOutline => {
+        TiIcon::TiArrowForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -869,7 +869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowLeft")]
-        Icon::TiArrowLeft => {
+        TiIcon::TiArrowLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -881,7 +881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowLeftOutline")]
-        Icon::TiArrowLeftOutline => {
+        TiIcon::TiArrowLeftOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -893,7 +893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowLeftThick")]
-        Icon::TiArrowLeftThick => {
+        TiIcon::TiArrowLeftThick => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -905,7 +905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowLoop")]
-        Icon::TiArrowLoop => {
+        TiIcon::TiArrowLoop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -917,7 +917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowLoopOutline")]
-        Icon::TiArrowLoopOutline => {
+        TiIcon::TiArrowLoopOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -929,7 +929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowMaximise")]
-        Icon::TiArrowMaximise => {
+        TiIcon::TiArrowMaximise => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -941,7 +941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowMaximiseOutline")]
-        Icon::TiArrowMaximiseOutline => {
+        TiIcon::TiArrowMaximiseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -953,7 +953,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowMinimise")]
-        Icon::TiArrowMinimise => {
+        TiIcon::TiArrowMinimise => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -965,7 +965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowMinimiseOutline")]
-        Icon::TiArrowMinimiseOutline => {
+        TiIcon::TiArrowMinimiseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -977,7 +977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowMove")]
-        Icon::TiArrowMove => {
+        TiIcon::TiArrowMove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -989,7 +989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowMoveOutline")]
-        Icon::TiArrowMoveOutline => {
+        TiIcon::TiArrowMoveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1001,7 +1001,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowRepeat")]
-        Icon::TiArrowRepeat => {
+        TiIcon::TiArrowRepeat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1013,7 +1013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowRepeatOutline")]
-        Icon::TiArrowRepeatOutline => {
+        TiIcon::TiArrowRepeatOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1025,7 +1025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowRight")]
-        Icon::TiArrowRight => {
+        TiIcon::TiArrowRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1037,7 +1037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowRightOutline")]
-        Icon::TiArrowRightOutline => {
+        TiIcon::TiArrowRightOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1049,7 +1049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowRightThick")]
-        Icon::TiArrowRightThick => {
+        TiIcon::TiArrowRightThick => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1061,7 +1061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowShuffle")]
-        Icon::TiArrowShuffle => {
+        TiIcon::TiArrowShuffle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1073,7 +1073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowSortedDown")]
-        Icon::TiArrowSortedDown => {
+        TiIcon::TiArrowSortedDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1085,7 +1085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowSortedUp")]
-        Icon::TiArrowSortedUp => {
+        TiIcon::TiArrowSortedUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1097,7 +1097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowSync")]
-        Icon::TiArrowSync => {
+        TiIcon::TiArrowSync => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1109,7 +1109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowSyncOutline")]
-        Icon::TiArrowSyncOutline => {
+        TiIcon::TiArrowSyncOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1121,7 +1121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowUnsorted")]
-        Icon::TiArrowUnsorted => {
+        TiIcon::TiArrowUnsorted => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1133,7 +1133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowUp")]
-        Icon::TiArrowUp => {
+        TiIcon::TiArrowUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1145,7 +1145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowUpOutline")]
-        Icon::TiArrowUpOutline => {
+        TiIcon::TiArrowUpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1157,7 +1157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiArrowUpThick")]
-        Icon::TiArrowUpThick => {
+        TiIcon::TiArrowUpThick => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1169,7 +1169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiAt")]
-        Icon::TiAt => {
+        TiIcon::TiAt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1181,7 +1181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiAttachment")]
-        Icon::TiAttachment => {
+        TiIcon::TiAttachment => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1193,7 +1193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiAttachmentOutline")]
-        Icon::TiAttachmentOutline => {
+        TiIcon::TiAttachmentOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1205,7 +1205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBackspace")]
-        Icon::TiBackspace => {
+        TiIcon::TiBackspace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1217,7 +1217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBackspaceOutline")]
-        Icon::TiBackspaceOutline => {
+        TiIcon::TiBackspaceOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1229,7 +1229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBatteryCharge")]
-        Icon::TiBatteryCharge => {
+        TiIcon::TiBatteryCharge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1241,7 +1241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBatteryFull")]
-        Icon::TiBatteryFull => {
+        TiIcon::TiBatteryFull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1253,7 +1253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBatteryHigh")]
-        Icon::TiBatteryHigh => {
+        TiIcon::TiBatteryHigh => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1265,7 +1265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBatteryLow")]
-        Icon::TiBatteryLow => {
+        TiIcon::TiBatteryLow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1277,7 +1277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBatteryMid")]
-        Icon::TiBatteryMid => {
+        TiIcon::TiBatteryMid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1289,7 +1289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBeaker")]
-        Icon::TiBeaker => {
+        TiIcon::TiBeaker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1301,7 +1301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBeer")]
-        Icon::TiBeer => {
+        TiIcon::TiBeer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1313,7 +1313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBell")]
-        Icon::TiBell => {
+        TiIcon::TiBell => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1325,7 +1325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBook")]
-        Icon::TiBook => {
+        TiIcon::TiBook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1337,7 +1337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBookmark")]
-        Icon::TiBookmark => {
+        TiIcon::TiBookmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1349,7 +1349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBriefcase")]
-        Icon::TiBriefcase => {
+        TiIcon::TiBriefcase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1361,7 +1361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBrush")]
-        Icon::TiBrush => {
+        TiIcon::TiBrush => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1373,7 +1373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiBusinessCard")]
-        Icon::TiBusinessCard => {
+        TiIcon::TiBusinessCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1387,7 +1387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCalculator")]
-        Icon::TiCalculator => {
+        TiIcon::TiCalculator => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1404,7 +1404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCalendar")]
-        Icon::TiCalendar => {
+        TiIcon::TiCalendar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1416,7 +1416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCalendarOutline")]
-        Icon::TiCalendarOutline => {
+        TiIcon::TiCalendarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1428,7 +1428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCamera")]
-        Icon::TiCamera => {
+        TiIcon::TiCamera => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1440,7 +1440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCameraOutline")]
-        Icon::TiCameraOutline => {
+        TiIcon::TiCameraOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1452,7 +1452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCancel")]
-        Icon::TiCancel => {
+        TiIcon::TiCancel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1464,7 +1464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCancelOutline")]
-        Icon::TiCancelOutline => {
+        TiIcon::TiCancelOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1476,7 +1476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartArea")]
-        Icon::TiChartArea => {
+        TiIcon::TiChartArea => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1488,7 +1488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartAreaOutline")]
-        Icon::TiChartAreaOutline => {
+        TiIcon::TiChartAreaOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1500,7 +1500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartBar")]
-        Icon::TiChartBar => {
+        TiIcon::TiChartBar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1512,7 +1512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartBarOutline")]
-        Icon::TiChartBarOutline => {
+        TiIcon::TiChartBarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1524,7 +1524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartLine")]
-        Icon::TiChartLine => {
+        TiIcon::TiChartLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1536,7 +1536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartLineOutline")]
-        Icon::TiChartLineOutline => {
+        TiIcon::TiChartLineOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1548,7 +1548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartPie")]
-        Icon::TiChartPie => {
+        TiIcon::TiChartPie => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1560,7 +1560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChartPieOutline")]
-        Icon::TiChartPieOutline => {
+        TiIcon::TiChartPieOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1572,7 +1572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChevronLeft")]
-        Icon::TiChevronLeft => {
+        TiIcon::TiChevronLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1584,7 +1584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChevronLeftOutline")]
-        Icon::TiChevronLeftOutline => {
+        TiIcon::TiChevronLeftOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1596,7 +1596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChevronRight")]
-        Icon::TiChevronRight => {
+        TiIcon::TiChevronRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1608,7 +1608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiChevronRightOutline")]
-        Icon::TiChevronRightOutline => {
+        TiIcon::TiChevronRightOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1620,7 +1620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiClipboard")]
-        Icon::TiClipboard => {
+        TiIcon::TiClipboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1632,7 +1632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCloudStorage")]
-        Icon::TiCloudStorage => {
+        TiIcon::TiCloudStorage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1644,7 +1644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCloudStorageOutline")]
-        Icon::TiCloudStorageOutline => {
+        TiIcon::TiCloudStorageOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1656,7 +1656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCode")]
-        Icon::TiCode => {
+        TiIcon::TiCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1668,7 +1668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCodeOutline")]
-        Icon::TiCodeOutline => {
+        TiIcon::TiCodeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1680,7 +1680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCoffee")]
-        Icon::TiCoffee => {
+        TiIcon::TiCoffee => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1692,7 +1692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCog")]
-        Icon::TiCog => {
+        TiIcon::TiCog => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1704,7 +1704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCogOutline")]
-        Icon::TiCogOutline => {
+        TiIcon::TiCogOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1716,7 +1716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCompass")]
-        Icon::TiCompass => {
+        TiIcon::TiCompass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1728,7 +1728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiContacts")]
-        Icon::TiContacts => {
+        TiIcon::TiContacts => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1742,7 +1742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCreditCard")]
-        Icon::TiCreditCard => {
+        TiIcon::TiCreditCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1754,7 +1754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiCss3")]
-        Icon::TiCss3 => {
+        TiIcon::TiCss3 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1766,7 +1766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDatabase")]
-        Icon::TiDatabase => {
+        TiIcon::TiDatabase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1778,7 +1778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDelete")]
-        Icon::TiDelete => {
+        TiIcon::TiDelete => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1790,7 +1790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDeleteOutline")]
-        Icon::TiDeleteOutline => {
+        TiIcon::TiDeleteOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1802,7 +1802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDeviceDesktop")]
-        Icon::TiDeviceDesktop => {
+        TiIcon::TiDeviceDesktop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1814,7 +1814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDeviceLaptop")]
-        Icon::TiDeviceLaptop => {
+        TiIcon::TiDeviceLaptop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1826,7 +1826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDevicePhone")]
-        Icon::TiDevicePhone => {
+        TiIcon::TiDevicePhone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1838,7 +1838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDeviceTablet")]
-        Icon::TiDeviceTablet => {
+        TiIcon::TiDeviceTablet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1850,7 +1850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDirections")]
-        Icon::TiDirections => {
+        TiIcon::TiDirections => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1862,7 +1862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDivide")]
-        Icon::TiDivide => {
+        TiIcon::TiDivide => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1875,7 +1875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDivideOutline")]
-        Icon::TiDivideOutline => {
+        TiIcon::TiDivideOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1887,7 +1887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDocument")]
-        Icon::TiDocument => {
+        TiIcon::TiDocument => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1899,7 +1899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDocumentAdd")]
-        Icon::TiDocumentAdd => {
+        TiIcon::TiDocumentAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1911,7 +1911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDocumentDelete")]
-        Icon::TiDocumentDelete => {
+        TiIcon::TiDocumentDelete => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1923,7 +1923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDocumentText")]
-        Icon::TiDocumentText => {
+        TiIcon::TiDocumentText => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1935,7 +1935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDownload")]
-        Icon::TiDownload => {
+        TiIcon::TiDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1947,7 +1947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDownloadOutline")]
-        Icon::TiDownloadOutline => {
+        TiIcon::TiDownloadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1959,7 +1959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiDropbox")]
-        Icon::TiDropbox => {
+        TiIcon::TiDropbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1971,7 +1971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEdit")]
-        Icon::TiEdit => {
+        TiIcon::TiEdit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1983,7 +1983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEject")]
-        Icon::TiEject => {
+        TiIcon::TiEject => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1995,7 +1995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEjectOutline")]
-        Icon::TiEjectOutline => {
+        TiIcon::TiEjectOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2007,7 +2007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEquals")]
-        Icon::TiEquals => {
+        TiIcon::TiEquals => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2019,7 +2019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEqualsOutline")]
-        Icon::TiEqualsOutline => {
+        TiIcon::TiEqualsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2031,7 +2031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiExport")]
-        Icon::TiExport => {
+        TiIcon::TiExport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2043,7 +2043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiExportOutline")]
-        Icon::TiExportOutline => {
+        TiIcon::TiExportOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2055,7 +2055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEye")]
-        Icon::TiEye => {
+        TiIcon::TiEye => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2067,7 +2067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiEyeOutline")]
-        Icon::TiEyeOutline => {
+        TiIcon::TiEyeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2079,7 +2079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFeather")]
-        Icon::TiFeather => {
+        TiIcon::TiFeather => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2091,7 +2091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFilm")]
-        Icon::TiFilm => {
+        TiIcon::TiFilm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2103,7 +2103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFilter")]
-        Icon::TiFilter => {
+        TiIcon::TiFilter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2115,7 +2115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlag")]
-        Icon::TiFlag => {
+        TiIcon::TiFlag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2127,7 +2127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlagOutline")]
-        Icon::TiFlagOutline => {
+        TiIcon::TiFlagOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2139,7 +2139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlash")]
-        Icon::TiFlash => {
+        TiIcon::TiFlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2151,7 +2151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlashOutline")]
-        Icon::TiFlashOutline => {
+        TiIcon::TiFlashOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2163,7 +2163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlowChildren")]
-        Icon::TiFlowChildren => {
+        TiIcon::TiFlowChildren => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2175,7 +2175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlowMerge")]
-        Icon::TiFlowMerge => {
+        TiIcon::TiFlowMerge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2187,7 +2187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlowParallel")]
-        Icon::TiFlowParallel => {
+        TiIcon::TiFlowParallel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2199,7 +2199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFlowSwitch")]
-        Icon::TiFlowSwitch => {
+        TiIcon::TiFlowSwitch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2211,7 +2211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFolder")]
-        Icon::TiFolder => {
+        TiIcon::TiFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2223,7 +2223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFolderAdd")]
-        Icon::TiFolderAdd => {
+        TiIcon::TiFolderAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2235,7 +2235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFolderDelete")]
-        Icon::TiFolderDelete => {
+        TiIcon::TiFolderDelete => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2247,7 +2247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiFolderOpen")]
-        Icon::TiFolderOpen => {
+        TiIcon::TiFolderOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2259,7 +2259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiGift")]
-        Icon::TiGift => {
+        TiIcon::TiGift => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2271,7 +2271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiGlobe")]
-        Icon::TiGlobe => {
+        TiIcon::TiGlobe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2283,7 +2283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiGlobeOutline")]
-        Icon::TiGlobeOutline => {
+        TiIcon::TiGlobeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2295,7 +2295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiGroup")]
-        Icon::TiGroup => {
+        TiIcon::TiGroup => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2307,7 +2307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiGroupOutline")]
-        Icon::TiGroupOutline => {
+        TiIcon::TiGroupOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2319,7 +2319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHeadphones")]
-        Icon::TiHeadphones => {
+        TiIcon::TiHeadphones => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2331,7 +2331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHeart")]
-        Icon::TiHeart => {
+        TiIcon::TiHeart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2343,7 +2343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHeartFullOutline")]
-        Icon::TiHeartFullOutline => {
+        TiIcon::TiHeartFullOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2355,7 +2355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHeartHalfOutline")]
-        Icon::TiHeartHalfOutline => {
+        TiIcon::TiHeartHalfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2367,7 +2367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHeartOutline")]
-        Icon::TiHeartOutline => {
+        TiIcon::TiHeartOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2379,7 +2379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHome")]
-        Icon::TiHome => {
+        TiIcon::TiHome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2391,7 +2391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHomeOutline")]
-        Icon::TiHomeOutline => {
+        TiIcon::TiHomeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2403,7 +2403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiHtml5")]
-        Icon::TiHtml5 => {
+        TiIcon::TiHtml5 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2415,7 +2415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiImage")]
-        Icon::TiImage => {
+        TiIcon::TiImage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2428,7 +2428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiImageOutline")]
-        Icon::TiImageOutline => {
+        TiIcon::TiImageOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2440,7 +2440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInfinity")]
-        Icon::TiInfinity => {
+        TiIcon::TiInfinity => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2452,7 +2452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInfinityOutline")]
-        Icon::TiInfinityOutline => {
+        TiIcon::TiInfinityOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2464,7 +2464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInfo")]
-        Icon::TiInfo => {
+        TiIcon::TiInfo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2483,7 +2483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInfoLarge")]
-        Icon::TiInfoLarge => {
+        TiIcon::TiInfoLarge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2495,7 +2495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInfoLargeOutline")]
-        Icon::TiInfoLargeOutline => {
+        TiIcon::TiInfoLargeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2507,7 +2507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInfoOutline")]
-        Icon::TiInfoOutline => {
+        TiIcon::TiInfoOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2524,7 +2524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInputChecked")]
-        Icon::TiInputChecked => {
+        TiIcon::TiInputChecked => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2536,7 +2536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiInputCheckedOutline")]
-        Icon::TiInputCheckedOutline => {
+        TiIcon::TiInputCheckedOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2548,7 +2548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiKey")]
-        Icon::TiKey => {
+        TiIcon::TiKey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2560,7 +2560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiKeyOutline")]
-        Icon::TiKeyOutline => {
+        TiIcon::TiKeyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2572,7 +2572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiKeyboard")]
-        Icon::TiKeyboard => {
+        TiIcon::TiKeyboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2584,7 +2584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLeaf")]
-        Icon::TiLeaf => {
+        TiIcon::TiLeaf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2596,7 +2596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLightbulb")]
-        Icon::TiLightbulb => {
+        TiIcon::TiLightbulb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2608,7 +2608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLink")]
-        Icon::TiLink => {
+        TiIcon::TiLink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2620,7 +2620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLinkOutline")]
-        Icon::TiLinkOutline => {
+        TiIcon::TiLinkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2632,7 +2632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLocation")]
-        Icon::TiLocation => {
+        TiIcon::TiLocation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2644,7 +2644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLocationArrow")]
-        Icon::TiLocationArrow => {
+        TiIcon::TiLocationArrow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2656,7 +2656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLocationArrowOutline")]
-        Icon::TiLocationArrowOutline => {
+        TiIcon::TiLocationArrowOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2668,7 +2668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLocationOutline")]
-        Icon::TiLocationOutline => {
+        TiIcon::TiLocationOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2680,7 +2680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLockClosed")]
-        Icon::TiLockClosed => {
+        TiIcon::TiLockClosed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2692,7 +2692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLockClosedOutline")]
-        Icon::TiLockClosedOutline => {
+        TiIcon::TiLockClosedOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2705,7 +2705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLockOpen")]
-        Icon::TiLockOpen => {
+        TiIcon::TiLockOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2717,7 +2717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiLockOpenOutline")]
-        Icon::TiLockOpenOutline => {
+        TiIcon::TiLockOpenOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2730,7 +2730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMail")]
-        Icon::TiMail => {
+        TiIcon::TiMail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2742,7 +2742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMap")]
-        Icon::TiMap => {
+        TiIcon::TiMap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2754,7 +2754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaEject")]
-        Icon::TiMediaEject => {
+        TiIcon::TiMediaEject => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2766,7 +2766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaEjectOutline")]
-        Icon::TiMediaEjectOutline => {
+        TiIcon::TiMediaEjectOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2778,7 +2778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaFastForward")]
-        Icon::TiMediaFastForward => {
+        TiIcon::TiMediaFastForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2790,7 +2790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaFastForwardOutline")]
-        Icon::TiMediaFastForwardOutline => {
+        TiIcon::TiMediaFastForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2802,7 +2802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaPause")]
-        Icon::TiMediaPause => {
+        TiIcon::TiMediaPause => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2814,7 +2814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaPauseOutline")]
-        Icon::TiMediaPauseOutline => {
+        TiIcon::TiMediaPauseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2826,7 +2826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaPlay")]
-        Icon::TiMediaPlay => {
+        TiIcon::TiMediaPlay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2838,7 +2838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaPlayOutline")]
-        Icon::TiMediaPlayOutline => {
+        TiIcon::TiMediaPlayOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2850,7 +2850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaPlayReverse")]
-        Icon::TiMediaPlayReverse => {
+        TiIcon::TiMediaPlayReverse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2862,7 +2862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaPlayReverseOutline")]
-        Icon::TiMediaPlayReverseOutline => {
+        TiIcon::TiMediaPlayReverseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2874,7 +2874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaRecord")]
-        Icon::TiMediaRecord => {
+        TiIcon::TiMediaRecord => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2886,7 +2886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaRecordOutline")]
-        Icon::TiMediaRecordOutline => {
+        TiIcon::TiMediaRecordOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2898,7 +2898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaRewind")]
-        Icon::TiMediaRewind => {
+        TiIcon::TiMediaRewind => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2910,7 +2910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaRewindOutline")]
-        Icon::TiMediaRewindOutline => {
+        TiIcon::TiMediaRewindOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2922,7 +2922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaStop")]
-        Icon::TiMediaStop => {
+        TiIcon::TiMediaStop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2934,7 +2934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMediaStopOutline")]
-        Icon::TiMediaStopOutline => {
+        TiIcon::TiMediaStopOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2946,7 +2946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMessage")]
-        Icon::TiMessage => {
+        TiIcon::TiMessage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2958,7 +2958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMessageTyping")]
-        Icon::TiMessageTyping => {
+        TiIcon::TiMessageTyping => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2970,7 +2970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMessages")]
-        Icon::TiMessages => {
+        TiIcon::TiMessages => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2982,7 +2982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMicrophone")]
-        Icon::TiMicrophone => {
+        TiIcon::TiMicrophone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2994,7 +2994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMicrophoneOutline")]
-        Icon::TiMicrophoneOutline => {
+        TiIcon::TiMicrophoneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3006,7 +3006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMinus")]
-        Icon::TiMinus => {
+        TiIcon::TiMinus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3018,7 +3018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMinusOutline")]
-        Icon::TiMinusOutline => {
+        TiIcon::TiMinusOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3030,7 +3030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiMortarBoard")]
-        Icon::TiMortarBoard => {
+        TiIcon::TiMortarBoard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3042,7 +3042,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiNews")]
-        Icon::TiNews => {
+        TiIcon::TiNews => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3054,7 +3054,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiNotes")]
-        Icon::TiNotes => {
+        TiIcon::TiNotes => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3066,7 +3066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiNotesOutline")]
-        Icon::TiNotesOutline => {
+        TiIcon::TiNotesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3078,7 +3078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPen")]
-        Icon::TiPen => {
+        TiIcon::TiPen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3090,7 +3090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPencil")]
-        Icon::TiPencil => {
+        TiIcon::TiPencil => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3102,7 +3102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPhone")]
-        Icon::TiPhone => {
+        TiIcon::TiPhone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3114,7 +3114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPhoneOutline")]
-        Icon::TiPhoneOutline => {
+        TiIcon::TiPhoneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3126,7 +3126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPi")]
-        Icon::TiPi => {
+        TiIcon::TiPi => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3138,7 +3138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPiOutline")]
-        Icon::TiPiOutline => {
+        TiIcon::TiPiOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3150,7 +3150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPin")]
-        Icon::TiPin => {
+        TiIcon::TiPin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3162,7 +3162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPinOutline")]
-        Icon::TiPinOutline => {
+        TiIcon::TiPinOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3174,7 +3174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPipette")]
-        Icon::TiPipette => {
+        TiIcon::TiPipette => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3186,7 +3186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPlane")]
-        Icon::TiPlane => {
+        TiIcon::TiPlane => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3198,7 +3198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPlaneOutline")]
-        Icon::TiPlaneOutline => {
+        TiIcon::TiPlaneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3210,7 +3210,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPlug")]
-        Icon::TiPlug => {
+        TiIcon::TiPlug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3225,7 +3225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPlus")]
-        Icon::TiPlus => {
+        TiIcon::TiPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3237,7 +3237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPlusOutline")]
-        Icon::TiPlusOutline => {
+        TiIcon::TiPlusOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3249,7 +3249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPointOfInterest")]
-        Icon::TiPointOfInterest => {
+        TiIcon::TiPointOfInterest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3261,7 +3261,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPointOfInterestOutline")]
-        Icon::TiPointOfInterestOutline => {
+        TiIcon::TiPointOfInterestOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3273,7 +3273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPower")]
-        Icon::TiPower => {
+        TiIcon::TiPower => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3285,7 +3285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPowerOutline")]
-        Icon::TiPowerOutline => {
+        TiIcon::TiPowerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3297,7 +3297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPrinter")]
-        Icon::TiPrinter => {
+        TiIcon::TiPrinter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3309,7 +3309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPuzzle")]
-        Icon::TiPuzzle => {
+        TiIcon::TiPuzzle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3321,7 +3321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiPuzzleOutline")]
-        Icon::TiPuzzleOutline => {
+        TiIcon::TiPuzzleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3333,7 +3333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiRadar")]
-        Icon::TiRadar => {
+        TiIcon::TiRadar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3345,7 +3345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiRadarOutline")]
-        Icon::TiRadarOutline => {
+        TiIcon::TiRadarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3357,7 +3357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiRefresh")]
-        Icon::TiRefresh => {
+        TiIcon::TiRefresh => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3369,7 +3369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiRefreshOutline")]
-        Icon::TiRefreshOutline => {
+        TiIcon::TiRefreshOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3381,7 +3381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiRss")]
-        Icon::TiRss => {
+        TiIcon::TiRss => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3393,7 +3393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiRssOutline")]
-        Icon::TiRssOutline => {
+        TiIcon::TiRssOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3405,7 +3405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiScissors")]
-        Icon::TiScissors => {
+        TiIcon::TiScissors => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3417,7 +3417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiScissorsOutline")]
-        Icon::TiScissorsOutline => {
+        TiIcon::TiScissorsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3429,7 +3429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiShoppingBag")]
-        Icon::TiShoppingBag => {
+        TiIcon::TiShoppingBag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3441,7 +3441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiShoppingCart")]
-        Icon::TiShoppingCart => {
+        TiIcon::TiShoppingCart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3454,7 +3454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialAtCircular")]
-        Icon::TiSocialAtCircular => {
+        TiIcon::TiSocialAtCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3466,7 +3466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialDribbble")]
-        Icon::TiSocialDribbble => {
+        TiIcon::TiSocialDribbble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3478,7 +3478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialDribbbleCircular")]
-        Icon::TiSocialDribbbleCircular => {
+        TiIcon::TiSocialDribbbleCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3490,7 +3490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialFacebook")]
-        Icon::TiSocialFacebook => {
+        TiIcon::TiSocialFacebook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3502,7 +3502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialFacebookCircular")]
-        Icon::TiSocialFacebookCircular => {
+        TiIcon::TiSocialFacebookCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3514,7 +3514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialFlickr")]
-        Icon::TiSocialFlickr => {
+        TiIcon::TiSocialFlickr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3526,7 +3526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialFlickrCircular")]
-        Icon::TiSocialFlickrCircular => {
+        TiIcon::TiSocialFlickrCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3538,7 +3538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialGithub")]
-        Icon::TiSocialGithub => {
+        TiIcon::TiSocialGithub => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3550,7 +3550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialGithubCircular")]
-        Icon::TiSocialGithubCircular => {
+        TiIcon::TiSocialGithubCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3562,7 +3562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialGooglePlus")]
-        Icon::TiSocialGooglePlus => {
+        TiIcon::TiSocialGooglePlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3574,7 +3574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialGooglePlusCircular")]
-        Icon::TiSocialGooglePlusCircular => {
+        TiIcon::TiSocialGooglePlusCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3586,7 +3586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialInstagram")]
-        Icon::TiSocialInstagram => {
+        TiIcon::TiSocialInstagram => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3598,7 +3598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialInstagramCircular")]
-        Icon::TiSocialInstagramCircular => {
+        TiIcon::TiSocialInstagramCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3610,7 +3610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialLastFm")]
-        Icon::TiSocialLastFm => {
+        TiIcon::TiSocialLastFm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3622,7 +3622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialLastFmCircular")]
-        Icon::TiSocialLastFmCircular => {
+        TiIcon::TiSocialLastFmCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3634,7 +3634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialLinkedin")]
-        Icon::TiSocialLinkedin => {
+        TiIcon::TiSocialLinkedin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3646,7 +3646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialLinkedinCircular")]
-        Icon::TiSocialLinkedinCircular => {
+        TiIcon::TiSocialLinkedinCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3658,7 +3658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialPinterest")]
-        Icon::TiSocialPinterest => {
+        TiIcon::TiSocialPinterest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3670,7 +3670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialPinterestCircular")]
-        Icon::TiSocialPinterestCircular => {
+        TiIcon::TiSocialPinterestCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3682,7 +3682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialSkype")]
-        Icon::TiSocialSkype => {
+        TiIcon::TiSocialSkype => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3694,7 +3694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialSkypeOutline")]
-        Icon::TiSocialSkypeOutline => {
+        TiIcon::TiSocialSkypeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3706,7 +3706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialTumbler")]
-        Icon::TiSocialTumbler => {
+        TiIcon::TiSocialTumbler => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3718,7 +3718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialTumblerCircular")]
-        Icon::TiSocialTumblerCircular => {
+        TiIcon::TiSocialTumblerCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3732,7 +3732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialTwitter")]
-        Icon::TiSocialTwitter => {
+        TiIcon::TiSocialTwitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3744,7 +3744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialTwitterCircular")]
-        Icon::TiSocialTwitterCircular => {
+        TiIcon::TiSocialTwitterCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3756,7 +3756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialVimeo")]
-        Icon::TiSocialVimeo => {
+        TiIcon::TiSocialVimeo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3768,7 +3768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialVimeoCircular")]
-        Icon::TiSocialVimeoCircular => {
+        TiIcon::TiSocialVimeoCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3780,7 +3780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialYoutube")]
-        Icon::TiSocialYoutube => {
+        TiIcon::TiSocialYoutube => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3792,7 +3792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSocialYoutubeCircular")]
-        Icon::TiSocialYoutubeCircular => {
+        TiIcon::TiSocialYoutubeCircular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3826,7 +3826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSortAlphabetically")]
-        Icon::TiSortAlphabetically => {
+        TiIcon::TiSortAlphabetically => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3838,7 +3838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSortAlphabeticallyOutline")]
-        Icon::TiSortAlphabeticallyOutline => {
+        TiIcon::TiSortAlphabeticallyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3850,7 +3850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSortNumerically")]
-        Icon::TiSortNumerically => {
+        TiIcon::TiSortNumerically => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3862,7 +3862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSortNumericallyOutline")]
-        Icon::TiSortNumericallyOutline => {
+        TiIcon::TiSortNumericallyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3874,7 +3874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSpanner")]
-        Icon::TiSpanner => {
+        TiIcon::TiSpanner => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3886,7 +3886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSpannerOutline")]
-        Icon::TiSpannerOutline => {
+        TiIcon::TiSpannerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3899,7 +3899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSpiral")]
-        Icon::TiSpiral => {
+        TiIcon::TiSpiral => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3911,7 +3911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStar")]
-        Icon::TiStar => {
+        TiIcon::TiStar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3923,7 +3923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStarFullOutline")]
-        Icon::TiStarFullOutline => {
+        TiIcon::TiStarFullOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3935,7 +3935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStarHalf")]
-        Icon::TiStarHalf => {
+        TiIcon::TiStarHalf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3947,7 +3947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStarHalfOutline")]
-        Icon::TiStarHalfOutline => {
+        TiIcon::TiStarHalfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3959,7 +3959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStarOutline")]
-        Icon::TiStarOutline => {
+        TiIcon::TiStarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3971,7 +3971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStarburst")]
-        Icon::TiStarburst => {
+        TiIcon::TiStarburst => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3983,7 +3983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStarburstOutline")]
-        Icon::TiStarburstOutline => {
+        TiIcon::TiStarburstOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3995,7 +3995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiStopwatch")]
-        Icon::TiStopwatch => {
+        TiIcon::TiStopwatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4007,7 +4007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiSupport")]
-        Icon::TiSupport => {
+        TiIcon::TiSupport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4019,7 +4019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTabsOutline")]
-        Icon::TiTabsOutline => {
+        TiIcon::TiTabsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4031,7 +4031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTag")]
-        Icon::TiTag => {
+        TiIcon::TiTag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4043,7 +4043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTags")]
-        Icon::TiTags => {
+        TiIcon::TiTags => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4055,7 +4055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThLarge")]
-        Icon::TiThLarge => {
+        TiIcon::TiThLarge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4067,7 +4067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThLargeOutline")]
-        Icon::TiThLargeOutline => {
+        TiIcon::TiThLargeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4079,7 +4079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThList")]
-        Icon::TiThList => {
+        TiIcon::TiThList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4092,7 +4092,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThListOutline")]
-        Icon::TiThListOutline => {
+        TiIcon::TiThListOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4104,7 +4104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThMenu")]
-        Icon::TiThMenu => {
+        TiIcon::TiThMenu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4116,7 +4116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThMenuOutline")]
-        Icon::TiThMenuOutline => {
+        TiIcon::TiThMenuOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4128,7 +4128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThSmall")]
-        Icon::TiThSmall => {
+        TiIcon::TiThSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4143,7 +4143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThSmallOutline")]
-        Icon::TiThSmallOutline => {
+        TiIcon::TiThSmallOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4155,7 +4155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThermometer")]
-        Icon::TiThermometer => {
+        TiIcon::TiThermometer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4167,7 +4167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThumbsDown")]
-        Icon::TiThumbsDown => {
+        TiIcon::TiThumbsDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4179,7 +4179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThumbsOk")]
-        Icon::TiThumbsOk => {
+        TiIcon::TiThumbsOk => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4191,7 +4191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiThumbsUp")]
-        Icon::TiThumbsUp => {
+        TiIcon::TiThumbsUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4203,7 +4203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTick")]
-        Icon::TiTick => {
+        TiIcon::TiTick => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4215,7 +4215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTickOutline")]
-        Icon::TiTickOutline => {
+        TiIcon::TiTickOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4227,7 +4227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTicket")]
-        Icon::TiTicket => {
+        TiIcon::TiTicket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4239,7 +4239,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTime")]
-        Icon::TiTime => {
+        TiIcon::TiTime => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4251,7 +4251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTimes")]
-        Icon::TiTimes => {
+        TiIcon::TiTimes => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4263,7 +4263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTimesOutline")]
-        Icon::TiTimesOutline => {
+        TiIcon::TiTimesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4275,7 +4275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTrash")]
-        Icon::TiTrash => {
+        TiIcon::TiTrash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4287,7 +4287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiTree")]
-        Icon::TiTree => {
+        TiIcon::TiTree => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4299,7 +4299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUpload")]
-        Icon::TiUpload => {
+        TiIcon::TiUpload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4311,7 +4311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUploadOutline")]
-        Icon::TiUploadOutline => {
+        TiIcon::TiUploadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4323,7 +4323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUser")]
-        Icon::TiUser => {
+        TiIcon::TiUser => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4335,7 +4335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUserAdd")]
-        Icon::TiUserAdd => {
+        TiIcon::TiUserAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4347,7 +4347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUserAddOutline")]
-        Icon::TiUserAddOutline => {
+        TiIcon::TiUserAddOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4359,7 +4359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUserDelete")]
-        Icon::TiUserDelete => {
+        TiIcon::TiUserDelete => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4371,7 +4371,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUserDeleteOutline")]
-        Icon::TiUserDeleteOutline => {
+        TiIcon::TiUserDeleteOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4383,7 +4383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiUserOutline")]
-        Icon::TiUserOutline => {
+        TiIcon::TiUserOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4395,7 +4395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVendorAndroid")]
-        Icon::TiVendorAndroid => {
+        TiIcon::TiVendorAndroid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4407,7 +4407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVendorApple")]
-        Icon::TiVendorApple => {
+        TiIcon::TiVendorApple => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4419,7 +4419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVendorMicrosoft")]
-        Icon::TiVendorMicrosoft => {
+        TiIcon::TiVendorMicrosoft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4431,7 +4431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVideo")]
-        Icon::TiVideo => {
+        TiIcon::TiVideo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4443,7 +4443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVideoOutline")]
-        Icon::TiVideoOutline => {
+        TiIcon::TiVideoOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4456,7 +4456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVolume")]
-        Icon::TiVolume => {
+        TiIcon::TiVolume => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4468,7 +4468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVolumeDown")]
-        Icon::TiVolumeDown => {
+        TiIcon::TiVolumeDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4480,7 +4480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVolumeMute")]
-        Icon::TiVolumeMute => {
+        TiIcon::TiVolumeMute => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4492,7 +4492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiVolumeUp")]
-        Icon::TiVolumeUp => {
+        TiIcon::TiVolumeUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4504,7 +4504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWarning")]
-        Icon::TiWarning => {
+        TiIcon::TiWarning => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4516,7 +4516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWarningOutline")]
-        Icon::TiWarningOutline => {
+        TiIcon::TiWarningOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4530,7 +4530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWatch")]
-        Icon::TiWatch => {
+        TiIcon::TiWatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4542,7 +4542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWaves")]
-        Icon::TiWaves => {
+        TiIcon::TiWaves => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4554,7 +4554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWavesOutline")]
-        Icon::TiWavesOutline => {
+        TiIcon::TiWavesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4566,7 +4566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherCloudy")]
-        Icon::TiWeatherCloudy => {
+        TiIcon::TiWeatherCloudy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4578,7 +4578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherDownpour")]
-        Icon::TiWeatherDownpour => {
+        TiIcon::TiWeatherDownpour => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4590,7 +4590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherNight")]
-        Icon::TiWeatherNight => {
+        TiIcon::TiWeatherNight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4602,7 +4602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherPartlySunny")]
-        Icon::TiWeatherPartlySunny => {
+        TiIcon::TiWeatherPartlySunny => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4614,7 +4614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherShower")]
-        Icon::TiWeatherShower => {
+        TiIcon::TiWeatherShower => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4626,7 +4626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherSnow")]
-        Icon::TiWeatherSnow => {
+        TiIcon::TiWeatherSnow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4638,7 +4638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherStormy")]
-        Icon::TiWeatherStormy => {
+        TiIcon::TiWeatherStormy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4650,7 +4650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherSunny")]
-        Icon::TiWeatherSunny => {
+        TiIcon::TiWeatherSunny => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4662,7 +4662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherWindy")]
-        Icon::TiWeatherWindy => {
+        TiIcon::TiWeatherWindy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4674,7 +4674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWeatherWindyCloudy")]
-        Icon::TiWeatherWindyCloudy => {
+        TiIcon::TiWeatherWindyCloudy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4686,7 +4686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWiFi")]
-        Icon::TiWiFi => {
+        TiIcon::TiWiFi => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4698,7 +4698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWiFiOutline")]
-        Icon::TiWiFiOutline => {
+        TiIcon::TiWiFiOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4710,7 +4710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWine")]
-        Icon::TiWine => {
+        TiIcon::TiWine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4722,7 +4722,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWorld")]
-        Icon::TiWorld => {
+        TiIcon::TiWorld => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4734,7 +4734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiWorldOutline")]
-        Icon::TiWorldOutline => {
+        TiIcon::TiWorldOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4746,7 +4746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiZoom")]
-        Icon::TiZoom => {
+        TiIcon::TiZoom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4758,7 +4758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiZoomIn")]
-        Icon::TiZoomIn => {
+        TiIcon::TiZoomIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4770,7 +4770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiZoomInOutline")]
-        Icon::TiZoomInOutline => {
+        TiIcon::TiZoomInOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4782,7 +4782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiZoomOut")]
-        Icon::TiZoomOut => {
+        TiIcon::TiZoomOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4794,7 +4794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiZoomOutOutline")]
-        Icon::TiZoomOutOutline => {
+        TiIcon::TiZoomOutOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4806,7 +4806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "TiZoomOutline")]
-        Icon::TiZoomOutline => {
+        TiIcon::TiZoomOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =

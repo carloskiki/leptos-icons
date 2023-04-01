@@ -1,6 +1,7 @@
 use std::{io, path::PathBuf};
 
 use anyhow::Result;
+use heck::ToUpperCamelCase;
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
 use snafu::{prelude::*, Backtrace};
@@ -8,7 +9,10 @@ use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
 use xml::attribute::OwnedAttribute;
 
-use crate::icon::SvgIcon;
+use crate::{
+    icon::SvgIcon,
+    package::{Downloaded, Package},
+};
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {
@@ -54,7 +58,7 @@ impl LibRs {
         ))
     }
 
-    pub fn build_enum(icons: &[SvgIcon]) -> Result<String> {
+    pub fn build_enum(package: &Package<Downloaded>, icons: &[SvgIcon]) -> Result<String> {
         let variants = icons.iter().map(|icon| {
             let feature_name = &icon.feature.name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
@@ -64,10 +68,12 @@ impl LibRs {
             }
         });
 
+        let enum_ident = Self::create_enum_ident(package);
+
         let icon_enum = quote! {
             #[cfg_attr(feature = "serde", derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, serde::Serialize, serde::Deserialize))]
             #[cfg_attr(not(feature = "serde"), derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy))]
-            pub enum Icon {
+            pub enum #enum_ident {
                 #(#variants),*
             }
         };
@@ -79,8 +85,12 @@ impl LibRs {
         Ok(prettyplease::unparse(&tokens_file))
     }
 
-    pub async fn write_enum(&mut self, icons: &[SvgIcon]) -> Result<()> {
-        let code = Self::build_enum(icons)?;
+    pub async fn write_enum(
+        &mut self,
+        package: &Package<Downloaded>,
+        icons: &[SvgIcon],
+    ) -> Result<()> {
+        let code = Self::build_enum(package, icons)?;
 
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;
@@ -92,7 +102,17 @@ impl LibRs {
         Ok(())
     }
 
-    pub fn create_icon_component(icons: &[SvgIcon]) -> Result<String> {
+    pub fn create_enum_ident(package: &Package<Downloaded>) -> Ident {
+        Ident::new(
+            format!("{}Icon", package.meta.short_name.to_upper_camel_case()).as_str(),
+            Span::call_site(),
+        )
+    }
+
+    pub fn create_icon_component(
+        package: &Package<Downloaded>,
+        icons: &[SvgIcon],
+    ) -> Result<String> {
         let match_arms = icons.iter().map(|icon| {
             let feature_name = &icon.feature.name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
@@ -134,9 +154,11 @@ impl LibRs {
 
             let style_format_string = format!("{style_attribute} {{}}");
 
+            let enum_ident = Self::create_enum_ident(package);
+
             quote! {
                 #[cfg(feature = #feature_name)]
-                Icon::#feature_ident => view! {cx,
+                #enum_ident::#feature_ident => view! {cx,
                     // <#feature_ident width=width height=height class=class style=style title=title/>
 
                     <svg
@@ -162,15 +184,26 @@ impl LibRs {
             }
         });
 
+        let component_ident = Ident::new(
+            format!(
+                "Leptos{}Icon",
+                package.meta.short_name.to_upper_camel_case()
+            )
+            .as_str(),
+            Span::call_site(),
+        );
+
+        let enum_ident = Self::create_enum_ident(package);
+
         // Note: All parameters are `#[allow(unused)]` as the match may not include any arms if a user never activated any icon features, leading to unused warnings.
         let tokens = quote! {
             #[component]
-            pub fn LeptosIcon(
+            pub fn #component_ident(
                 #[allow(unused)]
                 cx: Scope,
                 /// Variant of the icon to display.
                 #[allow(unused)]
-                icon: Icon,
+                icon: #enum_ident,
                 /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
                 #[prop(into, optional, default = String::from("1em"))]
                 #[allow(unused)]
@@ -202,8 +235,12 @@ impl LibRs {
         Ok(prettyplease::unparse(&tokens_file))
     }
 
-    pub async fn write_leptos_icon_component(&mut self, icons: &[SvgIcon]) -> Result<()> {
-        let code = Self::create_icon_component(icons)?;
+    pub async fn write_leptos_icon_component(
+        &mut self,
+        package: &Package<Downloaded>,
+        icons: &[SvgIcon],
+    ) -> Result<()> {
+        let code = Self::create_icon_component(package, icons)?;
 
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;

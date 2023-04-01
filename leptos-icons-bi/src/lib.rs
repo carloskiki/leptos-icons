@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum BiIcon {
     #[cfg(feature = "Bi500px")]
     Bi500px,
     #[cfg(feature = "Bi99designs")]
@@ -3291,12 +3291,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosBiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: BiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -3320,7 +3320,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "Bi500px")]
-        Icon::Bi500px => {
+        BiIcon::Bi500px => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3332,7 +3332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Bi99designs")]
-        Icon::Bi99designs => {
+        BiIcon::Bi99designs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3344,7 +3344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAbacusRegular")]
-        Icon::BiAbacusRegular => {
+        BiIcon::BiAbacusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3356,7 +3356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAccessibilityRegular")]
-        Icon::BiAccessibilityRegular => {
+        BiIcon::BiAccessibilityRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3369,7 +3369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAddToQueueRegular")]
-        Icon::BiAddToQueueRegular => {
+        BiIcon::BiAddToQueueRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3383,7 +3383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAddToQueueSolid")]
-        Icon::BiAddToQueueSolid => {
+        BiIcon::BiAddToQueueSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3396,7 +3396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAdjustAltSolid")]
-        Icon::BiAdjustAltSolid => {
+        BiIcon::BiAdjustAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3408,7 +3408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAdjustRegular")]
-        Icon::BiAdjustRegular => {
+        BiIcon::BiAdjustRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3420,7 +3420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAdjustSolid")]
-        Icon::BiAdjustSolid => {
+        BiIcon::BiAdjustSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3432,7 +3432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAdobe")]
-        Icon::BiAdobe => {
+        BiIcon::BiAdobe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3444,7 +3444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAirbnb")]
-        Icon::BiAirbnb => {
+        BiIcon::BiAirbnb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3456,7 +3456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmAddRegular")]
-        Icon::BiAlarmAddRegular => {
+        BiIcon::BiAlarmAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3470,7 +3470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmAddSolid")]
-        Icon::BiAlarmAddSolid => {
+        BiIcon::BiAlarmAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3482,7 +3482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmExclamationRegular")]
-        Icon::BiAlarmExclamationRegular => {
+        BiIcon::BiAlarmExclamationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3494,7 +3494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmExclamationSolid")]
-        Icon::BiAlarmExclamationSolid => {
+        BiIcon::BiAlarmExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3506,7 +3506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmOffRegular")]
-        Icon::BiAlarmOffRegular => {
+        BiIcon::BiAlarmOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3518,7 +3518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmOffSolid")]
-        Icon::BiAlarmOffSolid => {
+        BiIcon::BiAlarmOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3530,7 +3530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmRegular")]
-        Icon::BiAlarmRegular => {
+        BiIcon::BiAlarmRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3544,7 +3544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmSnoozeRegular")]
-        Icon::BiAlarmSnoozeRegular => {
+        BiIcon::BiAlarmSnoozeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3558,7 +3558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmSnoozeSolid")]
-        Icon::BiAlarmSnoozeSolid => {
+        BiIcon::BiAlarmSnoozeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3570,7 +3570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlarmSolid")]
-        Icon::BiAlarmSolid => {
+        BiIcon::BiAlarmSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3582,7 +3582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlbumRegular")]
-        Icon::BiAlbumRegular => {
+        BiIcon::BiAlbumRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3595,7 +3595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlbumSolid")]
-        Icon::BiAlbumSolid => {
+        BiIcon::BiAlbumSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3607,7 +3607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlgolia")]
-        Icon::BiAlgolia => {
+        BiIcon::BiAlgolia => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3621,7 +3621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlignJustifyRegular")]
-        Icon::BiAlignJustifyRegular => {
+        BiIcon::BiAlignJustifyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3633,7 +3633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlignLeftRegular")]
-        Icon::BiAlignLeftRegular => {
+        BiIcon::BiAlignLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3645,7 +3645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlignMiddleRegular")]
-        Icon::BiAlignMiddleRegular => {
+        BiIcon::BiAlignMiddleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3657,7 +3657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAlignRightRegular")]
-        Icon::BiAlignRightRegular => {
+        BiIcon::BiAlignRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3669,7 +3669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAmazon")]
-        Icon::BiAmazon => {
+        BiIcon::BiAmazon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3681,7 +3681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAmbulanceSolid")]
-        Icon::BiAmbulanceSolid => {
+        BiIcon::BiAmbulanceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3693,7 +3693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAnalyseRegular")]
-        Icon::BiAnalyseRegular => {
+        BiIcon::BiAnalyseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3707,7 +3707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAnalyseSolid")]
-        Icon::BiAnalyseSolid => {
+        BiIcon::BiAnalyseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3721,7 +3721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAnchorRegular")]
-        Icon::BiAnchorRegular => {
+        BiIcon::BiAnchorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3733,7 +3733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAndroid")]
-        Icon::BiAndroid => {
+        BiIcon::BiAndroid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3745,7 +3745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAngryRegular")]
-        Icon::BiAngryRegular => {
+        BiIcon::BiAngryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3759,7 +3759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAngrySolid")]
-        Icon::BiAngrySolid => {
+        BiIcon::BiAngrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3771,7 +3771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAngular")]
-        Icon::BiAngular => {
+        BiIcon::BiAngular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3784,7 +3784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiApertureRegular")]
-        Icon::BiApertureRegular => {
+        BiIcon::BiApertureRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3796,7 +3796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiApple")]
-        Icon::BiApple => {
+        BiIcon::BiApple => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3808,7 +3808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchRegular")]
-        Icon::BiArchRegular => {
+        BiIcon::BiArchRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3820,7 +3820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchSolid")]
-        Icon::BiArchSolid => {
+        BiIcon::BiArchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3832,7 +3832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchiveInRegular")]
-        Icon::BiArchiveInRegular => {
+        BiIcon::BiArchiveInRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3844,7 +3844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchiveInSolid")]
-        Icon::BiArchiveInSolid => {
+        BiIcon::BiArchiveInSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3856,7 +3856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchiveOutRegular")]
-        Icon::BiArchiveOutRegular => {
+        BiIcon::BiArchiveOutRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3868,7 +3868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchiveOutSolid")]
-        Icon::BiArchiveOutSolid => {
+        BiIcon::BiArchiveOutSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3880,7 +3880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchiveRegular")]
-        Icon::BiArchiveRegular => {
+        BiIcon::BiArchiveRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3892,7 +3892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArchiveSolid")]
-        Icon::BiArchiveSolid => {
+        BiIcon::BiArchiveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3904,7 +3904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAreaRegular")]
-        Icon::BiAreaRegular => {
+        BiIcon::BiAreaRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3916,7 +3916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAreaSolid")]
-        Icon::BiAreaSolid => {
+        BiIcon::BiAreaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3928,7 +3928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowBackRegular")]
-        Icon::BiArrowBackRegular => {
+        BiIcon::BiArrowBackRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3940,7 +3940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromBottomRegular")]
-        Icon::BiArrowFromBottomRegular => {
+        BiIcon::BiArrowFromBottomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3952,7 +3952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromBottomSolid")]
-        Icon::BiArrowFromBottomSolid => {
+        BiIcon::BiArrowFromBottomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3963,7 +3963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromLeftRegular")]
-        Icon::BiArrowFromLeftRegular => {
+        BiIcon::BiArrowFromLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3975,7 +3975,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromLeftSolid")]
-        Icon::BiArrowFromLeftSolid => {
+        BiIcon::BiArrowFromLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3986,7 +3986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromRightRegular")]
-        Icon::BiArrowFromRightRegular => {
+        BiIcon::BiArrowFromRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3998,7 +3998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromRightSolid")]
-        Icon::BiArrowFromRightSolid => {
+        BiIcon::BiArrowFromRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4009,7 +4009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromTopRegular")]
-        Icon::BiArrowFromTopRegular => {
+        BiIcon::BiArrowFromTopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4021,7 +4021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowFromTopSolid")]
-        Icon::BiArrowFromTopSolid => {
+        BiIcon::BiArrowFromTopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4032,7 +4032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToBottomRegular")]
-        Icon::BiArrowToBottomRegular => {
+        BiIcon::BiArrowToBottomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4044,7 +4044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToBottomSolid")]
-        Icon::BiArrowToBottomSolid => {
+        BiIcon::BiArrowToBottomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4055,7 +4055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToLeftRegular")]
-        Icon::BiArrowToLeftRegular => {
+        BiIcon::BiArrowToLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4067,7 +4067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToLeftSolid")]
-        Icon::BiArrowToLeftSolid => {
+        BiIcon::BiArrowToLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4078,7 +4078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToRightRegular")]
-        Icon::BiArrowToRightRegular => {
+        BiIcon::BiArrowToRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4090,7 +4090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToRightSolid")]
-        Icon::BiArrowToRightSolid => {
+        BiIcon::BiArrowToRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4101,7 +4101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToTopRegular")]
-        Icon::BiArrowToTopRegular => {
+        BiIcon::BiArrowToTopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4113,7 +4113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiArrowToTopSolid")]
-        Icon::BiArrowToTopSolid => {
+        BiIcon::BiArrowToTopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4124,7 +4124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAtRegular")]
-        Icon::BiAtRegular => {
+        BiIcon::BiAtRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4136,7 +4136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAtomRegular")]
-        Icon::BiAtomRegular => {
+        BiIcon::BiAtomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4148,7 +4148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAudible")]
-        Icon::BiAudible => {
+        BiIcon::BiAudible => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4164,7 +4164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAwardRegular")]
-        Icon::BiAwardRegular => {
+        BiIcon::BiAwardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4176,7 +4176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAwardSolid")]
-        Icon::BiAwardSolid => {
+        BiIcon::BiAwardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4188,7 +4188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiAws")]
-        Icon::BiAws => {
+        BiIcon::BiAws => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4202,7 +4202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBabyCarriageSolid")]
-        Icon::BiBabyCarriageSolid => {
+        BiIcon::BiBabyCarriageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4214,7 +4214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBackpackSolid")]
-        Icon::BiBackpackSolid => {
+        BiIcon::BiBackpackSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4228,7 +4228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBadgeCheckRegular")]
-        Icon::BiBadgeCheckRegular => {
+        BiIcon::BiBadgeCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4242,7 +4242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBadgeCheckSolid")]
-        Icon::BiBadgeCheckSolid => {
+        BiIcon::BiBadgeCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4254,7 +4254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBadgeDollarSolid")]
-        Icon::BiBadgeDollarSolid => {
+        BiIcon::BiBadgeDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4266,7 +4266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBadgeRegular")]
-        Icon::BiBadgeRegular => {
+        BiIcon::BiBadgeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4278,7 +4278,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBadgeSolid")]
-        Icon::BiBadgeSolid => {
+        BiIcon::BiBadgeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4290,7 +4290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBaguetteRegular")]
-        Icon::BiBaguetteRegular => {
+        BiIcon::BiBaguetteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4302,7 +4302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBaguetteSolid")]
-        Icon::BiBaguetteSolid => {
+        BiIcon::BiBaguetteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4314,7 +4314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBaidu")]
-        Icon::BiBaidu => {
+        BiIcon::BiBaidu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4326,7 +4326,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBallRegular")]
-        Icon::BiBallRegular => {
+        BiIcon::BiBallRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4340,7 +4340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBallSolid")]
-        Icon::BiBallSolid => {
+        BiIcon::BiBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4352,7 +4352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBalloonSolid")]
-        Icon::BiBalloonSolid => {
+        BiIcon::BiBalloonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4364,7 +4364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBandAidRegular")]
-        Icon::BiBandAidRegular => {
+        BiIcon::BiBandAidRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4378,7 +4378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBandAidSolid")]
-        Icon::BiBandAidSolid => {
+        BiIcon::BiBandAidSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4390,7 +4390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBankSolid")]
-        Icon::BiBankSolid => {
+        BiIcon::BiBankSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4402,7 +4402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarChartAlt2Regular")]
-        Icon::BiBarChartAlt2Regular => {
+        BiIcon::BiBarChartAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4414,7 +4414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarChartAlt2Solid")]
-        Icon::BiBarChartAlt2Solid => {
+        BiIcon::BiBarChartAlt2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4426,7 +4426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarChartAltRegular")]
-        Icon::BiBarChartAltRegular => {
+        BiIcon::BiBarChartAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4438,7 +4438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarChartRegular")]
-        Icon::BiBarChartRegular => {
+        BiIcon::BiBarChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4449,7 +4449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarChartSquareRegular")]
-        Icon::BiBarChartSquareRegular => {
+        BiIcon::BiBarChartSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4461,7 +4461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarChartSquareSolid")]
-        Icon::BiBarChartSquareSolid => {
+        BiIcon::BiBarChartSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4473,7 +4473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarcodeReaderRegular")]
-        Icon::BiBarcodeReaderRegular => {
+        BiIcon::BiBarcodeReaderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4487,7 +4487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarcodeRegular")]
-        Icon::BiBarcodeRegular => {
+        BiIcon::BiBarcodeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4501,7 +4501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBarcodeSolid")]
-        Icon::BiBarcodeSolid => {
+        BiIcon::BiBarcodeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4513,7 +4513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBaseballRegular")]
-        Icon::BiBaseballRegular => {
+        BiIcon::BiBaseballRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4527,7 +4527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBaseballSolid")]
-        Icon::BiBaseballSolid => {
+        BiIcon::BiBaseballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4539,7 +4539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBasketRegular")]
-        Icon::BiBasketRegular => {
+        BiIcon::BiBasketRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4551,7 +4551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBasketSolid")]
-        Icon::BiBasketSolid => {
+        BiIcon::BiBasketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4563,7 +4563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBasketballRegular")]
-        Icon::BiBasketballRegular => {
+        BiIcon::BiBasketballRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4575,7 +4575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBasketballSolid")]
-        Icon::BiBasketballSolid => {
+        BiIcon::BiBasketballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4587,7 +4587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBathRegular")]
-        Icon::BiBathRegular => {
+        BiIcon::BiBathRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4599,7 +4599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBathSolid")]
-        Icon::BiBathSolid => {
+        BiIcon::BiBathSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4611,7 +4611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBatteryChargingSolid")]
-        Icon::BiBatteryChargingSolid => {
+        BiIcon::BiBatteryChargingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4623,7 +4623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBatteryFullSolid")]
-        Icon::BiBatteryFullSolid => {
+        BiIcon::BiBatteryFullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4635,7 +4635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBatteryLowSolid")]
-        Icon::BiBatteryLowSolid => {
+        BiIcon::BiBatteryLowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4647,7 +4647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBatteryRegular")]
-        Icon::BiBatteryRegular => {
+        BiIcon::BiBatteryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4659,7 +4659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBatterySolid")]
-        Icon::BiBatterySolid => {
+        BiIcon::BiBatterySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4671,7 +4671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBedRegular")]
-        Icon::BiBedRegular => {
+        BiIcon::BiBedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4683,7 +4683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBedSolid")]
-        Icon::BiBedSolid => {
+        BiIcon::BiBedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4695,7 +4695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBeenHereRegular")]
-        Icon::BiBeenHereRegular => {
+        BiIcon::BiBeenHereRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4709,7 +4709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBeenHereSolid")]
-        Icon::BiBeenHereSolid => {
+        BiIcon::BiBeenHereSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4721,7 +4721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBeerRegular")]
-        Icon::BiBeerRegular => {
+        BiIcon::BiBeerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4733,7 +4733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBeerSolid")]
-        Icon::BiBeerSolid => {
+        BiIcon::BiBeerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4745,7 +4745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBehance")]
-        Icon::BiBehance => {
+        BiIcon::BiBehance => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4757,7 +4757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellMinusRegular")]
-        Icon::BiBellMinusRegular => {
+        BiIcon::BiBellMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4769,7 +4769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellMinusSolid")]
-        Icon::BiBellMinusSolid => {
+        BiIcon::BiBellMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4781,7 +4781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellOffRegular")]
-        Icon::BiBellOffRegular => {
+        BiIcon::BiBellOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4793,7 +4793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellOffSolid")]
-        Icon::BiBellOffSolid => {
+        BiIcon::BiBellOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4805,7 +4805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellPlusRegular")]
-        Icon::BiBellPlusRegular => {
+        BiIcon::BiBellPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4818,7 +4818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellPlusSolid")]
-        Icon::BiBellPlusSolid => {
+        BiIcon::BiBellPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4830,7 +4830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellRegular")]
-        Icon::BiBellRegular => {
+        BiIcon::BiBellRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4842,7 +4842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellRingSolid")]
-        Icon::BiBellRingSolid => {
+        BiIcon::BiBellRingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4854,7 +4854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBellSolid")]
-        Icon::BiBellSolid => {
+        BiIcon::BiBellSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4866,7 +4866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBibleRegular")]
-        Icon::BiBibleRegular => {
+        BiIcon::BiBibleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4878,7 +4878,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBibleSolid")]
-        Icon::BiBibleSolid => {
+        BiIcon::BiBibleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4890,7 +4890,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBing")]
-        Icon::BiBing => {
+        BiIcon::BiBing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4902,7 +4902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBinocularsSolid")]
-        Icon::BiBinocularsSolid => {
+        BiIcon::BiBinocularsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4914,7 +4914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBitcoin")]
-        Icon::BiBitcoin => {
+        BiIcon::BiBitcoin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4928,7 +4928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBitcoinRegular")]
-        Icon::BiBitcoinRegular => {
+        BiIcon::BiBitcoinRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4940,7 +4940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBlanketRegular")]
-        Icon::BiBlanketRegular => {
+        BiIcon::BiBlanketRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4952,7 +4952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBlanketSolid")]
-        Icon::BiBlanketSolid => {
+        BiIcon::BiBlanketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4964,7 +4964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBlender")]
-        Icon::BiBlender => {
+        BiIcon::BiBlender => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4978,7 +4978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBlockRegular")]
-        Icon::BiBlockRegular => {
+        BiIcon::BiBlockRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4990,7 +4990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBlogger")]
-        Icon::BiBlogger => {
+        BiIcon::BiBlogger => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5002,7 +5002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBluetoothRegular")]
-        Icon::BiBluetoothRegular => {
+        BiIcon::BiBluetoothRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5014,7 +5014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBodyRegular")]
-        Icon::BiBodyRegular => {
+        BiIcon::BiBodyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5025,7 +5025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoldRegular")]
-        Icon::BiBoldRegular => {
+        BiIcon::BiBoldRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5037,7 +5037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoltCircleRegular")]
-        Icon::BiBoltCircleRegular => {
+        BiIcon::BiBoltCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5049,7 +5049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoltCircleSolid")]
-        Icon::BiBoltCircleSolid => {
+        BiIcon::BiBoltCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5061,7 +5061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoltSolid")]
-        Icon::BiBoltSolid => {
+        BiIcon::BiBoltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5073,7 +5073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBombRegular")]
-        Icon::BiBombRegular => {
+        BiIcon::BiBombRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5087,7 +5087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBombSolid")]
-        Icon::BiBombSolid => {
+        BiIcon::BiBombSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5099,7 +5099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoneRegular")]
-        Icon::BiBoneRegular => {
+        BiIcon::BiBoneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5111,7 +5111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoneSolid")]
-        Icon::BiBoneSolid => {
+        BiIcon::BiBoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5123,7 +5123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBongRegular")]
-        Icon::BiBongRegular => {
+        BiIcon::BiBongRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5135,7 +5135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBongSolid")]
-        Icon::BiBongSolid => {
+        BiIcon::BiBongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5147,7 +5147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookAddRegular")]
-        Icon::BiBookAddRegular => {
+        BiIcon::BiBookAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5159,7 +5159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookAddSolid")]
-        Icon::BiBookAddSolid => {
+        BiIcon::BiBookAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5171,7 +5171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookAltRegular")]
-        Icon::BiBookAltRegular => {
+        BiIcon::BiBookAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5183,7 +5183,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookAltSolid")]
-        Icon::BiBookAltSolid => {
+        BiIcon::BiBookAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5195,7 +5195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookBookmarkRegular")]
-        Icon::BiBookBookmarkRegular => {
+        BiIcon::BiBookBookmarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5207,7 +5207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookBookmarkSolid")]
-        Icon::BiBookBookmarkSolid => {
+        BiIcon::BiBookBookmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5219,7 +5219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookContentRegular")]
-        Icon::BiBookContentRegular => {
+        BiIcon::BiBookContentRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5231,7 +5231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookContentSolid")]
-        Icon::BiBookContentSolid => {
+        BiIcon::BiBookContentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5243,7 +5243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookHeartRegular")]
-        Icon::BiBookHeartRegular => {
+        BiIcon::BiBookHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5257,7 +5257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookHeartSolid")]
-        Icon::BiBookHeartSolid => {
+        BiIcon::BiBookHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5269,7 +5269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookOpenRegular")]
-        Icon::BiBookOpenRegular => {
+        BiIcon::BiBookOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5281,7 +5281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookOpenSolid")]
-        Icon::BiBookOpenSolid => {
+        BiIcon::BiBookOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5293,7 +5293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookReaderRegular")]
-        Icon::BiBookReaderRegular => {
+        BiIcon::BiBookReaderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5305,7 +5305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookReaderSolid")]
-        Icon::BiBookReaderSolid => {
+        BiIcon::BiBookReaderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5317,7 +5317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookRegular")]
-        Icon::BiBookRegular => {
+        BiIcon::BiBookRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5329,7 +5329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookSolid")]
-        Icon::BiBookSolid => {
+        BiIcon::BiBookSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5341,7 +5341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkAltMinusRegular")]
-        Icon::BiBookmarkAltMinusRegular => {
+        BiIcon::BiBookmarkAltMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5353,7 +5353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkAltMinusSolid")]
-        Icon::BiBookmarkAltMinusSolid => {
+        BiIcon::BiBookmarkAltMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5365,7 +5365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkAltPlusRegular")]
-        Icon::BiBookmarkAltPlusRegular => {
+        BiIcon::BiBookmarkAltPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5377,7 +5377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkAltPlusSolid")]
-        Icon::BiBookmarkAltPlusSolid => {
+        BiIcon::BiBookmarkAltPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5389,7 +5389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkAltRegular")]
-        Icon::BiBookmarkAltRegular => {
+        BiIcon::BiBookmarkAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5401,7 +5401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkAltSolid")]
-        Icon::BiBookmarkAltSolid => {
+        BiIcon::BiBookmarkAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5413,7 +5413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkHeartRegular")]
-        Icon::BiBookmarkHeartRegular => {
+        BiIcon::BiBookmarkHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5427,7 +5427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkHeartSolid")]
-        Icon::BiBookmarkHeartSolid => {
+        BiIcon::BiBookmarkHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5439,7 +5439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkMinusRegular")]
-        Icon::BiBookmarkMinusRegular => {
+        BiIcon::BiBookmarkMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5452,7 +5452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkMinusSolid")]
-        Icon::BiBookmarkMinusSolid => {
+        BiIcon::BiBookmarkMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5464,7 +5464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkPlusRegular")]
-        Icon::BiBookmarkPlusRegular => {
+        BiIcon::BiBookmarkPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5477,7 +5477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkPlusSolid")]
-        Icon::BiBookmarkPlusSolid => {
+        BiIcon::BiBookmarkPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5489,7 +5489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkRegular")]
-        Icon::BiBookmarkRegular => {
+        BiIcon::BiBookmarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5501,7 +5501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkSolid")]
-        Icon::BiBookmarkSolid => {
+        BiIcon::BiBookmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5513,7 +5513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarkStarSolid")]
-        Icon::BiBookmarkStarSolid => {
+        BiIcon::BiBookmarkStarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5527,7 +5527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarksRegular")]
-        Icon::BiBookmarksRegular => {
+        BiIcon::BiBookmarksRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5541,7 +5541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBookmarksSolid")]
-        Icon::BiBookmarksSolid => {
+        BiIcon::BiBookmarksSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5555,7 +5555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBootstrap")]
-        Icon::BiBootstrap => {
+        BiIcon::BiBootstrap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5567,7 +5567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderAllRegular")]
-        Icon::BiBorderAllRegular => {
+        BiIcon::BiBorderAllRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5579,7 +5579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderBottomRegular")]
-        Icon::BiBorderBottomRegular => {
+        BiIcon::BiBorderBottomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5591,7 +5591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderInnerRegular")]
-        Icon::BiBorderInnerRegular => {
+        BiIcon::BiBorderInnerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5603,7 +5603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderLeftRegular")]
-        Icon::BiBorderLeftRegular => {
+        BiIcon::BiBorderLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5615,7 +5615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderNoneRegular")]
-        Icon::BiBorderNoneRegular => {
+        BiIcon::BiBorderNoneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5627,7 +5627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderOuterRegular")]
-        Icon::BiBorderOuterRegular => {
+        BiIcon::BiBorderOuterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5639,7 +5639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderRadiusRegular")]
-        Icon::BiBorderRadiusRegular => {
+        BiIcon::BiBorderRadiusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5651,7 +5651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderRightRegular")]
-        Icon::BiBorderRightRegular => {
+        BiIcon::BiBorderRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5663,7 +5663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBorderTopRegular")]
-        Icon::BiBorderTopRegular => {
+        BiIcon::BiBorderTopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5675,7 +5675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBotRegular")]
-        Icon::BiBotRegular => {
+        BiIcon::BiBotRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5689,7 +5689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBotSolid")]
-        Icon::BiBotSolid => {
+        BiIcon::BiBotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5701,7 +5701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBowlHotRegular")]
-        Icon::BiBowlHotRegular => {
+        BiIcon::BiBowlHotRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5713,7 +5713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBowlHotSolid")]
-        Icon::BiBowlHotSolid => {
+        BiIcon::BiBowlHotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5725,7 +5725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBowlRiceRegular")]
-        Icon::BiBowlRiceRegular => {
+        BiIcon::BiBowlRiceRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5737,7 +5737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBowlRiceSolid")]
-        Icon::BiBowlRiceSolid => {
+        BiIcon::BiBowlRiceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5749,7 +5749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBowlingBallRegular")]
-        Icon::BiBowlingBallRegular => {
+        BiIcon::BiBowlingBallRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5763,7 +5763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBowlingBallSolid")]
-        Icon::BiBowlingBallSolid => {
+        BiIcon::BiBowlingBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5775,7 +5775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoxRegular")]
-        Icon::BiBoxRegular => {
+        BiIcon::BiBoxRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5787,7 +5787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBoxSolid")]
-        Icon::BiBoxSolid => {
+        BiIcon::BiBoxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5799,7 +5799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBracketRegular")]
-        Icon::BiBracketRegular => {
+        BiIcon::BiBracketRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5810,7 +5810,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrailleRegular")]
-        Icon::BiBrailleRegular => {
+        BiIcon::BiBrailleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5824,7 +5824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrainRegular")]
-        Icon::BiBrainRegular => {
+        BiIcon::BiBrainRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5836,7 +5836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrainSolid")]
-        Icon::BiBrainSolid => {
+        BiIcon::BiBrainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5848,7 +5848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBriefcaseAlt2Regular")]
-        Icon::BiBriefcaseAlt2Regular => {
+        BiIcon::BiBriefcaseAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5860,7 +5860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBriefcaseAlt2Solid")]
-        Icon::BiBriefcaseAlt2Solid => {
+        BiIcon::BiBriefcaseAlt2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5872,7 +5872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBriefcaseAltRegular")]
-        Icon::BiBriefcaseAltRegular => {
+        BiIcon::BiBriefcaseAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5884,7 +5884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBriefcaseAltSolid")]
-        Icon::BiBriefcaseAltSolid => {
+        BiIcon::BiBriefcaseAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5896,7 +5896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBriefcaseRegular")]
-        Icon::BiBriefcaseRegular => {
+        BiIcon::BiBriefcaseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5908,7 +5908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBriefcaseSolid")]
-        Icon::BiBriefcaseSolid => {
+        BiIcon::BiBriefcaseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5920,7 +5920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrightnessHalfRegular")]
-        Icon::BiBrightnessHalfRegular => {
+        BiIcon::BiBrightnessHalfRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5932,7 +5932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrightnessHalfSolid")]
-        Icon::BiBrightnessHalfSolid => {
+        BiIcon::BiBrightnessHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5944,7 +5944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrightnessRegular")]
-        Icon::BiBrightnessRegular => {
+        BiIcon::BiBrightnessRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5958,7 +5958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrightnessSolid")]
-        Icon::BiBrightnessSolid => {
+        BiIcon::BiBrightnessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5970,7 +5970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBroadcastRegular")]
-        Icon::BiBroadcastRegular => {
+        BiIcon::BiBroadcastRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5984,7 +5984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrushAltRegular")]
-        Icon::BiBrushAltRegular => {
+        BiIcon::BiBrushAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5996,7 +5996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrushAltSolid")]
-        Icon::BiBrushAltSolid => {
+        BiIcon::BiBrushAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6008,7 +6008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrushRegular")]
-        Icon::BiBrushRegular => {
+        BiIcon::BiBrushRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6020,7 +6020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBrushSolid")]
-        Icon::BiBrushSolid => {
+        BiIcon::BiBrushSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6032,7 +6032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBugAltRegular")]
-        Icon::BiBugAltRegular => {
+        BiIcon::BiBugAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6045,7 +6045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBugAltSolid")]
-        Icon::BiBugAltSolid => {
+        BiIcon::BiBugAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6057,7 +6057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBugRegular")]
-        Icon::BiBugRegular => {
+        BiIcon::BiBugRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6069,7 +6069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBugSolid")]
-        Icon::BiBugSolid => {
+        BiIcon::BiBugSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6081,7 +6081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuildingHouseRegular")]
-        Icon::BiBuildingHouseRegular => {
+        BiIcon::BiBuildingHouseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6095,7 +6095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuildingHouseSolid")]
-        Icon::BiBuildingHouseSolid => {
+        BiIcon::BiBuildingHouseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6107,7 +6107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuildingRegular")]
-        Icon::BiBuildingRegular => {
+        BiIcon::BiBuildingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6121,7 +6121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuildingSolid")]
-        Icon::BiBuildingSolid => {
+        BiIcon::BiBuildingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6133,7 +6133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuildingsRegular")]
-        Icon::BiBuildingsRegular => {
+        BiIcon::BiBuildingsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6147,7 +6147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuildingsSolid")]
-        Icon::BiBuildingsSolid => {
+        BiIcon::BiBuildingsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6160,7 +6160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBulbRegular")]
-        Icon::BiBulbRegular => {
+        BiIcon::BiBulbRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6172,7 +6172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBulbSolid")]
-        Icon::BiBulbSolid => {
+        BiIcon::BiBulbSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6184,7 +6184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBullseyeRegular")]
-        Icon::BiBullseyeRegular => {
+        BiIcon::BiBullseyeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6200,7 +6200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBullseyeSolid")]
-        Icon::BiBullseyeSolid => {
+        BiIcon::BiBullseyeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6214,7 +6214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuoyRegular")]
-        Icon::BiBuoyRegular => {
+        BiIcon::BiBuoyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6226,7 +6226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBuoySolid")]
-        Icon::BiBuoySolid => {
+        BiIcon::BiBuoySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6238,7 +6238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBusRegular")]
-        Icon::BiBusRegular => {
+        BiIcon::BiBusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6251,7 +6251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBusSchoolRegular")]
-        Icon::BiBusSchoolRegular => {
+        BiIcon::BiBusSchoolRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6264,7 +6264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBusSchoolSolid")]
-        Icon::BiBusSchoolSolid => {
+        BiIcon::BiBusSchoolSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6276,7 +6276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBusSolid")]
-        Icon::BiBusSolid => {
+        BiIcon::BiBusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6288,7 +6288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiBusinessSolid")]
-        Icon::BiBusinessSolid => {
+        BiIcon::BiBusinessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6300,7 +6300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCPlusPlus")]
-        Icon::BiCPlusPlus => {
+        BiIcon::BiCPlusPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6312,7 +6312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCabinetRegular")]
-        Icon::BiCabinetRegular => {
+        BiIcon::BiCabinetRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6324,7 +6324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCabinetSolid")]
-        Icon::BiCabinetSolid => {
+        BiIcon::BiCabinetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6336,7 +6336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCableCarRegular")]
-        Icon::BiCableCarRegular => {
+        BiIcon::BiCableCarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6348,7 +6348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCableCarSolid")]
-        Icon::BiCableCarSolid => {
+        BiIcon::BiCableCarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6360,7 +6360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCakeRegular")]
-        Icon::BiCakeRegular => {
+        BiIcon::BiCakeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6372,7 +6372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCakeSolid")]
-        Icon::BiCakeSolid => {
+        BiIcon::BiCakeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6384,7 +6384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalculatorRegular")]
-        Icon::BiCalculatorRegular => {
+        BiIcon::BiCalculatorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6398,7 +6398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalculatorSolid")]
-        Icon::BiCalculatorSolid => {
+        BiIcon::BiCalculatorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6410,7 +6410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarAltRegular")]
-        Icon::BiCalendarAltRegular => {
+        BiIcon::BiCalendarAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6422,7 +6422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarAltSolid")]
-        Icon::BiCalendarAltSolid => {
+        BiIcon::BiCalendarAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6434,7 +6434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarCheckRegular")]
-        Icon::BiCalendarCheckRegular => {
+        BiIcon::BiCalendarCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6448,7 +6448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarCheckSolid")]
-        Icon::BiCalendarCheckSolid => {
+        BiIcon::BiCalendarCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6460,7 +6460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarEditRegular")]
-        Icon::BiCalendarEditRegular => {
+        BiIcon::BiCalendarEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6474,7 +6474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarEditSolid")]
-        Icon::BiCalendarEditSolid => {
+        BiIcon::BiCalendarEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6486,7 +6486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarEventRegular")]
-        Icon::BiCalendarEventRegular => {
+        BiIcon::BiCalendarEventRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6499,7 +6499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarEventSolid")]
-        Icon::BiCalendarEventSolid => {
+        BiIcon::BiCalendarEventSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6511,7 +6511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarExclamationRegular")]
-        Icon::BiCalendarExclamationRegular => {
+        BiIcon::BiCalendarExclamationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6523,7 +6523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarExclamationSolid")]
-        Icon::BiCalendarExclamationSolid => {
+        BiIcon::BiCalendarExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6535,7 +6535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarHeartRegular")]
-        Icon::BiCalendarHeartRegular => {
+        BiIcon::BiCalendarHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6549,7 +6549,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarHeartSolid")]
-        Icon::BiCalendarHeartSolid => {
+        BiIcon::BiCalendarHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6561,7 +6561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarMinusRegular")]
-        Icon::BiCalendarMinusRegular => {
+        BiIcon::BiCalendarMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6574,7 +6574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarMinusSolid")]
-        Icon::BiCalendarMinusSolid => {
+        BiIcon::BiCalendarMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6586,7 +6586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarPlusRegular")]
-        Icon::BiCalendarPlusRegular => {
+        BiIcon::BiCalendarPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6599,7 +6599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarPlusSolid")]
-        Icon::BiCalendarPlusSolid => {
+        BiIcon::BiCalendarPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6611,7 +6611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarRegular")]
-        Icon::BiCalendarRegular => {
+        BiIcon::BiCalendarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6625,7 +6625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarSolid")]
-        Icon::BiCalendarSolid => {
+        BiIcon::BiCalendarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6637,7 +6637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarStarRegular")]
-        Icon::BiCalendarStarRegular => {
+        BiIcon::BiCalendarStarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6651,7 +6651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarStarSolid")]
-        Icon::BiCalendarStarSolid => {
+        BiIcon::BiCalendarStarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6663,7 +6663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarWeekRegular")]
-        Icon::BiCalendarWeekRegular => {
+        BiIcon::BiCalendarWeekRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6675,7 +6675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarWeekSolid")]
-        Icon::BiCalendarWeekSolid => {
+        BiIcon::BiCalendarWeekSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6687,7 +6687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarXRegular")]
-        Icon::BiCalendarXRegular => {
+        BiIcon::BiCalendarXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6701,7 +6701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCalendarXSolid")]
-        Icon::BiCalendarXSolid => {
+        BiIcon::BiCalendarXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6713,7 +6713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraHomeRegular")]
-        Icon::BiCameraHomeRegular => {
+        BiIcon::BiCameraHomeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6727,7 +6727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraHomeSolid")]
-        Icon::BiCameraHomeSolid => {
+        BiIcon::BiCameraHomeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6740,7 +6740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraMovieRegular")]
-        Icon::BiCameraMovieRegular => {
+        BiIcon::BiCameraMovieRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6752,7 +6752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraMovieSolid")]
-        Icon::BiCameraMovieSolid => {
+        BiIcon::BiCameraMovieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6764,7 +6764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraOffRegular")]
-        Icon::BiCameraOffRegular => {
+        BiIcon::BiCameraOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6778,7 +6778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraOffSolid")]
-        Icon::BiCameraOffSolid => {
+        BiIcon::BiCameraOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6790,7 +6790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraPlusSolid")]
-        Icon::BiCameraPlusSolid => {
+        BiIcon::BiCameraPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6802,7 +6802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraRegular")]
-        Icon::BiCameraRegular => {
+        BiIcon::BiCameraRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6816,7 +6816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCameraSolid")]
-        Icon::BiCameraSolid => {
+        BiIcon::BiCameraSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6830,7 +6830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCandlesRegular")]
-        Icon::BiCandlesRegular => {
+        BiIcon::BiCandlesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6842,7 +6842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCapsuleRegular")]
-        Icon::BiCapsuleRegular => {
+        BiIcon::BiCapsuleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6854,7 +6854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCapsuleSolid")]
-        Icon::BiCapsuleSolid => {
+        BiIcon::BiCapsuleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6866,7 +6866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaptionsRegular")]
-        Icon::BiCaptionsRegular => {
+        BiIcon::BiCaptionsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6880,7 +6880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaptionsSolid")]
-        Icon::BiCaptionsSolid => {
+        BiIcon::BiCaptionsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6892,7 +6892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarBatterySolid")]
-        Icon::BiCarBatterySolid => {
+        BiIcon::BiCarBatterySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6904,7 +6904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarCrashSolid")]
-        Icon::BiCarCrashSolid => {
+        BiIcon::BiCarCrashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6916,7 +6916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarGarageSolid")]
-        Icon::BiCarGarageSolid => {
+        BiIcon::BiCarGarageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6930,7 +6930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarMechanicSolid")]
-        Icon::BiCarMechanicSolid => {
+        BiIcon::BiCarMechanicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6942,7 +6942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarRegular")]
-        Icon::BiCarRegular => {
+        BiIcon::BiCarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6955,7 +6955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarSolid")]
-        Icon::BiCarSolid => {
+        BiIcon::BiCarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6967,7 +6967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarWashSolid")]
-        Icon::BiCarWashSolid => {
+        BiIcon::BiCarWashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6979,7 +6979,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCardRegular")]
-        Icon::BiCardRegular => {
+        BiIcon::BiCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6991,7 +6991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCardSolid")]
-        Icon::BiCardSolid => {
+        BiIcon::BiCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7003,7 +7003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretDownCircleRegular")]
-        Icon::BiCaretDownCircleRegular => {
+        BiIcon::BiCaretDownCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7016,7 +7016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretDownCircleSolid")]
-        Icon::BiCaretDownCircleSolid => {
+        BiIcon::BiCaretDownCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7028,7 +7028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretDownRegular")]
-        Icon::BiCaretDownRegular => {
+        BiIcon::BiCaretDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7039,7 +7039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretDownSquareRegular")]
-        Icon::BiCaretDownSquareRegular => {
+        BiIcon::BiCaretDownSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7052,7 +7052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretDownSquareSolid")]
-        Icon::BiCaretDownSquareSolid => {
+        BiIcon::BiCaretDownSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7064,7 +7064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretLeftCircleRegular")]
-        Icon::BiCaretLeftCircleRegular => {
+        BiIcon::BiCaretLeftCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7077,7 +7077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretLeftCircleSolid")]
-        Icon::BiCaretLeftCircleSolid => {
+        BiIcon::BiCaretLeftCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7089,7 +7089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretLeftRegular")]
-        Icon::BiCaretLeftRegular => {
+        BiIcon::BiCaretLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7100,7 +7100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretLeftSquareRegular")]
-        Icon::BiCaretLeftSquareRegular => {
+        BiIcon::BiCaretLeftSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7113,7 +7113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretLeftSquareSolid")]
-        Icon::BiCaretLeftSquareSolid => {
+        BiIcon::BiCaretLeftSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7125,7 +7125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretRightCircleRegular")]
-        Icon::BiCaretRightCircleRegular => {
+        BiIcon::BiCaretRightCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7138,7 +7138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretRightCircleSolid")]
-        Icon::BiCaretRightCircleSolid => {
+        BiIcon::BiCaretRightCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7150,7 +7150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretRightRegular")]
-        Icon::BiCaretRightRegular => {
+        BiIcon::BiCaretRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7161,7 +7161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretRightSquareRegular")]
-        Icon::BiCaretRightSquareRegular => {
+        BiIcon::BiCaretRightSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7174,7 +7174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretRightSquareSolid")]
-        Icon::BiCaretRightSquareSolid => {
+        BiIcon::BiCaretRightSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7186,7 +7186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretUpCircleRegular")]
-        Icon::BiCaretUpCircleRegular => {
+        BiIcon::BiCaretUpCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7199,7 +7199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretUpCircleSolid")]
-        Icon::BiCaretUpCircleSolid => {
+        BiIcon::BiCaretUpCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7211,7 +7211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretUpRegular")]
-        Icon::BiCaretUpRegular => {
+        BiIcon::BiCaretUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7222,7 +7222,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretUpSquareRegular")]
-        Icon::BiCaretUpSquareRegular => {
+        BiIcon::BiCaretUpSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7235,7 +7235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCaretUpSquareSolid")]
-        Icon::BiCaretUpSquareSolid => {
+        BiIcon::BiCaretUpSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7247,7 +7247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarouselRegular")]
-        Icon::BiCarouselRegular => {
+        BiIcon::BiCarouselRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7259,7 +7259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCarouselSolid")]
-        Icon::BiCarouselSolid => {
+        BiIcon::BiCarouselSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7271,7 +7271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartAddRegular")]
-        Icon::BiCartAddRegular => {
+        BiIcon::BiCartAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7285,7 +7285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartAddSolid")]
-        Icon::BiCartAddSolid => {
+        BiIcon::BiCartAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7298,7 +7298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartAltRegular")]
-        Icon::BiCartAltRegular => {
+        BiIcon::BiCartAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7311,7 +7311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartAltSolid")]
-        Icon::BiCartAltSolid => {
+        BiIcon::BiCartAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7324,7 +7324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartDownloadRegular")]
-        Icon::BiCartDownloadRegular => {
+        BiIcon::BiCartDownloadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7338,7 +7338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartDownloadSolid")]
-        Icon::BiCartDownloadSolid => {
+        BiIcon::BiCartDownloadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7352,7 +7352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartRegular")]
-        Icon::BiCartRegular => {
+        BiIcon::BiCartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7365,7 +7365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCartSolid")]
-        Icon::BiCartSolid => {
+        BiIcon::BiCartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7378,7 +7378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCastRegular")]
-        Icon::BiCastRegular => {
+        BiIcon::BiCastRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7393,7 +7393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCastleSolid")]
-        Icon::BiCastleSolid => {
+        BiIcon::BiCastleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7405,7 +7405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCatSolid")]
-        Icon::BiCatSolid => {
+        BiIcon::BiCatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7419,7 +7419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCategoryAltRegular")]
-        Icon::BiCategoryAltRegular => {
+        BiIcon::BiCategoryAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7431,7 +7431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCategoryAltSolid")]
-        Icon::BiCategoryAltSolid => {
+        BiIcon::BiCategoryAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7443,7 +7443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCategoryRegular")]
-        Icon::BiCategoryRegular => {
+        BiIcon::BiCategoryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7455,7 +7455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCategorySolid")]
-        Icon::BiCategorySolid => {
+        BiIcon::BiCategorySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7467,7 +7467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCctvRegular")]
-        Icon::BiCctvRegular => {
+        BiIcon::BiCctvRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7479,7 +7479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCctvSolid")]
-        Icon::BiCctvSolid => {
+        BiIcon::BiCctvSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7491,7 +7491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCertificationRegular")]
-        Icon::BiCertificationRegular => {
+        BiIcon::BiCertificationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7503,7 +7503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCertificationSolid")]
-        Icon::BiCertificationSolid => {
+        BiIcon::BiCertificationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7515,7 +7515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChairRegular")]
-        Icon::BiChairRegular => {
+        BiIcon::BiChairRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7527,7 +7527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChalkboardRegular")]
-        Icon::BiChalkboardRegular => {
+        BiIcon::BiChalkboardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7539,7 +7539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChalkboardSolid")]
-        Icon::BiChalkboardSolid => {
+        BiIcon::BiChalkboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7551,7 +7551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChartRegular")]
-        Icon::BiChartRegular => {
+        BiIcon::BiChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7565,7 +7565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChartSolid")]
-        Icon::BiChartSolid => {
+        BiIcon::BiChartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7577,7 +7577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChatRegular")]
-        Icon::BiChatRegular => {
+        BiIcon::BiChatRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7591,7 +7591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChatSolid")]
-        Icon::BiChatSolid => {
+        BiIcon::BiChatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7605,7 +7605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckCircleRegular")]
-        Icon::BiCheckCircleRegular => {
+        BiIcon::BiCheckCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7619,7 +7619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckCircleSolid")]
-        Icon::BiCheckCircleSolid => {
+        BiIcon::BiCheckCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7631,7 +7631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckDoubleRegular")]
-        Icon::BiCheckDoubleRegular => {
+        BiIcon::BiCheckDoubleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7643,7 +7643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckRegular")]
-        Icon::BiCheckRegular => {
+        BiIcon::BiCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7655,7 +7655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckShieldRegular")]
-        Icon::BiCheckShieldRegular => {
+        BiIcon::BiCheckShieldRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7669,7 +7669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckShieldSolid")]
-        Icon::BiCheckShieldSolid => {
+        BiIcon::BiCheckShieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7681,7 +7681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckSquareRegular")]
-        Icon::BiCheckSquareRegular => {
+        BiIcon::BiCheckSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7695,7 +7695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckSquareSolid")]
-        Icon::BiCheckSquareSolid => {
+        BiIcon::BiCheckSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7707,7 +7707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxCheckedRegular")]
-        Icon::BiCheckboxCheckedRegular => {
+        BiIcon::BiCheckboxCheckedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7721,7 +7721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxCheckedSolid")]
-        Icon::BiCheckboxCheckedSolid => {
+        BiIcon::BiCheckboxCheckedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7733,7 +7733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxMinusRegular")]
-        Icon::BiCheckboxMinusRegular => {
+        BiIcon::BiCheckboxMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7746,7 +7746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxMinusSolid")]
-        Icon::BiCheckboxMinusSolid => {
+        BiIcon::BiCheckboxMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7758,7 +7758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxRegular")]
-        Icon::BiCheckboxRegular => {
+        BiIcon::BiCheckboxRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7770,7 +7770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxSolid")]
-        Icon::BiCheckboxSolid => {
+        BiIcon::BiCheckboxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7782,7 +7782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheckboxSquareRegular")]
-        Icon::BiCheckboxSquareRegular => {
+        BiIcon::BiCheckboxSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7795,7 +7795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheeseRegular")]
-        Icon::BiCheeseRegular => {
+        BiIcon::BiCheeseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7808,7 +7808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCheeseSolid")]
-        Icon::BiCheeseSolid => {
+        BiIcon::BiCheeseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7820,7 +7820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChessSolid")]
-        Icon::BiChessSolid => {
+        BiIcon::BiChessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7832,7 +7832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronDownCircleRegular")]
-        Icon::BiChevronDownCircleRegular => {
+        BiIcon::BiChevronDownCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7846,7 +7846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronDownCircleSolid")]
-        Icon::BiChevronDownCircleSolid => {
+        BiIcon::BiChevronDownCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7858,7 +7858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronDownRegular")]
-        Icon::BiChevronDownRegular => {
+        BiIcon::BiChevronDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7870,7 +7870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronDownSolid")]
-        Icon::BiChevronDownSolid => {
+        BiIcon::BiChevronDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7882,7 +7882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronDownSquareRegular")]
-        Icon::BiChevronDownSquareRegular => {
+        BiIcon::BiChevronDownSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7896,7 +7896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronDownSquareSolid")]
-        Icon::BiChevronDownSquareSolid => {
+        BiIcon::BiChevronDownSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7908,7 +7908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronLeftCircleRegular")]
-        Icon::BiChevronLeftCircleRegular => {
+        BiIcon::BiChevronLeftCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7922,7 +7922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronLeftCircleSolid")]
-        Icon::BiChevronLeftCircleSolid => {
+        BiIcon::BiChevronLeftCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7934,7 +7934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronLeftRegular")]
-        Icon::BiChevronLeftRegular => {
+        BiIcon::BiChevronLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7946,7 +7946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronLeftSolid")]
-        Icon::BiChevronLeftSolid => {
+        BiIcon::BiChevronLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7958,7 +7958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronLeftSquareRegular")]
-        Icon::BiChevronLeftSquareRegular => {
+        BiIcon::BiChevronLeftSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7972,7 +7972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronLeftSquareSolid")]
-        Icon::BiChevronLeftSquareSolid => {
+        BiIcon::BiChevronLeftSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7984,7 +7984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronRightCircleRegular")]
-        Icon::BiChevronRightCircleRegular => {
+        BiIcon::BiChevronRightCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7998,7 +7998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronRightCircleSolid")]
-        Icon::BiChevronRightCircleSolid => {
+        BiIcon::BiChevronRightCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8010,7 +8010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronRightRegular")]
-        Icon::BiChevronRightRegular => {
+        BiIcon::BiChevronRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8022,7 +8022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronRightSolid")]
-        Icon::BiChevronRightSolid => {
+        BiIcon::BiChevronRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8034,7 +8034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronRightSquareRegular")]
-        Icon::BiChevronRightSquareRegular => {
+        BiIcon::BiChevronRightSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8048,7 +8048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronRightSquareSolid")]
-        Icon::BiChevronRightSquareSolid => {
+        BiIcon::BiChevronRightSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8060,7 +8060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronUpCircleRegular")]
-        Icon::BiChevronUpCircleRegular => {
+        BiIcon::BiChevronUpCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8074,7 +8074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronUpCircleSolid")]
-        Icon::BiChevronUpCircleSolid => {
+        BiIcon::BiChevronUpCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8086,7 +8086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronUpRegular")]
-        Icon::BiChevronUpRegular => {
+        BiIcon::BiChevronUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8098,7 +8098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronUpSolid")]
-        Icon::BiChevronUpSolid => {
+        BiIcon::BiChevronUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8110,7 +8110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronUpSquareRegular")]
-        Icon::BiChevronUpSquareRegular => {
+        BiIcon::BiChevronUpSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8124,7 +8124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronUpSquareSolid")]
-        Icon::BiChevronUpSquareSolid => {
+        BiIcon::BiChevronUpSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8136,7 +8136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsDownRegular")]
-        Icon::BiChevronsDownRegular => {
+        BiIcon::BiChevronsDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8150,7 +8150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsDownSolid")]
-        Icon::BiChevronsDownSolid => {
+        BiIcon::BiChevronsDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8164,7 +8164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsLeftRegular")]
-        Icon::BiChevronsLeftRegular => {
+        BiIcon::BiChevronsLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8178,7 +8178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsLeftSolid")]
-        Icon::BiChevronsLeftSolid => {
+        BiIcon::BiChevronsLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8192,7 +8192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsRightRegular")]
-        Icon::BiChevronsRightRegular => {
+        BiIcon::BiChevronsRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8206,7 +8206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsRightSolid")]
-        Icon::BiChevronsRightSolid => {
+        BiIcon::BiChevronsRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8220,7 +8220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsUpRegular")]
-        Icon::BiChevronsUpRegular => {
+        BiIcon::BiChevronsUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8234,7 +8234,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChevronsUpSolid")]
-        Icon::BiChevronsUpSolid => {
+        BiIcon::BiChevronsUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8248,7 +8248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChildRegular")]
-        Icon::BiChildRegular => {
+        BiIcon::BiChildRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8261,7 +8261,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChipRegular")]
-        Icon::BiChipRegular => {
+        BiIcon::BiChipRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8273,7 +8273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChipSolid")]
-        Icon::BiChipSolid => {
+        BiIcon::BiChipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8285,7 +8285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChrome")]
-        Icon::BiChrome => {
+        BiIcon::BiChrome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8303,7 +8303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChurchRegular")]
-        Icon::BiChurchRegular => {
+        BiIcon::BiChurchRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8315,7 +8315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiChurchSolid")]
-        Icon::BiChurchSolid => {
+        BiIcon::BiChurchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8327,7 +8327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleHalfRegular")]
-        Icon::BiCircleHalfRegular => {
+        BiIcon::BiCircleHalfRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8339,7 +8339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleHalfSolid")]
-        Icon::BiCircleHalfSolid => {
+        BiIcon::BiCircleHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8350,7 +8350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleQuarterRegular")]
-        Icon::BiCircleQuarterRegular => {
+        BiIcon::BiCircleQuarterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8362,7 +8362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleQuarterSolid")]
-        Icon::BiCircleQuarterSolid => {
+        BiIcon::BiCircleQuarterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8373,7 +8373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleRegular")]
-        Icon::BiCircleRegular => {
+        BiIcon::BiCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8385,7 +8385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleSolid")]
-        Icon::BiCircleSolid => {
+        BiIcon::BiCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8397,7 +8397,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleThreeQuarterRegular")]
-        Icon::BiCircleThreeQuarterRegular => {
+        BiIcon::BiCircleThreeQuarterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8409,7 +8409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCircleThreeQuarterSolid")]
-        Icon::BiCircleThreeQuarterSolid => {
+        BiIcon::BiCircleThreeQuarterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8420,7 +8420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCitySolid")]
-        Icon::BiCitySolid => {
+        BiIcon::BiCitySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8432,7 +8432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiClinicRegular")]
-        Icon::BiClinicRegular => {
+        BiIcon::BiClinicRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8444,7 +8444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiClinicSolid")]
-        Icon::BiClinicSolid => {
+        BiIcon::BiClinicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8456,7 +8456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiClipboardRegular")]
-        Icon::BiClipboardRegular => {
+        BiIcon::BiClipboardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8468,7 +8468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiClosetRegular")]
-        Icon::BiClosetRegular => {
+        BiIcon::BiClosetRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8480,7 +8480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudDownloadRegular")]
-        Icon::BiCloudDownloadRegular => {
+        BiIcon::BiCloudDownloadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8492,7 +8492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudDownloadSolid")]
-        Icon::BiCloudDownloadSolid => {
+        BiIcon::BiCloudDownloadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8504,7 +8504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudDrizzleRegular")]
-        Icon::BiCloudDrizzleRegular => {
+        BiIcon::BiCloudDrizzleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8518,7 +8518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudLightRainRegular")]
-        Icon::BiCloudLightRainRegular => {
+        BiIcon::BiCloudLightRainRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8532,7 +8532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudLightningRegular")]
-        Icon::BiCloudLightningRegular => {
+        BiIcon::BiCloudLightningRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8545,7 +8545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudLightningSolid")]
-        Icon::BiCloudLightningSolid => {
+        BiIcon::BiCloudLightningSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8557,7 +8557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudRainRegular")]
-        Icon::BiCloudRainRegular => {
+        BiIcon::BiCloudRainRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8570,7 +8570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudRainSolid")]
-        Icon::BiCloudRainSolid => {
+        BiIcon::BiCloudRainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8582,7 +8582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudRegular")]
-        Icon::BiCloudRegular => {
+        BiIcon::BiCloudRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8594,7 +8594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudSnowRegular")]
-        Icon::BiCloudSnowRegular => {
+        BiIcon::BiCloudSnowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8609,7 +8609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudSolid")]
-        Icon::BiCloudSolid => {
+        BiIcon::BiCloudSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8621,7 +8621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudUploadRegular")]
-        Icon::BiCloudUploadRegular => {
+        BiIcon::BiCloudUploadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8634,7 +8634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCloudUploadSolid")]
-        Icon::BiCloudUploadSolid => {
+        BiIcon::BiCloudUploadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8646,7 +8646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCodeAltRegular")]
-        Icon::BiCodeAltRegular => {
+        BiIcon::BiCodeAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8658,7 +8658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCodeBlockRegular")]
-        Icon::BiCodeBlockRegular => {
+        BiIcon::BiCodeBlockRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8672,7 +8672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCodeCurlyRegular")]
-        Icon::BiCodeCurlyRegular => {
+        BiIcon::BiCodeCurlyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8684,7 +8684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCodeRegular")]
-        Icon::BiCodeRegular => {
+        BiIcon::BiCodeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8696,7 +8696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCodepen")]
-        Icon::BiCodepen => {
+        BiIcon::BiCodepen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8708,7 +8708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoffeeAltSolid")]
-        Icon::BiCoffeeAltSolid => {
+        BiIcon::BiCoffeeAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8720,7 +8720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoffeeBeanSolid")]
-        Icon::BiCoffeeBeanSolid => {
+        BiIcon::BiCoffeeBeanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8734,7 +8734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoffeeRegular")]
-        Icon::BiCoffeeRegular => {
+        BiIcon::BiCoffeeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8746,7 +8746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoffeeSolid")]
-        Icon::BiCoffeeSolid => {
+        BiIcon::BiCoffeeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8758,7 +8758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoffeeTogoRegular")]
-        Icon::BiCoffeeTogoRegular => {
+        BiIcon::BiCoffeeTogoRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8770,7 +8770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoffeeTogoSolid")]
-        Icon::BiCoffeeTogoSolid => {
+        BiIcon::BiCoffeeTogoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8782,7 +8782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCogRegular")]
-        Icon::BiCogRegular => {
+        BiIcon::BiCogRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8796,7 +8796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCogSolid")]
-        Icon::BiCogSolid => {
+        BiIcon::BiCogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8808,7 +8808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoinRegular")]
-        Icon::BiCoinRegular => {
+        BiIcon::BiCoinRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8820,7 +8820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoinSolid")]
-        Icon::BiCoinSolid => {
+        BiIcon::BiCoinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8832,7 +8832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoinStackRegular")]
-        Icon::BiCoinStackRegular => {
+        BiIcon::BiCoinStackRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8844,7 +8844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoinStackSolid")]
-        Icon::BiCoinStackSolid => {
+        BiIcon::BiCoinStackSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8862,7 +8862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCollapseAltRegular")]
-        Icon::BiCollapseAltRegular => {
+        BiIcon::BiCollapseAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8873,7 +8873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCollapseHorizontalRegular")]
-        Icon::BiCollapseHorizontalRegular => {
+        BiIcon::BiCollapseHorizontalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8885,7 +8885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCollapseRegular")]
-        Icon::BiCollapseRegular => {
+        BiIcon::BiCollapseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8897,7 +8897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCollapseVerticalRegular")]
-        Icon::BiCollapseVerticalRegular => {
+        BiIcon::BiCollapseVerticalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8909,7 +8909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCollectionRegular")]
-        Icon::BiCollectionRegular => {
+        BiIcon::BiCollectionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8921,7 +8921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCollectionSolid")]
-        Icon::BiCollectionSolid => {
+        BiIcon::BiCollectionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8933,7 +8933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiColorFillRegular")]
-        Icon::BiColorFillRegular => {
+        BiIcon::BiColorFillRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8945,7 +8945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiColorFillSolid")]
-        Icon::BiColorFillSolid => {
+        BiIcon::BiColorFillSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8957,7 +8957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiColorRegular")]
-        Icon::BiColorRegular => {
+        BiIcon::BiColorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8969,7 +8969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiColorSolid")]
-        Icon::BiColorSolid => {
+        BiIcon::BiColorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8981,7 +8981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiColumnsRegular")]
-        Icon::BiColumnsRegular => {
+        BiIcon::BiColumnsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8993,7 +8993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommandRegular")]
-        Icon::BiCommandRegular => {
+        BiIcon::BiCommandRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9005,7 +9005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentAddRegular")]
-        Icon::BiCommentAddRegular => {
+        BiIcon::BiCommentAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9018,7 +9018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentAddSolid")]
-        Icon::BiCommentAddSolid => {
+        BiIcon::BiCommentAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9030,7 +9030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentCheckRegular")]
-        Icon::BiCommentCheckRegular => {
+        BiIcon::BiCommentCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9044,7 +9044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentCheckSolid")]
-        Icon::BiCommentCheckSolid => {
+        BiIcon::BiCommentCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9056,7 +9056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentDetailRegular")]
-        Icon::BiCommentDetailRegular => {
+        BiIcon::BiCommentDetailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9069,7 +9069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentDetailSolid")]
-        Icon::BiCommentDetailSolid => {
+        BiIcon::BiCommentDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9081,7 +9081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentDotsRegular")]
-        Icon::BiCommentDotsRegular => {
+        BiIcon::BiCommentDotsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9094,7 +9094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentDotsSolid")]
-        Icon::BiCommentDotsSolid => {
+        BiIcon::BiCommentDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9106,7 +9106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentEditRegular")]
-        Icon::BiCommentEditRegular => {
+        BiIcon::BiCommentEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9120,7 +9120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentEditSolid")]
-        Icon::BiCommentEditSolid => {
+        BiIcon::BiCommentEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9132,7 +9132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentErrorRegular")]
-        Icon::BiCommentErrorRegular => {
+        BiIcon::BiCommentErrorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9145,7 +9145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentErrorSolid")]
-        Icon::BiCommentErrorSolid => {
+        BiIcon::BiCommentErrorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9157,7 +9157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentMinusRegular")]
-        Icon::BiCommentMinusRegular => {
+        BiIcon::BiCommentMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9170,7 +9170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentMinusSolid")]
-        Icon::BiCommentMinusSolid => {
+        BiIcon::BiCommentMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9182,7 +9182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentRegular")]
-        Icon::BiCommentRegular => {
+        BiIcon::BiCommentRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9194,7 +9194,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentSolid")]
-        Icon::BiCommentSolid => {
+        BiIcon::BiCommentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9206,7 +9206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentXRegular")]
-        Icon::BiCommentXRegular => {
+        BiIcon::BiCommentXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9220,7 +9220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCommentXSolid")]
-        Icon::BiCommentXSolid => {
+        BiIcon::BiCommentXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9232,7 +9232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCompassRegular")]
-        Icon::BiCompassRegular => {
+        BiIcon::BiCompassRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9244,7 +9244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCompassSolid")]
-        Icon::BiCompassSolid => {
+        BiIcon::BiCompassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9256,7 +9256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiComponentSolid")]
-        Icon::BiComponentSolid => {
+        BiIcon::BiComponentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9268,7 +9268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiConfusedRegular")]
-        Icon::BiConfusedRegular => {
+        BiIcon::BiConfusedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9282,7 +9282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiConfusedSolid")]
-        Icon::BiConfusedSolid => {
+        BiIcon::BiConfusedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9294,7 +9294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiContactSolid")]
-        Icon::BiContactSolid => {
+        BiIcon::BiContactSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9306,7 +9306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiConversationRegular")]
-        Icon::BiConversationRegular => {
+        BiIcon::BiConversationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9320,7 +9320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiConversationSolid")]
-        Icon::BiConversationSolid => {
+        BiIcon::BiConversationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9334,7 +9334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCookieRegular")]
-        Icon::BiCookieRegular => {
+        BiIcon::BiCookieRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9349,7 +9349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCookieSolid")]
-        Icon::BiCookieSolid => {
+        BiIcon::BiCookieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9361,7 +9361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoolRegular")]
-        Icon::BiCoolRegular => {
+        BiIcon::BiCoolRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9375,7 +9375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCoolSolid")]
-        Icon::BiCoolSolid => {
+        BiIcon::BiCoolSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9387,7 +9387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCopyAltRegular")]
-        Icon::BiCopyAltRegular => {
+        BiIcon::BiCopyAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9399,7 +9399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCopyAltSolid")]
-        Icon::BiCopyAltSolid => {
+        BiIcon::BiCopyAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9413,7 +9413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCopyRegular")]
-        Icon::BiCopyRegular => {
+        BiIcon::BiCopyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9425,7 +9425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCopySolid")]
-        Icon::BiCopySolid => {
+        BiIcon::BiCopySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9439,7 +9439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCopyrightRegular")]
-        Icon::BiCopyrightRegular => {
+        BiIcon::BiCopyrightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9453,7 +9453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCopyrightSolid")]
-        Icon::BiCopyrightSolid => {
+        BiIcon::BiCopyrightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9465,7 +9465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCouponSolid")]
-        Icon::BiCouponSolid => {
+        BiIcon::BiCouponSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9477,7 +9477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreativeCommons")]
-        Icon::BiCreativeCommons => {
+        BiIcon::BiCreativeCommons => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9491,7 +9491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreditCardAltRegular")]
-        Icon::BiCreditCardAltRegular => {
+        BiIcon::BiCreditCardAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9506,7 +9506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreditCardAltSolid")]
-        Icon::BiCreditCardAltSolid => {
+        BiIcon::BiCreditCardAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9518,7 +9518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreditCardFrontRegular")]
-        Icon::BiCreditCardFrontRegular => {
+        BiIcon::BiCreditCardFrontRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9532,7 +9532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreditCardFrontSolid")]
-        Icon::BiCreditCardFrontSolid => {
+        BiIcon::BiCreditCardFrontSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9544,7 +9544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreditCardRegular")]
-        Icon::BiCreditCardRegular => {
+        BiIcon::BiCreditCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9556,7 +9556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCreditCardSolid")]
-        Icon::BiCreditCardSolid => {
+        BiIcon::BiCreditCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9568,7 +9568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCricketBallRegular")]
-        Icon::BiCricketBallRegular => {
+        BiIcon::BiCricketBallRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9580,7 +9580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCricketBallSolid")]
-        Icon::BiCricketBallSolid => {
+        BiIcon::BiCricketBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9592,7 +9592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCropRegular")]
-        Icon::BiCropRegular => {
+        BiIcon::BiCropRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9604,7 +9604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCropSolid")]
-        Icon::BiCropSolid => {
+        BiIcon::BiCropSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9617,7 +9617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCrossRegular")]
-        Icon::BiCrossRegular => {
+        BiIcon::BiCrossRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9628,7 +9628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCrosshairRegular")]
-        Icon::BiCrosshairRegular => {
+        BiIcon::BiCrosshairRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9640,7 +9640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCrownRegular")]
-        Icon::BiCrownRegular => {
+        BiIcon::BiCrownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9652,7 +9652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCrownSolid")]
-        Icon::BiCrownSolid => {
+        BiIcon::BiCrownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9664,7 +9664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCss3")]
-        Icon::BiCss3 => {
+        BiIcon::BiCss3 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9676,7 +9676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCubeAltRegular")]
-        Icon::BiCubeAltRegular => {
+        BiIcon::BiCubeAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9688,7 +9688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCubeAltSolid")]
-        Icon::BiCubeAltSolid => {
+        BiIcon::BiCubeAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9700,7 +9700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCubeRegular")]
-        Icon::BiCubeRegular => {
+        BiIcon::BiCubeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9712,7 +9712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCubeSolid")]
-        Icon::BiCubeSolid => {
+        BiIcon::BiCubeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9724,7 +9724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCuboidRegular")]
-        Icon::BiCuboidRegular => {
+        BiIcon::BiCuboidRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9736,7 +9736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCuboidSolid")]
-        Icon::BiCuboidSolid => {
+        BiIcon::BiCuboidSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9748,7 +9748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCurrentLocationRegular")]
-        Icon::BiCurrentLocationRegular => {
+        BiIcon::BiCurrentLocationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9761,7 +9761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCustomizeRegular")]
-        Icon::BiCustomizeRegular => {
+        BiIcon::BiCustomizeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9773,7 +9773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCustomizeSolid")]
-        Icon::BiCustomizeSolid => {
+        BiIcon::BiCustomizeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9785,7 +9785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCutRegular")]
-        Icon::BiCutRegular => {
+        BiIcon::BiCutRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9799,7 +9799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCyclingRegular")]
-        Icon::BiCyclingRegular => {
+        BiIcon::BiCyclingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9813,7 +9813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCylinderRegular")]
-        Icon::BiCylinderRegular => {
+        BiIcon::BiCylinderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9825,7 +9825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiCylinderSolid")]
-        Icon::BiCylinderSolid => {
+        BiIcon::BiCylinderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9837,7 +9837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDailymotion")]
-        Icon::BiDailymotion => {
+        BiIcon::BiDailymotion => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9851,7 +9851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDashboardSolid")]
-        Icon::BiDashboardSolid => {
+        BiIcon::BiDashboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9863,7 +9863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDataRegular")]
-        Icon::BiDataRegular => {
+        BiIcon::BiDataRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9875,7 +9875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDataSolid")]
-        Icon::BiDataSolid => {
+        BiIcon::BiDataSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9889,7 +9889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDeezer")]
-        Icon::BiDeezer => {
+        BiIcon::BiDeezer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9901,7 +9901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDesktopRegular")]
-        Icon::BiDesktopRegular => {
+        BiIcon::BiDesktopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9913,7 +9913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDetailRegular")]
-        Icon::BiDetailRegular => {
+        BiIcon::BiDetailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9925,7 +9925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDetailSolid")]
-        Icon::BiDetailSolid => {
+        BiIcon::BiDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9937,7 +9937,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDevTo")]
-        Icon::BiDevTo => {
+        BiIcon::BiDevTo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9949,7 +9949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDeviantart")]
-        Icon::BiDeviantart => {
+        BiIcon::BiDeviantart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9961,7 +9961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDevicesRegular")]
-        Icon::BiDevicesRegular => {
+        BiIcon::BiDevicesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9973,7 +9973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDevicesSolid")]
-        Icon::BiDevicesSolid => {
+        BiIcon::BiDevicesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9985,7 +9985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDialpadAltRegular")]
-        Icon::BiDialpadAltRegular => {
+        BiIcon::BiDialpadAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9999,7 +9999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDialpadRegular")]
-        Icon::BiDialpadRegular => {
+        BiIcon::BiDialpadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10011,7 +10011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiamondRegular")]
-        Icon::BiDiamondRegular => {
+        BiIcon::BiDiamondRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10023,7 +10023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiamondSolid")]
-        Icon::BiDiamondSolid => {
+        BiIcon::BiDiamondSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10035,7 +10035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice1Regular")]
-        Icon::BiDice1Regular => {
+        BiIcon::BiDice1Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10047,7 +10047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice1Solid")]
-        Icon::BiDice1Solid => {
+        BiIcon::BiDice1Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10059,7 +10059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice2Regular")]
-        Icon::BiDice2Regular => {
+        BiIcon::BiDice2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10072,7 +10072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice2Solid")]
-        Icon::BiDice2Solid => {
+        BiIcon::BiDice2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10084,7 +10084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice3Regular")]
-        Icon::BiDice3Regular => {
+        BiIcon::BiDice3Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10097,7 +10097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice3Solid")]
-        Icon::BiDice3Solid => {
+        BiIcon::BiDice3Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10109,7 +10109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice4Regular")]
-        Icon::BiDice4Regular => {
+        BiIcon::BiDice4Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10123,7 +10123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice4Solid")]
-        Icon::BiDice4Solid => {
+        BiIcon::BiDice4Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10135,7 +10135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice5Regular")]
-        Icon::BiDice5Regular => {
+        BiIcon::BiDice5Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10149,7 +10149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice5Solid")]
-        Icon::BiDice5Solid => {
+        BiIcon::BiDice5Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10161,7 +10161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice6Regular")]
-        Icon::BiDice6Regular => {
+        BiIcon::BiDice6Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10176,7 +10176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDice6Solid")]
-        Icon::BiDice6Solid => {
+        BiIcon::BiDice6Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10188,7 +10188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDigg")]
-        Icon::BiDigg => {
+        BiIcon::BiDigg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10200,7 +10200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDigitalocean")]
-        Icon::BiDigitalocean => {
+        BiIcon::BiDigitalocean => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10214,7 +10214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDirectionLeftSolid")]
-        Icon::BiDirectionLeftSolid => {
+        BiIcon::BiDirectionLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10226,7 +10226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDirectionRightSolid")]
-        Icon::BiDirectionRightSolid => {
+        BiIcon::BiDirectionRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10238,7 +10238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDirectionsRegular")]
-        Icon::BiDirectionsRegular => {
+        BiIcon::BiDirectionsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10250,7 +10250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDirectionsSolid")]
-        Icon::BiDirectionsSolid => {
+        BiIcon::BiDirectionsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10262,7 +10262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiscRegular")]
-        Icon::BiDiscRegular => {
+        BiIcon::BiDiscRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10276,7 +10276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiscSolid")]
-        Icon::BiDiscSolid => {
+        BiIcon::BiDiscSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10288,7 +10288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiscord")]
-        Icon::BiDiscord => {
+        BiIcon::BiDiscord => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10302,7 +10302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiscordAlt")]
-        Icon::BiDiscordAlt => {
+        BiIcon::BiDiscordAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10314,7 +10314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiscountSolid")]
-        Icon::BiDiscountSolid => {
+        BiIcon::BiDiscountSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10326,7 +10326,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDiscourse")]
-        Icon::BiDiscourse => {
+        BiIcon::BiDiscourse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10338,7 +10338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDishRegular")]
-        Icon::BiDishRegular => {
+        BiIcon::BiDishRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10350,7 +10350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDishSolid")]
-        Icon::BiDishSolid => {
+        BiIcon::BiDishSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10362,7 +10362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDislikeRegular")]
-        Icon::BiDislikeRegular => {
+        BiIcon::BiDislikeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10374,7 +10374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDislikeSolid")]
-        Icon::BiDislikeSolid => {
+        BiIcon::BiDislikeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10386,7 +10386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDizzyRegular")]
-        Icon::BiDizzyRegular => {
+        BiIcon::BiDizzyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10400,7 +10400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDizzySolid")]
-        Icon::BiDizzySolid => {
+        BiIcon::BiDizzySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10412,7 +10412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDjango")]
-        Icon::BiDjango => {
+        BiIcon::BiDjango => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10426,7 +10426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDnaRegular")]
-        Icon::BiDnaRegular => {
+        BiIcon::BiDnaRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10438,7 +10438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockBottomRegular")]
-        Icon::BiDockBottomRegular => {
+        BiIcon::BiDockBottomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10450,7 +10450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockBottomSolid")]
-        Icon::BiDockBottomSolid => {
+        BiIcon::BiDockBottomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10462,7 +10462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockLeftRegular")]
-        Icon::BiDockLeftRegular => {
+        BiIcon::BiDockLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10474,7 +10474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockLeftSolid")]
-        Icon::BiDockLeftSolid => {
+        BiIcon::BiDockLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10486,7 +10486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockRightRegular")]
-        Icon::BiDockRightRegular => {
+        BiIcon::BiDockRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10498,7 +10498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockRightSolid")]
-        Icon::BiDockRightSolid => {
+        BiIcon::BiDockRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10510,7 +10510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockTopRegular")]
-        Icon::BiDockTopRegular => {
+        BiIcon::BiDockTopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10522,7 +10522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDockTopSolid")]
-        Icon::BiDockTopSolid => {
+        BiIcon::BiDockTopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10534,7 +10534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDocker")]
-        Icon::BiDocker => {
+        BiIcon::BiDocker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10551,7 +10551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDogSolid")]
-        Icon::BiDogSolid => {
+        BiIcon::BiDogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10565,7 +10565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDollarCircleRegular")]
-        Icon::BiDollarCircleRegular => {
+        BiIcon::BiDollarCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10579,7 +10579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDollarCircleSolid")]
-        Icon::BiDollarCircleSolid => {
+        BiIcon::BiDollarCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10591,7 +10591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDollarRegular")]
-        Icon::BiDollarRegular => {
+        BiIcon::BiDollarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10603,7 +10603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDonateBloodRegular")]
-        Icon::BiDonateBloodRegular => {
+        BiIcon::BiDonateBloodRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10615,7 +10615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDonateBloodSolid")]
-        Icon::BiDonateBloodSolid => {
+        BiIcon::BiDonateBloodSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10627,7 +10627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDonateHeartRegular")]
-        Icon::BiDonateHeartRegular => {
+        BiIcon::BiDonateHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10639,7 +10639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDonateHeartSolid")]
-        Icon::BiDonateHeartSolid => {
+        BiIcon::BiDonateHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10651,7 +10651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDoorOpenRegular")]
-        Icon::BiDoorOpenRegular => {
+        BiIcon::BiDoorOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10665,7 +10665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDoorOpenSolid")]
-        Icon::BiDoorOpenSolid => {
+        BiIcon::BiDoorOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10677,7 +10677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDotsHorizontalRegular")]
-        Icon::BiDotsHorizontalRegular => {
+        BiIcon::BiDotsHorizontalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10688,7 +10688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDotsHorizontalRoundedRegular")]
-        Icon::BiDotsHorizontalRoundedRegular => {
+        BiIcon::BiDotsHorizontalRoundedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10700,7 +10700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDotsVerticalRegular")]
-        Icon::BiDotsVerticalRegular => {
+        BiIcon::BiDotsVerticalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10711,7 +10711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDotsVerticalRoundedRegular")]
-        Icon::BiDotsVerticalRoundedRegular => {
+        BiIcon::BiDotsVerticalRoundedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10723,7 +10723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDoughnutChartRegular")]
-        Icon::BiDoughnutChartRegular => {
+        BiIcon::BiDoughnutChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10735,7 +10735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDoughnutChartSolid")]
-        Icon::BiDoughnutChartSolid => {
+        BiIcon::BiDoughnutChartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10749,7 +10749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowAltRegular")]
-        Icon::BiDownArrowAltRegular => {
+        BiIcon::BiDownArrowAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10761,7 +10761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowAltSolid")]
-        Icon::BiDownArrowAltSolid => {
+        BiIcon::BiDownArrowAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10772,7 +10772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowCircleRegular")]
-        Icon::BiDownArrowCircleRegular => {
+        BiIcon::BiDownArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10784,7 +10784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowCircleSolid")]
-        Icon::BiDownArrowCircleSolid => {
+        BiIcon::BiDownArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10796,7 +10796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowRegular")]
-        Icon::BiDownArrowRegular => {
+        BiIcon::BiDownArrowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10808,7 +10808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowSolid")]
-        Icon::BiDownArrowSolid => {
+        BiIcon::BiDownArrowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10820,7 +10820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownArrowSquareSolid")]
-        Icon::BiDownArrowSquareSolid => {
+        BiIcon::BiDownArrowSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10832,7 +10832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownloadRegular")]
-        Icon::BiDownloadRegular => {
+        BiIcon::BiDownloadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10845,7 +10845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownloadSolid")]
-        Icon::BiDownloadSolid => {
+        BiIcon::BiDownloadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10856,7 +10856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownvoteRegular")]
-        Icon::BiDownvoteRegular => {
+        BiIcon::BiDownvoteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10868,7 +10868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDownvoteSolid")]
-        Icon::BiDownvoteSolid => {
+        BiIcon::BiDownvoteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10880,7 +10880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDribbble")]
-        Icon::BiDribbble => {
+        BiIcon::BiDribbble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10892,7 +10892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDrinkRegular")]
-        Icon::BiDrinkRegular => {
+        BiIcon::BiDrinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10904,7 +10904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDrinkSolid")]
-        Icon::BiDrinkSolid => {
+        BiIcon::BiDrinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10916,7 +10916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDropbox")]
-        Icon::BiDropbox => {
+        BiIcon::BiDropbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10928,7 +10928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDropletHalfSolid")]
-        Icon::BiDropletHalfSolid => {
+        BiIcon::BiDropletHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10940,7 +10940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDropletRegular")]
-        Icon::BiDropletRegular => {
+        BiIcon::BiDropletRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10952,7 +10952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDropletSolid")]
-        Icon::BiDropletSolid => {
+        BiIcon::BiDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10964,7 +10964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDrupal")]
-        Icon::BiDrupal => {
+        BiIcon::BiDrupal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10978,7 +10978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDryerSolid")]
-        Icon::BiDryerSolid => {
+        BiIcon::BiDryerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10992,7 +10992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDumbbellRegular")]
-        Icon::BiDumbbellRegular => {
+        BiIcon::BiDumbbellRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11004,7 +11004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDuplicateRegular")]
-        Icon::BiDuplicateRegular => {
+        BiIcon::BiDuplicateRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11017,7 +11017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiDuplicateSolid")]
-        Icon::BiDuplicateSolid => {
+        BiIcon::BiDuplicateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11029,7 +11029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEbay")]
-        Icon::BiEbay => {
+        BiIcon::BiEbay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11041,7 +11041,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEdge")]
-        Icon::BiEdge => {
+        BiIcon::BiEdge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11053,7 +11053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEditAltRegular")]
-        Icon::BiEditAltRegular => {
+        BiIcon::BiEditAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11065,7 +11065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEditAltSolid")]
-        Icon::BiEditAltSolid => {
+        BiIcon::BiEditAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11077,7 +11077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEditLocationSolid")]
-        Icon::BiEditLocationSolid => {
+        BiIcon::BiEditLocationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11089,7 +11089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEditRegular")]
-        Icon::BiEditRegular => {
+        BiIcon::BiEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11103,7 +11103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEditSolid")]
-        Icon::BiEditSolid => {
+        BiIcon::BiEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11117,7 +11117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEjectSolid")]
-        Icon::BiEjectSolid => {
+        BiIcon::BiEjectSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11128,7 +11128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEnvelopeOpenRegular")]
-        Icon::BiEnvelopeOpenRegular => {
+        BiIcon::BiEnvelopeOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11140,7 +11140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEnvelopeOpenSolid")]
-        Icon::BiEnvelopeOpenSolid => {
+        BiIcon::BiEnvelopeOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11152,7 +11152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEnvelopeRegular")]
-        Icon::BiEnvelopeRegular => {
+        BiIcon::BiEnvelopeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11164,7 +11164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEnvelopeSolid")]
-        Icon::BiEnvelopeSolid => {
+        BiIcon::BiEnvelopeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11176,7 +11176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEqualizerRegular")]
-        Icon::BiEqualizerRegular => {
+        BiIcon::BiEqualizerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11188,7 +11188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEraserRegular")]
-        Icon::BiEraserRegular => {
+        BiIcon::BiEraserRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11200,7 +11200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEraserSolid")]
-        Icon::BiEraserSolid => {
+        BiIcon::BiEraserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11212,7 +11212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiErrorAltRegular")]
-        Icon::BiErrorAltRegular => {
+        BiIcon::BiErrorAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11225,7 +11225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiErrorAltSolid")]
-        Icon::BiErrorAltSolid => {
+        BiIcon::BiErrorAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11237,7 +11237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiErrorCircleRegular")]
-        Icon::BiErrorCircleRegular => {
+        BiIcon::BiErrorCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11249,7 +11249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiErrorCircleSolid")]
-        Icon::BiErrorCircleSolid => {
+        BiIcon::BiErrorCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11261,7 +11261,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiErrorRegular")]
-        Icon::BiErrorRegular => {
+        BiIcon::BiErrorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11274,7 +11274,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiErrorSolid")]
-        Icon::BiErrorSolid => {
+        BiIcon::BiErrorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11286,7 +11286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEtsy")]
-        Icon::BiEtsy => {
+        BiIcon::BiEtsy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11298,7 +11298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEuroRegular")]
-        Icon::BiEuroRegular => {
+        BiIcon::BiEuroRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11310,7 +11310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEvStationSolid")]
-        Icon::BiEvStationSolid => {
+        BiIcon::BiEvStationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11322,7 +11322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExcludeRegular")]
-        Icon::BiExcludeRegular => {
+        BiIcon::BiExcludeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11334,7 +11334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExitFullscreenRegular")]
-        Icon::BiExitFullscreenRegular => {
+        BiIcon::BiExitFullscreenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11346,7 +11346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExitRegular")]
-        Icon::BiExitRegular => {
+        BiIcon::BiExitRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11358,7 +11358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExitSolid")]
-        Icon::BiExitSolid => {
+        BiIcon::BiExitSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11370,7 +11370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExpandAltRegular")]
-        Icon::BiExpandAltRegular => {
+        BiIcon::BiExpandAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11381,7 +11381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExpandHorizontalRegular")]
-        Icon::BiExpandHorizontalRegular => {
+        BiIcon::BiExpandHorizontalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11393,7 +11393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExpandRegular")]
-        Icon::BiExpandRegular => {
+        BiIcon::BiExpandRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11405,7 +11405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExpandVerticalRegular")]
-        Icon::BiExpandVerticalRegular => {
+        BiIcon::BiExpandVerticalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11417,7 +11417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExportRegular")]
-        Icon::BiExportRegular => {
+        BiIcon::BiExportRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11430,7 +11430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExtensionRegular")]
-        Icon::BiExtensionRegular => {
+        BiIcon::BiExtensionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11442,7 +11442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiExtensionSolid")]
-        Icon::BiExtensionSolid => {
+        BiIcon::BiExtensionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11454,7 +11454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiEyedropperSolid")]
-        Icon::BiEyedropperSolid => {
+        BiIcon::BiEyedropperSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11466,7 +11466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFaceMaskSolid")]
-        Icon::BiFaceMaskSolid => {
+        BiIcon::BiFaceMaskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11479,7 +11479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFaceRegular")]
-        Icon::BiFaceRegular => {
+        BiIcon::BiFaceRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11492,7 +11492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFaceSolid")]
-        Icon::BiFaceSolid => {
+        BiIcon::BiFaceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11505,7 +11505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFacebook")]
-        Icon::BiFacebook => {
+        BiIcon::BiFacebook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11517,7 +11517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFacebookCircle")]
-        Icon::BiFacebookCircle => {
+        BiIcon::BiFacebookCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11529,7 +11529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFacebookSquare")]
-        Icon::BiFacebookSquare => {
+        BiIcon::BiFacebookSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11541,7 +11541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFactorySolid")]
-        Icon::BiFactorySolid => {
+        BiIcon::BiFactorySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11553,7 +11553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFastForwardCircleRegular")]
-        Icon::BiFastForwardCircleRegular => {
+        BiIcon::BiFastForwardCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11565,7 +11565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFastForwardCircleSolid")]
-        Icon::BiFastForwardCircleSolid => {
+        BiIcon::BiFastForwardCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11577,7 +11577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFastForwardRegular")]
-        Icon::BiFastForwardRegular => {
+        BiIcon::BiFastForwardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11588,7 +11588,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFemaleRegular")]
-        Icon::BiFemaleRegular => {
+        BiIcon::BiFemaleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11601,7 +11601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFemaleSignRegular")]
-        Icon::BiFemaleSignRegular => {
+        BiIcon::BiFemaleSignRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11613,7 +11613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFigma")]
-        Icon::BiFigma => {
+        BiIcon::BiFigma => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11625,7 +11625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileArchiveSolid")]
-        Icon::BiFileArchiveSolid => {
+        BiIcon::BiFileArchiveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11637,7 +11637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileBlankRegular")]
-        Icon::BiFileBlankRegular => {
+        BiIcon::BiFileBlankRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11649,7 +11649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileBlankSolid")]
-        Icon::BiFileBlankSolid => {
+        BiIcon::BiFileBlankSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11661,7 +11661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileCssSolid")]
-        Icon::BiFileCssSolid => {
+        BiIcon::BiFileCssSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11673,7 +11673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileDocSolid")]
-        Icon::BiFileDocSolid => {
+        BiIcon::BiFileDocSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11689,7 +11689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileExportSolid")]
-        Icon::BiFileExportSolid => {
+        BiIcon::BiFileExportSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11701,7 +11701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileFindRegular")]
-        Icon::BiFileFindRegular => {
+        BiIcon::BiFileFindRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11713,7 +11713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileFindSolid")]
-        Icon::BiFileFindSolid => {
+        BiIcon::BiFileFindSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11725,7 +11725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileGifSolid")]
-        Icon::BiFileGifSolid => {
+        BiIcon::BiFileGifSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11737,7 +11737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileHtmlSolid")]
-        Icon::BiFileHtmlSolid => {
+        BiIcon::BiFileHtmlSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11749,7 +11749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileImageSolid")]
-        Icon::BiFileImageSolid => {
+        BiIcon::BiFileImageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11761,7 +11761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileImportSolid")]
-        Icon::BiFileImportSolid => {
+        BiIcon::BiFileImportSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11773,7 +11773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileJpgSolid")]
-        Icon::BiFileJpgSolid => {
+        BiIcon::BiFileJpgSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11787,7 +11787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileJsSolid")]
-        Icon::BiFileJsSolid => {
+        BiIcon::BiFileJsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11799,7 +11799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileJsonSolid")]
-        Icon::BiFileJsonSolid => {
+        BiIcon::BiFileJsonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11813,7 +11813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileMdSolid")]
-        Icon::BiFileMdSolid => {
+        BiIcon::BiFileMdSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11827,7 +11827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilePdfSolid")]
-        Icon::BiFilePdfSolid => {
+        BiIcon::BiFilePdfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11841,7 +11841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilePlusSolid")]
-        Icon::BiFilePlusSolid => {
+        BiIcon::BiFilePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11853,7 +11853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilePngSolid")]
-        Icon::BiFilePngSolid => {
+        BiIcon::BiFilePngSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11867,7 +11867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileRegular")]
-        Icon::BiFileRegular => {
+        BiIcon::BiFileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11879,7 +11879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileSolid")]
-        Icon::BiFileSolid => {
+        BiIcon::BiFileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11891,7 +11891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFileTxtSolid")]
-        Icon::BiFileTxtSolid => {
+        BiIcon::BiFileTxtSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11903,7 +11903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilmRegular")]
-        Icon::BiFilmRegular => {
+        BiIcon::BiFilmRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11915,7 +11915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilmSolid")]
-        Icon::BiFilmSolid => {
+        BiIcon::BiFilmSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11927,7 +11927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilterAltRegular")]
-        Icon::BiFilterAltRegular => {
+        BiIcon::BiFilterAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11939,7 +11939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilterAltSolid")]
-        Icon::BiFilterAltSolid => {
+        BiIcon::BiFilterAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11951,7 +11951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFilterRegular")]
-        Icon::BiFilterRegular => {
+        BiIcon::BiFilterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11962,7 +11962,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFingerprintRegular")]
-        Icon::BiFingerprintRegular => {
+        BiIcon::BiFingerprintRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11978,7 +11978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFirebase")]
-        Icon::BiFirebase => {
+        BiIcon::BiFirebase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11990,7 +11990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFirefox")]
-        Icon::BiFirefox => {
+        BiIcon::BiFirefox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12002,7 +12002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFirstAidRegular")]
-        Icon::BiFirstAidRegular => {
+        BiIcon::BiFirstAidRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12014,7 +12014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFirstAidSolid")]
-        Icon::BiFirstAidSolid => {
+        BiIcon::BiFirstAidSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12026,7 +12026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFirstPageRegular")]
-        Icon::BiFirstPageRegular => {
+        BiIcon::BiFirstPageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12038,7 +12038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlagAltSolid")]
-        Icon::BiFlagAltSolid => {
+        BiIcon::BiFlagAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12049,7 +12049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlagCheckeredSolid")]
-        Icon::BiFlagCheckeredSolid => {
+        BiIcon::BiFlagCheckeredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12062,7 +12062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlagRegular")]
-        Icon::BiFlagRegular => {
+        BiIcon::BiFlagRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12074,7 +12074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlagSolid")]
-        Icon::BiFlagSolid => {
+        BiIcon::BiFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12086,7 +12086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlameSolid")]
-        Icon::BiFlameSolid => {
+        BiIcon::BiFlameSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12098,7 +12098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlask")]
-        Icon::BiFlask => {
+        BiIcon::BiFlask => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12120,7 +12120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlaskSolid")]
-        Icon::BiFlaskSolid => {
+        BiIcon::BiFlaskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12132,7 +12132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlickr")]
-        Icon::BiFlickr => {
+        BiIcon::BiFlickr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12144,7 +12144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlickrSquare")]
-        Icon::BiFlickrSquare => {
+        BiIcon::BiFlickrSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12156,7 +12156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFloristSolid")]
-        Icon::BiFloristSolid => {
+        BiIcon::BiFloristSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12168,7 +12168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFlutter")]
-        Icon::BiFlutter => {
+        BiIcon::BiFlutter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12180,7 +12180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderMinusRegular")]
-        Icon::BiFolderMinusRegular => {
+        BiIcon::BiFolderMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12192,7 +12192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderMinusSolid")]
-        Icon::BiFolderMinusSolid => {
+        BiIcon::BiFolderMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12204,7 +12204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderOpenRegular")]
-        Icon::BiFolderOpenRegular => {
+        BiIcon::BiFolderOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12216,7 +12216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderOpenSolid")]
-        Icon::BiFolderOpenSolid => {
+        BiIcon::BiFolderOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12228,7 +12228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderPlusRegular")]
-        Icon::BiFolderPlusRegular => {
+        BiIcon::BiFolderPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12241,7 +12241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderPlusSolid")]
-        Icon::BiFolderPlusSolid => {
+        BiIcon::BiFolderPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12253,7 +12253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderRegular")]
-        Icon::BiFolderRegular => {
+        BiIcon::BiFolderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12265,7 +12265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFolderSolid")]
-        Icon::BiFolderSolid => {
+        BiIcon::BiFolderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12277,7 +12277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFontColorRegular")]
-        Icon::BiFontColorRegular => {
+        BiIcon::BiFontColorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12289,7 +12289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFontFamilyRegular")]
-        Icon::BiFontFamilyRegular => {
+        BiIcon::BiFontFamilyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12301,7 +12301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFontRegular")]
-        Icon::BiFontRegular => {
+        BiIcon::BiFontRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12313,7 +12313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFontSizeRegular")]
-        Icon::BiFontSizeRegular => {
+        BiIcon::BiFontSizeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12325,7 +12325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFoodMenuRegular")]
-        Icon::BiFoodMenuRegular => {
+        BiIcon::BiFoodMenuRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12338,7 +12338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFoodMenuSolid")]
-        Icon::BiFoodMenuSolid => {
+        BiIcon::BiFoodMenuSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12350,7 +12350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFoodTagRegular")]
-        Icon::BiFoodTagRegular => {
+        BiIcon::BiFoodTagRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12362,7 +12362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFootballRegular")]
-        Icon::BiFootballRegular => {
+        BiIcon::BiFootballRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12374,7 +12374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiForkRegular")]
-        Icon::BiForkRegular => {
+        BiIcon::BiForkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12386,7 +12386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFoursquare")]
-        Icon::BiFoursquare => {
+        BiIcon::BiFoursquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12398,7 +12398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFridgeRegular")]
-        Icon::BiFridgeRegular => {
+        BiIcon::BiFridgeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12410,7 +12410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFridgeSolid")]
-        Icon::BiFridgeSolid => {
+        BiIcon::BiFridgeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12422,7 +12422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiFullscreenRegular")]
-        Icon::BiFullscreenRegular => {
+        BiIcon::BiFullscreenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12434,7 +12434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGameRegular")]
-        Icon::BiGameRegular => {
+        BiIcon::BiGameRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12446,7 +12446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGameSolid")]
-        Icon::BiGameSolid => {
+        BiIcon::BiGameSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12458,7 +12458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGasPumpRegular")]
-        Icon::BiGasPumpRegular => {
+        BiIcon::BiGasPumpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12470,7 +12470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGasPumpSolid")]
-        Icon::BiGasPumpSolid => {
+        BiIcon::BiGasPumpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12482,7 +12482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGhostRegular")]
-        Icon::BiGhostRegular => {
+        BiIcon::BiGhostRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12495,7 +12495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGhostSolid")]
-        Icon::BiGhostSolid => {
+        BiIcon::BiGhostSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12507,7 +12507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGiftRegular")]
-        Icon::BiGiftRegular => {
+        BiIcon::BiGiftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12519,7 +12519,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGiftSolid")]
-        Icon::BiGiftSolid => {
+        BiIcon::BiGiftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12531,7 +12531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGit")]
-        Icon::BiGit => {
+        BiIcon::BiGit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12543,7 +12543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitBranchRegular")]
-        Icon::BiGitBranchRegular => {
+        BiIcon::BiGitBranchRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12555,7 +12555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitCommitRegular")]
-        Icon::BiGitCommitRegular => {
+        BiIcon::BiGitCommitRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12567,7 +12567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitCompareRegular")]
-        Icon::BiGitCompareRegular => {
+        BiIcon::BiGitCompareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12579,7 +12579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitMergeRegular")]
-        Icon::BiGitMergeRegular => {
+        BiIcon::BiGitMergeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12591,7 +12591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitPullRequestRegular")]
-        Icon::BiGitPullRequestRegular => {
+        BiIcon::BiGitPullRequestRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12603,7 +12603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitRepoForkedRegular")]
-        Icon::BiGitRepoForkedRegular => {
+        BiIcon::BiGitRepoForkedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12615,7 +12615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGithub")]
-        Icon::BiGithub => {
+        BiIcon::BiGithub => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12628,7 +12628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGitlab")]
-        Icon::BiGitlab => {
+        BiIcon::BiGitlab => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12640,7 +12640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGlassesAltRegular")]
-        Icon::BiGlassesAltRegular => {
+        BiIcon::BiGlassesAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12652,7 +12652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGlassesRegular")]
-        Icon::BiGlassesRegular => {
+        BiIcon::BiGlassesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12664,7 +12664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGlobeAltRegular")]
-        Icon::BiGlobeAltRegular => {
+        BiIcon::BiGlobeAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12678,7 +12678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGlobeRegular")]
-        Icon::BiGlobeRegular => {
+        BiIcon::BiGlobeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12690,7 +12690,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGmail")]
-        Icon::BiGmail => {
+        BiIcon::BiGmail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12702,7 +12702,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGoLang")]
-        Icon::BiGoLang => {
+        BiIcon::BiGoLang => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12714,7 +12714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGoogle")]
-        Icon::BiGoogle => {
+        BiIcon::BiGoogle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12726,7 +12726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGoogleCloud")]
-        Icon::BiGoogleCloud => {
+        BiIcon::BiGoogleCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12738,7 +12738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGooglePlus")]
-        Icon::BiGooglePlus => {
+        BiIcon::BiGooglePlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12750,7 +12750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGooglePlusCircle")]
-        Icon::BiGooglePlusCircle => {
+        BiIcon::BiGooglePlusCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12762,7 +12762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGraduationSolid")]
-        Icon::BiGraduationSolid => {
+        BiIcon::BiGraduationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12775,7 +12775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGraphql")]
-        Icon::BiGraphql => {
+        BiIcon::BiGraphql => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12787,7 +12787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridAltRegular")]
-        Icon::BiGridAltRegular => {
+        BiIcon::BiGridAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12799,7 +12799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridAltSolid")]
-        Icon::BiGridAltSolid => {
+        BiIcon::BiGridAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12811,7 +12811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridHorizontalRegular")]
-        Icon::BiGridHorizontalRegular => {
+        BiIcon::BiGridHorizontalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12823,7 +12823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridRegular")]
-        Icon::BiGridRegular => {
+        BiIcon::BiGridRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12835,7 +12835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridSmallRegular")]
-        Icon::BiGridSmallRegular => {
+        BiIcon::BiGridSmallRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12846,7 +12846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridSolid")]
-        Icon::BiGridSolid => {
+        BiIcon::BiGridSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12858,7 +12858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGridVerticalRegular")]
-        Icon::BiGridVerticalRegular => {
+        BiIcon::BiGridVerticalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12870,7 +12870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGroupRegular")]
-        Icon::BiGroupRegular => {
+        BiIcon::BiGroupRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12884,7 +12884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGroupSolid")]
-        Icon::BiGroupSolid => {
+        BiIcon::BiGroupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12898,7 +12898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiGuitarAmpSolid")]
-        Icon::BiGuitarAmpSolid => {
+        BiIcon::BiGuitarAmpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12910,7 +12910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHandDownSolid")]
-        Icon::BiHandDownSolid => {
+        BiIcon::BiHandDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12922,7 +12922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHandLeftSolid")]
-        Icon::BiHandLeftSolid => {
+        BiIcon::BiHandLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12934,7 +12934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHandRightSolid")]
-        Icon::BiHandRightSolid => {
+        BiIcon::BiHandRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12946,7 +12946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHandSolid")]
-        Icon::BiHandSolid => {
+        BiIcon::BiHandSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12958,7 +12958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHandUpSolid")]
-        Icon::BiHandUpSolid => {
+        BiIcon::BiHandUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12970,7 +12970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHandicapRegular")]
-        Icon::BiHandicapRegular => {
+        BiIcon::BiHandicapRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12985,7 +12985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyAltRegular")]
-        Icon::BiHappyAltRegular => {
+        BiIcon::BiHappyAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12999,7 +12999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyAltSolid")]
-        Icon::BiHappyAltSolid => {
+        BiIcon::BiHappyAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13011,7 +13011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyBeamingRegular")]
-        Icon::BiHappyBeamingRegular => {
+        BiIcon::BiHappyBeamingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13026,7 +13026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyBeamingSolid")]
-        Icon::BiHappyBeamingSolid => {
+        BiIcon::BiHappyBeamingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13038,7 +13038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyHeartEyesRegular")]
-        Icon::BiHappyHeartEyesRegular => {
+        BiIcon::BiHappyHeartEyesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13053,7 +13053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyHeartEyesSolid")]
-        Icon::BiHappyHeartEyesSolid => {
+        BiIcon::BiHappyHeartEyesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13065,7 +13065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappyRegular")]
-        Icon::BiHappyRegular => {
+        BiIcon::BiHappyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13079,7 +13079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHappySolid")]
-        Icon::BiHappySolid => {
+        BiIcon::BiHappySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13091,7 +13091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHardHatRegular")]
-        Icon::BiHardHatRegular => {
+        BiIcon::BiHardHatRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13103,7 +13103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHardHatSolid")]
-        Icon::BiHardHatSolid => {
+        BiIcon::BiHardHatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13115,7 +13115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHashRegular")]
-        Icon::BiHashRegular => {
+        BiIcon::BiHashRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13127,7 +13127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHddRegular")]
-        Icon::BiHddRegular => {
+        BiIcon::BiHddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13139,7 +13139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHddSolid")]
-        Icon::BiHddSolid => {
+        BiIcon::BiHddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13151,7 +13151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeadingRegular")]
-        Icon::BiHeadingRegular => {
+        BiIcon::BiHeadingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13162,7 +13162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeadphoneRegular")]
-        Icon::BiHeadphoneRegular => {
+        BiIcon::BiHeadphoneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13174,7 +13174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHealthRegular")]
-        Icon::BiHealthRegular => {
+        BiIcon::BiHealthRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13186,7 +13186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeartCircleRegular")]
-        Icon::BiHeartCircleRegular => {
+        BiIcon::BiHeartCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13200,7 +13200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeartCircleSolid")]
-        Icon::BiHeartCircleSolid => {
+        BiIcon::BiHeartCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13212,7 +13212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeartRegular")]
-        Icon::BiHeartRegular => {
+        BiIcon::BiHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13224,7 +13224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeartSolid")]
-        Icon::BiHeartSolid => {
+        BiIcon::BiHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13236,7 +13236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeartSquareRegular")]
-        Icon::BiHeartSquareRegular => {
+        BiIcon::BiHeartSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13250,7 +13250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeartSquareSolid")]
-        Icon::BiHeartSquareSolid => {
+        BiIcon::BiHeartSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13262,7 +13262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHelpCircleRegular")]
-        Icon::BiHelpCircleRegular => {
+        BiIcon::BiHelpCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13276,7 +13276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHelpCircleSolid")]
-        Icon::BiHelpCircleSolid => {
+        BiIcon::BiHelpCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13288,7 +13288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHeroku")]
-        Icon::BiHeroku => {
+        BiIcon::BiHeroku => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13302,7 +13302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHideRegular")]
-        Icon::BiHideRegular => {
+        BiIcon::BiHideRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13314,7 +13314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHideSolid")]
-        Icon::BiHideSolid => {
+        BiIcon::BiHideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13326,7 +13326,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHighlightRegular")]
-        Icon::BiHighlightRegular => {
+        BiIcon::BiHighlightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13338,7 +13338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHistoryRegular")]
-        Icon::BiHistoryRegular => {
+        BiIcon::BiHistoryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13351,7 +13351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHiveRegular")]
-        Icon::BiHiveRegular => {
+        BiIcon::BiHiveRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13363,7 +13363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeAlt2Regular")]
-        Icon::BiHomeAlt2Regular => {
+        BiIcon::BiHomeAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13375,7 +13375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeAlt2Solid")]
-        Icon::BiHomeAlt2Solid => {
+        BiIcon::BiHomeAlt2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13387,7 +13387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeAltRegular")]
-        Icon::BiHomeAltRegular => {
+        BiIcon::BiHomeAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13399,7 +13399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeCircleRegular")]
-        Icon::BiHomeCircleRegular => {
+        BiIcon::BiHomeCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13413,7 +13413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeCircleSolid")]
-        Icon::BiHomeCircleSolid => {
+        BiIcon::BiHomeCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13425,7 +13425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeHeartRegular")]
-        Icon::BiHomeHeartRegular => {
+        BiIcon::BiHomeHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13439,7 +13439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeHeartSolid")]
-        Icon::BiHomeHeartSolid => {
+        BiIcon::BiHomeHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13451,7 +13451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeRegular")]
-        Icon::BiHomeRegular => {
+        BiIcon::BiHomeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13463,7 +13463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeSmileRegular")]
-        Icon::BiHomeSmileRegular => {
+        BiIcon::BiHomeSmileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13477,7 +13477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeSmileSolid")]
-        Icon::BiHomeSmileSolid => {
+        BiIcon::BiHomeSmileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13489,7 +13489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHomeSolid")]
-        Icon::BiHomeSolid => {
+        BiIcon::BiHomeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13501,7 +13501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHorizontalCenterRegular")]
-        Icon::BiHorizontalCenterRegular => {
+        BiIcon::BiHorizontalCenterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13513,7 +13513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHorizontalLeftRegular")]
-        Icon::BiHorizontalLeftRegular => {
+        BiIcon::BiHorizontalLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13525,7 +13525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHorizontalRightRegular")]
-        Icon::BiHorizontalRightRegular => {
+        BiIcon::BiHorizontalRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13537,7 +13537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHotSolid")]
-        Icon::BiHotSolid => {
+        BiIcon::BiHotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13549,7 +13549,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHotelRegular")]
-        Icon::BiHotelRegular => {
+        BiIcon::BiHotelRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13562,7 +13562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHotelSolid")]
-        Icon::BiHotelSolid => {
+        BiIcon::BiHotelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13575,7 +13575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHourglassBottomSolid")]
-        Icon::BiHourglassBottomSolid => {
+        BiIcon::BiHourglassBottomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13587,7 +13587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHourglassRegular")]
-        Icon::BiHourglassRegular => {
+        BiIcon::BiHourglassRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13599,7 +13599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHourglassSolid")]
-        Icon::BiHourglassSolid => {
+        BiIcon::BiHourglassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13611,7 +13611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHourglassTopSolid")]
-        Icon::BiHourglassTopSolid => {
+        BiIcon::BiHourglassTopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13623,7 +13623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiHtml5")]
-        Icon::BiHtml5 => {
+        BiIcon::BiHtml5 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13635,7 +13635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiIdCardRegular")]
-        Icon::BiIdCardRegular => {
+        BiIcon::BiIdCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13651,7 +13651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiIdCardSolid")]
-        Icon::BiIdCardSolid => {
+        BiIcon::BiIdCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13663,7 +13663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImageAddRegular")]
-        Icon::BiImageAddRegular => {
+        BiIcon::BiImageAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13676,7 +13676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImageAddSolid")]
-        Icon::BiImageAddSolid => {
+        BiIcon::BiImageAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13688,7 +13688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImageAltRegular")]
-        Icon::BiImageAltRegular => {
+        BiIcon::BiImageAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13700,7 +13700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImageAltSolid")]
-        Icon::BiImageAltSolid => {
+        BiIcon::BiImageAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13712,7 +13712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImageRegular")]
-        Icon::BiImageRegular => {
+        BiIcon::BiImageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13725,7 +13725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImageSolid")]
-        Icon::BiImageSolid => {
+        BiIcon::BiImageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13737,7 +13737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImagesRegular")]
-        Icon::BiImagesRegular => {
+        BiIcon::BiImagesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13750,7 +13750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImdb")]
-        Icon::BiImdb => {
+        BiIcon::BiImdb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13764,7 +13764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiImportRegular")]
-        Icon::BiImportRegular => {
+        BiIcon::BiImportRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13777,7 +13777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInboxSolid")]
-        Icon::BiInboxSolid => {
+        BiIcon::BiInboxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13789,7 +13789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInfiniteRegular")]
-        Icon::BiInfiniteRegular => {
+        BiIcon::BiInfiniteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13801,7 +13801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInfoCircleRegular")]
-        Icon::BiInfoCircleRegular => {
+        BiIcon::BiInfoCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13813,7 +13813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInfoCircleSolid")]
-        Icon::BiInfoCircleSolid => {
+        BiIcon::BiInfoCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13825,7 +13825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInfoSquareRegular")]
-        Icon::BiInfoSquareRegular => {
+        BiIcon::BiInfoSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13837,7 +13837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInfoSquareSolid")]
-        Icon::BiInfoSquareSolid => {
+        BiIcon::BiInfoSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13849,7 +13849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInjectionRegular")]
-        Icon::BiInjectionRegular => {
+        BiIcon::BiInjectionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13861,7 +13861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInjectionSolid")]
-        Icon::BiInjectionSolid => {
+        BiIcon::BiInjectionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13873,7 +13873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInstagram")]
-        Icon::BiInstagram => {
+        BiIcon::BiInstagram => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13887,7 +13887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInstagramAlt")]
-        Icon::BiInstagramAlt => {
+        BiIcon::BiInstagramAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13899,7 +13899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInstitutionSolid")]
-        Icon::BiInstitutionSolid => {
+        BiIcon::BiInstitutionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13912,7 +13912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInternetExplorer")]
-        Icon::BiInternetExplorer => {
+        BiIcon::BiInternetExplorer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13924,7 +13924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiIntersectRegular")]
-        Icon::BiIntersectRegular => {
+        BiIcon::BiIntersectRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13936,7 +13936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInvaderSolid")]
-        Icon::BiInvaderSolid => {
+        BiIcon::BiInvaderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13948,7 +13948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiInvision")]
-        Icon::BiInvision => {
+        BiIcon::BiInvision => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13960,7 +13960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiItalicRegular")]
-        Icon::BiItalicRegular => {
+        BiIcon::BiItalicRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13971,7 +13971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJava")]
-        Icon::BiJava => {
+        BiIcon::BiJava => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13987,7 +13987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJavascript")]
-        Icon::BiJavascript => {
+        BiIcon::BiJavascript => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13999,7 +13999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoomla")]
-        Icon::BiJoomla => {
+        BiIcon::BiJoomla => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14011,7 +14011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoystickAltRegular")]
-        Icon::BiJoystickAltRegular => {
+        BiIcon::BiJoystickAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14025,7 +14025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoystickAltSolid")]
-        Icon::BiJoystickAltSolid => {
+        BiIcon::BiJoystickAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14037,7 +14037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoystickButtonRegular")]
-        Icon::BiJoystickButtonRegular => {
+        BiIcon::BiJoystickButtonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14050,7 +14050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoystickButtonSolid")]
-        Icon::BiJoystickButtonSolid => {
+        BiIcon::BiJoystickButtonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14062,7 +14062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoystickRegular")]
-        Icon::BiJoystickRegular => {
+        BiIcon::BiJoystickRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14076,7 +14076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJoystickSolid")]
-        Icon::BiJoystickSolid => {
+        BiIcon::BiJoystickSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14088,7 +14088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJquery")]
-        Icon::BiJquery => {
+        BiIcon::BiJquery => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14104,7 +14104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiJsfiddle")]
-        Icon::BiJsfiddle => {
+        BiIcon::BiJsfiddle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14116,7 +14116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiKeyRegular")]
-        Icon::BiKeyRegular => {
+        BiIcon::BiKeyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14128,7 +14128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiKeySolid")]
-        Icon::BiKeySolid => {
+        BiIcon::BiKeySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14140,7 +14140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiKeyboardSolid")]
-        Icon::BiKeyboardSolid => {
+        BiIcon::BiKeyboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14152,7 +14152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiKickstarter")]
-        Icon::BiKickstarter => {
+        BiIcon::BiKickstarter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14164,7 +14164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiKnifeRegular")]
-        Icon::BiKnifeRegular => {
+        BiIcon::BiKnifeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14176,7 +14176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiKubernetes")]
-        Icon::BiKubernetes => {
+        BiIcon::BiKubernetes => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14192,7 +14192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLabelRegular")]
-        Icon::BiLabelRegular => {
+        BiIcon::BiLabelRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14204,7 +14204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLabelSolid")]
-        Icon::BiLabelSolid => {
+        BiIcon::BiLabelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14216,7 +14216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLandmarkSolid")]
-        Icon::BiLandmarkSolid => {
+        BiIcon::BiLandmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14228,7 +14228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLandscapeRegular")]
-        Icon::BiLandscapeRegular => {
+        BiIcon::BiLandscapeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14240,7 +14240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLandscapeSolid")]
-        Icon::BiLandscapeSolid => {
+        BiIcon::BiLandscapeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14252,7 +14252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLaptopRegular")]
-        Icon::BiLaptopRegular => {
+        BiIcon::BiLaptopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14264,7 +14264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLastPageRegular")]
-        Icon::BiLastPageRegular => {
+        BiIcon::BiLastPageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14276,7 +14276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLaughRegular")]
-        Icon::BiLaughRegular => {
+        BiIcon::BiLaughRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14290,7 +14290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLaughSolid")]
-        Icon::BiLaughSolid => {
+        BiIcon::BiLaughSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14302,7 +14302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayerMinusRegular")]
-        Icon::BiLayerMinusRegular => {
+        BiIcon::BiLayerMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14316,7 +14316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayerMinusSolid")]
-        Icon::BiLayerMinusSolid => {
+        BiIcon::BiLayerMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14330,7 +14330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayerPlusRegular")]
-        Icon::BiLayerPlusRegular => {
+        BiIcon::BiLayerPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14344,7 +14344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayerPlusSolid")]
-        Icon::BiLayerPlusSolid => {
+        BiIcon::BiLayerPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14358,7 +14358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayerRegular")]
-        Icon::BiLayerRegular => {
+        BiIcon::BiLayerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14374,7 +14374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayerSolid")]
-        Icon::BiLayerSolid => {
+        BiIcon::BiLayerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14390,7 +14390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayoutRegular")]
-        Icon::BiLayoutRegular => {
+        BiIcon::BiLayoutRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14402,7 +14402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLayoutSolid")]
-        Icon::BiLayoutSolid => {
+        BiIcon::BiLayoutSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14414,7 +14414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeafRegular")]
-        Icon::BiLeafRegular => {
+        BiIcon::BiLeafRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14426,7 +14426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeafSolid")]
-        Icon::BiLeafSolid => {
+        BiIcon::BiLeafSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14438,7 +14438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowAltRegular")]
-        Icon::BiLeftArrowAltRegular => {
+        BiIcon::BiLeftArrowAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14450,7 +14450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowAltSolid")]
-        Icon::BiLeftArrowAltSolid => {
+        BiIcon::BiLeftArrowAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14461,7 +14461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowCircleRegular")]
-        Icon::BiLeftArrowCircleRegular => {
+        BiIcon::BiLeftArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14475,7 +14475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowCircleSolid")]
-        Icon::BiLeftArrowCircleSolid => {
+        BiIcon::BiLeftArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14487,7 +14487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowRegular")]
-        Icon::BiLeftArrowRegular => {
+        BiIcon::BiLeftArrowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14499,7 +14499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowSolid")]
-        Icon::BiLeftArrowSolid => {
+        BiIcon::BiLeftArrowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14511,7 +14511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftArrowSquareSolid")]
-        Icon::BiLeftArrowSquareSolid => {
+        BiIcon::BiLeftArrowSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14523,7 +14523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftDownArrowCircleRegular")]
-        Icon::BiLeftDownArrowCircleRegular => {
+        BiIcon::BiLeftDownArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14537,7 +14537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftDownArrowCircleSolid")]
-        Icon::BiLeftDownArrowCircleSolid => {
+        BiIcon::BiLeftDownArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14549,7 +14549,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftIndentRegular")]
-        Icon::BiLeftIndentRegular => {
+        BiIcon::BiLeftIndentRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14561,7 +14561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftTopArrowCircleRegular")]
-        Icon::BiLeftTopArrowCircleRegular => {
+        BiIcon::BiLeftTopArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14575,7 +14575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLeftTopArrowCircleSolid")]
-        Icon::BiLeftTopArrowCircleSolid => {
+        BiIcon::BiLeftTopArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14587,7 +14587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLemonRegular")]
-        Icon::BiLemonRegular => {
+        BiIcon::BiLemonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14599,7 +14599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLemonSolid")]
-        Icon::BiLemonSolid => {
+        BiIcon::BiLemonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14611,7 +14611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLess")]
-        Icon::BiLess => {
+        BiIcon::BiLess => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14623,7 +14623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLibraryRegular")]
-        Icon::BiLibraryRegular => {
+        BiIcon::BiLibraryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14635,7 +14635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLikeRegular")]
-        Icon::BiLikeRegular => {
+        BiIcon::BiLikeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14647,7 +14647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLikeSolid")]
-        Icon::BiLikeSolid => {
+        BiIcon::BiLikeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14659,7 +14659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLineChartDownRegular")]
-        Icon::BiLineChartDownRegular => {
+        BiIcon::BiLineChartDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14672,7 +14672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLineChartRegular")]
-        Icon::BiLineChartRegular => {
+        BiIcon::BiLineChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14685,7 +14685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLinkAltRegular")]
-        Icon::BiLinkAltRegular => {
+        BiIcon::BiLinkAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14698,7 +14698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLinkExternalRegular")]
-        Icon::BiLinkExternalRegular => {
+        BiIcon::BiLinkExternalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14711,7 +14711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLinkRegular")]
-        Icon::BiLinkRegular => {
+        BiIcon::BiLinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14725,7 +14725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLinkedin")]
-        Icon::BiLinkedin => {
+        BiIcon::BiLinkedin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14738,7 +14738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLinkedinSquare")]
-        Icon::BiLinkedinSquare => {
+        BiIcon::BiLinkedinSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14750,7 +14750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLiraRegular")]
-        Icon::BiLiraRegular => {
+        BiIcon::BiLiraRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14762,7 +14762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiListCheckRegular")]
-        Icon::BiListCheckRegular => {
+        BiIcon::BiListCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14774,7 +14774,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiListMinusRegular")]
-        Icon::BiListMinusRegular => {
+        BiIcon::BiListMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14785,7 +14785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiListOlRegular")]
-        Icon::BiListOlRegular => {
+        BiIcon::BiListOlRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14797,7 +14797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiListPlusRegular")]
-        Icon::BiListPlusRegular => {
+        BiIcon::BiListPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14809,7 +14809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiListUlRegular")]
-        Icon::BiListUlRegular => {
+        BiIcon::BiListUlRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14821,7 +14821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLoaderAltRegular")]
-        Icon::BiLoaderAltRegular => {
+        BiIcon::BiLoaderAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14833,7 +14833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLoaderCircleRegular")]
-        Icon::BiLoaderCircleRegular => {
+        BiIcon::BiLoaderCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14848,7 +14848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLoaderRegular")]
-        Icon::BiLoaderRegular => {
+        BiIcon::BiLoaderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14860,7 +14860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLocationPlusRegular")]
-        Icon::BiLocationPlusRegular => {
+        BiIcon::BiLocationPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14872,7 +14872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLocationPlusSolid")]
-        Icon::BiLocationPlusSolid => {
+        BiIcon::BiLocationPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14884,7 +14884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockAltRegular")]
-        Icon::BiLockAltRegular => {
+        BiIcon::BiLockAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14896,7 +14896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockAltSolid")]
-        Icon::BiLockAltSolid => {
+        BiIcon::BiLockAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14908,7 +14908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockOpenAltRegular")]
-        Icon::BiLockOpenAltRegular => {
+        BiIcon::BiLockOpenAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14920,7 +14920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockOpenAltSolid")]
-        Icon::BiLockOpenAltSolid => {
+        BiIcon::BiLockOpenAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14932,7 +14932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockOpenRegular")]
-        Icon::BiLockOpenRegular => {
+        BiIcon::BiLockOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14944,7 +14944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockOpenSolid")]
-        Icon::BiLockOpenSolid => {
+        BiIcon::BiLockOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14956,7 +14956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockRegular")]
-        Icon::BiLockRegular => {
+        BiIcon::BiLockRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14968,7 +14968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLockSolid")]
-        Icon::BiLockSolid => {
+        BiIcon::BiLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14980,7 +14980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogInCircleRegular")]
-        Icon::BiLogInCircleRegular => {
+        BiIcon::BiLogInCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14993,7 +14993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogInCircleSolid")]
-        Icon::BiLogInCircleSolid => {
+        BiIcon::BiLogInCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15005,7 +15005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogInRegular")]
-        Icon::BiLogInRegular => {
+        BiIcon::BiLogInRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15018,7 +15018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogInSolid")]
-        Icon::BiLogInSolid => {
+        BiIcon::BiLogInSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15030,7 +15030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogOutCircleRegular")]
-        Icon::BiLogOutCircleRegular => {
+        BiIcon::BiLogOutCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15043,7 +15043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogOutCircleSolid")]
-        Icon::BiLogOutCircleSolid => {
+        BiIcon::BiLogOutCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15055,7 +15055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogOutRegular")]
-        Icon::BiLogOutRegular => {
+        BiIcon::BiLogOutRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15068,7 +15068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLogOutSolid")]
-        Icon::BiLogOutSolid => {
+        BiIcon::BiLogOutSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15080,7 +15080,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLowVisionRegular")]
-        Icon::BiLowVisionRegular => {
+        BiIcon::BiLowVisionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15092,7 +15092,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiLowVisionSolid")]
-        Icon::BiLowVisionSolid => {
+        BiIcon::BiLowVisionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15104,7 +15104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMagento")]
-        Icon::BiMagento => {
+        BiIcon::BiMagento => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15116,7 +15116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMagicWandSolid")]
-        Icon::BiMagicWandSolid => {
+        BiIcon::BiMagicWandSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15128,7 +15128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMagnetRegular")]
-        Icon::BiMagnetRegular => {
+        BiIcon::BiMagnetRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15140,7 +15140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMagnetSolid")]
-        Icon::BiMagnetSolid => {
+        BiIcon::BiMagnetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15152,7 +15152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMailSendRegular")]
-        Icon::BiMailSendRegular => {
+        BiIcon::BiMailSendRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15164,7 +15164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMailchimp")]
-        Icon::BiMailchimp => {
+        BiIcon::BiMailchimp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15178,7 +15178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMaleFemaleRegular")]
-        Icon::BiMaleFemaleRegular => {
+        BiIcon::BiMaleFemaleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15193,7 +15193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMaleRegular")]
-        Icon::BiMaleRegular => {
+        BiIcon::BiMaleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15204,7 +15204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMaleSignRegular")]
-        Icon::BiMaleSignRegular => {
+        BiIcon::BiMaleSignRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15216,7 +15216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMapAltRegular")]
-        Icon::BiMapAltRegular => {
+        BiIcon::BiMapAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15228,7 +15228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMapAltSolid")]
-        Icon::BiMapAltSolid => {
+        BiIcon::BiMapAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15240,7 +15240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMapPinRegular")]
-        Icon::BiMapPinRegular => {
+        BiIcon::BiMapPinRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15254,7 +15254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMapPinSolid")]
-        Icon::BiMapPinSolid => {
+        BiIcon::BiMapPinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15268,7 +15268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMapRegular")]
-        Icon::BiMapRegular => {
+        BiIcon::BiMapRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15282,7 +15282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMapSolid")]
-        Icon::BiMapSolid => {
+        BiIcon::BiMapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15294,7 +15294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMarkdown")]
-        Icon::BiMarkdown => {
+        BiIcon::BiMarkdown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15306,7 +15306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMaskRegular")]
-        Icon::BiMaskRegular => {
+        BiIcon::BiMaskRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15319,7 +15319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMaskSolid")]
-        Icon::BiMaskSolid => {
+        BiIcon::BiMaskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15331,7 +15331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMastercard")]
-        Icon::BiMastercard => {
+        BiIcon::BiMastercard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15343,7 +15343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMastodon")]
-        Icon::BiMastodon => {
+        BiIcon::BiMastodon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15355,7 +15355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMathRegular")]
-        Icon::BiMathRegular => {
+        BiIcon::BiMathRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15367,7 +15367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMedalRegular")]
-        Icon::BiMedalRegular => {
+        BiIcon::BiMedalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15381,7 +15381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMedalSolid")]
-        Icon::BiMedalSolid => {
+        BiIcon::BiMedalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15393,7 +15393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMedium")]
-        Icon::BiMedium => {
+        BiIcon::BiMedium => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15405,7 +15405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMediumOld")]
-        Icon::BiMediumOld => {
+        BiIcon::BiMediumOld => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15417,7 +15417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMediumSquare")]
-        Icon::BiMediumSquare => {
+        BiIcon::BiMediumSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15429,7 +15429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMegaphoneSolid")]
-        Icon::BiMegaphoneSolid => {
+        BiIcon::BiMegaphoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15441,7 +15441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMehAltRegular")]
-        Icon::BiMehAltRegular => {
+        BiIcon::BiMehAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15454,7 +15454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMehAltSolid")]
-        Icon::BiMehAltSolid => {
+        BiIcon::BiMehAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15466,7 +15466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMehBlankRegular")]
-        Icon::BiMehBlankRegular => {
+        BiIcon::BiMehBlankRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15479,7 +15479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMehBlankSolid")]
-        Icon::BiMehBlankSolid => {
+        BiIcon::BiMehBlankSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15491,7 +15491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMehRegular")]
-        Icon::BiMehRegular => {
+        BiIcon::BiMehRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15504,7 +15504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMehSolid")]
-        Icon::BiMehSolid => {
+        BiIcon::BiMehSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15516,7 +15516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMemoryCardRegular")]
-        Icon::BiMemoryCardRegular => {
+        BiIcon::BiMemoryCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15528,7 +15528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMemoryCardSolid")]
-        Icon::BiMemoryCardSolid => {
+        BiIcon::BiMemoryCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15540,7 +15540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMenuAltLeftRegular")]
-        Icon::BiMenuAltLeftRegular => {
+        BiIcon::BiMenuAltLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15551,7 +15551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMenuAltRightRegular")]
-        Icon::BiMenuAltRightRegular => {
+        BiIcon::BiMenuAltRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15562,7 +15562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMenuRegular")]
-        Icon::BiMenuRegular => {
+        BiIcon::BiMenuRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15573,7 +15573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMergeRegular")]
-        Icon::BiMergeRegular => {
+        BiIcon::BiMergeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15587,7 +15587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAddRegular")]
-        Icon::BiMessageAddRegular => {
+        BiIcon::BiMessageAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15599,7 +15599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAddSolid")]
-        Icon::BiMessageAddSolid => {
+        BiIcon::BiMessageAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15611,7 +15611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltAddRegular")]
-        Icon::BiMessageAltAddRegular => {
+        BiIcon::BiMessageAltAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15623,7 +15623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltAddSolid")]
-        Icon::BiMessageAltAddSolid => {
+        BiIcon::BiMessageAltAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15635,7 +15635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltCheckRegular")]
-        Icon::BiMessageAltCheckRegular => {
+        BiIcon::BiMessageAltCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15649,7 +15649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltCheckSolid")]
-        Icon::BiMessageAltCheckSolid => {
+        BiIcon::BiMessageAltCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15661,7 +15661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltDetailRegular")]
-        Icon::BiMessageAltDetailRegular => {
+        BiIcon::BiMessageAltDetailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15673,7 +15673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltDetailSolid")]
-        Icon::BiMessageAltDetailSolid => {
+        BiIcon::BiMessageAltDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15685,7 +15685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltDotsRegular")]
-        Icon::BiMessageAltDotsRegular => {
+        BiIcon::BiMessageAltDotsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15698,7 +15698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltDotsSolid")]
-        Icon::BiMessageAltDotsSolid => {
+        BiIcon::BiMessageAltDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15710,7 +15710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltEditRegular")]
-        Icon::BiMessageAltEditRegular => {
+        BiIcon::BiMessageAltEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15724,7 +15724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltEditSolid")]
-        Icon::BiMessageAltEditSolid => {
+        BiIcon::BiMessageAltEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15736,7 +15736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltErrorRegular")]
-        Icon::BiMessageAltErrorRegular => {
+        BiIcon::BiMessageAltErrorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15748,7 +15748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltErrorSolid")]
-        Icon::BiMessageAltErrorSolid => {
+        BiIcon::BiMessageAltErrorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15760,7 +15760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltMinusRegular")]
-        Icon::BiMessageAltMinusRegular => {
+        BiIcon::BiMessageAltMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15772,7 +15772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltMinusSolid")]
-        Icon::BiMessageAltMinusSolid => {
+        BiIcon::BiMessageAltMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15784,7 +15784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltRegular")]
-        Icon::BiMessageAltRegular => {
+        BiIcon::BiMessageAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15796,7 +15796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltSolid")]
-        Icon::BiMessageAltSolid => {
+        BiIcon::BiMessageAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15808,7 +15808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltXRegular")]
-        Icon::BiMessageAltXRegular => {
+        BiIcon::BiMessageAltXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15822,7 +15822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageAltXSolid")]
-        Icon::BiMessageAltXSolid => {
+        BiIcon::BiMessageAltXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15834,7 +15834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageCheckRegular")]
-        Icon::BiMessageCheckRegular => {
+        BiIcon::BiMessageCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15848,7 +15848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageCheckSolid")]
-        Icon::BiMessageCheckSolid => {
+        BiIcon::BiMessageCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15860,7 +15860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageDetailRegular")]
-        Icon::BiMessageDetailRegular => {
+        BiIcon::BiMessageDetailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15872,7 +15872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageDetailSolid")]
-        Icon::BiMessageDetailSolid => {
+        BiIcon::BiMessageDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15884,7 +15884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageDotsRegular")]
-        Icon::BiMessageDotsRegular => {
+        BiIcon::BiMessageDotsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15897,7 +15897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageDotsSolid")]
-        Icon::BiMessageDotsSolid => {
+        BiIcon::BiMessageDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15909,7 +15909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageEditRegular")]
-        Icon::BiMessageEditRegular => {
+        BiIcon::BiMessageEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15923,7 +15923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageEditSolid")]
-        Icon::BiMessageEditSolid => {
+        BiIcon::BiMessageEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15935,7 +15935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageErrorRegular")]
-        Icon::BiMessageErrorRegular => {
+        BiIcon::BiMessageErrorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15947,7 +15947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageErrorSolid")]
-        Icon::BiMessageErrorSolid => {
+        BiIcon::BiMessageErrorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15959,7 +15959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageMinusRegular")]
-        Icon::BiMessageMinusRegular => {
+        BiIcon::BiMessageMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15971,7 +15971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageMinusSolid")]
-        Icon::BiMessageMinusSolid => {
+        BiIcon::BiMessageMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15983,7 +15983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRegular")]
-        Icon::BiMessageRegular => {
+        BiIcon::BiMessageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15995,7 +15995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedAddRegular")]
-        Icon::BiMessageRoundedAddRegular => {
+        BiIcon::BiMessageRoundedAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16007,7 +16007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedAddSolid")]
-        Icon::BiMessageRoundedAddSolid => {
+        BiIcon::BiMessageRoundedAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16019,7 +16019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedCheckRegular")]
-        Icon::BiMessageRoundedCheckRegular => {
+        BiIcon::BiMessageRoundedCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16033,7 +16033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedCheckSolid")]
-        Icon::BiMessageRoundedCheckSolid => {
+        BiIcon::BiMessageRoundedCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16045,7 +16045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedDetailRegular")]
-        Icon::BiMessageRoundedDetailRegular => {
+        BiIcon::BiMessageRoundedDetailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16057,7 +16057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedDetailSolid")]
-        Icon::BiMessageRoundedDetailSolid => {
+        BiIcon::BiMessageRoundedDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16069,7 +16069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedDotsRegular")]
-        Icon::BiMessageRoundedDotsRegular => {
+        BiIcon::BiMessageRoundedDotsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16083,7 +16083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedDotsSolid")]
-        Icon::BiMessageRoundedDotsSolid => {
+        BiIcon::BiMessageRoundedDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16095,7 +16095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedEditRegular")]
-        Icon::BiMessageRoundedEditRegular => {
+        BiIcon::BiMessageRoundedEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16109,7 +16109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedEditSolid")]
-        Icon::BiMessageRoundedEditSolid => {
+        BiIcon::BiMessageRoundedEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16121,7 +16121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedErrorRegular")]
-        Icon::BiMessageRoundedErrorRegular => {
+        BiIcon::BiMessageRoundedErrorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16133,7 +16133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedErrorSolid")]
-        Icon::BiMessageRoundedErrorSolid => {
+        BiIcon::BiMessageRoundedErrorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16145,7 +16145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedMinusRegular")]
-        Icon::BiMessageRoundedMinusRegular => {
+        BiIcon::BiMessageRoundedMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16157,7 +16157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedMinusSolid")]
-        Icon::BiMessageRoundedMinusSolid => {
+        BiIcon::BiMessageRoundedMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16169,7 +16169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedRegular")]
-        Icon::BiMessageRoundedRegular => {
+        BiIcon::BiMessageRoundedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16181,7 +16181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedSolid")]
-        Icon::BiMessageRoundedSolid => {
+        BiIcon::BiMessageRoundedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16193,7 +16193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedXRegular")]
-        Icon::BiMessageRoundedXRegular => {
+        BiIcon::BiMessageRoundedXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16207,7 +16207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageRoundedXSolid")]
-        Icon::BiMessageRoundedXSolid => {
+        BiIcon::BiMessageRoundedXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16219,7 +16219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSolid")]
-        Icon::BiMessageSolid => {
+        BiIcon::BiMessageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16231,7 +16231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareAddRegular")]
-        Icon::BiMessageSquareAddRegular => {
+        BiIcon::BiMessageSquareAddRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16243,7 +16243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareAddSolid")]
-        Icon::BiMessageSquareAddSolid => {
+        BiIcon::BiMessageSquareAddSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16255,7 +16255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareCheckRegular")]
-        Icon::BiMessageSquareCheckRegular => {
+        BiIcon::BiMessageSquareCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16269,7 +16269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareCheckSolid")]
-        Icon::BiMessageSquareCheckSolid => {
+        BiIcon::BiMessageSquareCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16281,7 +16281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareDetailRegular")]
-        Icon::BiMessageSquareDetailRegular => {
+        BiIcon::BiMessageSquareDetailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16293,7 +16293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareDetailSolid")]
-        Icon::BiMessageSquareDetailSolid => {
+        BiIcon::BiMessageSquareDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16305,7 +16305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareDotsRegular")]
-        Icon::BiMessageSquareDotsRegular => {
+        BiIcon::BiMessageSquareDotsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16318,7 +16318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareDotsSolid")]
-        Icon::BiMessageSquareDotsSolid => {
+        BiIcon::BiMessageSquareDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16330,7 +16330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareEditRegular")]
-        Icon::BiMessageSquareEditRegular => {
+        BiIcon::BiMessageSquareEditRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16344,7 +16344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareEditSolid")]
-        Icon::BiMessageSquareEditSolid => {
+        BiIcon::BiMessageSquareEditSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16356,7 +16356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareErrorRegular")]
-        Icon::BiMessageSquareErrorRegular => {
+        BiIcon::BiMessageSquareErrorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16368,7 +16368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareErrorSolid")]
-        Icon::BiMessageSquareErrorSolid => {
+        BiIcon::BiMessageSquareErrorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16380,7 +16380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareMinusRegular")]
-        Icon::BiMessageSquareMinusRegular => {
+        BiIcon::BiMessageSquareMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16392,7 +16392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareMinusSolid")]
-        Icon::BiMessageSquareMinusSolid => {
+        BiIcon::BiMessageSquareMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16404,7 +16404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareRegular")]
-        Icon::BiMessageSquareRegular => {
+        BiIcon::BiMessageSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16416,7 +16416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareSolid")]
-        Icon::BiMessageSquareSolid => {
+        BiIcon::BiMessageSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16428,7 +16428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareXRegular")]
-        Icon::BiMessageSquareXRegular => {
+        BiIcon::BiMessageSquareXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16442,7 +16442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageSquareXSolid")]
-        Icon::BiMessageSquareXSolid => {
+        BiIcon::BiMessageSquareXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16454,7 +16454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageXRegular")]
-        Icon::BiMessageXRegular => {
+        BiIcon::BiMessageXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16468,7 +16468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessageXSolid")]
-        Icon::BiMessageXSolid => {
+        BiIcon::BiMessageXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16480,7 +16480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMessenger")]
-        Icon::BiMessenger => {
+        BiIcon::BiMessenger => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16492,7 +16492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMeta")]
-        Icon::BiMeta => {
+        BiIcon::BiMeta => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16504,7 +16504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMeteorRegular")]
-        Icon::BiMeteorRegular => {
+        BiIcon::BiMeteorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16518,7 +16518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMeteorSolid")]
-        Icon::BiMeteorSolid => {
+        BiIcon::BiMeteorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16530,7 +16530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrochipRegular")]
-        Icon::BiMicrochipRegular => {
+        BiIcon::BiMicrochipRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16542,7 +16542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrochipSolid")]
-        Icon::BiMicrochipSolid => {
+        BiIcon::BiMicrochipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16554,7 +16554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrophoneAltSolid")]
-        Icon::BiMicrophoneAltSolid => {
+        BiIcon::BiMicrophoneAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16568,7 +16568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrophoneOffRegular")]
-        Icon::BiMicrophoneOffRegular => {
+        BiIcon::BiMicrophoneOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16581,7 +16581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrophoneOffSolid")]
-        Icon::BiMicrophoneOffSolid => {
+        BiIcon::BiMicrophoneOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16594,7 +16594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrophoneRegular")]
-        Icon::BiMicrophoneRegular => {
+        BiIcon::BiMicrophoneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16608,7 +16608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrophoneSolid")]
-        Icon::BiMicrophoneSolid => {
+        BiIcon::BiMicrophoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16622,7 +16622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrosoft")]
-        Icon::BiMicrosoft => {
+        BiIcon::BiMicrosoft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16634,7 +16634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMicrosoftTeams")]
-        Icon::BiMicrosoftTeams => {
+        BiIcon::BiMicrosoftTeams => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16647,7 +16647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMinusBackRegular")]
-        Icon::BiMinusBackRegular => {
+        BiIcon::BiMinusBackRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16659,7 +16659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMinusCircleRegular")]
-        Icon::BiMinusCircleRegular => {
+        BiIcon::BiMinusCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16672,7 +16672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMinusCircleSolid")]
-        Icon::BiMinusCircleSolid => {
+        BiIcon::BiMinusCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16684,7 +16684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMinusFrontRegular")]
-        Icon::BiMinusFrontRegular => {
+        BiIcon::BiMinusFrontRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16696,7 +16696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMinusRegular")]
-        Icon::BiMinusRegular => {
+        BiIcon::BiMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16706,7 +16706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMinusSquareSolid")]
-        Icon::BiMinusSquareSolid => {
+        BiIcon::BiMinusSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16718,7 +16718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMobileAltRegular")]
-        Icon::BiMobileAltRegular => {
+        BiIcon::BiMobileAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16730,7 +16730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMobileLandscapeRegular")]
-        Icon::BiMobileLandscapeRegular => {
+        BiIcon::BiMobileLandscapeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16742,7 +16742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMobileRegular")]
-        Icon::BiMobileRegular => {
+        BiIcon::BiMobileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16754,7 +16754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMobileSolid")]
-        Icon::BiMobileSolid => {
+        BiIcon::BiMobileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16766,7 +16766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMobileVibrationRegular")]
-        Icon::BiMobileVibrationRegular => {
+        BiIcon::BiMobileVibrationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16780,7 +16780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMobileVibrationSolid")]
-        Icon::BiMobileVibrationSolid => {
+        BiIcon::BiMobileVibrationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16792,7 +16792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoneyRegular")]
-        Icon::BiMoneyRegular => {
+        BiIcon::BiMoneyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16806,7 +16806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoneyWithdrawRegular")]
-        Icon::BiMoneyWithdrawRegular => {
+        BiIcon::BiMoneyWithdrawRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16820,7 +16820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMongodb")]
-        Icon::BiMongodb => {
+        BiIcon::BiMongodb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16832,7 +16832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoonRegular")]
-        Icon::BiMoonRegular => {
+        BiIcon::BiMoonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16844,7 +16844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoonSolid")]
-        Icon::BiMoonSolid => {
+        BiIcon::BiMoonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16856,7 +16856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMouseAltRegular")]
-        Icon::BiMouseAltRegular => {
+        BiIcon::BiMouseAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16868,7 +16868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMouseAltSolid")]
-        Icon::BiMouseAltSolid => {
+        BiIcon::BiMouseAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16880,7 +16880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMouseRegular")]
-        Icon::BiMouseRegular => {
+        BiIcon::BiMouseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16892,7 +16892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMouseSolid")]
-        Icon::BiMouseSolid => {
+        BiIcon::BiMouseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16904,7 +16904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoveHorizontalRegular")]
-        Icon::BiMoveHorizontalRegular => {
+        BiIcon::BiMoveHorizontalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16915,7 +16915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoveRegular")]
-        Icon::BiMoveRegular => {
+        BiIcon::BiMoveRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16927,7 +16927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoveVerticalRegular")]
-        Icon::BiMoveVerticalRegular => {
+        BiIcon::BiMoveVerticalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16938,7 +16938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoviePlayRegular")]
-        Icon::BiMoviePlayRegular => {
+        BiIcon::BiMoviePlayRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16950,7 +16950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMoviePlaySolid")]
-        Icon::BiMoviePlaySolid => {
+        BiIcon::BiMoviePlaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16962,7 +16962,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMovieRegular")]
-        Icon::BiMovieRegular => {
+        BiIcon::BiMovieRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16974,7 +16974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMovieSolid")]
-        Icon::BiMovieSolid => {
+        BiIcon::BiMovieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16986,7 +16986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMusicRegular")]
-        Icon::BiMusicRegular => {
+        BiIcon::BiMusicRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16998,7 +16998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiMusicSolid")]
-        Icon::BiMusicSolid => {
+        BiIcon::BiMusicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17010,7 +17010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNavigationRegular")]
-        Icon::BiNavigationRegular => {
+        BiIcon::BiNavigationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17022,7 +17022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNavigationSolid")]
-        Icon::BiNavigationSolid => {
+        BiIcon::BiNavigationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17034,7 +17034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNetlify")]
-        Icon::BiNetlify => {
+        BiIcon::BiNetlify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17046,7 +17046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNetworkChartRegular")]
-        Icon::BiNetworkChartRegular => {
+        BiIcon::BiNetworkChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17058,7 +17058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNetworkChartSolid")]
-        Icon::BiNetworkChartSolid => {
+        BiIcon::BiNetworkChartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17070,7 +17070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNewsRegular")]
-        Icon::BiNewsRegular => {
+        BiIcon::BiNewsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17083,7 +17083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNewsSolid")]
-        Icon::BiNewsSolid => {
+        BiIcon::BiNewsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17095,7 +17095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNoEntryRegular")]
-        Icon::BiNoEntryRegular => {
+        BiIcon::BiNoEntryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17108,7 +17108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNoEntrySolid")]
-        Icon::BiNoEntrySolid => {
+        BiIcon::BiNoEntrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17120,7 +17120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNoSignalRegular")]
-        Icon::BiNoSignalRegular => {
+        BiIcon::BiNoSignalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17132,7 +17132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNodejs")]
-        Icon::BiNodejs => {
+        BiIcon::BiNodejs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17144,7 +17144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNoteRegular")]
-        Icon::BiNoteRegular => {
+        BiIcon::BiNoteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17156,7 +17156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNoteSolid")]
-        Icon::BiNoteSolid => {
+        BiIcon::BiNoteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17168,7 +17168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNotepadRegular")]
-        Icon::BiNotepadRegular => {
+        BiIcon::BiNotepadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17180,7 +17180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNotepadSolid")]
-        Icon::BiNotepadSolid => {
+        BiIcon::BiNotepadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17192,7 +17192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNotificationOffRegular")]
-        Icon::BiNotificationOffRegular => {
+        BiIcon::BiNotificationOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17204,7 +17204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNotificationOffSolid")]
-        Icon::BiNotificationOffSolid => {
+        BiIcon::BiNotificationOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17217,7 +17217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNotificationRegular")]
-        Icon::BiNotificationRegular => {
+        BiIcon::BiNotificationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17230,7 +17230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiNotificationSolid")]
-        Icon::BiNotificationSolid => {
+        BiIcon::BiNotificationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17243,7 +17243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsHorizontalCenterRegular")]
-        Icon::BiObjectsHorizontalCenterRegular => {
+        BiIcon::BiObjectsHorizontalCenterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17255,7 +17255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsHorizontalCenterSolid")]
-        Icon::BiObjectsHorizontalCenterSolid => {
+        BiIcon::BiObjectsHorizontalCenterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17267,7 +17267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsHorizontalLeftRegular")]
-        Icon::BiObjectsHorizontalLeftRegular => {
+        BiIcon::BiObjectsHorizontalLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17279,7 +17279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsHorizontalLeftSolid")]
-        Icon::BiObjectsHorizontalLeftSolid => {
+        BiIcon::BiObjectsHorizontalLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17292,7 +17292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsHorizontalRightRegular")]
-        Icon::BiObjectsHorizontalRightRegular => {
+        BiIcon::BiObjectsHorizontalRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17304,7 +17304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsHorizontalRightSolid")]
-        Icon::BiObjectsHorizontalRightSolid => {
+        BiIcon::BiObjectsHorizontalRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17317,7 +17317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsVerticalBottomRegular")]
-        Icon::BiObjectsVerticalBottomRegular => {
+        BiIcon::BiObjectsVerticalBottomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17329,7 +17329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsVerticalBottomSolid")]
-        Icon::BiObjectsVerticalBottomSolid => {
+        BiIcon::BiObjectsVerticalBottomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17342,7 +17342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsVerticalCenterRegular")]
-        Icon::BiObjectsVerticalCenterRegular => {
+        BiIcon::BiObjectsVerticalCenterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17354,7 +17354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsVerticalCenterSolid")]
-        Icon::BiObjectsVerticalCenterSolid => {
+        BiIcon::BiObjectsVerticalCenterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17366,7 +17366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsVerticalTopRegular")]
-        Icon::BiObjectsVerticalTopRegular => {
+        BiIcon::BiObjectsVerticalTopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17378,7 +17378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiObjectsVerticalTopSolid")]
-        Icon::BiObjectsVerticalTopSolid => {
+        BiIcon::BiObjectsVerticalTopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17391,7 +17391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiOfferSolid")]
-        Icon::BiOfferSolid => {
+        BiIcon::BiOfferSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17403,7 +17403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiOkRu")]
-        Icon::BiOkRu => {
+        BiIcon::BiOkRu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17415,7 +17415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiOpera")]
-        Icon::BiOpera => {
+        BiIcon::BiOpera => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17427,7 +17427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiOutlineRegular")]
-        Icon::BiOutlineRegular => {
+        BiIcon::BiOutlineRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17439,7 +17439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPackageRegular")]
-        Icon::BiPackageRegular => {
+        BiIcon::BiPackageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17451,7 +17451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPackageSolid")]
-        Icon::BiPackageSolid => {
+        BiIcon::BiPackageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17463,7 +17463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaintRegular")]
-        Icon::BiPaintRegular => {
+        BiIcon::BiPaintRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17475,7 +17475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaintRollRegular")]
-        Icon::BiPaintRollRegular => {
+        BiIcon::BiPaintRollRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17489,7 +17489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaintRollSolid")]
-        Icon::BiPaintRollSolid => {
+        BiIcon::BiPaintRollSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17503,7 +17503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaintSolid")]
-        Icon::BiPaintSolid => {
+        BiIcon::BiPaintSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17515,7 +17515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaletteRegular")]
-        Icon::BiPaletteRegular => {
+        BiIcon::BiPaletteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17529,7 +17529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaletteSolid")]
-        Icon::BiPaletteSolid => {
+        BiIcon::BiPaletteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17541,7 +17541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaperPlaneRegular")]
-        Icon::BiPaperPlaneRegular => {
+        BiIcon::BiPaperPlaneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17553,7 +17553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaperPlaneSolid")]
-        Icon::BiPaperPlaneSolid => {
+        BiIcon::BiPaperPlaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17565,7 +17565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaperclipRegular")]
-        Icon::BiPaperclipRegular => {
+        BiIcon::BiPaperclipRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17577,7 +17577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiParagraphRegular")]
-        Icon::BiParagraphRegular => {
+        BiIcon::BiParagraphRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17589,7 +17589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiParkingSolid")]
-        Icon::BiParkingSolid => {
+        BiIcon::BiParkingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17601,7 +17601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPartyRegular")]
-        Icon::BiPartyRegular => {
+        BiIcon::BiPartyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17613,7 +17613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPartySolid")]
-        Icon::BiPartySolid => {
+        BiIcon::BiPartySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17625,7 +17625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPasteRegular")]
-        Icon::BiPasteRegular => {
+        BiIcon::BiPasteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17637,7 +17637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPasteSolid")]
-        Icon::BiPasteSolid => {
+        BiIcon::BiPasteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17651,7 +17651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPatreon")]
-        Icon::BiPatreon => {
+        BiIcon::BiPatreon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17662,7 +17662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPauseCircleRegular")]
-        Icon::BiPauseCircleRegular => {
+        BiIcon::BiPauseCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17674,7 +17674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPauseRegular")]
-        Icon::BiPauseRegular => {
+        BiIcon::BiPauseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17685,7 +17685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPaypal")]
-        Icon::BiPaypal => {
+        BiIcon::BiPaypal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17697,7 +17697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPearSolid")]
-        Icon::BiPearSolid => {
+        BiIcon::BiPearSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17709,7 +17709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPenRegular")]
-        Icon::BiPenRegular => {
+        BiIcon::BiPenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17721,7 +17721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPenSolid")]
-        Icon::BiPenSolid => {
+        BiIcon::BiPenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17733,7 +17733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPencilRegular")]
-        Icon::BiPencilRegular => {
+        BiIcon::BiPencilRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17745,7 +17745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPencilSolid")]
-        Icon::BiPencilSolid => {
+        BiIcon::BiPencilSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17757,7 +17757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPeriscope")]
-        Icon::BiPeriscope => {
+        BiIcon::BiPeriscope => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17769,7 +17769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneCallRegular")]
-        Icon::BiPhoneCallRegular => {
+        BiIcon::BiPhoneCallRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17781,7 +17781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneCallSolid")]
-        Icon::BiPhoneCallSolid => {
+        BiIcon::BiPhoneCallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17795,7 +17795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneIncomingRegular")]
-        Icon::BiPhoneIncomingRegular => {
+        BiIcon::BiPhoneIncomingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17809,7 +17809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneIncomingSolid")]
-        Icon::BiPhoneIncomingSolid => {
+        BiIcon::BiPhoneIncomingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17822,7 +17822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneOffRegular")]
-        Icon::BiPhoneOffRegular => {
+        BiIcon::BiPhoneOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17834,7 +17834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneOffSolid")]
-        Icon::BiPhoneOffSolid => {
+        BiIcon::BiPhoneOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17846,7 +17846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneOutgoingRegular")]
-        Icon::BiPhoneOutgoingRegular => {
+        BiIcon::BiPhoneOutgoingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17860,7 +17860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneOutgoingSolid")]
-        Icon::BiPhoneOutgoingSolid => {
+        BiIcon::BiPhoneOutgoingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17873,7 +17873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneRegular")]
-        Icon::BiPhoneRegular => {
+        BiIcon::BiPhoneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17885,7 +17885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhoneSolid")]
-        Icon::BiPhoneSolid => {
+        BiIcon::BiPhoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17897,7 +17897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhotoAlbumRegular")]
-        Icon::BiPhotoAlbumRegular => {
+        BiIcon::BiPhotoAlbumRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17911,7 +17911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhotoAlbumSolid")]
-        Icon::BiPhotoAlbumSolid => {
+        BiIcon::BiPhotoAlbumSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17923,7 +17923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPhp")]
-        Icon::BiPhp => {
+        BiIcon::BiPhp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17935,7 +17935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPianoSolid")]
-        Icon::BiPianoSolid => {
+        BiIcon::BiPianoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17947,7 +17947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPieChartAlt2Regular")]
-        Icon::BiPieChartAlt2Regular => {
+        BiIcon::BiPieChartAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17959,7 +17959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPieChartAlt2Solid")]
-        Icon::BiPieChartAlt2Solid => {
+        BiIcon::BiPieChartAlt2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17973,7 +17973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPieChartAltRegular")]
-        Icon::BiPieChartAltRegular => {
+        BiIcon::BiPieChartAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17985,7 +17985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPieChartAltSolid")]
-        Icon::BiPieChartAltSolid => {
+        BiIcon::BiPieChartAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17997,7 +17997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPieChartRegular")]
-        Icon::BiPieChartRegular => {
+        BiIcon::BiPieChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18010,7 +18010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPieChartSolid")]
-        Icon::BiPieChartSolid => {
+        BiIcon::BiPieChartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18022,7 +18022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPinRegular")]
-        Icon::BiPinRegular => {
+        BiIcon::BiPinRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18034,7 +18034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPinSolid")]
-        Icon::BiPinSolid => {
+        BiIcon::BiPinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18046,7 +18046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPinterest")]
-        Icon::BiPinterest => {
+        BiIcon::BiPinterest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18058,7 +18058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPinterestAlt")]
-        Icon::BiPinterestAlt => {
+        BiIcon::BiPinterestAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18070,7 +18070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPizzaSolid")]
-        Icon::BiPizzaSolid => {
+        BiIcon::BiPizzaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18082,7 +18082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlaneAltSolid")]
-        Icon::BiPlaneAltSolid => {
+        BiIcon::BiPlaneAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18094,7 +18094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlaneLandSolid")]
-        Icon::BiPlaneLandSolid => {
+        BiIcon::BiPlaneLandSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18106,7 +18106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlaneSolid")]
-        Icon::BiPlaneSolid => {
+        BiIcon::BiPlaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18118,7 +18118,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlaneTakeOffSolid")]
-        Icon::BiPlaneTakeOffSolid => {
+        BiIcon::BiPlaneTakeOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18130,7 +18130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlanetRegular")]
-        Icon::BiPlanetRegular => {
+        BiIcon::BiPlanetRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18142,7 +18142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlanetSolid")]
-        Icon::BiPlanetSolid => {
+        BiIcon::BiPlanetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18154,7 +18154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlayCircleRegular")]
-        Icon::BiPlayCircleRegular => {
+        BiIcon::BiPlayCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18166,7 +18166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlayRegular")]
-        Icon::BiPlayRegular => {
+        BiIcon::BiPlayRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18176,7 +18176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlayStore")]
-        Icon::BiPlayStore => {
+        BiIcon::BiPlayStore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18188,7 +18188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlaylistSolid")]
-        Icon::BiPlaylistSolid => {
+        BiIcon::BiPlaylistSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18200,7 +18200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlugRegular")]
-        Icon::BiPlugRegular => {
+        BiIcon::BiPlugRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18212,7 +18212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlugSolid")]
-        Icon::BiPlugSolid => {
+        BiIcon::BiPlugSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18224,7 +18224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlusCircleRegular")]
-        Icon::BiPlusCircleRegular => {
+        BiIcon::BiPlusCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18237,7 +18237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlusCircleSolid")]
-        Icon::BiPlusCircleSolid => {
+        BiIcon::BiPlusCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18249,7 +18249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlusMedicalRegular")]
-        Icon::BiPlusMedicalRegular => {
+        BiIcon::BiPlusMedicalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18260,7 +18260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlusRegular")]
-        Icon::BiPlusRegular => {
+        BiIcon::BiPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18271,7 +18271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPlusSquareSolid")]
-        Icon::BiPlusSquareSolid => {
+        BiIcon::BiPlusSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18283,7 +18283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPocket")]
-        Icon::BiPocket => {
+        BiIcon::BiPocket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18295,7 +18295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPodcastRegular")]
-        Icon::BiPodcastRegular => {
+        BiIcon::BiPodcastRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18310,7 +18310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPointerRegular")]
-        Icon::BiPointerRegular => {
+        BiIcon::BiPointerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18322,7 +18322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPointerSolid")]
-        Icon::BiPointerSolid => {
+        BiIcon::BiPointerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18334,7 +18334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPollRegular")]
-        Icon::BiPollRegular => {
+        BiIcon::BiPollRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18345,7 +18345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPolygonRegular")]
-        Icon::BiPolygonRegular => {
+        BiIcon::BiPolygonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18357,7 +18357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPolygonSolid")]
-        Icon::BiPolygonSolid => {
+        BiIcon::BiPolygonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18369,7 +18369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPopsicleRegular")]
-        Icon::BiPopsicleRegular => {
+        BiIcon::BiPopsicleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18381,7 +18381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPopsicleSolid")]
-        Icon::BiPopsicleSolid => {
+        BiIcon::BiPopsicleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18393,7 +18393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPostgresql")]
-        Icon::BiPostgresql => {
+        BiIcon::BiPostgresql => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18415,7 +18415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPoundRegular")]
-        Icon::BiPoundRegular => {
+        BiIcon::BiPoundRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18427,7 +18427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPowerOffRegular")]
-        Icon::BiPowerOffRegular => {
+        BiIcon::BiPowerOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18439,7 +18439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPrinterRegular")]
-        Icon::BiPrinterRegular => {
+        BiIcon::BiPrinterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18451,7 +18451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPrinterSolid")]
-        Icon::BiPrinterSolid => {
+        BiIcon::BiPrinterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18463,7 +18463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiProductHunt")]
-        Icon::BiProductHunt => {
+        BiIcon::BiProductHunt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18476,7 +18476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPulseRegular")]
-        Icon::BiPulseRegular => {
+        BiIcon::BiPulseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18488,7 +18488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPurchaseTagAltRegular")]
-        Icon::BiPurchaseTagAltRegular => {
+        BiIcon::BiPurchaseTagAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18500,7 +18500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPurchaseTagAltSolid")]
-        Icon::BiPurchaseTagAltSolid => {
+        BiIcon::BiPurchaseTagAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18512,7 +18512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPurchaseTagRegular")]
-        Icon::BiPurchaseTagRegular => {
+        BiIcon::BiPurchaseTagRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18524,7 +18524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPurchaseTagSolid")]
-        Icon::BiPurchaseTagSolid => {
+        BiIcon::BiPurchaseTagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18536,7 +18536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPyramidRegular")]
-        Icon::BiPyramidRegular => {
+        BiIcon::BiPyramidRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18548,7 +18548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPyramidSolid")]
-        Icon::BiPyramidSolid => {
+        BiIcon::BiPyramidSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18560,7 +18560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiPython")]
-        Icon::BiPython => {
+        BiIcon::BiPython => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18574,7 +18574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQrRegular")]
-        Icon::BiQrRegular => {
+        BiIcon::BiQrRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18586,7 +18586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQrScanRegular")]
-        Icon::BiQrScanRegular => {
+        BiIcon::BiQrScanRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18600,7 +18600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuestionMarkRegular")]
-        Icon::BiQuestionMarkRegular => {
+        BiIcon::BiQuestionMarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18612,7 +18612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuora")]
-        Icon::BiQuora => {
+        BiIcon::BiQuora => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18624,7 +18624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuoteAltLeftSolid")]
-        Icon::BiQuoteAltLeftSolid => {
+        BiIcon::BiQuoteAltLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18636,7 +18636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuoteAltRightSolid")]
-        Icon::BiQuoteAltRightSolid => {
+        BiIcon::BiQuoteAltRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18648,7 +18648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuoteLeftSolid")]
-        Icon::BiQuoteLeftSolid => {
+        BiIcon::BiQuoteLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18660,7 +18660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuoteRightSolid")]
-        Icon::BiQuoteRightSolid => {
+        BiIcon::BiQuoteRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18672,7 +18672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuoteSingleLeftSolid")]
-        Icon::BiQuoteSingleLeftSolid => {
+        BiIcon::BiQuoteSingleLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18684,7 +18684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiQuoteSingleRightSolid")]
-        Icon::BiQuoteSingleRightSolid => {
+        BiIcon::BiQuoteSingleRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18696,7 +18696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRadarRegular")]
-        Icon::BiRadarRegular => {
+        BiIcon::BiRadarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18708,7 +18708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRadiationSolid")]
-        Icon::BiRadiationSolid => {
+        BiIcon::BiRadiationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18720,7 +18720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRadioCircleMarkedRegular")]
-        Icon::BiRadioCircleMarkedRegular => {
+        BiIcon::BiRadioCircleMarkedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18734,7 +18734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRadioCircleRegular")]
-        Icon::BiRadioCircleRegular => {
+        BiIcon::BiRadioCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18746,7 +18746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRadioRegular")]
-        Icon::BiRadioRegular => {
+        BiIcon::BiRadioRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18759,7 +18759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRadioSolid")]
-        Icon::BiRadioSolid => {
+        BiIcon::BiRadioSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18771,7 +18771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReact")]
-        Icon::BiReact => {
+        BiIcon::BiReact => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18790,7 +18790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReceiptRegular")]
-        Icon::BiReceiptRegular => {
+        BiIcon::BiReceiptRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18802,7 +18802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReceiptSolid")]
-        Icon::BiReceiptSolid => {
+        BiIcon::BiReceiptSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18814,7 +18814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRectangleRegular")]
-        Icon::BiRectangleRegular => {
+        BiIcon::BiRectangleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18826,7 +18826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRectangleSolid")]
-        Icon::BiRectangleSolid => {
+        BiIcon::BiRectangleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18838,7 +18838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRecycleRegular")]
-        Icon::BiRecycleRegular => {
+        BiIcon::BiRecycleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18850,7 +18850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRedbubble")]
-        Icon::BiRedbubble => {
+        BiIcon::BiRedbubble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18862,7 +18862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReddit")]
-        Icon::BiReddit => {
+        BiIcon::BiReddit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18877,7 +18877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRedoRegular")]
-        Icon::BiRedoRegular => {
+        BiIcon::BiRedoRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18889,7 +18889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRedux")]
-        Icon::BiRedux => {
+        BiIcon::BiRedux => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18905,7 +18905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReflectHorizontalRegular")]
-        Icon::BiReflectHorizontalRegular => {
+        BiIcon::BiReflectHorizontalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18917,7 +18917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReflectVerticalRegular")]
-        Icon::BiReflectVerticalRegular => {
+        BiIcon::BiReflectVerticalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18929,7 +18929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRefreshRegular")]
-        Icon::BiRefreshRegular => {
+        BiIcon::BiRefreshRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18941,7 +18941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRegisteredRegular")]
-        Icon::BiRegisteredRegular => {
+        BiIcon::BiRegisteredRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18955,7 +18955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRegisteredSolid")]
-        Icon::BiRegisteredSolid => {
+        BiIcon::BiRegisteredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18968,7 +18968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRenameRegular")]
-        Icon::BiRenameRegular => {
+        BiIcon::BiRenameRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18982,7 +18982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRenameSolid")]
-        Icon::BiRenameSolid => {
+        BiIcon::BiRenameSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18996,7 +18996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRepeatRegular")]
-        Icon::BiRepeatRegular => {
+        BiIcon::BiRepeatRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19008,7 +19008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReplyAllRegular")]
-        Icon::BiReplyAllRegular => {
+        BiIcon::BiReplyAllRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19020,7 +19020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReplyRegular")]
-        Icon::BiReplyRegular => {
+        BiIcon::BiReplyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19031,7 +19031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiReportSolid")]
-        Icon::BiReportSolid => {
+        BiIcon::BiReportSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19043,7 +19043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRepostRegular")]
-        Icon::BiRepostRegular => {
+        BiIcon::BiRepostRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19055,7 +19055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiResetRegular")]
-        Icon::BiResetRegular => {
+        BiIcon::BiResetRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19069,7 +19069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRestaurantRegular")]
-        Icon::BiRestaurantRegular => {
+        BiIcon::BiRestaurantRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19081,7 +19081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRevisionRegular")]
-        Icon::BiRevisionRegular => {
+        BiIcon::BiRevisionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19093,7 +19093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRewindCircleRegular")]
-        Icon::BiRewindCircleRegular => {
+        BiIcon::BiRewindCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19105,7 +19105,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRewindCircleSolid")]
-        Icon::BiRewindCircleSolid => {
+        BiIcon::BiRewindCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19117,7 +19117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRewindRegular")]
-        Icon::BiRewindRegular => {
+        BiIcon::BiRewindRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19128,7 +19128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRfidRegular")]
-        Icon::BiRfidRegular => {
+        BiIcon::BiRfidRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19143,7 +19143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowAltRegular")]
-        Icon::BiRightArrowAltRegular => {
+        BiIcon::BiRightArrowAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19155,7 +19155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowAltSolid")]
-        Icon::BiRightArrowAltSolid => {
+        BiIcon::BiRightArrowAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19166,7 +19166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowCircleRegular")]
-        Icon::BiRightArrowCircleRegular => {
+        BiIcon::BiRightArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19178,7 +19178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowCircleSolid")]
-        Icon::BiRightArrowCircleSolid => {
+        BiIcon::BiRightArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19190,7 +19190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowRegular")]
-        Icon::BiRightArrowRegular => {
+        BiIcon::BiRightArrowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19202,7 +19202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowSolid")]
-        Icon::BiRightArrowSolid => {
+        BiIcon::BiRightArrowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19214,7 +19214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightArrowSquareSolid")]
-        Icon::BiRightArrowSquareSolid => {
+        BiIcon::BiRightArrowSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19226,7 +19226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightDownArrowCircleRegular")]
-        Icon::BiRightDownArrowCircleRegular => {
+        BiIcon::BiRightDownArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19240,7 +19240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightDownArrowCircleSolid")]
-        Icon::BiRightDownArrowCircleSolid => {
+        BiIcon::BiRightDownArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19252,7 +19252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightIndentRegular")]
-        Icon::BiRightIndentRegular => {
+        BiIcon::BiRightIndentRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19264,7 +19264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightTopArrowCircleRegular")]
-        Icon::BiRightTopArrowCircleRegular => {
+        BiIcon::BiRightTopArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19278,7 +19278,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRightTopArrowCircleSolid")]
-        Icon::BiRightTopArrowCircleSolid => {
+        BiIcon::BiRightTopArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19290,7 +19290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRocketRegular")]
-        Icon::BiRocketRegular => {
+        BiIcon::BiRocketRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19303,7 +19303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRocketSolid")]
-        Icon::BiRocketSolid => {
+        BiIcon::BiRocketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19315,7 +19315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRotateLeftRegular")]
-        Icon::BiRotateLeftRegular => {
+        BiIcon::BiRotateLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19327,7 +19327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRotateRightRegular")]
-        Icon::BiRotateRightRegular => {
+        BiIcon::BiRotateRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19339,7 +19339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRssRegular")]
-        Icon::BiRssRegular => {
+        BiIcon::BiRssRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19353,7 +19353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRubleRegular")]
-        Icon::BiRubleRegular => {
+        BiIcon::BiRubleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19365,7 +19365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRulerRegular")]
-        Icon::BiRulerRegular => {
+        BiIcon::BiRulerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19377,7 +19377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRulerSolid")]
-        Icon::BiRulerSolid => {
+        BiIcon::BiRulerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19389,7 +19389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRunRegular")]
-        Icon::BiRunRegular => {
+        BiIcon::BiRunRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19402,7 +19402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiRupeeRegular")]
-        Icon::BiRupeeRegular => {
+        BiIcon::BiRupeeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19414,7 +19414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSadRegular")]
-        Icon::BiSadRegular => {
+        BiIcon::BiSadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19428,7 +19428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSadSolid")]
-        Icon::BiSadSolid => {
+        BiIcon::BiSadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19440,7 +19440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSass")]
-        Icon::BiSass => {
+        BiIcon::BiSass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19452,7 +19452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSaveRegular")]
-        Icon::BiSaveRegular => {
+        BiIcon::BiSaveRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19464,7 +19464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSaveSolid")]
-        Icon::BiSaveSolid => {
+        BiIcon::BiSaveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19476,7 +19476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiScanRegular")]
-        Icon::BiScanRegular => {
+        BiIcon::BiScanRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19488,7 +19488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiScatterChartRegular")]
-        Icon::BiScatterChartRegular => {
+        BiIcon::BiScatterChartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19502,7 +19502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSchoolSolid")]
-        Icon::BiSchoolSolid => {
+        BiIcon::BiSchoolSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19515,7 +19515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiScreenshotRegular")]
-        Icon::BiScreenshotRegular => {
+        BiIcon::BiScreenshotRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19527,7 +19527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSearchAlt2Regular")]
-        Icon::BiSearchAlt2Regular => {
+        BiIcon::BiSearchAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19539,7 +19539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSearchAlt2Solid")]
-        Icon::BiSearchAlt2Solid => {
+        BiIcon::BiSearchAlt2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19551,7 +19551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSearchAltRegular")]
-        Icon::BiSearchAltRegular => {
+        BiIcon::BiSearchAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19565,7 +19565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSearchRegular")]
-        Icon::BiSearchRegular => {
+        BiIcon::BiSearchRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19577,7 +19577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSearchSolid")]
-        Icon::BiSearchSolid => {
+        BiIcon::BiSearchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19589,7 +19589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSelectMultipleRegular")]
-        Icon::BiSelectMultipleRegular => {
+        BiIcon::BiSelectMultipleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19603,7 +19603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSelectMultipleSolid")]
-        Icon::BiSelectMultipleSolid => {
+        BiIcon::BiSelectMultipleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19615,7 +19615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSelectionRegular")]
-        Icon::BiSelectionRegular => {
+        BiIcon::BiSelectionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19627,7 +19627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSendRegular")]
-        Icon::BiSendRegular => {
+        BiIcon::BiSendRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19639,7 +19639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSendSolid")]
-        Icon::BiSendSolid => {
+        BiIcon::BiSendSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19651,7 +19651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiServerRegular")]
-        Icon::BiServerRegular => {
+        BiIcon::BiServerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19664,7 +19664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiServerSolid")]
-        Icon::BiServerSolid => {
+        BiIcon::BiServerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19676,7 +19676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShapeCircleRegular")]
-        Icon::BiShapeCircleRegular => {
+        BiIcon::BiShapeCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19688,7 +19688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShapePolygonRegular")]
-        Icon::BiShapePolygonRegular => {
+        BiIcon::BiShapePolygonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19700,7 +19700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShapeSquareRegular")]
-        Icon::BiShapeSquareRegular => {
+        BiIcon::BiShapeSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19712,7 +19712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShapeTriangleRegular")]
-        Icon::BiShapeTriangleRegular => {
+        BiIcon::BiShapeTriangleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19724,7 +19724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShapesSolid")]
-        Icon::BiShapesSolid => {
+        BiIcon::BiShapesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19736,7 +19736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShareAltRegular")]
-        Icon::BiShareAltRegular => {
+        BiIcon::BiShareAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19748,7 +19748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShareAltSolid")]
-        Icon::BiShareAltSolid => {
+        BiIcon::BiShareAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19760,7 +19760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShareRegular")]
-        Icon::BiShareRegular => {
+        BiIcon::BiShareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19772,7 +19772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShareSolid")]
-        Icon::BiShareSolid => {
+        BiIcon::BiShareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19784,7 +19784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShekelRegular")]
-        Icon::BiShekelRegular => {
+        BiIcon::BiShekelRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19798,7 +19798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldAlt2Regular")]
-        Icon::BiShieldAlt2Regular => {
+        BiIcon::BiShieldAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19810,7 +19810,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldAlt2Solid")]
-        Icon::BiShieldAlt2Solid => {
+        BiIcon::BiShieldAlt2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19822,7 +19822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldAltRegular")]
-        Icon::BiShieldAltRegular => {
+        BiIcon::BiShieldAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19834,7 +19834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldMinusRegular")]
-        Icon::BiShieldMinusRegular => {
+        BiIcon::BiShieldMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19846,7 +19846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldMinusSolid")]
-        Icon::BiShieldMinusSolid => {
+        BiIcon::BiShieldMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19858,7 +19858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldPlusRegular")]
-        Icon::BiShieldPlusRegular => {
+        BiIcon::BiShieldPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19871,7 +19871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldPlusSolid")]
-        Icon::BiShieldPlusSolid => {
+        BiIcon::BiShieldPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19883,7 +19883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldQuarterRegular")]
-        Icon::BiShieldQuarterRegular => {
+        BiIcon::BiShieldQuarterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19895,7 +19895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldRegular")]
-        Icon::BiShieldRegular => {
+        BiIcon::BiShieldRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19907,7 +19907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldSolid")]
-        Icon::BiShieldSolid => {
+        BiIcon::BiShieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19919,7 +19919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldXRegular")]
-        Icon::BiShieldXRegular => {
+        BiIcon::BiShieldXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19933,7 +19933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShieldXSolid")]
-        Icon::BiShieldXSolid => {
+        BiIcon::BiShieldXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19945,7 +19945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShipSolid")]
-        Icon::BiShipSolid => {
+        BiIcon::BiShipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19957,7 +19957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShockedRegular")]
-        Icon::BiShockedRegular => {
+        BiIcon::BiShockedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19971,7 +19971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShockedSolid")]
-        Icon::BiShockedSolid => {
+        BiIcon::BiShockedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19983,7 +19983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShopify")]
-        Icon::BiShopify => {
+        BiIcon::BiShopify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19995,7 +19995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShoppingBagAltSolid")]
-        Icon::BiShoppingBagAltSolid => {
+        BiIcon::BiShoppingBagAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20007,7 +20007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShoppingBagRegular")]
-        Icon::BiShoppingBagRegular => {
+        BiIcon::BiShoppingBagRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20019,7 +20019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShoppingBagSolid")]
-        Icon::BiShoppingBagSolid => {
+        BiIcon::BiShoppingBagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20031,7 +20031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShoppingBagsSolid")]
-        Icon::BiShoppingBagsSolid => {
+        BiIcon::BiShoppingBagsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20045,7 +20045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShowAltRegular")]
-        Icon::BiShowAltRegular => {
+        BiIcon::BiShowAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20059,7 +20059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShowRegular")]
-        Icon::BiShowRegular => {
+        BiIcon::BiShowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20073,7 +20073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShowSolid")]
-        Icon::BiShowSolid => {
+        BiIcon::BiShowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20087,7 +20087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShowerRegular")]
-        Icon::BiShowerRegular => {
+        BiIcon::BiShowerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20099,7 +20099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShowerSolid")]
-        Icon::BiShowerSolid => {
+        BiIcon::BiShowerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20111,7 +20111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiShuffleRegular")]
-        Icon::BiShuffleRegular => {
+        BiIcon::BiShuffleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20125,7 +20125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSidebarRegular")]
-        Icon::BiSidebarRegular => {
+        BiIcon::BiSidebarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20137,7 +20137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSignal1Regular")]
-        Icon::BiSignal1Regular => {
+        BiIcon::BiSignal1Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20148,7 +20148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSignal2Regular")]
-        Icon::BiSignal2Regular => {
+        BiIcon::BiSignal2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20159,7 +20159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSignal3Regular")]
-        Icon::BiSignal3Regular => {
+        BiIcon::BiSignal3Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20170,7 +20170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSignal4Regular")]
-        Icon::BiSignal4Regular => {
+        BiIcon::BiSignal4Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20181,7 +20181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSignal5Regular")]
-        Icon::BiSignal5Regular => {
+        BiIcon::BiSignal5Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20193,7 +20193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSitemapRegular")]
-        Icon::BiSitemapRegular => {
+        BiIcon::BiSitemapRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20205,7 +20205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSketch")]
-        Icon::BiSketch => {
+        BiIcon::BiSketch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20217,7 +20217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkipNextCircleRegular")]
-        Icon::BiSkipNextCircleRegular => {
+        BiIcon::BiSkipNextCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20229,7 +20229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkipNextCircleSolid")]
-        Icon::BiSkipNextCircleSolid => {
+        BiIcon::BiSkipNextCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20241,7 +20241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkipNextRegular")]
-        Icon::BiSkipNextRegular => {
+        BiIcon::BiSkipNextRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20252,7 +20252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkipPreviousCircleRegular")]
-        Icon::BiSkipPreviousCircleRegular => {
+        BiIcon::BiSkipPreviousCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20264,7 +20264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkipPreviousCircleSolid")]
-        Icon::BiSkipPreviousCircleSolid => {
+        BiIcon::BiSkipPreviousCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20276,7 +20276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkipPreviousRegular")]
-        Icon::BiSkipPreviousRegular => {
+        BiIcon::BiSkipPreviousRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20287,7 +20287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkullSolid")]
-        Icon::BiSkullSolid => {
+        BiIcon::BiSkullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20299,7 +20299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSkype")]
-        Icon::BiSkype => {
+        BiIcon::BiSkype => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20311,7 +20311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSlack")]
-        Icon::BiSlack => {
+        BiIcon::BiSlack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20323,7 +20323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSlackOld")]
-        Icon::BiSlackOld => {
+        BiIcon::BiSlackOld => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20335,7 +20335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSleepyRegular")]
-        Icon::BiSleepyRegular => {
+        BiIcon::BiSleepyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20349,7 +20349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSleepySolid")]
-        Icon::BiSleepySolid => {
+        BiIcon::BiSleepySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20361,7 +20361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSliderAltRegular")]
-        Icon::BiSliderAltRegular => {
+        BiIcon::BiSliderAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20375,7 +20375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSliderRegular")]
-        Icon::BiSliderRegular => {
+        BiIcon::BiSliderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20387,7 +20387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSlideshowRegular")]
-        Icon::BiSlideshowRegular => {
+        BiIcon::BiSlideshowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20399,7 +20399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSlideshowSolid")]
-        Icon::BiSlideshowSolid => {
+        BiIcon::BiSlideshowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20411,7 +20411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSmileRegular")]
-        Icon::BiSmileRegular => {
+        BiIcon::BiSmileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20426,7 +20426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSmileSolid")]
-        Icon::BiSmileSolid => {
+        BiIcon::BiSmileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20438,7 +20438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSnapchat")]
-        Icon::BiSnapchat => {
+        BiIcon::BiSnapchat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20450,7 +20450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortAZRegular")]
-        Icon::BiSortAZRegular => {
+        BiIcon::BiSortAZRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20462,7 +20462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortAlt2Regular")]
-        Icon::BiSortAlt2Regular => {
+        BiIcon::BiSortAlt2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20473,7 +20473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortAltSolid")]
-        Icon::BiSortAltSolid => {
+        BiIcon::BiSortAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20485,7 +20485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortDownRegular")]
-        Icon::BiSortDownRegular => {
+        BiIcon::BiSortDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20497,7 +20497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortRegular")]
-        Icon::BiSortRegular => {
+        BiIcon::BiSortRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20508,7 +20508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortUpRegular")]
-        Icon::BiSortUpRegular => {
+        BiIcon::BiSortUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20520,7 +20520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSortZARegular")]
-        Icon::BiSortZARegular => {
+        BiIcon::BiSortZARegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20532,7 +20532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSoundcloud")]
-        Icon::BiSoundcloud => {
+        BiIcon::BiSoundcloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20544,7 +20544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpaRegular")]
-        Icon::BiSpaRegular => {
+        BiIcon::BiSpaRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20556,7 +20556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpaSolid")]
-        Icon::BiSpaSolid => {
+        BiIcon::BiSpaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20570,7 +20570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpaceBarRegular")]
-        Icon::BiSpaceBarRegular => {
+        BiIcon::BiSpaceBarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20581,7 +20581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpeakerRegular")]
-        Icon::BiSpeakerRegular => {
+        BiIcon::BiSpeakerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20595,7 +20595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpeakerSolid")]
-        Icon::BiSpeakerSolid => {
+        BiIcon::BiSpeakerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20608,7 +20608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpotify")]
-        Icon::BiSpotify => {
+        BiIcon::BiSpotify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20620,7 +20620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSprayCanRegular")]
-        Icon::BiSprayCanRegular => {
+        BiIcon::BiSprayCanRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20632,7 +20632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSprayCanSolid")]
-        Icon::BiSprayCanSolid => {
+        BiIcon::BiSprayCanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20644,7 +20644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpreadsheetRegular")]
-        Icon::BiSpreadsheetRegular => {
+        BiIcon::BiSpreadsheetRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20658,7 +20658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpreadsheetSolid")]
-        Icon::BiSpreadsheetSolid => {
+        BiIcon::BiSpreadsheetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20670,7 +20670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSpringBoot")]
-        Icon::BiSpringBoot => {
+        BiIcon::BiSpringBoot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20682,7 +20682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSquareRegular")]
-        Icon::BiSquareRegular => {
+        BiIcon::BiSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20694,7 +20694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSquareRoundedRegular")]
-        Icon::BiSquareRoundedRegular => {
+        BiIcon::BiSquareRoundedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20706,7 +20706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSquareRoundedSolid")]
-        Icon::BiSquareRoundedSolid => {
+        BiIcon::BiSquareRoundedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20718,7 +20718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSquareSolid")]
-        Icon::BiSquareSolid => {
+        BiIcon::BiSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20730,7 +20730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSquarespace")]
-        Icon::BiSquarespace => {
+        BiIcon::BiSquarespace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20742,7 +20742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStackOverflow")]
-        Icon::BiStackOverflow => {
+        BiIcon::BiStackOverflow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20754,7 +20754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStarHalfSolid")]
-        Icon::BiStarHalfSolid => {
+        BiIcon::BiStarHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20766,7 +20766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStarRegular")]
-        Icon::BiStarRegular => {
+        BiIcon::BiStarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20778,7 +20778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStarSolid")]
-        Icon::BiStarSolid => {
+        BiIcon::BiStarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20790,7 +20790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStationRegular")]
-        Icon::BiStationRegular => {
+        BiIcon::BiStationRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20805,7 +20805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStatsRegular")]
-        Icon::BiStatsRegular => {
+        BiIcon::BiStatsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20817,7 +20817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSteam")]
-        Icon::BiSteam => {
+        BiIcon::BiSteam => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20833,7 +20833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStickerRegular")]
-        Icon::BiStickerRegular => {
+        BiIcon::BiStickerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20845,7 +20845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStickerSolid")]
-        Icon::BiStickerSolid => {
+        BiIcon::BiStickerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20859,7 +20859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStopCircleRegular")]
-        Icon::BiStopCircleRegular => {
+        BiIcon::BiStopCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20871,7 +20871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStopRegular")]
-        Icon::BiStopRegular => {
+        BiIcon::BiStopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20881,7 +20881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStopwatchRegular")]
-        Icon::BiStopwatchRegular => {
+        BiIcon::BiStopwatchRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20894,7 +20894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStopwatchSolid")]
-        Icon::BiStopwatchSolid => {
+        BiIcon::BiStopwatchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20906,7 +20906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStoreAltRegular")]
-        Icon::BiStoreAltRegular => {
+        BiIcon::BiStoreAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20918,7 +20918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStoreAltSolid")]
-        Icon::BiStoreAltSolid => {
+        BiIcon::BiStoreAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20930,7 +20930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStoreRegular")]
-        Icon::BiStoreRegular => {
+        BiIcon::BiStoreRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20942,7 +20942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStoreSolid")]
-        Icon::BiStoreSolid => {
+        BiIcon::BiStoreSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20954,7 +20954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStreetViewRegular")]
-        Icon::BiStreetViewRegular => {
+        BiIcon::BiStreetViewRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20969,7 +20969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStrikethroughRegular")]
-        Icon::BiStrikethroughRegular => {
+        BiIcon::BiStrikethroughRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20981,7 +20981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiStripe")]
-        Icon::BiStripe => {
+        BiIcon::BiStripe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20993,7 +20993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSubdirectoryLeftRegular")]
-        Icon::BiSubdirectoryLeftRegular => {
+        BiIcon::BiSubdirectoryLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21004,7 +21004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSubdirectoryRightRegular")]
-        Icon::BiSubdirectoryRightRegular => {
+        BiIcon::BiSubdirectoryRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21015,7 +21015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSunRegular")]
-        Icon::BiSunRegular => {
+        BiIcon::BiSunRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21027,7 +21027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSunSolid")]
-        Icon::BiSunSolid => {
+        BiIcon::BiSunSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21039,7 +21039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSupportRegular")]
-        Icon::BiSupportRegular => {
+        BiIcon::BiSupportRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21051,7 +21051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSushiRegular")]
-        Icon::BiSushiRegular => {
+        BiIcon::BiSushiRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21063,7 +21063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSushiSolid")]
-        Icon::BiSushiSolid => {
+        BiIcon::BiSushiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21076,7 +21076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSwimRegular")]
-        Icon::BiSwimRegular => {
+        BiIcon::BiSwimRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21089,7 +21089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiSyncRegular")]
-        Icon::BiSyncRegular => {
+        BiIcon::BiSyncRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21101,7 +21101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTShirtSolid")]
-        Icon::BiTShirtSolid => {
+        BiIcon::BiTShirtSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21113,7 +21113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTabRegular")]
-        Icon::BiTabRegular => {
+        BiIcon::BiTabRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21125,7 +21125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTableRegular")]
-        Icon::BiTableRegular => {
+        BiIcon::BiTableRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21137,7 +21137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTachometerRegular")]
-        Icon::BiTachometerRegular => {
+        BiIcon::BiTachometerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21151,7 +21151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTachometerSolid")]
-        Icon::BiTachometerSolid => {
+        BiIcon::BiTachometerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21163,7 +21163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTagAltRegular")]
-        Icon::BiTagAltRegular => {
+        BiIcon::BiTagAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21175,7 +21175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTagAltSolid")]
-        Icon::BiTagAltSolid => {
+        BiIcon::BiTagAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21187,7 +21187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTagRegular")]
-        Icon::BiTagRegular => {
+        BiIcon::BiTagRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21199,7 +21199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTagSolid")]
-        Icon::BiTagSolid => {
+        BiIcon::BiTagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21211,7 +21211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTagXSolid")]
-        Icon::BiTagXSolid => {
+        BiIcon::BiTagXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21223,7 +21223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTailwindCss")]
-        Icon::BiTailwindCss => {
+        BiIcon::BiTailwindCss => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21235,7 +21235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTargetLockRegular")]
-        Icon::BiTargetLockRegular => {
+        BiIcon::BiTargetLockRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21248,7 +21248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTaskRegular")]
-        Icon::BiTaskRegular => {
+        BiIcon::BiTaskRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21262,7 +21262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTaskXRegular")]
-        Icon::BiTaskXRegular => {
+        BiIcon::BiTaskXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21276,7 +21276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTaxiRegular")]
-        Icon::BiTaxiRegular => {
+        BiIcon::BiTaxiRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21289,7 +21289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTaxiSolid")]
-        Icon::BiTaxiSolid => {
+        BiIcon::BiTaxiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21301,7 +21301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTelegram")]
-        Icon::BiTelegram => {
+        BiIcon::BiTelegram => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21313,7 +21313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTennisBallRegular")]
-        Icon::BiTennisBallRegular => {
+        BiIcon::BiTennisBallRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21325,7 +21325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTennisBallSolid")]
-        Icon::BiTennisBallSolid => {
+        BiIcon::BiTennisBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21339,7 +21339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTerminalRegular")]
-        Icon::BiTerminalRegular => {
+        BiIcon::BiTerminalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21353,7 +21353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTerminalSolid")]
-        Icon::BiTerminalSolid => {
+        BiIcon::BiTerminalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21365,7 +21365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTestTubeRegular")]
-        Icon::BiTestTubeRegular => {
+        BiIcon::BiTestTubeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21377,7 +21377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTextRegular")]
-        Icon::BiTextRegular => {
+        BiIcon::BiTextRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21388,7 +21388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiThermometerSolid")]
-        Icon::BiThermometerSolid => {
+        BiIcon::BiThermometerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21402,7 +21402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTiktok")]
-        Icon::BiTiktok => {
+        BiIcon::BiTiktok => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21414,7 +21414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTimeFiveRegular")]
-        Icon::BiTimeFiveRegular => {
+        BiIcon::BiTimeFiveRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21427,7 +21427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTimeFiveSolid")]
-        Icon::BiTimeFiveSolid => {
+        BiIcon::BiTimeFiveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21439,7 +21439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTimeRegular")]
-        Icon::BiTimeRegular => {
+        BiIcon::BiTimeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21451,7 +21451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTimeSolid")]
-        Icon::BiTimeSolid => {
+        BiIcon::BiTimeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21463,7 +21463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTimerRegular")]
-        Icon::BiTimerRegular => {
+        BiIcon::BiTimerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21477,7 +21477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTimerSolid")]
-        Icon::BiTimerSolid => {
+        BiIcon::BiTimerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21489,7 +21489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTiredRegular")]
-        Icon::BiTiredRegular => {
+        BiIcon::BiTiredRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21504,7 +21504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTiredSolid")]
-        Icon::BiTiredSolid => {
+        BiIcon::BiTiredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21516,7 +21516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToTopSolid")]
-        Icon::BiToTopSolid => {
+        BiIcon::BiToTopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21527,7 +21527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToggleLeftRegular")]
-        Icon::BiToggleLeftRegular => {
+        BiIcon::BiToggleLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21541,7 +21541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToggleLeftSolid")]
-        Icon::BiToggleLeftSolid => {
+        BiIcon::BiToggleLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21553,7 +21553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToggleRightRegular")]
-        Icon::BiToggleRightRegular => {
+        BiIcon::BiToggleRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21567,7 +21567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToggleRightSolid")]
-        Icon::BiToggleRightSolid => {
+        BiIcon::BiToggleRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21579,7 +21579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToneRegular")]
-        Icon::BiToneRegular => {
+        BiIcon::BiToneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21591,7 +21591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiToneSolid")]
-        Icon::BiToneSolid => {
+        BiIcon::BiToneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21603,7 +21603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTorchSolid")]
-        Icon::BiTorchSolid => {
+        BiIcon::BiTorchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21615,7 +21615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrafficBarrierSolid")]
-        Icon::BiTrafficBarrierSolid => {
+        BiIcon::BiTrafficBarrierSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21627,7 +21627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrafficConeRegular")]
-        Icon::BiTrafficConeRegular => {
+        BiIcon::BiTrafficConeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21639,7 +21639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrafficConeSolid")]
-        Icon::BiTrafficConeSolid => {
+        BiIcon::BiTrafficConeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21651,7 +21651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrafficSolid")]
-        Icon::BiTrafficSolid => {
+        BiIcon::BiTrafficSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21663,7 +21663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrainRegular")]
-        Icon::BiTrainRegular => {
+        BiIcon::BiTrainRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21676,7 +21676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrainSolid")]
-        Icon::BiTrainSolid => {
+        BiIcon::BiTrainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21688,7 +21688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTransferAltRegular")]
-        Icon::BiTransferAltRegular => {
+        BiIcon::BiTransferAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21700,7 +21700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTransferRegular")]
-        Icon::BiTransferRegular => {
+        BiIcon::BiTransferRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21711,7 +21711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrashAltRegular")]
-        Icon::BiTrashAltRegular => {
+        BiIcon::BiTrashAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21723,7 +21723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrashAltSolid")]
-        Icon::BiTrashAltSolid => {
+        BiIcon::BiTrashAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21735,7 +21735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrashRegular")]
-        Icon::BiTrashRegular => {
+        BiIcon::BiTrashRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21747,7 +21747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrashSolid")]
-        Icon::BiTrashSolid => {
+        BiIcon::BiTrashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21759,7 +21759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTreeAltSolid")]
-        Icon::BiTreeAltSolid => {
+        BiIcon::BiTreeAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21770,7 +21770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTreeSolid")]
-        Icon::BiTreeSolid => {
+        BiIcon::BiTreeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21781,7 +21781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrello")]
-        Icon::BiTrello => {
+        BiIcon::BiTrello => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21793,7 +21793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrendingDownRegular")]
-        Icon::BiTrendingDownRegular => {
+        BiIcon::BiTrendingDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21805,7 +21805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrendingUpRegular")]
-        Icon::BiTrendingUpRegular => {
+        BiIcon::BiTrendingUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21817,7 +21817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrimRegular")]
-        Icon::BiTrimRegular => {
+        BiIcon::BiTrimRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21829,7 +21829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTripAdvisor")]
-        Icon::BiTripAdvisor => {
+        BiIcon::BiTripAdvisor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21845,7 +21845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTripRegular")]
-        Icon::BiTripRegular => {
+        BiIcon::BiTripRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21859,7 +21859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrophyRegular")]
-        Icon::BiTrophyRegular => {
+        BiIcon::BiTrophyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21871,7 +21871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTrophySolid")]
-        Icon::BiTrophySolid => {
+        BiIcon::BiTrophySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21883,7 +21883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTruckSolid")]
-        Icon::BiTruckSolid => {
+        BiIcon::BiTruckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21895,7 +21895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTumblr")]
-        Icon::BiTumblr => {
+        BiIcon::BiTumblr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21907,7 +21907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTux")]
-        Icon::BiTux => {
+        BiIcon::BiTux => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21923,7 +21923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTvRegular")]
-        Icon::BiTvRegular => {
+        BiIcon::BiTvRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21935,7 +21935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTvSolid")]
-        Icon::BiTvSolid => {
+        BiIcon::BiTvSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21947,7 +21947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTwitch")]
-        Icon::BiTwitch => {
+        BiIcon::BiTwitch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21959,7 +21959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTwitter")]
-        Icon::BiTwitter => {
+        BiIcon::BiTwitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21971,7 +21971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiTypescript")]
-        Icon::BiTypescript => {
+        BiIcon::BiTypescript => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21983,7 +21983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUnderlineRegular")]
-        Icon::BiUnderlineRegular => {
+        BiIcon::BiUnderlineRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21995,7 +21995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUndoRegular")]
-        Icon::BiUndoRegular => {
+        BiIcon::BiUndoRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22007,7 +22007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUniteRegular")]
-        Icon::BiUniteRegular => {
+        BiIcon::BiUniteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22021,7 +22021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUnity")]
-        Icon::BiUnity => {
+        BiIcon::BiUnity => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22033,7 +22033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUniversalAccessRegular")]
-        Icon::BiUniversalAccessRegular => {
+        BiIcon::BiUniversalAccessRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22048,7 +22048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUniversalAccessSolid")]
-        Icon::BiUniversalAccessSolid => {
+        BiIcon::BiUniversalAccessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22060,7 +22060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUnlinkRegular")]
-        Icon::BiUnlinkRegular => {
+        BiIcon::BiUnlinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22072,7 +22072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUnsplash")]
-        Icon::BiUnsplash => {
+        BiIcon::BiUnsplash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22084,7 +22084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowAltRegular")]
-        Icon::BiUpArrowAltRegular => {
+        BiIcon::BiUpArrowAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22096,7 +22096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowAltSolid")]
-        Icon::BiUpArrowAltSolid => {
+        BiIcon::BiUpArrowAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22107,7 +22107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowCircleRegular")]
-        Icon::BiUpArrowCircleRegular => {
+        BiIcon::BiUpArrowCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22120,7 +22120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowCircleSolid")]
-        Icon::BiUpArrowCircleSolid => {
+        BiIcon::BiUpArrowCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22132,7 +22132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowRegular")]
-        Icon::BiUpArrowRegular => {
+        BiIcon::BiUpArrowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22144,7 +22144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowSolid")]
-        Icon::BiUpArrowSolid => {
+        BiIcon::BiUpArrowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22156,7 +22156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpArrowSquareSolid")]
-        Icon::BiUpArrowSquareSolid => {
+        BiIcon::BiUpArrowSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22168,7 +22168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUploadRegular")]
-        Icon::BiUploadRegular => {
+        BiIcon::BiUploadRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22181,7 +22181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpsideDownRegular")]
-        Icon::BiUpsideDownRegular => {
+        BiIcon::BiUpsideDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22196,7 +22196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpsideDownSolid")]
-        Icon::BiUpsideDownSolid => {
+        BiIcon::BiUpsideDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22208,7 +22208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpvoteRegular")]
-        Icon::BiUpvoteRegular => {
+        BiIcon::BiUpvoteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22220,7 +22220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpvoteSolid")]
-        Icon::BiUpvoteSolid => {
+        BiIcon::BiUpvoteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22232,7 +22232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUpwork")]
-        Icon::BiUpwork => {
+        BiIcon::BiUpwork => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22244,7 +22244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUsbRegular")]
-        Icon::BiUsbRegular => {
+        BiIcon::BiUsbRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22256,7 +22256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserAccountSolid")]
-        Icon::BiUserAccountSolid => {
+        BiIcon::BiUserAccountSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22268,7 +22268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserBadgeSolid")]
-        Icon::BiUserBadgeSolid => {
+        BiIcon::BiUserBadgeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22280,7 +22280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserCheckRegular")]
-        Icon::BiUserCheckRegular => {
+        BiIcon::BiUserCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22292,7 +22292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserCheckSolid")]
-        Icon::BiUserCheckSolid => {
+        BiIcon::BiUserCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22304,7 +22304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserCircleRegular")]
-        Icon::BiUserCircleRegular => {
+        BiIcon::BiUserCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22318,7 +22318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserCircleSolid")]
-        Icon::BiUserCircleSolid => {
+        BiIcon::BiUserCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22330,7 +22330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserDetailSolid")]
-        Icon::BiUserDetailSolid => {
+        BiIcon::BiUserDetailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22342,7 +22342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserMinusRegular")]
-        Icon::BiUserMinusRegular => {
+        BiIcon::BiUserMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22354,7 +22354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserMinusSolid")]
-        Icon::BiUserMinusSolid => {
+        BiIcon::BiUserMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22366,7 +22366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserPinRegular")]
-        Icon::BiUserPinRegular => {
+        BiIcon::BiUserPinRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22380,7 +22380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserPinSolid")]
-        Icon::BiUserPinSolid => {
+        BiIcon::BiUserPinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22392,7 +22392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserPlusRegular")]
-        Icon::BiUserPlusRegular => {
+        BiIcon::BiUserPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22404,7 +22404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserPlusSolid")]
-        Icon::BiUserPlusSolid => {
+        BiIcon::BiUserPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22416,7 +22416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserRectangleSolid")]
-        Icon::BiUserRectangleSolid => {
+        BiIcon::BiUserRectangleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22428,7 +22428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserRegular")]
-        Icon::BiUserRegular => {
+        BiIcon::BiUserRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22440,7 +22440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserSolid")]
-        Icon::BiUserSolid => {
+        BiIcon::BiUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22452,7 +22452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserVoiceRegular")]
-        Icon::BiUserVoiceRegular => {
+        BiIcon::BiUserVoiceRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22466,7 +22466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserVoiceSolid")]
-        Icon::BiUserVoiceSolid => {
+        BiIcon::BiUserVoiceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22480,7 +22480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserXRegular")]
-        Icon::BiUserXRegular => {
+        BiIcon::BiUserXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22492,7 +22492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiUserXSolid")]
-        Icon::BiUserXSolid => {
+        BiIcon::BiUserXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22504,7 +22504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVectorRegular")]
-        Icon::BiVectorRegular => {
+        BiIcon::BiVectorRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22516,7 +22516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVectorSolid")]
-        Icon::BiVectorSolid => {
+        BiIcon::BiVectorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22528,7 +22528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVenmo")]
-        Icon::BiVenmo => {
+        BiIcon::BiVenmo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22540,7 +22540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVerticalBottomRegular")]
-        Icon::BiVerticalBottomRegular => {
+        BiIcon::BiVerticalBottomRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22552,7 +22552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVerticalCenterRegular")]
-        Icon::BiVerticalCenterRegular => {
+        BiIcon::BiVerticalCenterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22564,7 +22564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVerticalTopRegular")]
-        Icon::BiVerticalTopRegular => {
+        BiIcon::BiVerticalTopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22576,7 +22576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVialRegular")]
-        Icon::BiVialRegular => {
+        BiIcon::BiVialRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22588,7 +22588,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVialSolid")]
-        Icon::BiVialSolid => {
+        BiIcon::BiVialSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22600,7 +22600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoOffRegular")]
-        Icon::BiVideoOffRegular => {
+        BiIcon::BiVideoOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22612,7 +22612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoOffSolid")]
-        Icon::BiVideoOffSolid => {
+        BiIcon::BiVideoOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22624,7 +22624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoPlusRegular")]
-        Icon::BiVideoPlusRegular => {
+        BiIcon::BiVideoPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22637,7 +22637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoPlusSolid")]
-        Icon::BiVideoPlusSolid => {
+        BiIcon::BiVideoPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22649,7 +22649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoRecordingRegular")]
-        Icon::BiVideoRecordingRegular => {
+        BiIcon::BiVideoRecordingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22661,7 +22661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoRecordingSolid")]
-        Icon::BiVideoRecordingSolid => {
+        BiIcon::BiVideoRecordingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22673,7 +22673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoRegular")]
-        Icon::BiVideoRegular => {
+        BiIcon::BiVideoRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22685,7 +22685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideoSolid")]
-        Icon::BiVideoSolid => {
+        BiIcon::BiVideoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22697,7 +22697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVideosSolid")]
-        Icon::BiVideosSolid => {
+        BiIcon::BiVideosSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22710,7 +22710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVimeo")]
-        Icon::BiVimeo => {
+        BiIcon::BiVimeo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22722,7 +22722,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVirusBlockSolid")]
-        Icon::BiVirusBlockSolid => {
+        BiIcon::BiVirusBlockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22734,7 +22734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVirusSolid")]
-        Icon::BiVirusSolid => {
+        BiIcon::BiVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22746,7 +22746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVisa")]
-        Icon::BiVisa => {
+        BiIcon::BiVisa => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22758,7 +22758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVisualStudio")]
-        Icon::BiVisualStudio => {
+        BiIcon::BiVisualStudio => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22770,7 +22770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVk")]
-        Icon::BiVk => {
+        BiIcon::BiVk => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22782,7 +22782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVoicemailRegular")]
-        Icon::BiVoicemailRegular => {
+        BiIcon::BiVoicemailRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22794,7 +22794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeFullRegular")]
-        Icon::BiVolumeFullRegular => {
+        BiIcon::BiVolumeFullRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22808,7 +22808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeFullSolid")]
-        Icon::BiVolumeFullSolid => {
+        BiIcon::BiVolumeFullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22822,7 +22822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeLowRegular")]
-        Icon::BiVolumeLowRegular => {
+        BiIcon::BiVolumeLowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22834,7 +22834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeLowSolid")]
-        Icon::BiVolumeLowSolid => {
+        BiIcon::BiVolumeLowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22846,7 +22846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeMuteRegular")]
-        Icon::BiVolumeMuteRegular => {
+        BiIcon::BiVolumeMuteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22858,7 +22858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeMuteSolid")]
-        Icon::BiVolumeMuteSolid => {
+        BiIcon::BiVolumeMuteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22870,7 +22870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeRegular")]
-        Icon::BiVolumeRegular => {
+        BiIcon::BiVolumeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22882,7 +22882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVolumeSolid")]
-        Icon::BiVolumeSolid => {
+        BiIcon::BiVolumeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22894,7 +22894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiVuejs")]
-        Icon::BiVuejs => {
+        BiIcon::BiVuejs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22907,7 +22907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWalkRegular")]
-        Icon::BiWalkRegular => {
+        BiIcon::BiWalkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22920,7 +22920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWalletAltRegular")]
-        Icon::BiWalletAltRegular => {
+        BiIcon::BiWalletAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22932,7 +22932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWalletAltSolid")]
-        Icon::BiWalletAltSolid => {
+        BiIcon::BiWalletAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22945,7 +22945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWalletRegular")]
-        Icon::BiWalletRegular => {
+        BiIcon::BiWalletRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22957,7 +22957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWalletSolid")]
-        Icon::BiWalletSolid => {
+        BiIcon::BiWalletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22969,7 +22969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWasherSolid")]
-        Icon::BiWasherSolid => {
+        BiIcon::BiWasherSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22983,7 +22983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWatchAltSolid")]
-        Icon::BiWatchAltSolid => {
+        BiIcon::BiWatchAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22995,7 +22995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWatchSolid")]
-        Icon::BiWatchSolid => {
+        BiIcon::BiWatchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23007,7 +23007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWaterRegular")]
-        Icon::BiWaterRegular => {
+        BiIcon::BiWaterRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23019,7 +23019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWebcamRegular")]
-        Icon::BiWebcamRegular => {
+        BiIcon::BiWebcamRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23033,7 +23033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWebcamSolid")]
-        Icon::BiWebcamSolid => {
+        BiIcon::BiWebcamSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23047,7 +23047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWhatsapp")]
-        Icon::BiWhatsapp => {
+        BiIcon::BiWhatsapp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23060,7 +23060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWhatsappSquare")]
-        Icon::BiWhatsappSquare => {
+        BiIcon::BiWhatsappSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23074,7 +23074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWidgetSolid")]
-        Icon::BiWidgetSolid => {
+        BiIcon::BiWidgetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23086,7 +23086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWifi0Regular")]
-        Icon::BiWifi0Regular => {
+        BiIcon::BiWifi0Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23097,7 +23097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWifi1Regular")]
-        Icon::BiWifi1Regular => {
+        BiIcon::BiWifi1Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23109,7 +23109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWifi2Regular")]
-        Icon::BiWifi2Regular => {
+        BiIcon::BiWifi2Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23123,7 +23123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWifiOffRegular")]
-        Icon::BiWifiOffRegular => {
+        BiIcon::BiWifiOffRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23135,7 +23135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWifiRegular")]
-        Icon::BiWifiRegular => {
+        BiIcon::BiWifiRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23149,7 +23149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWikipedia")]
-        Icon::BiWikipedia => {
+        BiIcon::BiWikipedia => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23161,7 +23161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindRegular")]
-        Icon::BiWindRegular => {
+        BiIcon::BiWindRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23175,7 +23175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindowAltRegular")]
-        Icon::BiWindowAltRegular => {
+        BiIcon::BiWindowAltRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23187,7 +23187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindowAltSolid")]
-        Icon::BiWindowAltSolid => {
+        BiIcon::BiWindowAltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23199,7 +23199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindowCloseRegular")]
-        Icon::BiWindowCloseRegular => {
+        BiIcon::BiWindowCloseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23213,7 +23213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindowOpenRegular")]
-        Icon::BiWindowOpenRegular => {
+        BiIcon::BiWindowOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23225,7 +23225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindowRegular")]
-        Icon::BiWindowRegular => {
+        BiIcon::BiWindowRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23237,7 +23237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindows")]
-        Icon::BiWindows => {
+        BiIcon::BiWindows => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23249,7 +23249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWindowsRegular")]
-        Icon::BiWindowsRegular => {
+        BiIcon::BiWindowsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23263,7 +23263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWineRegular")]
-        Icon::BiWineRegular => {
+        BiIcon::BiWineRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23275,7 +23275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWineSolid")]
-        Icon::BiWineSolid => {
+        BiIcon::BiWineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23287,7 +23287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWinkSmileRegular")]
-        Icon::BiWinkSmileRegular => {
+        BiIcon::BiWinkSmileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23302,7 +23302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWinkSmileSolid")]
-        Icon::BiWinkSmileSolid => {
+        BiIcon::BiWinkSmileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23314,7 +23314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWinkTongueRegular")]
-        Icon::BiWinkTongueRegular => {
+        BiIcon::BiWinkTongueRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23327,7 +23327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWinkTongueSolid")]
-        Icon::BiWinkTongueSolid => {
+        BiIcon::BiWinkTongueSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23340,7 +23340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWix")]
-        Icon::BiWix => {
+        BiIcon::BiWix => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23352,7 +23352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWonRegular")]
-        Icon::BiWonRegular => {
+        BiIcon::BiWonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23364,7 +23364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWordpress")]
-        Icon::BiWordpress => {
+        BiIcon::BiWordpress => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23376,7 +23376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWorldRegular")]
-        Icon::BiWorldRegular => {
+        BiIcon::BiWorldRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23388,7 +23388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWrenchRegular")]
-        Icon::BiWrenchRegular => {
+        BiIcon::BiWrenchRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23400,7 +23400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiWrenchSolid")]
-        Icon::BiWrenchSolid => {
+        BiIcon::BiWrenchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23412,7 +23412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiXCircleRegular")]
-        Icon::BiXCircleRegular => {
+        BiIcon::BiXCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23426,7 +23426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiXCircleSolid")]
-        Icon::BiXCircleSolid => {
+        BiIcon::BiXCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23438,7 +23438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiXRegular")]
-        Icon::BiXRegular => {
+        BiIcon::BiXRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23450,7 +23450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiXSquareSolid")]
-        Icon::BiXSquareSolid => {
+        BiIcon::BiXSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23462,7 +23462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiXing")]
-        Icon::BiXing => {
+        BiIcon::BiXing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23474,7 +23474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiYahoo")]
-        Icon::BiYahoo => {
+        BiIcon::BiYahoo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23486,7 +23486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiYelp")]
-        Icon::BiYelp => {
+        BiIcon::BiYelp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23498,7 +23498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiYenRegular")]
-        Icon::BiYenRegular => {
+        BiIcon::BiYenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23510,7 +23510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiYinYangSolid")]
-        Icon::BiYinYangSolid => {
+        BiIcon::BiYinYangSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23522,7 +23522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiYoutube")]
-        Icon::BiYoutube => {
+        BiIcon::BiYoutube => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23534,7 +23534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiZapSolid")]
-        Icon::BiZapSolid => {
+        BiIcon::BiZapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23546,7 +23546,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiZoom")]
-        Icon::BiZoom => {
+        BiIcon::BiZoom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23558,7 +23558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiZoomInRegular")]
-        Icon::BiZoomInRegular => {
+        BiIcon::BiZoomInRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23571,7 +23571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiZoomInSolid")]
-        Icon::BiZoomInSolid => {
+        BiIcon::BiZoomInSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23583,7 +23583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiZoomOutRegular")]
-        Icon::BiZoomOutRegular => {
+        BiIcon::BiZoomOutRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23596,7 +23596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "BiZoomOutSolid")]
-        Icon::BiZoomOutSolid => {
+        BiIcon::BiZoomOutSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =

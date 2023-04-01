@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum OcIcon {
     #[cfg(feature = "OcAccessibilityInsetSm")]
     OcAccessibilityInsetSm,
     #[cfg(feature = "OcAccessibilitySm")]
@@ -1175,12 +1175,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosOcIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: OcIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -1204,7 +1204,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "OcAccessibilityInsetSm")]
-        Icon::OcAccessibilityInsetSm => {
+        OcIcon::OcAccessibilityInsetSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1216,7 +1216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAccessibilitySm")]
-        Icon::OcAccessibilitySm => {
+        OcIcon::OcAccessibilitySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1228,7 +1228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAlertFillLg")]
-        Icon::OcAlertFillLg => {
+        OcIcon::OcAlertFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1240,7 +1240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAlertFillSm")]
-        Icon::OcAlertFillSm => {
+        OcIcon::OcAlertFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1252,7 +1252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAlertFillXs")]
-        Icon::OcAlertFillXs => {
+        OcIcon::OcAlertFillXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -1264,7 +1264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAlertLg")]
-        Icon::OcAlertLg => {
+        OcIcon::OcAlertLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1278,7 +1278,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAlertSm")]
-        Icon::OcAlertSm => {
+        OcIcon::OcAlertSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1290,7 +1290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcAppsSm")]
-        Icon::OcAppsSm => {
+        OcIcon::OcAppsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1302,7 +1302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArchiveLg")]
-        Icon::OcArchiveLg => {
+        OcIcon::OcArchiveLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1315,7 +1315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArchiveSm")]
-        Icon::OcArchiveSm => {
+        OcIcon::OcArchiveSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1327,7 +1327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowBothLg")]
-        Icon::OcArrowBothLg => {
+        OcIcon::OcArrowBothLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1339,7 +1339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowBothSm")]
-        Icon::OcArrowBothSm => {
+        OcIcon::OcArrowBothSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1351,7 +1351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowDownLeftLg")]
-        Icon::OcArrowDownLeftLg => {
+        OcIcon::OcArrowDownLeftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1363,7 +1363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowDownLeftSm")]
-        Icon::OcArrowDownLeftSm => {
+        OcIcon::OcArrowDownLeftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1375,7 +1375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowDownLg")]
-        Icon::OcArrowDownLg => {
+        OcIcon::OcArrowDownLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1387,7 +1387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowDownRightLg")]
-        Icon::OcArrowDownRightLg => {
+        OcIcon::OcArrowDownRightLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1399,7 +1399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowDownRightSm")]
-        Icon::OcArrowDownRightSm => {
+        OcIcon::OcArrowDownRightSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1411,7 +1411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowDownSm")]
-        Icon::OcArrowDownSm => {
+        OcIcon::OcArrowDownSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1423,7 +1423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowLeftLg")]
-        Icon::OcArrowLeftLg => {
+        OcIcon::OcArrowLeftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1435,7 +1435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowLeftSm")]
-        Icon::OcArrowLeftSm => {
+        OcIcon::OcArrowLeftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1447,7 +1447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowRightLg")]
-        Icon::OcArrowRightLg => {
+        OcIcon::OcArrowRightLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1459,7 +1459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowRightSm")]
-        Icon::OcArrowRightSm => {
+        OcIcon::OcArrowRightSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1471,7 +1471,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowSwitchLg")]
-        Icon::OcArrowSwitchLg => {
+        OcIcon::OcArrowSwitchLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1483,7 +1483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowSwitchSm")]
-        Icon::OcArrowSwitchSm => {
+        OcIcon::OcArrowSwitchSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1495,7 +1495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowUpLeftLg")]
-        Icon::OcArrowUpLeftLg => {
+        OcIcon::OcArrowUpLeftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1507,7 +1507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowUpLeftSm")]
-        Icon::OcArrowUpLeftSm => {
+        OcIcon::OcArrowUpLeftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1519,7 +1519,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowUpLg")]
-        Icon::OcArrowUpLg => {
+        OcIcon::OcArrowUpLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1531,7 +1531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowUpRightLg")]
-        Icon::OcArrowUpRightLg => {
+        OcIcon::OcArrowUpRightLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1543,7 +1543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowUpRightSm")]
-        Icon::OcArrowUpRightSm => {
+        OcIcon::OcArrowUpRightSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1555,7 +1555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcArrowUpSm")]
-        Icon::OcArrowUpSm => {
+        OcIcon::OcArrowUpSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1567,7 +1567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBeakerLg")]
-        Icon::OcBeakerLg => {
+        OcIcon::OcBeakerLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1579,7 +1579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBeakerSm")]
-        Icon::OcBeakerSm => {
+        OcIcon::OcBeakerSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1591,7 +1591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBellFillLg")]
-        Icon::OcBellFillLg => {
+        OcIcon::OcBellFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1603,7 +1603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBellFillSm")]
-        Icon::OcBellFillSm => {
+        OcIcon::OcBellFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1615,7 +1615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBellLg")]
-        Icon::OcBellLg => {
+        OcIcon::OcBellLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1627,7 +1627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBellSlashLg")]
-        Icon::OcBellSlashLg => {
+        OcIcon::OcBellSlashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1639,7 +1639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBellSlashSm")]
-        Icon::OcBellSlashSm => {
+        OcIcon::OcBellSlashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1651,7 +1651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBellSm")]
-        Icon::OcBellSm => {
+        OcIcon::OcBellSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1663,7 +1663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBlockedLg")]
-        Icon::OcBlockedLg => {
+        OcIcon::OcBlockedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1675,7 +1675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBlockedSm")]
-        Icon::OcBlockedSm => {
+        OcIcon::OcBlockedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1687,7 +1687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBoldLg")]
-        Icon::OcBoldLg => {
+        OcIcon::OcBoldLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1699,7 +1699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBoldSm")]
-        Icon::OcBoldSm => {
+        OcIcon::OcBoldSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1711,7 +1711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookLg")]
-        Icon::OcBookLg => {
+        OcIcon::OcBookLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1723,7 +1723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookSm")]
-        Icon::OcBookSm => {
+        OcIcon::OcBookSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1735,7 +1735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookmarkFillLg")]
-        Icon::OcBookmarkFillLg => {
+        OcIcon::OcBookmarkFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1747,7 +1747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookmarkLg")]
-        Icon::OcBookmarkLg => {
+        OcIcon::OcBookmarkLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1759,7 +1759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookmarkSlashFillLg")]
-        Icon::OcBookmarkSlashFillLg => {
+        OcIcon::OcBookmarkSlashFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1771,7 +1771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookmarkSlashLg")]
-        Icon::OcBookmarkSlashLg => {
+        OcIcon::OcBookmarkSlashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1783,7 +1783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookmarkSlashSm")]
-        Icon::OcBookmarkSlashSm => {
+        OcIcon::OcBookmarkSlashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1795,7 +1795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBookmarkSm")]
-        Icon::OcBookmarkSm => {
+        OcIcon::OcBookmarkSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1807,7 +1807,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBriefcaseLg")]
-        Icon::OcBriefcaseLg => {
+        OcIcon::OcBriefcaseLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1819,7 +1819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBriefcaseSm")]
-        Icon::OcBriefcaseSm => {
+        OcIcon::OcBriefcaseSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1831,7 +1831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBroadcastLg")]
-        Icon::OcBroadcastLg => {
+        OcIcon::OcBroadcastLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1843,7 +1843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBroadcastSm")]
-        Icon::OcBroadcastSm => {
+        OcIcon::OcBroadcastSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1855,7 +1855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBrowserLg")]
-        Icon::OcBrowserLg => {
+        OcIcon::OcBrowserLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1867,7 +1867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBrowserSm")]
-        Icon::OcBrowserSm => {
+        OcIcon::OcBrowserSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1879,7 +1879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBugLg")]
-        Icon::OcBugLg => {
+        OcIcon::OcBugLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1891,7 +1891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcBugSm")]
-        Icon::OcBugSm => {
+        OcIcon::OcBugSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1903,7 +1903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCacheSm")]
-        Icon::OcCacheSm => {
+        OcIcon::OcCacheSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1917,7 +1917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCalendarLg")]
-        Icon::OcCalendarLg => {
+        OcIcon::OcCalendarLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1929,7 +1929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCalendarSm")]
-        Icon::OcCalendarSm => {
+        OcIcon::OcCalendarSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1941,7 +1941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckCircleFillLg")]
-        Icon::OcCheckCircleFillLg => {
+        OcIcon::OcCheckCircleFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1953,7 +1953,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckCircleFillSm")]
-        Icon::OcCheckCircleFillSm => {
+        OcIcon::OcCheckCircleFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1965,7 +1965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckCircleFillXs")]
-        Icon::OcCheckCircleFillXs => {
+        OcIcon::OcCheckCircleFillXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -1977,7 +1977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckCircleLg")]
-        Icon::OcCheckCircleLg => {
+        OcIcon::OcCheckCircleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1991,7 +1991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckCircleSm")]
-        Icon::OcCheckCircleSm => {
+        OcIcon::OcCheckCircleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2003,7 +2003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckLg")]
-        Icon::OcCheckLg => {
+        OcIcon::OcCheckLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2015,7 +2015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckSm")]
-        Icon::OcCheckSm => {
+        OcIcon::OcCheckSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2027,7 +2027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckboxLg")]
-        Icon::OcCheckboxLg => {
+        OcIcon::OcCheckboxLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2041,7 +2041,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCheckboxSm")]
-        Icon::OcCheckboxSm => {
+        OcIcon::OcCheckboxSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2053,7 +2053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChecklistLg")]
-        Icon::OcChecklistLg => {
+        OcIcon::OcChecklistLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2067,7 +2067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChecklistSm")]
-        Icon::OcChecklistSm => {
+        OcIcon::OcChecklistSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2079,7 +2079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronDownLg")]
-        Icon::OcChevronDownLg => {
+        OcIcon::OcChevronDownLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2091,7 +2091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronDownSm")]
-        Icon::OcChevronDownSm => {
+        OcIcon::OcChevronDownSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2103,7 +2103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronDownXs")]
-        Icon::OcChevronDownXs => {
+        OcIcon::OcChevronDownXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -2115,7 +2115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronLeftLg")]
-        Icon::OcChevronLeftLg => {
+        OcIcon::OcChevronLeftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2127,7 +2127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronLeftSm")]
-        Icon::OcChevronLeftSm => {
+        OcIcon::OcChevronLeftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2139,7 +2139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronRightLg")]
-        Icon::OcChevronRightLg => {
+        OcIcon::OcChevronRightLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2151,7 +2151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronRightSm")]
-        Icon::OcChevronRightSm => {
+        OcIcon::OcChevronRightSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2163,7 +2163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronRightXs")]
-        Icon::OcChevronRightXs => {
+        OcIcon::OcChevronRightXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -2175,7 +2175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronUpLg")]
-        Icon::OcChevronUpLg => {
+        OcIcon::OcChevronUpLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2187,7 +2187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronUpSm")]
-        Icon::OcChevronUpSm => {
+        OcIcon::OcChevronUpSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2199,7 +2199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcChevronUpXs")]
-        Icon::OcChevronUpXs => {
+        OcIcon::OcChevronUpXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -2211,7 +2211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCircleLg")]
-        Icon::OcCircleLg => {
+        OcIcon::OcCircleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2223,7 +2223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCircleSlashLg")]
-        Icon::OcCircleSlashLg => {
+        OcIcon::OcCircleSlashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2235,7 +2235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCircleSlashSm")]
-        Icon::OcCircleSlashSm => {
+        OcIcon::OcCircleSlashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2247,7 +2247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCircleSm")]
-        Icon::OcCircleSm => {
+        OcIcon::OcCircleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2259,7 +2259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcClockFillLg")]
-        Icon::OcClockFillLg => {
+        OcIcon::OcClockFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2271,7 +2271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcClockFillSm")]
-        Icon::OcClockFillSm => {
+        OcIcon::OcClockFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2283,7 +2283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcClockLg")]
-        Icon::OcClockLg => {
+        OcIcon::OcClockLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2297,7 +2297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcClockSm")]
-        Icon::OcClockSm => {
+        OcIcon::OcClockSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2309,7 +2309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCloudLg")]
-        Icon::OcCloudLg => {
+        OcIcon::OcCloudLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2321,7 +2321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCloudOfflineLg")]
-        Icon::OcCloudOfflineLg => {
+        OcIcon::OcCloudOfflineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2333,7 +2333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCloudOfflineSm")]
-        Icon::OcCloudOfflineSm => {
+        OcIcon::OcCloudOfflineSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2345,7 +2345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCloudSm")]
-        Icon::OcCloudSm => {
+        OcIcon::OcCloudSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2357,7 +2357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeLg")]
-        Icon::OcCodeLg => {
+        OcIcon::OcCodeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2369,7 +2369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeOfConductLg")]
-        Icon::OcCodeOfConductLg => {
+        OcIcon::OcCodeOfConductLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2381,7 +2381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeOfConductSm")]
-        Icon::OcCodeOfConductSm => {
+        OcIcon::OcCodeOfConductSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2393,7 +2393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeReviewLg")]
-        Icon::OcCodeReviewLg => {
+        OcIcon::OcCodeReviewLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2407,7 +2407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeReviewSm")]
-        Icon::OcCodeReviewSm => {
+        OcIcon::OcCodeReviewSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2419,7 +2419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeSm")]
-        Icon::OcCodeSm => {
+        OcIcon::OcCodeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2431,7 +2431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeSquareLg")]
-        Icon::OcCodeSquareLg => {
+        OcIcon::OcCodeSquareLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2445,7 +2445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodeSquareSm")]
-        Icon::OcCodeSquareSm => {
+        OcIcon::OcCodeSquareSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2457,7 +2457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodescanCheckmarkLg")]
-        Icon::OcCodescanCheckmarkLg => {
+        OcIcon::OcCodescanCheckmarkLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2471,7 +2471,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodescanCheckmarkSm")]
-        Icon::OcCodescanCheckmarkSm => {
+        OcIcon::OcCodescanCheckmarkSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2485,7 +2485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodescanLg")]
-        Icon::OcCodescanLg => {
+        OcIcon::OcCodescanLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2499,7 +2499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodescanSm")]
-        Icon::OcCodescanSm => {
+        OcIcon::OcCodescanSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2513,7 +2513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodespacesLg")]
-        Icon::OcCodespacesLg => {
+        OcIcon::OcCodespacesLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2527,7 +2527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCodespacesSm")]
-        Icon::OcCodespacesSm => {
+        OcIcon::OcCodespacesSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2541,7 +2541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcColumnsLg")]
-        Icon::OcColumnsLg => {
+        OcIcon::OcColumnsLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2553,7 +2553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcColumnsSm")]
-        Icon::OcColumnsSm => {
+        OcIcon::OcColumnsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2565,7 +2565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommandPaletteLg")]
-        Icon::OcCommandPaletteLg => {
+        OcIcon::OcCommandPaletteLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2577,7 +2577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommandPaletteSm")]
-        Icon::OcCommandPaletteSm => {
+        OcIcon::OcCommandPaletteSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2589,7 +2589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommentDiscussionLg")]
-        Icon::OcCommentDiscussionLg => {
+        OcIcon::OcCommentDiscussionLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2603,7 +2603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommentDiscussionSm")]
-        Icon::OcCommentDiscussionSm => {
+        OcIcon::OcCommentDiscussionSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2615,7 +2615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommentLg")]
-        Icon::OcCommentLg => {
+        OcIcon::OcCommentLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2627,7 +2627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommentSm")]
-        Icon::OcCommentSm => {
+        OcIcon::OcCommentSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2639,7 +2639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCommitLg")]
-        Icon::OcCommitLg => {
+        OcIcon::OcCommitLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2653,7 +2653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcContainerLg")]
-        Icon::OcContainerLg => {
+        OcIcon::OcContainerLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2665,7 +2665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcContainerSm")]
-        Icon::OcContainerSm => {
+        OcIcon::OcContainerSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2677,7 +2677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopilotErrorSm")]
-        Icon::OcCopilotErrorSm => {
+        OcIcon::OcCopilotErrorSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2689,7 +2689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopilotLg")]
-        Icon::OcCopilotLg => {
+        OcIcon::OcCopilotLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2703,7 +2703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopilotSm")]
-        Icon::OcCopilotSm => {
+        OcIcon::OcCopilotSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2717,7 +2717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopilotWarningSm")]
-        Icon::OcCopilotWarningSm => {
+        OcIcon::OcCopilotWarningSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2731,7 +2731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopilotXl")]
-        Icon::OcCopilotXl => {
+        OcIcon::OcCopilotXl => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 48 48" fill = "currentColor" role =
@@ -2745,7 +2745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopilotXxl")]
-        Icon::OcCopilotXxl => {
+        OcIcon::OcCopilotXxl => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 96 96" fill = "currentColor" role =
@@ -2759,7 +2759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopyLg")]
-        Icon::OcCopyLg => {
+        OcIcon::OcCopyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2773,7 +2773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCopySm")]
-        Icon::OcCopySm => {
+        OcIcon::OcCopySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2787,7 +2787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCpuLg")]
-        Icon::OcCpuLg => {
+        OcIcon::OcCpuLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2801,7 +2801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCpuSm")]
-        Icon::OcCpuSm => {
+        OcIcon::OcCpuSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2813,7 +2813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCreditCardLg")]
-        Icon::OcCreditCardLg => {
+        OcIcon::OcCreditCardLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2826,7 +2826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCreditCardSm")]
-        Icon::OcCreditCardSm => {
+        OcIcon::OcCreditCardSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2839,7 +2839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCrossReferenceLg")]
-        Icon::OcCrossReferenceLg => {
+        OcIcon::OcCrossReferenceLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2853,7 +2853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcCrossReferenceSm")]
-        Icon::OcCrossReferenceSm => {
+        OcIcon::OcCrossReferenceSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2865,7 +2865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDashLg")]
-        Icon::OcDashLg => {
+        OcIcon::OcDashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2877,7 +2877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDashSm")]
-        Icon::OcDashSm => {
+        OcIcon::OcDashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2889,7 +2889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDatabaseLg")]
-        Icon::OcDatabaseLg => {
+        OcIcon::OcDatabaseLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2901,7 +2901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDatabaseSm")]
-        Icon::OcDatabaseSm => {
+        OcIcon::OcDatabaseSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2913,7 +2913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDependabotLg")]
-        Icon::OcDependabotLg => {
+        OcIcon::OcDependabotLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2927,7 +2927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDependabotSm")]
-        Icon::OcDependabotSm => {
+        OcIcon::OcDependabotSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2941,7 +2941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDesktopDownloadLg")]
-        Icon::OcDesktopDownloadLg => {
+        OcIcon::OcDesktopDownloadLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2955,7 +2955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDesktopDownloadSm")]
-        Icon::OcDesktopDownloadSm => {
+        OcIcon::OcDesktopDownloadSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2969,7 +2969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceCameraSm")]
-        Icon::OcDeviceCameraSm => {
+        OcIcon::OcDeviceCameraSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2981,7 +2981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceCameraVideoLg")]
-        Icon::OcDeviceCameraVideoLg => {
+        OcIcon::OcDeviceCameraVideoLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2993,7 +2993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceCameraVideoSm")]
-        Icon::OcDeviceCameraVideoSm => {
+        OcIcon::OcDeviceCameraVideoSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3005,7 +3005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceDesktopLg")]
-        Icon::OcDeviceDesktopLg => {
+        OcIcon::OcDeviceDesktopLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3017,7 +3017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceDesktopSm")]
-        Icon::OcDeviceDesktopSm => {
+        OcIcon::OcDeviceDesktopSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3029,7 +3029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceMobileLg")]
-        Icon::OcDeviceMobileLg => {
+        OcIcon::OcDeviceMobileLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3043,7 +3043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDeviceMobileSm")]
-        Icon::OcDeviceMobileSm => {
+        OcIcon::OcDeviceMobileSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3055,7 +3055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiamondLg")]
-        Icon::OcDiamondLg => {
+        OcIcon::OcDiamondLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3067,7 +3067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiamondSm")]
-        Icon::OcDiamondSm => {
+        OcIcon::OcDiamondSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3079,7 +3079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffAddedSm")]
-        Icon::OcDiffAddedSm => {
+        OcIcon::OcDiffAddedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3091,7 +3091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffIgnoredSm")]
-        Icon::OcDiffIgnoredSm => {
+        OcIcon::OcDiffIgnoredSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3103,7 +3103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffLg")]
-        Icon::OcDiffLg => {
+        OcIcon::OcDiffLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3115,7 +3115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffModifiedSm")]
-        Icon::OcDiffModifiedSm => {
+        OcIcon::OcDiffModifiedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3127,7 +3127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffRemovedSm")]
-        Icon::OcDiffRemovedSm => {
+        OcIcon::OcDiffRemovedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3139,7 +3139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffRenamedSm")]
-        Icon::OcDiffRenamedSm => {
+        OcIcon::OcDiffRenamedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3151,7 +3151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiffSm")]
-        Icon::OcDiffSm => {
+        OcIcon::OcDiffSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3163,7 +3163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiscussionClosedLg")]
-        Icon::OcDiscussionClosedLg => {
+        OcIcon::OcDiscussionClosedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3175,7 +3175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiscussionClosedSm")]
-        Icon::OcDiscussionClosedSm => {
+        OcIcon::OcDiscussionClosedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3187,7 +3187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiscussionDuplicateLg")]
-        Icon::OcDiscussionDuplicateLg => {
+        OcIcon::OcDiscussionDuplicateLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3199,7 +3199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiscussionDuplicateSm")]
-        Icon::OcDiscussionDuplicateSm => {
+        OcIcon::OcDiscussionDuplicateSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3211,7 +3211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiscussionOutdatedLg")]
-        Icon::OcDiscussionOutdatedLg => {
+        OcIcon::OcDiscussionOutdatedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3223,7 +3223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDiscussionOutdatedSm")]
-        Icon::OcDiscussionOutdatedSm => {
+        OcIcon::OcDiscussionOutdatedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3235,7 +3235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDotFillLg")]
-        Icon::OcDotFillLg => {
+        OcIcon::OcDotFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3246,7 +3246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDotFillSm")]
-        Icon::OcDotFillSm => {
+        OcIcon::OcDotFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3257,7 +3257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDotLg")]
-        Icon::OcDotLg => {
+        OcIcon::OcDotLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3269,7 +3269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDotSm")]
-        Icon::OcDotSm => {
+        OcIcon::OcDotSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3281,7 +3281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDownloadLg")]
-        Icon::OcDownloadLg => {
+        OcIcon::OcDownloadLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3295,7 +3295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDownloadSm")]
-        Icon::OcDownloadSm => {
+        OcIcon::OcDownloadSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3309,7 +3309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDuplicateLg")]
-        Icon::OcDuplicateLg => {
+        OcIcon::OcDuplicateLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3325,7 +3325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcDuplicateSm")]
-        Icon::OcDuplicateSm => {
+        OcIcon::OcDuplicateSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3341,7 +3341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcEllipsisSm")]
-        Icon::OcEllipsisSm => {
+        OcIcon::OcEllipsisSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3353,7 +3353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcEyeClosedLg")]
-        Icon::OcEyeClosedLg => {
+        OcIcon::OcEyeClosedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3365,7 +3365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcEyeClosedSm")]
-        Icon::OcEyeClosedSm => {
+        OcIcon::OcEyeClosedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3377,7 +3377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcEyeLg")]
-        Icon::OcEyeLg => {
+        OcIcon::OcEyeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3390,7 +3390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcEyeSm")]
-        Icon::OcEyeSm => {
+        OcIcon::OcEyeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3402,7 +3402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedDiscussionSm")]
-        Icon::OcFeedDiscussionSm => {
+        OcIcon::OcFeedDiscussionSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3414,7 +3414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedForkedSm")]
-        Icon::OcFeedForkedSm => {
+        OcIcon::OcFeedForkedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3426,7 +3426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedHeartSm")]
-        Icon::OcFeedHeartSm => {
+        OcIcon::OcFeedHeartSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3438,7 +3438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedMergedSm")]
-        Icon::OcFeedMergedSm => {
+        OcIcon::OcFeedMergedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3450,7 +3450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedPersonSm")]
-        Icon::OcFeedPersonSm => {
+        OcIcon::OcFeedPersonSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3462,7 +3462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedRepoSm")]
-        Icon::OcFeedRepoSm => {
+        OcIcon::OcFeedRepoSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3474,7 +3474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedRocketSm")]
-        Icon::OcFeedRocketSm => {
+        OcIcon::OcFeedRocketSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3486,7 +3486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedStarSm")]
-        Icon::OcFeedStarSm => {
+        OcIcon::OcFeedStarSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3498,7 +3498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedTagSm")]
-        Icon::OcFeedTagSm => {
+        OcIcon::OcFeedTagSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3511,7 +3511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFeedTrophySm")]
-        Icon::OcFeedTrophySm => {
+        OcIcon::OcFeedTrophySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3525,7 +3525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileAddedSm")]
-        Icon::OcFileAddedSm => {
+        OcIcon::OcFileAddedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3537,7 +3537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileBadgeSm")]
-        Icon::OcFileBadgeSm => {
+        OcIcon::OcFileBadgeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3551,7 +3551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileBinaryLg")]
-        Icon::OcFileBinaryLg => {
+        OcIcon::OcFileBinaryLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3565,7 +3565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileBinarySm")]
-        Icon::OcFileBinarySm => {
+        OcIcon::OcFileBinarySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3577,7 +3577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileCodeLg")]
-        Icon::OcFileCodeLg => {
+        OcIcon::OcFileCodeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3591,7 +3591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileCodeSm")]
-        Icon::OcFileCodeSm => {
+        OcIcon::OcFileCodeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3603,7 +3603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDiffLg")]
-        Icon::OcFileDiffLg => {
+        OcIcon::OcFileDiffLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3617,7 +3617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDiffSm")]
-        Icon::OcFileDiffSm => {
+        OcIcon::OcFileDiffSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3629,7 +3629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDirectoryFillLg")]
-        Icon::OcFileDirectoryFillLg => {
+        OcIcon::OcFileDirectoryFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3641,7 +3641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDirectoryFillSm")]
-        Icon::OcFileDirectoryFillSm => {
+        OcIcon::OcFileDirectoryFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3653,7 +3653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDirectoryLg")]
-        Icon::OcFileDirectoryLg => {
+        OcIcon::OcFileDirectoryLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3665,7 +3665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDirectoryOpenFillSm")]
-        Icon::OcFileDirectoryOpenFillSm => {
+        OcIcon::OcFileDirectoryOpenFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3677,7 +3677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileDirectorySm")]
-        Icon::OcFileDirectorySm => {
+        OcIcon::OcFileDirectorySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3689,7 +3689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileLg")]
-        Icon::OcFileLg => {
+        OcIcon::OcFileLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3701,7 +3701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileMediaLg")]
-        Icon::OcFileMediaLg => {
+        OcIcon::OcFileMediaLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3713,7 +3713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileMovedSm")]
-        Icon::OcFileMovedSm => {
+        OcIcon::OcFileMovedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3727,7 +3727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileRemovedSm")]
-        Icon::OcFileRemovedSm => {
+        OcIcon::OcFileRemovedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3739,7 +3739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileSm")]
-        Icon::OcFileSm => {
+        OcIcon::OcFileSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3751,7 +3751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileSubmoduleLg")]
-        Icon::OcFileSubmoduleLg => {
+        OcIcon::OcFileSubmoduleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3763,7 +3763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileSubmoduleSm")]
-        Icon::OcFileSubmoduleSm => {
+        OcIcon::OcFileSubmoduleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3775,7 +3775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileSymlinkFileLg")]
-        Icon::OcFileSymlinkFileLg => {
+        OcIcon::OcFileSymlinkFileLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3787,7 +3787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileSymlinkFileSm")]
-        Icon::OcFileSymlinkFileSm => {
+        OcIcon::OcFileSymlinkFileSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3799,7 +3799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileZipLg")]
-        Icon::OcFileZipLg => {
+        OcIcon::OcFileZipLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3813,7 +3813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFileZipSm")]
-        Icon::OcFileZipSm => {
+        OcIcon::OcFileZipSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3825,7 +3825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFilterLg")]
-        Icon::OcFilterLg => {
+        OcIcon::OcFilterLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3837,7 +3837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFilterSm")]
-        Icon::OcFilterSm => {
+        OcIcon::OcFilterSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3849,7 +3849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFiscalHostSm")]
-        Icon::OcFiscalHostSm => {
+        OcIcon::OcFiscalHostSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3864,7 +3864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFlameLg")]
-        Icon::OcFlameLg => {
+        OcIcon::OcFlameLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3876,7 +3876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFlameSm")]
-        Icon::OcFlameSm => {
+        OcIcon::OcFlameSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3888,7 +3888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFoldDownLg")]
-        Icon::OcFoldDownLg => {
+        OcIcon::OcFoldDownLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3902,7 +3902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFoldDownSm")]
-        Icon::OcFoldDownSm => {
+        OcIcon::OcFoldDownSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3914,7 +3914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFoldLg")]
-        Icon::OcFoldLg => {
+        OcIcon::OcFoldLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3930,7 +3930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFoldSm")]
-        Icon::OcFoldSm => {
+        OcIcon::OcFoldSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3942,7 +3942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFoldUpLg")]
-        Icon::OcFoldUpLg => {
+        OcIcon::OcFoldUpLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3956,7 +3956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcFoldUpSm")]
-        Icon::OcFoldUpSm => {
+        OcIcon::OcFoldUpSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3968,7 +3968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGearLg")]
-        Icon::OcGearLg => {
+        OcIcon::OcGearLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3982,7 +3982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGearSm")]
-        Icon::OcGearSm => {
+        OcIcon::OcGearSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3994,7 +3994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGiftLg")]
-        Icon::OcGiftLg => {
+        OcIcon::OcGiftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4006,7 +4006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGiftSm")]
-        Icon::OcGiftSm => {
+        OcIcon::OcGiftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4018,7 +4018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitBranchLg")]
-        Icon::OcGitBranchLg => {
+        OcIcon::OcGitBranchLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4034,7 +4034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitBranchSm")]
-        Icon::OcGitBranchSm => {
+        OcIcon::OcGitBranchSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4046,7 +4046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitCommitLg")]
-        Icon::OcGitCommitLg => {
+        OcIcon::OcGitCommitLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4058,7 +4058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitCommitSm")]
-        Icon::OcGitCommitSm => {
+        OcIcon::OcGitCommitSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4070,7 +4070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitCompareLg")]
-        Icon::OcGitCompareLg => {
+        OcIcon::OcGitCompareLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4086,7 +4086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitCompareSm")]
-        Icon::OcGitCompareSm => {
+        OcIcon::OcGitCompareSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4098,7 +4098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitMergeLg")]
-        Icon::OcGitMergeLg => {
+        OcIcon::OcGitMergeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4114,7 +4114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitMergeQueueLg")]
-        Icon::OcGitMergeQueueLg => {
+        OcIcon::OcGitMergeQueueLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4126,7 +4126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitMergeQueueSm")]
-        Icon::OcGitMergeQueueSm => {
+        OcIcon::OcGitMergeQueueSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4138,7 +4138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitMergeSm")]
-        Icon::OcGitMergeSm => {
+        OcIcon::OcGitMergeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4150,7 +4150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitPullRequestClosedLg")]
-        Icon::OcGitPullRequestClosedLg => {
+        OcIcon::OcGitPullRequestClosedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4162,7 +4162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitPullRequestClosedSm")]
-        Icon::OcGitPullRequestClosedSm => {
+        OcIcon::OcGitPullRequestClosedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4174,7 +4174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitPullRequestDraftLg")]
-        Icon::OcGitPullRequestDraftLg => {
+        OcIcon::OcGitPullRequestDraftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4186,7 +4186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitPullRequestDraftSm")]
-        Icon::OcGitPullRequestDraftSm => {
+        OcIcon::OcGitPullRequestDraftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4198,7 +4198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitPullRequestLg")]
-        Icon::OcGitPullRequestLg => {
+        OcIcon::OcGitPullRequestLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4212,7 +4212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGitPullRequestSm")]
-        Icon::OcGitPullRequestSm => {
+        OcIcon::OcGitPullRequestSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4224,7 +4224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGlobeLg")]
-        Icon::OcGlobeLg => {
+        OcIcon::OcGlobeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4236,7 +4236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGlobeSm")]
-        Icon::OcGlobeSm => {
+        OcIcon::OcGlobeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4248,7 +4248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGoalLg")]
-        Icon::OcGoalLg => {
+        OcIcon::OcGoalLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4264,7 +4264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGoalSm")]
-        Icon::OcGoalSm => {
+        OcIcon::OcGoalSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4280,7 +4280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGrabberLg")]
-        Icon::OcGrabberLg => {
+        OcIcon::OcGrabberLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4292,7 +4292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGrabberSm")]
-        Icon::OcGrabberSm => {
+        OcIcon::OcGrabberSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4304,7 +4304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGraphLg")]
-        Icon::OcGraphLg => {
+        OcIcon::OcGraphLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4318,7 +4318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcGraphSm")]
-        Icon::OcGraphSm => {
+        OcIcon::OcGraphSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4330,7 +4330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHashLg")]
-        Icon::OcHashLg => {
+        OcIcon::OcHashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4342,7 +4342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHashSm")]
-        Icon::OcHashSm => {
+        OcIcon::OcHashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4354,7 +4354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHeadingLg")]
-        Icon::OcHeadingLg => {
+        OcIcon::OcHeadingLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4366,7 +4366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHeadingSm")]
-        Icon::OcHeadingSm => {
+        OcIcon::OcHeadingSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4378,7 +4378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHeartFillLg")]
-        Icon::OcHeartFillLg => {
+        OcIcon::OcHeartFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4390,7 +4390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHeartFillSm")]
-        Icon::OcHeartFillSm => {
+        OcIcon::OcHeartFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4402,7 +4402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHeartLg")]
-        Icon::OcHeartLg => {
+        OcIcon::OcHeartLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4414,7 +4414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHeartSm")]
-        Icon::OcHeartSm => {
+        OcIcon::OcHeartSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4426,7 +4426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHistoryLg")]
-        Icon::OcHistoryLg => {
+        OcIcon::OcHistoryLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4440,7 +4440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHistorySm")]
-        Icon::OcHistorySm => {
+        OcIcon::OcHistorySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4452,7 +4452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHomeFillLg")]
-        Icon::OcHomeFillLg => {
+        OcIcon::OcHomeFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4464,7 +4464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHomeLg")]
-        Icon::OcHomeLg => {
+        OcIcon::OcHomeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4476,7 +4476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHomeSm")]
-        Icon::OcHomeSm => {
+        OcIcon::OcHomeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4488,7 +4488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHorizontalRuleLg")]
-        Icon::OcHorizontalRuleLg => {
+        OcIcon::OcHorizontalRuleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4500,7 +4500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHorizontalRuleSm")]
-        Icon::OcHorizontalRuleSm => {
+        OcIcon::OcHorizontalRuleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4512,7 +4512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHourglassLg")]
-        Icon::OcHourglassLg => {
+        OcIcon::OcHourglassLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4524,7 +4524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHourglassSm")]
-        Icon::OcHourglassSm => {
+        OcIcon::OcHourglassSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4536,7 +4536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHubotLg")]
-        Icon::OcHubotLg => {
+        OcIcon::OcHubotLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4550,7 +4550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcHubotSm")]
-        Icon::OcHubotSm => {
+        OcIcon::OcHubotSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4562,7 +4562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIdBadgeSm")]
-        Icon::OcIdBadgeSm => {
+        OcIcon::OcIdBadgeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4576,7 +4576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcImageLg")]
-        Icon::OcImageLg => {
+        OcIcon::OcImageLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4588,7 +4588,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcImageSm")]
-        Icon::OcImageSm => {
+        OcIcon::OcImageSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4600,7 +4600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcInboxLg")]
-        Icon::OcInboxLg => {
+        OcIcon::OcInboxLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4612,7 +4612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcInboxSm")]
-        Icon::OcInboxSm => {
+        OcIcon::OcInboxSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4624,7 +4624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcInfinityLg")]
-        Icon::OcInfinityLg => {
+        OcIcon::OcInfinityLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4636,7 +4636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcInfinitySm")]
-        Icon::OcInfinitySm => {
+        OcIcon::OcInfinitySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4648,7 +4648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcInfoLg")]
-        Icon::OcInfoLg => {
+        OcIcon::OcInfoLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4662,7 +4662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcInfoSm")]
-        Icon::OcInfoSm => {
+        OcIcon::OcInfoSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4674,7 +4674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueClosedLg")]
-        Icon::OcIssueClosedLg => {
+        OcIcon::OcIssueClosedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4688,7 +4688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueClosedSm")]
-        Icon::OcIssueClosedSm => {
+        OcIcon::OcIssueClosedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4702,7 +4702,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueDraftLg")]
-        Icon::OcIssueDraftLg => {
+        OcIcon::OcIssueDraftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4714,7 +4714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueDraftSm")]
-        Icon::OcIssueDraftSm => {
+        OcIcon::OcIssueDraftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4726,7 +4726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueOpenedLg")]
-        Icon::OcIssueOpenedLg => {
+        OcIcon::OcIssueOpenedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4738,7 +4738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueOpenedSm")]
-        Icon::OcIssueOpenedSm => {
+        OcIcon::OcIssueOpenedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4751,7 +4751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueReopenedLg")]
-        Icon::OcIssueReopenedLg => {
+        OcIcon::OcIssueReopenedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4765,7 +4765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueReopenedSm")]
-        Icon::OcIssueReopenedSm => {
+        OcIcon::OcIssueReopenedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4779,7 +4779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueTrackedByLg")]
-        Icon::OcIssueTrackedByLg => {
+        OcIcon::OcIssueTrackedByLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4793,7 +4793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueTrackedBySm")]
-        Icon::OcIssueTrackedBySm => {
+        OcIcon::OcIssueTrackedBySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4807,7 +4807,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueTracksLg")]
-        Icon::OcIssueTracksLg => {
+        OcIcon::OcIssueTracksLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4821,7 +4821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIssueTracksSm")]
-        Icon::OcIssueTracksSm => {
+        OcIcon::OcIssueTracksSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4835,7 +4835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcItalicLg")]
-        Icon::OcItalicLg => {
+        OcIcon::OcItalicLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4847,7 +4847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcItalicSm")]
-        Icon::OcItalicSm => {
+        OcIcon::OcItalicSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4859,7 +4859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIterationsLg")]
-        Icon::OcIterationsLg => {
+        OcIcon::OcIterationsLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4871,7 +4871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcIterationsSm")]
-        Icon::OcIterationsSm => {
+        OcIcon::OcIterationsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4883,7 +4883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcKebabHorizontalLg")]
-        Icon::OcKebabHorizontalLg => {
+        OcIcon::OcKebabHorizontalLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4895,7 +4895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcKebabHorizontalSm")]
-        Icon::OcKebabHorizontalSm => {
+        OcIcon::OcKebabHorizontalSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4907,7 +4907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcKeyAsteriskSm")]
-        Icon::OcKeyAsteriskSm => {
+        OcIcon::OcKeyAsteriskSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4921,7 +4921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcKeyLg")]
-        Icon::OcKeyLg => {
+        OcIcon::OcKeyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4934,7 +4934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcKeySm")]
-        Icon::OcKeySm => {
+        OcIcon::OcKeySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4946,7 +4946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLawLg")]
-        Icon::OcLawLg => {
+        OcIcon::OcLawLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4958,7 +4958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLawSm")]
-        Icon::OcLawSm => {
+        OcIcon::OcLawSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4970,7 +4970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLightBulbLg")]
-        Icon::OcLightBulbLg => {
+        OcIcon::OcLightBulbLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4982,7 +4982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLightBulbSm")]
-        Icon::OcLightBulbSm => {
+        OcIcon::OcLightBulbSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4994,7 +4994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLinkExternalLg")]
-        Icon::OcLinkExternalLg => {
+        OcIcon::OcLinkExternalLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5008,7 +5008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLinkExternalSm")]
-        Icon::OcLinkExternalSm => {
+        OcIcon::OcLinkExternalSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5020,7 +5020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLinkLg")]
-        Icon::OcLinkLg => {
+        OcIcon::OcLinkLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5034,7 +5034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLinkSm")]
-        Icon::OcLinkSm => {
+        OcIcon::OcLinkSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5046,7 +5046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcListOrderedLg")]
-        Icon::OcListOrderedLg => {
+        OcIcon::OcListOrderedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5058,7 +5058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcListOrderedSm")]
-        Icon::OcListOrderedSm => {
+        OcIcon::OcListOrderedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5070,7 +5070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcListUnorderedLg")]
-        Icon::OcListUnorderedLg => {
+        OcIcon::OcListUnorderedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5082,7 +5082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcListUnorderedSm")]
-        Icon::OcListUnorderedSm => {
+        OcIcon::OcListUnorderedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5094,7 +5094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLocationLg")]
-        Icon::OcLocationLg => {
+        OcIcon::OcLocationLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5107,7 +5107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLocationSm")]
-        Icon::OcLocationSm => {
+        OcIcon::OcLocationSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5119,7 +5119,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLockLg")]
-        Icon::OcLockLg => {
+        OcIcon::OcLockLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5131,7 +5131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLockSm")]
-        Icon::OcLockSm => {
+        OcIcon::OcLockSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5143,7 +5143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLogLg")]
-        Icon::OcLogLg => {
+        OcIcon::OcLogLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5157,7 +5157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLogSm")]
-        Icon::OcLogSm => {
+        OcIcon::OcLogSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5171,7 +5171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLogoGistSm")]
-        Icon::OcLogoGistSm => {
+        OcIcon::OcLogoGistSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 25 16" fill = "currentColor" role =
@@ -5183,7 +5183,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcLogoGithubSm")]
-        Icon::OcLogoGithubSm => {
+        OcIcon::OcLogoGithubSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 45 16" fill = "currentColor" role =
@@ -5195,7 +5195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMailLg")]
-        Icon::OcMailLg => {
+        OcIcon::OcMailLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5207,7 +5207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMailSm")]
-        Icon::OcMailSm => {
+        OcIcon::OcMailSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5219,7 +5219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMarkGithubSm")]
-        Icon::OcMarkGithubSm => {
+        OcIcon::OcMarkGithubSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5231,7 +5231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMarkdownSm")]
-        Icon::OcMarkdownSm => {
+        OcIcon::OcMarkdownSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5243,7 +5243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMegaphoneLg")]
-        Icon::OcMegaphoneLg => {
+        OcIcon::OcMegaphoneLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5255,7 +5255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMegaphoneSm")]
-        Icon::OcMegaphoneSm => {
+        OcIcon::OcMegaphoneSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5271,7 +5271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMentionLg")]
-        Icon::OcMentionLg => {
+        OcIcon::OcMentionLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5283,7 +5283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMentionSm")]
-        Icon::OcMentionSm => {
+        OcIcon::OcMentionSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5295,7 +5295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMeterSm")]
-        Icon::OcMeterSm => {
+        OcIcon::OcMeterSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5307,7 +5307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMilestoneLg")]
-        Icon::OcMilestoneLg => {
+        OcIcon::OcMilestoneLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5319,7 +5319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMilestoneSm")]
-        Icon::OcMilestoneSm => {
+        OcIcon::OcMilestoneSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5331,7 +5331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMirrorLg")]
-        Icon::OcMirrorLg => {
+        OcIcon::OcMirrorLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5343,7 +5343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMirrorSm")]
-        Icon::OcMirrorSm => {
+        OcIcon::OcMirrorSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5355,7 +5355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoonLg")]
-        Icon::OcMoonLg => {
+        OcIcon::OcMoonLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5367,7 +5367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoonSm")]
-        Icon::OcMoonSm => {
+        OcIcon::OcMoonSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5379,7 +5379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMortarBoardLg")]
-        Icon::OcMortarBoardLg => {
+        OcIcon::OcMortarBoardLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5391,7 +5391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMortarBoardSm")]
-        Icon::OcMortarBoardSm => {
+        OcIcon::OcMortarBoardSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5403,7 +5403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToBottomLg")]
-        Icon::OcMoveToBottomLg => {
+        OcIcon::OcMoveToBottomLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5415,7 +5415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToBottomSm")]
-        Icon::OcMoveToBottomSm => {
+        OcIcon::OcMoveToBottomSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5427,7 +5427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToEndLg")]
-        Icon::OcMoveToEndLg => {
+        OcIcon::OcMoveToEndLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5439,7 +5439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToEndSm")]
-        Icon::OcMoveToEndSm => {
+        OcIcon::OcMoveToEndSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5451,7 +5451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToStartLg")]
-        Icon::OcMoveToStartLg => {
+        OcIcon::OcMoveToStartLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5463,7 +5463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToStartSm")]
-        Icon::OcMoveToStartSm => {
+        OcIcon::OcMoveToStartSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5475,7 +5475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToTopLg")]
-        Icon::OcMoveToTopLg => {
+        OcIcon::OcMoveToTopLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5487,7 +5487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMoveToTopSm")]
-        Icon::OcMoveToTopSm => {
+        OcIcon::OcMoveToTopSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5499,7 +5499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMultiSelectLg")]
-        Icon::OcMultiSelectLg => {
+        OcIcon::OcMultiSelectLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5511,7 +5511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMultiSelectSm")]
-        Icon::OcMultiSelectSm => {
+        OcIcon::OcMultiSelectSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5523,7 +5523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMuteLg")]
-        Icon::OcMuteLg => {
+        OcIcon::OcMuteLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5535,7 +5535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcMuteSm")]
-        Icon::OcMuteSm => {
+        OcIcon::OcMuteSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5547,7 +5547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNoEntryFillXs")]
-        Icon::OcNoEntryFillXs => {
+        OcIcon::OcNoEntryFillXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -5558,7 +5558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNoEntryLg")]
-        Icon::OcNoEntryLg => {
+        OcIcon::OcNoEntryLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5570,7 +5570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNoEntrySm")]
-        Icon::OcNoEntrySm => {
+        OcIcon::OcNoEntrySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5584,7 +5584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNorthStarLg")]
-        Icon::OcNorthStarLg => {
+        OcIcon::OcNorthStarLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5596,7 +5596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNorthStarSm")]
-        Icon::OcNorthStarSm => {
+        OcIcon::OcNorthStarSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5608,7 +5608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNoteLg")]
-        Icon::OcNoteLg => {
+        OcIcon::OcNoteLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5622,7 +5622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNoteSm")]
-        Icon::OcNoteSm => {
+        OcIcon::OcNoteSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5634,7 +5634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNumberLg")]
-        Icon::OcNumberLg => {
+        OcIcon::OcNumberLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5646,7 +5646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcNumberSm")]
-        Icon::OcNumberSm => {
+        OcIcon::OcNumberSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5658,7 +5658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcOrganizationLg")]
-        Icon::OcOrganizationLg => {
+        OcIcon::OcOrganizationLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5672,7 +5672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcOrganizationSm")]
-        Icon::OcOrganizationSm => {
+        OcIcon::OcOrganizationSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5684,7 +5684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPackageDependenciesLg")]
-        Icon::OcPackageDependenciesLg => {
+        OcIcon::OcPackageDependenciesLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5698,7 +5698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPackageDependenciesSm")]
-        Icon::OcPackageDependenciesSm => {
+        OcIcon::OcPackageDependenciesSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5710,7 +5710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPackageDependentsLg")]
-        Icon::OcPackageDependentsLg => {
+        OcIcon::OcPackageDependentsLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5724,7 +5724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPackageDependentsSm")]
-        Icon::OcPackageDependentsSm => {
+        OcIcon::OcPackageDependentsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5736,7 +5736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPackageLg")]
-        Icon::OcPackageLg => {
+        OcIcon::OcPackageLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5748,7 +5748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPackageSm")]
-        Icon::OcPackageSm => {
+        OcIcon::OcPackageSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5760,7 +5760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPaintbrushSm")]
-        Icon::OcPaintbrushSm => {
+        OcIcon::OcPaintbrushSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5772,7 +5772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPaperAirplaneLg")]
-        Icon::OcPaperAirplaneLg => {
+        OcIcon::OcPaperAirplaneLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5784,7 +5784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPaperAirplaneSm")]
-        Icon::OcPaperAirplaneSm => {
+        OcIcon::OcPaperAirplaneSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5796,7 +5796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPaperclipLg")]
-        Icon::OcPaperclipLg => {
+        OcIcon::OcPaperclipLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5808,7 +5808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPaperclipSm")]
-        Icon::OcPaperclipSm => {
+        OcIcon::OcPaperclipSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5820,7 +5820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPasskeyFillLg")]
-        Icon::OcPasskeyFillLg => {
+        OcIcon::OcPasskeyFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5834,7 +5834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPasskeyFillSm")]
-        Icon::OcPasskeyFillSm => {
+        OcIcon::OcPasskeyFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5848,7 +5848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPasteLg")]
-        Icon::OcPasteLg => {
+        OcIcon::OcPasteLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5862,7 +5862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPasteSm")]
-        Icon::OcPasteSm => {
+        OcIcon::OcPasteSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5874,7 +5874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPencilLg")]
-        Icon::OcPencilLg => {
+        OcIcon::OcPencilLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5886,7 +5886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPencilSm")]
-        Icon::OcPencilSm => {
+        OcIcon::OcPencilSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5898,7 +5898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPeopleLg")]
-        Icon::OcPeopleLg => {
+        OcIcon::OcPeopleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5910,7 +5910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPeopleSm")]
-        Icon::OcPeopleSm => {
+        OcIcon::OcPeopleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5922,7 +5922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPersonAddLg")]
-        Icon::OcPersonAddLg => {
+        OcIcon::OcPersonAddLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5934,7 +5934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPersonAddSm")]
-        Icon::OcPersonAddSm => {
+        OcIcon::OcPersonAddSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5946,7 +5946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPersonFillLg")]
-        Icon::OcPersonFillLg => {
+        OcIcon::OcPersonFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5958,7 +5958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPersonFillSm")]
-        Icon::OcPersonFillSm => {
+        OcIcon::OcPersonFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5970,7 +5970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPersonLg")]
-        Icon::OcPersonLg => {
+        OcIcon::OcPersonLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5982,7 +5982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPersonSm")]
-        Icon::OcPersonSm => {
+        OcIcon::OcPersonSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5994,7 +5994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPinLg")]
-        Icon::OcPinLg => {
+        OcIcon::OcPinLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6006,7 +6006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPinSm")]
-        Icon::OcPinSm => {
+        OcIcon::OcPinSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6018,7 +6018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlayLg")]
-        Icon::OcPlayLg => {
+        OcIcon::OcPlayLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6032,7 +6032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlaySm")]
-        Icon::OcPlaySm => {
+        OcIcon::OcPlaySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6044,7 +6044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlugLg")]
-        Icon::OcPlugLg => {
+        OcIcon::OcPlugLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6056,7 +6056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlugSm")]
-        Icon::OcPlugSm => {
+        OcIcon::OcPlugSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6068,7 +6068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlusCircleLg")]
-        Icon::OcPlusCircleLg => {
+        OcIcon::OcPlusCircleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6082,7 +6082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlusCircleSm")]
-        Icon::OcPlusCircleSm => {
+        OcIcon::OcPlusCircleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6094,7 +6094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlusLg")]
-        Icon::OcPlusLg => {
+        OcIcon::OcPlusLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6106,7 +6106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPlusSm")]
-        Icon::OcPlusSm => {
+        OcIcon::OcPlusSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6118,7 +6118,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectLg")]
-        Icon::OcProjectLg => {
+        OcIcon::OcProjectLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6132,7 +6132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectRoadmapLg")]
-        Icon::OcProjectRoadmapLg => {
+        OcIcon::OcProjectRoadmapLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6146,7 +6146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectRoadmapSm")]
-        Icon::OcProjectRoadmapSm => {
+        OcIcon::OcProjectRoadmapSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6160,7 +6160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectSm")]
-        Icon::OcProjectSm => {
+        OcIcon::OcProjectSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6172,7 +6172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectSymlinkLg")]
-        Icon::OcProjectSymlinkLg => {
+        OcIcon::OcProjectSymlinkLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6186,7 +6186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectSymlinkSm")]
-        Icon::OcProjectSymlinkSm => {
+        OcIcon::OcProjectSymlinkSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6200,7 +6200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectTemplateLg")]
-        Icon::OcProjectTemplateLg => {
+        OcIcon::OcProjectTemplateLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6212,7 +6212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcProjectTemplateSm")]
-        Icon::OcProjectTemplateSm => {
+        OcIcon::OcProjectTemplateSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6224,7 +6224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPulseLg")]
-        Icon::OcPulseLg => {
+        OcIcon::OcPulseLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6236,7 +6236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcPulseSm")]
-        Icon::OcPulseSm => {
+        OcIcon::OcPulseSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6248,7 +6248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcQuestionLg")]
-        Icon::OcQuestionLg => {
+        OcIcon::OcQuestionLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6262,7 +6262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcQuestionSm")]
-        Icon::OcQuestionSm => {
+        OcIcon::OcQuestionSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6274,7 +6274,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcQuoteLg")]
-        Icon::OcQuoteLg => {
+        OcIcon::OcQuoteLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6286,7 +6286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcQuoteSm")]
-        Icon::OcQuoteSm => {
+        OcIcon::OcQuoteSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6298,7 +6298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcReadLg")]
-        Icon::OcReadLg => {
+        OcIcon::OcReadLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6310,7 +6310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcReadSm")]
-        Icon::OcReadSm => {
+        OcIcon::OcReadSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6322,7 +6322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRelFilePathLg")]
-        Icon::OcRelFilePathLg => {
+        OcIcon::OcRelFilePathLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6334,7 +6334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRelFilePathSm")]
-        Icon::OcRelFilePathSm => {
+        OcIcon::OcRelFilePathSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6346,7 +6346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcReplyLg")]
-        Icon::OcReplyLg => {
+        OcIcon::OcReplyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6358,7 +6358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcReplySm")]
-        Icon::OcReplySm => {
+        OcIcon::OcReplySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6370,7 +6370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoCloneSm")]
-        Icon::OcRepoCloneSm => {
+        OcIcon::OcRepoCloneSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6382,7 +6382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoDeletedSm")]
-        Icon::OcRepoDeletedSm => {
+        OcIcon::OcRepoDeletedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6396,7 +6396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoForkedLg")]
-        Icon::OcRepoForkedLg => {
+        OcIcon::OcRepoForkedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6410,7 +6410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoForkedSm")]
-        Icon::OcRepoForkedSm => {
+        OcIcon::OcRepoForkedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6422,7 +6422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoLg")]
-        Icon::OcRepoLg => {
+        OcIcon::OcRepoLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6436,7 +6436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoLockedLg")]
-        Icon::OcRepoLockedLg => {
+        OcIcon::OcRepoLockedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6450,7 +6450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoLockedSm")]
-        Icon::OcRepoLockedSm => {
+        OcIcon::OcRepoLockedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6464,7 +6464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoPullSm")]
-        Icon::OcRepoPullSm => {
+        OcIcon::OcRepoPullSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6476,7 +6476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoPushLg")]
-        Icon::OcRepoPushLg => {
+        OcIcon::OcRepoPushLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6490,7 +6490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoPushSm")]
-        Icon::OcRepoPushSm => {
+        OcIcon::OcRepoPushSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6502,7 +6502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoSm")]
-        Icon::OcRepoSm => {
+        OcIcon::OcRepoSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6514,7 +6514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoTemplateLg")]
-        Icon::OcRepoTemplateLg => {
+        OcIcon::OcRepoTemplateLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6526,7 +6526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRepoTemplateSm")]
-        Icon::OcRepoTemplateSm => {
+        OcIcon::OcRepoTemplateSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6538,7 +6538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcReportLg")]
-        Icon::OcReportLg => {
+        OcIcon::OcReportLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6550,7 +6550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcReportSm")]
-        Icon::OcReportSm => {
+        OcIcon::OcReportSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6562,7 +6562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRocketLg")]
-        Icon::OcRocketLg => {
+        OcIcon::OcRocketLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6574,7 +6574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRocketSm")]
-        Icon::OcRocketSm => {
+        OcIcon::OcRocketSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6586,7 +6586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRowsLg")]
-        Icon::OcRowsLg => {
+        OcIcon::OcRowsLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6598,7 +6598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRowsSm")]
-        Icon::OcRowsSm => {
+        OcIcon::OcRowsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6610,7 +6610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRssLg")]
-        Icon::OcRssLg => {
+        OcIcon::OcRssLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6622,7 +6622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRssSm")]
-        Icon::OcRssSm => {
+        OcIcon::OcRssSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6634,7 +6634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRubyLg")]
-        Icon::OcRubyLg => {
+        OcIcon::OcRubyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6646,7 +6646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcRubySm")]
-        Icon::OcRubySm => {
+        OcIcon::OcRubySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6658,7 +6658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcScreenFullLg")]
-        Icon::OcScreenFullLg => {
+        OcIcon::OcScreenFullLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6670,7 +6670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcScreenFullSm")]
-        Icon::OcScreenFullSm => {
+        OcIcon::OcScreenFullSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6682,7 +6682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcScreenNormalLg")]
-        Icon::OcScreenNormalLg => {
+        OcIcon::OcScreenNormalLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6694,7 +6694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcScreenNormalSm")]
-        Icon::OcScreenNormalSm => {
+        OcIcon::OcScreenNormalSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6706,7 +6706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSearchLg")]
-        Icon::OcSearchLg => {
+        OcIcon::OcSearchLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6718,7 +6718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSearchSm")]
-        Icon::OcSearchSm => {
+        OcIcon::OcSearchSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6730,7 +6730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcServerLg")]
-        Icon::OcServerLg => {
+        OcIcon::OcServerLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6744,7 +6744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcServerSm")]
-        Icon::OcServerSm => {
+        OcIcon::OcServerSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6756,7 +6756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShareAndroidLg")]
-        Icon::OcShareAndroidLg => {
+        OcIcon::OcShareAndroidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6768,7 +6768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShareAndroidSm")]
-        Icon::OcShareAndroidSm => {
+        OcIcon::OcShareAndroidSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6780,7 +6780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShareLg")]
-        Icon::OcShareLg => {
+        OcIcon::OcShareLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6792,7 +6792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShareSm")]
-        Icon::OcShareSm => {
+        OcIcon::OcShareSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6804,7 +6804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldCheckLg")]
-        Icon::OcShieldCheckLg => {
+        OcIcon::OcShieldCheckLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6818,7 +6818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldCheckSm")]
-        Icon::OcShieldCheckSm => {
+        OcIcon::OcShieldCheckSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6830,7 +6830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldLg")]
-        Icon::OcShieldLg => {
+        OcIcon::OcShieldLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6844,7 +6844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldLockLg")]
-        Icon::OcShieldLockLg => {
+        OcIcon::OcShieldLockLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6856,7 +6856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldLockSm")]
-        Icon::OcShieldLockSm => {
+        OcIcon::OcShieldLockSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6868,7 +6868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldSlashLg")]
-        Icon::OcShieldSlashLg => {
+        OcIcon::OcShieldSlashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6880,7 +6880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldSlashSm")]
-        Icon::OcShieldSlashSm => {
+        OcIcon::OcShieldSlashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6892,7 +6892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldSm")]
-        Icon::OcShieldSm => {
+        OcIcon::OcShieldSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6904,7 +6904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldXLg")]
-        Icon::OcShieldXLg => {
+        OcIcon::OcShieldXLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6918,7 +6918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcShieldXSm")]
-        Icon::OcShieldXSm => {
+        OcIcon::OcShieldXSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6930,7 +6930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSidebarCollapseLg")]
-        Icon::OcSidebarCollapseLg => {
+        OcIcon::OcSidebarCollapseLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6944,7 +6944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSidebarCollapseSm")]
-        Icon::OcSidebarCollapseSm => {
+        OcIcon::OcSidebarCollapseSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6958,7 +6958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSidebarExpandLg")]
-        Icon::OcSidebarExpandLg => {
+        OcIcon::OcSidebarExpandLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6972,7 +6972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSidebarExpandSm")]
-        Icon::OcSidebarExpandSm => {
+        OcIcon::OcSidebarExpandSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6986,7 +6986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSignInLg")]
-        Icon::OcSignInLg => {
+        OcIcon::OcSignInLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6998,7 +6998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSignInSm")]
-        Icon::OcSignInSm => {
+        OcIcon::OcSignInSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7010,7 +7010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSignOutLg")]
-        Icon::OcSignOutLg => {
+        OcIcon::OcSignOutLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7022,7 +7022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSignOutSm")]
-        Icon::OcSignOutSm => {
+        OcIcon::OcSignOutSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7034,7 +7034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSingleSelectLg")]
-        Icon::OcSingleSelectLg => {
+        OcIcon::OcSingleSelectLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7048,7 +7048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSingleSelectSm")]
-        Icon::OcSingleSelectSm => {
+        OcIcon::OcSingleSelectSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7062,7 +7062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSkipFillLg")]
-        Icon::OcSkipFillLg => {
+        OcIcon::OcSkipFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7074,7 +7074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSkipFillSm")]
-        Icon::OcSkipFillSm => {
+        OcIcon::OcSkipFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7086,7 +7086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSkipLg")]
-        Icon::OcSkipLg => {
+        OcIcon::OcSkipLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7100,7 +7100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSkipSm")]
-        Icon::OcSkipSm => {
+        OcIcon::OcSkipSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7112,7 +7112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSlidersSm")]
-        Icon::OcSlidersSm => {
+        OcIcon::OcSlidersSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7124,7 +7124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSmileyLg")]
-        Icon::OcSmileyLg => {
+        OcIcon::OcSmileyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7140,7 +7140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSmileySm")]
-        Icon::OcSmileySm => {
+        OcIcon::OcSmileySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7152,7 +7152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSortAscLg")]
-        Icon::OcSortAscLg => {
+        OcIcon::OcSortAscLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7164,7 +7164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSortAscSm")]
-        Icon::OcSortAscSm => {
+        OcIcon::OcSortAscSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7176,7 +7176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSortDescLg")]
-        Icon::OcSortDescLg => {
+        OcIcon::OcSortDescLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7188,7 +7188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSortDescSm")]
-        Icon::OcSortDescSm => {
+        OcIcon::OcSortDescSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7200,7 +7200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSparkleFillSm")]
-        Icon::OcSparkleFillSm => {
+        OcIcon::OcSparkleFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7212,7 +7212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSponsorTiersLg")]
-        Icon::OcSponsorTiersLg => {
+        OcIcon::OcSponsorTiersLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7224,7 +7224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSponsorTiersSm")]
-        Icon::OcSponsorTiersSm => {
+        OcIcon::OcSponsorTiersSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7236,7 +7236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSquareFillLg")]
-        Icon::OcSquareFillLg => {
+        OcIcon::OcSquareFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7248,7 +7248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSquareFillSm")]
-        Icon::OcSquareFillSm => {
+        OcIcon::OcSquareFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7260,7 +7260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSquareLg")]
-        Icon::OcSquareLg => {
+        OcIcon::OcSquareLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7272,7 +7272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSquareSm")]
-        Icon::OcSquareSm => {
+        OcIcon::OcSquareSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7284,7 +7284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSquirrelLg")]
-        Icon::OcSquirrelLg => {
+        OcIcon::OcSquirrelLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7296,7 +7296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSquirrelSm")]
-        Icon::OcSquirrelSm => {
+        OcIcon::OcSquirrelSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7308,7 +7308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStackLg")]
-        Icon::OcStackLg => {
+        OcIcon::OcStackLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7324,7 +7324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStackSm")]
-        Icon::OcStackSm => {
+        OcIcon::OcStackSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7336,7 +7336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStarFillLg")]
-        Icon::OcStarFillLg => {
+        OcIcon::OcStarFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7348,7 +7348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStarFillSm")]
-        Icon::OcStarFillSm => {
+        OcIcon::OcStarFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7360,7 +7360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStarLg")]
-        Icon::OcStarLg => {
+        OcIcon::OcStarLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7372,7 +7372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStarSm")]
-        Icon::OcStarSm => {
+        OcIcon::OcStarSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7384,7 +7384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStopLg")]
-        Icon::OcStopLg => {
+        OcIcon::OcStopLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7398,7 +7398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStopSm")]
-        Icon::OcStopSm => {
+        OcIcon::OcStopSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7410,7 +7410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStopwatchLg")]
-        Icon::OcStopwatchLg => {
+        OcIcon::OcStopwatchLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7422,7 +7422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStopwatchSm")]
-        Icon::OcStopwatchSm => {
+        OcIcon::OcStopwatchSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7434,7 +7434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStrikethroughLg")]
-        Icon::OcStrikethroughLg => {
+        OcIcon::OcStrikethroughLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7446,7 +7446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcStrikethroughSm")]
-        Icon::OcStrikethroughSm => {
+        OcIcon::OcStrikethroughSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7458,7 +7458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSunLg")]
-        Icon::OcSunLg => {
+        OcIcon::OcSunLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7470,7 +7470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSunSm")]
-        Icon::OcSunSm => {
+        OcIcon::OcSunSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7482,7 +7482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSyncLg")]
-        Icon::OcSyncLg => {
+        OcIcon::OcSyncLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7494,7 +7494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcSyncSm")]
-        Icon::OcSyncSm => {
+        OcIcon::OcSyncSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7506,7 +7506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTabExternalSm")]
-        Icon::OcTabExternalSm => {
+        OcIcon::OcTabExternalSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7520,7 +7520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTabLg")]
-        Icon::OcTabLg => {
+        OcIcon::OcTabLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7532,7 +7532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTableLg")]
-        Icon::OcTableLg => {
+        OcIcon::OcTableLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7544,7 +7544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTableSm")]
-        Icon::OcTableSm => {
+        OcIcon::OcTableSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7556,7 +7556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTagLg")]
-        Icon::OcTagLg => {
+        OcIcon::OcTagLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7569,7 +7569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTagSm")]
-        Icon::OcTagSm => {
+        OcIcon::OcTagSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7581,7 +7581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTasklistLg")]
-        Icon::OcTasklistLg => {
+        OcIcon::OcTasklistLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7593,7 +7593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTasklistSm")]
-        Icon::OcTasklistSm => {
+        OcIcon::OcTasklistSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7605,7 +7605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTelescopeFillLg")]
-        Icon::OcTelescopeFillLg => {
+        OcIcon::OcTelescopeFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7617,7 +7617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTelescopeFillSm")]
-        Icon::OcTelescopeFillSm => {
+        OcIcon::OcTelescopeFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7629,7 +7629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTelescopeLg")]
-        Icon::OcTelescopeLg => {
+        OcIcon::OcTelescopeLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7641,7 +7641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTelescopeSm")]
-        Icon::OcTelescopeSm => {
+        OcIcon::OcTelescopeSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7653,7 +7653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTerminalLg")]
-        Icon::OcTerminalLg => {
+        OcIcon::OcTerminalLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7667,7 +7667,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTerminalSm")]
-        Icon::OcTerminalSm => {
+        OcIcon::OcTerminalSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7679,7 +7679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcThreeBarsSm")]
-        Icon::OcThreeBarsSm => {
+        OcIcon::OcThreeBarsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7691,7 +7691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcThumbsdownLg")]
-        Icon::OcThumbsdownLg => {
+        OcIcon::OcThumbsdownLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7703,7 +7703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcThumbsdownSm")]
-        Icon::OcThumbsdownSm => {
+        OcIcon::OcThumbsdownSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7715,7 +7715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcThumbsupLg")]
-        Icon::OcThumbsupLg => {
+        OcIcon::OcThumbsupLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7727,7 +7727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcThumbsupSm")]
-        Icon::OcThumbsupSm => {
+        OcIcon::OcThumbsupSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7739,7 +7739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcToolsLg")]
-        Icon::OcToolsLg => {
+        OcIcon::OcToolsLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7751,7 +7751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcToolsSm")]
-        Icon::OcToolsSm => {
+        OcIcon::OcToolsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7763,7 +7763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTrashLg")]
-        Icon::OcTrashLg => {
+        OcIcon::OcTrashLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7777,7 +7777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTrashSm")]
-        Icon::OcTrashSm => {
+        OcIcon::OcTrashSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7789,7 +7789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleDownLg")]
-        Icon::OcTriangleDownLg => {
+        OcIcon::OcTriangleDownLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7801,7 +7801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleDownSm")]
-        Icon::OcTriangleDownSm => {
+        OcIcon::OcTriangleDownSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7813,7 +7813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleLeftLg")]
-        Icon::OcTriangleLeftLg => {
+        OcIcon::OcTriangleLeftLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7825,7 +7825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleLeftSm")]
-        Icon::OcTriangleLeftSm => {
+        OcIcon::OcTriangleLeftSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7837,7 +7837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleRightLg")]
-        Icon::OcTriangleRightLg => {
+        OcIcon::OcTriangleRightLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7849,7 +7849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleRightSm")]
-        Icon::OcTriangleRightSm => {
+        OcIcon::OcTriangleRightSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7861,7 +7861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleUpLg")]
-        Icon::OcTriangleUpLg => {
+        OcIcon::OcTriangleUpLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7873,7 +7873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTriangleUpSm")]
-        Icon::OcTriangleUpSm => {
+        OcIcon::OcTriangleUpSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7885,7 +7885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTrophyLg")]
-        Icon::OcTrophyLg => {
+        OcIcon::OcTrophyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7897,7 +7897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTrophySm")]
-        Icon::OcTrophySm => {
+        OcIcon::OcTrophySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7909,7 +7909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTypographyLg")]
-        Icon::OcTypographyLg => {
+        OcIcon::OcTypographyLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7921,7 +7921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcTypographySm")]
-        Icon::OcTypographySm => {
+        OcIcon::OcTypographySm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7933,7 +7933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnfoldLg")]
-        Icon::OcUnfoldLg => {
+        OcIcon::OcUnfoldLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7949,7 +7949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnfoldSm")]
-        Icon::OcUnfoldSm => {
+        OcIcon::OcUnfoldSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7961,7 +7961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnlinkLg")]
-        Icon::OcUnlinkLg => {
+        OcIcon::OcUnlinkLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7973,7 +7973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnlinkSm")]
-        Icon::OcUnlinkSm => {
+        OcIcon::OcUnlinkSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -7985,7 +7985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnlockLg")]
-        Icon::OcUnlockLg => {
+        OcIcon::OcUnlockLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7997,7 +7997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnlockSm")]
-        Icon::OcUnlockSm => {
+        OcIcon::OcUnlockSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8009,7 +8009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnmuteLg")]
-        Icon::OcUnmuteLg => {
+        OcIcon::OcUnmuteLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8023,7 +8023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnmuteSm")]
-        Icon::OcUnmuteSm => {
+        OcIcon::OcUnmuteSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8035,7 +8035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnreadLg")]
-        Icon::OcUnreadLg => {
+        OcIcon::OcUnreadLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8047,7 +8047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnreadSm")]
-        Icon::OcUnreadSm => {
+        OcIcon::OcUnreadSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8059,7 +8059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnverifiedLg")]
-        Icon::OcUnverifiedLg => {
+        OcIcon::OcUnverifiedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8073,7 +8073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUnverifiedSm")]
-        Icon::OcUnverifiedSm => {
+        OcIcon::OcUnverifiedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8085,7 +8085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUploadLg")]
-        Icon::OcUploadLg => {
+        OcIcon::OcUploadLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8099,7 +8099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcUploadSm")]
-        Icon::OcUploadSm => {
+        OcIcon::OcUploadSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8113,7 +8113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcVerifiedLg")]
-        Icon::OcVerifiedLg => {
+        OcIcon::OcVerifiedLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8127,7 +8127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcVerifiedSm")]
-        Icon::OcVerifiedSm => {
+        OcIcon::OcVerifiedSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8139,7 +8139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcVersionsLg")]
-        Icon::OcVersionsLg => {
+        OcIcon::OcVersionsLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8151,7 +8151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcVersionsSm")]
-        Icon::OcVersionsSm => {
+        OcIcon::OcVersionsSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8163,7 +8163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcVideoLg")]
-        Icon::OcVideoLg => {
+        OcIcon::OcVideoLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8177,7 +8177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcVideoSm")]
-        Icon::OcVideoSm => {
+        OcIcon::OcVideoSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8191,7 +8191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcWebhookSm")]
-        Icon::OcWebhookSm => {
+        OcIcon::OcWebhookSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8207,7 +8207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcWorkflowLg")]
-        Icon::OcWorkflowLg => {
+        OcIcon::OcWorkflowLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8219,7 +8219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcWorkflowSm")]
-        Icon::OcWorkflowSm => {
+        OcIcon::OcWorkflowSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8231,7 +8231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXCircleFillLg")]
-        Icon::OcXCircleFillLg => {
+        OcIcon::OcXCircleFillLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8243,7 +8243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXCircleFillSm")]
-        Icon::OcXCircleFillSm => {
+        OcIcon::OcXCircleFillSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8255,7 +8255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXCircleFillXs")]
-        Icon::OcXCircleFillXs => {
+        OcIcon::OcXCircleFillXs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 12 12" fill = "currentColor" role =
@@ -8267,7 +8267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXCircleLg")]
-        Icon::OcXCircleLg => {
+        OcIcon::OcXCircleLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8281,7 +8281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXCircleSm")]
-        Icon::OcXCircleSm => {
+        OcIcon::OcXCircleSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8293,7 +8293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXLg")]
-        Icon::OcXLg => {
+        OcIcon::OcXLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8305,7 +8305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcXSm")]
-        Icon::OcXSm => {
+        OcIcon::OcXSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8317,7 +8317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcZapLg")]
-        Icon::OcZapLg => {
+        OcIcon::OcZapLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8329,7 +8329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcZapSm")]
-        Icon::OcZapSm => {
+        OcIcon::OcZapSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8341,7 +8341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcZoomInLg")]
-        Icon::OcZoomInLg => {
+        OcIcon::OcZoomInLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8355,7 +8355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcZoomInSm")]
-        Icon::OcZoomInSm => {
+        OcIcon::OcZoomInSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -8369,7 +8369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcZoomOutLg")]
-        Icon::OcZoomOutLg => {
+        OcIcon::OcZoomOutLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8382,7 +8382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "OcZoomOutSm")]
-        Icon::OcZoomOutSm => {
+        OcIcon::OcZoomOutSm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =

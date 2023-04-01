@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum IoIcon {
     #[cfg(feature = "IoAccessibility")]
     IoAccessibility,
     #[cfg(feature = "IoAccessibilityOutline")]
@@ -2699,12 +2699,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosIoIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: IoIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -2728,7 +2728,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "IoAccessibility")]
-        Icon::IoAccessibility => {
+        IoIcon::IoAccessibility => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2741,7 +2741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAccessibilityOutline")]
-        Icon::IoAccessibilityOutline => {
+        IoIcon::IoAccessibilityOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2756,7 +2756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAccessibilitySharp")]
-        Icon::IoAccessibilitySharp => {
+        IoIcon::IoAccessibilitySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2769,7 +2769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAdd")]
-        Icon::IoAdd => {
+        IoIcon::IoAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2784,7 +2784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAddCircle")]
-        Icon::IoAddCircle => {
+        IoIcon::IoAddCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2796,7 +2796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAddCircleOutline")]
-        Icon::IoAddCircleOutline => {
+        IoIcon::IoAddCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2813,7 +2813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAddCircleSharp")]
-        Icon::IoAddCircleSharp => {
+        IoIcon::IoAddCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2825,7 +2825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAddOutline")]
-        Icon::IoAddOutline => {
+        IoIcon::IoAddOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2840,7 +2840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAddSharp")]
-        Icon::IoAddSharp => {
+        IoIcon::IoAddSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2855,7 +2855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAirplane")]
-        Icon::IoAirplane => {
+        IoIcon::IoAirplane => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2867,7 +2867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAirplaneOutline")]
-        Icon::IoAirplaneOutline => {
+        IoIcon::IoAirplaneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2881,7 +2881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAirplaneSharp")]
-        Icon::IoAirplaneSharp => {
+        IoIcon::IoAirplaneSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2893,7 +2893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlarm")]
-        Icon::IoAlarm => {
+        IoIcon::IoAlarm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2909,7 +2909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlarmOutline")]
-        Icon::IoAlarmOutline => {
+        IoIcon::IoAlarmOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2934,7 +2934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlarmSharp")]
-        Icon::IoAlarmSharp => {
+        IoIcon::IoAlarmSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2950,7 +2950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlbums")]
-        Icon::IoAlbums => {
+        IoIcon::IoAlbums => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2964,7 +2964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlbumsOutline")]
-        Icon::IoAlbumsOutline => {
+        IoIcon::IoAlbumsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2981,7 +2981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlbumsSharp")]
-        Icon::IoAlbumsSharp => {
+        IoIcon::IoAlbumsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -2993,7 +2993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlert")]
-        Icon::IoAlert => {
+        IoIcon::IoAlert => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3009,7 +3009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlertCircle")]
-        Icon::IoAlertCircle => {
+        IoIcon::IoAlertCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3021,7 +3021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlertCircleOutline")]
-        Icon::IoAlertCircleOutline => {
+        IoIcon::IoAlertCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3039,7 +3039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlertCircleSharp")]
-        Icon::IoAlertCircleSharp => {
+        IoIcon::IoAlertCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3053,7 +3053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlertOutline")]
-        Icon::IoAlertOutline => {
+        IoIcon::IoAlertOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3069,7 +3069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAlertSharp")]
-        Icon::IoAlertSharp => {
+        IoIcon::IoAlertSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3084,7 +3084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAmericanFootball")]
-        Icon::IoAmericanFootball => {
+        IoIcon::IoAmericanFootball => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3100,7 +3100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAmericanFootballOutline")]
-        Icon::IoAmericanFootballOutline => {
+        IoIcon::IoAmericanFootballOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3126,7 +3126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAmericanFootballSharp")]
-        Icon::IoAmericanFootballSharp => {
+        IoIcon::IoAmericanFootballSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3142,7 +3142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAnalytics")]
-        Icon::IoAnalytics => {
+        IoIcon::IoAnalytics => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3154,7 +3154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAnalyticsOutline")]
-        Icon::IoAnalyticsOutline => {
+        IoIcon::IoAnalyticsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3179,7 +3179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAnalyticsSharp")]
-        Icon::IoAnalyticsSharp => {
+        IoIcon::IoAnalyticsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3191,7 +3191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAperture")]
-        Icon::IoAperture => {
+        IoIcon::IoAperture => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3219,7 +3219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoApertureOutline")]
-        Icon::IoApertureOutline => {
+        IoIcon::IoApertureOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3248,7 +3248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoApertureSharp")]
-        Icon::IoApertureSharp => {
+        IoIcon::IoApertureSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3268,7 +3268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoApps")]
-        Icon::IoApps => {
+        IoIcon::IoApps => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3287,7 +3287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAppsOutline")]
-        Icon::IoAppsOutline => {
+        IoIcon::IoAppsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3316,7 +3316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAppsSharp")]
-        Icon::IoAppsSharp => {
+        IoIcon::IoAppsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3336,7 +3336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArchive")]
-        Icon::IoArchive => {
+        IoIcon::IoArchive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3349,7 +3349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArchiveOutline")]
-        Icon::IoArchiveOutline => {
+        IoIcon::IoArchiveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3370,7 +3370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArchiveSharp")]
-        Icon::IoArchiveSharp => {
+        IoIcon::IoArchiveSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3383,7 +3383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowBack")]
-        Icon::IoArrowBack => {
+        IoIcon::IoArrowBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3398,7 +3398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowBackCircle")]
-        Icon::IoArrowBackCircle => {
+        IoIcon::IoArrowBackCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3410,7 +3410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowBackCircleOutline")]
-        Icon::IoArrowBackCircleOutline => {
+        IoIcon::IoArrowBackCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3428,7 +3428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowBackCircleSharp")]
-        Icon::IoArrowBackCircleSharp => {
+        IoIcon::IoArrowBackCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3440,7 +3440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowBackOutline")]
-        Icon::IoArrowBackOutline => {
+        IoIcon::IoArrowBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3455,7 +3455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowBackSharp")]
-        Icon::IoArrowBackSharp => {
+        IoIcon::IoArrowBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3470,7 +3470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowDown")]
-        Icon::IoArrowDown => {
+        IoIcon::IoArrowDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3485,7 +3485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowDownCircle")]
-        Icon::IoArrowDownCircle => {
+        IoIcon::IoArrowDownCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3497,7 +3497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowDownCircleOutline")]
-        Icon::IoArrowDownCircleOutline => {
+        IoIcon::IoArrowDownCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3515,7 +3515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowDownCircleSharp")]
-        Icon::IoArrowDownCircleSharp => {
+        IoIcon::IoArrowDownCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3527,7 +3527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowDownOutline")]
-        Icon::IoArrowDownOutline => {
+        IoIcon::IoArrowDownOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3542,7 +3542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowDownSharp")]
-        Icon::IoArrowDownSharp => {
+        IoIcon::IoArrowDownSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3557,7 +3557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowForward")]
-        Icon::IoArrowForward => {
+        IoIcon::IoArrowForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3572,7 +3572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowForwardCircle")]
-        Icon::IoArrowForwardCircle => {
+        IoIcon::IoArrowForwardCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3584,7 +3584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowForwardCircleOutline")]
-        Icon::IoArrowForwardCircleOutline => {
+        IoIcon::IoArrowForwardCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3602,7 +3602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowForwardCircleSharp")]
-        Icon::IoArrowForwardCircleSharp => {
+        IoIcon::IoArrowForwardCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3614,7 +3614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowForwardOutline")]
-        Icon::IoArrowForwardOutline => {
+        IoIcon::IoArrowForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3629,7 +3629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowForwardSharp")]
-        Icon::IoArrowForwardSharp => {
+        IoIcon::IoArrowForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3644,7 +3644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowRedo")]
-        Icon::IoArrowRedo => {
+        IoIcon::IoArrowRedo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3656,7 +3656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowRedoCircle")]
-        Icon::IoArrowRedoCircle => {
+        IoIcon::IoArrowRedoCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3668,7 +3668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowRedoCircleOutline")]
-        Icon::IoArrowRedoCircleOutline => {
+        IoIcon::IoArrowRedoCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3683,7 +3683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowRedoCircleSharp")]
-        Icon::IoArrowRedoCircleSharp => {
+        IoIcon::IoArrowRedoCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3695,7 +3695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowRedoOutline")]
-        Icon::IoArrowRedoOutline => {
+        IoIcon::IoArrowRedoOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3708,7 +3708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowRedoSharp")]
-        Icon::IoArrowRedoSharp => {
+        IoIcon::IoArrowRedoSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3720,7 +3720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUndo")]
-        Icon::IoArrowUndo => {
+        IoIcon::IoArrowUndo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3732,7 +3732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUndoCircle")]
-        Icon::IoArrowUndoCircle => {
+        IoIcon::IoArrowUndoCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3744,7 +3744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUndoCircleOutline")]
-        Icon::IoArrowUndoCircleOutline => {
+        IoIcon::IoArrowUndoCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3759,7 +3759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUndoCircleSharp")]
-        Icon::IoArrowUndoCircleSharp => {
+        IoIcon::IoArrowUndoCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3771,7 +3771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUndoOutline")]
-        Icon::IoArrowUndoOutline => {
+        IoIcon::IoArrowUndoOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3784,7 +3784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUndoSharp")]
-        Icon::IoArrowUndoSharp => {
+        IoIcon::IoArrowUndoSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3796,7 +3796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUp")]
-        Icon::IoArrowUp => {
+        IoIcon::IoArrowUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3811,7 +3811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUpCircle")]
-        Icon::IoArrowUpCircle => {
+        IoIcon::IoArrowUpCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3823,7 +3823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUpCircleOutline")]
-        Icon::IoArrowUpCircleOutline => {
+        IoIcon::IoArrowUpCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3841,7 +3841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUpCircleSharp")]
-        Icon::IoArrowUpCircleSharp => {
+        IoIcon::IoArrowUpCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3853,7 +3853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUpOutline")]
-        Icon::IoArrowUpOutline => {
+        IoIcon::IoArrowUpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3868,7 +3868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoArrowUpSharp")]
-        Icon::IoArrowUpSharp => {
+        IoIcon::IoArrowUpSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3883,7 +3883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAt")]
-        Icon::IoAt => {
+        IoIcon::IoAt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3901,7 +3901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAtCircle")]
-        Icon::IoAtCircle => {
+        IoIcon::IoAtCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3915,7 +3915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAtCircleOutline")]
-        Icon::IoAtCircleOutline => {
+        IoIcon::IoAtCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3932,7 +3932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAtCircleSharp")]
-        Icon::IoAtCircleSharp => {
+        IoIcon::IoAtCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3946,7 +3946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAtOutline")]
-        Icon::IoAtOutline => {
+        IoIcon::IoAtOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3964,7 +3964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAtSharp")]
-        Icon::IoAtSharp => {
+        IoIcon::IoAtSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3976,7 +3976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAttach")]
-        Icon::IoAttach => {
+        IoIcon::IoAttach => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -3990,7 +3990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAttachOutline")]
-        Icon::IoAttachOutline => {
+        IoIcon::IoAttachOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4004,7 +4004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoAttachSharp")]
-        Icon::IoAttachSharp => {
+        IoIcon::IoAttachSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4018,7 +4018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBackspace")]
-        Icon::IoBackspace => {
+        IoIcon::IoBackspace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4030,7 +4030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBackspaceOutline")]
-        Icon::IoBackspaceOutline => {
+        IoIcon::IoBackspaceOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4051,7 +4051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBackspaceSharp")]
-        Icon::IoBackspaceSharp => {
+        IoIcon::IoBackspaceSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4063,7 +4063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBag")]
-        Icon::IoBag => {
+        IoIcon::IoBag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4075,7 +4075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagAdd")]
-        Icon::IoBagAdd => {
+        IoIcon::IoBagAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4087,7 +4087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagAddOutline")]
-        Icon::IoBagAddOutline => {
+        IoIcon::IoBagAddOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4107,7 +4107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagAddSharp")]
-        Icon::IoBagAddSharp => {
+        IoIcon::IoBagAddSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4119,7 +4119,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagCheck")]
-        Icon::IoBagCheck => {
+        IoIcon::IoBagCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4131,7 +4131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagCheckOutline")]
-        Icon::IoBagCheckOutline => {
+        IoIcon::IoBagCheckOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4149,7 +4149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagCheckSharp")]
-        Icon::IoBagCheckSharp => {
+        IoIcon::IoBagCheckSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4161,7 +4161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagHandle")]
-        Icon::IoBagHandle => {
+        IoIcon::IoBagHandle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4173,7 +4173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagHandleOutline")]
-        Icon::IoBagHandleOutline => {
+        IoIcon::IoBagHandleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4192,7 +4192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagHandleSharp")]
-        Icon::IoBagHandleSharp => {
+        IoIcon::IoBagHandleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4204,7 +4204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagOutline")]
-        Icon::IoBagOutline => {
+        IoIcon::IoBagOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4220,7 +4220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagRemove")]
-        Icon::IoBagRemove => {
+        IoIcon::IoBagRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4232,7 +4232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagRemoveOutline")]
-        Icon::IoBagRemoveOutline => {
+        IoIcon::IoBagRemoveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4250,7 +4250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagRemoveSharp")]
-        Icon::IoBagRemoveSharp => {
+        IoIcon::IoBagRemoveSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4262,7 +4262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBagSharp")]
-        Icon::IoBagSharp => {
+        IoIcon::IoBagSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4274,7 +4274,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBalloon")]
-        Icon::IoBalloon => {
+        IoIcon::IoBalloon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4286,7 +4286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBalloonOutline")]
-        Icon::IoBalloonOutline => {
+        IoIcon::IoBalloonOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4307,7 +4307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBalloonSharp")]
-        Icon::IoBalloonSharp => {
+        IoIcon::IoBalloonSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4319,7 +4319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBan")]
-        Icon::IoBan => {
+        IoIcon::IoBan => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4332,7 +4332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBanOutline")]
-        Icon::IoBanOutline => {
+        IoIcon::IoBanOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4346,7 +4346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBanSharp")]
-        Icon::IoBanSharp => {
+        IoIcon::IoBanSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4358,7 +4358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBandage")]
-        Icon::IoBandage => {
+        IoIcon::IoBandage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4380,7 +4380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBandageOutline")]
-        Icon::IoBandageOutline => {
+        IoIcon::IoBandageOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4399,7 +4399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBandageSharp")]
-        Icon::IoBandageSharp => {
+        IoIcon::IoBandageSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4415,7 +4415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarChart")]
-        Icon::IoBarChart => {
+        IoIcon::IoBarChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4433,7 +4433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarChartOutline")]
-        Icon::IoBarChartOutline => {
+        IoIcon::IoBarChartOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4455,7 +4455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarChartSharp")]
-        Icon::IoBarChartSharp => {
+        IoIcon::IoBarChartSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4468,7 +4468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarbell")]
-        Icon::IoBarbell => {
+        IoIcon::IoBarbell => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4480,7 +4480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarbellOutline")]
-        Icon::IoBarbellOutline => {
+        IoIcon::IoBarbellOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4505,7 +4505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarbellSharp")]
-        Icon::IoBarbellSharp => {
+        IoIcon::IoBarbellSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4517,7 +4517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarcode")]
-        Icon::IoBarcode => {
+        IoIcon::IoBarcode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4529,7 +4529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarcodeOutline")]
-        Icon::IoBarcodeOutline => {
+        IoIcon::IoBarcodeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4557,7 +4557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBarcodeSharp")]
-        Icon::IoBarcodeSharp => {
+        IoIcon::IoBarcodeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4582,7 +4582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBaseball")]
-        Icon::IoBaseball => {
+        IoIcon::IoBaseball => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4598,7 +4598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBaseballOutline")]
-        Icon::IoBaseballOutline => {
+        IoIcon::IoBaseballOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4631,7 +4631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBaseballSharp")]
-        Icon::IoBaseballSharp => {
+        IoIcon::IoBaseballSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4647,7 +4647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBasket")]
-        Icon::IoBasket => {
+        IoIcon::IoBasket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4659,7 +4659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBasketOutline")]
-        Icon::IoBasketOutline => {
+        IoIcon::IoBasketOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4674,7 +4674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBasketSharp")]
-        Icon::IoBasketSharp => {
+        IoIcon::IoBasketSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4688,7 +4688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBasketball")]
-        Icon::IoBasketball => {
+        IoIcon::IoBasketball => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4714,7 +4714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBasketballOutline")]
-        Icon::IoBasketballOutline => {
+        IoIcon::IoBasketballOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4735,7 +4735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBasketballSharp")]
-        Icon::IoBasketballSharp => {
+        IoIcon::IoBasketballSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4761,7 +4761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryCharging")]
-        Icon::IoBatteryCharging => {
+        IoIcon::IoBatteryCharging => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4783,7 +4783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryChargingOutline")]
-        Icon::IoBatteryChargingOutline => {
+        IoIcon::IoBatteryChargingOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4805,7 +4805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryChargingSharp")]
-        Icon::IoBatteryChargingSharp => {
+        IoIcon::IoBatteryChargingSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4826,7 +4826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryDead")]
-        Icon::IoBatteryDead => {
+        IoIcon::IoBatteryDead => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4841,7 +4841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryDeadOutline")]
-        Icon::IoBatteryDeadOutline => {
+        IoIcon::IoBatteryDeadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4856,7 +4856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryDeadSharp")]
-        Icon::IoBatteryDeadSharp => {
+        IoIcon::IoBatteryDeadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4871,7 +4871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryFull")]
-        Icon::IoBatteryFull => {
+        IoIcon::IoBatteryFull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4889,7 +4889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryFullOutline")]
-        Icon::IoBatteryFullOutline => {
+        IoIcon::IoBatteryFullOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4907,7 +4907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryFullSharp")]
-        Icon::IoBatteryFullSharp => {
+        IoIcon::IoBatteryFullSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4920,7 +4920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryHalf")]
-        Icon::IoBatteryHalf => {
+        IoIcon::IoBatteryHalf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4938,7 +4938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryHalfOutline")]
-        Icon::IoBatteryHalfOutline => {
+        IoIcon::IoBatteryHalfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4956,7 +4956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBatteryHalfSharp")]
-        Icon::IoBatteryHalfSharp => {
+        IoIcon::IoBatteryHalfSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4969,7 +4969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBeaker")]
-        Icon::IoBeaker => {
+        IoIcon::IoBeaker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4981,7 +4981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBeakerOutline")]
-        Icon::IoBeakerOutline => {
+        IoIcon::IoBeakerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4997,7 +4997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBeakerSharp")]
-        Icon::IoBeakerSharp => {
+        IoIcon::IoBeakerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5009,7 +5009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBed")]
-        Icon::IoBed => {
+        IoIcon::IoBed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5023,7 +5023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBedOutline")]
-        Icon::IoBedOutline => {
+        IoIcon::IoBedOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5053,7 +5053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBedSharp")]
-        Icon::IoBedSharp => {
+        IoIcon::IoBedSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5065,7 +5065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBeer")]
-        Icon::IoBeer => {
+        IoIcon::IoBeer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5077,7 +5077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBeerOutline")]
-        Icon::IoBeerOutline => {
+        IoIcon::IoBeerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5111,7 +5111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBeerSharp")]
-        Icon::IoBeerSharp => {
+        IoIcon::IoBeerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5123,7 +5123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBicycle")]
-        Icon::IoBicycle => {
+        IoIcon::IoBicycle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5141,7 +5141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBicycleOutline")]
-        Icon::IoBicycleOutline => {
+        IoIcon::IoBicycleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5161,7 +5161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBicycleSharp")]
-        Icon::IoBicycleSharp => {
+        IoIcon::IoBicycleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5179,7 +5179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBluetooth")]
-        Icon::IoBluetooth => {
+        IoIcon::IoBluetooth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5191,7 +5191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBluetoothOutline")]
-        Icon::IoBluetoothOutline => {
+        IoIcon::IoBluetoothOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5204,7 +5204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBluetoothSharp")]
-        Icon::IoBluetoothSharp => {
+        IoIcon::IoBluetoothSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5216,7 +5216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBoat")]
-        Icon::IoBoat => {
+        IoIcon::IoBoat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5230,7 +5230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBoatOutline")]
-        Icon::IoBoatOutline => {
+        IoIcon::IoBoatOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5255,7 +5255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBoatSharp")]
-        Icon::IoBoatSharp => {
+        IoIcon::IoBoatSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5269,7 +5269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBody")]
-        Icon::IoBody => {
+        IoIcon::IoBody => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5282,7 +5282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBodyOutline")]
-        Icon::IoBodyOutline => {
+        IoIcon::IoBodyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5297,7 +5297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBodySharp")]
-        Icon::IoBodySharp => {
+        IoIcon::IoBodySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5310,7 +5310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBonfire")]
-        Icon::IoBonfire => {
+        IoIcon::IoBonfire => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5336,7 +5336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBonfireOutline")]
-        Icon::IoBonfireOutline => {
+        IoIcon::IoBonfireOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5368,7 +5368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBonfireSharp")]
-        Icon::IoBonfireSharp => {
+        IoIcon::IoBonfireSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5394,7 +5394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBook")]
-        Icon::IoBook => {
+        IoIcon::IoBook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5408,7 +5408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookOutline")]
-        Icon::IoBookOutline => {
+        IoIcon::IoBookOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5424,7 +5424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookSharp")]
-        Icon::IoBookSharp => {
+        IoIcon::IoBookSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5438,7 +5438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookmark")]
-        Icon::IoBookmark => {
+        IoIcon::IoBookmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5450,7 +5450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookmarkOutline")]
-        Icon::IoBookmarkOutline => {
+        IoIcon::IoBookmarkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5464,7 +5464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookmarkSharp")]
-        Icon::IoBookmarkSharp => {
+        IoIcon::IoBookmarkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5475,7 +5475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookmarks")]
-        Icon::IoBookmarks => {
+        IoIcon::IoBookmarks => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5489,7 +5489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookmarksOutline")]
-        Icon::IoBookmarksOutline => {
+        IoIcon::IoBookmarksOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5505,7 +5505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBookmarksSharp")]
-        Icon::IoBookmarksSharp => {
+        IoIcon::IoBookmarksSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5517,7 +5517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBowlingBall")]
-        Icon::IoBowlingBall => {
+        IoIcon::IoBowlingBall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5529,7 +5529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBowlingBallOutline")]
-        Icon::IoBowlingBallOutline => {
+        IoIcon::IoBowlingBallOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5543,7 +5543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBowlingBallSharp")]
-        Icon::IoBowlingBallSharp => {
+        IoIcon::IoBowlingBallSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5555,7 +5555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBriefcase")]
-        Icon::IoBriefcase => {
+        IoIcon::IoBriefcase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5571,7 +5571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBriefcaseOutline")]
-        Icon::IoBriefcaseOutline => {
+        IoIcon::IoBriefcaseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5590,7 +5590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBriefcaseSharp")]
-        Icon::IoBriefcaseSharp => {
+        IoIcon::IoBriefcaseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5604,7 +5604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBrowsers")]
-        Icon::IoBrowsers => {
+        IoIcon::IoBrowsers => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5616,7 +5616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBrowsersOutline")]
-        Icon::IoBrowsersOutline => {
+        IoIcon::IoBrowsersOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5631,7 +5631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBrowsersSharp")]
-        Icon::IoBrowsersSharp => {
+        IoIcon::IoBrowsersSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5643,7 +5643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBrush")]
-        Icon::IoBrush => {
+        IoIcon::IoBrush => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5657,7 +5657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBrushOutline")]
-        Icon::IoBrushOutline => {
+        IoIcon::IoBrushOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5675,7 +5675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBrushSharp")]
-        Icon::IoBrushSharp => {
+        IoIcon::IoBrushSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5688,7 +5688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBug")]
-        Icon::IoBug => {
+        IoIcon::IoBug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5702,7 +5702,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBugOutline")]
-        Icon::IoBugOutline => {
+        IoIcon::IoBugOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5735,7 +5735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBugSharp")]
-        Icon::IoBugSharp => {
+        IoIcon::IoBugSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5749,7 +5749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBuild")]
-        Icon::IoBuild => {
+        IoIcon::IoBuild => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5761,7 +5761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBuildOutline")]
-        Icon::IoBuildOutline => {
+        IoIcon::IoBuildOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5775,7 +5775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBuildSharp")]
-        Icon::IoBuildSharp => {
+        IoIcon::IoBuildSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5787,7 +5787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBulb")]
-        Icon::IoBulb => {
+        IoIcon::IoBulb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5801,7 +5801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBulbOutline")]
-        Icon::IoBulbOutline => {
+        IoIcon::IoBulbOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5823,7 +5823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBulbSharp")]
-        Icon::IoBulbSharp => {
+        IoIcon::IoBulbSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5837,7 +5837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBus")]
-        Icon::IoBus => {
+        IoIcon::IoBus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5849,7 +5849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBusOutline")]
-        Icon::IoBusOutline => {
+        IoIcon::IoBusOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5885,7 +5885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBusSharp")]
-        Icon::IoBusSharp => {
+        IoIcon::IoBusSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5899,7 +5899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBusiness")]
-        Icon::IoBusiness => {
+        IoIcon::IoBusiness => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5916,7 +5916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBusinessOutline")]
-        Icon::IoBusinessOutline => {
+        IoIcon::IoBusinessOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5969,7 +5969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoBusinessSharp")]
-        Icon::IoBusinessSharp => {
+        IoIcon::IoBusinessSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5983,7 +5983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCafe")]
-        Icon::IoCafe => {
+        IoIcon::IoCafe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5996,7 +5996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCafeOutline")]
-        Icon::IoCafeOutline => {
+        IoIcon::IoCafeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6015,7 +6015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCafeSharp")]
-        Icon::IoCafeSharp => {
+        IoIcon::IoCafeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6027,7 +6027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalculator")]
-        Icon::IoCalculator => {
+        IoIcon::IoCalculator => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6039,7 +6039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalculatorOutline")]
-        Icon::IoCalculatorOutline => {
+        IoIcon::IoCalculatorOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6059,7 +6059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalculatorSharp")]
-        Icon::IoCalculatorSharp => {
+        IoIcon::IoCalculatorSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6071,7 +6071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendar")]
-        Icon::IoCalendar => {
+        IoIcon::IoCalendar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6085,7 +6085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarClear")]
-        Icon::IoCalendarClear => {
+        IoIcon::IoCalendarClear => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6099,7 +6099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarClearOutline")]
-        Icon::IoCalendarClearOutline => {
+        IoIcon::IoCalendarClearOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6118,7 +6118,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarClearSharp")]
-        Icon::IoCalendarClearSharp => {
+        IoIcon::IoCalendarClearSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6131,7 +6131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarNumber")]
-        Icon::IoCalendarNumber => {
+        IoIcon::IoCalendarNumber => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6145,7 +6145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarNumberOutline")]
-        Icon::IoCalendarNumberOutline => {
+        IoIcon::IoCalendarNumberOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6173,7 +6173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarNumberSharp")]
-        Icon::IoCalendarNumberSharp => {
+        IoIcon::IoCalendarNumberSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6187,7 +6187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarOutline")]
-        Icon::IoCalendarOutline => {
+        IoIcon::IoCalendarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6211,7 +6211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCalendarSharp")]
-        Icon::IoCalendarSharp => {
+        IoIcon::IoCalendarSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6225,7 +6225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCall")]
-        Icon::IoCall => {
+        IoIcon::IoCall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6237,7 +6237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCallOutline")]
-        Icon::IoCallOutline => {
+        IoIcon::IoCallOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6250,7 +6250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCallSharp")]
-        Icon::IoCallSharp => {
+        IoIcon::IoCallSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6262,7 +6262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCamera")]
-        Icon::IoCamera => {
+        IoIcon::IoCamera => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6275,7 +6275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCameraOutline")]
-        Icon::IoCameraOutline => {
+        IoIcon::IoCameraOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6293,7 +6293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCameraReverse")]
-        Icon::IoCameraReverse => {
+        IoIcon::IoCameraReverse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6305,7 +6305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCameraReverseOutline")]
-        Icon::IoCameraReverseOutline => {
+        IoIcon::IoCameraReverseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6329,7 +6329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCameraReverseSharp")]
-        Icon::IoCameraReverseSharp => {
+        IoIcon::IoCameraReverseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6341,7 +6341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCameraSharp")]
-        Icon::IoCameraSharp => {
+        IoIcon::IoCameraSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6354,7 +6354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCar")]
-        Icon::IoCar => {
+        IoIcon::IoCar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6366,7 +6366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCarOutline")]
-        Icon::IoCarOutline => {
+        IoIcon::IoCarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6390,7 +6390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCarSharp")]
-        Icon::IoCarSharp => {
+        IoIcon::IoCarSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6402,7 +6402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCarSport")]
-        Icon::IoCarSport => {
+        IoIcon::IoCarSport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6414,7 +6414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCarSportOutline")]
-        Icon::IoCarSportOutline => {
+        IoIcon::IoCarSportOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6444,7 +6444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCarSportSharp")]
-        Icon::IoCarSportSharp => {
+        IoIcon::IoCarSportSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6456,7 +6456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCard")]
-        Icon::IoCard => {
+        IoIcon::IoCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6470,7 +6470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCardOutline")]
-        Icon::IoCardOutline => {
+        IoIcon::IoCardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6487,7 +6487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCardSharp")]
-        Icon::IoCardSharp => {
+        IoIcon::IoCardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6500,7 +6500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretBack")]
-        Icon::IoCaretBack => {
+        IoIcon::IoCaretBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6512,7 +6512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretBackCircle")]
-        Icon::IoCaretBackCircle => {
+        IoIcon::IoCaretBackCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6524,7 +6524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretBackCircleOutline")]
-        Icon::IoCaretBackCircleOutline => {
+        IoIcon::IoCaretBackCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6539,7 +6539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretBackCircleSharp")]
-        Icon::IoCaretBackCircleSharp => {
+        IoIcon::IoCaretBackCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6551,7 +6551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretBackOutline")]
-        Icon::IoCaretBackOutline => {
+        IoIcon::IoCaretBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6563,7 +6563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretBackSharp")]
-        Icon::IoCaretBackSharp => {
+        IoIcon::IoCaretBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6574,7 +6574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretDown")]
-        Icon::IoCaretDown => {
+        IoIcon::IoCaretDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6586,7 +6586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretDownCircle")]
-        Icon::IoCaretDownCircle => {
+        IoIcon::IoCaretDownCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6598,7 +6598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretDownCircleOutline")]
-        Icon::IoCaretDownCircleOutline => {
+        IoIcon::IoCaretDownCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6613,7 +6613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretDownCircleSharp")]
-        Icon::IoCaretDownCircleSharp => {
+        IoIcon::IoCaretDownCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6625,7 +6625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretDownOutline")]
-        Icon::IoCaretDownOutline => {
+        IoIcon::IoCaretDownOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6637,7 +6637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretDownSharp")]
-        Icon::IoCaretDownSharp => {
+        IoIcon::IoCaretDownSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6648,7 +6648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretForward")]
-        Icon::IoCaretForward => {
+        IoIcon::IoCaretForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6660,7 +6660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretForwardCircle")]
-        Icon::IoCaretForwardCircle => {
+        IoIcon::IoCaretForwardCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6672,7 +6672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretForwardCircleOutline")]
-        Icon::IoCaretForwardCircleOutline => {
+        IoIcon::IoCaretForwardCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6687,7 +6687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretForwardCircleSharp")]
-        Icon::IoCaretForwardCircleSharp => {
+        IoIcon::IoCaretForwardCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6699,7 +6699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretForwardOutline")]
-        Icon::IoCaretForwardOutline => {
+        IoIcon::IoCaretForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6711,7 +6711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretForwardSharp")]
-        Icon::IoCaretForwardSharp => {
+        IoIcon::IoCaretForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6722,7 +6722,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretUp")]
-        Icon::IoCaretUp => {
+        IoIcon::IoCaretUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6734,7 +6734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretUpCircle")]
-        Icon::IoCaretUpCircle => {
+        IoIcon::IoCaretUpCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6746,7 +6746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretUpCircleOutline")]
-        Icon::IoCaretUpCircleOutline => {
+        IoIcon::IoCaretUpCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6761,7 +6761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretUpCircleSharp")]
-        Icon::IoCaretUpCircleSharp => {
+        IoIcon::IoCaretUpCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6773,7 +6773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretUpOutline")]
-        Icon::IoCaretUpOutline => {
+        IoIcon::IoCaretUpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6785,7 +6785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCaretUpSharp")]
-        Icon::IoCaretUpSharp => {
+        IoIcon::IoCaretUpSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6796,7 +6796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCart")]
-        Icon::IoCart => {
+        IoIcon::IoCart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6809,7 +6809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCartOutline")]
-        Icon::IoCartOutline => {
+        IoIcon::IoCartOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6830,7 +6830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCartSharp")]
-        Icon::IoCartSharp => {
+        IoIcon::IoCartSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6843,7 +6843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCash")]
-        Icon::IoCash => {
+        IoIcon::IoCash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6864,7 +6864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCashOutline")]
-        Icon::IoCashOutline => {
+        IoIcon::IoCashOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6891,7 +6891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCashSharp")]
-        Icon::IoCashSharp => {
+        IoIcon::IoCashSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6909,7 +6909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCellular")]
-        Icon::IoCellular => {
+        IoIcon::IoCellular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6927,7 +6927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCellularOutline")]
-        Icon::IoCellularOutline => {
+        IoIcon::IoCellularOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6946,7 +6946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCellularSharp")]
-        Icon::IoCellularSharp => {
+        IoIcon::IoCellularSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6958,7 +6958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbox")]
-        Icon::IoChatbox => {
+        IoIcon::IoChatbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6970,7 +6970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatboxEllipses")]
-        Icon::IoChatboxEllipses => {
+        IoIcon::IoChatboxEllipses => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6982,7 +6982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatboxEllipsesOutline")]
-        Icon::IoChatboxEllipsesOutline => {
+        IoIcon::IoChatboxEllipsesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6996,7 +6996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatboxEllipsesSharp")]
-        Icon::IoChatboxEllipsesSharp => {
+        IoIcon::IoChatboxEllipsesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7008,7 +7008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatboxOutline")]
-        Icon::IoChatboxOutline => {
+        IoIcon::IoChatboxOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7021,7 +7021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatboxSharp")]
-        Icon::IoChatboxSharp => {
+        IoIcon::IoChatboxSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7033,7 +7033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubble")]
-        Icon::IoChatbubble => {
+        IoIcon::IoChatbubble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7045,7 +7045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubbleEllipses")]
-        Icon::IoChatbubbleEllipses => {
+        IoIcon::IoChatbubbleEllipses => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7057,7 +7057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubbleEllipsesOutline")]
-        Icon::IoChatbubbleEllipsesOutline => {
+        IoIcon::IoChatbubbleEllipsesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7072,7 +7072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubbleEllipsesSharp")]
-        Icon::IoChatbubbleEllipsesSharp => {
+        IoIcon::IoChatbubbleEllipsesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7084,7 +7084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubbleOutline")]
-        Icon::IoChatbubbleOutline => {
+        IoIcon::IoChatbubbleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7098,7 +7098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubbleSharp")]
-        Icon::IoChatbubbleSharp => {
+        IoIcon::IoChatbubbleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7110,7 +7110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubbles")]
-        Icon::IoChatbubbles => {
+        IoIcon::IoChatbubbles => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7126,7 +7126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubblesOutline")]
-        Icon::IoChatbubblesOutline => {
+        IoIcon::IoChatbubblesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7144,7 +7144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChatbubblesSharp")]
-        Icon::IoChatbubblesSharp => {
+        IoIcon::IoChatbubblesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7158,7 +7158,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckbox")]
-        Icon::IoCheckbox => {
+        IoIcon::IoCheckbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7170,7 +7170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckboxOutline")]
-        Icon::IoCheckboxOutline => {
+        IoIcon::IoCheckboxOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7186,7 +7186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckboxSharp")]
-        Icon::IoCheckboxSharp => {
+        IoIcon::IoCheckboxSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7198,7 +7198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmark")]
-        Icon::IoCheckmark => {
+        IoIcon::IoCheckmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7211,7 +7211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkCircle")]
-        Icon::IoCheckmarkCircle => {
+        IoIcon::IoCheckmarkCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7223,7 +7223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkCircleOutline")]
-        Icon::IoCheckmarkCircleOutline => {
+        IoIcon::IoCheckmarkCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7238,7 +7238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkCircleSharp")]
-        Icon::IoCheckmarkCircleSharp => {
+        IoIcon::IoCheckmarkCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7250,7 +7250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkDone")]
-        Icon::IoCheckmarkDone => {
+        IoIcon::IoCheckmarkDone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7267,7 +7267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkDoneCircle")]
-        Icon::IoCheckmarkDoneCircle => {
+        IoIcon::IoCheckmarkDoneCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7279,7 +7279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkDoneCircleOutline")]
-        Icon::IoCheckmarkDoneCircleOutline => {
+        IoIcon::IoCheckmarkDoneCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7298,7 +7298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkDoneCircleSharp")]
-        Icon::IoCheckmarkDoneCircleSharp => {
+        IoIcon::IoCheckmarkDoneCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7310,7 +7310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkDoneOutline")]
-        Icon::IoCheckmarkDoneOutline => {
+        IoIcon::IoCheckmarkDoneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7327,7 +7327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkDoneSharp")]
-        Icon::IoCheckmarkDoneSharp => {
+        IoIcon::IoCheckmarkDoneSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7344,7 +7344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkOutline")]
-        Icon::IoCheckmarkOutline => {
+        IoIcon::IoCheckmarkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7357,7 +7357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCheckmarkSharp")]
-        Icon::IoCheckmarkSharp => {
+        IoIcon::IoCheckmarkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7370,7 +7370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronBack")]
-        Icon::IoChevronBack => {
+        IoIcon::IoChevronBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7383,7 +7383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronBackCircle")]
-        Icon::IoChevronBackCircle => {
+        IoIcon::IoChevronBackCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7395,7 +7395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronBackCircleOutline")]
-        Icon::IoChevronBackCircleOutline => {
+        IoIcon::IoChevronBackCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7410,7 +7410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronBackCircleSharp")]
-        Icon::IoChevronBackCircleSharp => {
+        IoIcon::IoChevronBackCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7422,7 +7422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronBackOutline")]
-        Icon::IoChevronBackOutline => {
+        IoIcon::IoChevronBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7435,7 +7435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronBackSharp")]
-        Icon::IoChevronBackSharp => {
+        IoIcon::IoChevronBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7448,7 +7448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronCollapse")]
-        Icon::IoChevronCollapse => {
+        IoIcon::IoChevronCollapse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7460,7 +7460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronCollapseOutline")]
-        Icon::IoChevronCollapseOutline => {
+        IoIcon::IoChevronCollapseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7475,7 +7475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronCollapseSharp")]
-        Icon::IoChevronCollapseSharp => {
+        IoIcon::IoChevronCollapseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7487,7 +7487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronDown")]
-        Icon::IoChevronDown => {
+        IoIcon::IoChevronDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7500,7 +7500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronDownCircle")]
-        Icon::IoChevronDownCircle => {
+        IoIcon::IoChevronDownCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7512,7 +7512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronDownCircleOutline")]
-        Icon::IoChevronDownCircleOutline => {
+        IoIcon::IoChevronDownCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7527,7 +7527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronDownCircleSharp")]
-        Icon::IoChevronDownCircleSharp => {
+        IoIcon::IoChevronDownCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7539,7 +7539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronDownOutline")]
-        Icon::IoChevronDownOutline => {
+        IoIcon::IoChevronDownOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7552,7 +7552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronDownSharp")]
-        Icon::IoChevronDownSharp => {
+        IoIcon::IoChevronDownSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7565,7 +7565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronExpand")]
-        Icon::IoChevronExpand => {
+        IoIcon::IoChevronExpand => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7580,7 +7580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronExpandOutline")]
-        Icon::IoChevronExpandOutline => {
+        IoIcon::IoChevronExpandOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7595,7 +7595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronExpandSharp")]
-        Icon::IoChevronExpandSharp => {
+        IoIcon::IoChevronExpandSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7609,7 +7609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronForward")]
-        Icon::IoChevronForward => {
+        IoIcon::IoChevronForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7622,7 +7622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronForwardCircle")]
-        Icon::IoChevronForwardCircle => {
+        IoIcon::IoChevronForwardCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7634,7 +7634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronForwardCircleOutline")]
-        Icon::IoChevronForwardCircleOutline => {
+        IoIcon::IoChevronForwardCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7649,7 +7649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronForwardCircleSharp")]
-        Icon::IoChevronForwardCircleSharp => {
+        IoIcon::IoChevronForwardCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7661,7 +7661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronForwardOutline")]
-        Icon::IoChevronForwardOutline => {
+        IoIcon::IoChevronForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7674,7 +7674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronForwardSharp")]
-        Icon::IoChevronForwardSharp => {
+        IoIcon::IoChevronForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7687,7 +7687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronUp")]
-        Icon::IoChevronUp => {
+        IoIcon::IoChevronUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7700,7 +7700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronUpCircle")]
-        Icon::IoChevronUpCircle => {
+        IoIcon::IoChevronUpCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7712,7 +7712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronUpCircleOutline")]
-        Icon::IoChevronUpCircleOutline => {
+        IoIcon::IoChevronUpCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7728,7 +7728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronUpCircleSharp")]
-        Icon::IoChevronUpCircleSharp => {
+        IoIcon::IoChevronUpCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7740,7 +7740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronUpOutline")]
-        Icon::IoChevronUpOutline => {
+        IoIcon::IoChevronUpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7753,7 +7753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoChevronUpSharp")]
-        Icon::IoChevronUpSharp => {
+        IoIcon::IoChevronUpSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7766,7 +7766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoClipboard")]
-        Icon::IoClipboard => {
+        IoIcon::IoClipboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7778,7 +7778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoClipboardOutline")]
-        Icon::IoClipboardOutline => {
+        IoIcon::IoClipboardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7794,7 +7794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoClipboardSharp")]
-        Icon::IoClipboardSharp => {
+        IoIcon::IoClipboardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7806,7 +7806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoClose")]
-        Icon::IoClose => {
+        IoIcon::IoClose => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7818,7 +7818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloseCircle")]
-        Icon::IoCloseCircle => {
+        IoIcon::IoCloseCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7830,7 +7830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloseCircleOutline")]
-        Icon::IoCloseCircleOutline => {
+        IoIcon::IoCloseCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7847,7 +7847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloseCircleSharp")]
-        Icon::IoCloseCircleSharp => {
+        IoIcon::IoCloseCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7859,7 +7859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloseOutline")]
-        Icon::IoCloseOutline => {
+        IoIcon::IoCloseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7874,7 +7874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloseSharp")]
-        Icon::IoCloseSharp => {
+        IoIcon::IoCloseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7886,7 +7886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloud")]
-        Icon::IoCloud => {
+        IoIcon::IoCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7898,7 +7898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudCircle")]
-        Icon::IoCloudCircle => {
+        IoIcon::IoCloudCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7910,7 +7910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudCircleOutline")]
-        Icon::IoCloudCircleOutline => {
+        IoIcon::IoCloudCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7925,7 +7925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudCircleSharp")]
-        Icon::IoCloudCircleSharp => {
+        IoIcon::IoCloudCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7937,7 +7937,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudDone")]
-        Icon::IoCloudDone => {
+        IoIcon::IoCloudDone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7949,7 +7949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudDoneOutline")]
-        Icon::IoCloudDoneOutline => {
+        IoIcon::IoCloudDoneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7964,7 +7964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudDoneSharp")]
-        Icon::IoCloudDoneSharp => {
+        IoIcon::IoCloudDoneSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7976,7 +7976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudDownload")]
-        Icon::IoCloudDownload => {
+        IoIcon::IoCloudDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7990,7 +7990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudDownloadOutline")]
-        Icon::IoCloudDownloadOutline => {
+        IoIcon::IoCloudDownloadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8008,7 +8008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudDownloadSharp")]
-        Icon::IoCloudDownloadSharp => {
+        IoIcon::IoCloudDownloadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8022,7 +8022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudOffline")]
-        Icon::IoCloudOffline => {
+        IoIcon::IoCloudOffline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8038,7 +8038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudOfflineOutline")]
-        Icon::IoCloudOfflineOutline => {
+        IoIcon::IoCloudOfflineOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8058,7 +8058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudOfflineSharp")]
-        Icon::IoCloudOfflineSharp => {
+        IoIcon::IoCloudOfflineSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8074,7 +8074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudOutline")]
-        Icon::IoCloudOutline => {
+        IoIcon::IoCloudOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8087,7 +8087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudSharp")]
-        Icon::IoCloudSharp => {
+        IoIcon::IoCloudSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8099,7 +8099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudUpload")]
-        Icon::IoCloudUpload => {
+        IoIcon::IoCloudUpload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8111,7 +8111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudUploadOutline")]
-        Icon::IoCloudUploadOutline => {
+        IoIcon::IoCloudUploadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8129,7 +8129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudUploadSharp")]
-        Icon::IoCloudUploadSharp => {
+        IoIcon::IoCloudUploadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8142,7 +8142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudy")]
-        Icon::IoCloudy => {
+        IoIcon::IoCloudy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8154,7 +8154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudyNight")]
-        Icon::IoCloudyNight => {
+        IoIcon::IoCloudyNight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8168,7 +8168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudyNightOutline")]
-        Icon::IoCloudyNightOutline => {
+        IoIcon::IoCloudyNightOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8185,7 +8185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudyNightSharp")]
-        Icon::IoCloudyNightSharp => {
+        IoIcon::IoCloudyNightSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8199,7 +8199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudyOutline")]
-        Icon::IoCloudyOutline => {
+        IoIcon::IoCloudyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8212,7 +8212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCloudySharp")]
-        Icon::IoCloudySharp => {
+        IoIcon::IoCloudySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8224,7 +8224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCode")]
-        Icon::IoCode => {
+        IoIcon::IoCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8238,7 +8238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeDownload")]
-        Icon::IoCodeDownload => {
+        IoIcon::IoCodeDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8257,7 +8257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeDownloadOutline")]
-        Icon::IoCodeDownloadOutline => {
+        IoIcon::IoCodeDownloadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8276,7 +8276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeDownloadSharp")]
-        Icon::IoCodeDownloadSharp => {
+        IoIcon::IoCodeDownloadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8295,7 +8295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeOutline")]
-        Icon::IoCodeOutline => {
+        IoIcon::IoCodeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8310,7 +8310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeSharp")]
-        Icon::IoCodeSharp => {
+        IoIcon::IoCodeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8324,7 +8324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeSlash")]
-        Icon::IoCodeSlash => {
+        IoIcon::IoCodeSlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8340,7 +8340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeSlashOutline")]
-        Icon::IoCodeSlashOutline => {
+        IoIcon::IoCodeSlashOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8357,7 +8357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeSlashSharp")]
-        Icon::IoCodeSlashSharp => {
+        IoIcon::IoCodeSlashSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8372,7 +8372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeWorking")]
-        Icon::IoCodeWorking => {
+        IoIcon::IoCodeWorking => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8392,7 +8392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeWorkingOutline")]
-        Icon::IoCodeWorkingOutline => {
+        IoIcon::IoCodeWorkingOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8409,7 +8409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCodeWorkingSharp")]
-        Icon::IoCodeWorkingSharp => {
+        IoIcon::IoCodeWorkingSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8430,7 +8430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCog")]
-        Icon::IoCog => {
+        IoIcon::IoCog => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8442,7 +8442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCogOutline")]
-        Icon::IoCogOutline => {
+        IoIcon::IoCogOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8454,7 +8454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCogSharp")]
-        Icon::IoCogSharp => {
+        IoIcon::IoCogSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8466,7 +8466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorFill")]
-        Icon::IoColorFill => {
+        IoIcon::IoColorFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8480,7 +8480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorFillOutline")]
-        Icon::IoColorFillOutline => {
+        IoIcon::IoColorFillOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8496,7 +8496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorFillSharp")]
-        Icon::IoColorFillSharp => {
+        IoIcon::IoColorFillSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8510,7 +8510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorFilter")]
-        Icon::IoColorFilter => {
+        IoIcon::IoColorFilter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8534,7 +8534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorFilterOutline")]
-        Icon::IoColorFilterOutline => {
+        IoIcon::IoColorFilterOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8551,7 +8551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorFilterSharp")]
-        Icon::IoColorFilterSharp => {
+        IoIcon::IoColorFilterSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8575,7 +8575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorPalette")]
-        Icon::IoColorPalette => {
+        IoIcon::IoColorPalette => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8587,7 +8587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorPaletteOutline")]
-        Icon::IoColorPaletteOutline => {
+        IoIcon::IoColorPaletteOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8603,7 +8603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorPaletteSharp")]
-        Icon::IoColorPaletteSharp => {
+        IoIcon::IoColorPaletteSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8615,7 +8615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorWand")]
-        Icon::IoColorWand => {
+        IoIcon::IoColorWand => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 512 512; {}", style) x = "0px" y =
@@ -8645,7 +8645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorWandOutline")]
-        Icon::IoColorWandOutline => {
+        IoIcon::IoColorWandOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8670,7 +8670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoColorWandSharp")]
-        Icon::IoColorWandSharp => {
+        IoIcon::IoColorWandSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8690,7 +8690,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCompass")]
-        Icon::IoCompass => {
+        IoIcon::IoCompass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8703,7 +8703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCompassOutline")]
-        Icon::IoCompassOutline => {
+        IoIcon::IoCompassOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8718,7 +8718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCompassSharp")]
-        Icon::IoCompassSharp => {
+        IoIcon::IoCompassSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8731,7 +8731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoConstruct")]
-        Icon::IoConstruct => {
+        IoIcon::IoConstruct => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8747,7 +8747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoConstructOutline")]
-        Icon::IoConstructOutline => {
+        IoIcon::IoConstructOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8773,7 +8773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoConstructSharp")]
-        Icon::IoConstructSharp => {
+        IoIcon::IoConstructSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8789,7 +8789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoContract")]
-        Icon::IoContract => {
+        IoIcon::IoContract => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8816,7 +8816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoContractOutline")]
-        Icon::IoContractOutline => {
+        IoIcon::IoContractOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8843,7 +8843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoContractSharp")]
-        Icon::IoContractSharp => {
+        IoIcon::IoContractSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8870,7 +8870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoContrast")]
-        Icon::IoContrast => {
+        IoIcon::IoContrast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8882,7 +8882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoContrastOutline")]
-        Icon::IoContrastOutline => {
+        IoIcon::IoContrastOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8895,7 +8895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoContrastSharp")]
-        Icon::IoContrastSharp => {
+        IoIcon::IoContrastSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8907,7 +8907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCopy")]
-        Icon::IoCopy => {
+        IoIcon::IoCopy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8921,7 +8921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCopyOutline")]
-        Icon::IoCopyOutline => {
+        IoIcon::IoCopyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8938,7 +8938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCopySharp")]
-        Icon::IoCopySharp => {
+        IoIcon::IoCopySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8952,7 +8952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCreate")]
-        Icon::IoCreate => {
+        IoIcon::IoCreate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8968,7 +8968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCreateOutline")]
-        Icon::IoCreateOutline => {
+        IoIcon::IoCreateOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8986,7 +8986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCreateSharp")]
-        Icon::IoCreateSharp => {
+        IoIcon::IoCreateSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9004,7 +9004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCrop")]
-        Icon::IoCrop => {
+        IoIcon::IoCrop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9018,7 +9018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCropOutline")]
-        Icon::IoCropOutline => {
+        IoIcon::IoCropOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9037,7 +9037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCropSharp")]
-        Icon::IoCropSharp => {
+        IoIcon::IoCropSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9050,7 +9050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCube")]
-        Icon::IoCube => {
+        IoIcon::IoCube => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9066,7 +9066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCubeOutline")]
-        Icon::IoCubeOutline => {
+        IoIcon::IoCubeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9084,7 +9084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCubeSharp")]
-        Icon::IoCubeSharp => {
+        IoIcon::IoCubeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9097,7 +9097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCut")]
-        Icon::IoCut => {
+        IoIcon::IoCut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9113,7 +9113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCutOutline")]
-        Icon::IoCutOutline => {
+        IoIcon::IoCutOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9140,7 +9140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoCutSharp")]
-        Icon::IoCutSharp => {
+        IoIcon::IoCutSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9154,7 +9154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDesktop")]
-        Icon::IoDesktop => {
+        IoIcon::IoDesktop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9168,7 +9168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDesktopOutline")]
-        Icon::IoDesktopOutline => {
+        IoIcon::IoDesktopOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9187,7 +9187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDesktopSharp")]
-        Icon::IoDesktopSharp => {
+        IoIcon::IoDesktopSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9199,7 +9199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiamond")]
-        Icon::IoDiamond => {
+        IoIcon::IoDiamond => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9223,7 +9223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiamondOutline")]
-        Icon::IoDiamondOutline => {
+        IoIcon::IoDiamondOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9247,7 +9247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiamondSharp")]
-        Icon::IoDiamondSharp => {
+        IoIcon::IoDiamondSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9265,7 +9265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDice")]
-        Icon::IoDice => {
+        IoIcon::IoDice => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9281,7 +9281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiceOutline")]
-        Icon::IoDiceOutline => {
+        IoIcon::IoDiceOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9304,7 +9304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiceSharp")]
-        Icon::IoDiceSharp => {
+        IoIcon::IoDiceSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9320,7 +9320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDisc")]
-        Icon::IoDisc => {
+        IoIcon::IoDisc => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9334,7 +9334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiscOutline")]
-        Icon::IoDiscOutline => {
+        IoIcon::IoDiscOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9348,7 +9348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDiscSharp")]
-        Icon::IoDiscSharp => {
+        IoIcon::IoDiscSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9361,7 +9361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocument")]
-        Icon::IoDocument => {
+        IoIcon::IoDocument => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9375,7 +9375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentAttach")]
-        Icon::IoDocumentAttach => {
+        IoIcon::IoDocumentAttach => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9389,7 +9389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentAttachOutline")]
-        Icon::IoDocumentAttachOutline => {
+        IoIcon::IoDocumentAttachOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9409,7 +9409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentAttachSharp")]
-        Icon::IoDocumentAttachSharp => {
+        IoIcon::IoDocumentAttachSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9423,7 +9423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentLock")]
-        Icon::IoDocumentLock => {
+        IoIcon::IoDocumentLock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9439,7 +9439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentLockOutline")]
-        Icon::IoDocumentLockOutline => {
+        IoIcon::IoDocumentLockOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9459,7 +9459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentLockSharp")]
-        Icon::IoDocumentLockSharp => {
+        IoIcon::IoDocumentLockSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9475,7 +9475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentOutline")]
-        Icon::IoDocumentOutline => {
+        IoIcon::IoDocumentOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9490,7 +9490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentSharp")]
-        Icon::IoDocumentSharp => {
+        IoIcon::IoDocumentSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9504,7 +9504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentText")]
-        Icon::IoDocumentText => {
+        IoIcon::IoDocumentText => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9518,7 +9518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentTextOutline")]
-        Icon::IoDocumentTextOutline => {
+        IoIcon::IoDocumentTextOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9537,7 +9537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentTextSharp")]
-        Icon::IoDocumentTextSharp => {
+        IoIcon::IoDocumentTextSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9551,7 +9551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocuments")]
-        Icon::IoDocuments => {
+        IoIcon::IoDocuments => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9569,7 +9569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentsOutline")]
-        Icon::IoDocumentsOutline => {
+        IoIcon::IoDocumentsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9589,7 +9589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDocumentsSharp")]
-        Icon::IoDocumentsSharp => {
+        IoIcon::IoDocumentsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9605,7 +9605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDownload")]
-        Icon::IoDownload => {
+        IoIcon::IoDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9617,7 +9617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDownloadOutline")]
-        Icon::IoDownloadOutline => {
+        IoIcon::IoDownloadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9635,7 +9635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDownloadSharp")]
-        Icon::IoDownloadSharp => {
+        IoIcon::IoDownloadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9647,7 +9647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDuplicate")]
-        Icon::IoDuplicate => {
+        IoIcon::IoDuplicate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9661,7 +9661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDuplicateOutline")]
-        Icon::IoDuplicateOutline => {
+        IoIcon::IoDuplicateOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9682,7 +9682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoDuplicateSharp")]
-        Icon::IoDuplicateSharp => {
+        IoIcon::IoDuplicateSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9696,7 +9696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEar")]
-        Icon::IoEar => {
+        IoIcon::IoEar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9708,7 +9708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEarOutline")]
-        Icon::IoEarOutline => {
+        IoIcon::IoEarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9729,7 +9729,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEarSharp")]
-        Icon::IoEarSharp => {
+        IoIcon::IoEarSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9741,7 +9741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEarth")]
-        Icon::IoEarth => {
+        IoIcon::IoEarth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9753,7 +9753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEarthOutline")]
-        Icon::IoEarthOutline => {
+        IoIcon::IoEarthOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9776,7 +9776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEarthSharp")]
-        Icon::IoEarthSharp => {
+        IoIcon::IoEarthSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9799,7 +9799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEasel")]
-        Icon::IoEasel => {
+        IoIcon::IoEasel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9812,7 +9812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEaselOutline")]
-        Icon::IoEaselOutline => {
+        IoIcon::IoEaselOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9833,7 +9833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEaselSharp")]
-        Icon::IoEaselSharp => {
+        IoIcon::IoEaselSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9845,7 +9845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEgg")]
-        Icon::IoEgg => {
+        IoIcon::IoEgg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9857,7 +9857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEggOutline")]
-        Icon::IoEggOutline => {
+        IoIcon::IoEggOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9870,7 +9870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEggSharp")]
-        Icon::IoEggSharp => {
+        IoIcon::IoEggSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9882,7 +9882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipse")]
-        Icon::IoEllipse => {
+        IoIcon::IoEllipse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9894,7 +9894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipseOutline")]
-        Icon::IoEllipseOutline => {
+        IoIcon::IoEllipseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9907,7 +9907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipseSharp")]
-        Icon::IoEllipseSharp => {
+        IoIcon::IoEllipseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9919,7 +9919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisHorizontal")]
-        Icon::IoEllipsisHorizontal => {
+        IoIcon::IoEllipsisHorizontal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9931,7 +9931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisHorizontalCircle")]
-        Icon::IoEllipsisHorizontalCircle => {
+        IoIcon::IoEllipsisHorizontalCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9946,7 +9946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisHorizontalCircleOutline")]
-        Icon::IoEllipsisHorizontalCircleOutline => {
+        IoIcon::IoEllipsisHorizontalCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9961,7 +9961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisHorizontalCircleSharp")]
-        Icon::IoEllipsisHorizontalCircleSharp => {
+        IoIcon::IoEllipsisHorizontalCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9973,7 +9973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisHorizontalOutline")]
-        Icon::IoEllipsisHorizontalOutline => {
+        IoIcon::IoEllipsisHorizontalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9990,7 +9990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisHorizontalSharp")]
-        Icon::IoEllipsisHorizontalSharp => {
+        IoIcon::IoEllipsisHorizontalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10002,7 +10002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisVertical")]
-        Icon::IoEllipsisVertical => {
+        IoIcon::IoEllipsisVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10014,7 +10014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisVerticalCircle")]
-        Icon::IoEllipsisVerticalCircle => {
+        IoIcon::IoEllipsisVerticalCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10029,7 +10029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisVerticalCircleOutline")]
-        Icon::IoEllipsisVerticalCircleOutline => {
+        IoIcon::IoEllipsisVerticalCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10044,7 +10044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisVerticalCircleSharp")]
-        Icon::IoEllipsisVerticalCircleSharp => {
+        IoIcon::IoEllipsisVerticalCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10056,7 +10056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisVerticalOutline")]
-        Icon::IoEllipsisVerticalOutline => {
+        IoIcon::IoEllipsisVerticalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10073,7 +10073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEllipsisVerticalSharp")]
-        Icon::IoEllipsisVerticalSharp => {
+        IoIcon::IoEllipsisVerticalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10085,7 +10085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEnter")]
-        Icon::IoEnter => {
+        IoIcon::IoEnter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10097,7 +10097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEnterOutline")]
-        Icon::IoEnterOutline => {
+        IoIcon::IoEnterOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10115,7 +10115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEnterSharp")]
-        Icon::IoEnterSharp => {
+        IoIcon::IoEnterSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10127,7 +10127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExit")]
-        Icon::IoExit => {
+        IoIcon::IoExit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10141,7 +10141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExitOutline")]
-        Icon::IoExitOutline => {
+        IoIcon::IoExitOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10159,7 +10159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExitSharp")]
-        Icon::IoExitSharp => {
+        IoIcon::IoExitSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10173,7 +10173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExpand")]
-        Icon::IoExpand => {
+        IoIcon::IoExpand => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10200,7 +10200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExpandOutline")]
-        Icon::IoExpandOutline => {
+        IoIcon::IoExpandOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10227,7 +10227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExpandSharp")]
-        Icon::IoExpandSharp => {
+        IoIcon::IoExpandSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10254,7 +10254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExtensionPuzzle")]
-        Icon::IoExtensionPuzzle => {
+        IoIcon::IoExtensionPuzzle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10266,7 +10266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExtensionPuzzleOutline")]
-        Icon::IoExtensionPuzzleOutline => {
+        IoIcon::IoExtensionPuzzleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10280,7 +10280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoExtensionPuzzleSharp")]
-        Icon::IoExtensionPuzzleSharp => {
+        IoIcon::IoExtensionPuzzleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10292,7 +10292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEye")]
-        Icon::IoEye => {
+        IoIcon::IoEye => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10305,7 +10305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyeOff")]
-        Icon::IoEyeOff => {
+        IoIcon::IoEyeOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10325,7 +10325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyeOffOutline")]
-        Icon::IoEyeOffOutline => {
+        IoIcon::IoEyeOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10345,7 +10345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyeOffSharp")]
-        Icon::IoEyeOffSharp => {
+        IoIcon::IoEyeOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10363,7 +10363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyeOutline")]
-        Icon::IoEyeOutline => {
+        IoIcon::IoEyeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10379,7 +10379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyeSharp")]
-        Icon::IoEyeSharp => {
+        IoIcon::IoEyeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10392,7 +10392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyedrop")]
-        Icon::IoEyedrop => {
+        IoIcon::IoEyedrop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10404,7 +10404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyedropOutline")]
-        Icon::IoEyedropOutline => {
+        IoIcon::IoEyedropOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10429,7 +10429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoEyedropSharp")]
-        Icon::IoEyedropSharp => {
+        IoIcon::IoEyedropSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10441,7 +10441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFastFood")]
-        Icon::IoFastFood => {
+        IoIcon::IoFastFood => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10457,7 +10457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFastFoodOutline")]
-        Icon::IoFastFoodOutline => {
+        IoIcon::IoFastFoodOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10489,7 +10489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFastFoodSharp")]
-        Icon::IoFastFoodSharp => {
+        IoIcon::IoFastFoodSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10505,7 +10505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFemale")]
-        Icon::IoFemale => {
+        IoIcon::IoFemale => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10517,7 +10517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFemaleOutline")]
-        Icon::IoFemaleOutline => {
+        IoIcon::IoFemaleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10534,7 +10534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFemaleSharp")]
-        Icon::IoFemaleSharp => {
+        IoIcon::IoFemaleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10546,7 +10546,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTray")]
-        Icon::IoFileTray => {
+        IoIcon::IoFileTray => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10558,7 +10558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayFull")]
-        Icon::IoFileTrayFull => {
+        IoIcon::IoFileTrayFull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10572,7 +10572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayFullOutline")]
-        Icon::IoFileTrayFullOutline => {
+        IoIcon::IoFileTrayFullOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10595,7 +10595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayFullSharp")]
-        Icon::IoFileTrayFullSharp => {
+        IoIcon::IoFileTrayFullSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10609,7 +10609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayOutline")]
-        Icon::IoFileTrayOutline => {
+        IoIcon::IoFileTrayOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10628,7 +10628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTraySharp")]
-        Icon::IoFileTraySharp => {
+        IoIcon::IoFileTraySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10640,7 +10640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayStacked")]
-        Icon::IoFileTrayStacked => {
+        IoIcon::IoFileTrayStacked => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10654,7 +10654,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayStackedOutline")]
-        Icon::IoFileTrayStackedOutline => {
+        IoIcon::IoFileTrayStackedOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10682,7 +10682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFileTrayStackedSharp")]
-        Icon::IoFileTrayStackedSharp => {
+        IoIcon::IoFileTrayStackedSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10694,7 +10694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilm")]
-        Icon::IoFilm => {
+        IoIcon::IoFilm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10706,7 +10706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilmOutline")]
-        Icon::IoFilmOutline => {
+        IoIcon::IoFilmOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10740,7 +10740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilmSharp")]
-        Icon::IoFilmSharp => {
+        IoIcon::IoFilmSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10752,7 +10752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilter")]
-        Icon::IoFilter => {
+        IoIcon::IoFilter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10765,7 +10765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilterCircle")]
-        Icon::IoFilterCircle => {
+        IoIcon::IoFilterCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10777,7 +10777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilterCircleOutline")]
-        Icon::IoFilterCircleOutline => {
+        IoIcon::IoFilterCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10796,7 +10796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilterCircleSharp")]
-        Icon::IoFilterCircleSharp => {
+        IoIcon::IoFilterCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10808,7 +10808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilterOutline")]
-        Icon::IoFilterOutline => {
+        IoIcon::IoFilterOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10825,7 +10825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFilterSharp")]
-        Icon::IoFilterSharp => {
+        IoIcon::IoFilterSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10837,7 +10837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFingerPrint")]
-        Icon::IoFingerPrint => {
+        IoIcon::IoFingerPrint => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10857,7 +10857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFingerPrintOutline")]
-        Icon::IoFingerPrintOutline => {
+        IoIcon::IoFingerPrintOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10869,7 +10869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFingerPrintSharp")]
-        Icon::IoFingerPrintSharp => {
+        IoIcon::IoFingerPrintSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10889,7 +10889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFish")]
-        Icon::IoFish => {
+        IoIcon::IoFish => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10903,7 +10903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFishOutline")]
-        Icon::IoFishOutline => {
+        IoIcon::IoFishOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10919,7 +10919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFishSharp")]
-        Icon::IoFishSharp => {
+        IoIcon::IoFishSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10933,7 +10933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFitness")]
-        Icon::IoFitness => {
+        IoIcon::IoFitness => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10950,7 +10950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFitnessOutline")]
-        Icon::IoFitnessOutline => {
+        IoIcon::IoFitnessOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10967,7 +10967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFitnessSharp")]
-        Icon::IoFitnessSharp => {
+        IoIcon::IoFitnessSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10983,7 +10983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlag")]
-        Icon::IoFlag => {
+        IoIcon::IoFlag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10995,7 +10995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlagOutline")]
-        Icon::IoFlagOutline => {
+        IoIcon::IoFlagOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11009,7 +11009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlagSharp")]
-        Icon::IoFlagSharp => {
+        IoIcon::IoFlagSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11021,7 +11021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlame")]
-        Icon::IoFlame => {
+        IoIcon::IoFlame => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11033,7 +11033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlameOutline")]
-        Icon::IoFlameOutline => {
+        IoIcon::IoFlameOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11051,7 +11051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlameSharp")]
-        Icon::IoFlameSharp => {
+        IoIcon::IoFlameSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11063,7 +11063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlash")]
-        Icon::IoFlash => {
+        IoIcon::IoFlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11075,7 +11075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashOff")]
-        Icon::IoFlashOff => {
+        IoIcon::IoFlashOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11091,7 +11091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashOffOutline")]
-        Icon::IoFlashOffOutline => {
+        IoIcon::IoFlashOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11107,7 +11107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashOffSharp")]
-        Icon::IoFlashOffSharp => {
+        IoIcon::IoFlashOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11122,7 +11122,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashOutline")]
-        Icon::IoFlashOutline => {
+        IoIcon::IoFlashOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11136,7 +11136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashSharp")]
-        Icon::IoFlashSharp => {
+        IoIcon::IoFlashSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11147,7 +11147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashlight")]
-        Icon::IoFlashlight => {
+        IoIcon::IoFlashlight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11161,7 +11161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashlightOutline")]
-        Icon::IoFlashlightOutline => {
+        IoIcon::IoFlashlightOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11177,7 +11177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlashlightSharp")]
-        Icon::IoFlashlightSharp => {
+        IoIcon::IoFlashlightSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11192,7 +11192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlask")]
-        Icon::IoFlask => {
+        IoIcon::IoFlask => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11204,7 +11204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlaskOutline")]
-        Icon::IoFlaskOutline => {
+        IoIcon::IoFlaskOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11223,7 +11223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlaskSharp")]
-        Icon::IoFlaskSharp => {
+        IoIcon::IoFlaskSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11235,7 +11235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlower")]
-        Icon::IoFlower => {
+        IoIcon::IoFlower => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11248,7 +11248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlowerOutline")]
-        Icon::IoFlowerOutline => {
+        IoIcon::IoFlowerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11292,7 +11292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFlowerSharp")]
-        Icon::IoFlowerSharp => {
+        IoIcon::IoFlowerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11305,7 +11305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFolder")]
-        Icon::IoFolder => {
+        IoIcon::IoFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11319,7 +11319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFolderOpen")]
-        Icon::IoFolderOpen => {
+        IoIcon::IoFolderOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11333,7 +11333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFolderOpenOutline")]
-        Icon::IoFolderOpenOutline => {
+        IoIcon::IoFolderOpenOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11351,7 +11351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFolderOpenSharp")]
-        Icon::IoFolderOpenSharp => {
+        IoIcon::IoFolderOpenSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11365,7 +11365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFolderOutline")]
-        Icon::IoFolderOutline => {
+        IoIcon::IoFolderOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11381,7 +11381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFolderSharp")]
-        Icon::IoFolderSharp => {
+        IoIcon::IoFolderSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11394,7 +11394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFootball")]
-        Icon::IoFootball => {
+        IoIcon::IoFootball => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11406,7 +11406,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFootballOutline")]
-        Icon::IoFootballOutline => {
+        IoIcon::IoFootballOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11445,7 +11445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFootballSharp")]
-        Icon::IoFootballSharp => {
+        IoIcon::IoFootballSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11457,7 +11457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFootsteps")]
-        Icon::IoFootsteps => {
+        IoIcon::IoFootsteps => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11475,7 +11475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFootstepsOutline")]
-        Icon::IoFootstepsOutline => {
+        IoIcon::IoFootstepsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11497,7 +11497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFootstepsSharp")]
-        Icon::IoFootstepsSharp => {
+        IoIcon::IoFootstepsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11515,7 +11515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFunnel")]
-        Icon::IoFunnel => {
+        IoIcon::IoFunnel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11527,7 +11527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFunnelOutline")]
-        Icon::IoFunnelOutline => {
+        IoIcon::IoFunnelOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11541,7 +11541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoFunnelSharp")]
-        Icon::IoFunnelSharp => {
+        IoIcon::IoFunnelSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11552,7 +11552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGameController")]
-        Icon::IoGameController => {
+        IoIcon::IoGameController => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11564,7 +11564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGameControllerOutline")]
-        Icon::IoGameControllerOutline => {
+        IoIcon::IoGameControllerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11584,7 +11584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGameControllerSharp")]
-        Icon::IoGameControllerSharp => {
+        IoIcon::IoGameControllerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11596,7 +11596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGift")]
-        Icon::IoGift => {
+        IoIcon::IoGift => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11615,7 +11615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGiftOutline")]
-        Icon::IoGiftOutline => {
+        IoIcon::IoGiftOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11638,7 +11638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGiftSharp")]
-        Icon::IoGiftSharp => {
+        IoIcon::IoGiftSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11654,7 +11654,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitBranch")]
-        Icon::IoGitBranch => {
+        IoIcon::IoGitBranch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11666,7 +11666,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitBranchOutline")]
-        Icon::IoGitBranchOutline => {
+        IoIcon::IoGitBranchOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11687,7 +11687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitBranchSharp")]
-        Icon::IoGitBranchSharp => {
+        IoIcon::IoGitBranchSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11699,7 +11699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitCommit")]
-        Icon::IoGitCommit => {
+        IoIcon::IoGitCommit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11711,7 +11711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitCommitOutline")]
-        Icon::IoGitCommitOutline => {
+        IoIcon::IoGitCommitOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11728,7 +11728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitCommitSharp")]
-        Icon::IoGitCommitSharp => {
+        IoIcon::IoGitCommitSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11740,7 +11740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitCompare")]
-        Icon::IoGitCompare => {
+        IoIcon::IoGitCompare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11754,7 +11754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitCompareOutline")]
-        Icon::IoGitCompareOutline => {
+        IoIcon::IoGitCompareOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11777,7 +11777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitCompareSharp")]
-        Icon::IoGitCompareSharp => {
+        IoIcon::IoGitCompareSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11791,7 +11791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitMerge")]
-        Icon::IoGitMerge => {
+        IoIcon::IoGitMerge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11803,7 +11803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitMergeOutline")]
-        Icon::IoGitMergeOutline => {
+        IoIcon::IoGitMergeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11824,7 +11824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitMergeSharp")]
-        Icon::IoGitMergeSharp => {
+        IoIcon::IoGitMergeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11836,7 +11836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitNetwork")]
-        Icon::IoGitNetwork => {
+        IoIcon::IoGitNetwork => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11848,7 +11848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitNetworkOutline")]
-        Icon::IoGitNetworkOutline => {
+        IoIcon::IoGitNetworkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11871,7 +11871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitNetworkSharp")]
-        Icon::IoGitNetworkSharp => {
+        IoIcon::IoGitNetworkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11883,7 +11883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitPullRequest")]
-        Icon::IoGitPullRequest => {
+        IoIcon::IoGitPullRequest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11897,7 +11897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitPullRequestOutline")]
-        Icon::IoGitPullRequestOutline => {
+        IoIcon::IoGitPullRequestOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11920,7 +11920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGitPullRequestSharp")]
-        Icon::IoGitPullRequestSharp => {
+        IoIcon::IoGitPullRequestSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11934,7 +11934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGlasses")]
-        Icon::IoGlasses => {
+        IoIcon::IoGlasses => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11946,7 +11946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGlassesOutline")]
-        Icon::IoGlassesOutline => {
+        IoIcon::IoGlassesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11971,7 +11971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGlassesSharp")]
-        Icon::IoGlassesSharp => {
+        IoIcon::IoGlassesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11983,7 +11983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGlobe")]
-        Icon::IoGlobe => {
+        IoIcon::IoGlobe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12011,7 +12011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGlobeOutline")]
-        Icon::IoGlobeOutline => {
+        IoIcon::IoGlobeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12039,7 +12039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGlobeSharp")]
-        Icon::IoGlobeSharp => {
+        IoIcon::IoGlobeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12067,7 +12067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGolf")]
-        Icon::IoGolf => {
+        IoIcon::IoGolf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12081,7 +12081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGolfOutline")]
-        Icon::IoGolfOutline => {
+        IoIcon::IoGolfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12097,7 +12097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGolfSharp")]
-        Icon::IoGolfSharp => {
+        IoIcon::IoGolfSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12111,7 +12111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGrid")]
-        Icon::IoGrid => {
+        IoIcon::IoGrid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12129,7 +12129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGridOutline")]
-        Icon::IoGridOutline => {
+        IoIcon::IoGridOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12151,7 +12151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoGridSharp")]
-        Icon::IoGridSharp => {
+        IoIcon::IoGridSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12163,7 +12163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHammer")]
-        Icon::IoHammer => {
+        IoIcon::IoHammer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12177,7 +12177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHammerOutline")]
-        Icon::IoHammerOutline => {
+        IoIcon::IoHammerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12195,7 +12195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHammerSharp")]
-        Icon::IoHammerSharp => {
+        IoIcon::IoHammerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12209,7 +12209,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHandLeft")]
-        Icon::IoHandLeft => {
+        IoIcon::IoHandLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12221,7 +12221,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHandLeftOutline")]
-        Icon::IoHandLeftOutline => {
+        IoIcon::IoHandLeftOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12247,7 +12247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHandLeftSharp")]
-        Icon::IoHandLeftSharp => {
+        IoIcon::IoHandLeftSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12259,7 +12259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHandRight")]
-        Icon::IoHandRight => {
+        IoIcon::IoHandRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12271,7 +12271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHandRightOutline")]
-        Icon::IoHandRightOutline => {
+        IoIcon::IoHandRightOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12297,7 +12297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHandRightSharp")]
-        Icon::IoHandRightSharp => {
+        IoIcon::IoHandRightSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12309,7 +12309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHappy")]
-        Icon::IoHappy => {
+        IoIcon::IoHappy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12321,7 +12321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHappyOutline")]
-        Icon::IoHappyOutline => {
+        IoIcon::IoHappyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12337,7 +12337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHappySharp")]
-        Icon::IoHappySharp => {
+        IoIcon::IoHappySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12349,7 +12349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHardwareChip")]
-        Icon::IoHardwareChip => {
+        IoIcon::IoHardwareChip => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12364,7 +12364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHardwareChipOutline")]
-        Icon::IoHardwareChipOutline => {
+        IoIcon::IoHardwareChipOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12403,7 +12403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHardwareChipSharp")]
-        Icon::IoHardwareChipSharp => {
+        IoIcon::IoHardwareChipSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12416,7 +12416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeadset")]
-        Icon::IoHeadset => {
+        IoIcon::IoHeadset => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12428,7 +12428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeadsetOutline")]
-        Icon::IoHeadsetOutline => {
+        IoIcon::IoHeadsetOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12448,7 +12448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeadsetSharp")]
-        Icon::IoHeadsetSharp => {
+        IoIcon::IoHeadsetSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12460,7 +12460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeart")]
-        Icon::IoHeart => {
+        IoIcon::IoHeart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12472,7 +12472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartCircle")]
-        Icon::IoHeartCircle => {
+        IoIcon::IoHeartCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12484,7 +12484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartCircleOutline")]
-        Icon::IoHeartCircleOutline => {
+        IoIcon::IoHeartCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12499,7 +12499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartCircleSharp")]
-        Icon::IoHeartCircleSharp => {
+        IoIcon::IoHeartCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12511,7 +12511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartDislike")]
-        Icon::IoHeartDislike => {
+        IoIcon::IoHeartDislike => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12527,7 +12527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartDislikeCircle")]
-        Icon::IoHeartDislikeCircle => {
+        IoIcon::IoHeartDislikeCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12539,7 +12539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartDislikeCircleOutline")]
-        Icon::IoHeartDislikeCircleOutline => {
+        IoIcon::IoHeartDislikeCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12558,7 +12558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartDislikeCircleSharp")]
-        Icon::IoHeartDislikeCircleSharp => {
+        IoIcon::IoHeartDislikeCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12570,7 +12570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartDislikeOutline")]
-        Icon::IoHeartDislikeOutline => {
+        IoIcon::IoHeartDislikeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12586,7 +12586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartDislikeSharp")]
-        Icon::IoHeartDislikeSharp => {
+        IoIcon::IoHeartDislikeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12601,7 +12601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartHalf")]
-        Icon::IoHeartHalf => {
+        IoIcon::IoHeartHalf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12613,7 +12613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartHalfOutline")]
-        Icon::IoHeartHalfOutline => {
+        IoIcon::IoHeartHalfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12625,7 +12625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartHalfSharp")]
-        Icon::IoHeartHalfSharp => {
+        IoIcon::IoHeartHalfSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12637,7 +12637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartOutline")]
-        Icon::IoHeartOutline => {
+        IoIcon::IoHeartOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12651,7 +12651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHeartSharp")]
-        Icon::IoHeartSharp => {
+        IoIcon::IoHeartSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12663,7 +12663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelp")]
-        Icon::IoHelp => {
+        IoIcon::IoHelp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12677,7 +12677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpBuoy")]
-        Icon::IoHelpBuoy => {
+        IoIcon::IoHelpBuoy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12689,7 +12689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpBuoyOutline")]
-        Icon::IoHelpBuoyOutline => {
+        IoIcon::IoHelpBuoyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12720,7 +12720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpBuoySharp")]
-        Icon::IoHelpBuoySharp => {
+        IoIcon::IoHelpBuoySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12732,7 +12732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpCircle")]
-        Icon::IoHelpCircle => {
+        IoIcon::IoHelpCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12744,7 +12744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpCircleOutline")]
-        Icon::IoHelpCircleOutline => {
+        IoIcon::IoHelpCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12761,7 +12761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpCircleSharp")]
-        Icon::IoHelpCircleSharp => {
+        IoIcon::IoHelpCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12775,7 +12775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpOutline")]
-        Icon::IoHelpOutline => {
+        IoIcon::IoHelpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12789,7 +12789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHelpSharp")]
-        Icon::IoHelpSharp => {
+        IoIcon::IoHelpSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12804,7 +12804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHome")]
-        Icon::IoHome => {
+        IoIcon::IoHome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12818,7 +12818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHomeOutline")]
-        Icon::IoHomeOutline => {
+        IoIcon::IoHomeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12837,7 +12837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHomeSharp")]
-        Icon::IoHomeSharp => {
+        IoIcon::IoHomeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12849,7 +12849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHourglass")]
-        Icon::IoHourglass => {
+        IoIcon::IoHourglass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12861,7 +12861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHourglassOutline")]
-        Icon::IoHourglassOutline => {
+        IoIcon::IoHourglassOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12877,7 +12877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoHourglassSharp")]
-        Icon::IoHourglassSharp => {
+        IoIcon::IoHourglassSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12889,7 +12889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoIceCream")]
-        Icon::IoIceCream => {
+        IoIcon::IoIceCream => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12903,7 +12903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoIceCreamOutline")]
-        Icon::IoIceCreamOutline => {
+        IoIcon::IoIceCreamOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12920,7 +12920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoIceCreamSharp")]
-        Icon::IoIceCreamSharp => {
+        IoIcon::IoIceCreamSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12934,7 +12934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoIdCard")]
-        Icon::IoIdCard => {
+        IoIcon::IoIdCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12946,7 +12946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoIdCardOutline")]
-        Icon::IoIdCardOutline => {
+        IoIcon::IoIdCardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12964,7 +12964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoIdCardSharp")]
-        Icon::IoIdCardSharp => {
+        IoIcon::IoIdCardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12976,7 +12976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoImage")]
-        Icon::IoImage => {
+        IoIcon::IoImage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12988,7 +12988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoImageOutline")]
-        Icon::IoImageOutline => {
+        IoIcon::IoImageOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13008,7 +13008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoImageSharp")]
-        Icon::IoImageSharp => {
+        IoIcon::IoImageSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13020,7 +13020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoImages")]
-        Icon::IoImages => {
+        IoIcon::IoImages => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13034,7 +13034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoImagesOutline")]
-        Icon::IoImagesOutline => {
+        IoIcon::IoImagesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13058,7 +13058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoImagesSharp")]
-        Icon::IoImagesSharp => {
+        IoIcon::IoImagesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13073,7 +13073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInfinite")]
-        Icon::IoInfinite => {
+        IoIcon::IoInfinite => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13091,7 +13091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInfiniteOutline")]
-        Icon::IoInfiniteOutline => {
+        IoIcon::IoInfiniteOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13109,7 +13109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInfiniteSharp")]
-        Icon::IoInfiniteSharp => {
+        IoIcon::IoInfiniteSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13121,7 +13121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInformation")]
-        Icon::IoInformation => {
+        IoIcon::IoInformation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13137,7 +13137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInformationCircle")]
-        Icon::IoInformationCircle => {
+        IoIcon::IoInformationCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13149,7 +13149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInformationCircleOutline")]
-        Icon::IoInformationCircleOutline => {
+        IoIcon::IoInformationCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13167,7 +13167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInformationCircleSharp")]
-        Icon::IoInformationCircleSharp => {
+        IoIcon::IoInformationCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13179,7 +13179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInformationOutline")]
-        Icon::IoInformationOutline => {
+        IoIcon::IoInformationOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13195,7 +13195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInformationSharp")]
-        Icon::IoInformationSharp => {
+        IoIcon::IoInformationSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13211,7 +13211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInvertMode")]
-        Icon::IoInvertMode => {
+        IoIcon::IoInvertMode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13225,7 +13225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInvertModeOutline")]
-        Icon::IoInvertModeOutline => {
+        IoIcon::IoInvertModeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13240,7 +13240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoInvertModeSharp")]
-        Icon::IoInvertModeSharp => {
+        IoIcon::IoInvertModeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13253,7 +13253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoJournal")]
-        Icon::IoJournal => {
+        IoIcon::IoJournal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13267,7 +13267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoJournalOutline")]
-        Icon::IoJournalOutline => {
+        IoIcon::IoJournalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13282,7 +13282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoJournalSharp")]
-        Icon::IoJournalSharp => {
+        IoIcon::IoJournalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13295,7 +13295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoKey")]
-        Icon::IoKey => {
+        IoIcon::IoKey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13307,7 +13307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoKeyOutline")]
-        Icon::IoKeyOutline => {
+        IoIcon::IoKeyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13320,7 +13320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoKeySharp")]
-        Icon::IoKeySharp => {
+        IoIcon::IoKeySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13332,7 +13332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoKeypad")]
-        Icon::IoKeypad => {
+        IoIcon::IoKeypad => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13352,7 +13352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoKeypadOutline")]
-        Icon::IoKeypadOutline => {
+        IoIcon::IoKeypadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13382,7 +13382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoKeypadSharp")]
-        Icon::IoKeypadSharp => {
+        IoIcon::IoKeypadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13402,7 +13402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLanguage")]
-        Icon::IoLanguage => {
+        IoIcon::IoLanguage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13416,7 +13416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLanguageOutline")]
-        Icon::IoLanguageOutline => {
+        IoIcon::IoLanguageOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13439,7 +13439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLanguageSharp")]
-        Icon::IoLanguageSharp => {
+        IoIcon::IoLanguageSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13453,7 +13453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLaptop")]
-        Icon::IoLaptop => {
+        IoIcon::IoLaptop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13465,7 +13465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLaptopOutline")]
-        Icon::IoLaptopOutline => {
+        IoIcon::IoLaptopOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13480,7 +13480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLaptopSharp")]
-        Icon::IoLaptopSharp => {
+        IoIcon::IoLaptopSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13492,7 +13492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLayers")]
-        Icon::IoLayers => {
+        IoIcon::IoLayers => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13508,7 +13508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLayersOutline")]
-        Icon::IoLayersOutline => {
+        IoIcon::IoLayersOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13530,7 +13530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLayersSharp")]
-        Icon::IoLayersSharp => {
+        IoIcon::IoLayersSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13545,7 +13545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLeaf")]
-        Icon::IoLeaf => {
+        IoIcon::IoLeaf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13559,7 +13559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLeafOutline")]
-        Icon::IoLeafOutline => {
+        IoIcon::IoLeafOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13575,7 +13575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLeafSharp")]
-        Icon::IoLeafSharp => {
+        IoIcon::IoLeafSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13589,7 +13589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLibrary")]
-        Icon::IoLibrary => {
+        IoIcon::IoLibrary => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13610,7 +13610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLibraryOutline")]
-        Icon::IoLibraryOutline => {
+        IoIcon::IoLibraryOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13635,7 +13635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLibrarySharp")]
-        Icon::IoLibrarySharp => {
+        IoIcon::IoLibrarySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13653,7 +13653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLink")]
-        Icon::IoLink => {
+        IoIcon::IoLink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13670,7 +13670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLinkOutline")]
-        Icon::IoLinkOutline => {
+        IoIcon::IoLinkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13687,7 +13687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLinkSharp")]
-        Icon::IoLinkSharp => {
+        IoIcon::IoLinkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13704,7 +13704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoList")]
-        Icon::IoList => {
+        IoIcon::IoList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13727,7 +13727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoListCircle")]
-        Icon::IoListCircle => {
+        IoIcon::IoListCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13739,7 +13739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoListCircleOutline")]
-        Icon::IoListCircleOutline => {
+        IoIcon::IoListCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13765,7 +13765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoListCircleSharp")]
-        Icon::IoListCircleSharp => {
+        IoIcon::IoListCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13777,7 +13777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoListOutline")]
-        Icon::IoListOutline => {
+        IoIcon::IoListOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13800,7 +13800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoListSharp")]
-        Icon::IoListSharp => {
+        IoIcon::IoListSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13823,7 +13823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLocate")]
-        Icon::IoLocate => {
+        IoIcon::IoLocate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13845,7 +13845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLocateOutline")]
-        Icon::IoLocateOutline => {
+        IoIcon::IoLocateOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13866,7 +13866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLocateSharp")]
-        Icon::IoLocateSharp => {
+        IoIcon::IoLocateSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13888,7 +13888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLocation")]
-        Icon::IoLocation => {
+        IoIcon::IoLocation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13901,7 +13901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLocationOutline")]
-        Icon::IoLocationOutline => {
+        IoIcon::IoLocationOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13917,7 +13917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLocationSharp")]
-        Icon::IoLocationSharp => {
+        IoIcon::IoLocationSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13929,7 +13929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLockClosed")]
-        Icon::IoLockClosed => {
+        IoIcon::IoLockClosed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13941,7 +13941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLockClosedOutline")]
-        Icon::IoLockClosedOutline => {
+        IoIcon::IoLockClosedOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13957,7 +13957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLockClosedSharp")]
-        Icon::IoLockClosedSharp => {
+        IoIcon::IoLockClosedSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13969,7 +13969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLockOpen")]
-        Icon::IoLockOpen => {
+        IoIcon::IoLockOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13981,7 +13981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLockOpenOutline")]
-        Icon::IoLockOpenOutline => {
+        IoIcon::IoLockOpenOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13997,7 +13997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLockOpenSharp")]
-        Icon::IoLockOpenSharp => {
+        IoIcon::IoLockOpenSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14009,7 +14009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogIn")]
-        Icon::IoLogIn => {
+        IoIcon::IoLogIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14021,7 +14021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogInOutline")]
-        Icon::IoLogInOutline => {
+        IoIcon::IoLogInOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14039,7 +14039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogInSharp")]
-        Icon::IoLogInSharp => {
+        IoIcon::IoLogInSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14051,7 +14051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogOut")]
-        Icon::IoLogOut => {
+        IoIcon::IoLogOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14065,7 +14065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogOutOutline")]
-        Icon::IoLogOutOutline => {
+        IoIcon::IoLogOutOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14083,7 +14083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogOutSharp")]
-        Icon::IoLogOutSharp => {
+        IoIcon::IoLogOutSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14097,7 +14097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAlipay")]
-        Icon::IoLogoAlipay => {
+        IoIcon::IoLogoAlipay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14109,7 +14109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAmazon")]
-        Icon::IoLogoAmazon => {
+        IoIcon::IoLogoAmazon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14125,7 +14125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAmplify")]
-        Icon::IoLogoAmplify => {
+        IoIcon::IoLogoAmplify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14137,7 +14137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAndroid")]
-        Icon::IoLogoAndroid => {
+        IoIcon::IoLogoAndroid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14149,7 +14149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAngular")]
-        Icon::IoLogoAngular => {
+        IoIcon::IoLogoAngular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14162,7 +14162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoApple")]
-        Icon::IoLogoApple => {
+        IoIcon::IoLogoApple => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14176,7 +14176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAppleAppstore")]
-        Icon::IoLogoAppleAppstore => {
+        IoIcon::IoLogoAppleAppstore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14188,7 +14188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoAppleAr")]
-        Icon::IoLogoAppleAr => {
+        IoIcon::IoLogoAppleAr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14230,7 +14230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoBehance")]
-        Icon::IoLogoBehance => {
+        IoIcon::IoLogoBehance => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14248,7 +14248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoBitbucket")]
-        Icon::IoLogoBitbucket => {
+        IoIcon::IoLogoBitbucket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14260,7 +14260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoBitcoin")]
-        Icon::IoLogoBitcoin => {
+        IoIcon::IoLogoBitcoin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14272,7 +14272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoBuffer")]
-        Icon::IoLogoBuffer => {
+        IoIcon::IoLogoBuffer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14288,7 +14288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoCapacitor")]
-        Icon::IoLogoCapacitor => {
+        IoIcon::IoLogoCapacitor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14302,7 +14302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoChrome")]
-        Icon::IoLogoChrome => {
+        IoIcon::IoLogoChrome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14320,7 +14320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoClosedCaptioning")]
-        Icon::IoLogoClosedCaptioning => {
+        IoIcon::IoLogoClosedCaptioning => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14336,7 +14336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoCodepen")]
-        Icon::IoLogoCodepen => {
+        IoIcon::IoLogoCodepen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14360,7 +14360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoCss3")]
-        Icon::IoLogoCss3 => {
+        IoIcon::IoLogoCss3 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14372,7 +14372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoDesignernews")]
-        Icon::IoLogoDesignernews => {
+        IoIcon::IoLogoDesignernews => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14387,7 +14387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoDeviantart")]
-        Icon::IoLogoDeviantart => {
+        IoIcon::IoLogoDeviantart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14399,7 +14399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoDiscord")]
-        Icon::IoLogoDiscord => {
+        IoIcon::IoLogoDiscord => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14415,7 +14415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoDocker")]
-        Icon::IoLogoDocker => {
+        IoIcon::IoLogoDocker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14445,7 +14445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoDribbble")]
-        Icon::IoLogoDribbble => {
+        IoIcon::IoLogoDribbble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14457,7 +14457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoDropbox")]
-        Icon::IoLogoDropbox => {
+        IoIcon::IoLogoDropbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14469,7 +14469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoEdge")]
-        Icon::IoLogoEdge => {
+        IoIcon::IoLogoEdge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14481,7 +14481,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoElectron")]
-        Icon::IoLogoElectron => {
+        IoIcon::IoLogoElectron => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14505,7 +14505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoEuro")]
-        Icon::IoLogoEuro => {
+        IoIcon::IoLogoEuro => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14517,7 +14517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoFacebook")]
-        Icon::IoLogoFacebook => {
+        IoIcon::IoLogoFacebook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14529,7 +14529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoFigma")]
-        Icon::IoLogoFigma => {
+        IoIcon::IoLogoFigma => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14541,7 +14541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoFirebase")]
-        Icon::IoLogoFirebase => {
+        IoIcon::IoLogoFirebase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14553,7 +14553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoFirefox")]
-        Icon::IoLogoFirefox => {
+        IoIcon::IoLogoFirefox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14565,7 +14565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoFlickr")]
-        Icon::IoLogoFlickr => {
+        IoIcon::IoLogoFlickr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14577,7 +14577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoFoursquare")]
-        Icon::IoLogoFoursquare => {
+        IoIcon::IoLogoFoursquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14589,7 +14589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoGithub")]
-        Icon::IoLogoGithub => {
+        IoIcon::IoLogoGithub => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14601,7 +14601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoGitlab")]
-        Icon::IoLogoGitlab => {
+        IoIcon::IoLogoGitlab => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14613,7 +14613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoGoogle")]
-        Icon::IoLogoGoogle => {
+        IoIcon::IoLogoGoogle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14625,7 +14625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoGooglePlaystore")]
-        Icon::IoLogoGooglePlaystore => {
+        IoIcon::IoLogoGooglePlaystore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14643,7 +14643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoHackernews")]
-        Icon::IoLogoHackernews => {
+        IoIcon::IoLogoHackernews => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14655,7 +14655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoHtml5")]
-        Icon::IoLogoHtml5 => {
+        IoIcon::IoLogoHtml5 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14667,7 +14667,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoInstagram")]
-        Icon::IoLogoInstagram => {
+        IoIcon::IoLogoInstagram => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14683,7 +14683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoIonic")]
-        Icon::IoLogoIonic => {
+        IoIcon::IoLogoIonic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14697,7 +14697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoIonitron")]
-        Icon::IoLogoIonitron => {
+        IoIcon::IoLogoIonitron => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14711,7 +14711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoJavascript")]
-        Icon::IoLogoJavascript => {
+        IoIcon::IoLogoJavascript => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14723,7 +14723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoLaravel")]
-        Icon::IoLogoLaravel => {
+        IoIcon::IoLogoLaravel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14735,7 +14735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoLinkedin")]
-        Icon::IoLogoLinkedin => {
+        IoIcon::IoLogoLinkedin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14747,7 +14747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoMarkdown")]
-        Icon::IoLogoMarkdown => {
+        IoIcon::IoLogoMarkdown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14759,7 +14759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoMastodon")]
-        Icon::IoLogoMastodon => {
+        IoIcon::IoLogoMastodon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14771,7 +14771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoMedium")]
-        Icon::IoLogoMedium => {
+        IoIcon::IoLogoMedium => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 512 512; {}", style) x = "0px" y =
@@ -14788,7 +14788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoMicrosoft")]
-        Icon::IoLogoMicrosoft => {
+        IoIcon::IoLogoMicrosoft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14801,7 +14801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoNoSmoking")]
-        Icon::IoLogoNoSmoking => {
+        IoIcon::IoLogoNoSmoking => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14820,7 +14820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoNodejs")]
-        Icon::IoLogoNodejs => {
+        IoIcon::IoLogoNodejs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14834,7 +14834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoNpm")]
-        Icon::IoLogoNpm => {
+        IoIcon::IoLogoNpm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14847,7 +14847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoOctocat")]
-        Icon::IoLogoOctocat => {
+        IoIcon::IoLogoOctocat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14863,7 +14863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoPaypal")]
-        Icon::IoLogoPaypal => {
+        IoIcon::IoLogoPaypal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14877,7 +14877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoPinterest")]
-        Icon::IoLogoPinterest => {
+        IoIcon::IoLogoPinterest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14889,7 +14889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoPlaystation")]
-        Icon::IoLogoPlaystation => {
+        IoIcon::IoLogoPlaystation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14905,7 +14905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoPwa")]
-        Icon::IoLogoPwa => {
+        IoIcon::IoLogoPwa => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14919,7 +14919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoPython")]
-        Icon::IoLogoPython => {
+        IoIcon::IoLogoPython => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14933,7 +14933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoReact")]
-        Icon::IoLogoReact => {
+        IoIcon::IoLogoReact => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14947,7 +14947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoReddit")]
-        Icon::IoLogoReddit => {
+        IoIcon::IoLogoReddit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14964,7 +14964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoRss")]
-        Icon::IoLogoRss => {
+        IoIcon::IoLogoRss => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14980,7 +14980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoSass")]
-        Icon::IoLogoSass => {
+        IoIcon::IoLogoSass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14992,7 +14992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoSkype")]
-        Icon::IoLogoSkype => {
+        IoIcon::IoLogoSkype => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15004,7 +15004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoSlack")]
-        Icon::IoLogoSlack => {
+        IoIcon::IoLogoSlack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15026,7 +15026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoSnapchat")]
-        Icon::IoLogoSnapchat => {
+        IoIcon::IoLogoSnapchat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15038,7 +15038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoSoundcloud")]
-        Icon::IoLogoSoundcloud => {
+        IoIcon::IoLogoSoundcloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15076,7 +15076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoStackoverflow")]
-        Icon::IoLogoStackoverflow => {
+        IoIcon::IoLogoStackoverflow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15089,7 +15089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoSteam")]
-        Icon::IoLogoSteam => {
+        IoIcon::IoLogoSteam => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15101,7 +15101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoStencil")]
-        Icon::IoLogoStencil => {
+        IoIcon::IoLogoStencil => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15114,7 +15114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoTableau")]
-        Icon::IoLogoTableau => {
+        IoIcon::IoLogoTableau => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15140,7 +15140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoTiktok")]
-        Icon::IoLogoTiktok => {
+        IoIcon::IoLogoTiktok => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15152,7 +15152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoTumblr")]
-        Icon::IoLogoTumblr => {
+        IoIcon::IoLogoTumblr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15164,7 +15164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoTux")]
-        Icon::IoLogoTux => {
+        IoIcon::IoLogoTux => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15176,7 +15176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoTwitch")]
-        Icon::IoLogoTwitch => {
+        IoIcon::IoLogoTwitch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15189,7 +15189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoTwitter")]
-        Icon::IoLogoTwitter => {
+        IoIcon::IoLogoTwitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15201,7 +15201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoUsd")]
-        Icon::IoLogoUsd => {
+        IoIcon::IoLogoUsd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15213,7 +15213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoVenmo")]
-        Icon::IoLogoVenmo => {
+        IoIcon::IoLogoVenmo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15225,7 +15225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoVercel")]
-        Icon::IoLogoVercel => {
+        IoIcon::IoLogoVercel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15236,7 +15236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoVimeo")]
-        Icon::IoLogoVimeo => {
+        IoIcon::IoLogoVimeo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15248,7 +15248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoVk")]
-        Icon::IoLogoVk => {
+        IoIcon::IoLogoVk => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15260,7 +15260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoVue")]
-        Icon::IoLogoVue => {
+        IoIcon::IoLogoVue => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15274,7 +15274,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoWebComponent")]
-        Icon::IoLogoWebComponent => {
+        IoIcon::IoLogoWebComponent => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15294,7 +15294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoWechat")]
-        Icon::IoLogoWechat => {
+        IoIcon::IoLogoWechat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15309,7 +15309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoWhatsapp")]
-        Icon::IoLogoWhatsapp => {
+        IoIcon::IoLogoWhatsapp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15321,7 +15321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoWindows")]
-        Icon::IoLogoWindows => {
+        IoIcon::IoLogoWindows => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15334,7 +15334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoWordpress")]
-        Icon::IoLogoWordpress => {
+        IoIcon::IoLogoWordpress => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15352,7 +15352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoXbox")]
-        Icon::IoLogoXbox => {
+        IoIcon::IoLogoXbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15370,7 +15370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoXing")]
-        Icon::IoLogoXing => {
+        IoIcon::IoLogoXing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15384,7 +15384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoYahoo")]
-        Icon::IoLogoYahoo => {
+        IoIcon::IoLogoYahoo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15396,7 +15396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoYen")]
-        Icon::IoLogoYen => {
+        IoIcon::IoLogoYen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15408,7 +15408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoLogoYoutube")]
-        Icon::IoLogoYoutube => {
+        IoIcon::IoLogoYoutube => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15420,7 +15420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMagnet")]
-        Icon::IoMagnet => {
+        IoIcon::IoMagnet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15443,7 +15443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMagnetOutline")]
-        Icon::IoMagnetOutline => {
+        IoIcon::IoMagnetOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15474,7 +15474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMagnetSharp")]
-        Icon::IoMagnetSharp => {
+        IoIcon::IoMagnetSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15496,7 +15496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMail")]
-        Icon::IoMail => {
+        IoIcon::IoMail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15508,7 +15508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailOpen")]
-        Icon::IoMailOpen => {
+        IoIcon::IoMailOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15520,7 +15520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailOpenOutline")]
-        Icon::IoMailOpenOutline => {
+        IoIcon::IoMailOpenOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15541,7 +15541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailOpenSharp")]
-        Icon::IoMailOpenSharp => {
+        IoIcon::IoMailOpenSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15553,7 +15553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailOutline")]
-        Icon::IoMailOutline => {
+        IoIcon::IoMailOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15568,7 +15568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailSharp")]
-        Icon::IoMailSharp => {
+        IoIcon::IoMailSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15580,7 +15580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailUnread")]
-        Icon::IoMailUnread => {
+        IoIcon::IoMailUnread => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15594,7 +15594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailUnreadOutline")]
-        Icon::IoMailUnreadOutline => {
+        IoIcon::IoMailUnreadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15612,7 +15612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMailUnreadSharp")]
-        Icon::IoMailUnreadSharp => {
+        IoIcon::IoMailUnreadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15626,7 +15626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMale")]
-        Icon::IoMale => {
+        IoIcon::IoMale => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15638,7 +15638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMaleFemale")]
-        Icon::IoMaleFemale => {
+        IoIcon::IoMaleFemale => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15650,7 +15650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMaleFemaleOutline")]
-        Icon::IoMaleFemaleOutline => {
+        IoIcon::IoMaleFemaleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15671,7 +15671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMaleFemaleSharp")]
-        Icon::IoMaleFemaleSharp => {
+        IoIcon::IoMaleFemaleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15683,7 +15683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMaleOutline")]
-        Icon::IoMaleOutline => {
+        IoIcon::IoMaleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15700,7 +15700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMaleSharp")]
-        Icon::IoMaleSharp => {
+        IoIcon::IoMaleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15712,7 +15712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMan")]
-        Icon::IoMan => {
+        IoIcon::IoMan => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15725,7 +15725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoManOutline")]
-        Icon::IoManOutline => {
+        IoIcon::IoManOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15748,7 +15748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoManSharp")]
-        Icon::IoManSharp => {
+        IoIcon::IoManSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15761,7 +15761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMap")]
-        Icon::IoMap => {
+        IoIcon::IoMap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15777,7 +15777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMapOutline")]
-        Icon::IoMapOutline => {
+        IoIcon::IoMapOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15795,7 +15795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMapSharp")]
-        Icon::IoMapSharp => {
+        IoIcon::IoMapSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15807,7 +15807,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedal")]
-        Icon::IoMedal => {
+        IoIcon::IoMedal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15822,7 +15822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedalOutline")]
-        Icon::IoMedalOutline => {
+        IoIcon::IoMedalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15847,7 +15847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedalSharp")]
-        Icon::IoMedalSharp => {
+        IoIcon::IoMedalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15860,7 +15860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedical")]
-        Icon::IoMedical => {
+        IoIcon::IoMedical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15872,7 +15872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedicalOutline")]
-        Icon::IoMedicalOutline => {
+        IoIcon::IoMedicalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15886,7 +15886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedicalSharp")]
-        Icon::IoMedicalSharp => {
+        IoIcon::IoMedicalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15898,7 +15898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedkit")]
-        Icon::IoMedkit => {
+        IoIcon::IoMedkit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15912,7 +15912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedkitOutline")]
-        Icon::IoMedkitOutline => {
+        IoIcon::IoMedkitOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15931,7 +15931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMedkitSharp")]
-        Icon::IoMedkitSharp => {
+        IoIcon::IoMedkitSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15944,7 +15944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMegaphone")]
-        Icon::IoMegaphone => {
+        IoIcon::IoMegaphone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15960,7 +15960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMegaphoneOutline")]
-        Icon::IoMegaphoneOutline => {
+        IoIcon::IoMegaphoneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15986,7 +15986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMegaphoneSharp")]
-        Icon::IoMegaphoneSharp => {
+        IoIcon::IoMegaphoneSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16002,7 +16002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMenu")]
-        Icon::IoMenu => {
+        IoIcon::IoMenu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16019,7 +16019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMenuOutline")]
-        Icon::IoMenuOutline => {
+        IoIcon::IoMenuOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16036,7 +16036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMenuSharp")]
-        Icon::IoMenuSharp => {
+        IoIcon::IoMenuSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16048,7 +16048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMic")]
-        Icon::IoMic => {
+        IoIcon::IoMic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16069,7 +16069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicCircle")]
-        Icon::IoMicCircle => {
+        IoIcon::IoMicCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16081,7 +16081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicCircleOutline")]
-        Icon::IoMicCircleOutline => {
+        IoIcon::IoMicCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16103,7 +16103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicCircleSharp")]
-        Icon::IoMicCircleSharp => {
+        IoIcon::IoMicCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16115,7 +16115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOff")]
-        Icon::IoMicOff => {
+        IoIcon::IoMicOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16136,7 +16136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOffCircle")]
-        Icon::IoMicOffCircle => {
+        IoIcon::IoMicOffCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16148,7 +16148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOffCircleOutline")]
-        Icon::IoMicOffCircleOutline => {
+        IoIcon::IoMicOffCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16170,7 +16170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOffCircleSharp")]
-        Icon::IoMicOffCircleSharp => {
+        IoIcon::IoMicOffCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16182,7 +16182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOffOutline")]
-        Icon::IoMicOffOutline => {
+        IoIcon::IoMicOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16203,7 +16203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOffSharp")]
-        Icon::IoMicOffSharp => {
+        IoIcon::IoMicOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16224,7 +16224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicOutline")]
-        Icon::IoMicOutline => {
+        IoIcon::IoMicOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16247,7 +16247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMicSharp")]
-        Icon::IoMicSharp => {
+        IoIcon::IoMicSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16268,7 +16268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMoon")]
-        Icon::IoMoon => {
+        IoIcon::IoMoon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16280,7 +16280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMoonOutline")]
-        Icon::IoMoonOutline => {
+        IoIcon::IoMoonOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16294,7 +16294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMoonSharp")]
-        Icon::IoMoonSharp => {
+        IoIcon::IoMoonSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16306,7 +16306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMove")]
-        Icon::IoMove => {
+        IoIcon::IoMove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16329,7 +16329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMoveOutline")]
-        Icon::IoMoveOutline => {
+        IoIcon::IoMoveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16352,7 +16352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMoveSharp")]
-        Icon::IoMoveSharp => {
+        IoIcon::IoMoveSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16374,7 +16374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMusicalNote")]
-        Icon::IoMusicalNote => {
+        IoIcon::IoMusicalNote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16386,7 +16386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMusicalNoteOutline")]
-        Icon::IoMusicalNoteOutline => {
+        IoIcon::IoMusicalNoteOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16400,7 +16400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMusicalNoteSharp")]
-        Icon::IoMusicalNoteSharp => {
+        IoIcon::IoMusicalNoteSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16412,7 +16412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMusicalNotes")]
-        Icon::IoMusicalNotes => {
+        IoIcon::IoMusicalNotes => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16424,7 +16424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMusicalNotesOutline")]
-        Icon::IoMusicalNotesOutline => {
+        IoIcon::IoMusicalNotesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16442,7 +16442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoMusicalNotesSharp")]
-        Icon::IoMusicalNotesSharp => {
+        IoIcon::IoMusicalNotesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16454,7 +16454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNavigate")]
-        Icon::IoNavigate => {
+        IoIcon::IoNavigate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16466,7 +16466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNavigateCircle")]
-        Icon::IoNavigateCircle => {
+        IoIcon::IoNavigateCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16478,7 +16478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNavigateCircleOutline")]
-        Icon::IoNavigateCircleOutline => {
+        IoIcon::IoNavigateCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16493,7 +16493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNavigateCircleSharp")]
-        Icon::IoNavigateCircleSharp => {
+        IoIcon::IoNavigateCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16505,7 +16505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNavigateOutline")]
-        Icon::IoNavigateOutline => {
+        IoIcon::IoNavigateOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16518,7 +16518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNavigateSharp")]
-        Icon::IoNavigateSharp => {
+        IoIcon::IoNavigateSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16529,7 +16529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNewspaper")]
-        Icon::IoNewspaper => {
+        IoIcon::IoNewspaper => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16543,7 +16543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNewspaperOutline")]
-        Icon::IoNewspaperOutline => {
+        IoIcon::IoNewspaperOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16571,7 +16571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNewspaperSharp")]
-        Icon::IoNewspaperSharp => {
+        IoIcon::IoNewspaperSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16587,7 +16587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotifications")]
-        Icon::IoNotifications => {
+        IoIcon::IoNotifications => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16601,7 +16601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsCircle")]
-        Icon::IoNotificationsCircle => {
+        IoIcon::IoNotificationsCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16613,7 +16613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsCircleOutline")]
-        Icon::IoNotificationsCircleOutline => {
+        IoIcon::IoNotificationsCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16630,7 +16630,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsCircleSharp")]
-        Icon::IoNotificationsCircleSharp => {
+        IoIcon::IoNotificationsCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16647,7 +16647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOff")]
-        Icon::IoNotificationsOff => {
+        IoIcon::IoNotificationsOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16665,7 +16665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOffCircle")]
-        Icon::IoNotificationsOffCircle => {
+        IoIcon::IoNotificationsOffCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16677,7 +16677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOffCircleOutline")]
-        Icon::IoNotificationsOffCircleOutline => {
+        IoIcon::IoNotificationsOffCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16698,7 +16698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOffCircleSharp")]
-        Icon::IoNotificationsOffCircleSharp => {
+        IoIcon::IoNotificationsOffCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16710,7 +16710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOffOutline")]
-        Icon::IoNotificationsOffOutline => {
+        IoIcon::IoNotificationsOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16732,7 +16732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOffSharp")]
-        Icon::IoNotificationsOffSharp => {
+        IoIcon::IoNotificationsOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16750,7 +16750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsOutline")]
-        Icon::IoNotificationsOutline => {
+        IoIcon::IoNotificationsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16766,7 +16766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNotificationsSharp")]
-        Icon::IoNotificationsSharp => {
+        IoIcon::IoNotificationsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16780,7 +16780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNuclear")]
-        Icon::IoNuclear => {
+        IoIcon::IoNuclear => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16792,7 +16792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNuclearOutline")]
-        Icon::IoNuclearOutline => {
+        IoIcon::IoNuclearOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16819,7 +16819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNuclearSharp")]
-        Icon::IoNuclearSharp => {
+        IoIcon::IoNuclearSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16834,7 +16834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNutrition")]
-        Icon::IoNutrition => {
+        IoIcon::IoNutrition => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16848,7 +16848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNutritionOutline")]
-        Icon::IoNutritionOutline => {
+        IoIcon::IoNutritionOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16864,7 +16864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoNutritionSharp")]
-        Icon::IoNutritionSharp => {
+        IoIcon::IoNutritionSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16878,7 +16878,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoOpen")]
-        Icon::IoOpen => {
+        IoIcon::IoOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16892,7 +16892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoOpenOutline")]
-        Icon::IoOpenOutline => {
+        IoIcon::IoOpenOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16910,7 +16910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoOpenSharp")]
-        Icon::IoOpenSharp => {
+        IoIcon::IoOpenSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16924,7 +16924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoOptions")]
-        Icon::IoOptions => {
+        IoIcon::IoOptions => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16940,7 +16940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoOptionsOutline")]
-        Icon::IoOptionsOutline => {
+        IoIcon::IoOptionsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16969,7 +16969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoOptionsSharp")]
-        Icon::IoOptionsSharp => {
+        IoIcon::IoOptionsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16985,7 +16985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPaperPlane")]
-        Icon::IoPaperPlane => {
+        IoIcon::IoPaperPlane => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16997,7 +16997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPaperPlaneOutline")]
-        Icon::IoPaperPlaneOutline => {
+        IoIcon::IoPaperPlaneOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17013,7 +17013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPaperPlaneSharp")]
-        Icon::IoPaperPlaneSharp => {
+        IoIcon::IoPaperPlaneSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17024,7 +17024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPartlySunny")]
-        Icon::IoPartlySunny => {
+        IoIcon::IoPartlySunny => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17045,7 +17045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPartlySunnyOutline")]
-        Icon::IoPartlySunnyOutline => {
+        IoIcon::IoPartlySunnyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17068,7 +17068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPartlySunnySharp")]
-        Icon::IoPartlySunnySharp => {
+        IoIcon::IoPartlySunnySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17086,7 +17086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPause")]
-        Icon::IoPause => {
+        IoIcon::IoPause => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17100,7 +17100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPauseCircle")]
-        Icon::IoPauseCircle => {
+        IoIcon::IoPauseCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17112,7 +17112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPauseCircleOutline")]
-        Icon::IoPauseCircleOutline => {
+        IoIcon::IoPauseCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17129,7 +17129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPauseCircleSharp")]
-        Icon::IoPauseCircleSharp => {
+        IoIcon::IoPauseCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17141,7 +17141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPauseOutline")]
-        Icon::IoPauseOutline => {
+        IoIcon::IoPauseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17156,7 +17156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPauseSharp")]
-        Icon::IoPauseSharp => {
+        IoIcon::IoPauseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17167,7 +17167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPaw")]
-        Icon::IoPaw => {
+        IoIcon::IoPaw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17187,7 +17187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPawOutline")]
-        Icon::IoPawOutline => {
+        IoIcon::IoPawOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17212,7 +17212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPawSharp")]
-        Icon::IoPawSharp => {
+        IoIcon::IoPawSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17227,7 +17227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPencil")]
-        Icon::IoPencil => {
+        IoIcon::IoPencil => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17245,7 +17245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPencilOutline")]
-        Icon::IoPencilOutline => {
+        IoIcon::IoPencilOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17263,7 +17263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPencilSharp")]
-        Icon::IoPencilSharp => {
+        IoIcon::IoPencilSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17276,7 +17276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPeople")]
-        Icon::IoPeople => {
+        IoIcon::IoPeople => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17294,7 +17294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPeopleCircle")]
-        Icon::IoPeopleCircle => {
+        IoIcon::IoPeopleCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17346,7 +17346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPeopleCircleOutline")]
-        Icon::IoPeopleCircleOutline => {
+        IoIcon::IoPeopleCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17366,7 +17366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPeopleCircleSharp")]
-        Icon::IoPeopleCircleSharp => {
+        IoIcon::IoPeopleCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17378,7 +17378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPeopleOutline")]
-        Icon::IoPeopleOutline => {
+        IoIcon::IoPeopleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17403,7 +17403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPeopleSharp")]
-        Icon::IoPeopleSharp => {
+        IoIcon::IoPeopleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17418,7 +17418,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPerson")]
-        Icon::IoPerson => {
+        IoIcon::IoPerson => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17432,7 +17432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonAdd")]
-        Icon::IoPersonAdd => {
+        IoIcon::IoPersonAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17448,7 +17448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonAddOutline")]
-        Icon::IoPersonAddOutline => {
+        IoIcon::IoPersonAddOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17469,7 +17469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonAddSharp")]
-        Icon::IoPersonAddSharp => {
+        IoIcon::IoPersonAddSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17483,7 +17483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonCircle")]
-        Icon::IoPersonCircle => {
+        IoIcon::IoPersonCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17495,7 +17495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonCircleOutline")]
-        Icon::IoPersonCircleOutline => {
+        IoIcon::IoPersonCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17509,7 +17509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonCircleSharp")]
-        Icon::IoPersonCircleSharp => {
+        IoIcon::IoPersonCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17521,7 +17521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonOutline")]
-        Icon::IoPersonOutline => {
+        IoIcon::IoPersonOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17538,7 +17538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonRemove")]
-        Icon::IoPersonRemove => {
+        IoIcon::IoPersonRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17553,7 +17553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonRemoveOutline")]
-        Icon::IoPersonRemoveOutline => {
+        IoIcon::IoPersonRemoveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17572,7 +17572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonRemoveSharp")]
-        Icon::IoPersonRemoveSharp => {
+        IoIcon::IoPersonRemoveSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17586,7 +17586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPersonSharp")]
-        Icon::IoPersonSharp => {
+        IoIcon::IoPersonSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17598,7 +17598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPhoneLandscape")]
-        Icon::IoPhoneLandscape => {
+        IoIcon::IoPhoneLandscape => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17614,7 +17614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPhoneLandscapeOutline")]
-        Icon::IoPhoneLandscapeOutline => {
+        IoIcon::IoPhoneLandscapeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17632,7 +17632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPhoneLandscapeSharp")]
-        Icon::IoPhoneLandscapeSharp => {
+        IoIcon::IoPhoneLandscapeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17644,7 +17644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPhonePortrait")]
-        Icon::IoPhonePortrait => {
+        IoIcon::IoPhonePortrait => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17660,7 +17660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPhonePortraitOutline")]
-        Icon::IoPhonePortraitOutline => {
+        IoIcon::IoPhonePortraitOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17677,7 +17677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPhonePortraitSharp")]
-        Icon::IoPhonePortraitSharp => {
+        IoIcon::IoPhonePortraitSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17689,7 +17689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPieChart")]
-        Icon::IoPieChart => {
+        IoIcon::IoPieChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17703,7 +17703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPieChartOutline")]
-        Icon::IoPieChartOutline => {
+        IoIcon::IoPieChartOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17721,7 +17721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPieChartSharp")]
-        Icon::IoPieChartSharp => {
+        IoIcon::IoPieChartSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17734,7 +17734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPin")]
-        Icon::IoPin => {
+        IoIcon::IoPin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17746,7 +17746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPinOutline")]
-        Icon::IoPinOutline => {
+        IoIcon::IoPinOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17760,7 +17760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPinSharp")]
-        Icon::IoPinSharp => {
+        IoIcon::IoPinSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17772,7 +17772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPint")]
-        Icon::IoPint => {
+        IoIcon::IoPint => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17784,7 +17784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPintOutline")]
-        Icon::IoPintOutline => {
+        IoIcon::IoPintOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17800,7 +17800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPintSharp")]
-        Icon::IoPintSharp => {
+        IoIcon::IoPintSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17812,7 +17812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPizza")]
-        Icon::IoPizza => {
+        IoIcon::IoPizza => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17826,7 +17826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPizzaOutline")]
-        Icon::IoPizzaOutline => {
+        IoIcon::IoPizzaOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17843,7 +17843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPizzaSharp")]
-        Icon::IoPizzaSharp => {
+        IoIcon::IoPizzaSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17863,7 +17863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlanet")]
-        Icon::IoPlanet => {
+        IoIcon::IoPlanet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17877,7 +17877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlanetOutline")]
-        Icon::IoPlanetOutline => {
+        IoIcon::IoPlanetOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17892,7 +17892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlanetSharp")]
-        Icon::IoPlanetSharp => {
+        IoIcon::IoPlanetSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17906,7 +17906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlay")]
-        Icon::IoPlay => {
+        IoIcon::IoPlay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17918,7 +17918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayBack")]
-        Icon::IoPlayBack => {
+        IoIcon::IoPlayBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17930,7 +17930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayBackCircle")]
-        Icon::IoPlayBackCircle => {
+        IoIcon::IoPlayBackCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17942,7 +17942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayBackCircleOutline")]
-        Icon::IoPlayBackCircleOutline => {
+        IoIcon::IoPlayBackCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17957,7 +17957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayBackCircleSharp")]
-        Icon::IoPlayBackCircleSharp => {
+        IoIcon::IoPlayBackCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17969,7 +17969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayBackOutline")]
-        Icon::IoPlayBackOutline => {
+        IoIcon::IoPlayBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17985,7 +17985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayBackSharp")]
-        Icon::IoPlayBackSharp => {
+        IoIcon::IoPlayBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17997,7 +17997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayCircle")]
-        Icon::IoPlayCircle => {
+        IoIcon::IoPlayCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18009,7 +18009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayCircleOutline")]
-        Icon::IoPlayCircleOutline => {
+        IoIcon::IoPlayCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18024,7 +18024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayCircleSharp")]
-        Icon::IoPlayCircleSharp => {
+        IoIcon::IoPlayCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18036,7 +18036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayForward")]
-        Icon::IoPlayForward => {
+        IoIcon::IoPlayForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18048,7 +18048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayForwardCircle")]
-        Icon::IoPlayForwardCircle => {
+        IoIcon::IoPlayForwardCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18060,7 +18060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayForwardCircleOutline")]
-        Icon::IoPlayForwardCircleOutline => {
+        IoIcon::IoPlayForwardCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18075,7 +18075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayForwardCircleSharp")]
-        Icon::IoPlayForwardCircleSharp => {
+        IoIcon::IoPlayForwardCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18087,7 +18087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayForwardOutline")]
-        Icon::IoPlayForwardOutline => {
+        IoIcon::IoPlayForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18103,7 +18103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayForwardSharp")]
-        Icon::IoPlayForwardSharp => {
+        IoIcon::IoPlayForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18115,7 +18115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlayOutline")]
-        Icon::IoPlayOutline => {
+        IoIcon::IoPlayOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18128,7 +18128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySharp")]
-        Icon::IoPlaySharp => {
+        IoIcon::IoPlaySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18139,7 +18139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipBack")]
-        Icon::IoPlaySkipBack => {
+        IoIcon::IoPlaySkipBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18151,7 +18151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipBackCircle")]
-        Icon::IoPlaySkipBackCircle => {
+        IoIcon::IoPlaySkipBackCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18163,7 +18163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipBackCircleOutline")]
-        Icon::IoPlaySkipBackCircleOutline => {
+        IoIcon::IoPlaySkipBackCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18178,7 +18178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipBackCircleSharp")]
-        Icon::IoPlaySkipBackCircleSharp => {
+        IoIcon::IoPlaySkipBackCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18190,7 +18190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipBackOutline")]
-        Icon::IoPlaySkipBackOutline => {
+        IoIcon::IoPlaySkipBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18205,7 +18205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipBackSharp")]
-        Icon::IoPlaySkipBackSharp => {
+        IoIcon::IoPlaySkipBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18217,7 +18217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipForward")]
-        Icon::IoPlaySkipForward => {
+        IoIcon::IoPlaySkipForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18229,7 +18229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipForwardCircle")]
-        Icon::IoPlaySkipForwardCircle => {
+        IoIcon::IoPlaySkipForwardCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18241,7 +18241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipForwardCircleOutline")]
-        Icon::IoPlaySkipForwardCircleOutline => {
+        IoIcon::IoPlaySkipForwardCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18256,7 +18256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipForwardCircleSharp")]
-        Icon::IoPlaySkipForwardCircleSharp => {
+        IoIcon::IoPlaySkipForwardCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18268,7 +18268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipForwardOutline")]
-        Icon::IoPlaySkipForwardOutline => {
+        IoIcon::IoPlaySkipForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18283,7 +18283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPlaySkipForwardSharp")]
-        Icon::IoPlaySkipForwardSharp => {
+        IoIcon::IoPlaySkipForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18295,7 +18295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPodium")]
-        Icon::IoPodium => {
+        IoIcon::IoPodium => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18311,7 +18311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPodiumOutline")]
-        Icon::IoPodiumOutline => {
+        IoIcon::IoPodiumOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18332,7 +18332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPodiumSharp")]
-        Icon::IoPodiumSharp => {
+        IoIcon::IoPodiumSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18344,7 +18344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPower")]
-        Icon::IoPower => {
+        IoIcon::IoPower => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18358,7 +18358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPowerOutline")]
-        Icon::IoPowerOutline => {
+        IoIcon::IoPowerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18374,7 +18374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPowerSharp")]
-        Icon::IoPowerSharp => {
+        IoIcon::IoPowerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18386,7 +18386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPricetag")]
-        Icon::IoPricetag => {
+        IoIcon::IoPricetag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18398,7 +18398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPricetagOutline")]
-        Icon::IoPricetagOutline => {
+        IoIcon::IoPricetagOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18413,7 +18413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPricetagSharp")]
-        Icon::IoPricetagSharp => {
+        IoIcon::IoPricetagSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18425,7 +18425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPricetags")]
-        Icon::IoPricetags => {
+        IoIcon::IoPricetags => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18439,7 +18439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPricetagsOutline")]
-        Icon::IoPricetagsOutline => {
+        IoIcon::IoPricetagsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18456,7 +18456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPricetagsSharp")]
-        Icon::IoPricetagsSharp => {
+        IoIcon::IoPricetagsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18469,7 +18469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPrint")]
-        Icon::IoPrint => {
+        IoIcon::IoPrint => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18483,7 +18483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPrintOutline")]
-        Icon::IoPrintOutline => {
+        IoIcon::IoPrintOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18501,7 +18501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPrintSharp")]
-        Icon::IoPrintSharp => {
+        IoIcon::IoPrintSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18517,7 +18517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPrism")]
-        Icon::IoPrism => {
+        IoIcon::IoPrism => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18529,7 +18529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPrismOutline")]
-        Icon::IoPrismOutline => {
+        IoIcon::IoPrismOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18544,7 +18544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPrismSharp")]
-        Icon::IoPrismSharp => {
+        IoIcon::IoPrismSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18556,7 +18556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPulse")]
-        Icon::IoPulse => {
+        IoIcon::IoPulse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18568,7 +18568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPulseOutline")]
-        Icon::IoPulseOutline => {
+        IoIcon::IoPulseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18583,7 +18583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPulseSharp")]
-        Icon::IoPulseSharp => {
+        IoIcon::IoPulseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18595,7 +18595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPush")]
-        Icon::IoPush => {
+        IoIcon::IoPush => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18607,7 +18607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPushOutline")]
-        Icon::IoPushOutline => {
+        IoIcon::IoPushOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18625,7 +18625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoPushSharp")]
-        Icon::IoPushSharp => {
+        IoIcon::IoPushSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18637,7 +18637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoQrCode")]
-        Icon::IoQrCode => {
+        IoIcon::IoQrCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18658,7 +18658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoQrCodeOutline")]
-        Icon::IoQrCodeOutline => {
+        IoIcon::IoQrCodeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18685,7 +18685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoQrCodeSharp")]
-        Icon::IoQrCodeSharp => {
+        IoIcon::IoQrCodeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18704,7 +18704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadio")]
-        Icon::IoRadio => {
+        IoIcon::IoRadio => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18727,7 +18727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioButtonOff")]
-        Icon::IoRadioButtonOff => {
+        IoIcon::IoRadioButtonOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18740,7 +18740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioButtonOffOutline")]
-        Icon::IoRadioButtonOffOutline => {
+        IoIcon::IoRadioButtonOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18753,7 +18753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioButtonOffSharp")]
-        Icon::IoRadioButtonOffSharp => {
+        IoIcon::IoRadioButtonOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18766,7 +18766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioButtonOn")]
-        Icon::IoRadioButtonOn => {
+        IoIcon::IoRadioButtonOn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18779,7 +18779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioButtonOnOutline")]
-        Icon::IoRadioButtonOnOutline => {
+        IoIcon::IoRadioButtonOnOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18792,7 +18792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioButtonOnSharp")]
-        Icon::IoRadioButtonOnSharp => {
+        IoIcon::IoRadioButtonOnSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18805,7 +18805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioOutline")]
-        Icon::IoRadioOutline => {
+        IoIcon::IoRadioOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18828,7 +18828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRadioSharp")]
-        Icon::IoRadioSharp => {
+        IoIcon::IoRadioSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18851,7 +18851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRainy")]
-        Icon::IoRainy => {
+        IoIcon::IoRainy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18871,7 +18871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRainyOutline")]
-        Icon::IoRainyOutline => {
+        IoIcon::IoRainyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18892,7 +18892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRainySharp")]
-        Icon::IoRainySharp => {
+        IoIcon::IoRainySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18911,7 +18911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReader")]
-        Icon::IoReader => {
+        IoIcon::IoReader => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18923,7 +18923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReaderOutline")]
-        Icon::IoReaderOutline => {
+        IoIcon::IoReaderOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18942,7 +18942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReaderSharp")]
-        Icon::IoReaderSharp => {
+        IoIcon::IoReaderSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18954,7 +18954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReceipt")]
-        Icon::IoReceipt => {
+        IoIcon::IoReceipt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18968,7 +18968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReceiptOutline")]
-        Icon::IoReceiptOutline => {
+        IoIcon::IoReceiptOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18988,7 +18988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReceiptSharp")]
-        Icon::IoReceiptSharp => {
+        IoIcon::IoReceiptSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19002,7 +19002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRecording")]
-        Icon::IoRecording => {
+        IoIcon::IoRecording => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19014,7 +19014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRecordingOutline")]
-        Icon::IoRecordingOutline => {
+        IoIcon::IoRecordingOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19031,7 +19031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRecordingSharp")]
-        Icon::IoRecordingSharp => {
+        IoIcon::IoRecordingSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19043,7 +19043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRefresh")]
-        Icon::IoRefresh => {
+        IoIcon::IoRefresh => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19058,7 +19058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRefreshCircle")]
-        Icon::IoRefreshCircle => {
+        IoIcon::IoRefreshCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19070,7 +19070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRefreshCircleOutline")]
-        Icon::IoRefreshCircleOutline => {
+        IoIcon::IoRefreshCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19088,7 +19088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRefreshCircleSharp")]
-        Icon::IoRefreshCircleSharp => {
+        IoIcon::IoRefreshCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19100,7 +19100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRefreshOutline")]
-        Icon::IoRefreshOutline => {
+        IoIcon::IoRefreshOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19115,7 +19115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRefreshSharp")]
-        Icon::IoRefreshSharp => {
+        IoIcon::IoRefreshSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19130,7 +19130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReload")]
-        Icon::IoReload => {
+        IoIcon::IoReload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19146,7 +19146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReloadCircle")]
-        Icon::IoReloadCircle => {
+        IoIcon::IoReloadCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19158,7 +19158,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReloadCircleOutline")]
-        Icon::IoReloadCircleOutline => {
+        IoIcon::IoReloadCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19176,7 +19176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReloadCircleSharp")]
-        Icon::IoReloadCircleSharp => {
+        IoIcon::IoReloadCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19188,7 +19188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReloadOutline")]
-        Icon::IoReloadOutline => {
+        IoIcon::IoReloadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19204,7 +19204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReloadSharp")]
-        Icon::IoReloadSharp => {
+        IoIcon::IoReloadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19220,7 +19220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRemove")]
-        Icon::IoRemove => {
+        IoIcon::IoRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19233,7 +19233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRemoveCircle")]
-        Icon::IoRemoveCircle => {
+        IoIcon::IoRemoveCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19245,7 +19245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRemoveCircleOutline")]
-        Icon::IoRemoveCircleOutline => {
+        IoIcon::IoRemoveCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19260,7 +19260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRemoveCircleSharp")]
-        Icon::IoRemoveCircleSharp => {
+        IoIcon::IoRemoveCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19272,7 +19272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRemoveOutline")]
-        Icon::IoRemoveOutline => {
+        IoIcon::IoRemoveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19285,7 +19285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRemoveSharp")]
-        Icon::IoRemoveSharp => {
+        IoIcon::IoRemoveSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19298,7 +19298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderFour")]
-        Icon::IoReorderFour => {
+        IoIcon::IoReorderFour => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19317,7 +19317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderFourOutline")]
-        Icon::IoReorderFourOutline => {
+        IoIcon::IoReorderFourOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19336,7 +19336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderFourSharp")]
-        Icon::IoReorderFourSharp => {
+        IoIcon::IoReorderFourSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19355,7 +19355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderThree")]
-        Icon::IoReorderThree => {
+        IoIcon::IoReorderThree => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19372,7 +19372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderThreeOutline")]
-        Icon::IoReorderThreeOutline => {
+        IoIcon::IoReorderThreeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19389,7 +19389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderThreeSharp")]
-        Icon::IoReorderThreeSharp => {
+        IoIcon::IoReorderThreeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19406,7 +19406,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderTwo")]
-        Icon::IoReorderTwo => {
+        IoIcon::IoReorderTwo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19421,7 +19421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderTwoOutline")]
-        Icon::IoReorderTwoOutline => {
+        IoIcon::IoReorderTwoOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19436,7 +19436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReorderTwoSharp")]
-        Icon::IoReorderTwoSharp => {
+        IoIcon::IoReorderTwoSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19451,7 +19451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRepeat")]
-        Icon::IoRepeat => {
+        IoIcon::IoRepeat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19470,7 +19470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRepeatOutline")]
-        Icon::IoRepeatOutline => {
+        IoIcon::IoRepeatOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19489,7 +19489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRepeatSharp")]
-        Icon::IoRepeatSharp => {
+        IoIcon::IoRepeatSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19508,7 +19508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoResize")]
-        Icon::IoResize => {
+        IoIcon::IoResize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19525,7 +19525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoResizeOutline")]
-        Icon::IoResizeOutline => {
+        IoIcon::IoResizeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19542,7 +19542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoResizeSharp")]
-        Icon::IoResizeSharp => {
+        IoIcon::IoResizeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19559,7 +19559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRestaurant")]
-        Icon::IoRestaurant => {
+        IoIcon::IoRestaurant => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19573,7 +19573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRestaurantOutline")]
-        Icon::IoRestaurantOutline => {
+        IoIcon::IoRestaurantOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19600,7 +19600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRestaurantSharp")]
-        Icon::IoRestaurantSharp => {
+        IoIcon::IoRestaurantSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19614,7 +19614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnDownBack")]
-        Icon::IoReturnDownBack => {
+        IoIcon::IoReturnDownBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19629,7 +19629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnDownBackOutline")]
-        Icon::IoReturnDownBackOutline => {
+        IoIcon::IoReturnDownBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19644,7 +19644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnDownBackSharp")]
-        Icon::IoReturnDownBackSharp => {
+        IoIcon::IoReturnDownBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19659,7 +19659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnDownForward")]
-        Icon::IoReturnDownForward => {
+        IoIcon::IoReturnDownForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19674,7 +19674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnDownForwardOutline")]
-        Icon::IoReturnDownForwardOutline => {
+        IoIcon::IoReturnDownForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19689,7 +19689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnDownForwardSharp")]
-        Icon::IoReturnDownForwardSharp => {
+        IoIcon::IoReturnDownForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19704,7 +19704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnUpBack")]
-        Icon::IoReturnUpBack => {
+        IoIcon::IoReturnUpBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19719,7 +19719,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnUpBackOutline")]
-        Icon::IoReturnUpBackOutline => {
+        IoIcon::IoReturnUpBackOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19734,7 +19734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnUpBackSharp")]
-        Icon::IoReturnUpBackSharp => {
+        IoIcon::IoReturnUpBackSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19749,7 +19749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnUpForward")]
-        Icon::IoReturnUpForward => {
+        IoIcon::IoReturnUpForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19764,7 +19764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnUpForwardOutline")]
-        Icon::IoReturnUpForwardOutline => {
+        IoIcon::IoReturnUpForwardOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19779,7 +19779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoReturnUpForwardSharp")]
-        Icon::IoReturnUpForwardSharp => {
+        IoIcon::IoReturnUpForwardSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19794,7 +19794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRibbon")]
-        Icon::IoRibbon => {
+        IoIcon::IoRibbon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19811,7 +19811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRibbonOutline")]
-        Icon::IoRibbonOutline => {
+        IoIcon::IoRibbonOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19834,7 +19834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRibbonSharp")]
-        Icon::IoRibbonSharp => {
+        IoIcon::IoRibbonSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19850,7 +19850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRocket")]
-        Icon::IoRocket => {
+        IoIcon::IoRocket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19866,7 +19866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRocketOutline")]
-        Icon::IoRocketOutline => {
+        IoIcon::IoRocketOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19884,7 +19884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRocketSharp")]
-        Icon::IoRocketSharp => {
+        IoIcon::IoRocketSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19898,7 +19898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRose")]
-        Icon::IoRose => {
+        IoIcon::IoRose => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19916,7 +19916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRoseOutline")]
-        Icon::IoRoseOutline => {
+        IoIcon::IoRoseOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19941,7 +19941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoRoseSharp")]
-        Icon::IoRoseSharp => {
+        IoIcon::IoRoseSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19959,7 +19959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSad")]
-        Icon::IoSad => {
+        IoIcon::IoSad => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19971,7 +19971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSadOutline")]
-        Icon::IoSadOutline => {
+        IoIcon::IoSadOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19987,7 +19987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSadSharp")]
-        Icon::IoSadSharp => {
+        IoIcon::IoSadSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19999,7 +19999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSave")]
-        Icon::IoSave => {
+        IoIcon::IoSave => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20011,7 +20011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSaveOutline")]
-        Icon::IoSaveOutline => {
+        IoIcon::IoSaveOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20025,7 +20025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSaveSharp")]
-        Icon::IoSaveSharp => {
+        IoIcon::IoSaveSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20037,7 +20037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScale")]
-        Icon::IoScale => {
+        IoIcon::IoScale => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20049,7 +20049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScaleOutline")]
-        Icon::IoScaleOutline => {
+        IoIcon::IoScaleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20064,7 +20064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScaleSharp")]
-        Icon::IoScaleSharp => {
+        IoIcon::IoScaleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20076,7 +20076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScan")]
-        Icon::IoScan => {
+        IoIcon::IoScan => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20095,7 +20095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScanCircle")]
-        Icon::IoScanCircle => {
+        IoIcon::IoScanCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20107,7 +20107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScanCircleOutline")]
-        Icon::IoScanCircleOutline => {
+        IoIcon::IoScanCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20128,7 +20128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScanCircleSharp")]
-        Icon::IoScanCircleSharp => {
+        IoIcon::IoScanCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20140,7 +20140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScanOutline")]
-        Icon::IoScanOutline => {
+        IoIcon::IoScanOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20159,7 +20159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoScanSharp")]
-        Icon::IoScanSharp => {
+        IoIcon::IoScanSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20177,7 +20177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSchool")]
-        Icon::IoSchool => {
+        IoIcon::IoSchool => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20191,7 +20191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSchoolOutline")]
-        Icon::IoSchoolOutline => {
+        IoIcon::IoSchoolOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20210,7 +20210,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSchoolSharp")]
-        Icon::IoSchoolSharp => {
+        IoIcon::IoSchoolSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20224,7 +20224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSearch")]
-        Icon::IoSearch => {
+        IoIcon::IoSearch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20236,7 +20236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSearchCircle")]
-        Icon::IoSearchCircle => {
+        IoIcon::IoSearchCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20248,7 +20248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSearchCircleOutline")]
-        Icon::IoSearchCircleOutline => {
+        IoIcon::IoSearchCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20265,7 +20265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSearchCircleSharp")]
-        Icon::IoSearchCircleSharp => {
+        IoIcon::IoSearchCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20277,7 +20277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSearchOutline")]
-        Icon::IoSearchOutline => {
+        IoIcon::IoSearchOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20292,7 +20292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSearchSharp")]
-        Icon::IoSearchSharp => {
+        IoIcon::IoSearchSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20304,7 +20304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSend")]
-        Icon::IoSend => {
+        IoIcon::IoSend => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20316,7 +20316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSendOutline")]
-        Icon::IoSendOutline => {
+        IoIcon::IoSendOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20330,7 +20330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSendSharp")]
-        Icon::IoSendSharp => {
+        IoIcon::IoSendSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20341,7 +20341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoServer")]
-        Icon::IoServer => {
+        IoIcon::IoServer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20359,7 +20359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoServerOutline")]
-        Icon::IoServerOutline => {
+        IoIcon::IoServerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20380,7 +20380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoServerSharp")]
-        Icon::IoServerSharp => {
+        IoIcon::IoServerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20398,7 +20398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSettings")]
-        Icon::IoSettings => {
+        IoIcon::IoSettings => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20411,7 +20411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSettingsOutline")]
-        Icon::IoSettingsOutline => {
+        IoIcon::IoSettingsOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20425,7 +20425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSettingsSharp")]
-        Icon::IoSettingsSharp => {
+        IoIcon::IoSettingsSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20437,7 +20437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShapes")]
-        Icon::IoShapes => {
+        IoIcon::IoShapes => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20451,7 +20451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShapesOutline")]
-        Icon::IoShapesOutline => {
+        IoIcon::IoShapesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20466,7 +20466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShapesSharp")]
-        Icon::IoShapesSharp => {
+        IoIcon::IoShapesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20479,7 +20479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShare")]
-        Icon::IoShare => {
+        IoIcon::IoShare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20493,7 +20493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShareOutline")]
-        Icon::IoShareOutline => {
+        IoIcon::IoShareOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20511,7 +20511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShareSharp")]
-        Icon::IoShareSharp => {
+        IoIcon::IoShareSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20525,7 +20525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShareSocial")]
-        Icon::IoShareSocial => {
+        IoIcon::IoShareSocial => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20537,7 +20537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShareSocialOutline")]
-        Icon::IoShareSocialOutline => {
+        IoIcon::IoShareSocialOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20558,7 +20558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShareSocialSharp")]
-        Icon::IoShareSocialSharp => {
+        IoIcon::IoShareSocialSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20570,7 +20570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShield")]
-        Icon::IoShield => {
+        IoIcon::IoShield => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20582,7 +20582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldCheckmark")]
-        Icon::IoShieldCheckmark => {
+        IoIcon::IoShieldCheckmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20594,7 +20594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldCheckmarkOutline")]
-        Icon::IoShieldCheckmarkOutline => {
+        IoIcon::IoShieldCheckmarkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20611,7 +20611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldCheckmarkSharp")]
-        Icon::IoShieldCheckmarkSharp => {
+        IoIcon::IoShieldCheckmarkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20623,7 +20623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldHalf")]
-        Icon::IoShieldHalf => {
+        IoIcon::IoShieldHalf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20638,7 +20638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldHalfOutline")]
-        Icon::IoShieldHalfOutline => {
+        IoIcon::IoShieldHalfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20653,7 +20653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldHalfSharp")]
-        Icon::IoShieldHalfSharp => {
+        IoIcon::IoShieldHalfSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20665,7 +20665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldOutline")]
-        Icon::IoShieldOutline => {
+        IoIcon::IoShieldOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20679,7 +20679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShieldSharp")]
-        Icon::IoShieldSharp => {
+        IoIcon::IoShieldSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20691,7 +20691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShirt")]
-        Icon::IoShirt => {
+        IoIcon::IoShirt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20705,7 +20705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShirtOutline")]
-        Icon::IoShirtOutline => {
+        IoIcon::IoShirtOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20721,7 +20721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShirtSharp")]
-        Icon::IoShirtSharp => {
+        IoIcon::IoShirtSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20735,7 +20735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShuffle")]
-        Icon::IoShuffle => {
+        IoIcon::IoShuffle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20758,7 +20758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShuffleOutline")]
-        Icon::IoShuffleOutline => {
+        IoIcon::IoShuffleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20781,7 +20781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoShuffleSharp")]
-        Icon::IoShuffleSharp => {
+        IoIcon::IoShuffleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20802,7 +20802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSkull")]
-        Icon::IoSkull => {
+        IoIcon::IoSkull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20814,7 +20814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSkullOutline")]
-        Icon::IoSkullOutline => {
+        IoIcon::IoSkullOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20840,7 +20840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSkullSharp")]
-        Icon::IoSkullSharp => {
+        IoIcon::IoSkullSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20852,7 +20852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSnow")]
-        Icon::IoSnow => {
+        IoIcon::IoSnow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20864,7 +20864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSnowOutline")]
-        Icon::IoSnowOutline => {
+        IoIcon::IoSnowOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20895,7 +20895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSnowSharp")]
-        Icon::IoSnowSharp => {
+        IoIcon::IoSnowSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20907,7 +20907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSparkles")]
-        Icon::IoSparkles => {
+        IoIcon::IoSparkles => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20923,7 +20923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSparklesOutline")]
-        Icon::IoSparklesOutline => {
+        IoIcon::IoSparklesOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20942,7 +20942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSparklesSharp")]
-        Icon::IoSparklesSharp => {
+        IoIcon::IoSparklesSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20958,7 +20958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSpeedometer")]
-        Icon::IoSpeedometer => {
+        IoIcon::IoSpeedometer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20970,7 +20970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSpeedometerOutline")]
-        Icon::IoSpeedometerOutline => {
+        IoIcon::IoSpeedometerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20996,7 +20996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSpeedometerSharp")]
-        Icon::IoSpeedometerSharp => {
+        IoIcon::IoSpeedometerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21008,7 +21008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSquare")]
-        Icon::IoSquare => {
+        IoIcon::IoSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21020,7 +21020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSquareOutline")]
-        Icon::IoSquareOutline => {
+        IoIcon::IoSquareOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21034,7 +21034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSquareSharp")]
-        Icon::IoSquareSharp => {
+        IoIcon::IoSquareSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21045,7 +21045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStar")]
-        Icon::IoStar => {
+        IoIcon::IoStar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21057,7 +21057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStarHalf")]
-        Icon::IoStarHalf => {
+        IoIcon::IoStarHalf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21071,7 +21071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStarHalfOutline")]
-        Icon::IoStarHalfOutline => {
+        IoIcon::IoStarHalfOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21085,7 +21085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStarHalfSharp")]
-        Icon::IoStarHalfSharp => {
+        IoIcon::IoStarHalfSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21097,7 +21097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStarOutline")]
-        Icon::IoStarOutline => {
+        IoIcon::IoStarOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21110,7 +21110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStarSharp")]
-        Icon::IoStarSharp => {
+        IoIcon::IoStarSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21122,7 +21122,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStatsChart")]
-        Icon::IoStatsChart => {
+        IoIcon::IoStatsChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21140,7 +21140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStatsChartOutline")]
-        Icon::IoStatsChartOutline => {
+        IoIcon::IoStatsChartOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21162,7 +21162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStatsChartSharp")]
-        Icon::IoStatsChartSharp => {
+        IoIcon::IoStatsChartSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21174,7 +21174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStop")]
-        Icon::IoStop => {
+        IoIcon::IoStop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21186,7 +21186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopCircle")]
-        Icon::IoStopCircle => {
+        IoIcon::IoStopCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21198,7 +21198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopCircleOutline")]
-        Icon::IoStopCircleOutline => {
+        IoIcon::IoStopCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21213,7 +21213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopCircleSharp")]
-        Icon::IoStopCircleSharp => {
+        IoIcon::IoStopCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21225,7 +21225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopOutline")]
-        Icon::IoStopOutline => {
+        IoIcon::IoStopOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21238,7 +21238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopSharp")]
-        Icon::IoStopSharp => {
+        IoIcon::IoStopSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21249,7 +21249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopwatch")]
-        Icon::IoStopwatch => {
+        IoIcon::IoStopwatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21262,7 +21262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopwatchOutline")]
-        Icon::IoStopwatchOutline => {
+        IoIcon::IoStopwatchOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21283,7 +21283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStopwatchSharp")]
-        Icon::IoStopwatchSharp => {
+        IoIcon::IoStopwatchSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21295,7 +21295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStorefront")]
-        Icon::IoStorefront => {
+        IoIcon::IoStorefront => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21309,7 +21309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStorefrontOutline")]
-        Icon::IoStorefrontOutline => {
+        IoIcon::IoStorefrontOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21334,7 +21334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoStorefrontSharp")]
-        Icon::IoStorefrontSharp => {
+        IoIcon::IoStorefrontSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21348,7 +21348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSubway")]
-        Icon::IoSubway => {
+        IoIcon::IoSubway => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21362,7 +21362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSubwayOutline")]
-        Icon::IoSubwayOutline => {
+        IoIcon::IoSubwayOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21390,7 +21390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSubwaySharp")]
-        Icon::IoSubwaySharp => {
+        IoIcon::IoSubwaySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21404,7 +21404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSunny")]
-        Icon::IoSunny => {
+        IoIcon::IoSunny => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21429,7 +21429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSunnyOutline")]
-        Icon::IoSunnyOutline => {
+        IoIcon::IoSunnyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21458,7 +21458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSunnySharp")]
-        Icon::IoSunnySharp => {
+        IoIcon::IoSunnySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21480,7 +21480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSwapHorizontal")]
-        Icon::IoSwapHorizontal => {
+        IoIcon::IoSwapHorizontal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21499,7 +21499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSwapHorizontalOutline")]
-        Icon::IoSwapHorizontalOutline => {
+        IoIcon::IoSwapHorizontalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21518,7 +21518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSwapHorizontalSharp")]
-        Icon::IoSwapHorizontalSharp => {
+        IoIcon::IoSwapHorizontalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21537,7 +21537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSwapVertical")]
-        Icon::IoSwapVertical => {
+        IoIcon::IoSwapVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21556,7 +21556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSwapVerticalOutline")]
-        Icon::IoSwapVerticalOutline => {
+        IoIcon::IoSwapVerticalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21575,7 +21575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSwapVerticalSharp")]
-        Icon::IoSwapVerticalSharp => {
+        IoIcon::IoSwapVerticalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21594,7 +21594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSync")]
-        Icon::IoSync => {
+        IoIcon::IoSync => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21612,7 +21612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSyncCircle")]
-        Icon::IoSyncCircle => {
+        IoIcon::IoSyncCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21624,7 +21624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSyncCircleOutline")]
-        Icon::IoSyncCircleOutline => {
+        IoIcon::IoSyncCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21645,7 +21645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSyncCircleSharp")]
-        Icon::IoSyncCircleSharp => {
+        IoIcon::IoSyncCircleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21657,7 +21657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSyncOutline")]
-        Icon::IoSyncOutline => {
+        IoIcon::IoSyncOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21675,7 +21675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoSyncSharp")]
-        Icon::IoSyncSharp => {
+        IoIcon::IoSyncSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21693,7 +21693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTabletLandscape")]
-        Icon::IoTabletLandscape => {
+        IoIcon::IoTabletLandscape => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21707,7 +21707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTabletLandscapeOutline")]
-        Icon::IoTabletLandscapeOutline => {
+        IoIcon::IoTabletLandscapeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21721,7 +21721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTabletLandscapeSharp")]
-        Icon::IoTabletLandscapeSharp => {
+        IoIcon::IoTabletLandscapeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21733,7 +21733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTabletPortrait")]
-        Icon::IoTabletPortrait => {
+        IoIcon::IoTabletPortrait => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21747,7 +21747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTabletPortraitOutline")]
-        Icon::IoTabletPortraitOutline => {
+        IoIcon::IoTabletPortraitOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21760,7 +21760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTabletPortraitSharp")]
-        Icon::IoTabletPortraitSharp => {
+        IoIcon::IoTabletPortraitSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21772,7 +21772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTelescope")]
-        Icon::IoTelescope => {
+        IoIcon::IoTelescope => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21788,7 +21788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTelescopeOutline")]
-        Icon::IoTelescopeOutline => {
+        IoIcon::IoTelescopeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21812,7 +21812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTelescopeSharp")]
-        Icon::IoTelescopeSharp => {
+        IoIcon::IoTelescopeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21828,7 +21828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTennisball")]
-        Icon::IoTennisball => {
+        IoIcon::IoTennisball => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21844,7 +21844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTennisballOutline")]
-        Icon::IoTennisballOutline => {
+        IoIcon::IoTennisballOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21865,7 +21865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTennisballSharp")]
-        Icon::IoTennisballSharp => {
+        IoIcon::IoTennisballSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21881,7 +21881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTerminal")]
-        Icon::IoTerminal => {
+        IoIcon::IoTerminal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21893,7 +21893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTerminalOutline")]
-        Icon::IoTerminalOutline => {
+        IoIcon::IoTerminalOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21910,7 +21910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTerminalSharp")]
-        Icon::IoTerminalSharp => {
+        IoIcon::IoTerminalSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21922,7 +21922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoText")]
-        Icon::IoText => {
+        IoIcon::IoText => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21936,7 +21936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTextOutline")]
-        Icon::IoTextOutline => {
+        IoIcon::IoTextOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21958,7 +21958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTextSharp")]
-        Icon::IoTextSharp => {
+        IoIcon::IoTextSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21972,7 +21972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThermometer")]
-        Icon::IoThermometer => {
+        IoIcon::IoThermometer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21984,7 +21984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThermometerOutline")]
-        Icon::IoThermometerOutline => {
+        IoIcon::IoThermometerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22000,7 +22000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThermometerSharp")]
-        Icon::IoThermometerSharp => {
+        IoIcon::IoThermometerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22012,7 +22012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThumbsDown")]
-        Icon::IoThumbsDown => {
+        IoIcon::IoThumbsDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22032,7 +22032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThumbsDownOutline")]
-        Icon::IoThumbsDownOutline => {
+        IoIcon::IoThumbsDownOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22058,7 +22058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThumbsDownSharp")]
-        Icon::IoThumbsDownSharp => {
+        IoIcon::IoThumbsDownSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22076,7 +22076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThumbsUp")]
-        Icon::IoThumbsUp => {
+        IoIcon::IoThumbsUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22096,7 +22096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThumbsUpOutline")]
-        Icon::IoThumbsUpOutline => {
+        IoIcon::IoThumbsUpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22122,7 +22122,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThumbsUpSharp")]
-        Icon::IoThumbsUpSharp => {
+        IoIcon::IoThumbsUpSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22134,7 +22134,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThunderstorm")]
-        Icon::IoThunderstorm => {
+        IoIcon::IoThunderstorm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22154,7 +22154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThunderstormOutline")]
-        Icon::IoThunderstormOutline => {
+        IoIcon::IoThunderstormOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22180,7 +22180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoThunderstormSharp")]
-        Icon::IoThunderstormSharp => {
+        IoIcon::IoThunderstormSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22199,7 +22199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTicket")]
-        Icon::IoTicket => {
+        IoIcon::IoTicket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22211,7 +22211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTicketOutline")]
-        Icon::IoTicketOutline => {
+        IoIcon::IoTicketOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22233,7 +22233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTicketSharp")]
-        Icon::IoTicketSharp => {
+        IoIcon::IoTicketSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22245,7 +22245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTime")]
-        Icon::IoTime => {
+        IoIcon::IoTime => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22257,7 +22257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTimeOutline")]
-        Icon::IoTimeOutline => {
+        IoIcon::IoTimeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22272,7 +22272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTimeSharp")]
-        Icon::IoTimeSharp => {
+        IoIcon::IoTimeSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22284,7 +22284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTimer")]
-        Icon::IoTimer => {
+        IoIcon::IoTimer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22296,7 +22296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTimerOutline")]
-        Icon::IoTimerOutline => {
+        IoIcon::IoTimerOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22312,7 +22312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTimerSharp")]
-        Icon::IoTimerSharp => {
+        IoIcon::IoTimerSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22324,7 +22324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoToday")]
-        Icon::IoToday => {
+        IoIcon::IoToday => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22338,7 +22338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTodayOutline")]
-        Icon::IoTodayOutline => {
+        IoIcon::IoTodayOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22359,7 +22359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTodaySharp")]
-        Icon::IoTodaySharp => {
+        IoIcon::IoTodaySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22373,7 +22373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoToggle")]
-        Icon::IoToggle => {
+        IoIcon::IoToggle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22385,7 +22385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoToggleOutline")]
-        Icon::IoToggleOutline => {
+        IoIcon::IoToggleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22400,7 +22400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoToggleSharp")]
-        Icon::IoToggleSharp => {
+        IoIcon::IoToggleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22412,7 +22412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrailSign")]
-        Icon::IoTrailSign => {
+        IoIcon::IoTrailSign => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22424,7 +22424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrailSignOutline")]
-        Icon::IoTrailSignOutline => {
+        IoIcon::IoTrailSignOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22449,7 +22449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrailSignSharp")]
-        Icon::IoTrailSignSharp => {
+        IoIcon::IoTrailSignSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22461,7 +22461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrain")]
-        Icon::IoTrain => {
+        IoIcon::IoTrain => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22477,7 +22477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrainOutline")]
-        Icon::IoTrainOutline => {
+        IoIcon::IoTrainOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22497,7 +22497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrainSharp")]
-        Icon::IoTrainSharp => {
+        IoIcon::IoTrainSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22511,7 +22511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTransgender")]
-        Icon::IoTransgender => {
+        IoIcon::IoTransgender => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22523,7 +22523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTransgenderOutline")]
-        Icon::IoTransgenderOutline => {
+        IoIcon::IoTransgenderOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22550,7 +22550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTransgenderSharp")]
-        Icon::IoTransgenderSharp => {
+        IoIcon::IoTransgenderSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22562,7 +22562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrash")]
-        Icon::IoTrash => {
+        IoIcon::IoTrash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22576,7 +22576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrashBin")]
-        Icon::IoTrashBin => {
+        IoIcon::IoTrashBin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22589,7 +22589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrashBinOutline")]
-        Icon::IoTrashBinOutline => {
+        IoIcon::IoTrashBinOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22610,7 +22610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrashBinSharp")]
-        Icon::IoTrashBinSharp => {
+        IoIcon::IoTrashBinSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22627,7 +22627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrashOutline")]
-        Icon::IoTrashOutline => {
+        IoIcon::IoTrashOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22653,7 +22653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrashSharp")]
-        Icon::IoTrashSharp => {
+        IoIcon::IoTrashSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22669,7 +22669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrendingDown")]
-        Icon::IoTrendingDown => {
+        IoIcon::IoTrendingDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22686,7 +22686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrendingDownOutline")]
-        Icon::IoTrendingDownOutline => {
+        IoIcon::IoTrendingDownOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22703,7 +22703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrendingDownSharp")]
-        Icon::IoTrendingDownSharp => {
+        IoIcon::IoTrendingDownSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22718,7 +22718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrendingUp")]
-        Icon::IoTrendingUp => {
+        IoIcon::IoTrendingUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22735,7 +22735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrendingUpOutline")]
-        Icon::IoTrendingUpOutline => {
+        IoIcon::IoTrendingUpOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22752,7 +22752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrendingUpSharp")]
-        Icon::IoTrendingUpSharp => {
+        IoIcon::IoTrendingUpSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22767,7 +22767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTriangle")]
-        Icon::IoTriangle => {
+        IoIcon::IoTriangle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22779,7 +22779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTriangleOutline")]
-        Icon::IoTriangleOutline => {
+        IoIcon::IoTriangleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22792,7 +22792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTriangleSharp")]
-        Icon::IoTriangleSharp => {
+        IoIcon::IoTriangleSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22803,7 +22803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrophy")]
-        Icon::IoTrophy => {
+        IoIcon::IoTrophy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22815,7 +22815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrophyOutline")]
-        Icon::IoTrophyOutline => {
+        IoIcon::IoTrophyOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22838,7 +22838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTrophySharp")]
-        Icon::IoTrophySharp => {
+        IoIcon::IoTrophySharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22850,7 +22850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTv")]
-        Icon::IoTv => {
+        IoIcon::IoTv => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22864,7 +22864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTvOutline")]
-        Icon::IoTvOutline => {
+        IoIcon::IoTvOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22879,7 +22879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoTvSharp")]
-        Icon::IoTvSharp => {
+        IoIcon::IoTvSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22892,7 +22892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoUmbrella")]
-        Icon::IoUmbrella => {
+        IoIcon::IoUmbrella => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22904,7 +22904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoUmbrellaOutline")]
-        Icon::IoUmbrellaOutline => {
+        IoIcon::IoUmbrellaOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22923,7 +22923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoUmbrellaSharp")]
-        Icon::IoUmbrellaSharp => {
+        IoIcon::IoUmbrellaSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22937,7 +22937,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoUnlink")]
-        Icon::IoUnlink => {
+        IoIcon::IoUnlink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22952,7 +22952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoUnlinkOutline")]
-        Icon::IoUnlinkOutline => {
+        IoIcon::IoUnlinkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22967,7 +22967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoUnlinkSharp")]
-        Icon::IoUnlinkSharp => {
+        IoIcon::IoUnlinkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22982,7 +22982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVideocam")]
-        Icon::IoVideocam => {
+        IoIcon::IoVideocam => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22996,7 +22996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVideocamOff")]
-        Icon::IoVideocamOff => {
+        IoIcon::IoVideocamOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23014,7 +23014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVideocamOffOutline")]
-        Icon::IoVideocamOffOutline => {
+        IoIcon::IoVideocamOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23035,7 +23035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVideocamOffSharp")]
-        Icon::IoVideocamOffSharp => {
+        IoIcon::IoVideocamOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23051,7 +23051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVideocamOutline")]
-        Icon::IoVideocamOutline => {
+        IoIcon::IoVideocamOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23068,7 +23068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVideocamSharp")]
-        Icon::IoVideocamSharp => {
+        IoIcon::IoVideocamSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23080,7 +23080,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeHigh")]
-        Icon::IoVolumeHigh => {
+        IoIcon::IoVolumeHigh => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23098,7 +23098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeHighOutline")]
-        Icon::IoVolumeHighOutline => {
+        IoIcon::IoVolumeHighOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23120,7 +23120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeHighSharp")]
-        Icon::IoVolumeHighSharp => {
+        IoIcon::IoVolumeHighSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23140,7 +23140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeLow")]
-        Icon::IoVolumeLow => {
+        IoIcon::IoVolumeLow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23154,7 +23154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeLowOutline")]
-        Icon::IoVolumeLowOutline => {
+        IoIcon::IoVolumeLowOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23171,7 +23171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeLowSharp")]
-        Icon::IoVolumeLowSharp => {
+        IoIcon::IoVolumeLowSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23185,7 +23185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeMedium")]
-        Icon::IoVolumeMedium => {
+        IoIcon::IoVolumeMedium => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23201,7 +23201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeMediumOutline")]
-        Icon::IoVolumeMediumOutline => {
+        IoIcon::IoVolumeMediumOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23220,7 +23220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeMediumSharp")]
-        Icon::IoVolumeMediumSharp => {
+        IoIcon::IoVolumeMediumSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23237,7 +23237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeMute")]
-        Icon::IoVolumeMute => {
+        IoIcon::IoVolumeMute => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23260,7 +23260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeMuteOutline")]
-        Icon::IoVolumeMuteOutline => {
+        IoIcon::IoVolumeMuteOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23283,7 +23283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeMuteSharp")]
-        Icon::IoVolumeMuteSharp => {
+        IoIcon::IoVolumeMuteSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23305,7 +23305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeOff")]
-        Icon::IoVolumeOff => {
+        IoIcon::IoVolumeOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23317,7 +23317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeOffOutline")]
-        Icon::IoVolumeOffOutline => {
+        IoIcon::IoVolumeOffOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23331,7 +23331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoVolumeOffSharp")]
-        Icon::IoVolumeOffSharp => {
+        IoIcon::IoVolumeOffSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23343,7 +23343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWalk")]
-        Icon::IoWalk => {
+        IoIcon::IoWalk => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23365,7 +23365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWalkOutline")]
-        Icon::IoWalkOutline => {
+        IoIcon::IoWalkOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23387,7 +23387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWalkSharp")]
-        Icon::IoWalkSharp => {
+        IoIcon::IoWalkSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23409,7 +23409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWallet")]
-        Icon::IoWallet => {
+        IoIcon::IoWallet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23425,7 +23425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWalletOutline")]
-        Icon::IoWalletOutline => {
+        IoIcon::IoWalletOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23442,7 +23442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWalletSharp")]
-        Icon::IoWalletSharp => {
+        IoIcon::IoWalletSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23458,7 +23458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWarning")]
-        Icon::IoWarning => {
+        IoIcon::IoWarning => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23470,7 +23470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWarningOutline")]
-        Icon::IoWarningOutline => {
+        IoIcon::IoWarningOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23489,7 +23489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWarningSharp")]
-        Icon::IoWarningSharp => {
+        IoIcon::IoWarningSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23501,7 +23501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWatch")]
-        Icon::IoWatch => {
+        IoIcon::IoWatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23514,7 +23514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWatchOutline")]
-        Icon::IoWatchOutline => {
+        IoIcon::IoWatchOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23531,7 +23531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWatchSharp")]
-        Icon::IoWatchSharp => {
+        IoIcon::IoWatchSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23544,7 +23544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWater")]
-        Icon::IoWater => {
+        IoIcon::IoWater => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23556,7 +23556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWaterOutline")]
-        Icon::IoWaterOutline => {
+        IoIcon::IoWaterOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23571,7 +23571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWaterSharp")]
-        Icon::IoWaterSharp => {
+        IoIcon::IoWaterSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23583,7 +23583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWifi")]
-        Icon::IoWifi => {
+        IoIcon::IoWifi => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23599,7 +23599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWifiOutline")]
-        Icon::IoWifiOutline => {
+        IoIcon::IoWifiOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23617,7 +23617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWifiSharp")]
-        Icon::IoWifiSharp => {
+        IoIcon::IoWifiSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23635,7 +23635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWine")]
-        Icon::IoWine => {
+        IoIcon::IoWine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23647,7 +23647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWineOutline")]
-        Icon::IoWineOutline => {
+        IoIcon::IoWineOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23666,7 +23666,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWineSharp")]
-        Icon::IoWineSharp => {
+        IoIcon::IoWineSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23678,7 +23678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWoman")]
-        Icon::IoWoman => {
+        IoIcon::IoWoman => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23691,7 +23691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWomanOutline")]
-        Icon::IoWomanOutline => {
+        IoIcon::IoWomanOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23716,7 +23716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "IoWomanSharp")]
-        Icon::IoWomanSharp => {
+        IoIcon::IoWomanSharp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =

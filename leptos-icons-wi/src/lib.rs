@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum WiIcon {
     #[cfg(feature = "WiAlien")]
     WiAlien,
     #[cfg(feature = "WiBarometer")]
@@ -461,12 +461,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosWiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: WiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -490,7 +490,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "WiAlien")]
-        Icon::WiAlien => {
+        WiIcon::WiAlien => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -513,7 +513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiBarometer")]
-        Icon::WiBarometer => {
+        WiIcon::WiBarometer => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -535,7 +535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCelsius")]
-        Icon::WiCelsius => {
+        WiIcon::WiCelsius => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -560,7 +560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloud")]
-        Icon::WiCloud => {
+        WiIcon::WiCloud => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -579,7 +579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloudDown")]
-        Icon::WiCloudDown => {
+        WiIcon::WiCloudDown => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -604,7 +604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloudRefresh")]
-        Icon::WiCloudRefresh => {
+        WiIcon::WiCloudRefresh => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -632,7 +632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloudUp")]
-        Icon::WiCloudUp => {
+        WiIcon::WiCloudUp => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -657,7 +657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloudy")]
-        Icon::WiCloudy => {
+        WiIcon::WiCloudy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -682,7 +682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloudyGusts")]
-        Icon::WiCloudyGusts => {
+        WiIcon::WiCloudyGusts => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -711,7 +711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiCloudyWindy")]
-        Icon::WiCloudyWindy => {
+        WiIcon::WiCloudyWindy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -737,7 +737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayCloudy")]
-        Icon::WiDayCloudy => {
+        WiIcon::WiDayCloudy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -770,7 +770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayCloudyGusts")]
-        Icon::WiDayCloudyGusts => {
+        WiIcon::WiDayCloudyGusts => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -812,7 +812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayCloudyHigh")]
-        Icon::WiDayCloudyHigh => {
+        WiIcon::WiDayCloudyHigh => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -845,7 +845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayCloudyWindy")]
-        Icon::WiDayCloudyWindy => {
+        WiIcon::WiDayCloudyWindy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -885,7 +885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayFog")]
-        Icon::WiDayFog => {
+        WiIcon::WiDayFog => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -923,7 +923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayHail")]
-        Icon::WiDayHail => {
+        WiIcon::WiDayHail => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -972,7 +972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayHaze")]
-        Icon::WiDayHaze => {
+        WiIcon::WiDayHaze => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1012,7 +1012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayLightWind")]
-        Icon::WiDayLightWind => {
+        WiIcon::WiDayLightWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1051,7 +1051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayLightning")]
-        Icon::WiDayLightning => {
+        WiIcon::WiDayLightning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1087,7 +1087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayRain")]
-        Icon::WiDayRain => {
+        WiIcon::WiDayRain => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1129,7 +1129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayRainMix")]
-        Icon::WiDayRainMix => {
+        WiIcon::WiDayRainMix => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1185,7 +1185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayRainWind")]
-        Icon::WiDayRainWind => {
+        WiIcon::WiDayRainWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1232,7 +1232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayShowers")]
-        Icon::WiDayShowers => {
+        WiIcon::WiDayShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1282,7 +1282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySleet")]
-        Icon::WiDaySleet => {
+        WiIcon::WiDaySleet => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1335,7 +1335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySleetStorm")]
-        Icon::WiDaySleetStorm => {
+        WiIcon::WiDaySleetStorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1382,7 +1382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySnow")]
-        Icon::WiDaySnow => {
+        WiIcon::WiDaySnow => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1429,7 +1429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySnowThunderstorm")]
-        Icon::WiDaySnowThunderstorm => {
+        WiIcon::WiDaySnowThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1473,7 +1473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySnowWind")]
-        Icon::WiDaySnowWind => {
+        WiIcon::WiDaySnowWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1520,7 +1520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySprinkle")]
-        Icon::WiDaySprinkle => {
+        WiIcon::WiDaySprinkle => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1560,7 +1560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayStormShowers")]
-        Icon::WiDayStormShowers => {
+        WiIcon::WiDayStormShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1605,7 +1605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySunny")]
-        Icon::WiDaySunny => {
+        WiIcon::WiDaySunny => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1639,7 +1639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDaySunnyOvercast")]
-        Icon::WiDaySunnyOvercast => {
+        WiIcon::WiDaySunnyOvercast => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1675,7 +1675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayThunderstorm")]
-        Icon::WiDayThunderstorm => {
+        WiIcon::WiDayThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1716,7 +1716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDayWindy")]
-        Icon::WiDayWindy => {
+        WiIcon::WiDayWindy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1759,7 +1759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDegrees")]
-        Icon::WiDegrees => {
+        WiIcon::WiDegrees => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1776,7 +1776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionDown")]
-        Icon::WiDirectionDown => {
+        WiIcon::WiDirectionDown => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1792,7 +1792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionDownLeft")]
-        Icon::WiDirectionDownLeft => {
+        WiIcon::WiDirectionDownLeft => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1809,7 +1809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionDownRight")]
-        Icon::WiDirectionDownRight => {
+        WiIcon::WiDirectionDownRight => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1825,7 +1825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionLeft")]
-        Icon::WiDirectionLeft => {
+        WiIcon::WiDirectionLeft => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1841,7 +1841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionRight")]
-        Icon::WiDirectionRight => {
+        WiIcon::WiDirectionRight => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1858,7 +1858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionUp")]
-        Icon::WiDirectionUp => {
+        WiIcon::WiDirectionUp => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1874,7 +1874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionUpLeft")]
-        Icon::WiDirectionUpLeft => {
+        WiIcon::WiDirectionUpLeft => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1890,7 +1890,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDirectionUpRight")]
-        Icon::WiDirectionUpRight => {
+        WiIcon::WiDirectionUpRight => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1906,7 +1906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiDust")]
-        Icon::WiDust => {
+        WiIcon::WiDust => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1944,7 +1944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiEarthquake")]
-        Icon::WiEarthquake => {
+        WiIcon::WiEarthquake => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1967,7 +1967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiFahrenheit")]
-        Icon::WiFahrenheit => {
+        WiIcon::WiFahrenheit => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -1987,7 +1987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiFire")]
-        Icon::WiFire => {
+        WiIcon::WiFire => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2016,7 +2016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiFlood")]
-        Icon::WiFlood => {
+        WiIcon::WiFlood => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2045,7 +2045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiFog")]
-        Icon::WiFog => {
+        WiIcon::WiFog => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2070,7 +2070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiGaleWarning")]
-        Icon::WiGaleWarning => {
+        WiIcon::WiGaleWarning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2083,7 +2083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHail")]
-        Icon::WiHail => {
+        WiIcon::WiHail => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2120,7 +2120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHorizon")]
-        Icon::WiHorizon => {
+        WiIcon::WiHorizon => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2144,7 +2144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHorizonAlt")]
-        Icon::WiHorizonAlt => {
+        WiIcon::WiHorizonAlt => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2175,7 +2175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHot")]
-        Icon::WiHot => {
+        WiIcon::WiHot => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2238,7 +2238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHumidity")]
-        Icon::WiHumidity => {
+        WiIcon::WiHumidity => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2268,7 +2268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHurricane")]
-        Icon::WiHurricane => {
+        WiIcon::WiHurricane => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2292,7 +2292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiHurricaneWarning")]
-        Icon::WiHurricaneWarning => {
+        WiIcon::WiHurricaneWarning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2306,7 +2306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiLightning")]
-        Icon::WiLightning => {
+        WiIcon::WiLightning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2322,7 +2322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiLunarEclipse")]
-        Icon::WiLunarEclipse => {
+        WiIcon::WiLunarEclipse => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2340,7 +2340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMeteor")]
-        Icon::WiMeteor => {
+        WiIcon::WiMeteor => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2364,7 +2364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltFirstQuarter")]
-        Icon::WiMoonAltFirstQuarter => {
+        WiIcon::WiMoonAltFirstQuarter => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2381,7 +2381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltFull")]
-        Icon::WiMoonAltFull => {
+        WiIcon::WiMoonAltFull => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2399,7 +2399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltNew")]
-        Icon::WiMoonAltNew => {
+        WiIcon::WiMoonAltNew => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2414,7 +2414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltThirdQuarter")]
-        Icon::WiMoonAltThirdQuarter => {
+        WiIcon::WiMoonAltThirdQuarter => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2431,7 +2431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningCrescent1")]
-        Icon::WiMoonAltWaningCrescent1 => {
+        WiIcon::WiMoonAltWaningCrescent1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2448,7 +2448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningCrescent2")]
-        Icon::WiMoonAltWaningCrescent2 => {
+        WiIcon::WiMoonAltWaningCrescent2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2465,7 +2465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningCrescent3")]
-        Icon::WiMoonAltWaningCrescent3 => {
+        WiIcon::WiMoonAltWaningCrescent3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2482,7 +2482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningCrescent4")]
-        Icon::WiMoonAltWaningCrescent4 => {
+        WiIcon::WiMoonAltWaningCrescent4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2500,7 +2500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningCrescent5")]
-        Icon::WiMoonAltWaningCrescent5 => {
+        WiIcon::WiMoonAltWaningCrescent5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2518,7 +2518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningCrescent6")]
-        Icon::WiMoonAltWaningCrescent6 => {
+        WiIcon::WiMoonAltWaningCrescent6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2536,7 +2536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningGibbous1")]
-        Icon::WiMoonAltWaningGibbous1 => {
+        WiIcon::WiMoonAltWaningGibbous1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2554,7 +2554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningGibbous2")]
-        Icon::WiMoonAltWaningGibbous2 => {
+        WiIcon::WiMoonAltWaningGibbous2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2573,7 +2573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningGibbous3")]
-        Icon::WiMoonAltWaningGibbous3 => {
+        WiIcon::WiMoonAltWaningGibbous3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2592,7 +2592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningGibbous4")]
-        Icon::WiMoonAltWaningGibbous4 => {
+        WiIcon::WiMoonAltWaningGibbous4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2610,7 +2610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningGibbous5")]
-        Icon::WiMoonAltWaningGibbous5 => {
+        WiIcon::WiMoonAltWaningGibbous5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2628,7 +2628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaningGibbous6")]
-        Icon::WiMoonAltWaningGibbous6 => {
+        WiIcon::WiMoonAltWaningGibbous6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2645,7 +2645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingCrescent1")]
-        Icon::WiMoonAltWaxingCrescent1 => {
+        WiIcon::WiMoonAltWaxingCrescent1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2662,7 +2662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingCrescent2")]
-        Icon::WiMoonAltWaxingCrescent2 => {
+        WiIcon::WiMoonAltWaxingCrescent2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2679,7 +2679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingCrescent3")]
-        Icon::WiMoonAltWaxingCrescent3 => {
+        WiIcon::WiMoonAltWaxingCrescent3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2696,7 +2696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingCrescent4")]
-        Icon::WiMoonAltWaxingCrescent4 => {
+        WiIcon::WiMoonAltWaxingCrescent4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2713,7 +2713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingCrescent5")]
-        Icon::WiMoonAltWaxingCrescent5 => {
+        WiIcon::WiMoonAltWaxingCrescent5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2730,7 +2730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingCrescent6")]
-        Icon::WiMoonAltWaxingCrescent6 => {
+        WiIcon::WiMoonAltWaxingCrescent6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2747,7 +2747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingGibbous1")]
-        Icon::WiMoonAltWaxingGibbous1 => {
+        WiIcon::WiMoonAltWaxingGibbous1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2765,7 +2765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingGibbous2")]
-        Icon::WiMoonAltWaxingGibbous2 => {
+        WiIcon::WiMoonAltWaxingGibbous2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2783,7 +2783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingGibbous3")]
-        Icon::WiMoonAltWaxingGibbous3 => {
+        WiIcon::WiMoonAltWaxingGibbous3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2801,7 +2801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingGibbous4")]
-        Icon::WiMoonAltWaxingGibbous4 => {
+        WiIcon::WiMoonAltWaxingGibbous4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2819,7 +2819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingGibbous5")]
-        Icon::WiMoonAltWaxingGibbous5 => {
+        WiIcon::WiMoonAltWaxingGibbous5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2837,7 +2837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonAltWaxingGibbous6")]
-        Icon::WiMoonAltWaxingGibbous6 => {
+        WiIcon::WiMoonAltWaxingGibbous6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2856,7 +2856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonFirstQuarter")]
-        Icon::WiMoonFirstQuarter => {
+        WiIcon::WiMoonFirstQuarter => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2870,7 +2870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonFull")]
-        Icon::WiMoonFull => {
+        WiIcon::WiMoonFull => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2885,7 +2885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonNew")]
-        Icon::WiMoonNew => {
+        WiIcon::WiMoonNew => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2903,7 +2903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonThirdQuarter")]
-        Icon::WiMoonThirdQuarter => {
+        WiIcon::WiMoonThirdQuarter => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2917,7 +2917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningCrescent1")]
-        Icon::WiMoonWaningCrescent1 => {
+        WiIcon::WiMoonWaningCrescent1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2931,7 +2931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningCrescent2")]
-        Icon::WiMoonWaningCrescent2 => {
+        WiIcon::WiMoonWaningCrescent2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2945,7 +2945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningCrescent3")]
-        Icon::WiMoonWaningCrescent3 => {
+        WiIcon::WiMoonWaningCrescent3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2959,7 +2959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningCrescent4")]
-        Icon::WiMoonWaningCrescent4 => {
+        WiIcon::WiMoonWaningCrescent4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2974,7 +2974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningCrescent5")]
-        Icon::WiMoonWaningCrescent5 => {
+        WiIcon::WiMoonWaningCrescent5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -2989,7 +2989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningCrescent6")]
-        Icon::WiMoonWaningCrescent6 => {
+        WiIcon::WiMoonWaningCrescent6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3005,7 +3005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningGibbous1")]
-        Icon::WiMoonWaningGibbous1 => {
+        WiIcon::WiMoonWaningGibbous1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3020,7 +3020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningGibbous2")]
-        Icon::WiMoonWaningGibbous2 => {
+        WiIcon::WiMoonWaningGibbous2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3035,7 +3035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningGibbous3")]
-        Icon::WiMoonWaningGibbous3 => {
+        WiIcon::WiMoonWaningGibbous3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3050,7 +3050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningGibbous4")]
-        Icon::WiMoonWaningGibbous4 => {
+        WiIcon::WiMoonWaningGibbous4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3065,7 +3065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningGibbous5")]
-        Icon::WiMoonWaningGibbous5 => {
+        WiIcon::WiMoonWaningGibbous5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3079,7 +3079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaningGibbous6")]
-        Icon::WiMoonWaningGibbous6 => {
+        WiIcon::WiMoonWaningGibbous6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3093,7 +3093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingCrescent1")]
-        Icon::WiMoonWaxingCrescent1 => {
+        WiIcon::WiMoonWaxingCrescent1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3109,7 +3109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingCrescent2")]
-        Icon::WiMoonWaxingCrescent2 => {
+        WiIcon::WiMoonWaxingCrescent2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3124,7 +3124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingCrescent3")]
-        Icon::WiMoonWaxingCrescent3 => {
+        WiIcon::WiMoonWaxingCrescent3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3139,7 +3139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingCrescent4")]
-        Icon::WiMoonWaxingCrescent4 => {
+        WiIcon::WiMoonWaxingCrescent4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3154,7 +3154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingCrescent5")]
-        Icon::WiMoonWaxingCrescent5 => {
+        WiIcon::WiMoonWaxingCrescent5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3168,7 +3168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingCrescent6")]
-        Icon::WiMoonWaxingCrescent6 => {
+        WiIcon::WiMoonWaxingCrescent6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3182,7 +3182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingGibbous1")]
-        Icon::WiMoonWaxingGibbous1 => {
+        WiIcon::WiMoonWaxingGibbous1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3196,7 +3196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingGibbous2")]
-        Icon::WiMoonWaxingGibbous2 => {
+        WiIcon::WiMoonWaxingGibbous2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3210,7 +3210,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingGibbous3")]
-        Icon::WiMoonWaxingGibbous3 => {
+        WiIcon::WiMoonWaxingGibbous3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3225,7 +3225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingGibbous4")]
-        Icon::WiMoonWaxingGibbous4 => {
+        WiIcon::WiMoonWaxingGibbous4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3240,7 +3240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingGibbous5")]
-        Icon::WiMoonWaxingGibbous5 => {
+        WiIcon::WiMoonWaxingGibbous5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3255,7 +3255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonWaxingGibbous6")]
-        Icon::WiMoonWaxingGibbous6 => {
+        WiIcon::WiMoonWaxingGibbous6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3270,7 +3270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonrise")]
-        Icon::WiMoonrise => {
+        WiIcon::WiMoonrise => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3290,7 +3290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiMoonset")]
-        Icon::WiMoonset => {
+        WiIcon::WiMoonset => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3311,7 +3311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNa")]
-        Icon::WiNa => {
+        WiIcon::WiNa => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3326,7 +3326,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltCloudy")]
-        Icon::WiNightAltCloudy => {
+        WiIcon::WiNightAltCloudy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3352,7 +3352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltCloudyGusts")]
-        Icon::WiNightAltCloudyGusts => {
+        WiIcon::WiNightAltCloudyGusts => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3387,7 +3387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltCloudyHigh")]
-        Icon::WiNightAltCloudyHigh => {
+        WiIcon::WiNightAltCloudyHigh => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3410,7 +3410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltCloudyWindy")]
-        Icon::WiNightAltCloudyWindy => {
+        WiIcon::WiNightAltCloudyWindy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3442,7 +3442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltHail")]
-        Icon::WiNightAltHail => {
+        WiIcon::WiNightAltHail => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3483,7 +3483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltLightning")]
-        Icon::WiNightAltLightning => {
+        WiIcon::WiNightAltLightning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3511,7 +3511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltPartlyCloudy")]
-        Icon::WiNightAltPartlyCloudy => {
+        WiIcon::WiNightAltPartlyCloudy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3537,7 +3537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltRain")]
-        Icon::WiNightAltRain => {
+        WiIcon::WiNightAltRain => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3571,7 +3571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltRainMix")]
-        Icon::WiNightAltRainMix => {
+        WiIcon::WiNightAltRainMix => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3620,7 +3620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltRainWind")]
-        Icon::WiNightAltRainWind => {
+        WiIcon::WiNightAltRainWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3659,7 +3659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltShowers")]
-        Icon::WiNightAltShowers => {
+        WiIcon::WiNightAltShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3700,7 +3700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltSleet")]
-        Icon::WiNightAltSleet => {
+        WiIcon::WiNightAltSleet => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3745,7 +3745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltSleetStorm")]
-        Icon::WiNightAltSleetStorm => {
+        WiIcon::WiNightAltSleetStorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3784,7 +3784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltSnow")]
-        Icon::WiNightAltSnow => {
+        WiIcon::WiNightAltSnow => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3823,7 +3823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltSnowThunderstorm")]
-        Icon::WiNightAltSnowThunderstorm => {
+        WiIcon::WiNightAltSnowThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3860,7 +3860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltSnowWind")]
-        Icon::WiNightAltSnowWind => {
+        WiIcon::WiNightAltSnowWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3900,7 +3900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltSprinkle")]
-        Icon::WiNightAltSprinkle => {
+        WiIcon::WiNightAltSprinkle => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3933,7 +3933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltStormShowers")]
-        Icon::WiNightAltStormShowers => {
+        WiIcon::WiNightAltStormShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -3971,7 +3971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightAltThunderstorm")]
-        Icon::WiNightAltThunderstorm => {
+        WiIcon::WiNightAltThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4003,7 +4003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightClear")]
-        Icon::WiNightClear => {
+        WiIcon::WiNightClear => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4023,7 +4023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightCloudy")]
-        Icon::WiNightCloudy => {
+        WiIcon::WiNightCloudy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4045,7 +4045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightCloudyGusts")]
-        Icon::WiNightCloudyGusts => {
+        WiIcon::WiNightCloudyGusts => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4077,7 +4077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightCloudyHigh")]
-        Icon::WiNightCloudyHigh => {
+        WiIcon::WiNightCloudyHigh => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4101,7 +4101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightCloudyWindy")]
-        Icon::WiNightCloudyWindy => {
+        WiIcon::WiNightCloudyWindy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4130,7 +4130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightFog")]
-        Icon::WiNightFog => {
+        WiIcon::WiNightFog => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4159,7 +4159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightHail")]
-        Icon::WiNightHail => {
+        WiIcon::WiNightHail => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4198,7 +4198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightLightning")]
-        Icon::WiNightLightning => {
+        WiIcon::WiNightLightning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4223,7 +4223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightPartlyCloudy")]
-        Icon::WiNightPartlyCloudy => {
+        WiIcon::WiNightPartlyCloudy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4246,7 +4246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightRain")]
-        Icon::WiNightRain => {
+        WiIcon::WiNightRain => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4277,7 +4277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightRainMix")]
-        Icon::WiNightRainMix => {
+        WiIcon::WiNightRainMix => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4325,7 +4325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightRainWind")]
-        Icon::WiNightRainWind => {
+        WiIcon::WiNightRainWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4361,7 +4361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightShowers")]
-        Icon::WiNightShowers => {
+        WiIcon::WiNightShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4399,7 +4399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightSleet")]
-        Icon::WiNightSleet => {
+        WiIcon::WiNightSleet => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4440,7 +4440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightSleetStorm")]
-        Icon::WiNightSleetStorm => {
+        WiIcon::WiNightSleetStorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4476,7 +4476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightSnow")]
-        Icon::WiNightSnow => {
+        WiIcon::WiNightSnow => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4512,7 +4512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightSnowThunderstorm")]
-        Icon::WiNightSnowThunderstorm => {
+        WiIcon::WiNightSnowThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4546,7 +4546,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightSnowWind")]
-        Icon::WiNightSnowWind => {
+        WiIcon::WiNightSnowWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4582,7 +4582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightSprinkle")]
-        Icon::WiNightSprinkle => {
+        WiIcon::WiNightSprinkle => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4612,7 +4612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightStormShowers")]
-        Icon::WiNightStormShowers => {
+        WiIcon::WiNightStormShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4647,7 +4647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiNightThunderstorm")]
-        Icon::WiNightThunderstorm => {
+        WiIcon::WiNightThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4676,7 +4676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRain")]
-        Icon::WiRain => {
+        WiIcon::WiRain => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4706,7 +4706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRainMix")]
-        Icon::WiRainMix => {
+        WiIcon::WiRainMix => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4750,7 +4750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRainWind")]
-        Icon::WiRainWind => {
+        WiIcon::WiRainWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4785,7 +4785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRaindrop")]
-        Icon::WiRaindrop => {
+        WiIcon::WiRaindrop => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4801,7 +4801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRaindrops")]
-        Icon::WiRaindrops => {
+        WiIcon::WiRaindrops => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4821,7 +4821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRefresh")]
-        Icon::WiRefresh => {
+        WiIcon::WiRefresh => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4840,7 +4840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiRefreshAlt")]
-        Icon::WiRefreshAlt => {
+        WiIcon::WiRefreshAlt => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4858,7 +4858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSandstorm")]
-        Icon::WiSandstorm => {
+        WiIcon::WiSandstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4896,7 +4896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiShowers")]
-        Icon::WiShowers => {
+        WiIcon::WiShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4934,7 +4934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSleet")]
-        Icon::WiSleet => {
+        WiIcon::WiSleet => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4976,7 +4976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSmallCraftAdvisory")]
-        Icon::WiSmallCraftAdvisory => {
+        WiIcon::WiSmallCraftAdvisory => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -4989,7 +4989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSmog")]
-        Icon::WiSmog => {
+        WiIcon::WiSmog => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5009,7 +5009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSmoke")]
-        Icon::WiSmoke => {
+        WiIcon::WiSmoke => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5033,7 +5033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSnow")]
-        Icon::WiSnow => {
+        WiIcon::WiSnow => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5067,7 +5067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSnowWind")]
-        Icon::WiSnowWind => {
+        WiIcon::WiSnowWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5101,7 +5101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSnowflakeCold")]
-        Icon::WiSnowflakeCold => {
+        WiIcon::WiSnowflakeCold => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5138,7 +5138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSolarEclipse")]
-        Icon::WiSolarEclipse => {
+        WiIcon::WiSolarEclipse => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5173,7 +5173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSprinkle")]
-        Icon::WiSprinkle => {
+        WiIcon::WiSprinkle => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5200,7 +5200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiStars")]
-        Icon::WiStars => {
+        WiIcon::WiStars => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5221,7 +5221,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiStormShowers")]
-        Icon::WiStormShowers => {
+        WiIcon::WiStormShowers => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5254,7 +5254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiStormWarning")]
-        Icon::WiStormWarning => {
+        WiIcon::WiStormWarning => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5267,7 +5267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiStrongWind")]
-        Icon::WiStrongWind => {
+        WiIcon::WiStrongWind => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5289,7 +5289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSunrise")]
-        Icon::WiSunrise => {
+        WiIcon::WiSunrise => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5321,7 +5321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiSunset")]
-        Icon::WiSunset => {
+        WiIcon::WiSunset => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5353,7 +5353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiThermometer")]
-        Icon::WiThermometer => {
+        WiIcon::WiThermometer => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5375,7 +5375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiThermometerExterior")]
-        Icon::WiThermometerExterior => {
+        WiIcon::WiThermometerExterior => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5394,7 +5394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiThermometerInternal")]
-        Icon::WiThermometerInternal => {
+        WiIcon::WiThermometerInternal => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5410,7 +5410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiThunderstorm")]
-        Icon::WiThunderstorm => {
+        WiIcon::WiThunderstorm => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5438,7 +5438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime1")]
-        Icon::WiTime1 => {
+        WiIcon::WiTime1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5458,7 +5458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime10")]
-        Icon::WiTime10 => {
+        WiIcon::WiTime10 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5478,7 +5478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime11")]
-        Icon::WiTime11 => {
+        WiIcon::WiTime11 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5498,7 +5498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime12")]
-        Icon::WiTime12 => {
+        WiIcon::WiTime12 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5517,7 +5517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime2")]
-        Icon::WiTime2 => {
+        WiIcon::WiTime2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5537,7 +5537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime3")]
-        Icon::WiTime3 => {
+        WiIcon::WiTime3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5557,7 +5557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime4")]
-        Icon::WiTime4 => {
+        WiIcon::WiTime4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5577,7 +5577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime5")]
-        Icon::WiTime5 => {
+        WiIcon::WiTime5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5597,7 +5597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime6")]
-        Icon::WiTime6 => {
+        WiIcon::WiTime6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5616,7 +5616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime7")]
-        Icon::WiTime7 => {
+        WiIcon::WiTime7 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5636,7 +5636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime8")]
-        Icon::WiTime8 => {
+        WiIcon::WiTime8 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5656,7 +5656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTime9")]
-        Icon::WiTime9 => {
+        WiIcon::WiTime9 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5676,7 +5676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTornado")]
-        Icon::WiTornado => {
+        WiIcon::WiTornado => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5708,7 +5708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTrain")]
-        Icon::WiTrain => {
+        WiIcon::WiTrain => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5741,7 +5741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiTsunami")]
-        Icon::WiTsunami => {
+        WiIcon::WiTsunami => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5774,7 +5774,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiUmbrella")]
-        Icon::WiUmbrella => {
+        WiIcon::WiUmbrella => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5804,7 +5804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiVolcano")]
-        Icon::WiVolcano => {
+        WiIcon::WiVolcano => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5834,7 +5834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort0")]
-        Icon::WiWindBeaufort0 => {
+        WiIcon::WiWindBeaufort0 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5862,7 +5862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort1")]
-        Icon::WiWindBeaufort1 => {
+        WiIcon::WiWindBeaufort1 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5884,7 +5884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort10")]
-        Icon::WiWindBeaufort10 => {
+        WiIcon::WiWindBeaufort10 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5912,7 +5912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort11")]
-        Icon::WiWindBeaufort11 => {
+        WiIcon::WiWindBeaufort11 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5935,7 +5935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort12")]
-        Icon::WiWindBeaufort12 => {
+        WiIcon::WiWindBeaufort12 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5963,7 +5963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort2")]
-        Icon::WiWindBeaufort2 => {
+        WiIcon::WiWindBeaufort2 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -5991,7 +5991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort3")]
-        Icon::WiWindBeaufort3 => {
+        WiIcon::WiWindBeaufort3 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6020,7 +6020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort4")]
-        Icon::WiWindBeaufort4 => {
+        WiIcon::WiWindBeaufort4 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6043,7 +6043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort5")]
-        Icon::WiWindBeaufort5 => {
+        WiIcon::WiWindBeaufort5 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6070,7 +6070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort6")]
-        Icon::WiWindBeaufort6 => {
+        WiIcon::WiWindBeaufort6 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6100,7 +6100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort7")]
-        Icon::WiWindBeaufort7 => {
+        WiIcon::WiWindBeaufort7 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6123,7 +6123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort8")]
-        Icon::WiWindBeaufort8 => {
+        WiIcon::WiWindBeaufort8 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6156,7 +6156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindBeaufort9")]
-        Icon::WiWindBeaufort9 => {
+        WiIcon::WiWindBeaufort9 => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6186,7 +6186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindDeg")]
-        Icon::WiWindDeg => {
+        WiIcon::WiWindDeg => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"
@@ -6205,7 +6205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "WiWindy")]
-        Icon::WiWindy => {
+        WiIcon::WiWindy => {
             view! {
                 cx, < svg class = class style =
                 format!("enable-background:new 0 0 30 30; {}", style) x = "0px" y = "0px"

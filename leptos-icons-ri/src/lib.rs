@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum RiIcon {
     #[cfg(feature = "Ri24HoursFinanceFill")]
     Ri24HoursFinanceFill,
     #[cfg(feature = "Ri24HoursFinanceLine")]
@@ -4565,12 +4565,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosRiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: RiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -4594,7 +4594,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "Ri24HoursFinanceFill")]
-        Icon::Ri24HoursFinanceFill => {
+        RiIcon::Ri24HoursFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4607,7 +4607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Ri24HoursFinanceLine")]
-        Icon::Ri24HoursFinanceLine => {
+        RiIcon::Ri24HoursFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4620,7 +4620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Ri4kMediaFill")]
-        Icon::Ri4kMediaFill => {
+        RiIcon::Ri4kMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4633,7 +4633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Ri4kMediaLine")]
-        Icon::Ri4kMediaLine => {
+        RiIcon::Ri4kMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4646,7 +4646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiABEditor")]
-        Icon::RiABEditor => {
+        RiIcon::RiABEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4659,7 +4659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountBoxUserFill")]
-        Icon::RiAccountBoxUserFill => {
+        RiIcon::RiAccountBoxUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4672,7 +4672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountBoxUserLine")]
-        Icon::RiAccountBoxUserLine => {
+        RiIcon::RiAccountBoxUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4685,7 +4685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountCircleUserFill")]
-        Icon::RiAccountCircleUserFill => {
+        RiIcon::RiAccountCircleUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4698,7 +4698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountCircleUserLine")]
-        Icon::RiAccountCircleUserLine => {
+        RiIcon::RiAccountCircleUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4711,7 +4711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountPinBoxUserFill")]
-        Icon::RiAccountPinBoxUserFill => {
+        RiIcon::RiAccountPinBoxUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4724,7 +4724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountPinBoxUserLine")]
-        Icon::RiAccountPinBoxUserLine => {
+        RiIcon::RiAccountPinBoxUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4737,7 +4737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountPinCircleUserFill")]
-        Icon::RiAccountPinCircleUserFill => {
+        RiIcon::RiAccountPinCircleUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4750,7 +4750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAccountPinCircleUserLine")]
-        Icon::RiAccountPinCircleUserLine => {
+        RiIcon::RiAccountPinCircleUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4763,7 +4763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAddBoxSystemFill")]
-        Icon::RiAddBoxSystemFill => {
+        RiIcon::RiAddBoxSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4776,7 +4776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAddBoxSystemLine")]
-        Icon::RiAddBoxSystemLine => {
+        RiIcon::RiAddBoxSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4789,7 +4789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAddCircleSystemFill")]
-        Icon::RiAddCircleSystemFill => {
+        RiIcon::RiAddCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4802,7 +4802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAddCircleSystemLine")]
-        Icon::RiAddCircleSystemLine => {
+        RiIcon::RiAddCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4815,7 +4815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAddSystemFill")]
-        Icon::RiAddSystemFill => {
+        RiIcon::RiAddSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4826,7 +4826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAddSystemLine")]
-        Icon::RiAddSystemLine => {
+        RiIcon::RiAddSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4837,7 +4837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAdminUserFill")]
-        Icon::RiAdminUserFill => {
+        RiIcon::RiAdminUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4850,7 +4850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAdminUserLine")]
-        Icon::RiAdminUserLine => {
+        RiIcon::RiAdminUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4863,7 +4863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAdvertisementBusinessFill")]
-        Icon::RiAdvertisementBusinessFill => {
+        RiIcon::RiAdvertisementBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4876,7 +4876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAdvertisementBusinessLine")]
-        Icon::RiAdvertisementBusinessLine => {
+        RiIcon::RiAdvertisementBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4889,7 +4889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAirplayDeviceFill")]
-        Icon::RiAirplayDeviceFill => {
+        RiIcon::RiAirplayDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4902,7 +4902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAirplayDeviceLine")]
-        Icon::RiAirplayDeviceLine => {
+        RiIcon::RiAirplayDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4915,7 +4915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlarmSystemFill")]
-        Icon::RiAlarmSystemFill => {
+        RiIcon::RiAlarmSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4928,7 +4928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlarmSystemLine")]
-        Icon::RiAlarmSystemLine => {
+        RiIcon::RiAlarmSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4941,7 +4941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlarmWarningSystemFill")]
-        Icon::RiAlarmWarningSystemFill => {
+        RiIcon::RiAlarmWarningSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4954,7 +4954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlarmWarningSystemLine")]
-        Icon::RiAlarmWarningSystemLine => {
+        RiIcon::RiAlarmWarningSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4967,7 +4967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlbumMediaFill")]
-        Icon::RiAlbumMediaFill => {
+        RiIcon::RiAlbumMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4980,7 +4980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlbumMediaLine")]
-        Icon::RiAlbumMediaLine => {
+        RiIcon::RiAlbumMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4993,7 +4993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlertSystemFill")]
-        Icon::RiAlertSystemFill => {
+        RiIcon::RiAlertSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5006,7 +5006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlertSystemLine")]
-        Icon::RiAlertSystemLine => {
+        RiIcon::RiAlertSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5019,7 +5019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAliensUserFill")]
-        Icon::RiAliensUserFill => {
+        RiIcon::RiAliensUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5032,7 +5032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAliensUserLine")]
-        Icon::RiAliensUserLine => {
+        RiIcon::RiAliensUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5045,7 +5045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignBottomEditor")]
-        Icon::RiAlignBottomEditor => {
+        RiIcon::RiAlignBottomEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5058,7 +5058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignCenterEditor")]
-        Icon::RiAlignCenterEditor => {
+        RiIcon::RiAlignCenterEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5071,7 +5071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignJustifyEditor")]
-        Icon::RiAlignJustifyEditor => {
+        RiIcon::RiAlignJustifyEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5084,7 +5084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignLeftEditor")]
-        Icon::RiAlignLeftEditor => {
+        RiIcon::RiAlignLeftEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5097,7 +5097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignRightEditor")]
-        Icon::RiAlignRightEditor => {
+        RiIcon::RiAlignRightEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5110,7 +5110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignTopEditor")]
-        Icon::RiAlignTopEditor => {
+        RiIcon::RiAlignTopEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5123,7 +5123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlignVerticallyEditor")]
-        Icon::RiAlignVerticallyEditor => {
+        RiIcon::RiAlignVerticallyEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5136,7 +5136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlipayLogosFill")]
-        Icon::RiAlipayLogosFill => {
+        RiIcon::RiAlipayLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5149,7 +5149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAlipayLogosLine")]
-        Icon::RiAlipayLogosLine => {
+        RiIcon::RiAlipayLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5162,7 +5162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAmazonLogosFill")]
-        Icon::RiAmazonLogosFill => {
+        RiIcon::RiAmazonLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5175,7 +5175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAmazonLogosLine")]
-        Icon::RiAmazonLogosLine => {
+        RiIcon::RiAmazonLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5188,7 +5188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAnchorMapFill")]
-        Icon::RiAnchorMapFill => {
+        RiIcon::RiAnchorMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5201,7 +5201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAnchorMapLine")]
-        Icon::RiAnchorMapLine => {
+        RiIcon::RiAnchorMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5214,7 +5214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAncientGateBuildingsFill")]
-        Icon::RiAncientGateBuildingsFill => {
+        RiIcon::RiAncientGateBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5227,7 +5227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAncientGateBuildingsLine")]
-        Icon::RiAncientGateBuildingsLine => {
+        RiIcon::RiAncientGateBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5240,7 +5240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAncientPavilionBuildingsFill")]
-        Icon::RiAncientPavilionBuildingsFill => {
+        RiIcon::RiAncientPavilionBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5253,7 +5253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAncientPavilionBuildingsLine")]
-        Icon::RiAncientPavilionBuildingsLine => {
+        RiIcon::RiAncientPavilionBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5266,7 +5266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAndroidLogosFill")]
-        Icon::RiAndroidLogosFill => {
+        RiIcon::RiAndroidLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5279,7 +5279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAndroidLogosLine")]
-        Icon::RiAndroidLogosLine => {
+        RiIcon::RiAndroidLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5292,7 +5292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAngularjsLogosFill")]
-        Icon::RiAngularjsLogosFill => {
+        RiIcon::RiAngularjsLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5305,7 +5305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAngularjsLogosLine")]
-        Icon::RiAngularjsLogosLine => {
+        RiIcon::RiAngularjsLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5318,7 +5318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAnticlockwise2DesignFill")]
-        Icon::RiAnticlockwise2DesignFill => {
+        RiIcon::RiAnticlockwise2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5331,7 +5331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAnticlockwise2DesignLine")]
-        Icon::RiAnticlockwise2DesignLine => {
+        RiIcon::RiAnticlockwise2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5344,7 +5344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAnticlockwiseDesignFill")]
-        Icon::RiAnticlockwiseDesignFill => {
+        RiIcon::RiAnticlockwiseDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5357,7 +5357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAnticlockwiseDesignLine")]
-        Icon::RiAnticlockwiseDesignLine => {
+        RiIcon::RiAnticlockwiseDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5370,7 +5370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAppStoreLogosFill")]
-        Icon::RiAppStoreLogosFill => {
+        RiIcon::RiAppStoreLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5383,7 +5383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAppStoreLogosLine")]
-        Icon::RiAppStoreLogosLine => {
+        RiIcon::RiAppStoreLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5396,7 +5396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAppleLogosFill")]
-        Icon::RiAppleLogosFill => {
+        RiIcon::RiAppleLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5409,7 +5409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAppleLogosLine")]
-        Icon::RiAppleLogosLine => {
+        RiIcon::RiAppleLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5422,7 +5422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiApps2SystemFill")]
-        Icon::RiApps2SystemFill => {
+        RiIcon::RiApps2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5435,7 +5435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiApps2SystemLine")]
-        Icon::RiApps2SystemLine => {
+        RiIcon::RiApps2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5448,7 +5448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAppsSystemFill")]
-        Icon::RiAppsSystemFill => {
+        RiIcon::RiAppsSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5461,7 +5461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAppsSystemLine")]
-        Icon::RiAppsSystemLine => {
+        RiIcon::RiAppsSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5474,7 +5474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArchiveBusinessFill")]
-        Icon::RiArchiveBusinessFill => {
+        RiIcon::RiArchiveBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5487,7 +5487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArchiveBusinessLine")]
-        Icon::RiArchiveBusinessLine => {
+        RiIcon::RiArchiveBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5500,7 +5500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArchiveDrawerBusinessFill")]
-        Icon::RiArchiveDrawerBusinessFill => {
+        RiIcon::RiArchiveDrawerBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5513,7 +5513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArchiveDrawerBusinessLine")]
-        Icon::RiArchiveDrawerBusinessLine => {
+        RiIcon::RiArchiveDrawerBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5526,7 +5526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDownCircleSystemFill")]
-        Icon::RiArrowDownCircleSystemFill => {
+        RiIcon::RiArrowDownCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5539,7 +5539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDownCircleSystemLine")]
-        Icon::RiArrowDownCircleSystemLine => {
+        RiIcon::RiArrowDownCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5552,7 +5552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDownSSystemFill")]
-        Icon::RiArrowDownSSystemFill => {
+        RiIcon::RiArrowDownSSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5564,7 +5564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDownSSystemLine")]
-        Icon::RiArrowDownSSystemLine => {
+        RiIcon::RiArrowDownSSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5577,7 +5577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDownSystemFill")]
-        Icon::RiArrowDownSystemFill => {
+        RiIcon::RiArrowDownSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5589,7 +5589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDownSystemLine")]
-        Icon::RiArrowDownSystemLine => {
+        RiIcon::RiArrowDownSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5602,7 +5602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropDownSystemFill")]
-        Icon::RiArrowDropDownSystemFill => {
+        RiIcon::RiArrowDropDownSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5614,7 +5614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropDownSystemLine")]
-        Icon::RiArrowDropDownSystemLine => {
+        RiIcon::RiArrowDropDownSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5627,7 +5627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropLeftSystemFill")]
-        Icon::RiArrowDropLeftSystemFill => {
+        RiIcon::RiArrowDropLeftSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5639,7 +5639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropLeftSystemLine")]
-        Icon::RiArrowDropLeftSystemLine => {
+        RiIcon::RiArrowDropLeftSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5652,7 +5652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropRightSystemFill")]
-        Icon::RiArrowDropRightSystemFill => {
+        RiIcon::RiArrowDropRightSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5664,7 +5664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropRightSystemLine")]
-        Icon::RiArrowDropRightSystemLine => {
+        RiIcon::RiArrowDropRightSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5677,7 +5677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropUpSystemFill")]
-        Icon::RiArrowDropUpSystemFill => {
+        RiIcon::RiArrowDropUpSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5689,7 +5689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowDropUpSystemLine")]
-        Icon::RiArrowDropUpSystemLine => {
+        RiIcon::RiArrowDropUpSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5702,7 +5702,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowGoBackSystemFill")]
-        Icon::RiArrowGoBackSystemFill => {
+        RiIcon::RiArrowGoBackSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5715,7 +5715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowGoBackSystemLine")]
-        Icon::RiArrowGoBackSystemLine => {
+        RiIcon::RiArrowGoBackSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5728,7 +5728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowGoForwardSystemFill")]
-        Icon::RiArrowGoForwardSystemFill => {
+        RiIcon::RiArrowGoForwardSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5741,7 +5741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowGoForwardSystemLine")]
-        Icon::RiArrowGoForwardSystemLine => {
+        RiIcon::RiArrowGoForwardSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5754,7 +5754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftCircleSystemFill")]
-        Icon::RiArrowLeftCircleSystemFill => {
+        RiIcon::RiArrowLeftCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5767,7 +5767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftCircleSystemLine")]
-        Icon::RiArrowLeftCircleSystemLine => {
+        RiIcon::RiArrowLeftCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5780,7 +5780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftDownSystemFill")]
-        Icon::RiArrowLeftDownSystemFill => {
+        RiIcon::RiArrowLeftDownSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5793,7 +5793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftDownSystemLine")]
-        Icon::RiArrowLeftDownSystemLine => {
+        RiIcon::RiArrowLeftDownSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5806,7 +5806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftRightSystemFill")]
-        Icon::RiArrowLeftRightSystemFill => {
+        RiIcon::RiArrowLeftRightSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5819,7 +5819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftRightSystemLine")]
-        Icon::RiArrowLeftRightSystemLine => {
+        RiIcon::RiArrowLeftRightSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5832,7 +5832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftSSystemFill")]
-        Icon::RiArrowLeftSSystemFill => {
+        RiIcon::RiArrowLeftSSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5844,7 +5844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftSSystemLine")]
-        Icon::RiArrowLeftSSystemLine => {
+        RiIcon::RiArrowLeftSSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5857,7 +5857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftSystemFill")]
-        Icon::RiArrowLeftSystemFill => {
+        RiIcon::RiArrowLeftSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5869,7 +5869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftSystemLine")]
-        Icon::RiArrowLeftSystemLine => {
+        RiIcon::RiArrowLeftSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5882,7 +5882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftUpSystemFill")]
-        Icon::RiArrowLeftUpSystemFill => {
+        RiIcon::RiArrowLeftUpSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5895,7 +5895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowLeftUpSystemLine")]
-        Icon::RiArrowLeftUpSystemLine => {
+        RiIcon::RiArrowLeftUpSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5908,7 +5908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightCircleSystemFill")]
-        Icon::RiArrowRightCircleSystemFill => {
+        RiIcon::RiArrowRightCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5921,7 +5921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightCircleSystemLine")]
-        Icon::RiArrowRightCircleSystemLine => {
+        RiIcon::RiArrowRightCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5934,7 +5934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightDownSystemFill")]
-        Icon::RiArrowRightDownSystemFill => {
+        RiIcon::RiArrowRightDownSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5947,7 +5947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightDownSystemLine")]
-        Icon::RiArrowRightDownSystemLine => {
+        RiIcon::RiArrowRightDownSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5960,7 +5960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightSSystemFill")]
-        Icon::RiArrowRightSSystemFill => {
+        RiIcon::RiArrowRightSSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5972,7 +5972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightSSystemLine")]
-        Icon::RiArrowRightSSystemLine => {
+        RiIcon::RiArrowRightSSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5985,7 +5985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightSystemFill")]
-        Icon::RiArrowRightSystemFill => {
+        RiIcon::RiArrowRightSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5997,7 +5997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightSystemLine")]
-        Icon::RiArrowRightSystemLine => {
+        RiIcon::RiArrowRightSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6010,7 +6010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightUpSystemFill")]
-        Icon::RiArrowRightUpSystemFill => {
+        RiIcon::RiArrowRightUpSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6023,7 +6023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowRightUpSystemLine")]
-        Icon::RiArrowRightUpSystemLine => {
+        RiIcon::RiArrowRightUpSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6036,7 +6036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpCircleSystemFill")]
-        Icon::RiArrowUpCircleSystemFill => {
+        RiIcon::RiArrowUpCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6049,7 +6049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpCircleSystemLine")]
-        Icon::RiArrowUpCircleSystemLine => {
+        RiIcon::RiArrowUpCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6062,7 +6062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpDownSystemFill")]
-        Icon::RiArrowUpDownSystemFill => {
+        RiIcon::RiArrowUpDownSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6075,7 +6075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpDownSystemLine")]
-        Icon::RiArrowUpDownSystemLine => {
+        RiIcon::RiArrowUpDownSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6088,7 +6088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpSSystemFill")]
-        Icon::RiArrowUpSSystemFill => {
+        RiIcon::RiArrowUpSSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6100,7 +6100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpSSystemLine")]
-        Icon::RiArrowUpSSystemLine => {
+        RiIcon::RiArrowUpSSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6113,7 +6113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpSystemFill")]
-        Icon::RiArrowUpSystemFill => {
+        RiIcon::RiArrowUpSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6125,7 +6125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArrowUpSystemLine")]
-        Icon::RiArrowUpSystemLine => {
+        RiIcon::RiArrowUpSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6138,7 +6138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArtboard2DesignFill")]
-        Icon::RiArtboard2DesignFill => {
+        RiIcon::RiArtboard2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6151,7 +6151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArtboard2DesignLine")]
-        Icon::RiArtboard2DesignLine => {
+        RiIcon::RiArtboard2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6164,7 +6164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArtboardDesignFill")]
-        Icon::RiArtboardDesignFill => {
+        RiIcon::RiArtboardDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6177,7 +6177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArtboardDesignLine")]
-        Icon::RiArtboardDesignLine => {
+        RiIcon::RiArtboardDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6190,7 +6190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArticleDocumentFill")]
-        Icon::RiArticleDocumentFill => {
+        RiIcon::RiArticleDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6203,7 +6203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiArticleDocumentLine")]
-        Icon::RiArticleDocumentLine => {
+        RiIcon::RiArticleDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6216,7 +6216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAspectRatioMediaFill")]
-        Icon::RiAspectRatioMediaFill => {
+        RiIcon::RiAspectRatioMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6229,7 +6229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAspectRatioMediaLine")]
-        Icon::RiAspectRatioMediaLine => {
+        RiIcon::RiAspectRatioMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6242,7 +6242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAsteriskEditor")]
-        Icon::RiAsteriskEditor => {
+        RiIcon::RiAsteriskEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6255,7 +6255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAtBusinessFill")]
-        Icon::RiAtBusinessFill => {
+        RiIcon::RiAtBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6268,7 +6268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAtBusinessLine")]
-        Icon::RiAtBusinessLine => {
+        RiIcon::RiAtBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6281,7 +6281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAttachment2Editor")]
-        Icon::RiAttachment2Editor => {
+        RiIcon::RiAttachment2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6294,7 +6294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAttachmentBusinessFill")]
-        Icon::RiAttachmentBusinessFill => {
+        RiIcon::RiAttachmentBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6307,7 +6307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAttachmentBusinessLine")]
-        Icon::RiAttachmentBusinessLine => {
+        RiIcon::RiAttachmentBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6320,7 +6320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAuctionFinanceFill")]
-        Icon::RiAuctionFinanceFill => {
+        RiIcon::RiAuctionFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6333,7 +6333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAuctionFinanceLine")]
-        Icon::RiAuctionFinanceLine => {
+        RiIcon::RiAuctionFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6346,7 +6346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAwardBusinessFill")]
-        Icon::RiAwardBusinessFill => {
+        RiIcon::RiAwardBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6359,7 +6359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiAwardBusinessLine")]
-        Icon::RiAwardBusinessLine => {
+        RiIcon::RiAwardBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6372,7 +6372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBaiduLogosFill")]
-        Icon::RiBaiduLogosFill => {
+        RiIcon::RiBaiduLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6385,7 +6385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBaiduLogosLine")]
-        Icon::RiBaiduLogosLine => {
+        RiIcon::RiBaiduLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6398,7 +6398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBallPenDesignFill")]
-        Icon::RiBallPenDesignFill => {
+        RiIcon::RiBallPenDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6411,7 +6411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBallPenDesignLine")]
-        Icon::RiBallPenDesignLine => {
+        RiIcon::RiBallPenDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6424,7 +6424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBankBuildingsFill")]
-        Icon::RiBankBuildingsFill => {
+        RiIcon::RiBankBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6437,7 +6437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBankBuildingsLine")]
-        Icon::RiBankBuildingsLine => {
+        RiIcon::RiBankBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6450,7 +6450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBankCard2FinanceFill")]
-        Icon::RiBankCard2FinanceFill => {
+        RiIcon::RiBankCard2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6463,7 +6463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBankCard2FinanceLine")]
-        Icon::RiBankCard2FinanceLine => {
+        RiIcon::RiBankCard2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6476,7 +6476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBankCardFinanceFill")]
-        Icon::RiBankCardFinanceFill => {
+        RiIcon::RiBankCardFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6489,7 +6489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBankCardFinanceLine")]
-        Icon::RiBankCardFinanceLine => {
+        RiIcon::RiBankCardFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6502,7 +6502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChart2BusinessFill")]
-        Icon::RiBarChart2BusinessFill => {
+        RiIcon::RiBarChart2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6514,7 +6514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChart2BusinessLine")]
-        Icon::RiBarChart2BusinessLine => {
+        RiIcon::RiBarChart2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6527,7 +6527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartBoxBusinessFill")]
-        Icon::RiBarChartBoxBusinessFill => {
+        RiIcon::RiBarChartBoxBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6540,7 +6540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartBoxBusinessLine")]
-        Icon::RiBarChartBoxBusinessLine => {
+        RiIcon::RiBarChartBoxBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6553,7 +6553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartBusinessFill")]
-        Icon::RiBarChartBusinessFill => {
+        RiIcon::RiBarChartBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6565,7 +6565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartBusinessLine")]
-        Icon::RiBarChartBusinessLine => {
+        RiIcon::RiBarChartBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6577,7 +6577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartGroupedBusinessFill")]
-        Icon::RiBarChartGroupedBusinessFill => {
+        RiIcon::RiBarChartGroupedBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6590,7 +6590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartGroupedBusinessLine")]
-        Icon::RiBarChartGroupedBusinessLine => {
+        RiIcon::RiBarChartGroupedBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6603,7 +6603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartHorizontalBusinessFill")]
-        Icon::RiBarChartHorizontalBusinessFill => {
+        RiIcon::RiBarChartHorizontalBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6615,7 +6615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarChartHorizontalBusinessLine")]
-        Icon::RiBarChartHorizontalBusinessLine => {
+        RiIcon::RiBarChartHorizontalBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6627,7 +6627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarcodeBoxDeviceFill")]
-        Icon::RiBarcodeBoxDeviceFill => {
+        RiIcon::RiBarcodeBoxDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6640,7 +6640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarcodeBoxDeviceLine")]
-        Icon::RiBarcodeBoxDeviceLine => {
+        RiIcon::RiBarcodeBoxDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6653,7 +6653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarcodeDeviceFill")]
-        Icon::RiBarcodeDeviceFill => {
+        RiIcon::RiBarcodeDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6666,7 +6666,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarcodeDeviceLine")]
-        Icon::RiBarcodeDeviceLine => {
+        RiIcon::RiBarcodeDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6679,7 +6679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarricadeMapFill")]
-        Icon::RiBarricadeMapFill => {
+        RiIcon::RiBarricadeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6692,7 +6692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBarricadeMapLine")]
-        Icon::RiBarricadeMapLine => {
+        RiIcon::RiBarricadeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6705,7 +6705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBaseStationDeviceFill")]
-        Icon::RiBaseStationDeviceFill => {
+        RiIcon::RiBaseStationDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6718,7 +6718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBaseStationDeviceLine")]
-        Icon::RiBaseStationDeviceLine => {
+        RiIcon::RiBaseStationDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6731,7 +6731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBasketballOthersFill")]
-        Icon::RiBasketballOthersFill => {
+        RiIcon::RiBasketballOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6744,7 +6744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBasketballOthersLine")]
-        Icon::RiBasketballOthersLine => {
+        RiIcon::RiBasketballOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6757,7 +6757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBattery2ChargeDeviceFill")]
-        Icon::RiBattery2ChargeDeviceFill => {
+        RiIcon::RiBattery2ChargeDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6770,7 +6770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBattery2ChargeDeviceLine")]
-        Icon::RiBattery2ChargeDeviceLine => {
+        RiIcon::RiBattery2ChargeDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6783,7 +6783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBattery2DeviceFill")]
-        Icon::RiBattery2DeviceFill => {
+        RiIcon::RiBattery2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6796,7 +6796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBattery2DeviceLine")]
-        Icon::RiBattery2DeviceLine => {
+        RiIcon::RiBattery2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6809,7 +6809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryChargeDeviceFill")]
-        Icon::RiBatteryChargeDeviceFill => {
+        RiIcon::RiBatteryChargeDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6822,7 +6822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryChargeDeviceLine")]
-        Icon::RiBatteryChargeDeviceLine => {
+        RiIcon::RiBatteryChargeDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6835,7 +6835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryDeviceFill")]
-        Icon::RiBatteryDeviceFill => {
+        RiIcon::RiBatteryDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6848,7 +6848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryDeviceLine")]
-        Icon::RiBatteryDeviceLine => {
+        RiIcon::RiBatteryDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6861,7 +6861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryLowDeviceFill")]
-        Icon::RiBatteryLowDeviceFill => {
+        RiIcon::RiBatteryLowDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6874,7 +6874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryLowDeviceLine")]
-        Icon::RiBatteryLowDeviceLine => {
+        RiIcon::RiBatteryLowDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6887,7 +6887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatterySaverDeviceFill")]
-        Icon::RiBatterySaverDeviceFill => {
+        RiIcon::RiBatterySaverDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6900,7 +6900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatterySaverDeviceLine")]
-        Icon::RiBatterySaverDeviceLine => {
+        RiIcon::RiBatterySaverDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6913,7 +6913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryShareDeviceFill")]
-        Icon::RiBatteryShareDeviceFill => {
+        RiIcon::RiBatteryShareDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6926,7 +6926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBatteryShareDeviceLine")]
-        Icon::RiBatteryShareDeviceLine => {
+        RiIcon::RiBatteryShareDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6939,7 +6939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBearSmileUserFill")]
-        Icon::RiBearSmileUserFill => {
+        RiIcon::RiBearSmileUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6952,7 +6952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBearSmileUserLine")]
-        Icon::RiBearSmileUserLine => {
+        RiIcon::RiBearSmileUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6965,7 +6965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBehanceLogosFill")]
-        Icon::RiBehanceLogosFill => {
+        RiIcon::RiBehanceLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6978,7 +6978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBehanceLogosLine")]
-        Icon::RiBehanceLogosLine => {
+        RiIcon::RiBehanceLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -6991,7 +6991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBellOthersFill")]
-        Icon::RiBellOthersFill => {
+        RiIcon::RiBellOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7004,7 +7004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBellOthersLine")]
-        Icon::RiBellOthersLine => {
+        RiIcon::RiBellOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7017,7 +7017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBikeMapFill")]
-        Icon::RiBikeMapFill => {
+        RiIcon::RiBikeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7030,7 +7030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBikeMapLine")]
-        Icon::RiBikeMapLine => {
+        RiIcon::RiBikeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7043,7 +7043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBilibiliLogosFill")]
-        Icon::RiBilibiliLogosFill => {
+        RiIcon::RiBilibiliLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7056,7 +7056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBilibiliLogosLine")]
-        Icon::RiBilibiliLogosLine => {
+        RiIcon::RiBilibiliLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7069,7 +7069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBillDocumentFill")]
-        Icon::RiBillDocumentFill => {
+        RiIcon::RiBillDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7082,7 +7082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBillDocumentLine")]
-        Icon::RiBillDocumentLine => {
+        RiIcon::RiBillDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7095,7 +7095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBilliardsOthersFill")]
-        Icon::RiBilliardsOthersFill => {
+        RiIcon::RiBilliardsOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7108,7 +7108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBilliardsOthersLine")]
-        Icon::RiBilliardsOthersLine => {
+        RiIcon::RiBilliardsOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7121,7 +7121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBitCoinFinanceFill")]
-        Icon::RiBitCoinFinanceFill => {
+        RiIcon::RiBitCoinFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7134,7 +7134,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBitCoinFinanceLine")]
-        Icon::RiBitCoinFinanceLine => {
+        RiIcon::RiBitCoinFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7147,7 +7147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBlazeWeatherFill")]
-        Icon::RiBlazeWeatherFill => {
+        RiIcon::RiBlazeWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7160,7 +7160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBlazeWeatherLine")]
-        Icon::RiBlazeWeatherLine => {
+        RiIcon::RiBlazeWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7173,7 +7173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBluetoothConnectDeviceFill")]
-        Icon::RiBluetoothConnectDeviceFill => {
+        RiIcon::RiBluetoothConnectDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7186,7 +7186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBluetoothConnectDeviceLine")]
-        Icon::RiBluetoothConnectDeviceLine => {
+        RiIcon::RiBluetoothConnectDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7199,7 +7199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBluetoothDeviceFill")]
-        Icon::RiBluetoothDeviceFill => {
+        RiIcon::RiBluetoothDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7212,7 +7212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBluetoothDeviceLine")]
-        Icon::RiBluetoothDeviceLine => {
+        RiIcon::RiBluetoothDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7225,7 +7225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBlurOffDesignFill")]
-        Icon::RiBlurOffDesignFill => {
+        RiIcon::RiBlurOffDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7238,7 +7238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBlurOffDesignLine")]
-        Icon::RiBlurOffDesignLine => {
+        RiIcon::RiBlurOffDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7251,7 +7251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBodyScanUserFill")]
-        Icon::RiBodyScanUserFill => {
+        RiIcon::RiBodyScanUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7264,7 +7264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBodyScanUserLine")]
-        Icon::RiBodyScanUserLine => {
+        RiIcon::RiBodyScanUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7277,7 +7277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBoldEditor")]
-        Icon::RiBoldEditor => {
+        RiIcon::RiBoldEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7290,7 +7290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBook2DocumentFill")]
-        Icon::RiBook2DocumentFill => {
+        RiIcon::RiBook2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7303,7 +7303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBook2DocumentLine")]
-        Icon::RiBook2DocumentLine => {
+        RiIcon::RiBook2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7316,7 +7316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBook3DocumentFill")]
-        Icon::RiBook3DocumentFill => {
+        RiIcon::RiBook3DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7329,7 +7329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBook3DocumentLine")]
-        Icon::RiBook3DocumentLine => {
+        RiIcon::RiBook3DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7342,7 +7342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookDocumentFill")]
-        Icon::RiBookDocumentFill => {
+        RiIcon::RiBookDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7355,7 +7355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookDocumentLine")]
-        Icon::RiBookDocumentLine => {
+        RiIcon::RiBookDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7368,7 +7368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookMarkDocumentFill")]
-        Icon::RiBookMarkDocumentFill => {
+        RiIcon::RiBookMarkDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7381,7 +7381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookMarkDocumentLine")]
-        Icon::RiBookMarkDocumentLine => {
+        RiIcon::RiBookMarkDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7394,7 +7394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookOpenDocumentFill")]
-        Icon::RiBookOpenDocumentFill => {
+        RiIcon::RiBookOpenDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7407,7 +7407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookOpenDocumentLine")]
-        Icon::RiBookOpenDocumentLine => {
+        RiIcon::RiBookOpenDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7420,7 +7420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookReadDocumentFill")]
-        Icon::RiBookReadDocumentFill => {
+        RiIcon::RiBookReadDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7433,7 +7433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookReadDocumentLine")]
-        Icon::RiBookReadDocumentLine => {
+        RiIcon::RiBookReadDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7446,7 +7446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookletDocumentFill")]
-        Icon::RiBookletDocumentFill => {
+        RiIcon::RiBookletDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7459,7 +7459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookletDocumentLine")]
-        Icon::RiBookletDocumentLine => {
+        RiIcon::RiBookletDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7472,7 +7472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookmark2BusinessFill")]
-        Icon::RiBookmark2BusinessFill => {
+        RiIcon::RiBookmark2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7485,7 +7485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookmark2BusinessLine")]
-        Icon::RiBookmark2BusinessLine => {
+        RiIcon::RiBookmark2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7498,7 +7498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookmark3BusinessFill")]
-        Icon::RiBookmark3BusinessFill => {
+        RiIcon::RiBookmark3BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7511,7 +7511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookmark3BusinessLine")]
-        Icon::RiBookmark3BusinessLine => {
+        RiIcon::RiBookmark3BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7524,7 +7524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookmarkBusinessFill")]
-        Icon::RiBookmarkBusinessFill => {
+        RiIcon::RiBookmarkBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7537,7 +7537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBookmarkBusinessLine")]
-        Icon::RiBookmarkBusinessLine => {
+        RiIcon::RiBookmarkBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7550,7 +7550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBoxingOthersFill")]
-        Icon::RiBoxingOthersFill => {
+        RiIcon::RiBoxingOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7563,7 +7563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBoxingOthersLine")]
-        Icon::RiBoxingOthersLine => {
+        RiIcon::RiBoxingOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7576,7 +7576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBracesDevelopmentFill")]
-        Icon::RiBracesDevelopmentFill => {
+        RiIcon::RiBracesDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7589,7 +7589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBracesDevelopmentLine")]
-        Icon::RiBracesDevelopmentLine => {
+        RiIcon::RiBracesDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7602,7 +7602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBracketsDevelopmentFill")]
-        Icon::RiBracketsDevelopmentFill => {
+        RiIcon::RiBracketsDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7614,7 +7614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBracketsDevelopmentLine")]
-        Icon::RiBracketsDevelopmentLine => {
+        RiIcon::RiBracketsDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7626,7 +7626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase2BusinessFill")]
-        Icon::RiBriefcase2BusinessFill => {
+        RiIcon::RiBriefcase2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7639,7 +7639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase2BusinessLine")]
-        Icon::RiBriefcase2BusinessLine => {
+        RiIcon::RiBriefcase2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7652,7 +7652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase3BusinessFill")]
-        Icon::RiBriefcase3BusinessFill => {
+        RiIcon::RiBriefcase3BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7665,7 +7665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase3BusinessLine")]
-        Icon::RiBriefcase3BusinessLine => {
+        RiIcon::RiBriefcase3BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7678,7 +7678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase4BusinessFill")]
-        Icon::RiBriefcase4BusinessFill => {
+        RiIcon::RiBriefcase4BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7691,7 +7691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase4BusinessLine")]
-        Icon::RiBriefcase4BusinessLine => {
+        RiIcon::RiBriefcase4BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7704,7 +7704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase5BusinessFill")]
-        Icon::RiBriefcase5BusinessFill => {
+        RiIcon::RiBriefcase5BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7717,7 +7717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcase5BusinessLine")]
-        Icon::RiBriefcase5BusinessLine => {
+        RiIcon::RiBriefcase5BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7730,7 +7730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcaseBusinessFill")]
-        Icon::RiBriefcaseBusinessFill => {
+        RiIcon::RiBriefcaseBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7743,7 +7743,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBriefcaseBusinessLine")]
-        Icon::RiBriefcaseBusinessLine => {
+        RiIcon::RiBriefcaseBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7756,7 +7756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBringForwardEditor")]
-        Icon::RiBringForwardEditor => {
+        RiIcon::RiBringForwardEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7769,7 +7769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBringToFrontEditor")]
-        Icon::RiBringToFrontEditor => {
+        RiIcon::RiBringToFrontEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7782,7 +7782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBroadcastMediaFill")]
-        Icon::RiBroadcastMediaFill => {
+        RiIcon::RiBroadcastMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7795,7 +7795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBroadcastMediaLine")]
-        Icon::RiBroadcastMediaLine => {
+        RiIcon::RiBroadcastMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7808,7 +7808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrush2DesignFill")]
-        Icon::RiBrush2DesignFill => {
+        RiIcon::RiBrush2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7821,7 +7821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrush2DesignLine")]
-        Icon::RiBrush2DesignLine => {
+        RiIcon::RiBrush2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7834,7 +7834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrush3DesignFill")]
-        Icon::RiBrush3DesignFill => {
+        RiIcon::RiBrush3DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7847,7 +7847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrush3DesignLine")]
-        Icon::RiBrush3DesignLine => {
+        RiIcon::RiBrush3DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7860,7 +7860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrush4DesignFill")]
-        Icon::RiBrush4DesignFill => {
+        RiIcon::RiBrush4DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7873,7 +7873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrush4DesignLine")]
-        Icon::RiBrush4DesignLine => {
+        RiIcon::RiBrush4DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7886,7 +7886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrushDesignFill")]
-        Icon::RiBrushDesignFill => {
+        RiIcon::RiBrushDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7899,7 +7899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBrushDesignLine")]
-        Icon::RiBrushDesignLine => {
+        RiIcon::RiBrushDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7912,7 +7912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBubbleChartBusinessFill")]
-        Icon::RiBubbleChartBusinessFill => {
+        RiIcon::RiBubbleChartBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7925,7 +7925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBubbleChartBusinessLine")]
-        Icon::RiBubbleChartBusinessLine => {
+        RiIcon::RiBubbleChartBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7938,7 +7938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBug2DevelopmentFill")]
-        Icon::RiBug2DevelopmentFill => {
+        RiIcon::RiBug2DevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7951,7 +7951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBug2DevelopmentLine")]
-        Icon::RiBug2DevelopmentLine => {
+        RiIcon::RiBug2DevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7964,7 +7964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBugDevelopmentFill")]
-        Icon::RiBugDevelopmentFill => {
+        RiIcon::RiBugDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7977,7 +7977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBugDevelopmentLine")]
-        Icon::RiBugDevelopmentLine => {
+        RiIcon::RiBugDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -7990,7 +7990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuilding2BuildingsFill")]
-        Icon::RiBuilding2BuildingsFill => {
+        RiIcon::RiBuilding2BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8003,7 +8003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuilding2BuildingsLine")]
-        Icon::RiBuilding2BuildingsLine => {
+        RiIcon::RiBuilding2BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8016,7 +8016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuilding3BuildingsFill")]
-        Icon::RiBuilding3BuildingsFill => {
+        RiIcon::RiBuilding3BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8028,7 +8028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuilding3BuildingsLine")]
-        Icon::RiBuilding3BuildingsLine => {
+        RiIcon::RiBuilding3BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8041,7 +8041,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuilding4BuildingsFill")]
-        Icon::RiBuilding4BuildingsFill => {
+        RiIcon::RiBuilding4BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8054,7 +8054,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuilding4BuildingsLine")]
-        Icon::RiBuilding4BuildingsLine => {
+        RiIcon::RiBuilding4BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8067,7 +8067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuildingBuildingsFill")]
-        Icon::RiBuildingBuildingsFill => {
+        RiIcon::RiBuildingBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8080,7 +8080,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBuildingBuildingsLine")]
-        Icon::RiBuildingBuildingsLine => {
+        RiIcon::RiBuildingBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8093,7 +8093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBus2MapFill")]
-        Icon::RiBus2MapFill => {
+        RiIcon::RiBus2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8106,7 +8106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBus2MapLine")]
-        Icon::RiBus2MapLine => {
+        RiIcon::RiBus2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8119,7 +8119,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBusMapFill")]
-        Icon::RiBusMapFill => {
+        RiIcon::RiBusMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8132,7 +8132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBusMapLine")]
-        Icon::RiBusMapLine => {
+        RiIcon::RiBusMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8145,7 +8145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBusWifiMapFill")]
-        Icon::RiBusWifiMapFill => {
+        RiIcon::RiBusWifiMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8158,7 +8158,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiBusWifiMapLine")]
-        Icon::RiBusWifiMapLine => {
+        RiIcon::RiBusWifiMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8171,7 +8171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCactusOthersFill")]
-        Icon::RiCactusOthersFill => {
+        RiIcon::RiCactusOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8184,7 +8184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCactusOthersLine")]
-        Icon::RiCactusOthersLine => {
+        RiIcon::RiCactusOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8197,7 +8197,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCake2OthersFill")]
-        Icon::RiCake2OthersFill => {
+        RiIcon::RiCake2OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8210,7 +8210,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCake2OthersLine")]
-        Icon::RiCake2OthersLine => {
+        RiIcon::RiCake2OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8223,7 +8223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCake3OthersFill")]
-        Icon::RiCake3OthersFill => {
+        RiIcon::RiCake3OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8236,7 +8236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCake3OthersLine")]
-        Icon::RiCake3OthersLine => {
+        RiIcon::RiCake3OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8249,7 +8249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCakeOthersFill")]
-        Icon::RiCakeOthersFill => {
+        RiIcon::RiCakeOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8262,7 +8262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCakeOthersLine")]
-        Icon::RiCakeOthersLine => {
+        RiIcon::RiCakeOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8275,7 +8275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalculatorBusinessFill")]
-        Icon::RiCalculatorBusinessFill => {
+        RiIcon::RiCalculatorBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8288,7 +8288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalculatorBusinessLine")]
-        Icon::RiCalculatorBusinessLine => {
+        RiIcon::RiCalculatorBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8301,7 +8301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendar2BusinessFill")]
-        Icon::RiCalendar2BusinessFill => {
+        RiIcon::RiCalendar2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8314,7 +8314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendar2BusinessLine")]
-        Icon::RiCalendar2BusinessLine => {
+        RiIcon::RiCalendar2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8327,7 +8327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarBusinessFill")]
-        Icon::RiCalendarBusinessFill => {
+        RiIcon::RiCalendarBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8340,7 +8340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarBusinessLine")]
-        Icon::RiCalendarBusinessLine => {
+        RiIcon::RiCalendarBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8353,7 +8353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarCheckBusinessFill")]
-        Icon::RiCalendarCheckBusinessFill => {
+        RiIcon::RiCalendarCheckBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8366,7 +8366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarCheckBusinessLine")]
-        Icon::RiCalendarCheckBusinessLine => {
+        RiIcon::RiCalendarCheckBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8379,7 +8379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarEventBusinessFill")]
-        Icon::RiCalendarEventBusinessFill => {
+        RiIcon::RiCalendarEventBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8392,7 +8392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarEventBusinessLine")]
-        Icon::RiCalendarEventBusinessLine => {
+        RiIcon::RiCalendarEventBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8405,7 +8405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarTodoBusinessFill")]
-        Icon::RiCalendarTodoBusinessFill => {
+        RiIcon::RiCalendarTodoBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8418,7 +8418,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCalendarTodoBusinessLine")]
-        Icon::RiCalendarTodoBusinessLine => {
+        RiIcon::RiCalendarTodoBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8431,7 +8431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCamera2MediaFill")]
-        Icon::RiCamera2MediaFill => {
+        RiIcon::RiCamera2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8444,7 +8444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCamera2MediaLine")]
-        Icon::RiCamera2MediaLine => {
+        RiIcon::RiCamera2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8457,7 +8457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCamera3MediaFill")]
-        Icon::RiCamera3MediaFill => {
+        RiIcon::RiCamera3MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8470,7 +8470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCamera3MediaLine")]
-        Icon::RiCamera3MediaLine => {
+        RiIcon::RiCamera3MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8483,7 +8483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraLensMediaFill")]
-        Icon::RiCameraLensMediaFill => {
+        RiIcon::RiCameraLensMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8496,7 +8496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraLensMediaLine")]
-        Icon::RiCameraLensMediaLine => {
+        RiIcon::RiCameraLensMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8509,7 +8509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraMediaFill")]
-        Icon::RiCameraMediaFill => {
+        RiIcon::RiCameraMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8522,7 +8522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraMediaLine")]
-        Icon::RiCameraMediaLine => {
+        RiIcon::RiCameraMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8535,7 +8535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraOffMediaFill")]
-        Icon::RiCameraOffMediaFill => {
+        RiIcon::RiCameraOffMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8548,7 +8548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraOffMediaLine")]
-        Icon::RiCameraOffMediaLine => {
+        RiIcon::RiCameraOffMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8561,7 +8561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraSwitchMediaFill")]
-        Icon::RiCameraSwitchMediaFill => {
+        RiIcon::RiCameraSwitchMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8574,7 +8574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCameraSwitchMediaLine")]
-        Icon::RiCameraSwitchMediaLine => {
+        RiIcon::RiCameraSwitchMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8587,7 +8587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCapsuleHealthFill")]
-        Icon::RiCapsuleHealthFill => {
+        RiIcon::RiCapsuleHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8600,7 +8600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCapsuleHealthLine")]
-        Icon::RiCapsuleHealthLine => {
+        RiIcon::RiCapsuleHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8613,7 +8613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCarMapFill")]
-        Icon::RiCarMapFill => {
+        RiIcon::RiCarMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8626,7 +8626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCarMapLine")]
-        Icon::RiCarMapLine => {
+        RiIcon::RiCarMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8639,7 +8639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCarWashingMapFill")]
-        Icon::RiCarWashingMapFill => {
+        RiIcon::RiCarWashingMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8652,7 +8652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCarWashingMapLine")]
-        Icon::RiCarWashingMapLine => {
+        RiIcon::RiCarWashingMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8665,7 +8665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCaravanMapFill")]
-        Icon::RiCaravanMapFill => {
+        RiIcon::RiCaravanMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8678,7 +8678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCaravanMapLine")]
-        Icon::RiCaravanMapLine => {
+        RiIcon::RiCaravanMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8691,7 +8691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCastDeviceFill")]
-        Icon::RiCastDeviceFill => {
+        RiIcon::RiCastDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8704,7 +8704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCastDeviceLine")]
-        Icon::RiCastDeviceLine => {
+        RiIcon::RiCastDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8717,7 +8717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCellphoneDeviceFill")]
-        Icon::RiCellphoneDeviceFill => {
+        RiIcon::RiCellphoneDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8730,7 +8730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCellphoneDeviceLine")]
-        Icon::RiCellphoneDeviceLine => {
+        RiIcon::RiCellphoneDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8743,7 +8743,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCelsiusWeatherFill")]
-        Icon::RiCelsiusWeatherFill => {
+        RiIcon::RiCelsiusWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8756,7 +8756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCelsiusWeatherLine")]
-        Icon::RiCelsiusWeatherLine => {
+        RiIcon::RiCelsiusWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8769,7 +8769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCentosLogosFill")]
-        Icon::RiCentosLogosFill => {
+        RiIcon::RiCentosLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8782,7 +8782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCentosLogosLine")]
-        Icon::RiCentosLogosLine => {
+        RiIcon::RiCentosLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8795,7 +8795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCharacterRecognitionOthersFill")]
-        Icon::RiCharacterRecognitionOthersFill => {
+        RiIcon::RiCharacterRecognitionOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8808,7 +8808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCharacterRecognitionOthersLine")]
-        Icon::RiCharacterRecognitionOthersLine => {
+        RiIcon::RiCharacterRecognitionOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8821,7 +8821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChargingPile2MapFill")]
-        Icon::RiChargingPile2MapFill => {
+        RiIcon::RiChargingPile2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8834,7 +8834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChargingPile2MapLine")]
-        Icon::RiChargingPile2MapLine => {
+        RiIcon::RiChargingPile2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8847,7 +8847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChargingPileMapFill")]
-        Icon::RiChargingPileMapFill => {
+        RiIcon::RiChargingPileMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8860,7 +8860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChargingPileMapLine")]
-        Icon::RiChargingPileMapLine => {
+        RiIcon::RiChargingPileMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8873,7 +8873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat1CommunicationFill")]
-        Icon::RiChat1CommunicationFill => {
+        RiIcon::RiChat1CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8886,7 +8886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat1CommunicationLine")]
-        Icon::RiChat1CommunicationLine => {
+        RiIcon::RiChat1CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8899,7 +8899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat2CommunicationFill")]
-        Icon::RiChat2CommunicationFill => {
+        RiIcon::RiChat2CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8912,7 +8912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat2CommunicationLine")]
-        Icon::RiChat2CommunicationLine => {
+        RiIcon::RiChat2CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8925,7 +8925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat3CommunicationFill")]
-        Icon::RiChat3CommunicationFill => {
+        RiIcon::RiChat3CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8938,7 +8938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat3CommunicationLine")]
-        Icon::RiChat3CommunicationLine => {
+        RiIcon::RiChat3CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8951,7 +8951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat4CommunicationFill")]
-        Icon::RiChat4CommunicationFill => {
+        RiIcon::RiChat4CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8964,7 +8964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChat4CommunicationLine")]
-        Icon::RiChat4CommunicationLine => {
+        RiIcon::RiChat4CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8977,7 +8977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatCheckCommunicationFill")]
-        Icon::RiChatCheckCommunicationFill => {
+        RiIcon::RiChatCheckCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -8990,7 +8990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatCheckCommunicationLine")]
-        Icon::RiChatCheckCommunicationLine => {
+        RiIcon::RiChatCheckCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9003,7 +9003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatDeleteCommunicationFill")]
-        Icon::RiChatDeleteCommunicationFill => {
+        RiIcon::RiChatDeleteCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9016,7 +9016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatDeleteCommunicationLine")]
-        Icon::RiChatDeleteCommunicationLine => {
+        RiIcon::RiChatDeleteCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9029,7 +9029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatDownloadCommunicationFill")]
-        Icon::RiChatDownloadCommunicationFill => {
+        RiIcon::RiChatDownloadCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9042,7 +9042,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatDownloadCommunicationLine")]
-        Icon::RiChatDownloadCommunicationLine => {
+        RiIcon::RiChatDownloadCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9055,7 +9055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatFollowUpCommunicationFill")]
-        Icon::RiChatFollowUpCommunicationFill => {
+        RiIcon::RiChatFollowUpCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9068,7 +9068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatFollowUpCommunicationLine")]
-        Icon::RiChatFollowUpCommunicationLine => {
+        RiIcon::RiChatFollowUpCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9081,7 +9081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatForwardCommunicationFill")]
-        Icon::RiChatForwardCommunicationFill => {
+        RiIcon::RiChatForwardCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9094,7 +9094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatForwardCommunicationLine")]
-        Icon::RiChatForwardCommunicationLine => {
+        RiIcon::RiChatForwardCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9107,7 +9107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatHeartCommunicationFill")]
-        Icon::RiChatHeartCommunicationFill => {
+        RiIcon::RiChatHeartCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9120,7 +9120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatHeartCommunicationLine")]
-        Icon::RiChatHeartCommunicationLine => {
+        RiIcon::RiChatHeartCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9133,7 +9133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatHistoryCommunicationFill")]
-        Icon::RiChatHistoryCommunicationFill => {
+        RiIcon::RiChatHistoryCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9146,7 +9146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatHistoryCommunicationLine")]
-        Icon::RiChatHistoryCommunicationLine => {
+        RiIcon::RiChatHistoryCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9159,7 +9159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatNewCommunicationFill")]
-        Icon::RiChatNewCommunicationFill => {
+        RiIcon::RiChatNewCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9172,7 +9172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatNewCommunicationLine")]
-        Icon::RiChatNewCommunicationLine => {
+        RiIcon::RiChatNewCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9185,7 +9185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatOffCommunicationFill")]
-        Icon::RiChatOffCommunicationFill => {
+        RiIcon::RiChatOffCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9198,7 +9198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatOffCommunicationLine")]
-        Icon::RiChatOffCommunicationLine => {
+        RiIcon::RiChatOffCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9211,7 +9211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatPollCommunicationFill")]
-        Icon::RiChatPollCommunicationFill => {
+        RiIcon::RiChatPollCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9224,7 +9224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatPollCommunicationLine")]
-        Icon::RiChatPollCommunicationLine => {
+        RiIcon::RiChatPollCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9237,7 +9237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatPrivateCommunicationFill")]
-        Icon::RiChatPrivateCommunicationFill => {
+        RiIcon::RiChatPrivateCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9250,7 +9250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatPrivateCommunicationLine")]
-        Icon::RiChatPrivateCommunicationLine => {
+        RiIcon::RiChatPrivateCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9263,7 +9263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatQuoteCommunicationFill")]
-        Icon::RiChatQuoteCommunicationFill => {
+        RiIcon::RiChatQuoteCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9276,7 +9276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatQuoteCommunicationLine")]
-        Icon::RiChatQuoteCommunicationLine => {
+        RiIcon::RiChatQuoteCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9289,7 +9289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSettingsCommunicationFill")]
-        Icon::RiChatSettingsCommunicationFill => {
+        RiIcon::RiChatSettingsCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9302,7 +9302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSettingsCommunicationLine")]
-        Icon::RiChatSettingsCommunicationLine => {
+        RiIcon::RiChatSettingsCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9315,7 +9315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSmile2CommunicationFill")]
-        Icon::RiChatSmile2CommunicationFill => {
+        RiIcon::RiChatSmile2CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9328,7 +9328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSmile2CommunicationLine")]
-        Icon::RiChatSmile2CommunicationLine => {
+        RiIcon::RiChatSmile2CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9341,7 +9341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSmile3CommunicationFill")]
-        Icon::RiChatSmile3CommunicationFill => {
+        RiIcon::RiChatSmile3CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9354,7 +9354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSmile3CommunicationLine")]
-        Icon::RiChatSmile3CommunicationLine => {
+        RiIcon::RiChatSmile3CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9367,7 +9367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSmileCommunicationFill")]
-        Icon::RiChatSmileCommunicationFill => {
+        RiIcon::RiChatSmileCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9380,7 +9380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatSmileCommunicationLine")]
-        Icon::RiChatSmileCommunicationLine => {
+        RiIcon::RiChatSmileCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9393,7 +9393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatUploadCommunicationFill")]
-        Icon::RiChatUploadCommunicationFill => {
+        RiIcon::RiChatUploadCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9406,7 +9406,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatUploadCommunicationLine")]
-        Icon::RiChatUploadCommunicationLine => {
+        RiIcon::RiChatUploadCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9419,7 +9419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatVoiceCommunicationFill")]
-        Icon::RiChatVoiceCommunicationFill => {
+        RiIcon::RiChatVoiceCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9432,7 +9432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChatVoiceCommunicationLine")]
-        Icon::RiChatVoiceCommunicationLine => {
+        RiIcon::RiChatVoiceCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9445,7 +9445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckDoubleSystemFill")]
-        Icon::RiCheckDoubleSystemFill => {
+        RiIcon::RiCheckDoubleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9458,7 +9458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckDoubleSystemLine")]
-        Icon::RiCheckDoubleSystemLine => {
+        RiIcon::RiCheckDoubleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9471,7 +9471,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckSystemFill")]
-        Icon::RiCheckSystemFill => {
+        RiIcon::RiCheckSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9484,7 +9484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckSystemLine")]
-        Icon::RiCheckSystemLine => {
+        RiIcon::RiCheckSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9497,7 +9497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxBlankCircleSystemFill")]
-        Icon::RiCheckboxBlankCircleSystemFill => {
+        RiIcon::RiCheckboxBlankCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9509,7 +9509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxBlankCircleSystemLine")]
-        Icon::RiCheckboxBlankCircleSystemLine => {
+        RiIcon::RiCheckboxBlankCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9522,7 +9522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxBlankSystemFill")]
-        Icon::RiCheckboxBlankSystemFill => {
+        RiIcon::RiCheckboxBlankSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9535,7 +9535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxBlankSystemLine")]
-        Icon::RiCheckboxBlankSystemLine => {
+        RiIcon::RiCheckboxBlankSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9548,7 +9548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxCircleSystemFill")]
-        Icon::RiCheckboxCircleSystemFill => {
+        RiIcon::RiCheckboxCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9561,7 +9561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxCircleSystemLine")]
-        Icon::RiCheckboxCircleSystemLine => {
+        RiIcon::RiCheckboxCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9574,7 +9574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxIndeterminateSystemFill")]
-        Icon::RiCheckboxIndeterminateSystemFill => {
+        RiIcon::RiCheckboxIndeterminateSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9587,7 +9587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxIndeterminateSystemLine")]
-        Icon::RiCheckboxIndeterminateSystemLine => {
+        RiIcon::RiCheckboxIndeterminateSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9600,7 +9600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxMultipleBlankSystemFill")]
-        Icon::RiCheckboxMultipleBlankSystemFill => {
+        RiIcon::RiCheckboxMultipleBlankSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9613,7 +9613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxMultipleBlankSystemLine")]
-        Icon::RiCheckboxMultipleBlankSystemLine => {
+        RiIcon::RiCheckboxMultipleBlankSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9627,7 +9627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxMultipleSystemFill")]
-        Icon::RiCheckboxMultipleSystemFill => {
+        RiIcon::RiCheckboxMultipleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9640,7 +9640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxMultipleSystemLine")]
-        Icon::RiCheckboxMultipleSystemLine => {
+        RiIcon::RiCheckboxMultipleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9653,7 +9653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxSystemFill")]
-        Icon::RiCheckboxSystemFill => {
+        RiIcon::RiCheckboxSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9666,7 +9666,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCheckboxSystemLine")]
-        Icon::RiCheckboxSystemLine => {
+        RiIcon::RiCheckboxSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9679,7 +9679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChinaRailwayMapFill")]
-        Icon::RiChinaRailwayMapFill => {
+        RiIcon::RiChinaRailwayMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9692,7 +9692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChinaRailwayMapLine")]
-        Icon::RiChinaRailwayMapLine => {
+        RiIcon::RiChinaRailwayMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9705,7 +9705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChromeLogosFill")]
-        Icon::RiChromeLogosFill => {
+        RiIcon::RiChromeLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9718,7 +9718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiChromeLogosLine")]
-        Icon::RiChromeLogosLine => {
+        RiIcon::RiChromeLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9731,7 +9731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClapperboardMediaFill")]
-        Icon::RiClapperboardMediaFill => {
+        RiIcon::RiClapperboardMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9744,7 +9744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClapperboardMediaLine")]
-        Icon::RiClapperboardMediaLine => {
+        RiIcon::RiClapperboardMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9757,7 +9757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClipboardDocumentFill")]
-        Icon::RiClipboardDocumentFill => {
+        RiIcon::RiClipboardDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9770,7 +9770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClipboardDocumentLine")]
-        Icon::RiClipboardDocumentLine => {
+        RiIcon::RiClipboardDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9783,7 +9783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClockwise2DesignFill")]
-        Icon::RiClockwise2DesignFill => {
+        RiIcon::RiClockwise2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9796,7 +9796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClockwise2DesignLine")]
-        Icon::RiClockwise2DesignLine => {
+        RiIcon::RiClockwise2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9809,7 +9809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClockwiseDesignFill")]
-        Icon::RiClockwiseDesignFill => {
+        RiIcon::RiClockwiseDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9822,7 +9822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClockwiseDesignLine")]
-        Icon::RiClockwiseDesignLine => {
+        RiIcon::RiClockwiseDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9835,7 +9835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloseCircleSystemFill")]
-        Icon::RiCloseCircleSystemFill => {
+        RiIcon::RiCloseCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9848,7 +9848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloseCircleSystemLine")]
-        Icon::RiCloseCircleSystemLine => {
+        RiIcon::RiCloseCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9861,7 +9861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloseSystemFill")]
-        Icon::RiCloseSystemFill => {
+        RiIcon::RiCloseSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9874,7 +9874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloseSystemLine")]
-        Icon::RiCloseSystemLine => {
+        RiIcon::RiCloseSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9887,7 +9887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClosedCaptioningMediaFill")]
-        Icon::RiClosedCaptioningMediaFill => {
+        RiIcon::RiClosedCaptioningMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9900,7 +9900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiClosedCaptioningMediaLine")]
-        Icon::RiClosedCaptioningMediaLine => {
+        RiIcon::RiClosedCaptioningMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9913,7 +9913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudBusinessFill")]
-        Icon::RiCloudBusinessFill => {
+        RiIcon::RiCloudBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9926,7 +9926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudBusinessLine")]
-        Icon::RiCloudBusinessLine => {
+        RiIcon::RiCloudBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9939,7 +9939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudOffBusinessFill")]
-        Icon::RiCloudOffBusinessFill => {
+        RiIcon::RiCloudOffBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9952,7 +9952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudOffBusinessLine")]
-        Icon::RiCloudOffBusinessLine => {
+        RiIcon::RiCloudOffBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9965,7 +9965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudWindyWeatherFill")]
-        Icon::RiCloudWindyWeatherFill => {
+        RiIcon::RiCloudWindyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9978,7 +9978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudWindyWeatherLine")]
-        Icon::RiCloudWindyWeatherLine => {
+        RiIcon::RiCloudWindyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -9991,7 +9991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudy2WeatherFill")]
-        Icon::RiCloudy2WeatherFill => {
+        RiIcon::RiCloudy2WeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10004,7 +10004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudy2WeatherLine")]
-        Icon::RiCloudy2WeatherLine => {
+        RiIcon::RiCloudy2WeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10017,7 +10017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudyWeatherFill")]
-        Icon::RiCloudyWeatherFill => {
+        RiIcon::RiCloudyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10030,7 +10030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCloudyWeatherLine")]
-        Icon::RiCloudyWeatherLine => {
+        RiIcon::RiCloudyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10043,7 +10043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeBoxDevelopmentFill")]
-        Icon::RiCodeBoxDevelopmentFill => {
+        RiIcon::RiCodeBoxDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10056,7 +10056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeBoxDevelopmentLine")]
-        Icon::RiCodeBoxDevelopmentLine => {
+        RiIcon::RiCodeBoxDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10069,7 +10069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeDevelopmentFill")]
-        Icon::RiCodeDevelopmentFill => {
+        RiIcon::RiCodeDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10082,7 +10082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeDevelopmentLine")]
-        Icon::RiCodeDevelopmentLine => {
+        RiIcon::RiCodeDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10095,7 +10095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeSDevelopmentFill")]
-        Icon::RiCodeSDevelopmentFill => {
+        RiIcon::RiCodeSDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10108,7 +10108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeSDevelopmentLine")]
-        Icon::RiCodeSDevelopmentLine => {
+        RiIcon::RiCodeSDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10121,7 +10121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeSSlashDevelopmentFill")]
-        Icon::RiCodeSSlashDevelopmentFill => {
+        RiIcon::RiCodeSSlashDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10134,7 +10134,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeSSlashDevelopmentLine")]
-        Icon::RiCodeSSlashDevelopmentLine => {
+        RiIcon::RiCodeSSlashDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10147,7 +10147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodeViewEditor")]
-        Icon::RiCodeViewEditor => {
+        RiIcon::RiCodeViewEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10160,7 +10160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodepenLogosFill")]
-        Icon::RiCodepenLogosFill => {
+        RiIcon::RiCodepenLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10173,7 +10173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCodepenLogosLine")]
-        Icon::RiCodepenLogosLine => {
+        RiIcon::RiCodepenLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10186,7 +10186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoinFinanceFill")]
-        Icon::RiCoinFinanceFill => {
+        RiIcon::RiCoinFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10199,7 +10199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoinFinanceLine")]
-        Icon::RiCoinFinanceLine => {
+        RiIcon::RiCoinFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10212,7 +10212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoinsFinanceFill")]
-        Icon::RiCoinsFinanceFill => {
+        RiIcon::RiCoinsFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10225,7 +10225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoinsFinanceLine")]
-        Icon::RiCoinsFinanceLine => {
+        RiIcon::RiCoinsFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10238,7 +10238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCollageDesignFill")]
-        Icon::RiCollageDesignFill => {
+        RiIcon::RiCollageDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10251,7 +10251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCollageDesignLine")]
-        Icon::RiCollageDesignLine => {
+        RiIcon::RiCollageDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10264,7 +10264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCommandDevelopmentFill")]
-        Icon::RiCommandDevelopmentFill => {
+        RiIcon::RiCommandDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10277,7 +10277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCommandDevelopmentLine")]
-        Icon::RiCommandDevelopmentLine => {
+        RiIcon::RiCommandDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10290,7 +10290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCommunityBuildingsFill")]
-        Icon::RiCommunityBuildingsFill => {
+        RiIcon::RiCommunityBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10303,7 +10303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCommunityBuildingsLine")]
-        Icon::RiCommunityBuildingsLine => {
+        RiIcon::RiCommunityBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10316,7 +10316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompass2MapFill")]
-        Icon::RiCompass2MapFill => {
+        RiIcon::RiCompass2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10329,7 +10329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompass2MapLine")]
-        Icon::RiCompass2MapLine => {
+        RiIcon::RiCompass2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10342,7 +10342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompass3MapFill")]
-        Icon::RiCompass3MapFill => {
+        RiIcon::RiCompass3MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10355,7 +10355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompass3MapLine")]
-        Icon::RiCompass3MapLine => {
+        RiIcon::RiCompass3MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10368,7 +10368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompass4MapFill")]
-        Icon::RiCompass4MapFill => {
+        RiIcon::RiCompass4MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10381,7 +10381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompass4MapLine")]
-        Icon::RiCompass4MapLine => {
+        RiIcon::RiCompass4MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10394,7 +10394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompassDiscoverMapFill")]
-        Icon::RiCompassDiscoverMapFill => {
+        RiIcon::RiCompassDiscoverMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10407,7 +10407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompassDiscoverMapLine")]
-        Icon::RiCompassDiscoverMapLine => {
+        RiIcon::RiCompassDiscoverMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10420,7 +10420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompassMapFill")]
-        Icon::RiCompassMapFill => {
+        RiIcon::RiCompassMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10433,7 +10433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompassMapLine")]
-        Icon::RiCompassMapLine => {
+        RiIcon::RiCompassMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10446,7 +10446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompasses2DesignFill")]
-        Icon::RiCompasses2DesignFill => {
+        RiIcon::RiCompasses2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10459,7 +10459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompasses2DesignLine")]
-        Icon::RiCompasses2DesignLine => {
+        RiIcon::RiCompasses2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10472,7 +10472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompassesDesignFill")]
-        Icon::RiCompassesDesignFill => {
+        RiIcon::RiCompassesDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10485,7 +10485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCompassesDesignLine")]
-        Icon::RiCompassesDesignLine => {
+        RiIcon::RiCompassesDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10498,7 +10498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiComputerDeviceFill")]
-        Icon::RiComputerDeviceFill => {
+        RiIcon::RiComputerDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10511,7 +10511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiComputerDeviceLine")]
-        Icon::RiComputerDeviceLine => {
+        RiIcon::RiComputerDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10524,7 +10524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsBook2DocumentFill")]
-        Icon::RiContactsBook2DocumentFill => {
+        RiIcon::RiContactsBook2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10537,7 +10537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsBook2DocumentLine")]
-        Icon::RiContactsBook2DocumentLine => {
+        RiIcon::RiContactsBook2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10550,7 +10550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsBookDocumentFill")]
-        Icon::RiContactsBookDocumentFill => {
+        RiIcon::RiContactsBookDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10563,7 +10563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsBookDocumentLine")]
-        Icon::RiContactsBookDocumentLine => {
+        RiIcon::RiContactsBookDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10576,7 +10576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsBookUploadDocumentFill")]
-        Icon::RiContactsBookUploadDocumentFill => {
+        RiIcon::RiContactsBookUploadDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10589,7 +10589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsBookUploadDocumentLine")]
-        Icon::RiContactsBookUploadDocumentLine => {
+        RiIcon::RiContactsBookUploadDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10602,7 +10602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsUserFill")]
-        Icon::RiContactsUserFill => {
+        RiIcon::RiContactsUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10615,7 +10615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContactsUserLine")]
-        Icon::RiContactsUserLine => {
+        RiIcon::RiContactsUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10628,7 +10628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrast2DesignFill")]
-        Icon::RiContrast2DesignFill => {
+        RiIcon::RiContrast2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10641,7 +10641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrast2DesignLine")]
-        Icon::RiContrast2DesignLine => {
+        RiIcon::RiContrast2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10654,7 +10654,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrastDesignFill")]
-        Icon::RiContrastDesignFill => {
+        RiIcon::RiContrastDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10667,7 +10667,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrastDesignLine")]
-        Icon::RiContrastDesignLine => {
+        RiIcon::RiContrastDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10680,7 +10680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrastDrop2DesignFill")]
-        Icon::RiContrastDrop2DesignFill => {
+        RiIcon::RiContrastDrop2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10693,7 +10693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrastDrop2DesignLine")]
-        Icon::RiContrastDrop2DesignLine => {
+        RiIcon::RiContrastDrop2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10706,7 +10706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrastDropDesignFill")]
-        Icon::RiContrastDropDesignFill => {
+        RiIcon::RiContrastDropDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10719,7 +10719,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiContrastDropDesignLine")]
-        Icon::RiContrastDropDesignLine => {
+        RiIcon::RiContrastDropDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10732,7 +10732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopperCoinFinanceFill")]
-        Icon::RiCopperCoinFinanceFill => {
+        RiIcon::RiCopperCoinFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10745,7 +10745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopperCoinFinanceLine")]
-        Icon::RiCopperCoinFinanceLine => {
+        RiIcon::RiCopperCoinFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10758,7 +10758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopperDiamondFinanceFill")]
-        Icon::RiCopperDiamondFinanceFill => {
+        RiIcon::RiCopperDiamondFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10771,7 +10771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopperDiamondFinanceLine")]
-        Icon::RiCopperDiamondFinanceLine => {
+        RiIcon::RiCopperDiamondFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10784,7 +10784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopyleftBusinessFill")]
-        Icon::RiCopyleftBusinessFill => {
+        RiIcon::RiCopyleftBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10797,7 +10797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopyleftBusinessLine")]
-        Icon::RiCopyleftBusinessLine => {
+        RiIcon::RiCopyleftBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10810,7 +10810,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopyrightBusinessFill")]
-        Icon::RiCopyrightBusinessFill => {
+        RiIcon::RiCopyrightBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10823,7 +10823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCopyrightBusinessLine")]
-        Icon::RiCopyrightBusinessLine => {
+        RiIcon::RiCopyrightBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10836,7 +10836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoreosLogosFill")]
-        Icon::RiCoreosLogosFill => {
+        RiIcon::RiCoreosLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10849,7 +10849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoreosLogosLine")]
-        Icon::RiCoreosLogosLine => {
+        RiIcon::RiCoreosLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10862,7 +10862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon2FinanceFill")]
-        Icon::RiCoupon2FinanceFill => {
+        RiIcon::RiCoupon2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10875,7 +10875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon2FinanceLine")]
-        Icon::RiCoupon2FinanceLine => {
+        RiIcon::RiCoupon2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10888,7 +10888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon3FinanceFill")]
-        Icon::RiCoupon3FinanceFill => {
+        RiIcon::RiCoupon3FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10901,7 +10901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon3FinanceLine")]
-        Icon::RiCoupon3FinanceLine => {
+        RiIcon::RiCoupon3FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10914,7 +10914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon4FinanceFill")]
-        Icon::RiCoupon4FinanceFill => {
+        RiIcon::RiCoupon4FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10927,7 +10927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon4FinanceLine")]
-        Icon::RiCoupon4FinanceLine => {
+        RiIcon::RiCoupon4FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10940,7 +10940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon5FinanceFill")]
-        Icon::RiCoupon5FinanceFill => {
+        RiIcon::RiCoupon5FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10953,7 +10953,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCoupon5FinanceLine")]
-        Icon::RiCoupon5FinanceLine => {
+        RiIcon::RiCoupon5FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10966,7 +10966,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCouponFinanceFill")]
-        Icon::RiCouponFinanceFill => {
+        RiIcon::RiCouponFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10979,7 +10979,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCouponFinanceLine")]
-        Icon::RiCouponFinanceLine => {
+        RiIcon::RiCouponFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -10992,7 +10992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCpuDeviceFill")]
-        Icon::RiCpuDeviceFill => {
+        RiIcon::RiCpuDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11005,7 +11005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCpuDeviceLine")]
-        Icon::RiCpuDeviceLine => {
+        RiIcon::RiCpuDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11018,7 +11018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsBusinessFill")]
-        Icon::RiCreativeCommonsBusinessFill => {
+        RiIcon::RiCreativeCommonsBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11031,7 +11031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsBusinessLine")]
-        Icon::RiCreativeCommonsBusinessLine => {
+        RiIcon::RiCreativeCommonsBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11044,7 +11044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsByBusinessFill")]
-        Icon::RiCreativeCommonsByBusinessFill => {
+        RiIcon::RiCreativeCommonsByBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11057,7 +11057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsByBusinessLine")]
-        Icon::RiCreativeCommonsByBusinessLine => {
+        RiIcon::RiCreativeCommonsByBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11070,7 +11070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsNcBusinessFill")]
-        Icon::RiCreativeCommonsNcBusinessFill => {
+        RiIcon::RiCreativeCommonsNcBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11083,7 +11083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsNcBusinessLine")]
-        Icon::RiCreativeCommonsNcBusinessLine => {
+        RiIcon::RiCreativeCommonsNcBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11096,7 +11096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsNdBusinessFill")]
-        Icon::RiCreativeCommonsNdBusinessFill => {
+        RiIcon::RiCreativeCommonsNdBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11109,7 +11109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsNdBusinessLine")]
-        Icon::RiCreativeCommonsNdBusinessLine => {
+        RiIcon::RiCreativeCommonsNdBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11122,7 +11122,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsSaBusinessFill")]
-        Icon::RiCreativeCommonsSaBusinessFill => {
+        RiIcon::RiCreativeCommonsSaBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11135,7 +11135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsSaBusinessLine")]
-        Icon::RiCreativeCommonsSaBusinessLine => {
+        RiIcon::RiCreativeCommonsSaBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11148,7 +11148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsZeroBusinessFill")]
-        Icon::RiCreativeCommonsZeroBusinessFill => {
+        RiIcon::RiCreativeCommonsZeroBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11161,7 +11161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCreativeCommonsZeroBusinessLine")]
-        Icon::RiCreativeCommonsZeroBusinessLine => {
+        RiIcon::RiCreativeCommonsZeroBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11175,7 +11175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCriminalUserFill")]
-        Icon::RiCriminalUserFill => {
+        RiIcon::RiCriminalUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11188,7 +11188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCriminalUserLine")]
-        Icon::RiCriminalUserLine => {
+        RiIcon::RiCriminalUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11201,7 +11201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCrop2DesignFill")]
-        Icon::RiCrop2DesignFill => {
+        RiIcon::RiCrop2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11214,7 +11214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCrop2DesignLine")]
-        Icon::RiCrop2DesignLine => {
+        RiIcon::RiCrop2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11227,7 +11227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCropDesignFill")]
-        Icon::RiCropDesignFill => {
+        RiIcon::RiCropDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11240,7 +11240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCropDesignLine")]
-        Icon::RiCropDesignLine => {
+        RiIcon::RiCropDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11253,7 +11253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCss3DevelopmentFill")]
-        Icon::RiCss3DevelopmentFill => {
+        RiIcon::RiCss3DevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11266,7 +11266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCss3DevelopmentLine")]
-        Icon::RiCss3DevelopmentLine => {
+        RiIcon::RiCss3DevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11279,7 +11279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCupMapFill")]
-        Icon::RiCupMapFill => {
+        RiIcon::RiCupMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11292,7 +11292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCupMapLine")]
-        Icon::RiCupMapLine => {
+        RiIcon::RiCupMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11305,7 +11305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCurrencyFinanceFill")]
-        Icon::RiCurrencyFinanceFill => {
+        RiIcon::RiCurrencyFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11318,7 +11318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCurrencyFinanceLine")]
-        Icon::RiCurrencyFinanceLine => {
+        RiIcon::RiCurrencyFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11331,7 +11331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCursorDevelopmentFill")]
-        Icon::RiCursorDevelopmentFill => {
+        RiIcon::RiCursorDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11344,7 +11344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCursorDevelopmentLine")]
-        Icon::RiCursorDevelopmentLine => {
+        RiIcon::RiCursorDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11357,7 +11357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCustomerService2BusinessFill")]
-        Icon::RiCustomerService2BusinessFill => {
+        RiIcon::RiCustomerService2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11370,7 +11370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCustomerService2BusinessLine")]
-        Icon::RiCustomerService2BusinessLine => {
+        RiIcon::RiCustomerService2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11383,7 +11383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCustomerServiceBusinessFill")]
-        Icon::RiCustomerServiceBusinessFill => {
+        RiIcon::RiCustomerServiceBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11396,7 +11396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiCustomerServiceBusinessLine")]
-        Icon::RiCustomerServiceBusinessLine => {
+        RiIcon::RiCustomerServiceBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11409,7 +11409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDashboard2DeviceFill")]
-        Icon::RiDashboard2DeviceFill => {
+        RiIcon::RiDashboard2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11422,7 +11422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDashboard2DeviceLine")]
-        Icon::RiDashboard2DeviceLine => {
+        RiIcon::RiDashboard2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11435,7 +11435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDashboard3DeviceFill")]
-        Icon::RiDashboard3DeviceFill => {
+        RiIcon::RiDashboard3DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11448,7 +11448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDashboard3DeviceLine")]
-        Icon::RiDashboard3DeviceLine => {
+        RiIcon::RiDashboard3DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11461,7 +11461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDashboardSystemFill")]
-        Icon::RiDashboardSystemFill => {
+        RiIcon::RiDashboardSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11474,7 +11474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDashboardSystemLine")]
-        Icon::RiDashboardSystemLine => {
+        RiIcon::RiDashboardSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11487,7 +11487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDatabase2DeviceFill")]
-        Icon::RiDatabase2DeviceFill => {
+        RiIcon::RiDatabase2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11500,7 +11500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDatabase2DeviceLine")]
-        Icon::RiDatabase2DeviceLine => {
+        RiIcon::RiDatabase2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11513,7 +11513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDatabaseDeviceFill")]
-        Icon::RiDatabaseDeviceFill => {
+        RiIcon::RiDatabaseDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11526,7 +11526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDatabaseDeviceLine")]
-        Icon::RiDatabaseDeviceLine => {
+        RiIcon::RiDatabaseDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11539,7 +11539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBack2SystemFill")]
-        Icon::RiDeleteBack2SystemFill => {
+        RiIcon::RiDeleteBack2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11552,7 +11552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBack2SystemLine")]
-        Icon::RiDeleteBack2SystemLine => {
+        RiIcon::RiDeleteBack2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11565,7 +11565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBackSystemFill")]
-        Icon::RiDeleteBackSystemFill => {
+        RiIcon::RiDeleteBackSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11578,7 +11578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBackSystemLine")]
-        Icon::RiDeleteBackSystemLine => {
+        RiIcon::RiDeleteBackSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11591,7 +11591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin2SystemFill")]
-        Icon::RiDeleteBin2SystemFill => {
+        RiIcon::RiDeleteBin2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11604,7 +11604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin2SystemLine")]
-        Icon::RiDeleteBin2SystemLine => {
+        RiIcon::RiDeleteBin2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11617,7 +11617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin3SystemFill")]
-        Icon::RiDeleteBin3SystemFill => {
+        RiIcon::RiDeleteBin3SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11630,7 +11630,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin3SystemLine")]
-        Icon::RiDeleteBin3SystemLine => {
+        RiIcon::RiDeleteBin3SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11643,7 +11643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin4SystemFill")]
-        Icon::RiDeleteBin4SystemFill => {
+        RiIcon::RiDeleteBin4SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11656,7 +11656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin4SystemLine")]
-        Icon::RiDeleteBin4SystemLine => {
+        RiIcon::RiDeleteBin4SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11669,7 +11669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin5SystemFill")]
-        Icon::RiDeleteBin5SystemFill => {
+        RiIcon::RiDeleteBin5SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11682,7 +11682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin5SystemLine")]
-        Icon::RiDeleteBin5SystemLine => {
+        RiIcon::RiDeleteBin5SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11695,7 +11695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin6SystemFill")]
-        Icon::RiDeleteBin6SystemFill => {
+        RiIcon::RiDeleteBin6SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11708,7 +11708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin6SystemLine")]
-        Icon::RiDeleteBin6SystemLine => {
+        RiIcon::RiDeleteBin6SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11721,7 +11721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin7SystemFill")]
-        Icon::RiDeleteBin7SystemFill => {
+        RiIcon::RiDeleteBin7SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11734,7 +11734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBin7SystemLine")]
-        Icon::RiDeleteBin7SystemLine => {
+        RiIcon::RiDeleteBin7SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11747,7 +11747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBinSystemFill")]
-        Icon::RiDeleteBinSystemFill => {
+        RiIcon::RiDeleteBinSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11760,7 +11760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteBinSystemLine")]
-        Icon::RiDeleteBinSystemLine => {
+        RiIcon::RiDeleteBinSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11773,7 +11773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteColumnEditor")]
-        Icon::RiDeleteColumnEditor => {
+        RiIcon::RiDeleteColumnEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11786,7 +11786,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeleteRowEditor")]
-        Icon::RiDeleteRowEditor => {
+        RiIcon::RiDeleteRowEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11799,7 +11799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeviceDeviceFill")]
-        Icon::RiDeviceDeviceFill => {
+        RiIcon::RiDeviceDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11812,7 +11812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeviceDeviceLine")]
-        Icon::RiDeviceDeviceLine => {
+        RiIcon::RiDeviceDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11825,7 +11825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeviceRecoverDeviceFill")]
-        Icon::RiDeviceRecoverDeviceFill => {
+        RiIcon::RiDeviceRecoverDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11838,7 +11838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDeviceRecoverDeviceLine")]
-        Icon::RiDeviceRecoverDeviceLine => {
+        RiIcon::RiDeviceRecoverDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11851,7 +11851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDingdingLogosFill")]
-        Icon::RiDingdingLogosFill => {
+        RiIcon::RiDingdingLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11864,7 +11864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDingdingLogosLine")]
-        Icon::RiDingdingLogosLine => {
+        RiIcon::RiDingdingLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11877,7 +11877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDirectionMapFill")]
-        Icon::RiDirectionMapFill => {
+        RiIcon::RiDirectionMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11890,7 +11890,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDirectionMapLine")]
-        Icon::RiDirectionMapLine => {
+        RiIcon::RiDirectionMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11903,7 +11903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDiscMediaFill")]
-        Icon::RiDiscMediaFill => {
+        RiIcon::RiDiscMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11916,7 +11916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDiscMediaLine")]
-        Icon::RiDiscMediaLine => {
+        RiIcon::RiDiscMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11929,7 +11929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDiscordLogosFill")]
-        Icon::RiDiscordLogosFill => {
+        RiIcon::RiDiscordLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11942,7 +11942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDiscordLogosLine")]
-        Icon::RiDiscordLogosLine => {
+        RiIcon::RiDiscordLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11955,7 +11955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDiscussCommunicationFill")]
-        Icon::RiDiscussCommunicationFill => {
+        RiIcon::RiDiscussCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11968,7 +11968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDiscussCommunicationLine")]
-        Icon::RiDiscussCommunicationLine => {
+        RiIcon::RiDiscussCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11981,7 +11981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDislikeHealthFill")]
-        Icon::RiDislikeHealthFill => {
+        RiIcon::RiDislikeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -11994,7 +11994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDislikeHealthLine")]
-        Icon::RiDislikeHealthLine => {
+        RiIcon::RiDislikeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12007,7 +12007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDisqusLogosFill")]
-        Icon::RiDisqusLogosFill => {
+        RiIcon::RiDisqusLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12020,7 +12020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDisqusLogosLine")]
-        Icon::RiDisqusLogosLine => {
+        RiIcon::RiDisqusLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12033,7 +12033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDivideSystemFill")]
-        Icon::RiDivideSystemFill => {
+        RiIcon::RiDivideSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12046,7 +12046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDivideSystemLine")]
-        Icon::RiDivideSystemLine => {
+        RiIcon::RiDivideSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12059,7 +12059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDonutChartBusinessFill")]
-        Icon::RiDonutChartBusinessFill => {
+        RiIcon::RiDonutChartBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12072,7 +12072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDonutChartBusinessLine")]
-        Icon::RiDonutChartBusinessLine => {
+        RiIcon::RiDonutChartBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12085,7 +12085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorClosedOthersFill")]
-        Icon::RiDoorClosedOthersFill => {
+        RiIcon::RiDoorClosedOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12098,7 +12098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorClosedOthersLine")]
-        Icon::RiDoorClosedOthersLine => {
+        RiIcon::RiDoorClosedOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12111,7 +12111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorLockBoxOthersFill")]
-        Icon::RiDoorLockBoxOthersFill => {
+        RiIcon::RiDoorLockBoxOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12124,7 +12124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorLockBoxOthersLine")]
-        Icon::RiDoorLockBoxOthersLine => {
+        RiIcon::RiDoorLockBoxOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12137,7 +12137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorLockOthersFill")]
-        Icon::RiDoorLockOthersFill => {
+        RiIcon::RiDoorLockOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12150,7 +12150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorLockOthersLine")]
-        Icon::RiDoorLockOthersLine => {
+        RiIcon::RiDoorLockOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12163,7 +12163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorOpenOthersFill")]
-        Icon::RiDoorOpenOthersFill => {
+        RiIcon::RiDoorOpenOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12176,7 +12176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorOpenOthersLine")]
-        Icon::RiDoorOpenOthersLine => {
+        RiIcon::RiDoorOpenOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12189,7 +12189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorOthersFill")]
-        Icon::RiDoorOthersFill => {
+        RiIcon::RiDoorOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12202,7 +12202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoorOthersLine")]
-        Icon::RiDoorOthersLine => {
+        RiIcon::RiDoorOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12215,7 +12215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDossierHealthFill")]
-        Icon::RiDossierHealthFill => {
+        RiIcon::RiDossierHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12228,7 +12228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDossierHealthLine")]
-        Icon::RiDossierHealthLine => {
+        RiIcon::RiDossierHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12241,7 +12241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoubanLogosFill")]
-        Icon::RiDoubanLogosFill => {
+        RiIcon::RiDoubanLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12254,7 +12254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoubanLogosLine")]
-        Icon::RiDoubanLogosLine => {
+        RiIcon::RiDoubanLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12267,7 +12267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoubleQuotesLEditor")]
-        Icon::RiDoubleQuotesLEditor => {
+        RiIcon::RiDoubleQuotesLEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12280,7 +12280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDoubleQuotesREditor")]
-        Icon::RiDoubleQuotesREditor => {
+        RiIcon::RiDoubleQuotesREditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12293,7 +12293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownload2SystemFill")]
-        Icon::RiDownload2SystemFill => {
+        RiIcon::RiDownload2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12306,7 +12306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownload2SystemLine")]
-        Icon::RiDownload2SystemLine => {
+        RiIcon::RiDownload2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12319,7 +12319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownloadCloud2SystemFill")]
-        Icon::RiDownloadCloud2SystemFill => {
+        RiIcon::RiDownloadCloud2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12332,7 +12332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownloadCloud2SystemLine")]
-        Icon::RiDownloadCloud2SystemLine => {
+        RiIcon::RiDownloadCloud2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12345,7 +12345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownloadCloudSystemFill")]
-        Icon::RiDownloadCloudSystemFill => {
+        RiIcon::RiDownloadCloudSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12358,7 +12358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownloadCloudSystemLine")]
-        Icon::RiDownloadCloudSystemLine => {
+        RiIcon::RiDownloadCloudSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12371,7 +12371,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownloadSystemFill")]
-        Icon::RiDownloadSystemFill => {
+        RiIcon::RiDownloadSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12383,7 +12383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDownloadSystemLine")]
-        Icon::RiDownloadSystemLine => {
+        RiIcon::RiDownloadSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12396,7 +12396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDraftDocumentFill")]
-        Icon::RiDraftDocumentFill => {
+        RiIcon::RiDraftDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12409,7 +12409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDraftDocumentLine")]
-        Icon::RiDraftDocumentLine => {
+        RiIcon::RiDraftDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12422,7 +12422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDragDropDesignFill")]
-        Icon::RiDragDropDesignFill => {
+        RiIcon::RiDragDropDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12435,7 +12435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDragDropDesignLine")]
-        Icon::RiDragDropDesignLine => {
+        RiIcon::RiDragDropDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12448,7 +12448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDragMove2DesignFill")]
-        Icon::RiDragMove2DesignFill => {
+        RiIcon::RiDragMove2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12461,7 +12461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDragMove2DesignLine")]
-        Icon::RiDragMove2DesignLine => {
+        RiIcon::RiDragMove2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12474,7 +12474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDragMoveDesignFill")]
-        Icon::RiDragMoveDesignFill => {
+        RiIcon::RiDragMoveDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12487,7 +12487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDragMoveDesignLine")]
-        Icon::RiDragMoveDesignLine => {
+        RiIcon::RiDragMoveDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12500,7 +12500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDribbbleLogosFill")]
-        Icon::RiDribbbleLogosFill => {
+        RiIcon::RiDribbbleLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12513,7 +12513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDribbbleLogosLine")]
-        Icon::RiDribbbleLogosLine => {
+        RiIcon::RiDribbbleLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12526,7 +12526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDriveLogosFill")]
-        Icon::RiDriveLogosFill => {
+        RiIcon::RiDriveLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12539,7 +12539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDriveLogosLine")]
-        Icon::RiDriveLogosLine => {
+        RiIcon::RiDriveLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12552,7 +12552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDrizzleWeatherFill")]
-        Icon::RiDrizzleWeatherFill => {
+        RiIcon::RiDrizzleWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12565,7 +12565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDrizzleWeatherLine")]
-        Icon::RiDrizzleWeatherLine => {
+        RiIcon::RiDrizzleWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12578,7 +12578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDropDesignFill")]
-        Icon::RiDropDesignFill => {
+        RiIcon::RiDropDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12591,7 +12591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDropDesignLine")]
-        Icon::RiDropDesignLine => {
+        RiIcon::RiDropDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12604,7 +12604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDropboxLogosFill")]
-        Icon::RiDropboxLogosFill => {
+        RiIcon::RiDropboxLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12617,7 +12617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDropboxLogosLine")]
-        Icon::RiDropboxLogosLine => {
+        RiIcon::RiDropboxLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12630,7 +12630,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDualSim1DeviceFill")]
-        Icon::RiDualSim1DeviceFill => {
+        RiIcon::RiDualSim1DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12643,7 +12643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDualSim1DeviceLine")]
-        Icon::RiDualSim1DeviceLine => {
+        RiIcon::RiDualSim1DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12656,7 +12656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDualSim2DeviceFill")]
-        Icon::RiDualSim2DeviceFill => {
+        RiIcon::RiDualSim2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12669,7 +12669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDualSim2DeviceLine")]
-        Icon::RiDualSim2DeviceLine => {
+        RiIcon::RiDualSim2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12682,7 +12682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDvMediaFill")]
-        Icon::RiDvMediaFill => {
+        RiIcon::RiDvMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12695,7 +12695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDvMediaLine")]
-        Icon::RiDvMediaLine => {
+        RiIcon::RiDvMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12708,7 +12708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDvdMediaFill")]
-        Icon::RiDvdMediaFill => {
+        RiIcon::RiDvdMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12721,7 +12721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiDvdMediaLine")]
-        Icon::RiDvdMediaLine => {
+        RiIcon::RiDvdMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12734,7 +12734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEBike2MapFill")]
-        Icon::RiEBike2MapFill => {
+        RiIcon::RiEBike2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12747,7 +12747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEBike2MapLine")]
-        Icon::RiEBike2MapLine => {
+        RiIcon::RiEBike2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12760,7 +12760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEBikeMapFill")]
-        Icon::RiEBikeMapFill => {
+        RiIcon::RiEBikeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12773,7 +12773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEBikeMapLine")]
-        Icon::RiEBikeMapLine => {
+        RiIcon::RiEBikeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12786,7 +12786,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEarthMapFill")]
-        Icon::RiEarthMapFill => {
+        RiIcon::RiEarthMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12799,7 +12799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEarthMapLine")]
-        Icon::RiEarthMapLine => {
+        RiIcon::RiEarthMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12812,7 +12812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEarthquakeWeatherFill")]
-        Icon::RiEarthquakeWeatherFill => {
+        RiIcon::RiEarthquakeWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12825,7 +12825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEarthquakeWeatherLine")]
-        Icon::RiEarthquakeWeatherLine => {
+        RiIcon::RiEarthquakeWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12838,7 +12838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEdgeLogosFill")]
-        Icon::RiEdgeLogosFill => {
+        RiIcon::RiEdgeLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12851,7 +12851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEdgeLogosLine")]
-        Icon::RiEdgeLogosLine => {
+        RiIcon::RiEdgeLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12864,7 +12864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEdit2DesignFill")]
-        Icon::RiEdit2DesignFill => {
+        RiIcon::RiEdit2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12877,7 +12877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEdit2DesignLine")]
-        Icon::RiEdit2DesignLine => {
+        RiIcon::RiEdit2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12890,7 +12890,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEditBoxDesignFill")]
-        Icon::RiEditBoxDesignFill => {
+        RiIcon::RiEditBoxDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12903,7 +12903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEditBoxDesignLine")]
-        Icon::RiEditBoxDesignLine => {
+        RiIcon::RiEditBoxDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12916,7 +12916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEditCircleDesignFill")]
-        Icon::RiEditCircleDesignFill => {
+        RiIcon::RiEditCircleDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12929,7 +12929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEditCircleDesignLine")]
-        Icon::RiEditCircleDesignLine => {
+        RiIcon::RiEditCircleDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12942,7 +12942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEditDesignFill")]
-        Icon::RiEditDesignFill => {
+        RiIcon::RiEditDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12955,7 +12955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEditDesignLine")]
-        Icon::RiEditDesignLine => {
+        RiIcon::RiEditDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12968,7 +12968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEjectMediaFill")]
-        Icon::RiEjectMediaFill => {
+        RiIcon::RiEjectMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12981,7 +12981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEjectMediaLine")]
-        Icon::RiEjectMediaLine => {
+        RiIcon::RiEjectMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -12994,7 +12994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotion2UserFill")]
-        Icon::RiEmotion2UserFill => {
+        RiIcon::RiEmotion2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13007,7 +13007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotion2UserLine")]
-        Icon::RiEmotion2UserLine => {
+        RiIcon::RiEmotion2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13020,7 +13020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionHappyUserFill")]
-        Icon::RiEmotionHappyUserFill => {
+        RiIcon::RiEmotionHappyUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13033,7 +13033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionHappyUserLine")]
-        Icon::RiEmotionHappyUserLine => {
+        RiIcon::RiEmotionHappyUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13046,7 +13046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionLaughUserFill")]
-        Icon::RiEmotionLaughUserFill => {
+        RiIcon::RiEmotionLaughUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13059,7 +13059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionLaughUserLine")]
-        Icon::RiEmotionLaughUserLine => {
+        RiIcon::RiEmotionLaughUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13072,7 +13072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionNormalUserFill")]
-        Icon::RiEmotionNormalUserFill => {
+        RiIcon::RiEmotionNormalUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13085,7 +13085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionNormalUserLine")]
-        Icon::RiEmotionNormalUserLine => {
+        RiIcon::RiEmotionNormalUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13098,7 +13098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionSadUserFill")]
-        Icon::RiEmotionSadUserFill => {
+        RiIcon::RiEmotionSadUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13111,7 +13111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionSadUserLine")]
-        Icon::RiEmotionSadUserLine => {
+        RiIcon::RiEmotionSadUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13124,7 +13124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionUnhappyUserFill")]
-        Icon::RiEmotionUnhappyUserFill => {
+        RiIcon::RiEmotionUnhappyUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13137,7 +13137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionUnhappyUserLine")]
-        Icon::RiEmotionUnhappyUserLine => {
+        RiIcon::RiEmotionUnhappyUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13150,7 +13150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionUserFill")]
-        Icon::RiEmotionUserFill => {
+        RiIcon::RiEmotionUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13163,7 +13163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmotionUserLine")]
-        Icon::RiEmotionUserLine => {
+        RiIcon::RiEmotionUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13176,7 +13176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmpathizeHealthFill")]
-        Icon::RiEmpathizeHealthFill => {
+        RiIcon::RiEmpathizeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13189,7 +13189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmpathizeHealthLine")]
-        Icon::RiEmpathizeHealthLine => {
+        RiIcon::RiEmpathizeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13202,7 +13202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmphasisCnEditor")]
-        Icon::RiEmphasisCnEditor => {
+        RiIcon::RiEmphasisCnEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13215,7 +13215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEmphasisEditor")]
-        Icon::RiEmphasisEditor => {
+        RiIcon::RiEmphasisEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13228,7 +13228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEnglishInputEditor")]
-        Icon::RiEnglishInputEditor => {
+        RiIcon::RiEnglishInputEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13241,7 +13241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEqualizerMediaFill")]
-        Icon::RiEqualizerMediaFill => {
+        RiIcon::RiEqualizerMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13254,7 +13254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEqualizerMediaLine")]
-        Icon::RiEqualizerMediaLine => {
+        RiIcon::RiEqualizerMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13267,7 +13267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEraserDesignFill")]
-        Icon::RiEraserDesignFill => {
+        RiIcon::RiEraserDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13280,7 +13280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEraserDesignLine")]
-        Icon::RiEraserDesignLine => {
+        RiIcon::RiEraserDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13293,7 +13293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiErrorWarningSystemFill")]
-        Icon::RiErrorWarningSystemFill => {
+        RiIcon::RiErrorWarningSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13306,7 +13306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiErrorWarningSystemLine")]
-        Icon::RiErrorWarningSystemLine => {
+        RiIcon::RiErrorWarningSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13319,7 +13319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEvernoteLogosFill")]
-        Icon::RiEvernoteLogosFill => {
+        RiIcon::RiEvernoteLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13332,7 +13332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEvernoteLogosLine")]
-        Icon::RiEvernoteLogosLine => {
+        RiIcon::RiEvernoteLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13345,7 +13345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeBoxFinanceFill")]
-        Icon::RiExchangeBoxFinanceFill => {
+        RiIcon::RiExchangeBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13358,7 +13358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeBoxFinanceLine")]
-        Icon::RiExchangeBoxFinanceLine => {
+        RiIcon::RiExchangeBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13371,7 +13371,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeCnyFinanceFill")]
-        Icon::RiExchangeCnyFinanceFill => {
+        RiIcon::RiExchangeCnyFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13384,7 +13384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeCnyFinanceLine")]
-        Icon::RiExchangeCnyFinanceLine => {
+        RiIcon::RiExchangeCnyFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13397,7 +13397,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeDollarFinanceFill")]
-        Icon::RiExchangeDollarFinanceFill => {
+        RiIcon::RiExchangeDollarFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13410,7 +13410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeDollarFinanceLine")]
-        Icon::RiExchangeDollarFinanceLine => {
+        RiIcon::RiExchangeDollarFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13423,7 +13423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeFinanceFill")]
-        Icon::RiExchangeFinanceFill => {
+        RiIcon::RiExchangeFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13436,7 +13436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeFinanceLine")]
-        Icon::RiExchangeFinanceLine => {
+        RiIcon::RiExchangeFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13449,7 +13449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeFundsFinanceFill")]
-        Icon::RiExchangeFundsFinanceFill => {
+        RiIcon::RiExchangeFundsFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13462,7 +13462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExchangeFundsFinanceLine")]
-        Icon::RiExchangeFundsFinanceLine => {
+        RiIcon::RiExchangeFundsFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13475,7 +13475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExternalLinkSystemFill")]
-        Icon::RiExternalLinkSystemFill => {
+        RiIcon::RiExternalLinkSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13488,7 +13488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiExternalLinkSystemLine")]
-        Icon::RiExternalLinkSystemLine => {
+        RiIcon::RiExternalLinkSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13501,7 +13501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEye2SystemFill")]
-        Icon::RiEye2SystemFill => {
+        RiIcon::RiEye2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13514,7 +13514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEye2SystemLine")]
-        Icon::RiEye2SystemLine => {
+        RiIcon::RiEye2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13527,7 +13527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEyeCloseSystemFill")]
-        Icon::RiEyeCloseSystemFill => {
+        RiIcon::RiEyeCloseSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13540,7 +13540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEyeCloseSystemLine")]
-        Icon::RiEyeCloseSystemLine => {
+        RiIcon::RiEyeCloseSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13553,7 +13553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEyeOffSystemFill")]
-        Icon::RiEyeOffSystemFill => {
+        RiIcon::RiEyeOffSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13566,7 +13566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEyeOffSystemLine")]
-        Icon::RiEyeOffSystemLine => {
+        RiIcon::RiEyeOffSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13579,7 +13579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEyeSystemFill")]
-        Icon::RiEyeSystemFill => {
+        RiIcon::RiEyeSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13592,7 +13592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiEyeSystemLine")]
-        Icon::RiEyeSystemLine => {
+        RiIcon::RiEyeSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13605,7 +13605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFacebookBoxLogosFill")]
-        Icon::RiFacebookBoxLogosFill => {
+        RiIcon::RiFacebookBoxLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13618,7 +13618,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFacebookBoxLogosLine")]
-        Icon::RiFacebookBoxLogosLine => {
+        RiIcon::RiFacebookBoxLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13631,7 +13631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFacebookCircleLogosFill")]
-        Icon::RiFacebookCircleLogosFill => {
+        RiIcon::RiFacebookCircleLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13644,7 +13644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFacebookCircleLogosLine")]
-        Icon::RiFacebookCircleLogosLine => {
+        RiIcon::RiFacebookCircleLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13657,7 +13657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFacebookLogosFill")]
-        Icon::RiFacebookLogosFill => {
+        RiIcon::RiFacebookLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13670,7 +13670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFacebookLogosLine")]
-        Icon::RiFacebookLogosLine => {
+        RiIcon::RiFacebookLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13683,7 +13683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFahrenheitWeatherFill")]
-        Icon::RiFahrenheitWeatherFill => {
+        RiIcon::RiFahrenheitWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13696,7 +13696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFahrenheitWeatherLine")]
-        Icon::RiFahrenheitWeatherLine => {
+        RiIcon::RiFahrenheitWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13709,7 +13709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFeedbackCommunicationFill")]
-        Icon::RiFeedbackCommunicationFill => {
+        RiIcon::RiFeedbackCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13722,7 +13722,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFeedbackCommunicationLine")]
-        Icon::RiFeedbackCommunicationLine => {
+        RiIcon::RiFeedbackCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13735,7 +13735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFile2DocumentFill")]
-        Icon::RiFile2DocumentFill => {
+        RiIcon::RiFile2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13748,7 +13748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFile2DocumentLine")]
-        Icon::RiFile2DocumentLine => {
+        RiIcon::RiFile2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13761,7 +13761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFile3DocumentFill")]
-        Icon::RiFile3DocumentFill => {
+        RiIcon::RiFile3DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13774,7 +13774,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFile3DocumentLine")]
-        Icon::RiFile3DocumentLine => {
+        RiIcon::RiFile3DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13787,7 +13787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFile4DocumentFill")]
-        Icon::RiFile4DocumentFill => {
+        RiIcon::RiFile4DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13800,7 +13800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFile4DocumentLine")]
-        Icon::RiFile4DocumentLine => {
+        RiIcon::RiFile4DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13813,7 +13813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileAddDocumentFill")]
-        Icon::RiFileAddDocumentFill => {
+        RiIcon::RiFileAddDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13826,7 +13826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileAddDocumentLine")]
-        Icon::RiFileAddDocumentLine => {
+        RiIcon::RiFileAddDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13839,7 +13839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileChart2DocumentFill")]
-        Icon::RiFileChart2DocumentFill => {
+        RiIcon::RiFileChart2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13852,7 +13852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileChart2DocumentLine")]
-        Icon::RiFileChart2DocumentLine => {
+        RiIcon::RiFileChart2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13865,7 +13865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileChartDocumentFill")]
-        Icon::RiFileChartDocumentFill => {
+        RiIcon::RiFileChartDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13878,7 +13878,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileChartDocumentLine")]
-        Icon::RiFileChartDocumentLine => {
+        RiIcon::RiFileChartDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13891,7 +13891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCloudDocumentFill")]
-        Icon::RiFileCloudDocumentFill => {
+        RiIcon::RiFileCloudDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13904,7 +13904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCloudDocumentLine")]
-        Icon::RiFileCloudDocumentLine => {
+        RiIcon::RiFileCloudDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13917,7 +13917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCodeDocumentFill")]
-        Icon::RiFileCodeDocumentFill => {
+        RiIcon::RiFileCodeDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13930,7 +13930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCodeDocumentLine")]
-        Icon::RiFileCodeDocumentLine => {
+        RiIcon::RiFileCodeDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13943,7 +13943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCopy2DocumentFill")]
-        Icon::RiFileCopy2DocumentFill => {
+        RiIcon::RiFileCopy2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13956,7 +13956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCopy2DocumentLine")]
-        Icon::RiFileCopy2DocumentLine => {
+        RiIcon::RiFileCopy2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13969,7 +13969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCopyDocumentFill")]
-        Icon::RiFileCopyDocumentFill => {
+        RiIcon::RiFileCopyDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13982,7 +13982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileCopyDocumentLine")]
-        Icon::RiFileCopyDocumentLine => {
+        RiIcon::RiFileCopyDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -13995,7 +13995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileDamageDocumentFill")]
-        Icon::RiFileDamageDocumentFill => {
+        RiIcon::RiFileDamageDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14008,7 +14008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileDamageDocumentLine")]
-        Icon::RiFileDamageDocumentLine => {
+        RiIcon::RiFileDamageDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14021,7 +14021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileDocumentFill")]
-        Icon::RiFileDocumentFill => {
+        RiIcon::RiFileDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14034,7 +14034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileDocumentLine")]
-        Icon::RiFileDocumentLine => {
+        RiIcon::RiFileDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14047,7 +14047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileDownloadDocumentFill")]
-        Icon::RiFileDownloadDocumentFill => {
+        RiIcon::RiFileDownloadDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14060,7 +14060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileDownloadDocumentLine")]
-        Icon::RiFileDownloadDocumentLine => {
+        RiIcon::RiFileDownloadDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14073,7 +14073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileEditDocumentFill")]
-        Icon::RiFileEditDocumentFill => {
+        RiIcon::RiFileEditDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14086,7 +14086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileEditDocumentLine")]
-        Icon::RiFileEditDocumentLine => {
+        RiIcon::RiFileEditDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14099,7 +14099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileExcel2DocumentFill")]
-        Icon::RiFileExcel2DocumentFill => {
+        RiIcon::RiFileExcel2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14112,7 +14112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileExcel2DocumentLine")]
-        Icon::RiFileExcel2DocumentLine => {
+        RiIcon::RiFileExcel2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14125,7 +14125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileExcelDocumentFill")]
-        Icon::RiFileExcelDocumentFill => {
+        RiIcon::RiFileExcelDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14138,7 +14138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileExcelDocumentLine")]
-        Icon::RiFileExcelDocumentLine => {
+        RiIcon::RiFileExcelDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14151,7 +14151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileForbidDocumentFill")]
-        Icon::RiFileForbidDocumentFill => {
+        RiIcon::RiFileForbidDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14164,7 +14164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileForbidDocumentLine")]
-        Icon::RiFileForbidDocumentLine => {
+        RiIcon::RiFileForbidDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14177,7 +14177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileGifDocumentFill")]
-        Icon::RiFileGifDocumentFill => {
+        RiIcon::RiFileGifDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14190,7 +14190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileGifDocumentLine")]
-        Icon::RiFileGifDocumentLine => {
+        RiIcon::RiFileGifDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14203,7 +14203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileHistoryDocumentFill")]
-        Icon::RiFileHistoryDocumentFill => {
+        RiIcon::RiFileHistoryDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14216,7 +14216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileHistoryDocumentLine")]
-        Icon::RiFileHistoryDocumentLine => {
+        RiIcon::RiFileHistoryDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14229,7 +14229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileHwpDocumentFill")]
-        Icon::RiFileHwpDocumentFill => {
+        RiIcon::RiFileHwpDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14242,7 +14242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileHwpDocumentLine")]
-        Icon::RiFileHwpDocumentLine => {
+        RiIcon::RiFileHwpDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14255,7 +14255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileInfoDocumentFill")]
-        Icon::RiFileInfoDocumentFill => {
+        RiIcon::RiFileInfoDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14268,7 +14268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileInfoDocumentLine")]
-        Icon::RiFileInfoDocumentLine => {
+        RiIcon::RiFileInfoDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14281,7 +14281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileList2DocumentFill")]
-        Icon::RiFileList2DocumentFill => {
+        RiIcon::RiFileList2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14294,7 +14294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileList2DocumentLine")]
-        Icon::RiFileList2DocumentLine => {
+        RiIcon::RiFileList2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14307,7 +14307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileList3DocumentFill")]
-        Icon::RiFileList3DocumentFill => {
+        RiIcon::RiFileList3DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14320,7 +14320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileList3DocumentLine")]
-        Icon::RiFileList3DocumentLine => {
+        RiIcon::RiFileList3DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14333,7 +14333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileListDocumentFill")]
-        Icon::RiFileListDocumentFill => {
+        RiIcon::RiFileListDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14346,7 +14346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileListDocumentLine")]
-        Icon::RiFileListDocumentLine => {
+        RiIcon::RiFileListDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14359,7 +14359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileLockDocumentFill")]
-        Icon::RiFileLockDocumentFill => {
+        RiIcon::RiFileLockDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14372,7 +14372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileLockDocumentLine")]
-        Icon::RiFileLockDocumentLine => {
+        RiIcon::RiFileLockDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14385,7 +14385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileMarkDocumentFill")]
-        Icon::RiFileMarkDocumentFill => {
+        RiIcon::RiFileMarkDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14398,7 +14398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileMarkDocumentLine")]
-        Icon::RiFileMarkDocumentLine => {
+        RiIcon::RiFileMarkDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14411,7 +14411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileMusicDocumentFill")]
-        Icon::RiFileMusicDocumentFill => {
+        RiIcon::RiFileMusicDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14424,7 +14424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileMusicDocumentLine")]
-        Icon::RiFileMusicDocumentLine => {
+        RiIcon::RiFileMusicDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14437,7 +14437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePaper2DocumentFill")]
-        Icon::RiFilePaper2DocumentFill => {
+        RiIcon::RiFilePaper2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14450,7 +14450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePaper2DocumentLine")]
-        Icon::RiFilePaper2DocumentLine => {
+        RiIcon::RiFilePaper2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14463,7 +14463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePaperDocumentFill")]
-        Icon::RiFilePaperDocumentFill => {
+        RiIcon::RiFilePaperDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14476,7 +14476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePaperDocumentLine")]
-        Icon::RiFilePaperDocumentLine => {
+        RiIcon::RiFilePaperDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14489,7 +14489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePdfDocumentFill")]
-        Icon::RiFilePdfDocumentFill => {
+        RiIcon::RiFilePdfDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14502,7 +14502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePdfDocumentLine")]
-        Icon::RiFilePdfDocumentLine => {
+        RiIcon::RiFilePdfDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14515,7 +14515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePpt2DocumentFill")]
-        Icon::RiFilePpt2DocumentFill => {
+        RiIcon::RiFilePpt2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14528,7 +14528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePpt2DocumentLine")]
-        Icon::RiFilePpt2DocumentLine => {
+        RiIcon::RiFilePpt2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14541,7 +14541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePptDocumentFill")]
-        Icon::RiFilePptDocumentFill => {
+        RiIcon::RiFilePptDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14554,7 +14554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilePptDocumentLine")]
-        Icon::RiFilePptDocumentLine => {
+        RiIcon::RiFilePptDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14567,7 +14567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileReduceDocumentFill")]
-        Icon::RiFileReduceDocumentFill => {
+        RiIcon::RiFileReduceDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14580,7 +14580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileReduceDocumentLine")]
-        Icon::RiFileReduceDocumentLine => {
+        RiIcon::RiFileReduceDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14593,7 +14593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileSearchDocumentFill")]
-        Icon::RiFileSearchDocumentFill => {
+        RiIcon::RiFileSearchDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14606,7 +14606,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileSearchDocumentLine")]
-        Icon::RiFileSearchDocumentLine => {
+        RiIcon::RiFileSearchDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14619,7 +14619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileSettingsDocumentFill")]
-        Icon::RiFileSettingsDocumentFill => {
+        RiIcon::RiFileSettingsDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14632,7 +14632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileSettingsDocumentLine")]
-        Icon::RiFileSettingsDocumentLine => {
+        RiIcon::RiFileSettingsDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14645,7 +14645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileShield2DocumentFill")]
-        Icon::RiFileShield2DocumentFill => {
+        RiIcon::RiFileShield2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14658,7 +14658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileShield2DocumentLine")]
-        Icon::RiFileShield2DocumentLine => {
+        RiIcon::RiFileShield2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14671,7 +14671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileShieldDocumentFill")]
-        Icon::RiFileShieldDocumentFill => {
+        RiIcon::RiFileShieldDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14684,7 +14684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileShieldDocumentLine")]
-        Icon::RiFileShieldDocumentLine => {
+        RiIcon::RiFileShieldDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14697,7 +14697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileShredDocumentFill")]
-        Icon::RiFileShredDocumentFill => {
+        RiIcon::RiFileShredDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14710,7 +14710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileShredDocumentLine")]
-        Icon::RiFileShredDocumentLine => {
+        RiIcon::RiFileShredDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14723,7 +14723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileTextDocumentFill")]
-        Icon::RiFileTextDocumentFill => {
+        RiIcon::RiFileTextDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14736,7 +14736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileTextDocumentLine")]
-        Icon::RiFileTextDocumentLine => {
+        RiIcon::RiFileTextDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14749,7 +14749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileTransferDocumentFill")]
-        Icon::RiFileTransferDocumentFill => {
+        RiIcon::RiFileTransferDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14762,7 +14762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileTransferDocumentLine")]
-        Icon::RiFileTransferDocumentLine => {
+        RiIcon::RiFileTransferDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14775,7 +14775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileUnknowDocumentFill")]
-        Icon::RiFileUnknowDocumentFill => {
+        RiIcon::RiFileUnknowDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14788,7 +14788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileUnknowDocumentLine")]
-        Icon::RiFileUnknowDocumentLine => {
+        RiIcon::RiFileUnknowDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14801,7 +14801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileUploadDocumentFill")]
-        Icon::RiFileUploadDocumentFill => {
+        RiIcon::RiFileUploadDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14814,7 +14814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileUploadDocumentLine")]
-        Icon::RiFileUploadDocumentLine => {
+        RiIcon::RiFileUploadDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14827,7 +14827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileUserDocumentFill")]
-        Icon::RiFileUserDocumentFill => {
+        RiIcon::RiFileUserDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14840,7 +14840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileUserDocumentLine")]
-        Icon::RiFileUserDocumentLine => {
+        RiIcon::RiFileUserDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14853,7 +14853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileWarningDocumentFill")]
-        Icon::RiFileWarningDocumentFill => {
+        RiIcon::RiFileWarningDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14866,7 +14866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileWarningDocumentLine")]
-        Icon::RiFileWarningDocumentLine => {
+        RiIcon::RiFileWarningDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14879,7 +14879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileWord2DocumentFill")]
-        Icon::RiFileWord2DocumentFill => {
+        RiIcon::RiFileWord2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14892,7 +14892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileWord2DocumentLine")]
-        Icon::RiFileWord2DocumentLine => {
+        RiIcon::RiFileWord2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14905,7 +14905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileWordDocumentFill")]
-        Icon::RiFileWordDocumentFill => {
+        RiIcon::RiFileWordDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14918,7 +14918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileWordDocumentLine")]
-        Icon::RiFileWordDocumentLine => {
+        RiIcon::RiFileWordDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14931,7 +14931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileZipDocumentFill")]
-        Icon::RiFileZipDocumentFill => {
+        RiIcon::RiFileZipDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14944,7 +14944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFileZipDocumentLine")]
-        Icon::RiFileZipDocumentLine => {
+        RiIcon::RiFileZipDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14957,7 +14957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilmMediaFill")]
-        Icon::RiFilmMediaFill => {
+        RiIcon::RiFilmMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14970,7 +14970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilmMediaLine")]
-        Icon::RiFilmMediaLine => {
+        RiIcon::RiFilmMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14983,7 +14983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilter2SystemFill")]
-        Icon::RiFilter2SystemFill => {
+        RiIcon::RiFilter2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -14995,7 +14995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilter2SystemLine")]
-        Icon::RiFilter2SystemLine => {
+        RiIcon::RiFilter2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15008,7 +15008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilter3SystemFill")]
-        Icon::RiFilter3SystemFill => {
+        RiIcon::RiFilter3SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15020,7 +15020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilter3SystemLine")]
-        Icon::RiFilter3SystemLine => {
+        RiIcon::RiFilter3SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15032,7 +15032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilterOffSystemFill")]
-        Icon::RiFilterOffSystemFill => {
+        RiIcon::RiFilterOffSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15045,7 +15045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilterOffSystemLine")]
-        Icon::RiFilterOffSystemLine => {
+        RiIcon::RiFilterOffSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15058,7 +15058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilterSystemFill")]
-        Icon::RiFilterSystemFill => {
+        RiIcon::RiFilterSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15071,7 +15071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFilterSystemLine")]
-        Icon::RiFilterSystemLine => {
+        RiIcon::RiFilterSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15084,7 +15084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFindReplaceSystemFill")]
-        Icon::RiFindReplaceSystemFill => {
+        RiIcon::RiFindReplaceSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15097,7 +15097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFindReplaceSystemLine")]
-        Icon::RiFindReplaceSystemLine => {
+        RiIcon::RiFindReplaceSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15110,7 +15110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFinderLogosFill")]
-        Icon::RiFinderLogosFill => {
+        RiIcon::RiFinderLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15123,7 +15123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFinderLogosLine")]
-        Icon::RiFinderLogosLine => {
+        RiIcon::RiFinderLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15136,7 +15136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFingerprint2DeviceFill")]
-        Icon::RiFingerprint2DeviceFill => {
+        RiIcon::RiFingerprint2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15149,7 +15149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFingerprint2DeviceLine")]
-        Icon::RiFingerprint2DeviceLine => {
+        RiIcon::RiFingerprint2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15162,7 +15162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFingerprintDeviceFill")]
-        Icon::RiFingerprintDeviceFill => {
+        RiIcon::RiFingerprintDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15175,7 +15175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFingerprintDeviceLine")]
-        Icon::RiFingerprintDeviceLine => {
+        RiIcon::RiFingerprintDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15188,7 +15188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFireWeatherFill")]
-        Icon::RiFireWeatherFill => {
+        RiIcon::RiFireWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15201,7 +15201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFireWeatherLine")]
-        Icon::RiFireWeatherLine => {
+        RiIcon::RiFireWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15214,7 +15214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFirefoxLogosFill")]
-        Icon::RiFirefoxLogosFill => {
+        RiIcon::RiFirefoxLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15227,7 +15227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFirefoxLogosLine")]
-        Icon::RiFirefoxLogosLine => {
+        RiIcon::RiFirefoxLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15240,7 +15240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFirstAidKitHealthFill")]
-        Icon::RiFirstAidKitHealthFill => {
+        RiIcon::RiFirstAidKitHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15253,7 +15253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFirstAidKitHealthLine")]
-        Icon::RiFirstAidKitHealthLine => {
+        RiIcon::RiFirstAidKitHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15266,7 +15266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlag2BusinessFill")]
-        Icon::RiFlag2BusinessFill => {
+        RiIcon::RiFlag2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15279,7 +15279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlag2BusinessLine")]
-        Icon::RiFlag2BusinessLine => {
+        RiIcon::RiFlag2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15292,7 +15292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlagBusinessFill")]
-        Icon::RiFlagBusinessFill => {
+        RiIcon::RiFlagBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15305,7 +15305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlagBusinessLine")]
-        Icon::RiFlagBusinessLine => {
+        RiIcon::RiFlagBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15318,7 +15318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlashlightWeatherFill")]
-        Icon::RiFlashlightWeatherFill => {
+        RiIcon::RiFlashlightWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15330,7 +15330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlashlightWeatherLine")]
-        Icon::RiFlashlightWeatherLine => {
+        RiIcon::RiFlashlightWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15343,7 +15343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlaskHealthFill")]
-        Icon::RiFlaskHealthFill => {
+        RiIcon::RiFlaskHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15356,7 +15356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlaskHealthLine")]
-        Icon::RiFlaskHealthLine => {
+        RiIcon::RiFlaskHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15369,7 +15369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlightLandMapFill")]
-        Icon::RiFlightLandMapFill => {
+        RiIcon::RiFlightLandMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15382,7 +15382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlightLandMapLine")]
-        Icon::RiFlightLandMapLine => {
+        RiIcon::RiFlightLandMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15395,7 +15395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlightTakeoffMapFill")]
-        Icon::RiFlightTakeoffMapFill => {
+        RiIcon::RiFlightTakeoffMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15408,7 +15408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlightTakeoffMapLine")]
-        Icon::RiFlightTakeoffMapLine => {
+        RiIcon::RiFlightTakeoffMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15421,7 +15421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFloodWeatherFill")]
-        Icon::RiFloodWeatherFill => {
+        RiIcon::RiFloodWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15434,7 +15434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFloodWeatherLine")]
-        Icon::RiFloodWeatherLine => {
+        RiIcon::RiFloodWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15447,7 +15447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlowChartEditor")]
-        Icon::RiFlowChartEditor => {
+        RiIcon::RiFlowChartEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15460,7 +15460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlutterLogosFill")]
-        Icon::RiFlutterLogosFill => {
+        RiIcon::RiFlutterLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15473,7 +15473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFlutterLogosLine")]
-        Icon::RiFlutterLogosLine => {
+        RiIcon::RiFlutterLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15486,7 +15486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFocus2DesignFill")]
-        Icon::RiFocus2DesignFill => {
+        RiIcon::RiFocus2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15499,7 +15499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFocus2DesignLine")]
-        Icon::RiFocus2DesignLine => {
+        RiIcon::RiFocus2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15512,7 +15512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFocus3DesignFill")]
-        Icon::RiFocus3DesignFill => {
+        RiIcon::RiFocus3DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15525,7 +15525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFocus3DesignLine")]
-        Icon::RiFocus3DesignLine => {
+        RiIcon::RiFocus3DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15538,7 +15538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFocusDesignFill")]
-        Icon::RiFocusDesignFill => {
+        RiIcon::RiFocusDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15551,7 +15551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFocusDesignLine")]
-        Icon::RiFocusDesignLine => {
+        RiIcon::RiFocusDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15564,7 +15564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFoggyWeatherFill")]
-        Icon::RiFoggyWeatherFill => {
+        RiIcon::RiFoggyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15577,7 +15577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFoggyWeatherLine")]
-        Icon::RiFoggyWeatherLine => {
+        RiIcon::RiFoggyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15590,7 +15590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder2DocumentFill")]
-        Icon::RiFolder2DocumentFill => {
+        RiIcon::RiFolder2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15603,7 +15603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder2DocumentLine")]
-        Icon::RiFolder2DocumentLine => {
+        RiIcon::RiFolder2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15616,7 +15616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder3DocumentFill")]
-        Icon::RiFolder3DocumentFill => {
+        RiIcon::RiFolder3DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15629,7 +15629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder3DocumentLine")]
-        Icon::RiFolder3DocumentLine => {
+        RiIcon::RiFolder3DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15642,7 +15642,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder4DocumentFill")]
-        Icon::RiFolder4DocumentFill => {
+        RiIcon::RiFolder4DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15655,7 +15655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder4DocumentLine")]
-        Icon::RiFolder4DocumentLine => {
+        RiIcon::RiFolder4DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15668,7 +15668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder5DocumentFill")]
-        Icon::RiFolder5DocumentFill => {
+        RiIcon::RiFolder5DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15681,7 +15681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolder5DocumentLine")]
-        Icon::RiFolder5DocumentLine => {
+        RiIcon::RiFolder5DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15694,7 +15694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderAddDocumentFill")]
-        Icon::RiFolderAddDocumentFill => {
+        RiIcon::RiFolderAddDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15707,7 +15707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderAddDocumentLine")]
-        Icon::RiFolderAddDocumentLine => {
+        RiIcon::RiFolderAddDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15720,7 +15720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderChart2DocumentFill")]
-        Icon::RiFolderChart2DocumentFill => {
+        RiIcon::RiFolderChart2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15733,7 +15733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderChart2DocumentLine")]
-        Icon::RiFolderChart2DocumentLine => {
+        RiIcon::RiFolderChart2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15746,7 +15746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderChartDocumentFill")]
-        Icon::RiFolderChartDocumentFill => {
+        RiIcon::RiFolderChartDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15759,7 +15759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderChartDocumentLine")]
-        Icon::RiFolderChartDocumentLine => {
+        RiIcon::RiFolderChartDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15772,7 +15772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderDocumentFill")]
-        Icon::RiFolderDocumentFill => {
+        RiIcon::RiFolderDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15785,7 +15785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderDocumentLine")]
-        Icon::RiFolderDocumentLine => {
+        RiIcon::RiFolderDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15798,7 +15798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderDownloadDocumentFill")]
-        Icon::RiFolderDownloadDocumentFill => {
+        RiIcon::RiFolderDownloadDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15811,7 +15811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderDownloadDocumentLine")]
-        Icon::RiFolderDownloadDocumentLine => {
+        RiIcon::RiFolderDownloadDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15824,7 +15824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderForbidDocumentFill")]
-        Icon::RiFolderForbidDocumentFill => {
+        RiIcon::RiFolderForbidDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15837,7 +15837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderForbidDocumentLine")]
-        Icon::RiFolderForbidDocumentLine => {
+        RiIcon::RiFolderForbidDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15850,7 +15850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderHistoryDocumentFill")]
-        Icon::RiFolderHistoryDocumentFill => {
+        RiIcon::RiFolderHistoryDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15863,7 +15863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderHistoryDocumentLine")]
-        Icon::RiFolderHistoryDocumentLine => {
+        RiIcon::RiFolderHistoryDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15876,7 +15876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderInfoDocumentFill")]
-        Icon::RiFolderInfoDocumentFill => {
+        RiIcon::RiFolderInfoDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15889,7 +15889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderInfoDocumentLine")]
-        Icon::RiFolderInfoDocumentLine => {
+        RiIcon::RiFolderInfoDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15902,7 +15902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderKeyholeDocumentFill")]
-        Icon::RiFolderKeyholeDocumentFill => {
+        RiIcon::RiFolderKeyholeDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15915,7 +15915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderKeyholeDocumentLine")]
-        Icon::RiFolderKeyholeDocumentLine => {
+        RiIcon::RiFolderKeyholeDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15928,7 +15928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderLockDocumentFill")]
-        Icon::RiFolderLockDocumentFill => {
+        RiIcon::RiFolderLockDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15941,7 +15941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderLockDocumentLine")]
-        Icon::RiFolderLockDocumentLine => {
+        RiIcon::RiFolderLockDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15954,7 +15954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderMusicDocumentFill")]
-        Icon::RiFolderMusicDocumentFill => {
+        RiIcon::RiFolderMusicDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15967,7 +15967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderMusicDocumentLine")]
-        Icon::RiFolderMusicDocumentLine => {
+        RiIcon::RiFolderMusicDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15980,7 +15980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderOpenDocumentFill")]
-        Icon::RiFolderOpenDocumentFill => {
+        RiIcon::RiFolderOpenDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -15993,7 +15993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderOpenDocumentLine")]
-        Icon::RiFolderOpenDocumentLine => {
+        RiIcon::RiFolderOpenDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16006,7 +16006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderReceivedDocumentFill")]
-        Icon::RiFolderReceivedDocumentFill => {
+        RiIcon::RiFolderReceivedDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16019,7 +16019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderReceivedDocumentLine")]
-        Icon::RiFolderReceivedDocumentLine => {
+        RiIcon::RiFolderReceivedDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16032,7 +16032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderReduceDocumentFill")]
-        Icon::RiFolderReduceDocumentFill => {
+        RiIcon::RiFolderReduceDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16045,7 +16045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderReduceDocumentLine")]
-        Icon::RiFolderReduceDocumentLine => {
+        RiIcon::RiFolderReduceDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16058,7 +16058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderSettingsDocumentFill")]
-        Icon::RiFolderSettingsDocumentFill => {
+        RiIcon::RiFolderSettingsDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16071,7 +16071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderSettingsDocumentLine")]
-        Icon::RiFolderSettingsDocumentLine => {
+        RiIcon::RiFolderSettingsDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16084,7 +16084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderSharedDocumentFill")]
-        Icon::RiFolderSharedDocumentFill => {
+        RiIcon::RiFolderSharedDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16097,7 +16097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderSharedDocumentLine")]
-        Icon::RiFolderSharedDocumentLine => {
+        RiIcon::RiFolderSharedDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16110,7 +16110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderShield2DocumentFill")]
-        Icon::RiFolderShield2DocumentFill => {
+        RiIcon::RiFolderShield2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16123,7 +16123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderShield2DocumentLine")]
-        Icon::RiFolderShield2DocumentLine => {
+        RiIcon::RiFolderShield2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16136,7 +16136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderShieldDocumentFill")]
-        Icon::RiFolderShieldDocumentFill => {
+        RiIcon::RiFolderShieldDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16149,7 +16149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderShieldDocumentLine")]
-        Icon::RiFolderShieldDocumentLine => {
+        RiIcon::RiFolderShieldDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16162,7 +16162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderTransferDocumentFill")]
-        Icon::RiFolderTransferDocumentFill => {
+        RiIcon::RiFolderTransferDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16175,7 +16175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderTransferDocumentLine")]
-        Icon::RiFolderTransferDocumentLine => {
+        RiIcon::RiFolderTransferDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16188,7 +16188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderUnknowDocumentFill")]
-        Icon::RiFolderUnknowDocumentFill => {
+        RiIcon::RiFolderUnknowDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16201,7 +16201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderUnknowDocumentLine")]
-        Icon::RiFolderUnknowDocumentLine => {
+        RiIcon::RiFolderUnknowDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16214,7 +16214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderUploadDocumentFill")]
-        Icon::RiFolderUploadDocumentFill => {
+        RiIcon::RiFolderUploadDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16227,7 +16227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderUploadDocumentLine")]
-        Icon::RiFolderUploadDocumentLine => {
+        RiIcon::RiFolderUploadDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16240,7 +16240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderUserDocumentFill")]
-        Icon::RiFolderUserDocumentFill => {
+        RiIcon::RiFolderUserDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16253,7 +16253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderUserDocumentLine")]
-        Icon::RiFolderUserDocumentLine => {
+        RiIcon::RiFolderUserDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16266,7 +16266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderWarningDocumentFill")]
-        Icon::RiFolderWarningDocumentFill => {
+        RiIcon::RiFolderWarningDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16279,7 +16279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderWarningDocumentLine")]
-        Icon::RiFolderWarningDocumentLine => {
+        RiIcon::RiFolderWarningDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16292,7 +16292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderZipDocumentFill")]
-        Icon::RiFolderZipDocumentFill => {
+        RiIcon::RiFolderZipDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16305,7 +16305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFolderZipDocumentLine")]
-        Icon::RiFolderZipDocumentLine => {
+        RiIcon::RiFolderZipDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16318,7 +16318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFoldersDocumentFill")]
-        Icon::RiFoldersDocumentFill => {
+        RiIcon::RiFoldersDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16331,7 +16331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFoldersDocumentLine")]
-        Icon::RiFoldersDocumentLine => {
+        RiIcon::RiFoldersDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16344,7 +16344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFontColorEditor")]
-        Icon::RiFontColorEditor => {
+        RiIcon::RiFontColorEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16357,7 +16357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFontSize2Editor")]
-        Icon::RiFontSize2Editor => {
+        RiIcon::RiFontSize2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16369,7 +16369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFontSizeEditor")]
-        Icon::RiFontSizeEditor => {
+        RiIcon::RiFontSizeEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16382,7 +16382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFootballOthersFill")]
-        Icon::RiFootballOthersFill => {
+        RiIcon::RiFootballOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16395,7 +16395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFootballOthersLine")]
-        Icon::RiFootballOthersLine => {
+        RiIcon::RiFootballOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16408,7 +16408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFootprintMapFill")]
-        Icon::RiFootprintMapFill => {
+        RiIcon::RiFootprintMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16421,7 +16421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFootprintMapLine")]
-        Icon::RiFootprintMapLine => {
+        RiIcon::RiFootprintMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16434,7 +16434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiForbid2SystemFill")]
-        Icon::RiForbid2SystemFill => {
+        RiIcon::RiForbid2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16447,7 +16447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiForbid2SystemLine")]
-        Icon::RiForbid2SystemLine => {
+        RiIcon::RiForbid2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16460,7 +16460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiForbidSystemFill")]
-        Icon::RiForbidSystemFill => {
+        RiIcon::RiForbidSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16473,7 +16473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiForbidSystemLine")]
-        Icon::RiForbidSystemLine => {
+        RiIcon::RiForbidSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16486,7 +16486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFormatClearEditor")]
-        Icon::RiFormatClearEditor => {
+        RiIcon::RiFormatClearEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16499,7 +16499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFridgeOthersFill")]
-        Icon::RiFridgeOthersFill => {
+        RiIcon::RiFridgeOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16512,7 +16512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFridgeOthersLine")]
-        Icon::RiFridgeOthersLine => {
+        RiIcon::RiFridgeOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16525,7 +16525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFullscreenExitMediaFill")]
-        Icon::RiFullscreenExitMediaFill => {
+        RiIcon::RiFullscreenExitMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16538,7 +16538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFullscreenExitMediaLine")]
-        Icon::RiFullscreenExitMediaLine => {
+        RiIcon::RiFullscreenExitMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16551,7 +16551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFullscreenMediaFill")]
-        Icon::RiFullscreenMediaFill => {
+        RiIcon::RiFullscreenMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16564,7 +16564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFullscreenMediaLine")]
-        Icon::RiFullscreenMediaLine => {
+        RiIcon::RiFullscreenMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16577,7 +16577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFunctionSystemFill")]
-        Icon::RiFunctionSystemFill => {
+        RiIcon::RiFunctionSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16590,7 +16590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFunctionSystemLine")]
-        Icon::RiFunctionSystemLine => {
+        RiIcon::RiFunctionSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16603,7 +16603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFunctionsEditor")]
-        Icon::RiFunctionsEditor => {
+        RiIcon::RiFunctionsEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16616,7 +16616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFundsBoxFinanceFill")]
-        Icon::RiFundsBoxFinanceFill => {
+        RiIcon::RiFundsBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16629,7 +16629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFundsBoxFinanceLine")]
-        Icon::RiFundsBoxFinanceLine => {
+        RiIcon::RiFundsBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16642,7 +16642,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFundsFinanceFill")]
-        Icon::RiFundsFinanceFill => {
+        RiIcon::RiFundsFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16655,7 +16655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiFundsFinanceLine")]
-        Icon::RiFundsFinanceLine => {
+        RiIcon::RiFundsFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16668,7 +16668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGalleryMediaFill")]
-        Icon::RiGalleryMediaFill => {
+        RiIcon::RiGalleryMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16681,7 +16681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGalleryMediaLine")]
-        Icon::RiGalleryMediaLine => {
+        RiIcon::RiGalleryMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16694,7 +16694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGalleryUploadMediaFill")]
-        Icon::RiGalleryUploadMediaFill => {
+        RiIcon::RiGalleryUploadMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16707,7 +16707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGalleryUploadMediaLine")]
-        Icon::RiGalleryUploadMediaLine => {
+        RiIcon::RiGalleryUploadMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16720,7 +16720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGameOthersFill")]
-        Icon::RiGameOthersFill => {
+        RiIcon::RiGameOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16733,7 +16733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGameOthersLine")]
-        Icon::RiGameOthersLine => {
+        RiIcon::RiGameOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16746,7 +16746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGamepadDeviceFill")]
-        Icon::RiGamepadDeviceFill => {
+        RiIcon::RiGamepadDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16759,7 +16759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGamepadDeviceLine")]
-        Icon::RiGamepadDeviceLine => {
+        RiIcon::RiGamepadDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16772,7 +16772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGasStationMapFill")]
-        Icon::RiGasStationMapFill => {
+        RiIcon::RiGasStationMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16785,7 +16785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGasStationMapLine")]
-        Icon::RiGasStationMapLine => {
+        RiIcon::RiGasStationMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16798,7 +16798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGatsbyLogosFill")]
-        Icon::RiGatsbyLogosFill => {
+        RiIcon::RiGatsbyLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16811,7 +16811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGatsbyLogosLine")]
-        Icon::RiGatsbyLogosLine => {
+        RiIcon::RiGatsbyLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16824,7 +16824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGenderlessUserFill")]
-        Icon::RiGenderlessUserFill => {
+        RiIcon::RiGenderlessUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16837,7 +16837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGenderlessUserLine")]
-        Icon::RiGenderlessUserLine => {
+        RiIcon::RiGenderlessUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16850,7 +16850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGhost2UserFill")]
-        Icon::RiGhost2UserFill => {
+        RiIcon::RiGhost2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16863,7 +16863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGhost2UserLine")]
-        Icon::RiGhost2UserLine => {
+        RiIcon::RiGhost2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16876,7 +16876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGhostSmileUserFill")]
-        Icon::RiGhostSmileUserFill => {
+        RiIcon::RiGhostSmileUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16889,7 +16889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGhostSmileUserLine")]
-        Icon::RiGhostSmileUserLine => {
+        RiIcon::RiGhostSmileUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16902,7 +16902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGhostUserFill")]
-        Icon::RiGhostUserFill => {
+        RiIcon::RiGhostUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16915,7 +16915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGhostUserLine")]
-        Icon::RiGhostUserLine => {
+        RiIcon::RiGhostUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16928,7 +16928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGift2FinanceFill")]
-        Icon::RiGift2FinanceFill => {
+        RiIcon::RiGift2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16941,7 +16941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGift2FinanceLine")]
-        Icon::RiGift2FinanceLine => {
+        RiIcon::RiGift2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16954,7 +16954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGiftFinanceFill")]
-        Icon::RiGiftFinanceFill => {
+        RiIcon::RiGiftFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16967,7 +16967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGiftFinanceLine")]
-        Icon::RiGiftFinanceLine => {
+        RiIcon::RiGiftFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16980,7 +16980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitBranchDevelopmentFill")]
-        Icon::RiGitBranchDevelopmentFill => {
+        RiIcon::RiGitBranchDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -16993,7 +16993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitBranchDevelopmentLine")]
-        Icon::RiGitBranchDevelopmentLine => {
+        RiIcon::RiGitBranchDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17006,7 +17006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitCommitDevelopmentFill")]
-        Icon::RiGitCommitDevelopmentFill => {
+        RiIcon::RiGitCommitDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17019,7 +17019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitCommitDevelopmentLine")]
-        Icon::RiGitCommitDevelopmentLine => {
+        RiIcon::RiGitCommitDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17032,7 +17032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitMergeDevelopmentFill")]
-        Icon::RiGitMergeDevelopmentFill => {
+        RiIcon::RiGitMergeDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17045,7 +17045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitMergeDevelopmentLine")]
-        Icon::RiGitMergeDevelopmentLine => {
+        RiIcon::RiGitMergeDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17058,7 +17058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitPullRequestDevelopmentFill")]
-        Icon::RiGitPullRequestDevelopmentFill => {
+        RiIcon::RiGitPullRequestDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17071,7 +17071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitPullRequestDevelopmentLine")]
-        Icon::RiGitPullRequestDevelopmentLine => {
+        RiIcon::RiGitPullRequestDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17084,7 +17084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitRepositoryCommitsDevelopmentFill")]
-        Icon::RiGitRepositoryCommitsDevelopmentFill => {
+        RiIcon::RiGitRepositoryCommitsDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17098,7 +17098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitRepositoryCommitsDevelopmentLine")]
-        Icon::RiGitRepositoryCommitsDevelopmentLine => {
+        RiIcon::RiGitRepositoryCommitsDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17112,7 +17112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitRepositoryDevelopmentFill")]
-        Icon::RiGitRepositoryDevelopmentFill => {
+        RiIcon::RiGitRepositoryDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17125,7 +17125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitRepositoryDevelopmentLine")]
-        Icon::RiGitRepositoryDevelopmentLine => {
+        RiIcon::RiGitRepositoryDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17138,7 +17138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitRepositoryPrivateDevelopmentFill")]
-        Icon::RiGitRepositoryPrivateDevelopmentFill => {
+        RiIcon::RiGitRepositoryPrivateDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17152,7 +17152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitRepositoryPrivateDevelopmentLine")]
-        Icon::RiGitRepositoryPrivateDevelopmentLine => {
+        RiIcon::RiGitRepositoryPrivateDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17166,7 +17166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGithubLogosFill")]
-        Icon::RiGithubLogosFill => {
+        RiIcon::RiGithubLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17179,7 +17179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGithubLogosLine")]
-        Icon::RiGithubLogosLine => {
+        RiIcon::RiGithubLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17192,7 +17192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitlabLogosFill")]
-        Icon::RiGitlabLogosFill => {
+        RiIcon::RiGitlabLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17205,7 +17205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGitlabLogosLine")]
-        Icon::RiGitlabLogosLine => {
+        RiIcon::RiGitlabLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17218,7 +17218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGlobalBusinessFill")]
-        Icon::RiGlobalBusinessFill => {
+        RiIcon::RiGlobalBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17231,7 +17231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGlobalBusinessLine")]
-        Icon::RiGlobalBusinessLine => {
+        RiIcon::RiGlobalBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17244,7 +17244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGlobeMapFill")]
-        Icon::RiGlobeMapFill => {
+        RiIcon::RiGlobeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17257,7 +17257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGlobeMapLine")]
-        Icon::RiGlobeMapLine => {
+        RiIcon::RiGlobeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17270,7 +17270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGobletMapFill")]
-        Icon::RiGobletMapFill => {
+        RiIcon::RiGobletMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17283,7 +17283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGobletMapLine")]
-        Icon::RiGobletMapLine => {
+        RiIcon::RiGobletMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17296,7 +17296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGoogleLogosFill")]
-        Icon::RiGoogleLogosFill => {
+        RiIcon::RiGoogleLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17309,7 +17309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGoogleLogosLine")]
-        Icon::RiGoogleLogosLine => {
+        RiIcon::RiGoogleLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17322,7 +17322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGooglePlayLogosFill")]
-        Icon::RiGooglePlayLogosFill => {
+        RiIcon::RiGooglePlayLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17335,7 +17335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGooglePlayLogosLine")]
-        Icon::RiGooglePlayLogosLine => {
+        RiIcon::RiGooglePlayLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17348,7 +17348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGovernmentBuildingsFill")]
-        Icon::RiGovernmentBuildingsFill => {
+        RiIcon::RiGovernmentBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17361,7 +17361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGovernmentBuildingsLine")]
-        Icon::RiGovernmentBuildingsLine => {
+        RiIcon::RiGovernmentBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17374,7 +17374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGpsDeviceFill")]
-        Icon::RiGpsDeviceFill => {
+        RiIcon::RiGpsDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17387,7 +17387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGpsDeviceLine")]
-        Icon::RiGpsDeviceLine => {
+        RiIcon::RiGpsDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17400,7 +17400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGradienterDeviceFill")]
-        Icon::RiGradienterDeviceFill => {
+        RiIcon::RiGradienterDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17413,7 +17413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGradienterDeviceLine")]
-        Icon::RiGradienterDeviceLine => {
+        RiIcon::RiGradienterDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17426,7 +17426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGridDesignFill")]
-        Icon::RiGridDesignFill => {
+        RiIcon::RiGridDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17439,7 +17439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGridDesignLine")]
-        Icon::RiGridDesignLine => {
+        RiIcon::RiGridDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17452,7 +17452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGroup2UserFill")]
-        Icon::RiGroup2UserFill => {
+        RiIcon::RiGroup2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17465,7 +17465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGroup2UserLine")]
-        Icon::RiGroup2UserLine => {
+        RiIcon::RiGroup2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17478,7 +17478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGroupUserFill")]
-        Icon::RiGroupUserFill => {
+        RiIcon::RiGroupUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17491,7 +17491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGroupUserLine")]
-        Icon::RiGroupUserLine => {
+        RiIcon::RiGroupUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17504,7 +17504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGuideMapFill")]
-        Icon::RiGuideMapFill => {
+        RiIcon::RiGuideMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17517,7 +17517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiGuideMapLine")]
-        Icon::RiGuideMapLine => {
+        RiIcon::RiGuideMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17530,7 +17530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiH1Editor")]
-        Icon::RiH1Editor => {
+        RiIcon::RiH1Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17543,7 +17543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiH2Editor")]
-        Icon::RiH2Editor => {
+        RiIcon::RiH2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17556,7 +17556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiH3Editor")]
-        Icon::RiH3Editor => {
+        RiIcon::RiH3Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17569,7 +17569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiH4Editor")]
-        Icon::RiH4Editor => {
+        RiIcon::RiH4Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17582,7 +17582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiH5Editor")]
-        Icon::RiH5Editor => {
+        RiIcon::RiH5Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17595,7 +17595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiH6Editor")]
-        Icon::RiH6Editor => {
+        RiIcon::RiH6Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17608,7 +17608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHailWeatherFill")]
-        Icon::RiHailWeatherFill => {
+        RiIcon::RiHailWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17621,7 +17621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHailWeatherLine")]
-        Icon::RiHailWeatherLine => {
+        RiIcon::RiHailWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17634,7 +17634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHammerDesignFill")]
-        Icon::RiHammerDesignFill => {
+        RiIcon::RiHammerDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17647,7 +17647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHammerDesignLine")]
-        Icon::RiHammerDesignLine => {
+        RiIcon::RiHammerDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17660,7 +17660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandCoinFinanceFill")]
-        Icon::RiHandCoinFinanceFill => {
+        RiIcon::RiHandCoinFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17673,7 +17673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandCoinFinanceLine")]
-        Icon::RiHandCoinFinanceLine => {
+        RiIcon::RiHandCoinFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17686,7 +17686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandHeartFinanceFill")]
-        Icon::RiHandHeartFinanceFill => {
+        RiIcon::RiHandHeartFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17699,7 +17699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandHeartFinanceLine")]
-        Icon::RiHandHeartFinanceLine => {
+        RiIcon::RiHandHeartFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17712,7 +17712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandSanitizerHealthFill")]
-        Icon::RiHandSanitizerHealthFill => {
+        RiIcon::RiHandSanitizerHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17725,7 +17725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandSanitizerHealthLine")]
-        Icon::RiHandSanitizerHealthLine => {
+        RiIcon::RiHandSanitizerHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17738,7 +17738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandbagOthersFill")]
-        Icon::RiHandbagOthersFill => {
+        RiIcon::RiHandbagOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17751,7 +17751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHandbagOthersLine")]
-        Icon::RiHandbagOthersLine => {
+        RiIcon::RiHandbagOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17764,7 +17764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHardDrive2DeviceFill")]
-        Icon::RiHardDrive2DeviceFill => {
+        RiIcon::RiHardDrive2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17777,7 +17777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHardDrive2DeviceLine")]
-        Icon::RiHardDrive2DeviceLine => {
+        RiIcon::RiHardDrive2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17790,7 +17790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHardDriveDeviceFill")]
-        Icon::RiHardDriveDeviceFill => {
+        RiIcon::RiHardDriveDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17803,7 +17803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHardDriveDeviceLine")]
-        Icon::RiHardDriveDeviceLine => {
+        RiIcon::RiHardDriveDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17816,7 +17816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHashtagEditor")]
-        Icon::RiHashtagEditor => {
+        RiIcon::RiHashtagEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17829,7 +17829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHaze2WeatherFill")]
-        Icon::RiHaze2WeatherFill => {
+        RiIcon::RiHaze2WeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17842,7 +17842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHaze2WeatherLine")]
-        Icon::RiHaze2WeatherLine => {
+        RiIcon::RiHaze2WeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17855,7 +17855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHazeWeatherFill")]
-        Icon::RiHazeWeatherFill => {
+        RiIcon::RiHazeWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17868,7 +17868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHazeWeatherLine")]
-        Icon::RiHazeWeatherLine => {
+        RiIcon::RiHazeWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17881,7 +17881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHdMediaFill")]
-        Icon::RiHdMediaFill => {
+        RiIcon::RiHdMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17894,7 +17894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHdMediaLine")]
-        Icon::RiHdMediaLine => {
+        RiIcon::RiHdMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17907,7 +17907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeadingEditor")]
-        Icon::RiHeadingEditor => {
+        RiIcon::RiHeadingEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17918,7 +17918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeadphoneMediaFill")]
-        Icon::RiHeadphoneMediaFill => {
+        RiIcon::RiHeadphoneMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17931,7 +17931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeadphoneMediaLine")]
-        Icon::RiHeadphoneMediaLine => {
+        RiIcon::RiHeadphoneMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17944,7 +17944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHealthBookHealthFill")]
-        Icon::RiHealthBookHealthFill => {
+        RiIcon::RiHealthBookHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17957,7 +17957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHealthBookHealthLine")]
-        Icon::RiHealthBookHealthLine => {
+        RiIcon::RiHealthBookHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17970,7 +17970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeart2HealthFill")]
-        Icon::RiHeart2HealthFill => {
+        RiIcon::RiHeart2HealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17983,7 +17983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeart2HealthLine")]
-        Icon::RiHeart2HealthLine => {
+        RiIcon::RiHeart2HealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -17996,7 +17996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeart3HealthFill")]
-        Icon::RiHeart3HealthFill => {
+        RiIcon::RiHeart3HealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18009,7 +18009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeart3HealthLine")]
-        Icon::RiHeart3HealthLine => {
+        RiIcon::RiHeart3HealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18022,7 +18022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartAddHealthFill")]
-        Icon::RiHeartAddHealthFill => {
+        RiIcon::RiHeartAddHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18035,7 +18035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartAddHealthLine")]
-        Icon::RiHeartAddHealthLine => {
+        RiIcon::RiHeartAddHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18048,7 +18048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartHealthFill")]
-        Icon::RiHeartHealthFill => {
+        RiIcon::RiHeartHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18061,7 +18061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartHealthLine")]
-        Icon::RiHeartHealthLine => {
+        RiIcon::RiHeartHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18074,7 +18074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartPulseHealthFill")]
-        Icon::RiHeartPulseHealthFill => {
+        RiIcon::RiHeartPulseHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18087,7 +18087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartPulseHealthLine")]
-        Icon::RiHeartPulseHealthLine => {
+        RiIcon::RiHeartPulseHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18100,7 +18100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartsHealthFill")]
-        Icon::RiHeartsHealthFill => {
+        RiIcon::RiHeartsHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18113,7 +18113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeartsHealthLine")]
-        Icon::RiHeartsHealthLine => {
+        RiIcon::RiHeartsHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18126,7 +18126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeavyShowersWeatherFill")]
-        Icon::RiHeavyShowersWeatherFill => {
+        RiIcon::RiHeavyShowersWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18139,7 +18139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHeavyShowersWeatherLine")]
-        Icon::RiHeavyShowersWeatherLine => {
+        RiIcon::RiHeavyShowersWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18152,7 +18152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHistorySystemFill")]
-        Icon::RiHistorySystemFill => {
+        RiIcon::RiHistorySystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18165,7 +18165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHistorySystemLine")]
-        Icon::RiHistorySystemLine => {
+        RiIcon::RiHistorySystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18178,7 +18178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome2BuildingsFill")]
-        Icon::RiHome2BuildingsFill => {
+        RiIcon::RiHome2BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18191,7 +18191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome2BuildingsLine")]
-        Icon::RiHome2BuildingsLine => {
+        RiIcon::RiHome2BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18204,7 +18204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome3BuildingsFill")]
-        Icon::RiHome3BuildingsFill => {
+        RiIcon::RiHome3BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18217,7 +18217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome3BuildingsLine")]
-        Icon::RiHome3BuildingsLine => {
+        RiIcon::RiHome3BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18230,7 +18230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome4BuildingsFill")]
-        Icon::RiHome4BuildingsFill => {
+        RiIcon::RiHome4BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18243,7 +18243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome4BuildingsLine")]
-        Icon::RiHome4BuildingsLine => {
+        RiIcon::RiHome4BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18256,7 +18256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome5BuildingsFill")]
-        Icon::RiHome5BuildingsFill => {
+        RiIcon::RiHome5BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18269,7 +18269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome5BuildingsLine")]
-        Icon::RiHome5BuildingsLine => {
+        RiIcon::RiHome5BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18282,7 +18282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome6BuildingsFill")]
-        Icon::RiHome6BuildingsFill => {
+        RiIcon::RiHome6BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18295,7 +18295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome6BuildingsLine")]
-        Icon::RiHome6BuildingsLine => {
+        RiIcon::RiHome6BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18308,7 +18308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome7BuildingsFill")]
-        Icon::RiHome7BuildingsFill => {
+        RiIcon::RiHome7BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18321,7 +18321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome7BuildingsLine")]
-        Icon::RiHome7BuildingsLine => {
+        RiIcon::RiHome7BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18334,7 +18334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome8BuildingsFill")]
-        Icon::RiHome8BuildingsFill => {
+        RiIcon::RiHome8BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18347,7 +18347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHome8BuildingsLine")]
-        Icon::RiHome8BuildingsLine => {
+        RiIcon::RiHome8BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18360,7 +18360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeBuildingsFill")]
-        Icon::RiHomeBuildingsFill => {
+        RiIcon::RiHomeBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18373,7 +18373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeBuildingsLine")]
-        Icon::RiHomeBuildingsLine => {
+        RiIcon::RiHomeBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18386,7 +18386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeGearBuildingsFill")]
-        Icon::RiHomeGearBuildingsFill => {
+        RiIcon::RiHomeGearBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18399,7 +18399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeGearBuildingsLine")]
-        Icon::RiHomeGearBuildingsLine => {
+        RiIcon::RiHomeGearBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18412,7 +18412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeHeartBuildingsFill")]
-        Icon::RiHomeHeartBuildingsFill => {
+        RiIcon::RiHomeHeartBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18425,7 +18425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeHeartBuildingsLine")]
-        Icon::RiHomeHeartBuildingsLine => {
+        RiIcon::RiHomeHeartBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18438,7 +18438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeSmile2BuildingsFill")]
-        Icon::RiHomeSmile2BuildingsFill => {
+        RiIcon::RiHomeSmile2BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18451,7 +18451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeSmile2BuildingsLine")]
-        Icon::RiHomeSmile2BuildingsLine => {
+        RiIcon::RiHomeSmile2BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18464,7 +18464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeSmileBuildingsFill")]
-        Icon::RiHomeSmileBuildingsFill => {
+        RiIcon::RiHomeSmileBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18477,7 +18477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeSmileBuildingsLine")]
-        Icon::RiHomeSmileBuildingsLine => {
+        RiIcon::RiHomeSmileBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18490,7 +18490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeWifiBuildingsFill")]
-        Icon::RiHomeWifiBuildingsFill => {
+        RiIcon::RiHomeWifiBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18503,7 +18503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHomeWifiBuildingsLine")]
-        Icon::RiHomeWifiBuildingsLine => {
+        RiIcon::RiHomeWifiBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18516,7 +18516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHonorOfKingsLogosFill")]
-        Icon::RiHonorOfKingsLogosFill => {
+        RiIcon::RiHonorOfKingsLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18529,7 +18529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHonorOfKingsLogosLine")]
-        Icon::RiHonorOfKingsLogosLine => {
+        RiIcon::RiHonorOfKingsLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18542,7 +18542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHonourBusinessFill")]
-        Icon::RiHonourBusinessFill => {
+        RiIcon::RiHonourBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18555,7 +18555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHonourBusinessLine")]
-        Icon::RiHonourBusinessLine => {
+        RiIcon::RiHonourBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18568,7 +18568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHospitalBuildingsFill")]
-        Icon::RiHospitalBuildingsFill => {
+        RiIcon::RiHospitalBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18581,7 +18581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHospitalBuildingsLine")]
-        Icon::RiHospitalBuildingsLine => {
+        RiIcon::RiHospitalBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18594,7 +18594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHotelBedMapFill")]
-        Icon::RiHotelBedMapFill => {
+        RiIcon::RiHotelBedMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18607,7 +18607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHotelBedMapLine")]
-        Icon::RiHotelBedMapLine => {
+        RiIcon::RiHotelBedMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18620,7 +18620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHotelBuildingsFill")]
-        Icon::RiHotelBuildingsFill => {
+        RiIcon::RiHotelBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18633,7 +18633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHotelBuildingsLine")]
-        Icon::RiHotelBuildingsLine => {
+        RiIcon::RiHotelBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18646,7 +18646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHotspotDeviceFill")]
-        Icon::RiHotspotDeviceFill => {
+        RiIcon::RiHotspotDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18659,7 +18659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHotspotDeviceLine")]
-        Icon::RiHotspotDeviceLine => {
+        RiIcon::RiHotspotDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18672,7 +18672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHqMediaFill")]
-        Icon::RiHqMediaFill => {
+        RiIcon::RiHqMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18685,7 +18685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHqMediaLine")]
-        Icon::RiHqMediaLine => {
+        RiIcon::RiHqMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18698,7 +18698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHtml5DevelopmentFill")]
-        Icon::RiHtml5DevelopmentFill => {
+        RiIcon::RiHtml5DevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18711,7 +18711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiHtml5DevelopmentLine")]
-        Icon::RiHtml5DevelopmentLine => {
+        RiIcon::RiHtml5DevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18724,7 +18724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIeLogosFill")]
-        Icon::RiIeLogosFill => {
+        RiIcon::RiIeLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18737,7 +18737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIeLogosLine")]
-        Icon::RiIeLogosLine => {
+        RiIcon::RiIeLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18750,7 +18750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImage2MediaFill")]
-        Icon::RiImage2MediaFill => {
+        RiIcon::RiImage2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18763,7 +18763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImage2MediaLine")]
-        Icon::RiImage2MediaLine => {
+        RiIcon::RiImage2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18776,7 +18776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImageAddMediaFill")]
-        Icon::RiImageAddMediaFill => {
+        RiIcon::RiImageAddMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18789,7 +18789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImageAddMediaLine")]
-        Icon::RiImageAddMediaLine => {
+        RiIcon::RiImageAddMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18802,7 +18802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImageEditMediaFill")]
-        Icon::RiImageEditMediaFill => {
+        RiIcon::RiImageEditMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18815,7 +18815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImageEditMediaLine")]
-        Icon::RiImageEditMediaLine => {
+        RiIcon::RiImageEditMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18828,7 +18828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImageMediaFill")]
-        Icon::RiImageMediaFill => {
+        RiIcon::RiImageMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18841,7 +18841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiImageMediaLine")]
-        Icon::RiImageMediaLine => {
+        RiIcon::RiImageMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18854,7 +18854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInboxArchiveBusinessFill")]
-        Icon::RiInboxArchiveBusinessFill => {
+        RiIcon::RiInboxArchiveBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18867,7 +18867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInboxArchiveBusinessLine")]
-        Icon::RiInboxArchiveBusinessLine => {
+        RiIcon::RiInboxArchiveBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18880,7 +18880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInboxBusinessFill")]
-        Icon::RiInboxBusinessFill => {
+        RiIcon::RiInboxBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18893,7 +18893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInboxBusinessLine")]
-        Icon::RiInboxBusinessLine => {
+        RiIcon::RiInboxBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18906,7 +18906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInboxUnarchiveBusinessFill")]
-        Icon::RiInboxUnarchiveBusinessFill => {
+        RiIcon::RiInboxUnarchiveBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18919,7 +18919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInboxUnarchiveBusinessLine")]
-        Icon::RiInboxUnarchiveBusinessLine => {
+        RiIcon::RiInboxUnarchiveBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18932,7 +18932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIncreaseDecreaseFinanceFill")]
-        Icon::RiIncreaseDecreaseFinanceFill => {
+        RiIcon::RiIncreaseDecreaseFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18945,7 +18945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIncreaseDecreaseFinanceLine")]
-        Icon::RiIncreaseDecreaseFinanceLine => {
+        RiIcon::RiIncreaseDecreaseFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18958,7 +18958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIndentDecreaseEditor")]
-        Icon::RiIndentDecreaseEditor => {
+        RiIcon::RiIndentDecreaseEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18971,7 +18971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIndentIncreaseEditor")]
-        Icon::RiIndentIncreaseEditor => {
+        RiIcon::RiIndentIncreaseEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18984,7 +18984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIndeterminateCircleSystemFill")]
-        Icon::RiIndeterminateCircleSystemFill => {
+        RiIcon::RiIndeterminateCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -18997,7 +18997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiIndeterminateCircleSystemLine")]
-        Icon::RiIndeterminateCircleSystemLine => {
+        RiIcon::RiIndeterminateCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19010,7 +19010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInformationSystemFill")]
-        Icon::RiInformationSystemFill => {
+        RiIcon::RiInformationSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19023,7 +19023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInformationSystemLine")]
-        Icon::RiInformationSystemLine => {
+        RiIcon::RiInformationSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19036,7 +19036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInfraredThermometerHealthFill")]
-        Icon::RiInfraredThermometerHealthFill => {
+        RiIcon::RiInfraredThermometerHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19049,7 +19049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInfraredThermometerHealthLine")]
-        Icon::RiInfraredThermometerHealthLine => {
+        RiIcon::RiInfraredThermometerHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19062,7 +19062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInkBottleDesignFill")]
-        Icon::RiInkBottleDesignFill => {
+        RiIcon::RiInkBottleDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19075,7 +19075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInkBottleDesignLine")]
-        Icon::RiInkBottleDesignLine => {
+        RiIcon::RiInkBottleDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19088,7 +19088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInputCursorMoveEditor")]
-        Icon::RiInputCursorMoveEditor => {
+        RiIcon::RiInputCursorMoveEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19101,7 +19101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInputMethodDesignFill")]
-        Icon::RiInputMethodDesignFill => {
+        RiIcon::RiInputMethodDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19114,7 +19114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInputMethodDesignLine")]
-        Icon::RiInputMethodDesignLine => {
+        RiIcon::RiInputMethodDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19127,7 +19127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInsertColumnLeftEditor")]
-        Icon::RiInsertColumnLeftEditor => {
+        RiIcon::RiInsertColumnLeftEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19140,7 +19140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInsertColumnRightEditor")]
-        Icon::RiInsertColumnRightEditor => {
+        RiIcon::RiInsertColumnRightEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19153,7 +19153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInsertRowBottomEditor")]
-        Icon::RiInsertRowBottomEditor => {
+        RiIcon::RiInsertRowBottomEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19166,7 +19166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInsertRowTopEditor")]
-        Icon::RiInsertRowTopEditor => {
+        RiIcon::RiInsertRowTopEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19179,7 +19179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInstagramLogosFill")]
-        Icon::RiInstagramLogosFill => {
+        RiIcon::RiInstagramLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19192,7 +19192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInstagramLogosLine")]
-        Icon::RiInstagramLogosLine => {
+        RiIcon::RiInstagramLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19205,7 +19205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInstallDeviceFill")]
-        Icon::RiInstallDeviceFill => {
+        RiIcon::RiInstallDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19218,7 +19218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInstallDeviceLine")]
-        Icon::RiInstallDeviceLine => {
+        RiIcon::RiInstallDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19231,7 +19231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInvisionLogosFill")]
-        Icon::RiInvisionLogosFill => {
+        RiIcon::RiInvisionLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19244,7 +19244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiInvisionLogosLine")]
-        Icon::RiInvisionLogosLine => {
+        RiIcon::RiInvisionLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19257,7 +19257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiItalicEditor")]
-        Icon::RiItalicEditor => {
+        RiIcon::RiItalicEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19269,7 +19269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKakaoTalkLogosFill")]
-        Icon::RiKakaoTalkLogosFill => {
+        RiIcon::RiKakaoTalkLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19282,7 +19282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKakaoTalkLogosLine")]
-        Icon::RiKakaoTalkLogosLine => {
+        RiIcon::RiKakaoTalkLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19295,7 +19295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKey2OthersFill")]
-        Icon::RiKey2OthersFill => {
+        RiIcon::RiKey2OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19308,7 +19308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKey2OthersLine")]
-        Icon::RiKey2OthersLine => {
+        RiIcon::RiKey2OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19321,7 +19321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeyOthersFill")]
-        Icon::RiKeyOthersFill => {
+        RiIcon::RiKeyOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19334,7 +19334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeyOthersLine")]
-        Icon::RiKeyOthersLine => {
+        RiIcon::RiKeyOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19347,7 +19347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeyboardBoxDeviceFill")]
-        Icon::RiKeyboardBoxDeviceFill => {
+        RiIcon::RiKeyboardBoxDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19360,7 +19360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeyboardBoxDeviceLine")]
-        Icon::RiKeyboardBoxDeviceLine => {
+        RiIcon::RiKeyboardBoxDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19373,7 +19373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeyboardDeviceFill")]
-        Icon::RiKeyboardDeviceFill => {
+        RiIcon::RiKeyboardDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19386,7 +19386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeyboardDeviceLine")]
-        Icon::RiKeyboardDeviceLine => {
+        RiIcon::RiKeyboardDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19399,7 +19399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeynoteDocumentFill")]
-        Icon::RiKeynoteDocumentFill => {
+        RiIcon::RiKeynoteDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19412,7 +19412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKeynoteDocumentLine")]
-        Icon::RiKeynoteDocumentLine => {
+        RiIcon::RiKeynoteDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19425,7 +19425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKnifeBloodOthersFill")]
-        Icon::RiKnifeBloodOthersFill => {
+        RiIcon::RiKnifeBloodOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19438,7 +19438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKnifeBloodOthersLine")]
-        Icon::RiKnifeBloodOthersLine => {
+        RiIcon::RiKnifeBloodOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19451,7 +19451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKnifeOthersFill")]
-        Icon::RiKnifeOthersFill => {
+        RiIcon::RiKnifeOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19464,7 +19464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiKnifeOthersLine")]
-        Icon::RiKnifeOthersLine => {
+        RiIcon::RiKnifeOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19477,7 +19477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLandscapeMediaFill")]
-        Icon::RiLandscapeMediaFill => {
+        RiIcon::RiLandscapeMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19490,7 +19490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLandscapeMediaLine")]
-        Icon::RiLandscapeMediaLine => {
+        RiIcon::RiLandscapeMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19503,7 +19503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout2DesignFill")]
-        Icon::RiLayout2DesignFill => {
+        RiIcon::RiLayout2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19516,7 +19516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout2DesignLine")]
-        Icon::RiLayout2DesignLine => {
+        RiIcon::RiLayout2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19529,7 +19529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout3DesignFill")]
-        Icon::RiLayout3DesignFill => {
+        RiIcon::RiLayout3DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19542,7 +19542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout3DesignLine")]
-        Icon::RiLayout3DesignLine => {
+        RiIcon::RiLayout3DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19555,7 +19555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout4DesignFill")]
-        Icon::RiLayout4DesignFill => {
+        RiIcon::RiLayout4DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19568,7 +19568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout4DesignLine")]
-        Icon::RiLayout4DesignLine => {
+        RiIcon::RiLayout4DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19581,7 +19581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout5DesignFill")]
-        Icon::RiLayout5DesignFill => {
+        RiIcon::RiLayout5DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19594,7 +19594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout5DesignLine")]
-        Icon::RiLayout5DesignLine => {
+        RiIcon::RiLayout5DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19607,7 +19607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout6DesignFill")]
-        Icon::RiLayout6DesignFill => {
+        RiIcon::RiLayout6DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19620,7 +19620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayout6DesignLine")]
-        Icon::RiLayout6DesignLine => {
+        RiIcon::RiLayout6DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19633,7 +19633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutBottom2DesignFill")]
-        Icon::RiLayoutBottom2DesignFill => {
+        RiIcon::RiLayoutBottom2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19646,7 +19646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutBottom2DesignLine")]
-        Icon::RiLayoutBottom2DesignLine => {
+        RiIcon::RiLayoutBottom2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19659,7 +19659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutBottomDesignFill")]
-        Icon::RiLayoutBottomDesignFill => {
+        RiIcon::RiLayoutBottomDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19672,7 +19672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutBottomDesignLine")]
-        Icon::RiLayoutBottomDesignLine => {
+        RiIcon::RiLayoutBottomDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19685,7 +19685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutColumnDesignFill")]
-        Icon::RiLayoutColumnDesignFill => {
+        RiIcon::RiLayoutColumnDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19698,7 +19698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutColumnDesignLine")]
-        Icon::RiLayoutColumnDesignLine => {
+        RiIcon::RiLayoutColumnDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19711,7 +19711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutDesignFill")]
-        Icon::RiLayoutDesignFill => {
+        RiIcon::RiLayoutDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19724,7 +19724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutDesignLine")]
-        Icon::RiLayoutDesignLine => {
+        RiIcon::RiLayoutDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19737,7 +19737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutGridDesignFill")]
-        Icon::RiLayoutGridDesignFill => {
+        RiIcon::RiLayoutGridDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19750,7 +19750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutGridDesignLine")]
-        Icon::RiLayoutGridDesignLine => {
+        RiIcon::RiLayoutGridDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19763,7 +19763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutLeft2DesignFill")]
-        Icon::RiLayoutLeft2DesignFill => {
+        RiIcon::RiLayoutLeft2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19776,7 +19776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutLeft2DesignLine")]
-        Icon::RiLayoutLeft2DesignLine => {
+        RiIcon::RiLayoutLeft2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19789,7 +19789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutLeftDesignFill")]
-        Icon::RiLayoutLeftDesignFill => {
+        RiIcon::RiLayoutLeftDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19802,7 +19802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutLeftDesignLine")]
-        Icon::RiLayoutLeftDesignLine => {
+        RiIcon::RiLayoutLeftDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19815,7 +19815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutMasonryDesignFill")]
-        Icon::RiLayoutMasonryDesignFill => {
+        RiIcon::RiLayoutMasonryDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19828,7 +19828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutMasonryDesignLine")]
-        Icon::RiLayoutMasonryDesignLine => {
+        RiIcon::RiLayoutMasonryDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19841,7 +19841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutRight2DesignFill")]
-        Icon::RiLayoutRight2DesignFill => {
+        RiIcon::RiLayoutRight2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19854,7 +19854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutRight2DesignLine")]
-        Icon::RiLayoutRight2DesignLine => {
+        RiIcon::RiLayoutRight2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19867,7 +19867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutRightDesignFill")]
-        Icon::RiLayoutRightDesignFill => {
+        RiIcon::RiLayoutRightDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19880,7 +19880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutRightDesignLine")]
-        Icon::RiLayoutRightDesignLine => {
+        RiIcon::RiLayoutRightDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19893,7 +19893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutRowDesignFill")]
-        Icon::RiLayoutRowDesignFill => {
+        RiIcon::RiLayoutRowDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19906,7 +19906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutRowDesignLine")]
-        Icon::RiLayoutRowDesignLine => {
+        RiIcon::RiLayoutRowDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19919,7 +19919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutTop2DesignFill")]
-        Icon::RiLayoutTop2DesignFill => {
+        RiIcon::RiLayoutTop2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19932,7 +19932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutTop2DesignLine")]
-        Icon::RiLayoutTop2DesignLine => {
+        RiIcon::RiLayoutTop2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19945,7 +19945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutTopDesignFill")]
-        Icon::RiLayoutTopDesignFill => {
+        RiIcon::RiLayoutTopDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19958,7 +19958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLayoutTopDesignLine")]
-        Icon::RiLayoutTopDesignLine => {
+        RiIcon::RiLayoutTopDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19971,7 +19971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLeafOthersFill")]
-        Icon::RiLeafOthersFill => {
+        RiIcon::RiLeafOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19984,7 +19984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLeafOthersLine")]
-        Icon::RiLeafOthersLine => {
+        RiIcon::RiLeafOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -19997,7 +19997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLifebuoyMapFill")]
-        Icon::RiLifebuoyMapFill => {
+        RiIcon::RiLifebuoyMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20010,7 +20010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLifebuoyMapLine")]
-        Icon::RiLifebuoyMapLine => {
+        RiIcon::RiLifebuoyMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20023,7 +20023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLightbulbFlashOthersFill")]
-        Icon::RiLightbulbFlashOthersFill => {
+        RiIcon::RiLightbulbFlashOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20036,7 +20036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLightbulbFlashOthersLine")]
-        Icon::RiLightbulbFlashOthersLine => {
+        RiIcon::RiLightbulbFlashOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20049,7 +20049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLightbulbOthersFill")]
-        Icon::RiLightbulbOthersFill => {
+        RiIcon::RiLightbulbOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20062,7 +20062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLightbulbOthersLine")]
-        Icon::RiLightbulbOthersLine => {
+        RiIcon::RiLightbulbOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20075,7 +20075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLineChartBusinessFill")]
-        Icon::RiLineChartBusinessFill => {
+        RiIcon::RiLineChartBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20088,7 +20088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLineChartBusinessLine")]
-        Icon::RiLineChartBusinessLine => {
+        RiIcon::RiLineChartBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20101,7 +20101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLineHeightEditor")]
-        Icon::RiLineHeightEditor => {
+        RiIcon::RiLineHeightEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20114,7 +20114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLineLogosFill")]
-        Icon::RiLineLogosFill => {
+        RiIcon::RiLineLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20127,7 +20127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLineLogosLine")]
-        Icon::RiLineLogosLine => {
+        RiIcon::RiLineLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20140,7 +20140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkEditor")]
-        Icon::RiLinkEditor => {
+        RiIcon::RiLinkEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20153,7 +20153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkMEditor")]
-        Icon::RiLinkMEditor => {
+        RiIcon::RiLinkMEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20166,7 +20166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkUnlinkEditor")]
-        Icon::RiLinkUnlinkEditor => {
+        RiIcon::RiLinkUnlinkEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20179,7 +20179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkUnlinkMEditor")]
-        Icon::RiLinkUnlinkMEditor => {
+        RiIcon::RiLinkUnlinkMEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20192,7 +20192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkedinBoxLogosFill")]
-        Icon::RiLinkedinBoxLogosFill => {
+        RiIcon::RiLinkedinBoxLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20205,7 +20205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkedinBoxLogosLine")]
-        Icon::RiLinkedinBoxLogosLine => {
+        RiIcon::RiLinkedinBoxLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20218,7 +20218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkedinLogosFill")]
-        Icon::RiLinkedinLogosFill => {
+        RiIcon::RiLinkedinLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20231,7 +20231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinkedinLogosLine")]
-        Icon::RiLinkedinLogosLine => {
+        RiIcon::RiLinkedinLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20244,7 +20244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinksBusinessFill")]
-        Icon::RiLinksBusinessFill => {
+        RiIcon::RiLinksBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20257,7 +20257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLinksBusinessLine")]
-        Icon::RiLinksBusinessLine => {
+        RiIcon::RiLinksBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20270,7 +20270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiListCheck2Editor")]
-        Icon::RiListCheck2Editor => {
+        RiIcon::RiListCheck2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20283,7 +20283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiListCheckEditor")]
-        Icon::RiListCheckEditor => {
+        RiIcon::RiListCheckEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20296,7 +20296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiListOrderedEditor")]
-        Icon::RiListOrderedEditor => {
+        RiIcon::RiListOrderedEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20309,7 +20309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiListSettingsSystemFill")]
-        Icon::RiListSettingsSystemFill => {
+        RiIcon::RiListSettingsSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20322,7 +20322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiListSettingsSystemLine")]
-        Icon::RiListSettingsSystemLine => {
+        RiIcon::RiListSettingsSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20335,7 +20335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiListUnorderedEditor")]
-        Icon::RiListUnorderedEditor => {
+        RiIcon::RiListUnorderedEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20348,7 +20348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLiveMediaFill")]
-        Icon::RiLiveMediaFill => {
+        RiIcon::RiLiveMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20361,7 +20361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLiveMediaLine")]
-        Icon::RiLiveMediaLine => {
+        RiIcon::RiLiveMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20374,7 +20374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader2SystemFill")]
-        Icon::RiLoader2SystemFill => {
+        RiIcon::RiLoader2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20387,7 +20387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader2SystemLine")]
-        Icon::RiLoader2SystemLine => {
+        RiIcon::RiLoader2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20400,7 +20400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader3SystemFill")]
-        Icon::RiLoader3SystemFill => {
+        RiIcon::RiLoader3SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20413,7 +20413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader3SystemLine")]
-        Icon::RiLoader3SystemLine => {
+        RiIcon::RiLoader3SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20426,7 +20426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader4SystemFill")]
-        Icon::RiLoader4SystemFill => {
+        RiIcon::RiLoader4SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20439,7 +20439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader4SystemLine")]
-        Icon::RiLoader4SystemLine => {
+        RiIcon::RiLoader4SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20452,7 +20452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader5SystemFill")]
-        Icon::RiLoader5SystemFill => {
+        RiIcon::RiLoader5SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20464,7 +20464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoader5SystemLine")]
-        Icon::RiLoader5SystemLine => {
+        RiIcon::RiLoader5SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20476,7 +20476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoaderSystemFill")]
-        Icon::RiLoaderSystemFill => {
+        RiIcon::RiLoaderSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20489,7 +20489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoaderSystemLine")]
-        Icon::RiLoaderSystemLine => {
+        RiIcon::RiLoaderSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20502,7 +20502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLock2SystemFill")]
-        Icon::RiLock2SystemFill => {
+        RiIcon::RiLock2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20515,7 +20515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLock2SystemLine")]
-        Icon::RiLock2SystemLine => {
+        RiIcon::RiLock2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20528,7 +20528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLockPasswordSystemFill")]
-        Icon::RiLockPasswordSystemFill => {
+        RiIcon::RiLockPasswordSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20541,7 +20541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLockPasswordSystemLine")]
-        Icon::RiLockPasswordSystemLine => {
+        RiIcon::RiLockPasswordSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20554,7 +20554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLockSystemFill")]
-        Icon::RiLockSystemFill => {
+        RiIcon::RiLockSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20567,7 +20567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLockSystemLine")]
-        Icon::RiLockSystemLine => {
+        RiIcon::RiLockSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20580,7 +20580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLockUnlockSystemFill")]
-        Icon::RiLockUnlockSystemFill => {
+        RiIcon::RiLockUnlockSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20593,7 +20593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLockUnlockSystemLine")]
-        Icon::RiLockUnlockSystemLine => {
+        RiIcon::RiLockUnlockSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20606,7 +20606,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoginBoxSystemFill")]
-        Icon::RiLoginBoxSystemFill => {
+        RiIcon::RiLoginBoxSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20619,7 +20619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoginBoxSystemLine")]
-        Icon::RiLoginBoxSystemLine => {
+        RiIcon::RiLoginBoxSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20632,7 +20632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoginCircleSystemFill")]
-        Icon::RiLoginCircleSystemFill => {
+        RiIcon::RiLoginCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20645,7 +20645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLoginCircleSystemLine")]
-        Icon::RiLoginCircleSystemLine => {
+        RiIcon::RiLoginCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20658,7 +20658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutBoxRSystemFill")]
-        Icon::RiLogoutBoxRSystemFill => {
+        RiIcon::RiLogoutBoxRSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20671,7 +20671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutBoxRSystemLine")]
-        Icon::RiLogoutBoxRSystemLine => {
+        RiIcon::RiLogoutBoxRSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20684,7 +20684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutBoxSystemFill")]
-        Icon::RiLogoutBoxSystemFill => {
+        RiIcon::RiLogoutBoxSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20697,7 +20697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutBoxSystemLine")]
-        Icon::RiLogoutBoxSystemLine => {
+        RiIcon::RiLogoutBoxSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20710,7 +20710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutCircleRSystemFill")]
-        Icon::RiLogoutCircleRSystemFill => {
+        RiIcon::RiLogoutCircleRSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20723,7 +20723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutCircleRSystemLine")]
-        Icon::RiLogoutCircleRSystemLine => {
+        RiIcon::RiLogoutCircleRSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20736,7 +20736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutCircleSystemFill")]
-        Icon::RiLogoutCircleSystemFill => {
+        RiIcon::RiLogoutCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20749,7 +20749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLogoutCircleSystemLine")]
-        Icon::RiLogoutCircleSystemLine => {
+        RiIcon::RiLogoutCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20762,7 +20762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLuggageCartMapFill")]
-        Icon::RiLuggageCartMapFill => {
+        RiIcon::RiLuggageCartMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20775,7 +20775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLuggageCartMapLine")]
-        Icon::RiLuggageCartMapLine => {
+        RiIcon::RiLuggageCartMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20788,7 +20788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLuggageDepositMapFill")]
-        Icon::RiLuggageDepositMapFill => {
+        RiIcon::RiLuggageDepositMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20801,7 +20801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLuggageDepositMapLine")]
-        Icon::RiLuggageDepositMapLine => {
+        RiIcon::RiLuggageDepositMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20814,7 +20814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLungsHealthFill")]
-        Icon::RiLungsHealthFill => {
+        RiIcon::RiLungsHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20827,7 +20827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiLungsHealthLine")]
-        Icon::RiLungsHealthLine => {
+        RiIcon::RiLungsHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20840,7 +20840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMacDeviceFill")]
-        Icon::RiMacDeviceFill => {
+        RiIcon::RiMacDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20853,7 +20853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMacDeviceLine")]
-        Icon::RiMacDeviceLine => {
+        RiIcon::RiMacDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20866,7 +20866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMacbookDeviceFill")]
-        Icon::RiMacbookDeviceFill => {
+        RiIcon::RiMacbookDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20879,7 +20879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMacbookDeviceLine")]
-        Icon::RiMacbookDeviceLine => {
+        RiIcon::RiMacbookDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20892,7 +20892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMagicDesignFill")]
-        Icon::RiMagicDesignFill => {
+        RiIcon::RiMagicDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20905,7 +20905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMagicDesignLine")]
-        Icon::RiMagicDesignLine => {
+        RiIcon::RiMagicDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20918,7 +20918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailAddBusinessFill")]
-        Icon::RiMailAddBusinessFill => {
+        RiIcon::RiMailAddBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20931,7 +20931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailAddBusinessLine")]
-        Icon::RiMailAddBusinessLine => {
+        RiIcon::RiMailAddBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20944,7 +20944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailBusinessFill")]
-        Icon::RiMailBusinessFill => {
+        RiIcon::RiMailBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20957,7 +20957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailBusinessLine")]
-        Icon::RiMailBusinessLine => {
+        RiIcon::RiMailBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20970,7 +20970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailCheckBusinessFill")]
-        Icon::RiMailCheckBusinessFill => {
+        RiIcon::RiMailCheckBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20983,7 +20983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailCheckBusinessLine")]
-        Icon::RiMailCheckBusinessLine => {
+        RiIcon::RiMailCheckBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -20996,7 +20996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailCloseBusinessFill")]
-        Icon::RiMailCloseBusinessFill => {
+        RiIcon::RiMailCloseBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21009,7 +21009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailCloseBusinessLine")]
-        Icon::RiMailCloseBusinessLine => {
+        RiIcon::RiMailCloseBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21022,7 +21022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailDownloadBusinessFill")]
-        Icon::RiMailDownloadBusinessFill => {
+        RiIcon::RiMailDownloadBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21035,7 +21035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailDownloadBusinessLine")]
-        Icon::RiMailDownloadBusinessLine => {
+        RiIcon::RiMailDownloadBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21048,7 +21048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailForbidBusinessFill")]
-        Icon::RiMailForbidBusinessFill => {
+        RiIcon::RiMailForbidBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21061,7 +21061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailForbidBusinessLine")]
-        Icon::RiMailForbidBusinessLine => {
+        RiIcon::RiMailForbidBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21074,7 +21074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailLockBusinessFill")]
-        Icon::RiMailLockBusinessFill => {
+        RiIcon::RiMailLockBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21087,7 +21087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailLockBusinessLine")]
-        Icon::RiMailLockBusinessLine => {
+        RiIcon::RiMailLockBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21100,7 +21100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailOpenBusinessFill")]
-        Icon::RiMailOpenBusinessFill => {
+        RiIcon::RiMailOpenBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21113,7 +21113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailOpenBusinessLine")]
-        Icon::RiMailOpenBusinessLine => {
+        RiIcon::RiMailOpenBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21126,7 +21126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailSendBusinessFill")]
-        Icon::RiMailSendBusinessFill => {
+        RiIcon::RiMailSendBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21139,7 +21139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailSendBusinessLine")]
-        Icon::RiMailSendBusinessLine => {
+        RiIcon::RiMailSendBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21152,7 +21152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailSettingsBusinessFill")]
-        Icon::RiMailSettingsBusinessFill => {
+        RiIcon::RiMailSettingsBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21165,7 +21165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailSettingsBusinessLine")]
-        Icon::RiMailSettingsBusinessLine => {
+        RiIcon::RiMailSettingsBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21178,7 +21178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailStarBusinessFill")]
-        Icon::RiMailStarBusinessFill => {
+        RiIcon::RiMailStarBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21191,7 +21191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailStarBusinessLine")]
-        Icon::RiMailStarBusinessLine => {
+        RiIcon::RiMailStarBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21204,7 +21204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailUnreadBusinessFill")]
-        Icon::RiMailUnreadBusinessFill => {
+        RiIcon::RiMailUnreadBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21217,7 +21217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailUnreadBusinessLine")]
-        Icon::RiMailUnreadBusinessLine => {
+        RiIcon::RiMailUnreadBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21230,7 +21230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailVolumeBusinessFill")]
-        Icon::RiMailVolumeBusinessFill => {
+        RiIcon::RiMailVolumeBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21243,7 +21243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMailVolumeBusinessLine")]
-        Icon::RiMailVolumeBusinessLine => {
+        RiIcon::RiMailVolumeBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21256,7 +21256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMap2MapFill")]
-        Icon::RiMap2MapFill => {
+        RiIcon::RiMap2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21269,7 +21269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMap2MapLine")]
-        Icon::RiMap2MapLine => {
+        RiIcon::RiMap2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21282,7 +21282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapMapFill")]
-        Icon::RiMapMapFill => {
+        RiIcon::RiMapMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21295,7 +21295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapMapLine")]
-        Icon::RiMapMapLine => {
+        RiIcon::RiMapMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21308,7 +21308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin2MapFill")]
-        Icon::RiMapPin2MapFill => {
+        RiIcon::RiMapPin2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21321,7 +21321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin2MapLine")]
-        Icon::RiMapPin2MapLine => {
+        RiIcon::RiMapPin2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21334,7 +21334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin3MapFill")]
-        Icon::RiMapPin3MapFill => {
+        RiIcon::RiMapPin3MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21347,7 +21347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin3MapLine")]
-        Icon::RiMapPin3MapLine => {
+        RiIcon::RiMapPin3MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21360,7 +21360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin4MapFill")]
-        Icon::RiMapPin4MapFill => {
+        RiIcon::RiMapPin4MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21373,7 +21373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin4MapLine")]
-        Icon::RiMapPin4MapLine => {
+        RiIcon::RiMapPin4MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21386,7 +21386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin5MapFill")]
-        Icon::RiMapPin5MapFill => {
+        RiIcon::RiMapPin5MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21399,7 +21399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPin5MapLine")]
-        Icon::RiMapPin5MapLine => {
+        RiIcon::RiMapPin5MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21412,7 +21412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinAddMapFill")]
-        Icon::RiMapPinAddMapFill => {
+        RiIcon::RiMapPinAddMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21425,7 +21425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinAddMapLine")]
-        Icon::RiMapPinAddMapLine => {
+        RiIcon::RiMapPinAddMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21438,7 +21438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinMapFill")]
-        Icon::RiMapPinMapFill => {
+        RiIcon::RiMapPinMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21451,7 +21451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinMapLine")]
-        Icon::RiMapPinMapLine => {
+        RiIcon::RiMapPinMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21464,7 +21464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinRangeMapFill")]
-        Icon::RiMapPinRangeMapFill => {
+        RiIcon::RiMapPinRangeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21477,7 +21477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinRangeMapLine")]
-        Icon::RiMapPinRangeMapLine => {
+        RiIcon::RiMapPinRangeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21490,7 +21490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinTimeMapFill")]
-        Icon::RiMapPinTimeMapFill => {
+        RiIcon::RiMapPinTimeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21503,7 +21503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinTimeMapLine")]
-        Icon::RiMapPinTimeMapLine => {
+        RiIcon::RiMapPinTimeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21516,7 +21516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinUserMapFill")]
-        Icon::RiMapPinUserMapFill => {
+        RiIcon::RiMapPinUserMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21529,7 +21529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMapPinUserMapLine")]
-        Icon::RiMapPinUserMapLine => {
+        RiIcon::RiMapPinUserMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21542,7 +21542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMarkPenDesignFill")]
-        Icon::RiMarkPenDesignFill => {
+        RiIcon::RiMarkPenDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21555,7 +21555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMarkPenDesignLine")]
-        Icon::RiMarkPenDesignLine => {
+        RiIcon::RiMarkPenDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21568,7 +21568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMarkdownDocumentFill")]
-        Icon::RiMarkdownDocumentFill => {
+        RiIcon::RiMarkdownDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21581,7 +21581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMarkdownDocumentLine")]
-        Icon::RiMarkdownDocumentLine => {
+        RiIcon::RiMarkdownDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21594,7 +21594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMarkupDesignFill")]
-        Icon::RiMarkupDesignFill => {
+        RiIcon::RiMarkupDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21607,7 +21607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMarkupDesignLine")]
-        Icon::RiMarkupDesignLine => {
+        RiIcon::RiMarkupDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21620,7 +21620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMastercardLogosFill")]
-        Icon::RiMastercardLogosFill => {
+        RiIcon::RiMastercardLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21633,7 +21633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMastercardLogosLine")]
-        Icon::RiMastercardLogosLine => {
+        RiIcon::RiMastercardLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21646,7 +21646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMastodonLogosFill")]
-        Icon::RiMastodonLogosFill => {
+        RiIcon::RiMastodonLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21659,7 +21659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMastodonLogosLine")]
-        Icon::RiMastodonLogosLine => {
+        RiIcon::RiMastodonLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21672,7 +21672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMedal2BusinessFill")]
-        Icon::RiMedal2BusinessFill => {
+        RiIcon::RiMedal2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21685,7 +21685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMedal2BusinessLine")]
-        Icon::RiMedal2BusinessLine => {
+        RiIcon::RiMedal2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21698,7 +21698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMedalBusinessFill")]
-        Icon::RiMedalBusinessFill => {
+        RiIcon::RiMedalBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21711,7 +21711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMedalBusinessLine")]
-        Icon::RiMedalBusinessLine => {
+        RiIcon::RiMedalBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21724,7 +21724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMedicineBottleHealthFill")]
-        Icon::RiMedicineBottleHealthFill => {
+        RiIcon::RiMedicineBottleHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21737,7 +21737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMedicineBottleHealthLine")]
-        Icon::RiMedicineBottleHealthLine => {
+        RiIcon::RiMedicineBottleHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21750,7 +21750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMediumLogosFill")]
-        Icon::RiMediumLogosFill => {
+        RiIcon::RiMediumLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21763,7 +21763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMediumLogosLine")]
-        Icon::RiMediumLogosLine => {
+        RiIcon::RiMediumLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21776,7 +21776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenUserFill")]
-        Icon::RiMenUserFill => {
+        RiIcon::RiMenUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21789,7 +21789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenUserLine")]
-        Icon::RiMenUserLine => {
+        RiIcon::RiMenUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21802,7 +21802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMentalHealthHealthFill")]
-        Icon::RiMentalHealthHealthFill => {
+        RiIcon::RiMentalHealthHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21815,7 +21815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMentalHealthHealthLine")]
-        Icon::RiMentalHealthHealthLine => {
+        RiIcon::RiMentalHealthHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21828,7 +21828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu2SystemFill")]
-        Icon::RiMenu2SystemFill => {
+        RiIcon::RiMenu2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21840,7 +21840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu2SystemLine")]
-        Icon::RiMenu2SystemLine => {
+        RiIcon::RiMenu2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21852,7 +21852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu3SystemFill")]
-        Icon::RiMenu3SystemFill => {
+        RiIcon::RiMenu3SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21864,7 +21864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu3SystemLine")]
-        Icon::RiMenu3SystemLine => {
+        RiIcon::RiMenu3SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21876,7 +21876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu4SystemFill")]
-        Icon::RiMenu4SystemFill => {
+        RiIcon::RiMenu4SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21888,7 +21888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu4SystemLine")]
-        Icon::RiMenu4SystemLine => {
+        RiIcon::RiMenu4SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21900,7 +21900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu5SystemFill")]
-        Icon::RiMenu5SystemFill => {
+        RiIcon::RiMenu5SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21912,7 +21912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenu5SystemLine")]
-        Icon::RiMenu5SystemLine => {
+        RiIcon::RiMenu5SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21924,7 +21924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuAddSystemFill")]
-        Icon::RiMenuAddSystemFill => {
+        RiIcon::RiMenuAddSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21937,7 +21937,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuAddSystemLine")]
-        Icon::RiMenuAddSystemLine => {
+        RiIcon::RiMenuAddSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21950,7 +21950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuFoldSystemFill")]
-        Icon::RiMenuFoldSystemFill => {
+        RiIcon::RiMenuFoldSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21963,7 +21963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuFoldSystemLine")]
-        Icon::RiMenuFoldSystemLine => {
+        RiIcon::RiMenuFoldSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21976,7 +21976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuSystemFill")]
-        Icon::RiMenuSystemFill => {
+        RiIcon::RiMenuSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -21988,7 +21988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuSystemLine")]
-        Icon::RiMenuSystemLine => {
+        RiIcon::RiMenuSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22000,7 +22000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuUnfoldSystemFill")]
-        Icon::RiMenuUnfoldSystemFill => {
+        RiIcon::RiMenuUnfoldSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22013,7 +22013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMenuUnfoldSystemLine")]
-        Icon::RiMenuUnfoldSystemLine => {
+        RiIcon::RiMenuUnfoldSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22026,7 +22026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMergeCellsHorizontalEditor")]
-        Icon::RiMergeCellsHorizontalEditor => {
+        RiIcon::RiMergeCellsHorizontalEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22039,7 +22039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMergeCellsVerticalEditor")]
-        Icon::RiMergeCellsVerticalEditor => {
+        RiIcon::RiMergeCellsVerticalEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22052,7 +22052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessage2CommunicationFill")]
-        Icon::RiMessage2CommunicationFill => {
+        RiIcon::RiMessage2CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22065,7 +22065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessage2CommunicationLine")]
-        Icon::RiMessage2CommunicationLine => {
+        RiIcon::RiMessage2CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22078,7 +22078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessage3CommunicationFill")]
-        Icon::RiMessage3CommunicationFill => {
+        RiIcon::RiMessage3CommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22091,7 +22091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessage3CommunicationLine")]
-        Icon::RiMessage3CommunicationLine => {
+        RiIcon::RiMessage3CommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22104,7 +22104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessageCommunicationFill")]
-        Icon::RiMessageCommunicationFill => {
+        RiIcon::RiMessageCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22117,7 +22117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessageCommunicationLine")]
-        Icon::RiMessageCommunicationLine => {
+        RiIcon::RiMessageCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22130,7 +22130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessengerLogosFill")]
-        Icon::RiMessengerLogosFill => {
+        RiIcon::RiMessengerLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22143,7 +22143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMessengerLogosLine")]
-        Icon::RiMessengerLogosLine => {
+        RiIcon::RiMessengerLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22156,7 +22156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMeteorWeatherFill")]
-        Icon::RiMeteorWeatherFill => {
+        RiIcon::RiMeteorWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22169,7 +22169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMeteorWeatherLine")]
-        Icon::RiMeteorWeatherLine => {
+        RiIcon::RiMeteorWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22182,7 +22182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMic2MediaFill")]
-        Icon::RiMic2MediaFill => {
+        RiIcon::RiMic2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22195,7 +22195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMic2MediaLine")]
-        Icon::RiMic2MediaLine => {
+        RiIcon::RiMic2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22208,7 +22208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicMediaFill")]
-        Icon::RiMicMediaFill => {
+        RiIcon::RiMicMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22221,7 +22221,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicMediaLine")]
-        Icon::RiMicMediaLine => {
+        RiIcon::RiMicMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22234,7 +22234,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicOffMediaFill")]
-        Icon::RiMicOffMediaFill => {
+        RiIcon::RiMicOffMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22247,7 +22247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicOffMediaLine")]
-        Icon::RiMicOffMediaLine => {
+        RiIcon::RiMicOffMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22260,7 +22260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMickeyUserFill")]
-        Icon::RiMickeyUserFill => {
+        RiIcon::RiMickeyUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22273,7 +22273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMickeyUserLine")]
-        Icon::RiMickeyUserLine => {
+        RiIcon::RiMickeyUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22286,7 +22286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicroscopeHealthFill")]
-        Icon::RiMicroscopeHealthFill => {
+        RiIcon::RiMicroscopeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22299,7 +22299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicroscopeHealthLine")]
-        Icon::RiMicroscopeHealthLine => {
+        RiIcon::RiMicroscopeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22312,7 +22312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicrosoftLogosFill")]
-        Icon::RiMicrosoftLogosFill => {
+        RiIcon::RiMicrosoftLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22325,7 +22325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMicrosoftLogosLine")]
-        Icon::RiMicrosoftLogosLine => {
+        RiIcon::RiMicrosoftLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22338,7 +22338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMindMapEditor")]
-        Icon::RiMindMapEditor => {
+        RiIcon::RiMindMapEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22351,7 +22351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMiniProgramLogosFill")]
-        Icon::RiMiniProgramLogosFill => {
+        RiIcon::RiMiniProgramLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22364,7 +22364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMiniProgramLogosLine")]
-        Icon::RiMiniProgramLogosLine => {
+        RiIcon::RiMiniProgramLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22377,7 +22377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMistWeatherFill")]
-        Icon::RiMistWeatherFill => {
+        RiIcon::RiMistWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22390,7 +22390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMistWeatherLine")]
-        Icon::RiMistWeatherLine => {
+        RiIcon::RiMistWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22403,7 +22403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyCnyBoxFinanceFill")]
-        Icon::RiMoneyCnyBoxFinanceFill => {
+        RiIcon::RiMoneyCnyBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22416,7 +22416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyCnyBoxFinanceLine")]
-        Icon::RiMoneyCnyBoxFinanceLine => {
+        RiIcon::RiMoneyCnyBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22429,7 +22429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyCnyCircleFinanceFill")]
-        Icon::RiMoneyCnyCircleFinanceFill => {
+        RiIcon::RiMoneyCnyCircleFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22442,7 +22442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyCnyCircleFinanceLine")]
-        Icon::RiMoneyCnyCircleFinanceLine => {
+        RiIcon::RiMoneyCnyCircleFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22455,7 +22455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyDollarBoxFinanceFill")]
-        Icon::RiMoneyDollarBoxFinanceFill => {
+        RiIcon::RiMoneyDollarBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22468,7 +22468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyDollarBoxFinanceLine")]
-        Icon::RiMoneyDollarBoxFinanceLine => {
+        RiIcon::RiMoneyDollarBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22481,7 +22481,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyDollarCircleFinanceFill")]
-        Icon::RiMoneyDollarCircleFinanceFill => {
+        RiIcon::RiMoneyDollarCircleFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22494,7 +22494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyDollarCircleFinanceLine")]
-        Icon::RiMoneyDollarCircleFinanceLine => {
+        RiIcon::RiMoneyDollarCircleFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22507,7 +22507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyEuroBoxFinanceFill")]
-        Icon::RiMoneyEuroBoxFinanceFill => {
+        RiIcon::RiMoneyEuroBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22520,7 +22520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyEuroBoxFinanceLine")]
-        Icon::RiMoneyEuroBoxFinanceLine => {
+        RiIcon::RiMoneyEuroBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22533,7 +22533,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyEuroCircleFinanceFill")]
-        Icon::RiMoneyEuroCircleFinanceFill => {
+        RiIcon::RiMoneyEuroCircleFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22546,7 +22546,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyEuroCircleFinanceLine")]
-        Icon::RiMoneyEuroCircleFinanceLine => {
+        RiIcon::RiMoneyEuroCircleFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22559,7 +22559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyPoundBoxFinanceFill")]
-        Icon::RiMoneyPoundBoxFinanceFill => {
+        RiIcon::RiMoneyPoundBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22572,7 +22572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyPoundBoxFinanceLine")]
-        Icon::RiMoneyPoundBoxFinanceLine => {
+        RiIcon::RiMoneyPoundBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22585,7 +22585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyPoundCircleFinanceFill")]
-        Icon::RiMoneyPoundCircleFinanceFill => {
+        RiIcon::RiMoneyPoundCircleFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22598,7 +22598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoneyPoundCircleFinanceLine")]
-        Icon::RiMoneyPoundCircleFinanceLine => {
+        RiIcon::RiMoneyPoundCircleFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22611,7 +22611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonClearWeatherFill")]
-        Icon::RiMoonClearWeatherFill => {
+        RiIcon::RiMoonClearWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22624,7 +22624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonClearWeatherLine")]
-        Icon::RiMoonClearWeatherLine => {
+        RiIcon::RiMoonClearWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22637,7 +22637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonCloudyWeatherFill")]
-        Icon::RiMoonCloudyWeatherFill => {
+        RiIcon::RiMoonCloudyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22650,7 +22650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonCloudyWeatherLine")]
-        Icon::RiMoonCloudyWeatherLine => {
+        RiIcon::RiMoonCloudyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22663,7 +22663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonFoggyWeatherFill")]
-        Icon::RiMoonFoggyWeatherFill => {
+        RiIcon::RiMoonFoggyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22676,7 +22676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonFoggyWeatherLine")]
-        Icon::RiMoonFoggyWeatherLine => {
+        RiIcon::RiMoonFoggyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22689,7 +22689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonWeatherFill")]
-        Icon::RiMoonWeatherFill => {
+        RiIcon::RiMoonWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22702,7 +22702,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoonWeatherLine")]
-        Icon::RiMoonWeatherLine => {
+        RiIcon::RiMoonWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22715,7 +22715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMore2SystemFill")]
-        Icon::RiMore2SystemFill => {
+        RiIcon::RiMore2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22728,7 +22728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMore2SystemLine")]
-        Icon::RiMore2SystemLine => {
+        RiIcon::RiMore2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22741,7 +22741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoreSystemFill")]
-        Icon::RiMoreSystemFill => {
+        RiIcon::RiMoreSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22754,7 +22754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMoreSystemLine")]
-        Icon::RiMoreSystemLine => {
+        RiIcon::RiMoreSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22767,7 +22767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMotorbikeMapFill")]
-        Icon::RiMotorbikeMapFill => {
+        RiIcon::RiMotorbikeMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22780,7 +22780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMotorbikeMapLine")]
-        Icon::RiMotorbikeMapLine => {
+        RiIcon::RiMotorbikeMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22793,7 +22793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMouseDeviceFill")]
-        Icon::RiMouseDeviceFill => {
+        RiIcon::RiMouseDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22806,7 +22806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMouseDeviceLine")]
-        Icon::RiMouseDeviceLine => {
+        RiIcon::RiMouseDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22819,7 +22819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMovie2MediaFill")]
-        Icon::RiMovie2MediaFill => {
+        RiIcon::RiMovie2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22832,7 +22832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMovie2MediaLine")]
-        Icon::RiMovie2MediaLine => {
+        RiIcon::RiMovie2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22845,7 +22845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMovieMediaFill")]
-        Icon::RiMovieMediaFill => {
+        RiIcon::RiMovieMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22858,7 +22858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMovieMediaLine")]
-        Icon::RiMovieMediaLine => {
+        RiIcon::RiMovieMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22871,7 +22871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMusic2MediaFill")]
-        Icon::RiMusic2MediaFill => {
+        RiIcon::RiMusic2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22884,7 +22884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMusic2MediaLine")]
-        Icon::RiMusic2MediaLine => {
+        RiIcon::RiMusic2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22897,7 +22897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMusicMediaFill")]
-        Icon::RiMusicMediaFill => {
+        RiIcon::RiMusicMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22909,7 +22909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMusicMediaLine")]
-        Icon::RiMusicMediaLine => {
+        RiIcon::RiMusicMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22922,7 +22922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMvMediaFill")]
-        Icon::RiMvMediaFill => {
+        RiIcon::RiMvMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22935,7 +22935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiMvMediaLine")]
-        Icon::RiMvMediaLine => {
+        RiIcon::RiMvMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22948,7 +22948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNavigationMapFill")]
-        Icon::RiNavigationMapFill => {
+        RiIcon::RiNavigationMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22961,7 +22961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNavigationMapLine")]
-        Icon::RiNavigationMapLine => {
+        RiIcon::RiNavigationMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22974,7 +22974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNeteaseCloudMusicLogosFill")]
-        Icon::RiNeteaseCloudMusicLogosFill => {
+        RiIcon::RiNeteaseCloudMusicLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -22987,7 +22987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNeteaseCloudMusicLogosLine")]
-        Icon::RiNeteaseCloudMusicLogosLine => {
+        RiIcon::RiNeteaseCloudMusicLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23000,7 +23000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNetflixLogosFill")]
-        Icon::RiNetflixLogosFill => {
+        RiIcon::RiNetflixLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23013,7 +23013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNetflixLogosLine")]
-        Icon::RiNetflixLogosLine => {
+        RiIcon::RiNetflixLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23026,7 +23026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNewspaperDocumentFill")]
-        Icon::RiNewspaperDocumentFill => {
+        RiIcon::RiNewspaperDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23039,7 +23039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNewspaperDocumentLine")]
-        Icon::RiNewspaperDocumentLine => {
+        RiIcon::RiNewspaperDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23052,7 +23052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNodeTreeEditor")]
-        Icon::RiNodeTreeEditor => {
+        RiIcon::RiNodeTreeEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23065,7 +23065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotification2MediaFill")]
-        Icon::RiNotification2MediaFill => {
+        RiIcon::RiNotification2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23078,7 +23078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotification2MediaLine")]
-        Icon::RiNotification2MediaLine => {
+        RiIcon::RiNotification2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23091,7 +23091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotification3MediaFill")]
-        Icon::RiNotification3MediaFill => {
+        RiIcon::RiNotification3MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23104,7 +23104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotification3MediaLine")]
-        Icon::RiNotification3MediaLine => {
+        RiIcon::RiNotification3MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23117,7 +23117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotification4MediaFill")]
-        Icon::RiNotification4MediaFill => {
+        RiIcon::RiNotification4MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23130,7 +23130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotification4MediaLine")]
-        Icon::RiNotification4MediaLine => {
+        RiIcon::RiNotification4MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23143,7 +23143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotificationBadgeSystemFill")]
-        Icon::RiNotificationBadgeSystemFill => {
+        RiIcon::RiNotificationBadgeSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23156,7 +23156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotificationBadgeSystemLine")]
-        Icon::RiNotificationBadgeSystemLine => {
+        RiIcon::RiNotificationBadgeSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23169,7 +23169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotificationMediaFill")]
-        Icon::RiNotificationMediaFill => {
+        RiIcon::RiNotificationMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23182,7 +23182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotificationMediaLine")]
-        Icon::RiNotificationMediaLine => {
+        RiIcon::RiNotificationMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23195,7 +23195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotificationOffMediaFill")]
-        Icon::RiNotificationOffMediaFill => {
+        RiIcon::RiNotificationOffMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23208,7 +23208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNotificationOffMediaLine")]
-        Icon::RiNotificationOffMediaLine => {
+        RiIcon::RiNotificationOffMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23221,7 +23221,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNpmjsLogosFill")]
-        Icon::RiNpmjsLogosFill => {
+        RiIcon::RiNpmjsLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23234,7 +23234,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNpmjsLogosLine")]
-        Icon::RiNpmjsLogosLine => {
+        RiIcon::RiNpmjsLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23247,7 +23247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber0Editor")]
-        Icon::RiNumber0Editor => {
+        RiIcon::RiNumber0Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23260,7 +23260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber1Editor")]
-        Icon::RiNumber1Editor => {
+        RiIcon::RiNumber1Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23272,7 +23272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber2Editor")]
-        Icon::RiNumber2Editor => {
+        RiIcon::RiNumber2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23285,7 +23285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber3Editor")]
-        Icon::RiNumber3Editor => {
+        RiIcon::RiNumber3Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23298,7 +23298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber4Editor")]
-        Icon::RiNumber4Editor => {
+        RiIcon::RiNumber4Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23311,7 +23311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber5Editor")]
-        Icon::RiNumber5Editor => {
+        RiIcon::RiNumber5Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23324,7 +23324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber6Editor")]
-        Icon::RiNumber6Editor => {
+        RiIcon::RiNumber6Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23337,7 +23337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber7Editor")]
-        Icon::RiNumber7Editor => {
+        RiIcon::RiNumber7Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23349,7 +23349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber8Editor")]
-        Icon::RiNumber8Editor => {
+        RiIcon::RiNumber8Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23362,7 +23362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumber9Editor")]
-        Icon::RiNumber9Editor => {
+        RiIcon::RiNumber9Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23375,7 +23375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumbersDocumentFill")]
-        Icon::RiNumbersDocumentFill => {
+        RiIcon::RiNumbersDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23388,7 +23388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNumbersDocumentLine")]
-        Icon::RiNumbersDocumentLine => {
+        RiIcon::RiNumbersDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23401,7 +23401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNurseHealthFill")]
-        Icon::RiNurseHealthFill => {
+        RiIcon::RiNurseHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23414,7 +23414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiNurseHealthLine")]
-        Icon::RiNurseHealthLine => {
+        RiIcon::RiNurseHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23427,7 +23427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOilMapFill")]
-        Icon::RiOilMapFill => {
+        RiIcon::RiOilMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23440,7 +23440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOilMapLine")]
-        Icon::RiOilMapLine => {
+        RiIcon::RiOilMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23453,7 +23453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOmegaEditor")]
-        Icon::RiOmegaEditor => {
+        RiIcon::RiOmegaEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23466,7 +23466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOpenArmUserFill")]
-        Icon::RiOpenArmUserFill => {
+        RiIcon::RiOpenArmUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23479,7 +23479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOpenArmUserLine")]
-        Icon::RiOpenArmUserLine => {
+        RiIcon::RiOpenArmUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23492,7 +23492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOpenSourceLogosFill")]
-        Icon::RiOpenSourceLogosFill => {
+        RiIcon::RiOpenSourceLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23505,7 +23505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOpenSourceLogosLine")]
-        Icon::RiOpenSourceLogosLine => {
+        RiIcon::RiOpenSourceLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23518,7 +23518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOperaLogosFill")]
-        Icon::RiOperaLogosFill => {
+        RiIcon::RiOperaLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23531,7 +23531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOperaLogosLine")]
-        Icon::RiOperaLogosLine => {
+        RiIcon::RiOperaLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23544,7 +23544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOrderPlayMediaFill")]
-        Icon::RiOrderPlayMediaFill => {
+        RiIcon::RiOrderPlayMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23557,7 +23557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOrderPlayMediaLine")]
-        Icon::RiOrderPlayMediaLine => {
+        RiIcon::RiOrderPlayMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23570,7 +23570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOrganizationChartEditor")]
-        Icon::RiOrganizationChartEditor => {
+        RiIcon::RiOrganizationChartEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23583,7 +23583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOutlet2OthersFill")]
-        Icon::RiOutlet2OthersFill => {
+        RiIcon::RiOutlet2OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23596,7 +23596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOutlet2OthersLine")]
-        Icon::RiOutlet2OthersLine => {
+        RiIcon::RiOutlet2OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23609,7 +23609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOutletOthersFill")]
-        Icon::RiOutletOthersFill => {
+        RiIcon::RiOutletOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23622,7 +23622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiOutletOthersLine")]
-        Icon::RiOutletOthersLine => {
+        RiIcon::RiOutletOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23635,7 +23635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPageSeparatorEditor")]
-        Icon::RiPageSeparatorEditor => {
+        RiIcon::RiPageSeparatorEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23648,7 +23648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPagesDocumentFill")]
-        Icon::RiPagesDocumentFill => {
+        RiIcon::RiPagesDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23661,7 +23661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPagesDocumentLine")]
-        Icon::RiPagesDocumentLine => {
+        RiIcon::RiPagesDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23674,7 +23674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaintBrushDesignFill")]
-        Icon::RiPaintBrushDesignFill => {
+        RiIcon::RiPaintBrushDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23687,7 +23687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaintBrushDesignLine")]
-        Icon::RiPaintBrushDesignLine => {
+        RiIcon::RiPaintBrushDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23700,7 +23700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaintDesignFill")]
-        Icon::RiPaintDesignFill => {
+        RiIcon::RiPaintDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23713,7 +23713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaintDesignLine")]
-        Icon::RiPaintDesignLine => {
+        RiIcon::RiPaintDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23726,7 +23726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaletteDesignFill")]
-        Icon::RiPaletteDesignFill => {
+        RiIcon::RiPaletteDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23739,7 +23739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaletteDesignLine")]
-        Icon::RiPaletteDesignLine => {
+        RiIcon::RiPaletteDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23752,7 +23752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPantoneDesignFill")]
-        Icon::RiPantoneDesignFill => {
+        RiIcon::RiPantoneDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23765,7 +23765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPantoneDesignLine")]
-        Icon::RiPantoneDesignLine => {
+        RiIcon::RiPantoneDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23778,7 +23778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParagraphEditor")]
-        Icon::RiParagraphEditor => {
+        RiIcon::RiParagraphEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23791,7 +23791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParentUserFill")]
-        Icon::RiParentUserFill => {
+        RiIcon::RiParentUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23804,7 +23804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParentUserLine")]
-        Icon::RiParentUserLine => {
+        RiIcon::RiParentUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23817,7 +23817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParenthesesDevelopmentFill")]
-        Icon::RiParenthesesDevelopmentFill => {
+        RiIcon::RiParenthesesDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23830,7 +23830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParenthesesDevelopmentLine")]
-        Icon::RiParenthesesDevelopmentLine => {
+        RiIcon::RiParenthesesDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23843,7 +23843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParkingBoxMapFill")]
-        Icon::RiParkingBoxMapFill => {
+        RiIcon::RiParkingBoxMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23856,7 +23856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParkingBoxMapLine")]
-        Icon::RiParkingBoxMapLine => {
+        RiIcon::RiParkingBoxMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23869,7 +23869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParkingMapFill")]
-        Icon::RiParkingMapFill => {
+        RiIcon::RiParkingMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23882,7 +23882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiParkingMapLine")]
-        Icon::RiParkingMapLine => {
+        RiIcon::RiParkingMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23895,7 +23895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPassportMapFill")]
-        Icon::RiPassportMapFill => {
+        RiIcon::RiPassportMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23908,7 +23908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPassportMapLine")]
-        Icon::RiPassportMapLine => {
+        RiIcon::RiPassportMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23921,7 +23921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPatreonLogosFill")]
-        Icon::RiPatreonLogosFill => {
+        RiIcon::RiPatreonLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23934,7 +23934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPatreonLogosLine")]
-        Icon::RiPatreonLogosLine => {
+        RiIcon::RiPatreonLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23947,7 +23947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPauseCircleMediaFill")]
-        Icon::RiPauseCircleMediaFill => {
+        RiIcon::RiPauseCircleMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23960,7 +23960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPauseCircleMediaLine")]
-        Icon::RiPauseCircleMediaLine => {
+        RiIcon::RiPauseCircleMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23973,7 +23973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPauseMediaFill")]
-        Icon::RiPauseMediaFill => {
+        RiIcon::RiPauseMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23985,7 +23985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPauseMediaLine")]
-        Icon::RiPauseMediaLine => {
+        RiIcon::RiPauseMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -23997,7 +23997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPauseMiniMediaFill")]
-        Icon::RiPauseMiniMediaFill => {
+        RiIcon::RiPauseMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24010,7 +24010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPauseMiniMediaLine")]
-        Icon::RiPauseMiniMediaLine => {
+        RiIcon::RiPauseMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24023,7 +24023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaypalLogosFill")]
-        Icon::RiPaypalLogosFill => {
+        RiIcon::RiPaypalLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24036,7 +24036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPaypalLogosLine")]
-        Icon::RiPaypalLogosLine => {
+        RiIcon::RiPaypalLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24049,7 +24049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPenNibDesignFill")]
-        Icon::RiPenNibDesignFill => {
+        RiIcon::RiPenNibDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24062,7 +24062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPenNibDesignLine")]
-        Icon::RiPenNibDesignLine => {
+        RiIcon::RiPenNibDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24075,7 +24075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPencilDesignFill")]
-        Icon::RiPencilDesignFill => {
+        RiIcon::RiPencilDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24088,7 +24088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPencilDesignLine")]
-        Icon::RiPencilDesignLine => {
+        RiIcon::RiPencilDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24101,7 +24101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPencilRuler2DesignFill")]
-        Icon::RiPencilRuler2DesignFill => {
+        RiIcon::RiPencilRuler2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24114,7 +24114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPencilRuler2DesignLine")]
-        Icon::RiPencilRuler2DesignLine => {
+        RiIcon::RiPencilRuler2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24127,7 +24127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPencilRulerDesignFill")]
-        Icon::RiPencilRulerDesignFill => {
+        RiIcon::RiPencilRulerDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24140,7 +24140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPencilRulerDesignLine")]
-        Icon::RiPencilRulerDesignLine => {
+        RiIcon::RiPencilRulerDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24153,7 +24153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPercentFinanceFill")]
-        Icon::RiPercentFinanceFill => {
+        RiIcon::RiPercentFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24166,7 +24166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPercentFinanceLine")]
-        Icon::RiPercentFinanceLine => {
+        RiIcon::RiPercentFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24179,7 +24179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneCameraMediaFill")]
-        Icon::RiPhoneCameraMediaFill => {
+        RiIcon::RiPhoneCameraMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24192,7 +24192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneCameraMediaLine")]
-        Icon::RiPhoneCameraMediaLine => {
+        RiIcon::RiPhoneCameraMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24205,7 +24205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneDeviceFill")]
-        Icon::RiPhoneDeviceFill => {
+        RiIcon::RiPhoneDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24218,7 +24218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneDeviceLine")]
-        Icon::RiPhoneDeviceLine => {
+        RiIcon::RiPhoneDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24231,7 +24231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneFindDeviceFill")]
-        Icon::RiPhoneFindDeviceFill => {
+        RiIcon::RiPhoneFindDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24244,7 +24244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneFindDeviceLine")]
-        Icon::RiPhoneFindDeviceLine => {
+        RiIcon::RiPhoneFindDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24257,7 +24257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneLockDeviceFill")]
-        Icon::RiPhoneLockDeviceFill => {
+        RiIcon::RiPhoneLockDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24270,7 +24270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPhoneLockDeviceLine")]
-        Icon::RiPhoneLockDeviceLine => {
+        RiIcon::RiPhoneLockDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24283,7 +24283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPictureInPicture2MediaFill")]
-        Icon::RiPictureInPicture2MediaFill => {
+        RiIcon::RiPictureInPicture2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24296,7 +24296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPictureInPicture2MediaLine")]
-        Icon::RiPictureInPicture2MediaLine => {
+        RiIcon::RiPictureInPicture2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24309,7 +24309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPictureInPictureExitMediaFill")]
-        Icon::RiPictureInPictureExitMediaFill => {
+        RiIcon::RiPictureInPictureExitMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24322,7 +24322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPictureInPictureExitMediaLine")]
-        Icon::RiPictureInPictureExitMediaLine => {
+        RiIcon::RiPictureInPictureExitMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24335,7 +24335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPictureInPictureMediaFill")]
-        Icon::RiPictureInPictureMediaFill => {
+        RiIcon::RiPictureInPictureMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24348,7 +24348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPictureInPictureMediaLine")]
-        Icon::RiPictureInPictureMediaLine => {
+        RiIcon::RiPictureInPictureMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24361,7 +24361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPieChart2BusinessFill")]
-        Icon::RiPieChart2BusinessFill => {
+        RiIcon::RiPieChart2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24374,7 +24374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPieChart2BusinessLine")]
-        Icon::RiPieChart2BusinessLine => {
+        RiIcon::RiPieChart2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24387,7 +24387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPieChartBoxBusinessFill")]
-        Icon::RiPieChartBoxBusinessFill => {
+        RiIcon::RiPieChartBoxBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24400,7 +24400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPieChartBoxBusinessLine")]
-        Icon::RiPieChartBoxBusinessLine => {
+        RiIcon::RiPieChartBoxBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24413,7 +24413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPieChartBusinessFill")]
-        Icon::RiPieChartBusinessFill => {
+        RiIcon::RiPieChartBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24426,7 +24426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPieChartBusinessLine")]
-        Icon::RiPieChartBusinessLine => {
+        RiIcon::RiPieChartBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24439,7 +24439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPinDistanceMapFill")]
-        Icon::RiPinDistanceMapFill => {
+        RiIcon::RiPinDistanceMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24452,7 +24452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPinDistanceMapLine")]
-        Icon::RiPinDistanceMapLine => {
+        RiIcon::RiPinDistanceMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24465,7 +24465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPingPongOthersFill")]
-        Icon::RiPingPongOthersFill => {
+        RiIcon::RiPingPongOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24478,7 +24478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPingPongOthersLine")]
-        Icon::RiPingPongOthersLine => {
+        RiIcon::RiPingPongOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24491,7 +24491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPinterestLogosFill")]
-        Icon::RiPinterestLogosFill => {
+        RiIcon::RiPinterestLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24504,7 +24504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPinterestLogosLine")]
-        Icon::RiPinterestLogosLine => {
+        RiIcon::RiPinterestLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24517,7 +24517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPinyinInputEditor")]
-        Icon::RiPinyinInputEditor => {
+        RiIcon::RiPinyinInputEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24530,7 +24530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPixelfedLogosFill")]
-        Icon::RiPixelfedLogosFill => {
+        RiIcon::RiPixelfedLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24543,7 +24543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPixelfedLogosLine")]
-        Icon::RiPixelfedLogosLine => {
+        RiIcon::RiPixelfedLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24556,7 +24556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlaneMapFill")]
-        Icon::RiPlaneMapFill => {
+        RiIcon::RiPlaneMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24569,7 +24569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlaneMapLine")]
-        Icon::RiPlaneMapLine => {
+        RiIcon::RiPlaneMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24582,7 +24582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlantOthersFill")]
-        Icon::RiPlantOthersFill => {
+        RiIcon::RiPlantOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24595,7 +24595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlantOthersLine")]
-        Icon::RiPlantOthersLine => {
+        RiIcon::RiPlantOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24608,7 +24608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayCircleMediaFill")]
-        Icon::RiPlayCircleMediaFill => {
+        RiIcon::RiPlayCircleMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24621,7 +24621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayCircleMediaLine")]
-        Icon::RiPlayCircleMediaLine => {
+        RiIcon::RiPlayCircleMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24634,7 +24634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayList2MediaFill")]
-        Icon::RiPlayList2MediaFill => {
+        RiIcon::RiPlayList2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24647,7 +24647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayList2MediaLine")]
-        Icon::RiPlayList2MediaLine => {
+        RiIcon::RiPlayList2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24660,7 +24660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayListAddMediaFill")]
-        Icon::RiPlayListAddMediaFill => {
+        RiIcon::RiPlayListAddMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24673,7 +24673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayListAddMediaLine")]
-        Icon::RiPlayListAddMediaLine => {
+        RiIcon::RiPlayListAddMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24686,7 +24686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayListMediaFill")]
-        Icon::RiPlayListMediaFill => {
+        RiIcon::RiPlayListMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24699,7 +24699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayListMediaLine")]
-        Icon::RiPlayListMediaLine => {
+        RiIcon::RiPlayListMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24712,7 +24712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayMediaFill")]
-        Icon::RiPlayMediaFill => {
+        RiIcon::RiPlayMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24725,7 +24725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayMediaLine")]
-        Icon::RiPlayMediaLine => {
+        RiIcon::RiPlayMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24738,7 +24738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayMiniMediaFill")]
-        Icon::RiPlayMiniMediaFill => {
+        RiIcon::RiPlayMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24751,7 +24751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlayMiniMediaLine")]
-        Icon::RiPlayMiniMediaLine => {
+        RiIcon::RiPlayMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24764,7 +24764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlaystationLogosFill")]
-        Icon::RiPlaystationLogosFill => {
+        RiIcon::RiPlaystationLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24777,7 +24777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlaystationLogosLine")]
-        Icon::RiPlaystationLogosLine => {
+        RiIcon::RiPlaystationLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24790,7 +24790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlug2OthersFill")]
-        Icon::RiPlug2OthersFill => {
+        RiIcon::RiPlug2OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24803,7 +24803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlug2OthersLine")]
-        Icon::RiPlug2OthersLine => {
+        RiIcon::RiPlug2OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24816,7 +24816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlugOthersFill")]
-        Icon::RiPlugOthersFill => {
+        RiIcon::RiPlugOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24829,7 +24829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPlugOthersLine")]
-        Icon::RiPlugOthersLine => {
+        RiIcon::RiPlugOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24842,7 +24842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPolaroid2MediaFill")]
-        Icon::RiPolaroid2MediaFill => {
+        RiIcon::RiPolaroid2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24855,7 +24855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPolaroid2MediaLine")]
-        Icon::RiPolaroid2MediaLine => {
+        RiIcon::RiPolaroid2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24868,7 +24868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPolaroidMediaFill")]
-        Icon::RiPolaroidMediaFill => {
+        RiIcon::RiPolaroidMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24881,7 +24881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPolaroidMediaLine")]
-        Icon::RiPolaroidMediaLine => {
+        RiIcon::RiPolaroidMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24894,7 +24894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPoliceCarMapFill")]
-        Icon::RiPoliceCarMapFill => {
+        RiIcon::RiPoliceCarMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24907,7 +24907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPoliceCarMapLine")]
-        Icon::RiPoliceCarMapLine => {
+        RiIcon::RiPoliceCarMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24920,7 +24920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPriceTag2FinanceFill")]
-        Icon::RiPriceTag2FinanceFill => {
+        RiIcon::RiPriceTag2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24933,7 +24933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPriceTag2FinanceLine")]
-        Icon::RiPriceTag2FinanceLine => {
+        RiIcon::RiPriceTag2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24946,7 +24946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPriceTag3FinanceFill")]
-        Icon::RiPriceTag3FinanceFill => {
+        RiIcon::RiPriceTag3FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24959,7 +24959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPriceTag3FinanceLine")]
-        Icon::RiPriceTag3FinanceLine => {
+        RiIcon::RiPriceTag3FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24972,7 +24972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPriceTagFinanceFill")]
-        Icon::RiPriceTagFinanceFill => {
+        RiIcon::RiPriceTagFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24985,7 +24985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPriceTagFinanceLine")]
-        Icon::RiPriceTagFinanceLine => {
+        RiIcon::RiPriceTagFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -24998,7 +24998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPrinterBusinessFill")]
-        Icon::RiPrinterBusinessFill => {
+        RiIcon::RiPrinterBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25011,7 +25011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPrinterBusinessLine")]
-        Icon::RiPrinterBusinessLine => {
+        RiIcon::RiPrinterBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25024,7 +25024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPrinterCloudBusinessFill")]
-        Icon::RiPrinterCloudBusinessFill => {
+        RiIcon::RiPrinterCloudBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25037,7 +25037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPrinterCloudBusinessLine")]
-        Icon::RiPrinterCloudBusinessLine => {
+        RiIcon::RiPrinterCloudBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25050,7 +25050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProductHuntLogosFill")]
-        Icon::RiProductHuntLogosFill => {
+        RiIcon::RiProductHuntLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25063,7 +25063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProductHuntLogosLine")]
-        Icon::RiProductHuntLogosLine => {
+        RiIcon::RiProductHuntLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25076,7 +25076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProfileBusinessFill")]
-        Icon::RiProfileBusinessFill => {
+        RiIcon::RiProfileBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25089,7 +25089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProfileBusinessLine")]
-        Icon::RiProfileBusinessLine => {
+        RiIcon::RiProfileBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25102,7 +25102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProjector2BusinessFill")]
-        Icon::RiProjector2BusinessFill => {
+        RiIcon::RiProjector2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25115,7 +25115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProjector2BusinessLine")]
-        Icon::RiProjector2BusinessLine => {
+        RiIcon::RiProjector2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25128,7 +25128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProjectorBusinessFill")]
-        Icon::RiProjectorBusinessFill => {
+        RiIcon::RiProjectorBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25141,7 +25141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiProjectorBusinessLine")]
-        Icon::RiProjectorBusinessLine => {
+        RiIcon::RiProjectorBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25154,7 +25154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPsychotherapyHealthFill")]
-        Icon::RiPsychotherapyHealthFill => {
+        RiIcon::RiPsychotherapyHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25167,7 +25167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPsychotherapyHealthLine")]
-        Icon::RiPsychotherapyHealthLine => {
+        RiIcon::RiPsychotherapyHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25180,7 +25180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPulseHealthFill")]
-        Icon::RiPulseHealthFill => {
+        RiIcon::RiPulseHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25193,7 +25193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPulseHealthLine")]
-        Icon::RiPulseHealthLine => {
+        RiIcon::RiPulseHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25206,7 +25206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPushpin2MapFill")]
-        Icon::RiPushpin2MapFill => {
+        RiIcon::RiPushpin2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25218,7 +25218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPushpin2MapLine")]
-        Icon::RiPushpin2MapLine => {
+        RiIcon::RiPushpin2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25231,7 +25231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPushpinMapFill")]
-        Icon::RiPushpinMapFill => {
+        RiIcon::RiPushpinMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25244,7 +25244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiPushpinMapLine")]
-        Icon::RiPushpinMapLine => {
+        RiIcon::RiPushpinMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25257,7 +25257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQqLogosFill")]
-        Icon::RiQqLogosFill => {
+        RiIcon::RiQqLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25270,7 +25270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQqLogosLine")]
-        Icon::RiQqLogosLine => {
+        RiIcon::RiQqLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25283,7 +25283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQrCodeDeviceFill")]
-        Icon::RiQrCodeDeviceFill => {
+        RiIcon::RiQrCodeDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25296,7 +25296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQrCodeDeviceLine")]
-        Icon::RiQrCodeDeviceLine => {
+        RiIcon::RiQrCodeDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25309,7 +25309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQrScan2DeviceFill")]
-        Icon::RiQrScan2DeviceFill => {
+        RiIcon::RiQrScan2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25322,7 +25322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQrScan2DeviceLine")]
-        Icon::RiQrScan2DeviceLine => {
+        RiIcon::RiQrScan2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25335,7 +25335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQrScanDeviceFill")]
-        Icon::RiQrScanDeviceFill => {
+        RiIcon::RiQrScanDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25348,7 +25348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQrScanDeviceLine")]
-        Icon::RiQrScanDeviceLine => {
+        RiIcon::RiQrScanDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25361,7 +25361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionAnswerCommunicationFill")]
-        Icon::RiQuestionAnswerCommunicationFill => {
+        RiIcon::RiQuestionAnswerCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25374,7 +25374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionAnswerCommunicationLine")]
-        Icon::RiQuestionAnswerCommunicationLine => {
+        RiIcon::RiQuestionAnswerCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25387,7 +25387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionMarkEditor")]
-        Icon::RiQuestionMarkEditor => {
+        RiIcon::RiQuestionMarkEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25400,7 +25400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionSystemFill")]
-        Icon::RiQuestionSystemFill => {
+        RiIcon::RiQuestionSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25413,7 +25413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionSystemLine")]
-        Icon::RiQuestionSystemLine => {
+        RiIcon::RiQuestionSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25426,7 +25426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionnaireCommunicationFill")]
-        Icon::RiQuestionnaireCommunicationFill => {
+        RiIcon::RiQuestionnaireCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25439,7 +25439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuestionnaireCommunicationLine")]
-        Icon::RiQuestionnaireCommunicationLine => {
+        RiIcon::RiQuestionnaireCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25452,7 +25452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuillPenDesignFill")]
-        Icon::RiQuillPenDesignFill => {
+        RiIcon::RiQuillPenDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25465,7 +25465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiQuillPenDesignLine")]
-        Icon::RiQuillPenDesignLine => {
+        RiIcon::RiQuillPenDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25478,7 +25478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadarDeviceFill")]
-        Icon::RiRadarDeviceFill => {
+        RiIcon::RiRadarDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25491,7 +25491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadarDeviceLine")]
-        Icon::RiRadarDeviceLine => {
+        RiIcon::RiRadarDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25504,7 +25504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadio2MediaFill")]
-        Icon::RiRadio2MediaFill => {
+        RiIcon::RiRadio2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25517,7 +25517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadio2MediaLine")]
-        Icon::RiRadio2MediaLine => {
+        RiIcon::RiRadio2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25530,7 +25530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadioButtonSystemFill")]
-        Icon::RiRadioButtonSystemFill => {
+        RiIcon::RiRadioButtonSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25543,7 +25543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadioButtonSystemLine")]
-        Icon::RiRadioButtonSystemLine => {
+        RiIcon::RiRadioButtonSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25556,7 +25556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadioMediaFill")]
-        Icon::RiRadioMediaFill => {
+        RiIcon::RiRadioMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25569,7 +25569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRadioMediaLine")]
-        Icon::RiRadioMediaLine => {
+        RiIcon::RiRadioMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25582,7 +25582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRainbowWeatherFill")]
-        Icon::RiRainbowWeatherFill => {
+        RiIcon::RiRainbowWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25595,7 +25595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRainbowWeatherLine")]
-        Icon::RiRainbowWeatherLine => {
+        RiIcon::RiRainbowWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25608,7 +25608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRainyWeatherFill")]
-        Icon::RiRainyWeatherFill => {
+        RiIcon::RiRainyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25621,7 +25621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRainyWeatherLine")]
-        Icon::RiRainyWeatherLine => {
+        RiIcon::RiRainyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25634,7 +25634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReactjsLogosFill")]
-        Icon::RiReactjsLogosFill => {
+        RiIcon::RiReactjsLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25647,7 +25647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReactjsLogosLine")]
-        Icon::RiReactjsLogosLine => {
+        RiIcon::RiReactjsLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25660,7 +25660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRecordCircleMediaFill")]
-        Icon::RiRecordCircleMediaFill => {
+        RiIcon::RiRecordCircleMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25673,7 +25673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRecordCircleMediaLine")]
-        Icon::RiRecordCircleMediaLine => {
+        RiIcon::RiRecordCircleMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25686,7 +25686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRecordMailBusinessFill")]
-        Icon::RiRecordMailBusinessFill => {
+        RiIcon::RiRecordMailBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25699,7 +25699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRecordMailBusinessLine")]
-        Icon::RiRecordMailBusinessLine => {
+        RiIcon::RiRecordMailBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25712,7 +25712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRecycleOthersFill")]
-        Icon::RiRecycleOthersFill => {
+        RiIcon::RiRecycleOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25725,7 +25725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRecycleOthersLine")]
-        Icon::RiRecycleOthersLine => {
+        RiIcon::RiRecycleOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25738,7 +25738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRedPacketFinanceFill")]
-        Icon::RiRedPacketFinanceFill => {
+        RiIcon::RiRedPacketFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25751,7 +25751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRedPacketFinanceLine")]
-        Icon::RiRedPacketFinanceLine => {
+        RiIcon::RiRedPacketFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25764,7 +25764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRedditLogosFill")]
-        Icon::RiRedditLogosFill => {
+        RiIcon::RiRedditLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25777,7 +25777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRedditLogosLine")]
-        Icon::RiRedditLogosLine => {
+        RiIcon::RiRedditLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25790,7 +25790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRefreshSystemFill")]
-        Icon::RiRefreshSystemFill => {
+        RiIcon::RiRefreshSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25803,7 +25803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRefreshSystemLine")]
-        Icon::RiRefreshSystemLine => {
+        RiIcon::RiRefreshSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25816,7 +25816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRefund2FinanceFill")]
-        Icon::RiRefund2FinanceFill => {
+        RiIcon::RiRefund2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25829,7 +25829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRefund2FinanceLine")]
-        Icon::RiRefund2FinanceLine => {
+        RiIcon::RiRefund2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25842,7 +25842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRefundFinanceFill")]
-        Icon::RiRefundFinanceFill => {
+        RiIcon::RiRefundFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25855,7 +25855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRefundFinanceLine")]
-        Icon::RiRefundFinanceLine => {
+        RiIcon::RiRefundFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25868,7 +25868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRegisteredBusinessFill")]
-        Icon::RiRegisteredBusinessFill => {
+        RiIcon::RiRegisteredBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25881,7 +25881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRegisteredBusinessLine")]
-        Icon::RiRegisteredBusinessLine => {
+        RiIcon::RiRegisteredBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25894,7 +25894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRemixiconLogosFill")]
-        Icon::RiRemixiconLogosFill => {
+        RiIcon::RiRemixiconLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25907,7 +25907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRemixiconLogosLine")]
-        Icon::RiRemixiconLogosLine => {
+        RiIcon::RiRemixiconLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25920,7 +25920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRemoteControl2DeviceFill")]
-        Icon::RiRemoteControl2DeviceFill => {
+        RiIcon::RiRemoteControl2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25933,7 +25933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRemoteControl2DeviceLine")]
-        Icon::RiRemoteControl2DeviceLine => {
+        RiIcon::RiRemoteControl2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25946,7 +25946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRemoteControlDeviceFill")]
-        Icon::RiRemoteControlDeviceFill => {
+        RiIcon::RiRemoteControlDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25959,7 +25959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRemoteControlDeviceLine")]
-        Icon::RiRemoteControlDeviceLine => {
+        RiIcon::RiRemoteControlDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25972,7 +25972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRepeat2MediaFill")]
-        Icon::RiRepeat2MediaFill => {
+        RiIcon::RiRepeat2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25985,7 +25985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRepeat2MediaLine")]
-        Icon::RiRepeat2MediaLine => {
+        RiIcon::RiRepeat2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -25998,7 +25998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRepeatMediaFill")]
-        Icon::RiRepeatMediaFill => {
+        RiIcon::RiRepeatMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26011,7 +26011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRepeatMediaLine")]
-        Icon::RiRepeatMediaLine => {
+        RiIcon::RiRepeatMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26024,7 +26024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRepeatOneMediaFill")]
-        Icon::RiRepeatOneMediaFill => {
+        RiIcon::RiRepeatOneMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26037,7 +26037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRepeatOneMediaLine")]
-        Icon::RiRepeatOneMediaLine => {
+        RiIcon::RiRepeatOneMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26050,7 +26050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReplyAllBusinessFill")]
-        Icon::RiReplyAllBusinessFill => {
+        RiIcon::RiReplyAllBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26063,7 +26063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReplyAllBusinessLine")]
-        Icon::RiReplyAllBusinessLine => {
+        RiIcon::RiReplyAllBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26076,7 +26076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReplyBusinessFill")]
-        Icon::RiReplyBusinessFill => {
+        RiIcon::RiReplyBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26089,7 +26089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReplyBusinessLine")]
-        Icon::RiReplyBusinessLine => {
+        RiIcon::RiReplyBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26102,7 +26102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReservedOthersFill")]
-        Icon::RiReservedOthersFill => {
+        RiIcon::RiReservedOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26115,7 +26115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiReservedOthersLine")]
-        Icon::RiReservedOthersLine => {
+        RiIcon::RiReservedOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26128,7 +26128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestTimeHealthFill")]
-        Icon::RiRestTimeHealthFill => {
+        RiIcon::RiRestTimeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26141,7 +26141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestTimeHealthLine")]
-        Icon::RiRestTimeHealthLine => {
+        RiIcon::RiRestTimeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26154,7 +26154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestartDeviceFill")]
-        Icon::RiRestartDeviceFill => {
+        RiIcon::RiRestartDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26167,7 +26167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestartDeviceLine")]
-        Icon::RiRestartDeviceLine => {
+        RiIcon::RiRestartDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26180,7 +26180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestaurant2MapFill")]
-        Icon::RiRestaurant2MapFill => {
+        RiIcon::RiRestaurant2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26193,7 +26193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestaurant2MapLine")]
-        Icon::RiRestaurant2MapLine => {
+        RiIcon::RiRestaurant2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26206,7 +26206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestaurantMapFill")]
-        Icon::RiRestaurantMapFill => {
+        RiIcon::RiRestaurantMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26219,7 +26219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRestaurantMapLine")]
-        Icon::RiRestaurantMapLine => {
+        RiIcon::RiRestaurantMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26232,7 +26232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRewindMediaFill")]
-        Icon::RiRewindMediaFill => {
+        RiIcon::RiRewindMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26245,7 +26245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRewindMediaLine")]
-        Icon::RiRewindMediaLine => {
+        RiIcon::RiRewindMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26258,7 +26258,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRewindMiniMediaFill")]
-        Icon::RiRewindMiniMediaFill => {
+        RiIcon::RiRewindMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26271,7 +26271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRewindMiniMediaLine")]
-        Icon::RiRewindMiniMediaLine => {
+        RiIcon::RiRewindMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26284,7 +26284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRhythmMediaFill")]
-        Icon::RiRhythmMediaFill => {
+        RiIcon::RiRhythmMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26297,7 +26297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRhythmMediaLine")]
-        Icon::RiRhythmMediaLine => {
+        RiIcon::RiRhythmMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26310,7 +26310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRidingMapFill")]
-        Icon::RiRidingMapFill => {
+        RiIcon::RiRidingMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26323,7 +26323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRidingMapLine")]
-        Icon::RiRidingMapLine => {
+        RiIcon::RiRidingMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26336,7 +26336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRoadMapMapFill")]
-        Icon::RiRoadMapMapFill => {
+        RiIcon::RiRoadMapMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26349,7 +26349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRoadMapMapLine")]
-        Icon::RiRoadMapMapLine => {
+        RiIcon::RiRoadMapMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26362,7 +26362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRoadsterMapFill")]
-        Icon::RiRoadsterMapFill => {
+        RiIcon::RiRoadsterMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26375,7 +26375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRoadsterMapLine")]
-        Icon::RiRoadsterMapLine => {
+        RiIcon::RiRoadsterMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26388,7 +26388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRobotUserFill")]
-        Icon::RiRobotUserFill => {
+        RiIcon::RiRobotUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26401,7 +26401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRobotUserLine")]
-        Icon::RiRobotUserLine => {
+        RiIcon::RiRobotUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26414,7 +26414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRocket2MapFill")]
-        Icon::RiRocket2MapFill => {
+        RiIcon::RiRocket2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26427,7 +26427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRocket2MapLine")]
-        Icon::RiRocket2MapLine => {
+        RiIcon::RiRocket2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26440,7 +26440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRocketMapFill")]
-        Icon::RiRocketMapFill => {
+        RiIcon::RiRocketMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26453,7 +26453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRocketMapLine")]
-        Icon::RiRocketMapLine => {
+        RiIcon::RiRocketMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26466,7 +26466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRotateLockDeviceFill")]
-        Icon::RiRotateLockDeviceFill => {
+        RiIcon::RiRotateLockDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26479,7 +26479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRotateLockDeviceLine")]
-        Icon::RiRotateLockDeviceLine => {
+        RiIcon::RiRotateLockDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26492,7 +26492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRoundedCornerEditor")]
-        Icon::RiRoundedCornerEditor => {
+        RiIcon::RiRoundedCornerEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26505,7 +26505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRouteMapFill")]
-        Icon::RiRouteMapFill => {
+        RiIcon::RiRouteMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26518,7 +26518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRouteMapLine")]
-        Icon::RiRouteMapLine => {
+        RiIcon::RiRouteMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26531,7 +26531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRouterDeviceFill")]
-        Icon::RiRouterDeviceFill => {
+        RiIcon::RiRouterDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26544,7 +26544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRouterDeviceLine")]
-        Icon::RiRouterDeviceLine => {
+        RiIcon::RiRouterDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26557,7 +26557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRssDeviceFill")]
-        Icon::RiRssDeviceFill => {
+        RiIcon::RiRssDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26570,7 +26570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRssDeviceLine")]
-        Icon::RiRssDeviceLine => {
+        RiIcon::RiRssDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26583,7 +26583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRuler2DesignFill")]
-        Icon::RiRuler2DesignFill => {
+        RiIcon::RiRuler2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26596,7 +26596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRuler2DesignLine")]
-        Icon::RiRuler2DesignLine => {
+        RiIcon::RiRuler2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26609,7 +26609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRulerDesignFill")]
-        Icon::RiRulerDesignFill => {
+        RiIcon::RiRulerDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26622,7 +26622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRulerDesignLine")]
-        Icon::RiRulerDesignLine => {
+        RiIcon::RiRulerDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26635,7 +26635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRunMapFill")]
-        Icon::RiRunMapFill => {
+        RiIcon::RiRunMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26648,7 +26648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiRunMapLine")]
-        Icon::RiRunMapLine => {
+        RiIcon::RiRunMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26661,7 +26661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSafariLogosFill")]
-        Icon::RiSafariLogosFill => {
+        RiIcon::RiSafariLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26674,7 +26674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSafariLogosLine")]
-        Icon::RiSafariLogosLine => {
+        RiIcon::RiSafariLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26687,7 +26687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSafe2FinanceFill")]
-        Icon::RiSafe2FinanceFill => {
+        RiIcon::RiSafe2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26700,7 +26700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSafe2FinanceLine")]
-        Icon::RiSafe2FinanceLine => {
+        RiIcon::RiSafe2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26713,7 +26713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSafeFinanceFill")]
-        Icon::RiSafeFinanceFill => {
+        RiIcon::RiSafeFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26726,7 +26726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSafeFinanceLine")]
-        Icon::RiSafeFinanceLine => {
+        RiIcon::RiSafeFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26739,7 +26739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSailboatMapFill")]
-        Icon::RiSailboatMapFill => {
+        RiIcon::RiSailboatMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26752,7 +26752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSailboatMapLine")]
-        Icon::RiSailboatMapLine => {
+        RiIcon::RiSailboatMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26765,7 +26765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSave2DeviceFill")]
-        Icon::RiSave2DeviceFill => {
+        RiIcon::RiSave2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26778,7 +26778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSave2DeviceLine")]
-        Icon::RiSave2DeviceLine => {
+        RiIcon::RiSave2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26791,7 +26791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSave3DeviceFill")]
-        Icon::RiSave3DeviceFill => {
+        RiIcon::RiSave3DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26804,7 +26804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSave3DeviceLine")]
-        Icon::RiSave3DeviceLine => {
+        RiIcon::RiSave3DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26817,7 +26817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSaveDeviceFill")]
-        Icon::RiSaveDeviceFill => {
+        RiIcon::RiSaveDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26830,7 +26830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSaveDeviceLine")]
-        Icon::RiSaveDeviceLine => {
+        RiIcon::RiSaveDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26843,7 +26843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScales2OthersFill")]
-        Icon::RiScales2OthersFill => {
+        RiIcon::RiScales2OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26856,7 +26856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScales2OthersLine")]
-        Icon::RiScales2OthersLine => {
+        RiIcon::RiScales2OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26869,7 +26869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScales3OthersFill")]
-        Icon::RiScales3OthersFill => {
+        RiIcon::RiScales3OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26882,7 +26882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScales3OthersLine")]
-        Icon::RiScales3OthersLine => {
+        RiIcon::RiScales3OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26895,7 +26895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScalesOthersFill")]
-        Icon::RiScalesOthersFill => {
+        RiIcon::RiScalesOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26908,7 +26908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScalesOthersLine")]
-        Icon::RiScalesOthersLine => {
+        RiIcon::RiScalesOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26921,7 +26921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScan2DeviceFill")]
-        Icon::RiScan2DeviceFill => {
+        RiIcon::RiScan2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26934,7 +26934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScan2DeviceLine")]
-        Icon::RiScan2DeviceLine => {
+        RiIcon::RiScan2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26947,7 +26947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScanDeviceFill")]
-        Icon::RiScanDeviceFill => {
+        RiIcon::RiScanDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26960,7 +26960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScanDeviceLine")]
-        Icon::RiScanDeviceLine => {
+        RiIcon::RiScanDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26973,7 +26973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScissors2DesignFill")]
-        Icon::RiScissors2DesignFill => {
+        RiIcon::RiScissors2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26986,7 +26986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScissors2DesignLine")]
-        Icon::RiScissors2DesignLine => {
+        RiIcon::RiScissors2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -26999,7 +26999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScissorsCutDesignFill")]
-        Icon::RiScissorsCutDesignFill => {
+        RiIcon::RiScissorsCutDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27012,7 +27012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScissorsCutDesignLine")]
-        Icon::RiScissorsCutDesignLine => {
+        RiIcon::RiScissorsCutDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27025,7 +27025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScissorsDesignFill")]
-        Icon::RiScissorsDesignFill => {
+        RiIcon::RiScissorsDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27038,7 +27038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScissorsDesignLine")]
-        Icon::RiScissorsDesignLine => {
+        RiIcon::RiScissorsDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27051,7 +27051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScreenshot2DesignFill")]
-        Icon::RiScreenshot2DesignFill => {
+        RiIcon::RiScreenshot2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27064,7 +27064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScreenshot2DesignLine")]
-        Icon::RiScreenshot2DesignLine => {
+        RiIcon::RiScreenshot2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27077,7 +27077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScreenshotDesignFill")]
-        Icon::RiScreenshotDesignFill => {
+        RiIcon::RiScreenshotDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27090,7 +27090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiScreenshotDesignLine")]
-        Icon::RiScreenshotDesignLine => {
+        RiIcon::RiScreenshotDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27103,7 +27103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSdCardDeviceFill")]
-        Icon::RiSdCardDeviceFill => {
+        RiIcon::RiSdCardDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27116,7 +27116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSdCardDeviceLine")]
-        Icon::RiSdCardDeviceLine => {
+        RiIcon::RiSdCardDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27129,7 +27129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSdCardMiniDeviceFill")]
-        Icon::RiSdCardMiniDeviceFill => {
+        RiIcon::RiSdCardMiniDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27142,7 +27142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSdCardMiniDeviceLine")]
-        Icon::RiSdCardMiniDeviceLine => {
+        RiIcon::RiSdCardMiniDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27155,7 +27155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSearch2SystemFill")]
-        Icon::RiSearch2SystemFill => {
+        RiIcon::RiSearch2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27168,7 +27168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSearch2SystemLine")]
-        Icon::RiSearch2SystemLine => {
+        RiIcon::RiSearch2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27181,7 +27181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSearchEyeSystemFill")]
-        Icon::RiSearchEyeSystemFill => {
+        RiIcon::RiSearchEyeSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27194,7 +27194,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSearchEyeSystemLine")]
-        Icon::RiSearchEyeSystemLine => {
+        RiIcon::RiSearchEyeSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27207,7 +27207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSearchSystemFill")]
-        Icon::RiSearchSystemFill => {
+        RiIcon::RiSearchSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27220,7 +27220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSearchSystemLine")]
-        Icon::RiSearchSystemLine => {
+        RiIcon::RiSearchSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27233,7 +27233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSecurePaymentFinanceFill")]
-        Icon::RiSecurePaymentFinanceFill => {
+        RiIcon::RiSecurePaymentFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27246,7 +27246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSecurePaymentFinanceLine")]
-        Icon::RiSecurePaymentFinanceLine => {
+        RiIcon::RiSecurePaymentFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27259,7 +27259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSeedlingOthersFill")]
-        Icon::RiSeedlingOthersFill => {
+        RiIcon::RiSeedlingOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27272,7 +27272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSeedlingOthersLine")]
-        Icon::RiSeedlingOthersLine => {
+        RiIcon::RiSeedlingOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27285,7 +27285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSendBackwardEditor")]
-        Icon::RiSendBackwardEditor => {
+        RiIcon::RiSendBackwardEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27298,7 +27298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSendPlane2BusinessFill")]
-        Icon::RiSendPlane2BusinessFill => {
+        RiIcon::RiSendPlane2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27311,7 +27311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSendPlane2BusinessLine")]
-        Icon::RiSendPlane2BusinessLine => {
+        RiIcon::RiSendPlane2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27324,7 +27324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSendPlaneBusinessFill")]
-        Icon::RiSendPlaneBusinessFill => {
+        RiIcon::RiSendPlaneBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27337,7 +27337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSendPlaneBusinessLine")]
-        Icon::RiSendPlaneBusinessLine => {
+        RiIcon::RiSendPlaneBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27350,7 +27350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSendToBackEditor")]
-        Icon::RiSendToBackEditor => {
+        RiIcon::RiSendToBackEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27363,7 +27363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSensorDeviceFill")]
-        Icon::RiSensorDeviceFill => {
+        RiIcon::RiSensorDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27376,7 +27376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSensorDeviceLine")]
-        Icon::RiSensorDeviceLine => {
+        RiIcon::RiSensorDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27389,7 +27389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSeparatorEditor")]
-        Icon::RiSeparatorEditor => {
+        RiIcon::RiSeparatorEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27401,7 +27401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiServerDeviceFill")]
-        Icon::RiServerDeviceFill => {
+        RiIcon::RiServerDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27414,7 +27414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiServerDeviceLine")]
-        Icon::RiServerDeviceLine => {
+        RiIcon::RiServerDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27427,7 +27427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiServiceBusinessFill")]
-        Icon::RiServiceBusinessFill => {
+        RiIcon::RiServiceBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27440,7 +27440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiServiceBusinessLine")]
-        Icon::RiServiceBusinessLine => {
+        RiIcon::RiServiceBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27453,7 +27453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings2SystemFill")]
-        Icon::RiSettings2SystemFill => {
+        RiIcon::RiSettings2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27466,7 +27466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings2SystemLine")]
-        Icon::RiSettings2SystemLine => {
+        RiIcon::RiSettings2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27479,7 +27479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings3SystemFill")]
-        Icon::RiSettings3SystemFill => {
+        RiIcon::RiSettings3SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27492,7 +27492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings3SystemLine")]
-        Icon::RiSettings3SystemLine => {
+        RiIcon::RiSettings3SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27505,7 +27505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings4SystemFill")]
-        Icon::RiSettings4SystemFill => {
+        RiIcon::RiSettings4SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27518,7 +27518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings4SystemLine")]
-        Icon::RiSettings4SystemLine => {
+        RiIcon::RiSettings4SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27531,7 +27531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings5SystemFill")]
-        Icon::RiSettings5SystemFill => {
+        RiIcon::RiSettings5SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27544,7 +27544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings5SystemLine")]
-        Icon::RiSettings5SystemLine => {
+        RiIcon::RiSettings5SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27557,7 +27557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings6SystemFill")]
-        Icon::RiSettings6SystemFill => {
+        RiIcon::RiSettings6SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27570,7 +27570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettings6SystemLine")]
-        Icon::RiSettings6SystemLine => {
+        RiIcon::RiSettings6SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27583,7 +27583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettingsSystemFill")]
-        Icon::RiSettingsSystemFill => {
+        RiIcon::RiSettingsSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27596,7 +27596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSettingsSystemLine")]
-        Icon::RiSettingsSystemLine => {
+        RiIcon::RiSettingsSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27609,7 +27609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShape2DesignFill")]
-        Icon::RiShape2DesignFill => {
+        RiIcon::RiShape2DesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27622,7 +27622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShape2DesignLine")]
-        Icon::RiShape2DesignLine => {
+        RiIcon::RiShape2DesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27635,7 +27635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShapeDesignFill")]
-        Icon::RiShapeDesignFill => {
+        RiIcon::RiShapeDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27648,7 +27648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShapeDesignLine")]
-        Icon::RiShapeDesignLine => {
+        RiIcon::RiShapeDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27661,7 +27661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareBoxSystemFill")]
-        Icon::RiShareBoxSystemFill => {
+        RiIcon::RiShareBoxSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27674,7 +27674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareBoxSystemLine")]
-        Icon::RiShareBoxSystemLine => {
+        RiIcon::RiShareBoxSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27687,7 +27687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareCircleSystemFill")]
-        Icon::RiShareCircleSystemFill => {
+        RiIcon::RiShareCircleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27700,7 +27700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareCircleSystemLine")]
-        Icon::RiShareCircleSystemLine => {
+        RiIcon::RiShareCircleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27713,7 +27713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareForward2SystemFill")]
-        Icon::RiShareForward2SystemFill => {
+        RiIcon::RiShareForward2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27726,7 +27726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareForward2SystemLine")]
-        Icon::RiShareForward2SystemLine => {
+        RiIcon::RiShareForward2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27739,7 +27739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareForwardBoxSystemFill")]
-        Icon::RiShareForwardBoxSystemFill => {
+        RiIcon::RiShareForwardBoxSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27752,7 +27752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareForwardBoxSystemLine")]
-        Icon::RiShareForwardBoxSystemLine => {
+        RiIcon::RiShareForwardBoxSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27765,7 +27765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareForwardSystemFill")]
-        Icon::RiShareForwardSystemFill => {
+        RiIcon::RiShareForwardSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27778,7 +27778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareForwardSystemLine")]
-        Icon::RiShareForwardSystemLine => {
+        RiIcon::RiShareForwardSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27791,7 +27791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareSystemFill")]
-        Icon::RiShareSystemFill => {
+        RiIcon::RiShareSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27804,7 +27804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShareSystemLine")]
-        Icon::RiShareSystemLine => {
+        RiIcon::RiShareSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27817,7 +27817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldCheckSystemFill")]
-        Icon::RiShieldCheckSystemFill => {
+        RiIcon::RiShieldCheckSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27830,7 +27830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldCheckSystemLine")]
-        Icon::RiShieldCheckSystemLine => {
+        RiIcon::RiShieldCheckSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27843,7 +27843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldCrossSystemFill")]
-        Icon::RiShieldCrossSystemFill => {
+        RiIcon::RiShieldCrossSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27856,7 +27856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldCrossSystemLine")]
-        Icon::RiShieldCrossSystemLine => {
+        RiIcon::RiShieldCrossSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27869,7 +27869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldFlashSystemFill")]
-        Icon::RiShieldFlashSystemFill => {
+        RiIcon::RiShieldFlashSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27882,7 +27882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldFlashSystemLine")]
-        Icon::RiShieldFlashSystemLine => {
+        RiIcon::RiShieldFlashSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27895,7 +27895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldKeyholeSystemFill")]
-        Icon::RiShieldKeyholeSystemFill => {
+        RiIcon::RiShieldKeyholeSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27908,7 +27908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldKeyholeSystemLine")]
-        Icon::RiShieldKeyholeSystemLine => {
+        RiIcon::RiShieldKeyholeSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27921,7 +27921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldStarSystemFill")]
-        Icon::RiShieldStarSystemFill => {
+        RiIcon::RiShieldStarSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27934,7 +27934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldStarSystemLine")]
-        Icon::RiShieldStarSystemLine => {
+        RiIcon::RiShieldStarSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27947,7 +27947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldSystemFill")]
-        Icon::RiShieldSystemFill => {
+        RiIcon::RiShieldSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27960,7 +27960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldSystemLine")]
-        Icon::RiShieldSystemLine => {
+        RiIcon::RiShieldSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27973,7 +27973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldUserSystemFill")]
-        Icon::RiShieldUserSystemFill => {
+        RiIcon::RiShieldUserSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27986,7 +27986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShieldUserSystemLine")]
-        Icon::RiShieldUserSystemLine => {
+        RiIcon::RiShieldUserSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -27999,7 +27999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShip2MapFill")]
-        Icon::RiShip2MapFill => {
+        RiIcon::RiShip2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28012,7 +28012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShip2MapLine")]
-        Icon::RiShip2MapLine => {
+        RiIcon::RiShip2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28025,7 +28025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShipMapFill")]
-        Icon::RiShipMapFill => {
+        RiIcon::RiShipMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28038,7 +28038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShipMapLine")]
-        Icon::RiShipMapLine => {
+        RiIcon::RiShipMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28051,7 +28051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShirtOthersFill")]
-        Icon::RiShirtOthersFill => {
+        RiIcon::RiShirtOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28064,7 +28064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShirtOthersLine")]
-        Icon::RiShirtOthersLine => {
+        RiIcon::RiShirtOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28077,7 +28077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBag2FinanceFill")]
-        Icon::RiShoppingBag2FinanceFill => {
+        RiIcon::RiShoppingBag2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28090,7 +28090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBag2FinanceLine")]
-        Icon::RiShoppingBag2FinanceLine => {
+        RiIcon::RiShoppingBag2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28103,7 +28103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBag3FinanceFill")]
-        Icon::RiShoppingBag3FinanceFill => {
+        RiIcon::RiShoppingBag3FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28116,7 +28116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBag3FinanceLine")]
-        Icon::RiShoppingBag3FinanceLine => {
+        RiIcon::RiShoppingBag3FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28129,7 +28129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBagFinanceFill")]
-        Icon::RiShoppingBagFinanceFill => {
+        RiIcon::RiShoppingBagFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28142,7 +28142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBagFinanceLine")]
-        Icon::RiShoppingBagFinanceLine => {
+        RiIcon::RiShoppingBagFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28155,7 +28155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBasket2FinanceFill")]
-        Icon::RiShoppingBasket2FinanceFill => {
+        RiIcon::RiShoppingBasket2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28168,7 +28168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBasket2FinanceLine")]
-        Icon::RiShoppingBasket2FinanceLine => {
+        RiIcon::RiShoppingBasket2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28181,7 +28181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBasketFinanceFill")]
-        Icon::RiShoppingBasketFinanceFill => {
+        RiIcon::RiShoppingBasketFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28194,7 +28194,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingBasketFinanceLine")]
-        Icon::RiShoppingBasketFinanceLine => {
+        RiIcon::RiShoppingBasketFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28207,7 +28207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingCart2FinanceFill")]
-        Icon::RiShoppingCart2FinanceFill => {
+        RiIcon::RiShoppingCart2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28220,7 +28220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingCart2FinanceLine")]
-        Icon::RiShoppingCart2FinanceLine => {
+        RiIcon::RiShoppingCart2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28233,7 +28233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingCartFinanceFill")]
-        Icon::RiShoppingCartFinanceFill => {
+        RiIcon::RiShoppingCartFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28246,7 +28246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShoppingCartFinanceLine")]
-        Icon::RiShoppingCartFinanceLine => {
+        RiIcon::RiShoppingCartFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28259,7 +28259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShowersWeatherFill")]
-        Icon::RiShowersWeatherFill => {
+        RiIcon::RiShowersWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28272,7 +28272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShowersWeatherLine")]
-        Icon::RiShowersWeatherLine => {
+        RiIcon::RiShowersWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28285,7 +28285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShuffleMediaFill")]
-        Icon::RiShuffleMediaFill => {
+        RiIcon::RiShuffleMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28298,7 +28298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShuffleMediaLine")]
-        Icon::RiShuffleMediaLine => {
+        RiIcon::RiShuffleMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28311,7 +28311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShutDownDeviceFill")]
-        Icon::RiShutDownDeviceFill => {
+        RiIcon::RiShutDownDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28324,7 +28324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiShutDownDeviceLine")]
-        Icon::RiShutDownDeviceLine => {
+        RiIcon::RiShutDownDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28337,7 +28337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSideBarSystemFill")]
-        Icon::RiSideBarSystemFill => {
+        RiIcon::RiSideBarSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28350,7 +28350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSideBarSystemLine")]
-        Icon::RiSideBarSystemLine => {
+        RiIcon::RiSideBarSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28363,7 +28363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalTowerMapFill")]
-        Icon::RiSignalTowerMapFill => {
+        RiIcon::RiSignalTowerMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28376,7 +28376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalTowerMapLine")]
-        Icon::RiSignalTowerMapLine => {
+        RiIcon::RiSignalTowerMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28389,7 +28389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifi1DeviceFill")]
-        Icon::RiSignalWifi1DeviceFill => {
+        RiIcon::RiSignalWifi1DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28402,7 +28402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifi1DeviceLine")]
-        Icon::RiSignalWifi1DeviceLine => {
+        RiIcon::RiSignalWifi1DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28415,7 +28415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifi2DeviceFill")]
-        Icon::RiSignalWifi2DeviceFill => {
+        RiIcon::RiSignalWifi2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28428,7 +28428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifi2DeviceLine")]
-        Icon::RiSignalWifi2DeviceLine => {
+        RiIcon::RiSignalWifi2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28441,7 +28441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifi3DeviceFill")]
-        Icon::RiSignalWifi3DeviceFill => {
+        RiIcon::RiSignalWifi3DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28454,7 +28454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifi3DeviceLine")]
-        Icon::RiSignalWifi3DeviceLine => {
+        RiIcon::RiSignalWifi3DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28467,7 +28467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifiDeviceFill")]
-        Icon::RiSignalWifiDeviceFill => {
+        RiIcon::RiSignalWifiDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28480,7 +28480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifiDeviceLine")]
-        Icon::RiSignalWifiDeviceLine => {
+        RiIcon::RiSignalWifiDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28493,7 +28493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifiErrorDeviceFill")]
-        Icon::RiSignalWifiErrorDeviceFill => {
+        RiIcon::RiSignalWifiErrorDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28506,7 +28506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifiErrorDeviceLine")]
-        Icon::RiSignalWifiErrorDeviceLine => {
+        RiIcon::RiSignalWifiErrorDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28519,7 +28519,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifiOffDeviceFill")]
-        Icon::RiSignalWifiOffDeviceFill => {
+        RiIcon::RiSignalWifiOffDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28532,7 +28532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSignalWifiOffDeviceLine")]
-        Icon::RiSignalWifiOffDeviceLine => {
+        RiIcon::RiSignalWifiOffDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28545,7 +28545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSimCard2DeviceFill")]
-        Icon::RiSimCard2DeviceFill => {
+        RiIcon::RiSimCard2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28558,7 +28558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSimCard2DeviceLine")]
-        Icon::RiSimCard2DeviceLine => {
+        RiIcon::RiSimCard2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28571,7 +28571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSimCardDeviceFill")]
-        Icon::RiSimCardDeviceFill => {
+        RiIcon::RiSimCardDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28584,7 +28584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSimCardDeviceLine")]
-        Icon::RiSimCardDeviceLine => {
+        RiIcon::RiSimCardDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28597,7 +28597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSingleQuotesLEditor")]
-        Icon::RiSingleQuotesLEditor => {
+        RiIcon::RiSingleQuotesLEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28610,7 +28610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSingleQuotesREditor")]
-        Icon::RiSingleQuotesREditor => {
+        RiIcon::RiSingleQuotesREditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28623,7 +28623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSipDesignFill")]
-        Icon::RiSipDesignFill => {
+        RiIcon::RiSipDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28636,7 +28636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSipDesignLine")]
-        Icon::RiSipDesignLine => {
+        RiIcon::RiSipDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28649,7 +28649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipBackMediaFill")]
-        Icon::RiSkipBackMediaFill => {
+        RiIcon::RiSkipBackMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28662,7 +28662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipBackMediaLine")]
-        Icon::RiSkipBackMediaLine => {
+        RiIcon::RiSkipBackMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28675,7 +28675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipBackMiniMediaFill")]
-        Icon::RiSkipBackMiniMediaFill => {
+        RiIcon::RiSkipBackMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28688,7 +28688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipBackMiniMediaLine")]
-        Icon::RiSkipBackMiniMediaLine => {
+        RiIcon::RiSkipBackMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28701,7 +28701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipForwardMediaFill")]
-        Icon::RiSkipForwardMediaFill => {
+        RiIcon::RiSkipForwardMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28714,7 +28714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipForwardMediaLine")]
-        Icon::RiSkipForwardMediaLine => {
+        RiIcon::RiSkipForwardMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28727,7 +28727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipForwardMiniMediaFill")]
-        Icon::RiSkipForwardMiniMediaFill => {
+        RiIcon::RiSkipForwardMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28740,7 +28740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkipForwardMiniMediaLine")]
-        Icon::RiSkipForwardMiniMediaLine => {
+        RiIcon::RiSkipForwardMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28753,7 +28753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkull2UserFill")]
-        Icon::RiSkull2UserFill => {
+        RiIcon::RiSkull2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28766,7 +28766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkull2UserLine")]
-        Icon::RiSkull2UserLine => {
+        RiIcon::RiSkull2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28779,7 +28779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkullUserFill")]
-        Icon::RiSkullUserFill => {
+        RiIcon::RiSkullUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28792,7 +28792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkullUserLine")]
-        Icon::RiSkullUserLine => {
+        RiIcon::RiSkullUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28805,7 +28805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkypeLogosFill")]
-        Icon::RiSkypeLogosFill => {
+        RiIcon::RiSkypeLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28818,7 +28818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSkypeLogosLine")]
-        Icon::RiSkypeLogosLine => {
+        RiIcon::RiSkypeLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28831,7 +28831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlackLogosFill")]
-        Icon::RiSlackLogosFill => {
+        RiIcon::RiSlackLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28844,7 +28844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlackLogosLine")]
-        Icon::RiSlackLogosLine => {
+        RiIcon::RiSlackLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28857,7 +28857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSliceDesignFill")]
-        Icon::RiSliceDesignFill => {
+        RiIcon::RiSliceDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28870,7 +28870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSliceDesignLine")]
-        Icon::RiSliceDesignLine => {
+        RiIcon::RiSliceDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28883,7 +28883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshow2BusinessFill")]
-        Icon::RiSlideshow2BusinessFill => {
+        RiIcon::RiSlideshow2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28896,7 +28896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshow2BusinessLine")]
-        Icon::RiSlideshow2BusinessLine => {
+        RiIcon::RiSlideshow2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28909,7 +28909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshow3BusinessFill")]
-        Icon::RiSlideshow3BusinessFill => {
+        RiIcon::RiSlideshow3BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28922,7 +28922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshow3BusinessLine")]
-        Icon::RiSlideshow3BusinessLine => {
+        RiIcon::RiSlideshow3BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28935,7 +28935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshow4BusinessFill")]
-        Icon::RiSlideshow4BusinessFill => {
+        RiIcon::RiSlideshow4BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28948,7 +28948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshow4BusinessLine")]
-        Icon::RiSlideshow4BusinessLine => {
+        RiIcon::RiSlideshow4BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28961,7 +28961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshowBusinessFill")]
-        Icon::RiSlideshowBusinessFill => {
+        RiIcon::RiSlideshowBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28974,7 +28974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSlideshowBusinessLine")]
-        Icon::RiSlideshowBusinessLine => {
+        RiIcon::RiSlideshowBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -28987,7 +28987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSmartphoneDeviceFill")]
-        Icon::RiSmartphoneDeviceFill => {
+        RiIcon::RiSmartphoneDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29000,7 +29000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSmartphoneDeviceLine")]
-        Icon::RiSmartphoneDeviceLine => {
+        RiIcon::RiSmartphoneDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29013,7 +29013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSnapchatLogosFill")]
-        Icon::RiSnapchatLogosFill => {
+        RiIcon::RiSnapchatLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29026,7 +29026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSnapchatLogosLine")]
-        Icon::RiSnapchatLogosLine => {
+        RiIcon::RiSnapchatLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29039,7 +29039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSnowyWeatherFill")]
-        Icon::RiSnowyWeatherFill => {
+        RiIcon::RiSnowyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29052,7 +29052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSnowyWeatherLine")]
-        Icon::RiSnowyWeatherLine => {
+        RiIcon::RiSnowyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29065,7 +29065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSortAscEditor")]
-        Icon::RiSortAscEditor => {
+        RiIcon::RiSortAscEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29078,7 +29078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSortDescEditor")]
-        Icon::RiSortDescEditor => {
+        RiIcon::RiSortDescEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29091,7 +29091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSoundModuleMediaFill")]
-        Icon::RiSoundModuleMediaFill => {
+        RiIcon::RiSoundModuleMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29104,7 +29104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSoundModuleMediaLine")]
-        Icon::RiSoundModuleMediaLine => {
+        RiIcon::RiSoundModuleMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29117,7 +29117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSoundcloudLogosFill")]
-        Icon::RiSoundcloudLogosFill => {
+        RiIcon::RiSoundcloudLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29130,7 +29130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSoundcloudLogosLine")]
-        Icon::RiSoundcloudLogosLine => {
+        RiIcon::RiSoundcloudLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29143,7 +29143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpaceEditor")]
-        Icon::RiSpaceEditor => {
+        RiIcon::RiSpaceEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29155,7 +29155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpaceShipMapFill")]
-        Icon::RiSpaceShipMapFill => {
+        RiIcon::RiSpaceShipMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29168,7 +29168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpaceShipMapLine")]
-        Icon::RiSpaceShipMapLine => {
+        RiIcon::RiSpaceShipMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29181,7 +29181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpam2SystemFill")]
-        Icon::RiSpam2SystemFill => {
+        RiIcon::RiSpam2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29194,7 +29194,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpam2SystemLine")]
-        Icon::RiSpam2SystemLine => {
+        RiIcon::RiSpam2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29207,7 +29207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpam3SystemFill")]
-        Icon::RiSpam3SystemFill => {
+        RiIcon::RiSpam3SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29220,7 +29220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpam3SystemLine")]
-        Icon::RiSpam3SystemLine => {
+        RiIcon::RiSpam3SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29233,7 +29233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpamSystemFill")]
-        Icon::RiSpamSystemFill => {
+        RiIcon::RiSpamSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29246,7 +29246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpamSystemLine")]
-        Icon::RiSpamSystemLine => {
+        RiIcon::RiSpamSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29259,7 +29259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeaker2MediaFill")]
-        Icon::RiSpeaker2MediaFill => {
+        RiIcon::RiSpeaker2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29272,7 +29272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeaker2MediaLine")]
-        Icon::RiSpeaker2MediaLine => {
+        RiIcon::RiSpeaker2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29285,7 +29285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeaker3MediaFill")]
-        Icon::RiSpeaker3MediaFill => {
+        RiIcon::RiSpeaker3MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29298,7 +29298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeaker3MediaLine")]
-        Icon::RiSpeaker3MediaLine => {
+        RiIcon::RiSpeaker3MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29311,7 +29311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeakerMediaFill")]
-        Icon::RiSpeakerMediaFill => {
+        RiIcon::RiSpeakerMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29324,7 +29324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeakerMediaLine")]
-        Icon::RiSpeakerMediaLine => {
+        RiIcon::RiSpeakerMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29337,7 +29337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpectrumLogosFill")]
-        Icon::RiSpectrumLogosFill => {
+        RiIcon::RiSpectrumLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29350,7 +29350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpectrumLogosLine")]
-        Icon::RiSpectrumLogosLine => {
+        RiIcon::RiSpectrumLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29363,7 +29363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeedMediaFill")]
-        Icon::RiSpeedMediaFill => {
+        RiIcon::RiSpeedMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29376,7 +29376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeedMediaLine")]
-        Icon::RiSpeedMediaLine => {
+        RiIcon::RiSpeedMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29389,7 +29389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeedMiniMediaFill")]
-        Icon::RiSpeedMiniMediaFill => {
+        RiIcon::RiSpeedMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29402,7 +29402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpeedMiniMediaLine")]
-        Icon::RiSpeedMiniMediaLine => {
+        RiIcon::RiSpeedMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29415,7 +29415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSplitCellsHorizontalEditor")]
-        Icon::RiSplitCellsHorizontalEditor => {
+        RiIcon::RiSplitCellsHorizontalEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29428,7 +29428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSplitCellsVerticalEditor")]
-        Icon::RiSplitCellsVerticalEditor => {
+        RiIcon::RiSplitCellsVerticalEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29441,7 +29441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpotifyLogosFill")]
-        Icon::RiSpotifyLogosFill => {
+        RiIcon::RiSpotifyLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29454,7 +29454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpotifyLogosLine")]
-        Icon::RiSpotifyLogosLine => {
+        RiIcon::RiSpotifyLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29467,7 +29467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpyUserFill")]
-        Icon::RiSpyUserFill => {
+        RiIcon::RiSpyUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29480,7 +29480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSpyUserLine")]
-        Icon::RiSpyUserLine => {
+        RiIcon::RiSpyUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29493,7 +29493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStackBusinessFill")]
-        Icon::RiStackBusinessFill => {
+        RiIcon::RiStackBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29506,7 +29506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStackBusinessLine")]
-        Icon::RiStackBusinessLine => {
+        RiIcon::RiStackBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29519,7 +29519,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStackOverflowLogosFill")]
-        Icon::RiStackOverflowLogosFill => {
+        RiIcon::RiStackOverflowLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29532,7 +29532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStackOverflowLogosLine")]
-        Icon::RiStackOverflowLogosLine => {
+        RiIcon::RiStackOverflowLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29545,7 +29545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStackshareLogosFill")]
-        Icon::RiStackshareLogosFill => {
+        RiIcon::RiStackshareLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29558,7 +29558,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStackshareLogosLine")]
-        Icon::RiStackshareLogosLine => {
+        RiIcon::RiStackshareLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29571,7 +29571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarHalfSSystemFill")]
-        Icon::RiStarHalfSSystemFill => {
+        RiIcon::RiStarHalfSSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29584,7 +29584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarHalfSSystemLine")]
-        Icon::RiStarHalfSSystemLine => {
+        RiIcon::RiStarHalfSSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29597,7 +29597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarHalfSystemFill")]
-        Icon::RiStarHalfSystemFill => {
+        RiIcon::RiStarHalfSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29610,7 +29610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarHalfSystemLine")]
-        Icon::RiStarHalfSystemLine => {
+        RiIcon::RiStarHalfSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29623,7 +29623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarSSystemFill")]
-        Icon::RiStarSSystemFill => {
+        RiIcon::RiStarSSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29636,7 +29636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarSSystemLine")]
-        Icon::RiStarSSystemLine => {
+        RiIcon::RiStarSSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29649,7 +29649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarSmileUserFill")]
-        Icon::RiStarSmileUserFill => {
+        RiIcon::RiStarSmileUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29662,7 +29662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarSmileUserLine")]
-        Icon::RiStarSmileUserLine => {
+        RiIcon::RiStarSmileUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29675,7 +29675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarSystemFill")]
-        Icon::RiStarSystemFill => {
+        RiIcon::RiStarSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29688,7 +29688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStarSystemLine")]
-        Icon::RiStarSystemLine => {
+        RiIcon::RiStarSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29701,7 +29701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSteamLogosFill")]
-        Icon::RiSteamLogosFill => {
+        RiIcon::RiSteamLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29714,7 +29714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSteamLogosLine")]
-        Icon::RiSteamLogosLine => {
+        RiIcon::RiSteamLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29727,7 +29727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSteering2MapFill")]
-        Icon::RiSteering2MapFill => {
+        RiIcon::RiSteering2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29740,7 +29740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSteering2MapLine")]
-        Icon::RiSteering2MapLine => {
+        RiIcon::RiSteering2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29753,7 +29753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSteeringMapFill")]
-        Icon::RiSteeringMapFill => {
+        RiIcon::RiSteeringMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29766,7 +29766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSteeringMapLine")]
-        Icon::RiSteeringMapLine => {
+        RiIcon::RiSteeringMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29779,7 +29779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStethoscopeHealthFill")]
-        Icon::RiStethoscopeHealthFill => {
+        RiIcon::RiStethoscopeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29792,7 +29792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStethoscopeHealthLine")]
-        Icon::RiStethoscopeHealthLine => {
+        RiIcon::RiStethoscopeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29805,7 +29805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStickyNote2DocumentFill")]
-        Icon::RiStickyNote2DocumentFill => {
+        RiIcon::RiStickyNote2DocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29818,7 +29818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStickyNote2DocumentLine")]
-        Icon::RiStickyNote2DocumentLine => {
+        RiIcon::RiStickyNote2DocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29831,7 +29831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStickyNoteDocumentFill")]
-        Icon::RiStickyNoteDocumentFill => {
+        RiIcon::RiStickyNoteDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29844,7 +29844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStickyNoteDocumentLine")]
-        Icon::RiStickyNoteDocumentLine => {
+        RiIcon::RiStickyNoteDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29857,7 +29857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStockFinanceFill")]
-        Icon::RiStockFinanceFill => {
+        RiIcon::RiStockFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29870,7 +29870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStockFinanceLine")]
-        Icon::RiStockFinanceLine => {
+        RiIcon::RiStockFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29883,7 +29883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStopCircleMediaFill")]
-        Icon::RiStopCircleMediaFill => {
+        RiIcon::RiStopCircleMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29896,7 +29896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStopCircleMediaLine")]
-        Icon::RiStopCircleMediaLine => {
+        RiIcon::RiStopCircleMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29909,7 +29909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStopMediaFill")]
-        Icon::RiStopMediaFill => {
+        RiIcon::RiStopMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29922,7 +29922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStopMediaLine")]
-        Icon::RiStopMediaLine => {
+        RiIcon::RiStopMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29935,7 +29935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStopMiniMediaFill")]
-        Icon::RiStopMiniMediaFill => {
+        RiIcon::RiStopMiniMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29948,7 +29948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStopMiniMediaLine")]
-        Icon::RiStopMiniMediaLine => {
+        RiIcon::RiStopMiniMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29961,7 +29961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStore2BuildingsFill")]
-        Icon::RiStore2BuildingsFill => {
+        RiIcon::RiStore2BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29974,7 +29974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStore2BuildingsLine")]
-        Icon::RiStore2BuildingsLine => {
+        RiIcon::RiStore2BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -29987,7 +29987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStore3BuildingsFill")]
-        Icon::RiStore3BuildingsFill => {
+        RiIcon::RiStore3BuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30000,7 +30000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStore3BuildingsLine")]
-        Icon::RiStore3BuildingsLine => {
+        RiIcon::RiStore3BuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30013,7 +30013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStoreBuildingsFill")]
-        Icon::RiStoreBuildingsFill => {
+        RiIcon::RiStoreBuildingsFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30026,7 +30026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStoreBuildingsLine")]
-        Icon::RiStoreBuildingsLine => {
+        RiIcon::RiStoreBuildingsLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30039,7 +30039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStrikethrough2Editor")]
-        Icon::RiStrikethrough2Editor => {
+        RiIcon::RiStrikethrough2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30052,7 +30052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiStrikethroughEditor")]
-        Icon::RiStrikethroughEditor => {
+        RiIcon::RiStrikethroughEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30065,7 +30065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubscript2Editor")]
-        Icon::RiSubscript2Editor => {
+        RiIcon::RiSubscript2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30078,7 +30078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubscriptEditor")]
-        Icon::RiSubscriptEditor => {
+        RiIcon::RiSubscriptEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30091,7 +30091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubtractSystemFill")]
-        Icon::RiSubtractSystemFill => {
+        RiIcon::RiSubtractSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30103,7 +30103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubtractSystemLine")]
-        Icon::RiSubtractSystemLine => {
+        RiIcon::RiSubtractSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30115,7 +30115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubwayMapFill")]
-        Icon::RiSubwayMapFill => {
+        RiIcon::RiSubwayMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30128,7 +30128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubwayMapLine")]
-        Icon::RiSubwayMapLine => {
+        RiIcon::RiSubwayMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30141,7 +30141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubwayWifiMapFill")]
-        Icon::RiSubwayWifiMapFill => {
+        RiIcon::RiSubwayWifiMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30154,7 +30154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSubwayWifiMapLine")]
-        Icon::RiSubwayWifiMapLine => {
+        RiIcon::RiSubwayWifiMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30167,7 +30167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuitcase2MapFill")]
-        Icon::RiSuitcase2MapFill => {
+        RiIcon::RiSuitcase2MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30180,7 +30180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuitcase2MapLine")]
-        Icon::RiSuitcase2MapLine => {
+        RiIcon::RiSuitcase2MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30193,7 +30193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuitcase3MapFill")]
-        Icon::RiSuitcase3MapFill => {
+        RiIcon::RiSuitcase3MapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30206,7 +30206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuitcase3MapLine")]
-        Icon::RiSuitcase3MapLine => {
+        RiIcon::RiSuitcase3MapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30219,7 +30219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuitcaseMapFill")]
-        Icon::RiSuitcaseMapFill => {
+        RiIcon::RiSuitcaseMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30232,7 +30232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuitcaseMapLine")]
-        Icon::RiSuitcaseMapLine => {
+        RiIcon::RiSuitcaseMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30245,7 +30245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSunCloudyWeatherFill")]
-        Icon::RiSunCloudyWeatherFill => {
+        RiIcon::RiSunCloudyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30258,7 +30258,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSunCloudyWeatherLine")]
-        Icon::RiSunCloudyWeatherLine => {
+        RiIcon::RiSunCloudyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30271,7 +30271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSunFoggyWeatherFill")]
-        Icon::RiSunFoggyWeatherFill => {
+        RiIcon::RiSunFoggyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30284,7 +30284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSunFoggyWeatherLine")]
-        Icon::RiSunFoggyWeatherLine => {
+        RiIcon::RiSunFoggyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30297,7 +30297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSunWeatherFill")]
-        Icon::RiSunWeatherFill => {
+        RiIcon::RiSunWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30310,7 +30310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSunWeatherLine")]
-        Icon::RiSunWeatherLine => {
+        RiIcon::RiSunWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30323,7 +30323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuperscript2Editor")]
-        Icon::RiSuperscript2Editor => {
+        RiIcon::RiSuperscript2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30336,7 +30336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSuperscriptEditor")]
-        Icon::RiSuperscriptEditor => {
+        RiIcon::RiSuperscriptEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30349,7 +30349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSurgicalMaskHealthFill")]
-        Icon::RiSurgicalMaskHealthFill => {
+        RiIcon::RiSurgicalMaskHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30362,7 +30362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSurgicalMaskHealthLine")]
-        Icon::RiSurgicalMaskHealthLine => {
+        RiIcon::RiSurgicalMaskHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30375,7 +30375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSurroundSoundMediaFill")]
-        Icon::RiSurroundSoundMediaFill => {
+        RiIcon::RiSurroundSoundMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30388,7 +30388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSurroundSoundMediaLine")]
-        Icon::RiSurroundSoundMediaLine => {
+        RiIcon::RiSurroundSoundMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30401,7 +30401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSurveyDocumentFill")]
-        Icon::RiSurveyDocumentFill => {
+        RiIcon::RiSurveyDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30414,7 +30414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSurveyDocumentLine")]
-        Icon::RiSurveyDocumentLine => {
+        RiIcon::RiSurveyDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30427,7 +30427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwapBoxFinanceFill")]
-        Icon::RiSwapBoxFinanceFill => {
+        RiIcon::RiSwapBoxFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30440,7 +30440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwapBoxFinanceLine")]
-        Icon::RiSwapBoxFinanceLine => {
+        RiIcon::RiSwapBoxFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30453,7 +30453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwapFinanceFill")]
-        Icon::RiSwapFinanceFill => {
+        RiIcon::RiSwapFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30466,7 +30466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwapFinanceLine")]
-        Icon::RiSwapFinanceLine => {
+        RiIcon::RiSwapFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30479,7 +30479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwitchLogosFill")]
-        Icon::RiSwitchLogosFill => {
+        RiIcon::RiSwitchLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30492,7 +30492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwitchLogosLine")]
-        Icon::RiSwitchLogosLine => {
+        RiIcon::RiSwitchLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30505,7 +30505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwordOthersFill")]
-        Icon::RiSwordOthersFill => {
+        RiIcon::RiSwordOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30518,7 +30518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSwordOthersLine")]
-        Icon::RiSwordOthersLine => {
+        RiIcon::RiSwordOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30531,7 +30531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSyringeHealthFill")]
-        Icon::RiSyringeHealthFill => {
+        RiIcon::RiSyringeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30544,7 +30544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiSyringeHealthLine")]
-        Icon::RiSyringeHealthLine => {
+        RiIcon::RiSyringeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30557,7 +30557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTBoxDesignFill")]
-        Icon::RiTBoxDesignFill => {
+        RiIcon::RiTBoxDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30570,7 +30570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTBoxDesignLine")]
-        Icon::RiTBoxDesignLine => {
+        RiIcon::RiTBoxDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30583,7 +30583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTShirt2OthersFill")]
-        Icon::RiTShirt2OthersFill => {
+        RiIcon::RiTShirt2OthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30596,7 +30596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTShirt2OthersLine")]
-        Icon::RiTShirt2OthersLine => {
+        RiIcon::RiTShirt2OthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30609,7 +30609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTShirtAirOthersFill")]
-        Icon::RiTShirtAirOthersFill => {
+        RiIcon::RiTShirtAirOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30622,7 +30622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTShirtAirOthersLine")]
-        Icon::RiTShirtAirOthersLine => {
+        RiIcon::RiTShirtAirOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30635,7 +30635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTShirtOthersFill")]
-        Icon::RiTShirtOthersFill => {
+        RiIcon::RiTShirtOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30648,7 +30648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTShirtOthersLine")]
-        Icon::RiTShirtOthersLine => {
+        RiIcon::RiTShirtOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30661,7 +30661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTable2Editor")]
-        Icon::RiTable2Editor => {
+        RiIcon::RiTable2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30674,7 +30674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTableAltDesignFill")]
-        Icon::RiTableAltDesignFill => {
+        RiIcon::RiTableAltDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30687,7 +30687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTableAltDesignLine")]
-        Icon::RiTableAltDesignLine => {
+        RiIcon::RiTableAltDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30700,7 +30700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTableDesignFill")]
-        Icon::RiTableDesignFill => {
+        RiIcon::RiTableDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30713,7 +30713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTableDesignLine")]
-        Icon::RiTableDesignLine => {
+        RiIcon::RiTableDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30726,7 +30726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTabletDeviceFill")]
-        Icon::RiTabletDeviceFill => {
+        RiIcon::RiTabletDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30739,7 +30739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTabletDeviceLine")]
-        Icon::RiTabletDeviceLine => {
+        RiIcon::RiTabletDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30752,7 +30752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTakeawayMapFill")]
-        Icon::RiTakeawayMapFill => {
+        RiIcon::RiTakeawayMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30765,7 +30765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTakeawayMapLine")]
-        Icon::RiTakeawayMapLine => {
+        RiIcon::RiTakeawayMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30778,7 +30778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaobaoLogosFill")]
-        Icon::RiTaobaoLogosFill => {
+        RiIcon::RiTaobaoLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30791,7 +30791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaobaoLogosLine")]
-        Icon::RiTaobaoLogosLine => {
+        RiIcon::RiTaobaoLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30804,7 +30804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTapeMediaFill")]
-        Icon::RiTapeMediaFill => {
+        RiIcon::RiTapeMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30817,7 +30817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTapeMediaLine")]
-        Icon::RiTapeMediaLine => {
+        RiIcon::RiTapeMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30830,7 +30830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaskDocumentFill")]
-        Icon::RiTaskDocumentFill => {
+        RiIcon::RiTaskDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30843,7 +30843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaskDocumentLine")]
-        Icon::RiTaskDocumentLine => {
+        RiIcon::RiTaskDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30856,7 +30856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaxiMapFill")]
-        Icon::RiTaxiMapFill => {
+        RiIcon::RiTaxiMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30869,7 +30869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaxiMapLine")]
-        Icon::RiTaxiMapLine => {
+        RiIcon::RiTaxiMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30882,7 +30882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaxiWifiMapFill")]
-        Icon::RiTaxiWifiMapFill => {
+        RiIcon::RiTaxiWifiMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30895,7 +30895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTaxiWifiMapLine")]
-        Icon::RiTaxiWifiMapLine => {
+        RiIcon::RiTaxiWifiMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30908,7 +30908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTeamUserFill")]
-        Icon::RiTeamUserFill => {
+        RiIcon::RiTeamUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30921,7 +30921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTeamUserLine")]
-        Icon::RiTeamUserLine => {
+        RiIcon::RiTeamUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30934,7 +30934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTelegramLogosFill")]
-        Icon::RiTelegramLogosFill => {
+        RiIcon::RiTelegramLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30947,7 +30947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTelegramLogosLine")]
-        Icon::RiTelegramLogosLine => {
+        RiIcon::RiTelegramLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30960,7 +30960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTempColdWeatherFill")]
-        Icon::RiTempColdWeatherFill => {
+        RiIcon::RiTempColdWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30973,7 +30973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTempColdWeatherLine")]
-        Icon::RiTempColdWeatherLine => {
+        RiIcon::RiTempColdWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30986,7 +30986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTempHotWeatherFill")]
-        Icon::RiTempHotWeatherFill => {
+        RiIcon::RiTempHotWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -30999,7 +30999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTempHotWeatherLine")]
-        Icon::RiTempHotWeatherLine => {
+        RiIcon::RiTempHotWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31012,7 +31012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTerminalBoxDevelopmentFill")]
-        Icon::RiTerminalBoxDevelopmentFill => {
+        RiIcon::RiTerminalBoxDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31025,7 +31025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTerminalBoxDevelopmentLine")]
-        Icon::RiTerminalBoxDevelopmentLine => {
+        RiIcon::RiTerminalBoxDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31038,7 +31038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTerminalDevelopmentFill")]
-        Icon::RiTerminalDevelopmentFill => {
+        RiIcon::RiTerminalDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31051,7 +31051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTerminalDevelopmentLine")]
-        Icon::RiTerminalDevelopmentLine => {
+        RiIcon::RiTerminalDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31064,7 +31064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTerminalWindowDevelopmentFill")]
-        Icon::RiTerminalWindowDevelopmentFill => {
+        RiIcon::RiTerminalWindowDevelopmentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31077,7 +31077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTerminalWindowDevelopmentLine")]
-        Icon::RiTerminalWindowDevelopmentLine => {
+        RiIcon::RiTerminalWindowDevelopmentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31090,7 +31090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTestTubeHealthFill")]
-        Icon::RiTestTubeHealthFill => {
+        RiIcon::RiTestTubeHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31103,7 +31103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTestTubeHealthLine")]
-        Icon::RiTestTubeHealthLine => {
+        RiIcon::RiTestTubeHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31116,7 +31116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTextDirectionLEditor")]
-        Icon::RiTextDirectionLEditor => {
+        RiIcon::RiTextDirectionLEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31129,7 +31129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTextDirectionREditor")]
-        Icon::RiTextDirectionREditor => {
+        RiIcon::RiTextDirectionREditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31142,7 +31142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTextEditor")]
-        Icon::RiTextEditor => {
+        RiIcon::RiTextEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31153,7 +31153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTextSpacingEditor")]
-        Icon::RiTextSpacingEditor => {
+        RiIcon::RiTextSpacingEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31166,7 +31166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTextWrapEditor")]
-        Icon::RiTextWrapEditor => {
+        RiIcon::RiTextWrapEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31179,7 +31179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThermometerHealthFill")]
-        Icon::RiThermometerHealthFill => {
+        RiIcon::RiThermometerHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31192,7 +31192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThermometerHealthLine")]
-        Icon::RiThermometerHealthLine => {
+        RiIcon::RiThermometerHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31205,7 +31205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThumbDownSystemFill")]
-        Icon::RiThumbDownSystemFill => {
+        RiIcon::RiThumbDownSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31218,7 +31218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThumbDownSystemLine")]
-        Icon::RiThumbDownSystemLine => {
+        RiIcon::RiThumbDownSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31231,7 +31231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThumbUpSystemFill")]
-        Icon::RiThumbUpSystemFill => {
+        RiIcon::RiThumbUpSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31244,7 +31244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThumbUpSystemLine")]
-        Icon::RiThumbUpSystemLine => {
+        RiIcon::RiThumbUpSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31257,7 +31257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThunderstormsWeatherFill")]
-        Icon::RiThunderstormsWeatherFill => {
+        RiIcon::RiThunderstormsWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31270,7 +31270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiThunderstormsWeatherLine")]
-        Icon::RiThunderstormsWeatherLine => {
+        RiIcon::RiThunderstormsWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31283,7 +31283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTicket2FinanceFill")]
-        Icon::RiTicket2FinanceFill => {
+        RiIcon::RiTicket2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31296,7 +31296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTicket2FinanceLine")]
-        Icon::RiTicket2FinanceLine => {
+        RiIcon::RiTicket2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31309,7 +31309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTicketFinanceFill")]
-        Icon::RiTicketFinanceFill => {
+        RiIcon::RiTicketFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31322,7 +31322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTicketFinanceLine")]
-        Icon::RiTicketFinanceLine => {
+        RiIcon::RiTicketFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31335,7 +31335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimeSystemFill")]
-        Icon::RiTimeSystemFill => {
+        RiIcon::RiTimeSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31348,7 +31348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimeSystemLine")]
-        Icon::RiTimeSystemLine => {
+        RiIcon::RiTimeSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31361,7 +31361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimer2SystemFill")]
-        Icon::RiTimer2SystemFill => {
+        RiIcon::RiTimer2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31374,7 +31374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimer2SystemLine")]
-        Icon::RiTimer2SystemLine => {
+        RiIcon::RiTimer2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31387,7 +31387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimerFlashSystemFill")]
-        Icon::RiTimerFlashSystemFill => {
+        RiIcon::RiTimerFlashSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31400,7 +31400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimerFlashSystemLine")]
-        Icon::RiTimerFlashSystemLine => {
+        RiIcon::RiTimerFlashSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31413,7 +31413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimerSystemFill")]
-        Icon::RiTimerSystemFill => {
+        RiIcon::RiTimerSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31426,7 +31426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTimerSystemLine")]
-        Icon::RiTimerSystemLine => {
+        RiIcon::RiTimerSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31439,7 +31439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTodoDocumentFill")]
-        Icon::RiTodoDocumentFill => {
+        RiIcon::RiTodoDocumentFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31452,7 +31452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTodoDocumentLine")]
-        Icon::RiTodoDocumentLine => {
+        RiIcon::RiTodoDocumentLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31465,7 +31465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiToggleSystemFill")]
-        Icon::RiToggleSystemFill => {
+        RiIcon::RiToggleSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31478,7 +31478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiToggleSystemLine")]
-        Icon::RiToggleSystemLine => {
+        RiIcon::RiToggleSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31491,7 +31491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiToolsDesignFill")]
-        Icon::RiToolsDesignFill => {
+        RiIcon::RiToolsDesignFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31504,7 +31504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiToolsDesignLine")]
-        Icon::RiToolsDesignLine => {
+        RiIcon::RiToolsDesignLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31517,7 +31517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTornadoWeatherFill")]
-        Icon::RiTornadoWeatherFill => {
+        RiIcon::RiTornadoWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31530,7 +31530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTornadoWeatherLine")]
-        Icon::RiTornadoWeatherLine => {
+        RiIcon::RiTornadoWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31543,7 +31543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrademarkBusinessFill")]
-        Icon::RiTrademarkBusinessFill => {
+        RiIcon::RiTrademarkBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31556,7 +31556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrademarkBusinessLine")]
-        Icon::RiTrademarkBusinessLine => {
+        RiIcon::RiTrademarkBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31569,7 +31569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrafficLightMapFill")]
-        Icon::RiTrafficLightMapFill => {
+        RiIcon::RiTrafficLightMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31582,7 +31582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrafficLightMapLine")]
-        Icon::RiTrafficLightMapLine => {
+        RiIcon::RiTrafficLightMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31595,7 +31595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrainMapFill")]
-        Icon::RiTrainMapFill => {
+        RiIcon::RiTrainMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31608,7 +31608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrainMapLine")]
-        Icon::RiTrainMapLine => {
+        RiIcon::RiTrainMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31621,7 +31621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrainWifiMapFill")]
-        Icon::RiTrainWifiMapFill => {
+        RiIcon::RiTrainWifiMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31634,7 +31634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrainWifiMapLine")]
-        Icon::RiTrainWifiMapLine => {
+        RiIcon::RiTrainWifiMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31647,7 +31647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTranslate2Editor")]
-        Icon::RiTranslate2Editor => {
+        RiIcon::RiTranslate2Editor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31660,7 +31660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTranslateEditor")]
-        Icon::RiTranslateEditor => {
+        RiIcon::RiTranslateEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31673,7 +31673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTravestiUserFill")]
-        Icon::RiTravestiUserFill => {
+        RiIcon::RiTravestiUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31686,7 +31686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTravestiUserLine")]
-        Icon::RiTravestiUserLine => {
+        RiIcon::RiTravestiUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31699,7 +31699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTreasureMapMapFill")]
-        Icon::RiTreasureMapMapFill => {
+        RiIcon::RiTreasureMapMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31712,7 +31712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTreasureMapMapLine")]
-        Icon::RiTreasureMapMapLine => {
+        RiIcon::RiTreasureMapMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31725,7 +31725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrelloLogosFill")]
-        Icon::RiTrelloLogosFill => {
+        RiIcon::RiTrelloLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31738,7 +31738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrelloLogosLine")]
-        Icon::RiTrelloLogosLine => {
+        RiIcon::RiTrelloLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31751,7 +31751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrophyFinanceFill")]
-        Icon::RiTrophyFinanceFill => {
+        RiIcon::RiTrophyFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31764,7 +31764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTrophyFinanceLine")]
-        Icon::RiTrophyFinanceLine => {
+        RiIcon::RiTrophyFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31777,7 +31777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTruckMapFill")]
-        Icon::RiTruckMapFill => {
+        RiIcon::RiTruckMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31790,7 +31790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTruckMapLine")]
-        Icon::RiTruckMapLine => {
+        RiIcon::RiTruckMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31803,7 +31803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTumblrLogosFill")]
-        Icon::RiTumblrLogosFill => {
+        RiIcon::RiTumblrLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31816,7 +31816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTumblrLogosLine")]
-        Icon::RiTumblrLogosLine => {
+        RiIcon::RiTumblrLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31829,7 +31829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTv2DeviceFill")]
-        Icon::RiTv2DeviceFill => {
+        RiIcon::RiTv2DeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31842,7 +31842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTv2DeviceLine")]
-        Icon::RiTv2DeviceLine => {
+        RiIcon::RiTv2DeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31855,7 +31855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTvDeviceFill")]
-        Icon::RiTvDeviceFill => {
+        RiIcon::RiTvDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31868,7 +31868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTvDeviceLine")]
-        Icon::RiTvDeviceLine => {
+        RiIcon::RiTvDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31881,7 +31881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTwitchLogosFill")]
-        Icon::RiTwitchLogosFill => {
+        RiIcon::RiTwitchLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31894,7 +31894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTwitchLogosLine")]
-        Icon::RiTwitchLogosLine => {
+        RiIcon::RiTwitchLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31907,7 +31907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTwitterLogosFill")]
-        Icon::RiTwitterLogosFill => {
+        RiIcon::RiTwitterLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31920,7 +31920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTwitterLogosLine")]
-        Icon::RiTwitterLogosLine => {
+        RiIcon::RiTwitterLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31933,7 +31933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTyphoonWeatherFill")]
-        Icon::RiTyphoonWeatherFill => {
+        RiIcon::RiTyphoonWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31946,7 +31946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiTyphoonWeatherLine")]
-        Icon::RiTyphoonWeatherLine => {
+        RiIcon::RiTyphoonWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31959,7 +31959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUDiskDeviceFill")]
-        Icon::RiUDiskDeviceFill => {
+        RiIcon::RiUDiskDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31972,7 +31972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUDiskDeviceLine")]
-        Icon::RiUDiskDeviceLine => {
+        RiIcon::RiUDiskDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31985,7 +31985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUbuntuLogosFill")]
-        Icon::RiUbuntuLogosFill => {
+        RiIcon::RiUbuntuLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -31998,7 +31998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUbuntuLogosLine")]
-        Icon::RiUbuntuLogosLine => {
+        RiIcon::RiUbuntuLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32011,7 +32011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUmbrellaOthersFill")]
-        Icon::RiUmbrellaOthersFill => {
+        RiIcon::RiUmbrellaOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32024,7 +32024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUmbrellaOthersLine")]
-        Icon::RiUmbrellaOthersLine => {
+        RiIcon::RiUmbrellaOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32037,7 +32037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUnderlineEditor")]
-        Icon::RiUnderlineEditor => {
+        RiIcon::RiUnderlineEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32050,7 +32050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUninstallDeviceFill")]
-        Icon::RiUninstallDeviceFill => {
+        RiIcon::RiUninstallDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32063,7 +32063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUninstallDeviceLine")]
-        Icon::RiUninstallDeviceLine => {
+        RiIcon::RiUninstallDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32076,7 +32076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUnsplashLogosFill")]
-        Icon::RiUnsplashLogosFill => {
+        RiIcon::RiUnsplashLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32088,7 +32088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUnsplashLogosLine")]
-        Icon::RiUnsplashLogosLine => {
+        RiIcon::RiUnsplashLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32101,7 +32101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUpload2SystemFill")]
-        Icon::RiUpload2SystemFill => {
+        RiIcon::RiUpload2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32114,7 +32114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUpload2SystemLine")]
-        Icon::RiUpload2SystemLine => {
+        RiIcon::RiUpload2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32127,7 +32127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUploadCloud2SystemFill")]
-        Icon::RiUploadCloud2SystemFill => {
+        RiIcon::RiUploadCloud2SystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32140,7 +32140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUploadCloud2SystemLine")]
-        Icon::RiUploadCloud2SystemLine => {
+        RiIcon::RiUploadCloud2SystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32153,7 +32153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUploadCloudSystemFill")]
-        Icon::RiUploadCloudSystemFill => {
+        RiIcon::RiUploadCloudSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32166,7 +32166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUploadCloudSystemLine")]
-        Icon::RiUploadCloudSystemLine => {
+        RiIcon::RiUploadCloudSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32179,7 +32179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUploadSystemFill")]
-        Icon::RiUploadSystemFill => {
+        RiIcon::RiUploadSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32191,7 +32191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUploadSystemLine")]
-        Icon::RiUploadSystemLine => {
+        RiIcon::RiUploadSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32204,7 +32204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUsbDeviceFill")]
-        Icon::RiUsbDeviceFill => {
+        RiIcon::RiUsbDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32217,7 +32217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUsbDeviceLine")]
-        Icon::RiUsbDeviceLine => {
+        RiIcon::RiUsbDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32230,7 +32230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser2UserFill")]
-        Icon::RiUser2UserFill => {
+        RiIcon::RiUser2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32243,7 +32243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser2UserLine")]
-        Icon::RiUser2UserLine => {
+        RiIcon::RiUser2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32256,7 +32256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser3UserFill")]
-        Icon::RiUser3UserFill => {
+        RiIcon::RiUser3UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32269,7 +32269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser3UserLine")]
-        Icon::RiUser3UserLine => {
+        RiIcon::RiUser3UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32282,7 +32282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser4UserFill")]
-        Icon::RiUser4UserFill => {
+        RiIcon::RiUser4UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32294,7 +32294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser4UserLine")]
-        Icon::RiUser4UserLine => {
+        RiIcon::RiUser4UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32307,7 +32307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser5UserFill")]
-        Icon::RiUser5UserFill => {
+        RiIcon::RiUser5UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32320,7 +32320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser5UserLine")]
-        Icon::RiUser5UserLine => {
+        RiIcon::RiUser5UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32333,7 +32333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser6UserFill")]
-        Icon::RiUser6UserFill => {
+        RiIcon::RiUser6UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32346,7 +32346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUser6UserLine")]
-        Icon::RiUser6UserLine => {
+        RiIcon::RiUser6UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32359,7 +32359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserAddUserFill")]
-        Icon::RiUserAddUserFill => {
+        RiIcon::RiUserAddUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32372,7 +32372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserAddUserLine")]
-        Icon::RiUserAddUserLine => {
+        RiIcon::RiUserAddUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32385,7 +32385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserFollowUserFill")]
-        Icon::RiUserFollowUserFill => {
+        RiIcon::RiUserFollowUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32398,7 +32398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserFollowUserLine")]
-        Icon::RiUserFollowUserLine => {
+        RiIcon::RiUserFollowUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32411,7 +32411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserHeartUserFill")]
-        Icon::RiUserHeartUserFill => {
+        RiIcon::RiUserHeartUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32424,7 +32424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserHeartUserLine")]
-        Icon::RiUserHeartUserLine => {
+        RiIcon::RiUserHeartUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32437,7 +32437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserLocationUserFill")]
-        Icon::RiUserLocationUserFill => {
+        RiIcon::RiUserLocationUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32450,7 +32450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserLocationUserLine")]
-        Icon::RiUserLocationUserLine => {
+        RiIcon::RiUserLocationUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32463,7 +32463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserReceived2UserFill")]
-        Icon::RiUserReceived2UserFill => {
+        RiIcon::RiUserReceived2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32476,7 +32476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserReceived2UserLine")]
-        Icon::RiUserReceived2UserLine => {
+        RiIcon::RiUserReceived2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32489,7 +32489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserReceivedUserFill")]
-        Icon::RiUserReceivedUserFill => {
+        RiIcon::RiUserReceivedUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32502,7 +32502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserReceivedUserLine")]
-        Icon::RiUserReceivedUserLine => {
+        RiIcon::RiUserReceivedUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32515,7 +32515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSearchUserFill")]
-        Icon::RiUserSearchUserFill => {
+        RiIcon::RiUserSearchUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32528,7 +32528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSearchUserLine")]
-        Icon::RiUserSearchUserLine => {
+        RiIcon::RiUserSearchUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32541,7 +32541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSettingsUserFill")]
-        Icon::RiUserSettingsUserFill => {
+        RiIcon::RiUserSettingsUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32554,7 +32554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSettingsUserLine")]
-        Icon::RiUserSettingsUserLine => {
+        RiIcon::RiUserSettingsUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32567,7 +32567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserShared2UserFill")]
-        Icon::RiUserShared2UserFill => {
+        RiIcon::RiUserShared2UserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32580,7 +32580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserShared2UserLine")]
-        Icon::RiUserShared2UserLine => {
+        RiIcon::RiUserShared2UserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32593,7 +32593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSharedUserFill")]
-        Icon::RiUserSharedUserFill => {
+        RiIcon::RiUserSharedUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32606,7 +32606,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSharedUserLine")]
-        Icon::RiUserSharedUserLine => {
+        RiIcon::RiUserSharedUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32619,7 +32619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSmileUserFill")]
-        Icon::RiUserSmileUserFill => {
+        RiIcon::RiUserSmileUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32632,7 +32632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserSmileUserLine")]
-        Icon::RiUserSmileUserLine => {
+        RiIcon::RiUserSmileUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32645,7 +32645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserStarUserFill")]
-        Icon::RiUserStarUserFill => {
+        RiIcon::RiUserStarUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32658,7 +32658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserStarUserLine")]
-        Icon::RiUserStarUserLine => {
+        RiIcon::RiUserStarUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32671,7 +32671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserUnfollowUserFill")]
-        Icon::RiUserUnfollowUserFill => {
+        RiIcon::RiUserUnfollowUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32684,7 +32684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserUnfollowUserLine")]
-        Icon::RiUserUnfollowUserLine => {
+        RiIcon::RiUserUnfollowUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32697,7 +32697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserUserFill")]
-        Icon::RiUserUserFill => {
+        RiIcon::RiUserUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32710,7 +32710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserUserLine")]
-        Icon::RiUserUserLine => {
+        RiIcon::RiUserUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32723,7 +32723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserVoiceUserFill")]
-        Icon::RiUserVoiceUserFill => {
+        RiIcon::RiUserVoiceUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32736,7 +32736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiUserVoiceUserLine")]
-        Icon::RiUserVoiceUserLine => {
+        RiIcon::RiUserVoiceUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32749,7 +32749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoAddMediaFill")]
-        Icon::RiVideoAddMediaFill => {
+        RiIcon::RiVideoAddMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32762,7 +32762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoAddMediaLine")]
-        Icon::RiVideoAddMediaLine => {
+        RiIcon::RiVideoAddMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32775,7 +32775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoChatCommunicationFill")]
-        Icon::RiVideoChatCommunicationFill => {
+        RiIcon::RiVideoChatCommunicationFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32788,7 +32788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoChatCommunicationLine")]
-        Icon::RiVideoChatCommunicationLine => {
+        RiIcon::RiVideoChatCommunicationLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32801,7 +32801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoDownloadMediaFill")]
-        Icon::RiVideoDownloadMediaFill => {
+        RiIcon::RiVideoDownloadMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32814,7 +32814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoDownloadMediaLine")]
-        Icon::RiVideoDownloadMediaLine => {
+        RiIcon::RiVideoDownloadMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32827,7 +32827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoMediaFill")]
-        Icon::RiVideoMediaFill => {
+        RiIcon::RiVideoMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32840,7 +32840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoMediaLine")]
-        Icon::RiVideoMediaLine => {
+        RiIcon::RiVideoMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32853,7 +32853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoUploadMediaFill")]
-        Icon::RiVideoUploadMediaFill => {
+        RiIcon::RiVideoUploadMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32866,7 +32866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVideoUploadMediaLine")]
-        Icon::RiVideoUploadMediaLine => {
+        RiIcon::RiVideoUploadMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32879,7 +32879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVidicon2MediaFill")]
-        Icon::RiVidicon2MediaFill => {
+        RiIcon::RiVidicon2MediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32892,7 +32892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVidicon2MediaLine")]
-        Icon::RiVidicon2MediaLine => {
+        RiIcon::RiVidicon2MediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32905,7 +32905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVidiconMediaFill")]
-        Icon::RiVidiconMediaFill => {
+        RiIcon::RiVidiconMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32918,7 +32918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVidiconMediaLine")]
-        Icon::RiVidiconMediaLine => {
+        RiIcon::RiVidiconMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32931,7 +32931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVimeoLogosFill")]
-        Icon::RiVimeoLogosFill => {
+        RiIcon::RiVimeoLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32944,7 +32944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVimeoLogosLine")]
-        Icon::RiVimeoLogosLine => {
+        RiIcon::RiVimeoLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32957,7 +32957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipCrown2FinanceFill")]
-        Icon::RiVipCrown2FinanceFill => {
+        RiIcon::RiVipCrown2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32970,7 +32970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipCrown2FinanceLine")]
-        Icon::RiVipCrown2FinanceLine => {
+        RiIcon::RiVipCrown2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32983,7 +32983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipCrownFinanceFill")]
-        Icon::RiVipCrownFinanceFill => {
+        RiIcon::RiVipCrownFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -32995,7 +32995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipCrownFinanceLine")]
-        Icon::RiVipCrownFinanceLine => {
+        RiIcon::RiVipCrownFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33008,7 +33008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipDiamondFinanceFill")]
-        Icon::RiVipDiamondFinanceFill => {
+        RiIcon::RiVipDiamondFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33021,7 +33021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipDiamondFinanceLine")]
-        Icon::RiVipDiamondFinanceLine => {
+        RiIcon::RiVipDiamondFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33034,7 +33034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipFinanceFill")]
-        Icon::RiVipFinanceFill => {
+        RiIcon::RiVipFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33047,7 +33047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVipFinanceLine")]
-        Icon::RiVipFinanceLine => {
+        RiIcon::RiVipFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33060,7 +33060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVirusHealthFill")]
-        Icon::RiVirusHealthFill => {
+        RiIcon::RiVirusHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33073,7 +33073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVirusHealthLine")]
-        Icon::RiVirusHealthLine => {
+        RiIcon::RiVirusHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33086,7 +33086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVisaLogosFill")]
-        Icon::RiVisaLogosFill => {
+        RiIcon::RiVisaLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33099,7 +33099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVisaLogosLine")]
-        Icon::RiVisaLogosLine => {
+        RiIcon::RiVisaLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33112,7 +33112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVoiceRecognitionOthersFill")]
-        Icon::RiVoiceRecognitionOthersFill => {
+        RiIcon::RiVoiceRecognitionOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33125,7 +33125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVoiceRecognitionOthersLine")]
-        Icon::RiVoiceRecognitionOthersLine => {
+        RiIcon::RiVoiceRecognitionOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33138,7 +33138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVoiceprintMediaFill")]
-        Icon::RiVoiceprintMediaFill => {
+        RiIcon::RiVoiceprintMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33151,7 +33151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVoiceprintMediaLine")]
-        Icon::RiVoiceprintMediaLine => {
+        RiIcon::RiVoiceprintMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33164,7 +33164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeDownMediaFill")]
-        Icon::RiVolumeDownMediaFill => {
+        RiIcon::RiVolumeDownMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33177,7 +33177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeDownMediaLine")]
-        Icon::RiVolumeDownMediaLine => {
+        RiIcon::RiVolumeDownMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33190,7 +33190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeMuteMediaFill")]
-        Icon::RiVolumeMuteMediaFill => {
+        RiIcon::RiVolumeMuteMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33203,7 +33203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeMuteMediaLine")]
-        Icon::RiVolumeMuteMediaLine => {
+        RiIcon::RiVolumeMuteMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33216,7 +33216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeOffVibrateMediaFill")]
-        Icon::RiVolumeOffVibrateMediaFill => {
+        RiIcon::RiVolumeOffVibrateMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33229,7 +33229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeOffVibrateMediaLine")]
-        Icon::RiVolumeOffVibrateMediaLine => {
+        RiIcon::RiVolumeOffVibrateMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33242,7 +33242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeUpMediaFill")]
-        Icon::RiVolumeUpMediaFill => {
+        RiIcon::RiVolumeUpMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33255,7 +33255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeUpMediaLine")]
-        Icon::RiVolumeUpMediaLine => {
+        RiIcon::RiVolumeUpMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33268,7 +33268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeVibrateMediaFill")]
-        Icon::RiVolumeVibrateMediaFill => {
+        RiIcon::RiVolumeVibrateMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33281,7 +33281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVolumeVibrateMediaLine")]
-        Icon::RiVolumeVibrateMediaLine => {
+        RiIcon::RiVolumeVibrateMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33294,7 +33294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVuejsLogosFill")]
-        Icon::RiVuejsLogosFill => {
+        RiIcon::RiVuejsLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33307,7 +33307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiVuejsLogosLine")]
-        Icon::RiVuejsLogosLine => {
+        RiIcon::RiVuejsLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33320,7 +33320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWalkMapFill")]
-        Icon::RiWalkMapFill => {
+        RiIcon::RiWalkMapFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33333,7 +33333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWalkMapLine")]
-        Icon::RiWalkMapLine => {
+        RiIcon::RiWalkMapLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33346,7 +33346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWallet2FinanceFill")]
-        Icon::RiWallet2FinanceFill => {
+        RiIcon::RiWallet2FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33359,7 +33359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWallet2FinanceLine")]
-        Icon::RiWallet2FinanceLine => {
+        RiIcon::RiWallet2FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33372,7 +33372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWallet3FinanceFill")]
-        Icon::RiWallet3FinanceFill => {
+        RiIcon::RiWallet3FinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33385,7 +33385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWallet3FinanceLine")]
-        Icon::RiWallet3FinanceLine => {
+        RiIcon::RiWallet3FinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33398,7 +33398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWalletFinanceFill")]
-        Icon::RiWalletFinanceFill => {
+        RiIcon::RiWalletFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33411,7 +33411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWalletFinanceLine")]
-        Icon::RiWalletFinanceLine => {
+        RiIcon::RiWalletFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33424,7 +33424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWaterFlashFinanceFill")]
-        Icon::RiWaterFlashFinanceFill => {
+        RiIcon::RiWaterFlashFinanceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33437,7 +33437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWaterFlashFinanceLine")]
-        Icon::RiWaterFlashFinanceLine => {
+        RiIcon::RiWaterFlashFinanceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33450,7 +33450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWebcamMediaFill")]
-        Icon::RiWebcamMediaFill => {
+        RiIcon::RiWebcamMediaFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33463,7 +33463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWebcamMediaLine")]
-        Icon::RiWebcamMediaLine => {
+        RiIcon::RiWebcamMediaLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33476,7 +33476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWechat2LogosFill")]
-        Icon::RiWechat2LogosFill => {
+        RiIcon::RiWechat2LogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33489,7 +33489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWechat2LogosLine")]
-        Icon::RiWechat2LogosLine => {
+        RiIcon::RiWechat2LogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33502,7 +33502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWechatLogosFill")]
-        Icon::RiWechatLogosFill => {
+        RiIcon::RiWechatLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33515,7 +33515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWechatLogosLine")]
-        Icon::RiWechatLogosLine => {
+        RiIcon::RiWechatLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33529,7 +33529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWechatPayLogosFill")]
-        Icon::RiWechatPayLogosFill => {
+        RiIcon::RiWechatPayLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33542,7 +33542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWechatPayLogosLine")]
-        Icon::RiWechatPayLogosLine => {
+        RiIcon::RiWechatPayLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33555,7 +33555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWeiboLogosFill")]
-        Icon::RiWeiboLogosFill => {
+        RiIcon::RiWeiboLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33568,7 +33568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWeiboLogosLine")]
-        Icon::RiWeiboLogosLine => {
+        RiIcon::RiWeiboLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33581,7 +33581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWhatsappLogosFill")]
-        Icon::RiWhatsappLogosFill => {
+        RiIcon::RiWhatsappLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33594,7 +33594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWhatsappLogosLine")]
-        Icon::RiWhatsappLogosLine => {
+        RiIcon::RiWhatsappLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33607,7 +33607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWheelchairOthersFill")]
-        Icon::RiWheelchairOthersFill => {
+        RiIcon::RiWheelchairOthersFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33620,7 +33620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWheelchairOthersLine")]
-        Icon::RiWheelchairOthersLine => {
+        RiIcon::RiWheelchairOthersLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33633,7 +33633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWifiDeviceFill")]
-        Icon::RiWifiDeviceFill => {
+        RiIcon::RiWifiDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33646,7 +33646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWifiDeviceLine")]
-        Icon::RiWifiDeviceLine => {
+        RiIcon::RiWifiDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33659,7 +33659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWifiOffDeviceFill")]
-        Icon::RiWifiOffDeviceFill => {
+        RiIcon::RiWifiOffDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33672,7 +33672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWifiOffDeviceLine")]
-        Icon::RiWifiOffDeviceLine => {
+        RiIcon::RiWifiOffDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33685,7 +33685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindow2BusinessFill")]
-        Icon::RiWindow2BusinessFill => {
+        RiIcon::RiWindow2BusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33698,7 +33698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindow2BusinessLine")]
-        Icon::RiWindow2BusinessLine => {
+        RiIcon::RiWindow2BusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33711,7 +33711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindowBusinessFill")]
-        Icon::RiWindowBusinessFill => {
+        RiIcon::RiWindowBusinessFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33724,7 +33724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindowBusinessLine")]
-        Icon::RiWindowBusinessLine => {
+        RiIcon::RiWindowBusinessLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33737,7 +33737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindowsLogosFill")]
-        Icon::RiWindowsLogosFill => {
+        RiIcon::RiWindowsLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33750,7 +33750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindowsLogosLine")]
-        Icon::RiWindowsLogosLine => {
+        RiIcon::RiWindowsLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33763,7 +33763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindyWeatherFill")]
-        Icon::RiWindyWeatherFill => {
+        RiIcon::RiWindyWeatherFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33776,7 +33776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWindyWeatherLine")]
-        Icon::RiWindyWeatherLine => {
+        RiIcon::RiWindyWeatherLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33789,7 +33789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWirelessChargingDeviceFill")]
-        Icon::RiWirelessChargingDeviceFill => {
+        RiIcon::RiWirelessChargingDeviceFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33802,7 +33802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWirelessChargingDeviceLine")]
-        Icon::RiWirelessChargingDeviceLine => {
+        RiIcon::RiWirelessChargingDeviceLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33815,7 +33815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWomenUserFill")]
-        Icon::RiWomenUserFill => {
+        RiIcon::RiWomenUserFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33828,7 +33828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWomenUserLine")]
-        Icon::RiWomenUserLine => {
+        RiIcon::RiWomenUserLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33841,7 +33841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiWubiInputEditor")]
-        Icon::RiWubiInputEditor => {
+        RiIcon::RiWubiInputEditor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33854,7 +33854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiXboxLogosFill")]
-        Icon::RiXboxLogosFill => {
+        RiIcon::RiXboxLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33867,7 +33867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiXboxLogosLine")]
-        Icon::RiXboxLogosLine => {
+        RiIcon::RiXboxLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33880,7 +33880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiXingLogosFill")]
-        Icon::RiXingLogosFill => {
+        RiIcon::RiXingLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33893,7 +33893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiXingLogosLine")]
-        Icon::RiXingLogosLine => {
+        RiIcon::RiXingLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33906,7 +33906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiYoutubeLogosFill")]
-        Icon::RiYoutubeLogosFill => {
+        RiIcon::RiYoutubeLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33919,7 +33919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiYoutubeLogosLine")]
-        Icon::RiYoutubeLogosLine => {
+        RiIcon::RiYoutubeLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33932,7 +33932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZcoolLogosFill")]
-        Icon::RiZcoolLogosFill => {
+        RiIcon::RiZcoolLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33945,7 +33945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZcoolLogosLine")]
-        Icon::RiZcoolLogosLine => {
+        RiIcon::RiZcoolLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33958,7 +33958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZhihuLogosFill")]
-        Icon::RiZhihuLogosFill => {
+        RiIcon::RiZhihuLogosFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33971,7 +33971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZhihuLogosLine")]
-        Icon::RiZhihuLogosLine => {
+        RiIcon::RiZhihuLogosLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33984,7 +33984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZoomInSystemFill")]
-        Icon::RiZoomInSystemFill => {
+        RiIcon::RiZoomInSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -33997,7 +33997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZoomInSystemLine")]
-        Icon::RiZoomInSystemLine => {
+        RiIcon::RiZoomInSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -34010,7 +34010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZoomOutSystemFill")]
-        Icon::RiZoomOutSystemFill => {
+        RiIcon::RiZoomOutSystemFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -34023,7 +34023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZoomOutSystemLine")]
-        Icon::RiZoomOutSystemLine => {
+        RiIcon::RiZoomOutSystemLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -34036,7 +34036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZzzHealthFill")]
-        Icon::RiZzzHealthFill => {
+        RiIcon::RiZzzHealthFill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -34049,7 +34049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "RiZzzHealthLine")]
-        Icon::RiZzzHealthLine => {
+        RiIcon::RiZzzHealthLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =

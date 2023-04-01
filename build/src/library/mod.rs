@@ -74,10 +74,10 @@ impl Library {
         trace!(num_icons = icons.len(), "Sorting icons to avoid churn.");
         icons.sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
 
-        self.src_dir.lib_rs.write_enum(&icons).await?;
+        self.src_dir.lib_rs.write_enum(&self.package, &icons).await?;
         self.src_dir
             .lib_rs
-            .write_leptos_icon_component(&icons)
+            .write_leptos_icon_component(&self.package, &icons)
             .await?;
         self.cargo_toml.append_features(&icons).await?;
 

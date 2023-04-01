@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum VsIcon {
     #[cfg(feature = "VsAccount")]
     VsAccount,
     #[cfg(feature = "VsActivateBreakpoints")]
@@ -865,12 +865,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosVsIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: VsIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -894,7 +894,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "VsAccount")]
-        Icon::VsAccount => {
+        VsIcon::VsAccount => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -906,7 +906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsActivateBreakpoints")]
-        Icon::VsActivateBreakpoints => {
+        VsIcon::VsActivateBreakpoints => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -918,7 +918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsAdd")]
-        Icon::VsAdd => {
+        VsIcon::VsAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -929,7 +929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArchive")]
-        Icon::VsArchive => {
+        VsIcon::VsArchive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -942,7 +942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowBoth")]
-        Icon::VsArrowBoth => {
+        VsIcon::VsArrowBoth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -955,7 +955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowCircleDown")]
-        Icon::VsArrowCircleDown => {
+        VsIcon::VsArrowCircleDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -969,7 +969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowCircleLeft")]
-        Icon::VsArrowCircleLeft => {
+        VsIcon::VsArrowCircleLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -983,7 +983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowCircleRight")]
-        Icon::VsArrowCircleRight => {
+        VsIcon::VsArrowCircleRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -997,7 +997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowCircleUp")]
-        Icon::VsArrowCircleUp => {
+        VsIcon::VsArrowCircleUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1011,7 +1011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowDown")]
-        Icon::VsArrowDown => {
+        VsIcon::VsArrowDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1024,7 +1024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowLeft")]
-        Icon::VsArrowLeft => {
+        VsIcon::VsArrowLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1037,7 +1037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowRight")]
-        Icon::VsArrowRight => {
+        VsIcon::VsArrowRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1050,7 +1050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowSmallDown")]
-        Icon::VsArrowSmallDown => {
+        VsIcon::VsArrowSmallDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1062,7 +1062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowSmallLeft")]
-        Icon::VsArrowSmallLeft => {
+        VsIcon::VsArrowSmallLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1074,7 +1074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowSmallRight")]
-        Icon::VsArrowSmallRight => {
+        VsIcon::VsArrowSmallRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1086,7 +1086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowSmallUp")]
-        Icon::VsArrowSmallUp => {
+        VsIcon::VsArrowSmallUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1098,7 +1098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowSwap")]
-        Icon::VsArrowSwap => {
+        VsIcon::VsArrowSwap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1111,7 +1111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsArrowUp")]
-        Icon::VsArrowUp => {
+        VsIcon::VsArrowUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1124,7 +1124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsAzure")]
-        Icon::VsAzure => {
+        VsIcon::VsAzure => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1137,7 +1137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsAzureDevops")]
-        Icon::VsAzureDevops => {
+        VsIcon::VsAzureDevops => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1149,7 +1149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBeaker")]
-        Icon::VsBeaker => {
+        VsIcon::VsBeaker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1161,7 +1161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBeakerStop")]
-        Icon::VsBeakerStop => {
+        VsIcon::VsBeakerStop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1174,7 +1174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBell")]
-        Icon::VsBell => {
+        VsIcon::VsBell => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1186,7 +1186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBellDot")]
-        Icon::VsBellDot => {
+        VsIcon::VsBellDot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1201,7 +1201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBellSlash")]
-        Icon::VsBellSlash => {
+        VsIcon::VsBellSlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1215,7 +1215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBellSlashDot")]
-        Icon::VsBellSlashDot => {
+        VsIcon::VsBellSlashDot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1232,7 +1232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBlank")]
-        Icon::VsBlank => {
+        VsIcon::VsBlank => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1242,7 +1242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBold")]
-        Icon::VsBold => {
+        VsIcon::VsBold => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1254,7 +1254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBook")]
-        Icon::VsBook => {
+        VsIcon::VsBook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1267,7 +1267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBookmark")]
-        Icon::VsBookmark => {
+        VsIcon::VsBookmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1279,7 +1279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBracketDot")]
-        Icon::VsBracketDot => {
+        VsIcon::VsBracketDot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1294,7 +1294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBracketError")]
-        Icon::VsBracketError => {
+        VsIcon::VsBracketError => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1309,7 +1309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBriefcase")]
-        Icon::VsBriefcase => {
+        VsIcon::VsBriefcase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1321,7 +1321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBroadcast")]
-        Icon::VsBroadcast => {
+        VsIcon::VsBroadcast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1337,7 +1337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBrowser")]
-        Icon::VsBrowser => {
+        VsIcon::VsBrowser => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1350,7 +1350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsBug")]
-        Icon::VsBug => {
+        VsIcon::VsBug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1363,7 +1363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCalendar")]
-        Icon::VsCalendar => {
+        VsIcon::VsCalendar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1376,7 +1376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCallIncoming")]
-        Icon::VsCallIncoming => {
+        VsIcon::VsCallIncoming => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1389,7 +1389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCallOutgoing")]
-        Icon::VsCallOutgoing => {
+        VsIcon::VsCallOutgoing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1401,7 +1401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCaseSensitive")]
-        Icon::VsCaseSensitive => {
+        VsIcon::VsCaseSensitive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1415,7 +1415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCheck")]
-        Icon::VsCheck => {
+        VsIcon::VsCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1428,7 +1428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCheckAll")]
-        Icon::VsCheckAll => {
+        VsIcon::VsCheckAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1443,7 +1443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChecklist")]
-        Icon::VsChecklist => {
+        VsIcon::VsChecklist => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1456,7 +1456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChevronDown")]
-        Icon::VsChevronDown => {
+        VsIcon::VsChevronDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1469,7 +1469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChevronLeft")]
-        Icon::VsChevronLeft => {
+        VsIcon::VsChevronLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1482,7 +1482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChevronRight")]
-        Icon::VsChevronRight => {
+        VsIcon::VsChevronRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1495,7 +1495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChevronUp")]
-        Icon::VsChevronUp => {
+        VsIcon::VsChevronUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1508,7 +1508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChromeClose")]
-        Icon::VsChromeClose => {
+        VsIcon::VsChromeClose => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1521,7 +1521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChromeMaximize")]
-        Icon::VsChromeMaximize => {
+        VsIcon::VsChromeMaximize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1532,7 +1532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChromeMinimize")]
-        Icon::VsChromeMinimize => {
+        VsIcon::VsChromeMinimize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1543,7 +1543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsChromeRestore")]
-        Icon::VsChromeRestore => {
+        VsIcon::VsChromeRestore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1555,7 +1555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleFilled")]
-        Icon::VsCircleFilled => {
+        VsIcon::VsCircleFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1567,7 +1567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleLargeFilled")]
-        Icon::VsCircleLargeFilled => {
+        VsIcon::VsCircleLargeFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1579,7 +1579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleLargeOutline")]
-        Icon::VsCircleLargeOutline => {
+        VsIcon::VsCircleLargeOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1592,7 +1592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleOutline")]
-        Icon::VsCircleOutline => {
+        VsIcon::VsCircleOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1605,7 +1605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleSlash")]
-        Icon::VsCircleSlash => {
+        VsIcon::VsCircleSlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1617,7 +1617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleSmall")]
-        Icon::VsCircleSmall => {
+        VsIcon::VsCircleSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1629,7 +1629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircleSmallFilled")]
-        Icon::VsCircleSmallFilled => {
+        VsIcon::VsCircleSmallFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height fill = "currentColor" role = "graphics-symbol" > < title
@@ -1639,7 +1639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCircuitBoard")]
-        Icon::VsCircuitBoard => {
+        VsIcon::VsCircuitBoard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1651,7 +1651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsClearAll")]
-        Icon::VsClearAll => {
+        VsIcon::VsClearAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1663,7 +1663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsClippy")]
-        Icon::VsClippy => {
+        VsIcon::VsClippy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1676,7 +1676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsClose")]
-        Icon::VsClose => {
+        VsIcon::VsClose => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1689,7 +1689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCloseAll")]
-        Icon::VsCloseAll => {
+        VsIcon::VsCloseAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1704,7 +1704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCloud")]
-        Icon::VsCloud => {
+        VsIcon::VsCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1717,7 +1717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCloudDownload")]
-        Icon::VsCloudDownload => {
+        VsIcon::VsCloudDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1730,7 +1730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCloudUpload")]
-        Icon::VsCloudUpload => {
+        VsIcon::VsCloudUpload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1743,7 +1743,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCode")]
-        Icon::VsCode => {
+        VsIcon::VsCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1755,7 +1755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCollapseAll")]
-        Icon::VsCollapseAll => {
+        VsIcon::VsCollapseAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1768,7 +1768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsColorMode")]
-        Icon::VsColorMode => {
+        VsIcon::VsColorMode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1779,7 +1779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCombine")]
-        Icon::VsCombine => {
+        VsIcon::VsCombine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1792,7 +1792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsComment")]
-        Icon::VsComment => {
+        VsIcon::VsComment => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1804,7 +1804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCommentDiscussion")]
-        Icon::VsCommentDiscussion => {
+        VsIcon::VsCommentDiscussion => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1817,7 +1817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCommentUnresolved")]
-        Icon::VsCommentUnresolved => {
+        VsIcon::VsCommentUnresolved => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1832,7 +1832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCompass")]
-        Icon::VsCompass => {
+        VsIcon::VsCompass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1846,7 +1846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCompassActive")]
-        Icon::VsCompassActive => {
+        VsIcon::VsCompassActive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1861,7 +1861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCompassDot")]
-        Icon::VsCompassDot => {
+        VsIcon::VsCompassDot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1874,7 +1874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCopy")]
-        Icon::VsCopy => {
+        VsIcon::VsCopy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1888,7 +1888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsCreditCard")]
-        Icon::VsCreditCard => {
+        VsIcon::VsCreditCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1901,7 +1901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDash")]
-        Icon::VsDash => {
+        VsIcon::VsDash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1911,7 +1911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDashboard")]
-        Icon::VsDashboard => {
+        VsIcon::VsDashboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1924,7 +1924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDatabase")]
-        Icon::VsDatabase => {
+        VsIcon::VsDatabase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1936,7 +1936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebug")]
-        Icon::VsDebug => {
+        VsIcon::VsDebug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1950,7 +1950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugAll")]
-        Icon::VsDebugAll => {
+        VsIcon::VsDebugAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1964,7 +1964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugAlt")]
-        Icon::VsDebugAlt => {
+        VsIcon::VsDebugAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -1976,7 +1976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugAltSmall")]
-        Icon::VsDebugAltSmall => {
+        VsIcon::VsDebugAltSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -1990,7 +1990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointConditional")]
-        Icon::VsDebugBreakpointConditional => {
+        VsIcon::VsDebugBreakpointConditional => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2003,7 +2003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointConditionalUnverified")]
-        Icon::VsDebugBreakpointConditionalUnverified => {
+        VsIcon::VsDebugBreakpointConditionalUnverified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2016,7 +2016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointData")]
-        Icon::VsDebugBreakpointData => {
+        VsIcon::VsDebugBreakpointData => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2027,7 +2027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointDataUnverified")]
-        Icon::VsDebugBreakpointDataUnverified => {
+        VsIcon::VsDebugBreakpointDataUnverified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2039,7 +2039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointFunction")]
-        Icon::VsDebugBreakpointFunction => {
+        VsIcon::VsDebugBreakpointFunction => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2050,7 +2050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointFunctionUnverified")]
-        Icon::VsDebugBreakpointFunctionUnverified => {
+        VsIcon::VsDebugBreakpointFunctionUnverified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2062,7 +2062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointLog")]
-        Icon::VsDebugBreakpointLog => {
+        VsIcon::VsDebugBreakpointLog => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2073,7 +2073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointLogUnverified")]
-        Icon::VsDebugBreakpointLogUnverified => {
+        VsIcon::VsDebugBreakpointLogUnverified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2086,7 +2086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugBreakpointUnsupported")]
-        Icon::VsDebugBreakpointUnsupported => {
+        VsIcon::VsDebugBreakpointUnsupported => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2099,7 +2099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugConsole")]
-        Icon::VsDebugConsole => {
+        VsIcon::VsDebugConsole => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2112,7 +2112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugContinue")]
-        Icon::VsDebugContinue => {
+        VsIcon::VsDebugContinue => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2125,7 +2125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugContinueSmall")]
-        Icon::VsDebugContinueSmall => {
+        VsIcon::VsDebugContinueSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2138,7 +2138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugCoverage")]
-        Icon::VsDebugCoverage => {
+        VsIcon::VsDebugCoverage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2153,7 +2153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugDisconnect")]
-        Icon::VsDebugDisconnect => {
+        VsIcon::VsDebugDisconnect => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2166,7 +2166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugLineByLine")]
-        Icon::VsDebugLineByLine => {
+        VsIcon::VsDebugLineByLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2180,7 +2180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugPause")]
-        Icon::VsDebugPause => {
+        VsIcon::VsDebugPause => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2191,7 +2191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugRerun")]
-        Icon::VsDebugRerun => {
+        VsIcon::VsDebugRerun => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2206,7 +2206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugRestart")]
-        Icon::VsDebugRestart => {
+        VsIcon::VsDebugRestart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2219,7 +2219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugRestartFrame")]
-        Icon::VsDebugRestartFrame => {
+        VsIcon::VsDebugRestartFrame => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2232,7 +2232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugReverseContinue")]
-        Icon::VsDebugReverseContinue => {
+        VsIcon::VsDebugReverseContinue => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2245,7 +2245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStackframe")]
-        Icon::VsDebugStackframe => {
+        VsIcon::VsDebugStackframe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height fill = "currentColor" role = "graphics-symbol" > < title
@@ -2257,7 +2257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStackframeActive")]
-        Icon::VsDebugStackframeActive => {
+        VsIcon::VsDebugStackframeActive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height fill = "currentColor" role = "graphics-symbol" > < title
@@ -2269,7 +2269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStart")]
-        Icon::VsDebugStart => {
+        VsIcon::VsDebugStart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2282,7 +2282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStepBack")]
-        Icon::VsDebugStepBack => {
+        VsIcon::VsDebugStepBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2295,7 +2295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStepInto")]
-        Icon::VsDebugStepInto => {
+        VsIcon::VsDebugStepInto => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2308,7 +2308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStepOut")]
-        Icon::VsDebugStepOut => {
+        VsIcon::VsDebugStepOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2321,7 +2321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStepOver")]
-        Icon::VsDebugStepOver => {
+        VsIcon::VsDebugStepOver => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2334,7 +2334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDebugStop")]
-        Icon::VsDebugStop => {
+        VsIcon::VsDebugStop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2345,7 +2345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDesktopDownload")]
-        Icon::VsDesktopDownload => {
+        VsIcon::VsDesktopDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2358,7 +2358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDeviceCamera")]
-        Icon::VsDeviceCamera => {
+        VsIcon::VsDeviceCamera => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2371,7 +2371,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDeviceCameraVideo")]
-        Icon::VsDeviceCameraVideo => {
+        VsIcon::VsDeviceCameraVideo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2383,7 +2383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDeviceMobile")]
-        Icon::VsDeviceMobile => {
+        VsIcon::VsDeviceMobile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2396,7 +2396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiff")]
-        Icon::VsDiff => {
+        VsIcon::VsDiff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2409,7 +2409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiffAdded")]
-        Icon::VsDiffAdded => {
+        VsIcon::VsDiffAdded => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2423,7 +2423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiffIgnored")]
-        Icon::VsDiffIgnored => {
+        VsIcon::VsDiffIgnored => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2436,7 +2436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiffModified")]
-        Icon::VsDiffModified => {
+        VsIcon::VsDiffModified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2449,7 +2449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiffRemoved")]
-        Icon::VsDiffRemoved => {
+        VsIcon::VsDiffRemoved => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2462,7 +2462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiffRenamed")]
-        Icon::VsDiffRenamed => {
+        VsIcon::VsDiffRenamed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2475,7 +2475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsDiscard")]
-        Icon::VsDiscard => {
+        VsIcon::VsDiscard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2488,7 +2488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsEdit")]
-        Icon::VsEdit => {
+        VsIcon::VsEdit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2500,7 +2500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsEditorLayout")]
-        Icon::VsEditorLayout => {
+        VsIcon::VsEditorLayout => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2512,7 +2512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsEllipsis")]
-        Icon::VsEllipsis => {
+        VsIcon::VsEllipsis => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2524,7 +2524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsEmptyWindow")]
-        Icon::VsEmptyWindow => {
+        VsIcon::VsEmptyWindow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2537,7 +2537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsError")]
-        Icon::VsError => {
+        VsIcon::VsError => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2550,7 +2550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsErrorSmall")]
-        Icon::VsErrorSmall => {
+        VsIcon::VsErrorSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2564,7 +2564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsExclude")]
-        Icon::VsExclude => {
+        VsIcon::VsExclude => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2577,7 +2577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsExpandAll")]
-        Icon::VsExpandAll => {
+        VsIcon::VsExpandAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2591,7 +2591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsExport")]
-        Icon::VsExport => {
+        VsIcon::VsExport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2604,7 +2604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsExtensions")]
-        Icon::VsExtensions => {
+        VsIcon::VsExtensions => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2617,7 +2617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsEye")]
-        Icon::VsEye => {
+        VsIcon::VsEye => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2629,7 +2629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsEyeClosed")]
-        Icon::VsEyeClosed => {
+        VsIcon::VsEyeClosed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2641,7 +2641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFeedback")]
-        Icon::VsFeedback => {
+        VsIcon::VsFeedback => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2653,7 +2653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFile")]
-        Icon::VsFile => {
+        VsIcon::VsFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2666,7 +2666,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileBinary")]
-        Icon::VsFileBinary => {
+        VsIcon::VsFileBinary => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2679,7 +2679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileCode")]
-        Icon::VsFileCode => {
+        VsIcon::VsFileCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2692,7 +2692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileMedia")]
-        Icon::VsFileMedia => {
+        VsIcon::VsFileMedia => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2705,7 +2705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFilePdf")]
-        Icon::VsFilePdf => {
+        VsIcon::VsFilePdf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2718,7 +2718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileSubmodule")]
-        Icon::VsFileSubmodule => {
+        VsIcon::VsFileSubmodule => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2731,7 +2731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileSymlinkDirectory")]
-        Icon::VsFileSymlinkDirectory => {
+        VsIcon::VsFileSymlinkDirectory => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2744,7 +2744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileSymlinkFile")]
-        Icon::VsFileSymlinkFile => {
+        VsIcon::VsFileSymlinkFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2757,7 +2757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFileZip")]
-        Icon::VsFileZip => {
+        VsIcon::VsFileZip => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2770,7 +2770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFiles")]
-        Icon::VsFiles => {
+        VsIcon::VsFiles => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -2782,7 +2782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFilter")]
-        Icon::VsFilter => {
+        VsIcon::VsFilter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2795,7 +2795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFilterFilled")]
-        Icon::VsFilterFilled => {
+        VsIcon::VsFilterFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2806,7 +2806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFlame")]
-        Icon::VsFlame => {
+        VsIcon::VsFlame => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2818,7 +2818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFold")]
-        Icon::VsFold => {
+        VsIcon::VsFold => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2831,7 +2831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFoldDown")]
-        Icon::VsFoldDown => {
+        VsIcon::VsFoldDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2844,7 +2844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFoldUp")]
-        Icon::VsFoldUp => {
+        VsIcon::VsFoldUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2856,7 +2856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFolder")]
-        Icon::VsFolder => {
+        VsIcon::VsFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2868,7 +2868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFolderActive")]
-        Icon::VsFolderActive => {
+        VsIcon::VsFolderActive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2883,7 +2883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFolderLibrary")]
-        Icon::VsFolderLibrary => {
+        VsIcon::VsFolderLibrary => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2898,7 +2898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsFolderOpened")]
-        Icon::VsFolderOpened => {
+        VsIcon::VsFolderOpened => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2910,7 +2910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGear")]
-        Icon::VsGear => {
+        VsIcon::VsGear => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2922,7 +2922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGift")]
-        Icon::VsGift => {
+        VsIcon::VsGift => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2934,7 +2934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGist")]
-        Icon::VsGist => {
+        VsIcon::VsGist => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2947,7 +2947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGistSecret")]
-        Icon::VsGistSecret => {
+        VsIcon::VsGistSecret => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2960,7 +2960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitCommit")]
-        Icon::VsGitCommit => {
+        VsIcon::VsGitCommit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2972,7 +2972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitCompare")]
-        Icon::VsGitCompare => {
+        VsIcon::VsGitCompare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2985,7 +2985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitMerge")]
-        Icon::VsGitMerge => {
+        VsIcon::VsGitMerge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -2997,7 +2997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitPullRequest")]
-        Icon::VsGitPullRequest => {
+        VsIcon::VsGitPullRequest => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3010,7 +3010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitPullRequestClosed")]
-        Icon::VsGitPullRequestClosed => {
+        VsIcon::VsGitPullRequestClosed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3025,7 +3025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitPullRequestCreate")]
-        Icon::VsGitPullRequestCreate => {
+        VsIcon::VsGitPullRequestCreate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3038,7 +3038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitPullRequestDraft")]
-        Icon::VsGitPullRequestDraft => {
+        VsIcon::VsGitPullRequestDraft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3053,7 +3053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitPullRequestGoToChanges")]
-        Icon::VsGitPullRequestGoToChanges => {
+        VsIcon::VsGitPullRequestGoToChanges => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3068,7 +3068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGitPullRequestNewChanges")]
-        Icon::VsGitPullRequestNewChanges => {
+        VsIcon::VsGitPullRequestNewChanges => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3083,7 +3083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGithub")]
-        Icon::VsGithub => {
+        VsIcon::VsGithub => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3095,7 +3095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGithubAction")]
-        Icon::VsGithubAction => {
+        VsIcon::VsGithubAction => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3108,7 +3108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGithubAlt")]
-        Icon::VsGithubAlt => {
+        VsIcon::VsGithubAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3120,7 +3120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGithubInverted")]
-        Icon::VsGithubInverted => {
+        VsIcon::VsGithubInverted => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3133,7 +3133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGlobe")]
-        Icon::VsGlobe => {
+        VsIcon::VsGlobe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3146,7 +3146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGoToFile")]
-        Icon::VsGoToFile => {
+        VsIcon::VsGoToFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3159,7 +3159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGrabber")]
-        Icon::VsGrabber => {
+        VsIcon::VsGrabber => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3170,7 +3170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGraph")]
-        Icon::VsGraph => {
+        VsIcon::VsGraph => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3183,7 +3183,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGraphLeft")]
-        Icon::VsGraphLeft => {
+        VsIcon::VsGraphLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3196,7 +3196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGraphLine")]
-        Icon::VsGraphLine => {
+        VsIcon::VsGraphLine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3209,7 +3209,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGraphScatter")]
-        Icon::VsGraphScatter => {
+        VsIcon::VsGraphScatter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3223,7 +3223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGripper")]
-        Icon::VsGripper => {
+        VsIcon::VsGripper => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3235,7 +3235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsGroupByRefType")]
-        Icon::VsGroupByRefType => {
+        VsIcon::VsGroupByRefType => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3248,7 +3248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsHeart")]
-        Icon::VsHeart => {
+        VsIcon::VsHeart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3260,7 +3260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsHeartFilled")]
-        Icon::VsHeartFilled => {
+        VsIcon::VsHeartFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3272,7 +3272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsHistory")]
-        Icon::VsHistory => {
+        VsIcon::VsHistory => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3285,7 +3285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsHome")]
-        Icon::VsHome => {
+        VsIcon::VsHome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3298,7 +3298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsHorizontalRule")]
-        Icon::VsHorizontalRule => {
+        VsIcon::VsHorizontalRule => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3311,7 +3311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsHubot")]
-        Icon::VsHubot => {
+        VsIcon::VsHubot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3324,7 +3324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsInbox")]
-        Icon::VsInbox => {
+        VsIcon::VsInbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3337,7 +3337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsIndent")]
-        Icon::VsIndent => {
+        VsIcon::VsIndent => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3350,7 +3350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsInfo")]
-        Icon::VsInfo => {
+        VsIcon::VsInfo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3363,7 +3363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsInspect")]
-        Icon::VsInspect => {
+        VsIcon::VsInspect => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3376,7 +3376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsIssueDraft")]
-        Icon::VsIssueDraft => {
+        VsIcon::VsIssueDraft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3389,7 +3389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsIssueReopened")]
-        Icon::VsIssueReopened => {
+        VsIcon::VsIssueReopened => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3402,7 +3402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsIssues")]
-        Icon::VsIssues => {
+        VsIcon::VsIssues => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3414,7 +3414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsItalic")]
-        Icon::VsItalic => {
+        VsIcon::VsItalic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3426,7 +3426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsJersey")]
-        Icon::VsJersey => {
+        VsIcon::VsJersey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3438,7 +3438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsJson")]
-        Icon::VsJson => {
+        VsIcon::VsJson => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3451,7 +3451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsKebabVertical")]
-        Icon::VsKebabVertical => {
+        VsIcon::VsKebabVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height fill = "currentColor" role = "graphics-symbol" > < title
@@ -3463,7 +3463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsKey")]
-        Icon::VsKey => {
+        VsIcon::VsKey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3476,7 +3476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLaw")]
-        Icon::VsLaw => {
+        VsIcon::VsLaw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3488,7 +3488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayers")]
-        Icon::VsLayers => {
+        VsIcon::VsLayers => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3501,7 +3501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayersActive")]
-        Icon::VsLayersActive => {
+        VsIcon::VsLayersActive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3516,7 +3516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayersDot")]
-        Icon::VsLayersDot => {
+        VsIcon::VsLayersDot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3529,7 +3529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayout")]
-        Icon::VsLayout => {
+        VsIcon::VsLayout => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3543,7 +3543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutActivitybarLeft")]
-        Icon::VsLayoutActivitybarLeft => {
+        VsIcon::VsLayoutActivitybarLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3555,7 +3555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutActivitybarRight")]
-        Icon::VsLayoutActivitybarRight => {
+        VsIcon::VsLayoutActivitybarRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3567,7 +3567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutCentered")]
-        Icon::VsLayoutCentered => {
+        VsIcon::VsLayoutCentered => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3579,7 +3579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutMenubar")]
-        Icon::VsLayoutMenubar => {
+        VsIcon::VsLayoutMenubar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3591,7 +3591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutPanel")]
-        Icon::VsLayoutPanel => {
+        VsIcon::VsLayoutPanel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3603,7 +3603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutPanelCenter")]
-        Icon::VsLayoutPanelCenter => {
+        VsIcon::VsLayoutPanelCenter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3615,7 +3615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutPanelJustify")]
-        Icon::VsLayoutPanelJustify => {
+        VsIcon::VsLayoutPanelJustify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3627,7 +3627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutPanelLeft")]
-        Icon::VsLayoutPanelLeft => {
+        VsIcon::VsLayoutPanelLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3639,7 +3639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutPanelOff")]
-        Icon::VsLayoutPanelOff => {
+        VsIcon::VsLayoutPanelOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3651,7 +3651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutPanelRight")]
-        Icon::VsLayoutPanelRight => {
+        VsIcon::VsLayoutPanelRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3663,7 +3663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutSidebarLeft")]
-        Icon::VsLayoutSidebarLeft => {
+        VsIcon::VsLayoutSidebarLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3675,7 +3675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutSidebarLeftOff")]
-        Icon::VsLayoutSidebarLeftOff => {
+        VsIcon::VsLayoutSidebarLeftOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3687,7 +3687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutSidebarRight")]
-        Icon::VsLayoutSidebarRight => {
+        VsIcon::VsLayoutSidebarRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3699,7 +3699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutSidebarRightOff")]
-        Icon::VsLayoutSidebarRightOff => {
+        VsIcon::VsLayoutSidebarRightOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3711,7 +3711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLayoutStatusbar")]
-        Icon::VsLayoutStatusbar => {
+        VsIcon::VsLayoutStatusbar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3724,7 +3724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLibrary")]
-        Icon::VsLibrary => {
+        VsIcon::VsLibrary => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3737,7 +3737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLightbulb")]
-        Icon::VsLightbulb => {
+        VsIcon::VsLightbulb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3750,7 +3750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLightbulbAutofix")]
-        Icon::VsLightbulbAutofix => {
+        VsIcon::VsLightbulbAutofix => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3764,7 +3764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLink")]
-        Icon::VsLink => {
+        VsIcon::VsLink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3777,7 +3777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLinkExternal")]
-        Icon::VsLinkExternal => {
+        VsIcon::VsLinkExternal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3790,7 +3790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsListFilter")]
-        Icon::VsListFilter => {
+        VsIcon::VsListFilter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3801,7 +3801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsListFlat")]
-        Icon::VsListFlat => {
+        VsIcon::VsListFlat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3813,7 +3813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsListOrdered")]
-        Icon::VsListOrdered => {
+        VsIcon::VsListOrdered => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3826,7 +3826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsListSelection")]
-        Icon::VsListSelection => {
+        VsIcon::VsListSelection => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3837,7 +3837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsListTree")]
-        Icon::VsListTree => {
+        VsIcon::VsListTree => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3849,7 +3849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsListUnordered")]
-        Icon::VsListUnordered => {
+        VsIcon::VsListUnordered => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3862,7 +3862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLiveShare")]
-        Icon::VsLiveShare => {
+        VsIcon::VsLiveShare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -3875,7 +3875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLoading")]
-        Icon::VsLoading => {
+        VsIcon::VsLoading => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3888,7 +3888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLocation")]
-        Icon::VsLocation => {
+        VsIcon::VsLocation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3901,7 +3901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLock")]
-        Icon::VsLock => {
+        VsIcon::VsLock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3913,7 +3913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsLockSmall")]
-        Icon::VsLockSmall => {
+        VsIcon::VsLockSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3926,7 +3926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMagnet")]
-        Icon::VsMagnet => {
+        VsIcon::VsMagnet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3938,7 +3938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMail")]
-        Icon::VsMail => {
+        VsIcon::VsMail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3951,7 +3951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMailRead")]
-        Icon::VsMailRead => {
+        VsIcon::VsMailRead => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3963,7 +3963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMap")]
-        Icon::VsMap => {
+        VsIcon::VsMap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3975,7 +3975,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMapFilled")]
-        Icon::VsMapFilled => {
+        VsIcon::VsMapFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -3988,7 +3988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMarkdown")]
-        Icon::VsMarkdown => {
+        VsIcon::VsMarkdown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4000,7 +4000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMegaphone")]
-        Icon::VsMegaphone => {
+        VsIcon::VsMegaphone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4013,7 +4013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMention")]
-        Icon::VsMention => {
+        VsIcon::VsMention => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4025,7 +4025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMenu")]
-        Icon::VsMenu => {
+        VsIcon::VsMenu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4036,7 +4036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMerge")]
-        Icon::VsMerge => {
+        VsIcon::VsMerge => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4049,7 +4049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMilestone")]
-        Icon::VsMilestone => {
+        VsIcon::VsMilestone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4062,7 +4062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMirror")]
-        Icon::VsMirror => {
+        VsIcon::VsMirror => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4075,7 +4075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMortarBoard")]
-        Icon::VsMortarBoard => {
+        VsIcon::VsMortarBoard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4087,7 +4087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMove")]
-        Icon::VsMove => {
+        VsIcon::VsMove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4100,7 +4100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMultipleWindows")]
-        Icon::VsMultipleWindows => {
+        VsIcon::VsMultipleWindows => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4113,7 +4113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsMute")]
-        Icon::VsMute => {
+        VsIcon::VsMute => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4126,7 +4126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNewFile")]
-        Icon::VsNewFile => {
+        VsIcon::VsNewFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4139,7 +4139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNewFolder")]
-        Icon::VsNewFolder => {
+        VsIcon::VsNewFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4152,7 +4152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNewline")]
-        Icon::VsNewline => {
+        VsIcon::VsNewline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4165,7 +4165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNoNewline")]
-        Icon::VsNoNewline => {
+        VsIcon::VsNoNewline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4178,7 +4178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNote")]
-        Icon::VsNote => {
+        VsIcon::VsNote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4191,7 +4191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNotebook")]
-        Icon::VsNotebook => {
+        VsIcon::VsNotebook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4204,7 +4204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsNotebookTemplate")]
-        Icon::VsNotebookTemplate => {
+        VsIcon::VsNotebookTemplate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4218,7 +4218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsOctoface")]
-        Icon::VsOctoface => {
+        VsIcon::VsOctoface => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4231,7 +4231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsOpenPreview")]
-        Icon::VsOpenPreview => {
+        VsIcon::VsOpenPreview => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4244,7 +4244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsOrganization")]
-        Icon::VsOrganization => {
+        VsIcon::VsOrganization => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4257,7 +4257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsOutput")]
-        Icon::VsOutput => {
+        VsIcon::VsOutput => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4270,7 +4270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPackage")]
-        Icon::VsPackage => {
+        VsIcon::VsPackage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4283,7 +4283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPaintcan")]
-        Icon::VsPaintcan => {
+        VsIcon::VsPaintcan => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4295,7 +4295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPass")]
-        Icon::VsPass => {
+        VsIcon::VsPass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4309,7 +4309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPassFilled")]
-        Icon::VsPassFilled => {
+        VsIcon::VsPassFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4322,7 +4322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPerson")]
-        Icon::VsPerson => {
+        VsIcon::VsPerson => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4334,7 +4334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPersonAdd")]
-        Icon::VsPersonAdd => {
+        VsIcon::VsPersonAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4347,7 +4347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPieChart")]
-        Icon::VsPieChart => {
+        VsIcon::VsPieChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4360,7 +4360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPin")]
-        Icon::VsPin => {
+        VsIcon::VsPin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4372,7 +4372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPinned")]
-        Icon::VsPinned => {
+        VsIcon::VsPinned => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4384,7 +4384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPinnedDirty")]
-        Icon::VsPinnedDirty => {
+        VsIcon::VsPinnedDirty => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4397,7 +4397,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPlay")]
-        Icon::VsPlay => {
+        VsIcon::VsPlay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4409,7 +4409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPlayCircle")]
-        Icon::VsPlayCircle => {
+        VsIcon::VsPlayCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4424,7 +4424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPlug")]
-        Icon::VsPlug => {
+        VsIcon::VsPlug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4437,7 +4437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPreserveCase")]
-        Icon::VsPreserveCase => {
+        VsIcon::VsPreserveCase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4451,7 +4451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPreview")]
-        Icon::VsPreview => {
+        VsIcon::VsPreview => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4464,7 +4464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPrimitiveSquare")]
-        Icon::VsPrimitiveSquare => {
+        VsIcon::VsPrimitiveSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4476,7 +4476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsProject")]
-        Icon::VsProject => {
+        VsIcon::VsProject => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4489,7 +4489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsPulse")]
-        Icon::VsPulse => {
+        VsIcon::VsPulse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4501,7 +4501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsQuestion")]
-        Icon::VsQuestion => {
+        VsIcon::VsQuestion => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4514,7 +4514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsQuote")]
-        Icon::VsQuote => {
+        VsIcon::VsQuote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4527,7 +4527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRadioTower")]
-        Icon::VsRadioTower => {
+        VsIcon::VsRadioTower => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4540,7 +4540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsReactions")]
-        Icon::VsReactions => {
+        VsIcon::VsReactions => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4553,7 +4553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRecord")]
-        Icon::VsRecord => {
+        VsIcon::VsRecord => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4567,7 +4567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRecordKeys")]
-        Icon::VsRecordKeys => {
+        VsIcon::VsRecordKeys => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height fill = "currentColor" role = "graphics-symbol" > < title
@@ -4579,7 +4579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRecordSmall")]
-        Icon::VsRecordSmall => {
+        VsIcon::VsRecordSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4593,7 +4593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRedo")]
-        Icon::VsRedo => {
+        VsIcon::VsRedo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4606,7 +4606,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsReferences")]
-        Icon::VsReferences => {
+        VsIcon::VsReferences => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4619,7 +4619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRefresh")]
-        Icon::VsRefresh => {
+        VsIcon::VsRefresh => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4632,7 +4632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRegex")]
-        Icon::VsRegex => {
+        VsIcon::VsRegex => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4645,7 +4645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRemote")]
-        Icon::VsRemote => {
+        VsIcon::VsRemote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4658,7 +4658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRemoteExplorer")]
-        Icon::VsRemoteExplorer => {
+        VsIcon::VsRemoteExplorer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -4671,7 +4671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRemove")]
-        Icon::VsRemove => {
+        VsIcon::VsRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4681,7 +4681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsReplace")]
-        Icon::VsReplace => {
+        VsIcon::VsReplace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4694,7 +4694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsReplaceAll")]
-        Icon::VsReplaceAll => {
+        VsIcon::VsReplaceAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4707,7 +4707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsReply")]
-        Icon::VsReply => {
+        VsIcon::VsReply => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4720,7 +4720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRepo")]
-        Icon::VsRepo => {
+        VsIcon::VsRepo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4733,7 +4733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRepoClone")]
-        Icon::VsRepoClone => {
+        VsIcon::VsRepoClone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4746,7 +4746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRepoForcePush")]
-        Icon::VsRepoForcePush => {
+        VsIcon::VsRepoForcePush => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4759,7 +4759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRepoForked")]
-        Icon::VsRepoForked => {
+        VsIcon::VsRepoForked => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4771,7 +4771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRepoPull")]
-        Icon::VsRepoPull => {
+        VsIcon::VsRepoPull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4784,7 +4784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRepoPush")]
-        Icon::VsRepoPush => {
+        VsIcon::VsRepoPush => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4797,7 +4797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsReport")]
-        Icon::VsReport => {
+        VsIcon::VsReport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4810,7 +4810,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRequestChanges")]
-        Icon::VsRequestChanges => {
+        VsIcon::VsRequestChanges => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4823,7 +4823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRocket")]
-        Icon::VsRocket => {
+        VsIcon::VsRocket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4836,7 +4836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRootFolder")]
-        Icon::VsRootFolder => {
+        VsIcon::VsRootFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4852,7 +4852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRootFolderOpened")]
-        Icon::VsRootFolderOpened => {
+        VsIcon::VsRootFolderOpened => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4868,7 +4868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRss")]
-        Icon::VsRss => {
+        VsIcon::VsRss => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4881,7 +4881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRuby")]
-        Icon::VsRuby => {
+        VsIcon::VsRuby => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4894,7 +4894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRunAbove")]
-        Icon::VsRunAbove => {
+        VsIcon::VsRunAbove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4906,7 +4906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRunAll")]
-        Icon::VsRunAll => {
+        VsIcon::VsRunAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4920,7 +4920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRunBelow")]
-        Icon::VsRunBelow => {
+        VsIcon::VsRunBelow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4932,7 +4932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsRunErrors")]
-        Icon::VsRunErrors => {
+        VsIcon::VsRunErrors => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4947,7 +4947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSave")]
-        Icon::VsSave => {
+        VsIcon::VsSave => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4960,7 +4960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSaveAll")]
-        Icon::VsSaveAll => {
+        VsIcon::VsSaveAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4972,7 +4972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSaveAs")]
-        Icon::VsSaveAs => {
+        VsIcon::VsSaveAs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4985,7 +4985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsScreenFull")]
-        Icon::VsScreenFull => {
+        VsIcon::VsScreenFull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -4997,7 +4997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsScreenNormal")]
-        Icon::VsScreenNormal => {
+        VsIcon::VsScreenNormal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5009,7 +5009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSearch")]
-        Icon::VsSearch => {
+        VsIcon::VsSearch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5021,7 +5021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSearchStop")]
-        Icon::VsSearchStop => {
+        VsIcon::VsSearchStop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5034,7 +5034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsServer")]
-        Icon::VsServer => {
+        VsIcon::VsServer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5047,7 +5047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsServerEnvironment")]
-        Icon::VsServerEnvironment => {
+        VsIcon::VsServerEnvironment => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5059,7 +5059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsServerProcess")]
-        Icon::VsServerProcess => {
+        VsIcon::VsServerProcess => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5072,7 +5072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSettings")]
-        Icon::VsSettings => {
+        VsIcon::VsSettings => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5085,7 +5085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSettingsGear")]
-        Icon::VsSettingsGear => {
+        VsIcon::VsSettingsGear => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5098,7 +5098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsShield")]
-        Icon::VsShield => {
+        VsIcon::VsShield => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5111,7 +5111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSignIn")]
-        Icon::VsSignIn => {
+        VsIcon::VsSignIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5124,7 +5124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSignOut")]
-        Icon::VsSignOut => {
+        VsIcon::VsSignOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5137,7 +5137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSmiley")]
-        Icon::VsSmiley => {
+        VsIcon::VsSmiley => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5150,7 +5150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSortPrecedence")]
-        Icon::VsSortPrecedence => {
+        VsIcon::VsSortPrecedence => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5163,7 +5163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSourceControl")]
-        Icon::VsSourceControl => {
+        VsIcon::VsSourceControl => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5175,7 +5175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSplitHorizontal")]
-        Icon::VsSplitHorizontal => {
+        VsIcon::VsSplitHorizontal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5187,7 +5187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSplitVertical")]
-        Icon::VsSplitVertical => {
+        VsIcon::VsSplitVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5199,7 +5199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSquirrel")]
-        Icon::VsSquirrel => {
+        VsIcon::VsSquirrel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5212,7 +5212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsStarEmpty")]
-        Icon::VsStarEmpty => {
+        VsIcon::VsStarEmpty => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5225,7 +5225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsStarFull")]
-        Icon::VsStarFull => {
+        VsIcon::VsStarFull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5238,7 +5238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsStarHalf")]
-        Icon::VsStarHalf => {
+        VsIcon::VsStarHalf => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5251,7 +5251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsStopCircle")]
-        Icon::VsStopCircle => {
+        VsIcon::VsStopCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5264,7 +5264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolArray")]
-        Icon::VsSymbolArray => {
+        VsIcon::VsSymbolArray => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5277,7 +5277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolBoolean")]
-        Icon::VsSymbolBoolean => {
+        VsIcon::VsSymbolBoolean => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5290,7 +5290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolClass")]
-        Icon::VsSymbolClass => {
+        VsIcon::VsSymbolClass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5302,7 +5302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolColor")]
-        Icon::VsSymbolColor => {
+        VsIcon::VsSymbolColor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5315,7 +5315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolConstant")]
-        Icon::VsSymbolConstant => {
+        VsIcon::VsSymbolConstant => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5328,7 +5328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolEnum")]
-        Icon::VsSymbolEnum => {
+        VsIcon::VsSymbolEnum => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5341,7 +5341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolEnumMember")]
-        Icon::VsSymbolEnumMember => {
+        VsIcon::VsSymbolEnumMember => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5354,7 +5354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolEvent")]
-        Icon::VsSymbolEvent => {
+        VsIcon::VsSymbolEvent => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5367,7 +5367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolField")]
-        Icon::VsSymbolField => {
+        VsIcon::VsSymbolField => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5379,7 +5379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolFile")]
-        Icon::VsSymbolFile => {
+        VsIcon::VsSymbolFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5391,7 +5391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolInterface")]
-        Icon::VsSymbolInterface => {
+        VsIcon::VsSymbolInterface => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5403,7 +5403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolKey")]
-        Icon::VsSymbolKey => {
+        VsIcon::VsSymbolKey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5416,7 +5416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolKeyword")]
-        Icon::VsSymbolKeyword => {
+        VsIcon::VsSymbolKeyword => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5428,7 +5428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolMethod")]
-        Icon::VsSymbolMethod => {
+        VsIcon::VsSymbolMethod => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5440,7 +5440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolMisc")]
-        Icon::VsSymbolMisc => {
+        VsIcon::VsSymbolMisc => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5453,7 +5453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolNamespace")]
-        Icon::VsSymbolNamespace => {
+        VsIcon::VsSymbolNamespace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5466,7 +5466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolNumeric")]
-        Icon::VsSymbolNumeric => {
+        VsIcon::VsSymbolNumeric => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5479,7 +5479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolOperator")]
-        Icon::VsSymbolOperator => {
+        VsIcon::VsSymbolOperator => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5492,7 +5492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolParameter")]
-        Icon::VsSymbolParameter => {
+        VsIcon::VsSymbolParameter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5505,7 +5505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolProperty")]
-        Icon::VsSymbolProperty => {
+        VsIcon::VsSymbolProperty => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5517,7 +5517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolRuler")]
-        Icon::VsSymbolRuler => {
+        VsIcon::VsSymbolRuler => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5530,7 +5530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolSnippet")]
-        Icon::VsSymbolSnippet => {
+        VsIcon::VsSymbolSnippet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5543,7 +5543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolString")]
-        Icon::VsSymbolString => {
+        VsIcon::VsSymbolString => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5556,7 +5556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolStructure")]
-        Icon::VsSymbolStructure => {
+        VsIcon::VsSymbolStructure => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5569,7 +5569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSymbolVariable")]
-        Icon::VsSymbolVariable => {
+        VsIcon::VsSymbolVariable => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5582,7 +5582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSync")]
-        Icon::VsSync => {
+        VsIcon::VsSync => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5595,7 +5595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsSyncIgnored")]
-        Icon::VsSyncIgnored => {
+        VsIcon::VsSyncIgnored => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5609,7 +5609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTable")]
-        Icon::VsTable => {
+        VsIcon::VsTable => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5621,7 +5621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTag")]
-        Icon::VsTag => {
+        VsIcon::VsTag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5634,7 +5634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTarget")]
-        Icon::VsTarget => {
+        VsIcon::VsTarget => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5650,7 +5650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTasklist")]
-        Icon::VsTasklist => {
+        VsIcon::VsTasklist => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5663,7 +5663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTelescope")]
-        Icon::VsTelescope => {
+        VsIcon::VsTelescope => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5676,7 +5676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminal")]
-        Icon::VsTerminal => {
+        VsIcon::VsTerminal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "currentColor" role =
@@ -5689,7 +5689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalBash")]
-        Icon::VsTerminalBash => {
+        VsIcon::VsTerminalBash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5701,7 +5701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalCmd")]
-        Icon::VsTerminalCmd => {
+        VsIcon::VsTerminalCmd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5715,7 +5715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalDebian")]
-        Icon::VsTerminalDebian => {
+        VsIcon::VsTerminalDebian => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5728,7 +5728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalLinux")]
-        Icon::VsTerminalLinux => {
+        VsIcon::VsTerminalLinux => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5740,7 +5740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalPowershell")]
-        Icon::VsTerminalPowershell => {
+        VsIcon::VsTerminalPowershell => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5753,7 +5753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalTmux")]
-        Icon::VsTerminalTmux => {
+        VsIcon::VsTerminalTmux => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5766,7 +5766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTerminalUbuntu")]
-        Icon::VsTerminalUbuntu => {
+        VsIcon::VsTerminalUbuntu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5778,7 +5778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTextSize")]
-        Icon::VsTextSize => {
+        VsIcon::VsTextSize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5790,7 +5790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsThreeBars")]
-        Icon::VsThreeBars => {
+        VsIcon::VsThreeBars => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5802,7 +5802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsThumbsdown")]
-        Icon::VsThumbsdown => {
+        VsIcon::VsThumbsdown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5814,7 +5814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsThumbsup")]
-        Icon::VsThumbsup => {
+        VsIcon::VsThumbsup => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5826,7 +5826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTools")]
-        Icon::VsTools => {
+        VsIcon::VsTools => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5839,7 +5839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTrash")]
-        Icon::VsTrash => {
+        VsIcon::VsTrash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5852,7 +5852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTriangleDown")]
-        Icon::VsTriangleDown => {
+        VsIcon::VsTriangleDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5863,7 +5863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTriangleLeft")]
-        Icon::VsTriangleLeft => {
+        VsIcon::VsTriangleLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5874,7 +5874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTriangleRight")]
-        Icon::VsTriangleRight => {
+        VsIcon::VsTriangleRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5885,7 +5885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTriangleUp")]
-        Icon::VsTriangleUp => {
+        VsIcon::VsTriangleUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5896,7 +5896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTwitter")]
-        Icon::VsTwitter => {
+        VsIcon::VsTwitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5908,7 +5908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTypeHierarchy")]
-        Icon::VsTypeHierarchy => {
+        VsIcon::VsTypeHierarchy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5920,7 +5920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTypeHierarchySub")]
-        Icon::VsTypeHierarchySub => {
+        VsIcon::VsTypeHierarchySub => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5932,7 +5932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsTypeHierarchySuper")]
-        Icon::VsTypeHierarchySuper => {
+        VsIcon::VsTypeHierarchySuper => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5944,7 +5944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsUnfold")]
-        Icon::VsUnfold => {
+        VsIcon::VsUnfold => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5957,7 +5957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsUngroupByRefType")]
-        Icon::VsUngroupByRefType => {
+        VsIcon::VsUngroupByRefType => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5970,7 +5970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsUnlock")]
-        Icon::VsUnlock => {
+        VsIcon::VsUnlock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5983,7 +5983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsUnmute")]
-        Icon::VsUnmute => {
+        VsIcon::VsUnmute => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -5996,7 +5996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsUnverified")]
-        Icon::VsUnverified => {
+        VsIcon::VsUnverified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6009,7 +6009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVariableGroup")]
-        Icon::VsVariableGroup => {
+        VsIcon::VsVariableGroup => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6023,7 +6023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVerified")]
-        Icon::VsVerified => {
+        VsIcon::VsVerified => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6036,7 +6036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVerifiedFilled")]
-        Icon::VsVerifiedFilled => {
+        VsIcon::VsVerifiedFilled => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6048,7 +6048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVersions")]
-        Icon::VsVersions => {
+        VsIcon::VsVersions => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6061,7 +6061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVm")]
-        Icon::VsVm => {
+        VsIcon::VsVm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6074,7 +6074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVmActive")]
-        Icon::VsVmActive => {
+        VsIcon::VsVmActive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6089,7 +6089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVmConnect")]
-        Icon::VsVmConnect => {
+        VsIcon::VsVmConnect => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6106,7 +6106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVmOutline")]
-        Icon::VsVmOutline => {
+        VsIcon::VsVmOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6121,7 +6121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsVmRunning")]
-        Icon::VsVmRunning => {
+        VsIcon::VsVmRunning => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6136,7 +6136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWand")]
-        Icon::VsWand => {
+        VsIcon::VsWand => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6148,7 +6148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWarning")]
-        Icon::VsWarning => {
+        VsIcon::VsWarning => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6161,7 +6161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWatch")]
-        Icon::VsWatch => {
+        VsIcon::VsWatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6174,7 +6174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWhitespace")]
-        Icon::VsWhitespace => {
+        VsIcon::VsWhitespace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6186,7 +6186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWholeWord")]
-        Icon::VsWholeWord => {
+        VsIcon::VsWholeWord => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6201,7 +6201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWindow")]
-        Icon::VsWindow => {
+        VsIcon::VsWindow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6213,7 +6213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWordWrap")]
-        Icon::VsWordWrap => {
+        VsIcon::VsWordWrap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6226,7 +6226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWorkspaceTrusted")]
-        Icon::VsWorkspaceTrusted => {
+        VsIcon::VsWorkspaceTrusted => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6240,7 +6240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWorkspaceUnknown")]
-        Icon::VsWorkspaceUnknown => {
+        VsIcon::VsWorkspaceUnknown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6254,7 +6254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsWorkspaceUntrusted")]
-        Icon::VsWorkspaceUntrusted => {
+        VsIcon::VsWorkspaceUntrusted => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6268,7 +6268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsZoomIn")]
-        Icon::VsZoomIn => {
+        VsIcon::VsZoomIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =
@@ -6281,7 +6281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "VsZoomOut")]
-        Icon::VsZoomOut => {
+        VsIcon::VsZoomOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 16 16" fill = "currentColor" role =

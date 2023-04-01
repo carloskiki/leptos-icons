@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum FaIcon {
     #[cfg(feature = "Fa0Solid")]
     Fa0Solid,
     #[cfg(feature = "Fa1Solid")]
@@ -4063,12 +4063,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosFaIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: FaIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -4092,7 +4092,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "Fa0Solid")]
-        Icon::Fa0Solid => {
+        FaIcon::Fa0Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4104,7 +4104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa1Solid")]
-        Icon::Fa1Solid => {
+        FaIcon::Fa1Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -4116,7 +4116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa2Solid")]
-        Icon::Fa2Solid => {
+        FaIcon::Fa2Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4128,7 +4128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa3Solid")]
-        Icon::Fa3Solid => {
+        FaIcon::Fa3Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4140,7 +4140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa42GroupBrands")]
-        Icon::Fa42GroupBrands => {
+        FaIcon::Fa42GroupBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4152,7 +4152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa4Solid")]
-        Icon::Fa4Solid => {
+        FaIcon::Fa4Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4164,7 +4164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa500pxBrands")]
-        Icon::Fa500pxBrands => {
+        FaIcon::Fa500pxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4176,7 +4176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa5Solid")]
-        Icon::Fa5Solid => {
+        FaIcon::Fa5Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4188,7 +4188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa6Solid")]
-        Icon::Fa6Solid => {
+        FaIcon::Fa6Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4200,7 +4200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa7Solid")]
-        Icon::Fa7Solid => {
+        FaIcon::Fa7Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4212,7 +4212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa8Solid")]
-        Icon::Fa8Solid => {
+        FaIcon::Fa8Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4224,7 +4224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "Fa9Solid")]
-        Icon::Fa9Solid => {
+        FaIcon::Fa9Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4236,7 +4236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaASolid")]
-        Icon::FaASolid => {
+        FaIcon::FaASolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4248,7 +4248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAccessibleIconBrands")]
-        Icon::FaAccessibleIconBrands => {
+        FaIcon::FaAccessibleIconBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4260,7 +4260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAccusoftBrands")]
-        Icon::FaAccusoftBrands => {
+        FaIcon::FaAccusoftBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4272,7 +4272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAddressBookRegular")]
-        Icon::FaAddressBookRegular => {
+        FaIcon::FaAddressBookRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4284,7 +4284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAddressBookSolid")]
-        Icon::FaAddressBookSolid => {
+        FaIcon::FaAddressBookSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4296,7 +4296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAddressCardRegular")]
-        Icon::FaAddressCardRegular => {
+        FaIcon::FaAddressCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4308,7 +4308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAddressCardSolid")]
-        Icon::FaAddressCardSolid => {
+        FaIcon::FaAddressCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4320,7 +4320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAdnBrands")]
-        Icon::FaAdnBrands => {
+        FaIcon::FaAdnBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -4332,7 +4332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAdversalBrands")]
-        Icon::FaAdversalBrands => {
+        FaIcon::FaAdversalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4344,7 +4344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAffiliatethemeBrands")]
-        Icon::FaAffiliatethemeBrands => {
+        FaIcon::FaAffiliatethemeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4356,7 +4356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAirbnbBrands")]
-        Icon::FaAirbnbBrands => {
+        FaIcon::FaAirbnbBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4368,7 +4368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAlgoliaBrands")]
-        Icon::FaAlgoliaBrands => {
+        FaIcon::FaAlgoliaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4380,7 +4380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAlignCenterSolid")]
-        Icon::FaAlignCenterSolid => {
+        FaIcon::FaAlignCenterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4392,7 +4392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAlignJustifySolid")]
-        Icon::FaAlignJustifySolid => {
+        FaIcon::FaAlignJustifySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4404,7 +4404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAlignLeftSolid")]
-        Icon::FaAlignLeftSolid => {
+        FaIcon::FaAlignLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4416,7 +4416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAlignRightSolid")]
-        Icon::FaAlignRightSolid => {
+        FaIcon::FaAlignRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4428,7 +4428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAlipayBrands")]
-        Icon::FaAlipayBrands => {
+        FaIcon::FaAlipayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4440,7 +4440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAmazonBrands")]
-        Icon::FaAmazonBrands => {
+        FaIcon::FaAmazonBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4452,7 +4452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAmazonPayBrands")]
-        Icon::FaAmazonPayBrands => {
+        FaIcon::FaAmazonPayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4464,7 +4464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAmiliaBrands")]
-        Icon::FaAmiliaBrands => {
+        FaIcon::FaAmiliaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4476,7 +4476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnchorCircleCheckSolid")]
-        Icon::FaAnchorCircleCheckSolid => {
+        FaIcon::FaAnchorCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4488,7 +4488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnchorCircleExclamationSolid")]
-        Icon::FaAnchorCircleExclamationSolid => {
+        FaIcon::FaAnchorCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4500,7 +4500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnchorCircleXmarkSolid")]
-        Icon::FaAnchorCircleXmarkSolid => {
+        FaIcon::FaAnchorCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4512,7 +4512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnchorLockSolid")]
-        Icon::FaAnchorLockSolid => {
+        FaIcon::FaAnchorLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4524,7 +4524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnchorSolid")]
-        Icon::FaAnchorSolid => {
+        FaIcon::FaAnchorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4536,7 +4536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAndroidBrands")]
-        Icon::FaAndroidBrands => {
+        FaIcon::FaAndroidBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4548,7 +4548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngellistBrands")]
-        Icon::FaAngellistBrands => {
+        FaIcon::FaAngellistBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4560,7 +4560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngleDownSolid")]
-        Icon::FaAngleDownSolid => {
+        FaIcon::FaAngleDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4572,7 +4572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngleLeftSolid")]
-        Icon::FaAngleLeftSolid => {
+        FaIcon::FaAngleLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -4584,7 +4584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngleRightSolid")]
-        Icon::FaAngleRightSolid => {
+        FaIcon::FaAngleRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -4596,7 +4596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngleUpSolid")]
-        Icon::FaAngleUpSolid => {
+        FaIcon::FaAngleUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4608,7 +4608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnglesDownSolid")]
-        Icon::FaAnglesDownSolid => {
+        FaIcon::FaAnglesDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4620,7 +4620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnglesLeftSolid")]
-        Icon::FaAnglesLeftSolid => {
+        FaIcon::FaAnglesLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4632,7 +4632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnglesRightSolid")]
-        Icon::FaAnglesRightSolid => {
+        FaIcon::FaAnglesRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4644,7 +4644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnglesUpSolid")]
-        Icon::FaAnglesUpSolid => {
+        FaIcon::FaAnglesUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4656,7 +4656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngrycreativeBrands")]
-        Icon::FaAngrycreativeBrands => {
+        FaIcon::FaAngrycreativeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4668,7 +4668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAngularBrands")]
-        Icon::FaAngularBrands => {
+        FaIcon::FaAngularBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4680,7 +4680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAnkhSolid")]
-        Icon::FaAnkhSolid => {
+        FaIcon::FaAnkhSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4692,7 +4692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAppStoreBrands")]
-        Icon::FaAppStoreBrands => {
+        FaIcon::FaAppStoreBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4704,7 +4704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAppStoreIosBrands")]
-        Icon::FaAppStoreIosBrands => {
+        FaIcon::FaAppStoreIosBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4716,7 +4716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaApperBrands")]
-        Icon::FaApperBrands => {
+        FaIcon::FaApperBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4728,7 +4728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAppleBrands")]
-        Icon::FaAppleBrands => {
+        FaIcon::FaAppleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4740,7 +4740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaApplePayBrands")]
-        Icon::FaApplePayBrands => {
+        FaIcon::FaApplePayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4752,7 +4752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAppleWholeSolid")]
-        Icon::FaAppleWholeSolid => {
+        FaIcon::FaAppleWholeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4764,7 +4764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArchwaySolid")]
-        Icon::FaArchwaySolid => {
+        FaIcon::FaArchwaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4776,7 +4776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDown19Solid")]
-        Icon::FaArrowDown19Solid => {
+        FaIcon::FaArrowDown19Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4788,7 +4788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDown91Solid")]
-        Icon::FaArrowDown91Solid => {
+        FaIcon::FaArrowDown91Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4800,7 +4800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownAZSolid")]
-        Icon::FaArrowDownAZSolid => {
+        FaIcon::FaArrowDownAZSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4812,7 +4812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownLongSolid")]
-        Icon::FaArrowDownLongSolid => {
+        FaIcon::FaArrowDownLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4824,7 +4824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownShortWideSolid")]
-        Icon::FaArrowDownShortWideSolid => {
+        FaIcon::FaArrowDownShortWideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4836,7 +4836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownSolid")]
-        Icon::FaArrowDownSolid => {
+        FaIcon::FaArrowDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -4848,7 +4848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownUpAcrossLineSolid")]
-        Icon::FaArrowDownUpAcrossLineSolid => {
+        FaIcon::FaArrowDownUpAcrossLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4860,7 +4860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownUpLockSolid")]
-        Icon::FaArrowDownUpLockSolid => {
+        FaIcon::FaArrowDownUpLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -4872,7 +4872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownWideShortSolid")]
-        Icon::FaArrowDownWideShortSolid => {
+        FaIcon::FaArrowDownWideShortSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -4884,7 +4884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowDownZASolid")]
-        Icon::FaArrowDownZASolid => {
+        FaIcon::FaArrowDownZASolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4896,7 +4896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowLeftLongSolid")]
-        Icon::FaArrowLeftLongSolid => {
+        FaIcon::FaArrowLeftLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4908,7 +4908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowLeftSolid")]
-        Icon::FaArrowLeftSolid => {
+        FaIcon::FaArrowLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4920,7 +4920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowPointerSolid")]
-        Icon::FaArrowPointerSolid => {
+        FaIcon::FaArrowPointerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -4932,7 +4932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRightArrowLeftSolid")]
-        Icon::FaArrowRightArrowLeftSolid => {
+        FaIcon::FaArrowRightArrowLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4944,7 +4944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRightFromBracketSolid")]
-        Icon::FaArrowRightFromBracketSolid => {
+        FaIcon::FaArrowRightFromBracketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4956,7 +4956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRightLongSolid")]
-        Icon::FaArrowRightLongSolid => {
+        FaIcon::FaArrowRightLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4968,7 +4968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRightSolid")]
-        Icon::FaArrowRightSolid => {
+        FaIcon::FaArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -4980,7 +4980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRightToBracketSolid")]
-        Icon::FaArrowRightToBracketSolid => {
+        FaIcon::FaArrowRightToBracketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -4992,7 +4992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRightToCitySolid")]
-        Icon::FaArrowRightToCitySolid => {
+        FaIcon::FaArrowRightToCitySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5004,7 +5004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRotateLeftSolid")]
-        Icon::FaArrowRotateLeftSolid => {
+        FaIcon::FaArrowRotateLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5016,7 +5016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowRotateRightSolid")]
-        Icon::FaArrowRotateRightSolid => {
+        FaIcon::FaArrowRotateRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5028,7 +5028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowTrendDownSolid")]
-        Icon::FaArrowTrendDownSolid => {
+        FaIcon::FaArrowTrendDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5040,7 +5040,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowTrendUpSolid")]
-        Icon::FaArrowTrendUpSolid => {
+        FaIcon::FaArrowTrendUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5052,7 +5052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowTurnDownSolid")]
-        Icon::FaArrowTurnDownSolid => {
+        FaIcon::FaArrowTurnDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5064,7 +5064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowTurnUpSolid")]
-        Icon::FaArrowTurnUpSolid => {
+        FaIcon::FaArrowTurnUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5076,7 +5076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUp19Solid")]
-        Icon::FaArrowUp19Solid => {
+        FaIcon::FaArrowUp19Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5088,7 +5088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUp91Solid")]
-        Icon::FaArrowUp91Solid => {
+        FaIcon::FaArrowUp91Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5100,7 +5100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpAZSolid")]
-        Icon::FaArrowUpAZSolid => {
+        FaIcon::FaArrowUpAZSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5112,7 +5112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpFromBracketSolid")]
-        Icon::FaArrowUpFromBracketSolid => {
+        FaIcon::FaArrowUpFromBracketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5124,7 +5124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpFromGroundWaterSolid")]
-        Icon::FaArrowUpFromGroundWaterSolid => {
+        FaIcon::FaArrowUpFromGroundWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5136,7 +5136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpFromWaterPumpSolid")]
-        Icon::FaArrowUpFromWaterPumpSolid => {
+        FaIcon::FaArrowUpFromWaterPumpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5148,7 +5148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpLongSolid")]
-        Icon::FaArrowUpLongSolid => {
+        FaIcon::FaArrowUpLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -5160,7 +5160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpRightDotsSolid")]
-        Icon::FaArrowUpRightDotsSolid => {
+        FaIcon::FaArrowUpRightDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5172,7 +5172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpRightFromSquareSolid")]
-        Icon::FaArrowUpRightFromSquareSolid => {
+        FaIcon::FaArrowUpRightFromSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5184,7 +5184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpShortWideSolid")]
-        Icon::FaArrowUpShortWideSolid => {
+        FaIcon::FaArrowUpShortWideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5196,7 +5196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpSolid")]
-        Icon::FaArrowUpSolid => {
+        FaIcon::FaArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5208,7 +5208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpWideShortSolid")]
-        Icon::FaArrowUpWideShortSolid => {
+        FaIcon::FaArrowUpWideShortSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5220,7 +5220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowUpZASolid")]
-        Icon::FaArrowUpZASolid => {
+        FaIcon::FaArrowUpZASolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5232,7 +5232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsDownToLineSolid")]
-        Icon::FaArrowsDownToLineSolid => {
+        FaIcon::FaArrowsDownToLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5244,7 +5244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsDownToPeopleSolid")]
-        Icon::FaArrowsDownToPeopleSolid => {
+        FaIcon::FaArrowsDownToPeopleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5256,7 +5256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsLeftRightSolid")]
-        Icon::FaArrowsLeftRightSolid => {
+        FaIcon::FaArrowsLeftRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5268,7 +5268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsLeftRightToLineSolid")]
-        Icon::FaArrowsLeftRightToLineSolid => {
+        FaIcon::FaArrowsLeftRightToLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5280,7 +5280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsRotateSolid")]
-        Icon::FaArrowsRotateSolid => {
+        FaIcon::FaArrowsRotateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5292,7 +5292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsSpinSolid")]
-        Icon::FaArrowsSpinSolid => {
+        FaIcon::FaArrowsSpinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5304,7 +5304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsSplitUpAndLeftSolid")]
-        Icon::FaArrowsSplitUpAndLeftSolid => {
+        FaIcon::FaArrowsSplitUpAndLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5316,7 +5316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsToCircleSolid")]
-        Icon::FaArrowsToCircleSolid => {
+        FaIcon::FaArrowsToCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5328,7 +5328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsToDotSolid")]
-        Icon::FaArrowsToDotSolid => {
+        FaIcon::FaArrowsToDotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5340,7 +5340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsToEyeSolid")]
-        Icon::FaArrowsToEyeSolid => {
+        FaIcon::FaArrowsToEyeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5352,7 +5352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsTurnRightSolid")]
-        Icon::FaArrowsTurnRightSolid => {
+        FaIcon::FaArrowsTurnRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5364,7 +5364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsTurnToDotsSolid")]
-        Icon::FaArrowsTurnToDotsSolid => {
+        FaIcon::FaArrowsTurnToDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5376,7 +5376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsUpDownLeftRightSolid")]
-        Icon::FaArrowsUpDownLeftRightSolid => {
+        FaIcon::FaArrowsUpDownLeftRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5388,7 +5388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsUpDownSolid")]
-        Icon::FaArrowsUpDownSolid => {
+        FaIcon::FaArrowsUpDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -5400,7 +5400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArrowsUpToLineSolid")]
-        Icon::FaArrowsUpToLineSolid => {
+        FaIcon::FaArrowsUpToLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5412,7 +5412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaArtstationBrands")]
-        Icon::FaArtstationBrands => {
+        FaIcon::FaArtstationBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5424,7 +5424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAsteriskSolid")]
-        Icon::FaAsteriskSolid => {
+        FaIcon::FaAsteriskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5436,7 +5436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAsymmetrikBrands")]
-        Icon::FaAsymmetrikBrands => {
+        FaIcon::FaAsymmetrikBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5448,7 +5448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAtSolid")]
-        Icon::FaAtSolid => {
+        FaIcon::FaAtSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5460,7 +5460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAtlassianBrands")]
-        Icon::FaAtlassianBrands => {
+        FaIcon::FaAtlassianBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5472,7 +5472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAtomSolid")]
-        Icon::FaAtomSolid => {
+        FaIcon::FaAtomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5484,7 +5484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAudibleBrands")]
-        Icon::FaAudibleBrands => {
+        FaIcon::FaAudibleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5496,7 +5496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAudioDescriptionSolid")]
-        Icon::FaAudioDescriptionSolid => {
+        FaIcon::FaAudioDescriptionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5508,7 +5508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAustralSignSolid")]
-        Icon::FaAustralSignSolid => {
+        FaIcon::FaAustralSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5520,7 +5520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAutoprefixerBrands")]
-        Icon::FaAutoprefixerBrands => {
+        FaIcon::FaAutoprefixerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5532,7 +5532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAvianexBrands")]
-        Icon::FaAvianexBrands => {
+        FaIcon::FaAvianexBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5544,7 +5544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAviatoBrands")]
-        Icon::FaAviatoBrands => {
+        FaIcon::FaAviatoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5556,7 +5556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAwardSolid")]
-        Icon::FaAwardSolid => {
+        FaIcon::FaAwardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5568,7 +5568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaAwsBrands")]
-        Icon::FaAwsBrands => {
+        FaIcon::FaAwsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5580,7 +5580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBSolid")]
-        Icon::FaBSolid => {
+        FaIcon::FaBSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -5592,7 +5592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBabyCarriageSolid")]
-        Icon::FaBabyCarriageSolid => {
+        FaIcon::FaBabyCarriageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5604,7 +5604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBabySolid")]
-        Icon::FaBabySolid => {
+        FaIcon::FaBabySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5616,7 +5616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBackwardFastSolid")]
-        Icon::FaBackwardFastSolid => {
+        FaIcon::FaBackwardFastSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5628,7 +5628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBackwardSolid")]
-        Icon::FaBackwardSolid => {
+        FaIcon::FaBackwardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5640,7 +5640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBackwardStepSolid")]
-        Icon::FaBackwardStepSolid => {
+        FaIcon::FaBackwardStepSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -5652,7 +5652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBaconSolid")]
-        Icon::FaBaconSolid => {
+        FaIcon::FaBaconSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5664,7 +5664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBacteriaSolid")]
-        Icon::FaBacteriaSolid => {
+        FaIcon::FaBacteriaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5676,7 +5676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBacteriumSolid")]
-        Icon::FaBacteriumSolid => {
+        FaIcon::FaBacteriumSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5688,7 +5688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBagShoppingSolid")]
-        Icon::FaBagShoppingSolid => {
+        FaIcon::FaBagShoppingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5700,7 +5700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBahaiSolid")]
-        Icon::FaBahaiSolid => {
+        FaIcon::FaBahaiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5712,7 +5712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBahtSignSolid")]
-        Icon::FaBahtSignSolid => {
+        FaIcon::FaBahtSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -5724,7 +5724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBanSmokingSolid")]
-        Icon::FaBanSmokingSolid => {
+        FaIcon::FaBanSmokingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5736,7 +5736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBanSolid")]
-        Icon::FaBanSolid => {
+        FaIcon::FaBanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5748,7 +5748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBandageSolid")]
-        Icon::FaBandageSolid => {
+        FaIcon::FaBandageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5760,7 +5760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBandcampBrands")]
-        Icon::FaBandcampBrands => {
+        FaIcon::FaBandcampBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5772,7 +5772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBangladeshiTakaSignSolid")]
-        Icon::FaBangladeshiTakaSignSolid => {
+        FaIcon::FaBangladeshiTakaSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -5784,7 +5784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBarcodeSolid")]
-        Icon::FaBarcodeSolid => {
+        FaIcon::FaBarcodeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5796,7 +5796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBarsProgressSolid")]
-        Icon::FaBarsProgressSolid => {
+        FaIcon::FaBarsProgressSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5808,7 +5808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBarsSolid")]
-        Icon::FaBarsSolid => {
+        FaIcon::FaBarsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -5820,7 +5820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBarsStaggeredSolid")]
-        Icon::FaBarsStaggeredSolid => {
+        FaIcon::FaBarsStaggeredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5832,7 +5832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBaseballBatBallSolid")]
-        Icon::FaBaseballBatBallSolid => {
+        FaIcon::FaBaseballBatBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5844,7 +5844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBaseballSolid")]
-        Icon::FaBaseballSolid => {
+        FaIcon::FaBaseballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5856,7 +5856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBasketShoppingSolid")]
-        Icon::FaBasketShoppingSolid => {
+        FaIcon::FaBasketShoppingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5868,7 +5868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBasketballSolid")]
-        Icon::FaBasketballSolid => {
+        FaIcon::FaBasketballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5880,7 +5880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBathSolid")]
-        Icon::FaBathSolid => {
+        FaIcon::FaBathSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5892,7 +5892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBatteryEmptySolid")]
-        Icon::FaBatteryEmptySolid => {
+        FaIcon::FaBatteryEmptySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5904,7 +5904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBatteryFullSolid")]
-        Icon::FaBatteryFullSolid => {
+        FaIcon::FaBatteryFullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5916,7 +5916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBatteryHalfSolid")]
-        Icon::FaBatteryHalfSolid => {
+        FaIcon::FaBatteryHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5928,7 +5928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBatteryQuarterSolid")]
-        Icon::FaBatteryQuarterSolid => {
+        FaIcon::FaBatteryQuarterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5940,7 +5940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBatteryThreeQuartersSolid")]
-        Icon::FaBatteryThreeQuartersSolid => {
+        FaIcon::FaBatteryThreeQuartersSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -5952,7 +5952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBattleNetBrands")]
-        Icon::FaBattleNetBrands => {
+        FaIcon::FaBattleNetBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -5964,7 +5964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBedPulseSolid")]
-        Icon::FaBedPulseSolid => {
+        FaIcon::FaBedPulseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5976,7 +5976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBedSolid")]
-        Icon::FaBedSolid => {
+        FaIcon::FaBedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -5988,7 +5988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBeerMugEmptySolid")]
-        Icon::FaBeerMugEmptySolid => {
+        FaIcon::FaBeerMugEmptySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6000,7 +6000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBehanceBrands")]
-        Icon::FaBehanceBrands => {
+        FaIcon::FaBehanceBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6012,7 +6012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBellConciergeSolid")]
-        Icon::FaBellConciergeSolid => {
+        FaIcon::FaBellConciergeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6024,7 +6024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBellRegular")]
-        Icon::FaBellRegular => {
+        FaIcon::FaBellRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6036,7 +6036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBellSlashRegular")]
-        Icon::FaBellSlashRegular => {
+        FaIcon::FaBellSlashRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6048,7 +6048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBellSlashSolid")]
-        Icon::FaBellSlashSolid => {
+        FaIcon::FaBellSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6060,7 +6060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBellSolid")]
-        Icon::FaBellSolid => {
+        FaIcon::FaBellSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6072,7 +6072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBezierCurveSolid")]
-        Icon::FaBezierCurveSolid => {
+        FaIcon::FaBezierCurveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6084,7 +6084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBicycleSolid")]
-        Icon::FaBicycleSolid => {
+        FaIcon::FaBicycleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6096,7 +6096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBilibiliBrands")]
-        Icon::FaBilibiliBrands => {
+        FaIcon::FaBilibiliBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6108,7 +6108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBimobjectBrands")]
-        Icon::FaBimobjectBrands => {
+        FaIcon::FaBimobjectBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6120,7 +6120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBinocularsSolid")]
-        Icon::FaBinocularsSolid => {
+        FaIcon::FaBinocularsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6132,7 +6132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBiohazardSolid")]
-        Icon::FaBiohazardSolid => {
+        FaIcon::FaBiohazardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6144,7 +6144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBitbucketBrands")]
-        Icon::FaBitbucketBrands => {
+        FaIcon::FaBitbucketBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6156,7 +6156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBitcoinBrands")]
-        Icon::FaBitcoinBrands => {
+        FaIcon::FaBitcoinBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6168,7 +6168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBitcoinSignSolid")]
-        Icon::FaBitcoinSignSolid => {
+        FaIcon::FaBitcoinSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -6180,7 +6180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBityBrands")]
-        Icon::FaBityBrands => {
+        FaIcon::FaBityBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -6192,7 +6192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBlackTieBrands")]
-        Icon::FaBlackTieBrands => {
+        FaIcon::FaBlackTieBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6204,7 +6204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBlackberryBrands")]
-        Icon::FaBlackberryBrands => {
+        FaIcon::FaBlackberryBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6216,7 +6216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBlenderPhoneSolid")]
-        Icon::FaBlenderPhoneSolid => {
+        FaIcon::FaBlenderPhoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6228,7 +6228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBlenderSolid")]
-        Icon::FaBlenderSolid => {
+        FaIcon::FaBlenderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6240,7 +6240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBlogSolid")]
-        Icon::FaBlogSolid => {
+        FaIcon::FaBlogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6252,7 +6252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBloggerBBrands")]
-        Icon::FaBloggerBBrands => {
+        FaIcon::FaBloggerBBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6264,7 +6264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBloggerBrands")]
-        Icon::FaBloggerBrands => {
+        FaIcon::FaBloggerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6276,7 +6276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBluetoothBBrands")]
-        Icon::FaBluetoothBBrands => {
+        FaIcon::FaBluetoothBBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -6288,7 +6288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBluetoothBrands")]
-        Icon::FaBluetoothBrands => {
+        FaIcon::FaBluetoothBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6300,7 +6300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoldSolid")]
-        Icon::FaBoldSolid => {
+        FaIcon::FaBoldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6312,7 +6312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoltLightningSolid")]
-        Icon::FaBoltLightningSolid => {
+        FaIcon::FaBoltLightningSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6324,7 +6324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoltSolid")]
-        Icon::FaBoltSolid => {
+        FaIcon::FaBoltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6336,7 +6336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBombSolid")]
-        Icon::FaBombSolid => {
+        FaIcon::FaBombSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6348,7 +6348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoneSolid")]
-        Icon::FaBoneSolid => {
+        FaIcon::FaBoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6360,7 +6360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBongSolid")]
-        Icon::FaBongSolid => {
+        FaIcon::FaBongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6372,7 +6372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookAtlasSolid")]
-        Icon::FaBookAtlasSolid => {
+        FaIcon::FaBookAtlasSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6384,7 +6384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookBibleSolid")]
-        Icon::FaBookBibleSolid => {
+        FaIcon::FaBookBibleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6396,7 +6396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookBookmarkSolid")]
-        Icon::FaBookBookmarkSolid => {
+        FaIcon::FaBookBookmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6408,7 +6408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookJournalWhillsSolid")]
-        Icon::FaBookJournalWhillsSolid => {
+        FaIcon::FaBookJournalWhillsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6420,7 +6420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookMedicalSolid")]
-        Icon::FaBookMedicalSolid => {
+        FaIcon::FaBookMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6432,7 +6432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookOpenReaderSolid")]
-        Icon::FaBookOpenReaderSolid => {
+        FaIcon::FaBookOpenReaderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6444,7 +6444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookOpenSolid")]
-        Icon::FaBookOpenSolid => {
+        FaIcon::FaBookOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6456,7 +6456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookQuranSolid")]
-        Icon::FaBookQuranSolid => {
+        FaIcon::FaBookQuranSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6468,7 +6468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookSkullSolid")]
-        Icon::FaBookSkullSolid => {
+        FaIcon::FaBookSkullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6480,7 +6480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookSolid")]
-        Icon::FaBookSolid => {
+        FaIcon::FaBookSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6492,7 +6492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookTanakhSolid")]
-        Icon::FaBookTanakhSolid => {
+        FaIcon::FaBookTanakhSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6504,7 +6504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookmarkRegular")]
-        Icon::FaBookmarkRegular => {
+        FaIcon::FaBookmarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6516,7 +6516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBookmarkSolid")]
-        Icon::FaBookmarkSolid => {
+        FaIcon::FaBookmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6528,7 +6528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBootstrapBrands")]
-        Icon::FaBootstrapBrands => {
+        FaIcon::FaBootstrapBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6540,7 +6540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBorderAllSolid")]
-        Icon::FaBorderAllSolid => {
+        FaIcon::FaBorderAllSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6552,7 +6552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBorderNoneSolid")]
-        Icon::FaBorderNoneSolid => {
+        FaIcon::FaBorderNoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6564,7 +6564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBorderTopLeftSolid")]
-        Icon::FaBorderTopLeftSolid => {
+        FaIcon::FaBorderTopLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6576,7 +6576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoreHoleSolid")]
-        Icon::FaBoreHoleSolid => {
+        FaIcon::FaBoreHoleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6588,7 +6588,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBotsBrands")]
-        Icon::FaBotsBrands => {
+        FaIcon::FaBotsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6600,7 +6600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBottleDropletSolid")]
-        Icon::FaBottleDropletSolid => {
+        FaIcon::FaBottleDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -6612,7 +6612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBottleWaterSolid")]
-        Icon::FaBottleWaterSolid => {
+        FaIcon::FaBottleWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -6624,7 +6624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBowlFoodSolid")]
-        Icon::FaBowlFoodSolid => {
+        FaIcon::FaBowlFoodSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6636,7 +6636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBowlRiceSolid")]
-        Icon::FaBowlRiceSolid => {
+        FaIcon::FaBowlRiceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6648,7 +6648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBowlingBallSolid")]
-        Icon::FaBowlingBallSolid => {
+        FaIcon::FaBowlingBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6660,7 +6660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoxArchiveSolid")]
-        Icon::FaBoxArchiveSolid => {
+        FaIcon::FaBoxArchiveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6672,7 +6672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoxOpenSolid")]
-        Icon::FaBoxOpenSolid => {
+        FaIcon::FaBoxOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6684,7 +6684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoxSolid")]
-        Icon::FaBoxSolid => {
+        FaIcon::FaBoxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6696,7 +6696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoxTissueSolid")]
-        Icon::FaBoxTissueSolid => {
+        FaIcon::FaBoxTissueSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6708,7 +6708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoxesPackingSolid")]
-        Icon::FaBoxesPackingSolid => {
+        FaIcon::FaBoxesPackingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6720,7 +6720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBoxesStackedSolid")]
-        Icon::FaBoxesStackedSolid => {
+        FaIcon::FaBoxesStackedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6732,7 +6732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBrailleSolid")]
-        Icon::FaBrailleSolid => {
+        FaIcon::FaBrailleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6744,7 +6744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBrainSolid")]
-        Icon::FaBrainSolid => {
+        FaIcon::FaBrainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6756,7 +6756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBrazilianRealSignSolid")]
-        Icon::FaBrazilianRealSignSolid => {
+        FaIcon::FaBrazilianRealSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6768,7 +6768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBreadSliceSolid")]
-        Icon::FaBreadSliceSolid => {
+        FaIcon::FaBreadSliceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6780,7 +6780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBridgeCircleCheckSolid")]
-        Icon::FaBridgeCircleCheckSolid => {
+        FaIcon::FaBridgeCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6792,7 +6792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBridgeCircleExclamationSolid")]
-        Icon::FaBridgeCircleExclamationSolid => {
+        FaIcon::FaBridgeCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6804,7 +6804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBridgeCircleXmarkSolid")]
-        Icon::FaBridgeCircleXmarkSolid => {
+        FaIcon::FaBridgeCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6816,7 +6816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBridgeLockSolid")]
-        Icon::FaBridgeLockSolid => {
+        FaIcon::FaBridgeLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6828,7 +6828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBridgeSolid")]
-        Icon::FaBridgeSolid => {
+        FaIcon::FaBridgeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6840,7 +6840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBridgeWaterSolid")]
-        Icon::FaBridgeWaterSolid => {
+        FaIcon::FaBridgeWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6852,7 +6852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBriefcaseMedicalSolid")]
-        Icon::FaBriefcaseMedicalSolid => {
+        FaIcon::FaBriefcaseMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6864,7 +6864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBriefcaseSolid")]
-        Icon::FaBriefcaseSolid => {
+        FaIcon::FaBriefcaseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6876,7 +6876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBroomBallSolid")]
-        Icon::FaBroomBallSolid => {
+        FaIcon::FaBroomBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6888,7 +6888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBroomSolid")]
-        Icon::FaBroomSolid => {
+        FaIcon::FaBroomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6900,7 +6900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBrushSolid")]
-        Icon::FaBrushSolid => {
+        FaIcon::FaBrushSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6912,7 +6912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBtcBrands")]
-        Icon::FaBtcBrands => {
+        FaIcon::FaBtcBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -6924,7 +6924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBucketSolid")]
-        Icon::FaBucketSolid => {
+        FaIcon::FaBucketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6936,7 +6936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBufferBrands")]
-        Icon::FaBufferBrands => {
+        FaIcon::FaBufferBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -6948,7 +6948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBugSlashSolid")]
-        Icon::FaBugSlashSolid => {
+        FaIcon::FaBugSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6960,7 +6960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBugSolid")]
-        Icon::FaBugSolid => {
+        FaIcon::FaBugSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -6972,7 +6972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBugsSolid")]
-        Icon::FaBugsSolid => {
+        FaIcon::FaBugsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -6984,7 +6984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingCircleArrowRightSolid")]
-        Icon::FaBuildingCircleArrowRightSolid => {
+        FaIcon::FaBuildingCircleArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -6996,7 +6996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingCircleCheckSolid")]
-        Icon::FaBuildingCircleCheckSolid => {
+        FaIcon::FaBuildingCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7008,7 +7008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingCircleExclamationSolid")]
-        Icon::FaBuildingCircleExclamationSolid => {
+        FaIcon::FaBuildingCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7020,7 +7020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingCircleXmarkSolid")]
-        Icon::FaBuildingCircleXmarkSolid => {
+        FaIcon::FaBuildingCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7032,7 +7032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingColumnsSolid")]
-        Icon::FaBuildingColumnsSolid => {
+        FaIcon::FaBuildingColumnsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7044,7 +7044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingFlagSolid")]
-        Icon::FaBuildingFlagSolid => {
+        FaIcon::FaBuildingFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7056,7 +7056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingLockSolid")]
-        Icon::FaBuildingLockSolid => {
+        FaIcon::FaBuildingLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7068,7 +7068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingNgoSolid")]
-        Icon::FaBuildingNgoSolid => {
+        FaIcon::FaBuildingNgoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -7080,7 +7080,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingRegular")]
-        Icon::FaBuildingRegular => {
+        FaIcon::FaBuildingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -7092,7 +7092,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingShieldSolid")]
-        Icon::FaBuildingShieldSolid => {
+        FaIcon::FaBuildingShieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7104,7 +7104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingSolid")]
-        Icon::FaBuildingSolid => {
+        FaIcon::FaBuildingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -7116,7 +7116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingUnSolid")]
-        Icon::FaBuildingUnSolid => {
+        FaIcon::FaBuildingUnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -7128,7 +7128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingUserSolid")]
-        Icon::FaBuildingUserSolid => {
+        FaIcon::FaBuildingUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7140,7 +7140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuildingWheatSolid")]
-        Icon::FaBuildingWheatSolid => {
+        FaIcon::FaBuildingWheatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7152,7 +7152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBullhornSolid")]
-        Icon::FaBullhornSolid => {
+        FaIcon::FaBullhornSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7164,7 +7164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBullseyeSolid")]
-        Icon::FaBullseyeSolid => {
+        FaIcon::FaBullseyeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7176,7 +7176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBurgerSolid")]
-        Icon::FaBurgerSolid => {
+        FaIcon::FaBurgerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7188,7 +7188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuromobelexperteBrands")]
-        Icon::FaBuromobelexperteBrands => {
+        FaIcon::FaBuromobelexperteBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7200,7 +7200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBurstSolid")]
-        Icon::FaBurstSolid => {
+        FaIcon::FaBurstSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7212,7 +7212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBusSimpleSolid")]
-        Icon::FaBusSimpleSolid => {
+        FaIcon::FaBusSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7224,7 +7224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBusSolid")]
-        Icon::FaBusSolid => {
+        FaIcon::FaBusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7236,7 +7236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBusinessTimeSolid")]
-        Icon::FaBusinessTimeSolid => {
+        FaIcon::FaBusinessTimeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7248,7 +7248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuyNLargeBrands")]
-        Icon::FaBuyNLargeBrands => {
+        FaIcon::FaBuyNLargeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7260,7 +7260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaBuyselladsBrands")]
-        Icon::FaBuyselladsBrands => {
+        FaIcon::FaBuyselladsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7272,7 +7272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCSolid")]
-        Icon::FaCSolid => {
+        FaIcon::FaCSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -7284,7 +7284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCableCarSolid")]
-        Icon::FaCableCarSolid => {
+        FaIcon::FaCableCarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7296,7 +7296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCakeCandlesSolid")]
-        Icon::FaCakeCandlesSolid => {
+        FaIcon::FaCakeCandlesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7308,7 +7308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalculatorSolid")]
-        Icon::FaCalculatorSolid => {
+        FaIcon::FaCalculatorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -7320,7 +7320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarCheckRegular")]
-        Icon::FaCalendarCheckRegular => {
+        FaIcon::FaCalendarCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7332,7 +7332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarCheckSolid")]
-        Icon::FaCalendarCheckSolid => {
+        FaIcon::FaCalendarCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7344,7 +7344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarDaySolid")]
-        Icon::FaCalendarDaySolid => {
+        FaIcon::FaCalendarDaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7356,7 +7356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarDaysRegular")]
-        Icon::FaCalendarDaysRegular => {
+        FaIcon::FaCalendarDaysRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7368,7 +7368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarDaysSolid")]
-        Icon::FaCalendarDaysSolid => {
+        FaIcon::FaCalendarDaysSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7380,7 +7380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarMinusRegular")]
-        Icon::FaCalendarMinusRegular => {
+        FaIcon::FaCalendarMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7392,7 +7392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarMinusSolid")]
-        Icon::FaCalendarMinusSolid => {
+        FaIcon::FaCalendarMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7404,7 +7404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarPlusRegular")]
-        Icon::FaCalendarPlusRegular => {
+        FaIcon::FaCalendarPlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7416,7 +7416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarPlusSolid")]
-        Icon::FaCalendarPlusSolid => {
+        FaIcon::FaCalendarPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7428,7 +7428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarRegular")]
-        Icon::FaCalendarRegular => {
+        FaIcon::FaCalendarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7440,7 +7440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarSolid")]
-        Icon::FaCalendarSolid => {
+        FaIcon::FaCalendarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7452,7 +7452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarWeekSolid")]
-        Icon::FaCalendarWeekSolid => {
+        FaIcon::FaCalendarWeekSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7464,7 +7464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarXmarkRegular")]
-        Icon::FaCalendarXmarkRegular => {
+        FaIcon::FaCalendarXmarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7476,7 +7476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCalendarXmarkSolid")]
-        Icon::FaCalendarXmarkSolid => {
+        FaIcon::FaCalendarXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7488,7 +7488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCameraRetroSolid")]
-        Icon::FaCameraRetroSolid => {
+        FaIcon::FaCameraRetroSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7500,7 +7500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCameraRotateSolid")]
-        Icon::FaCameraRotateSolid => {
+        FaIcon::FaCameraRotateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7512,7 +7512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCameraSolid")]
-        Icon::FaCameraSolid => {
+        FaIcon::FaCameraSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7524,7 +7524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCampgroundSolid")]
-        Icon::FaCampgroundSolid => {
+        FaIcon::FaCampgroundSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7536,7 +7536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCanadianMapleLeafBrands")]
-        Icon::FaCanadianMapleLeafBrands => {
+        FaIcon::FaCanadianMapleLeafBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7548,7 +7548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCandyCaneSolid")]
-        Icon::FaCandyCaneSolid => {
+        FaIcon::FaCandyCaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7560,7 +7560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCannabisSolid")]
-        Icon::FaCannabisSolid => {
+        FaIcon::FaCannabisSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7572,7 +7572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCapsulesSolid")]
-        Icon::FaCapsulesSolid => {
+        FaIcon::FaCapsulesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7584,7 +7584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarBatterySolid")]
-        Icon::FaCarBatterySolid => {
+        FaIcon::FaCarBatterySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7596,7 +7596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarBurstSolid")]
-        Icon::FaCarBurstSolid => {
+        FaIcon::FaCarBurstSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7608,7 +7608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarOnSolid")]
-        Icon::FaCarOnSolid => {
+        FaIcon::FaCarOnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7620,7 +7620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarRearSolid")]
-        Icon::FaCarRearSolid => {
+        FaIcon::FaCarRearSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7632,7 +7632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarSideSolid")]
-        Icon::FaCarSideSolid => {
+        FaIcon::FaCarSideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7644,7 +7644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarSolid")]
-        Icon::FaCarSolid => {
+        FaIcon::FaCarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7656,7 +7656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarTunnelSolid")]
-        Icon::FaCarTunnelSolid => {
+        FaIcon::FaCarTunnelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7668,7 +7668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCaravanSolid")]
-        Icon::FaCaravanSolid => {
+        FaIcon::FaCaravanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7680,7 +7680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCaretDownSolid")]
-        Icon::FaCaretDownSolid => {
+        FaIcon::FaCaretDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -7692,7 +7692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCaretLeftSolid")]
-        Icon::FaCaretLeftSolid => {
+        FaIcon::FaCaretLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -7704,7 +7704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCaretRightSolid")]
-        Icon::FaCaretRightSolid => {
+        FaIcon::FaCaretRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -7716,7 +7716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCaretUpSolid")]
-        Icon::FaCaretUpSolid => {
+        FaIcon::FaCaretUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -7728,7 +7728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCarrotSolid")]
-        Icon::FaCarrotSolid => {
+        FaIcon::FaCarrotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7740,7 +7740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCartArrowDownSolid")]
-        Icon::FaCartArrowDownSolid => {
+        FaIcon::FaCartArrowDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7752,7 +7752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCartFlatbedSolid")]
-        Icon::FaCartFlatbedSolid => {
+        FaIcon::FaCartFlatbedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7764,7 +7764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCartFlatbedSuitcaseSolid")]
-        Icon::FaCartFlatbedSuitcaseSolid => {
+        FaIcon::FaCartFlatbedSuitcaseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -7776,7 +7776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCartPlusSolid")]
-        Icon::FaCartPlusSolid => {
+        FaIcon::FaCartPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7788,7 +7788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCartShoppingSolid")]
-        Icon::FaCartShoppingSolid => {
+        FaIcon::FaCartShoppingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7800,7 +7800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCashRegisterSolid")]
-        Icon::FaCashRegisterSolid => {
+        FaIcon::FaCashRegisterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7812,7 +7812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCatSolid")]
-        Icon::FaCatSolid => {
+        FaIcon::FaCatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7824,7 +7824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcAmazonPayBrands")]
-        Icon::FaCcAmazonPayBrands => {
+        FaIcon::FaCcAmazonPayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7836,7 +7836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcAmexBrands")]
-        Icon::FaCcAmexBrands => {
+        FaIcon::FaCcAmexBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7848,7 +7848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcApplePayBrands")]
-        Icon::FaCcApplePayBrands => {
+        FaIcon::FaCcApplePayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7860,7 +7860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcDinersClubBrands")]
-        Icon::FaCcDinersClubBrands => {
+        FaIcon::FaCcDinersClubBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7872,7 +7872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcDiscoverBrands")]
-        Icon::FaCcDiscoverBrands => {
+        FaIcon::FaCcDiscoverBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7884,7 +7884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcJcbBrands")]
-        Icon::FaCcJcbBrands => {
+        FaIcon::FaCcJcbBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7896,7 +7896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcMastercardBrands")]
-        Icon::FaCcMastercardBrands => {
+        FaIcon::FaCcMastercardBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7908,7 +7908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcPaypalBrands")]
-        Icon::FaCcPaypalBrands => {
+        FaIcon::FaCcPaypalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7920,7 +7920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcStripeBrands")]
-        Icon::FaCcStripeBrands => {
+        FaIcon::FaCcStripeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7932,7 +7932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCcVisaBrands")]
-        Icon::FaCcVisaBrands => {
+        FaIcon::FaCcVisaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -7944,7 +7944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCediSignSolid")]
-        Icon::FaCediSignSolid => {
+        FaIcon::FaCediSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -7956,7 +7956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCentSignSolid")]
-        Icon::FaCentSignSolid => {
+        FaIcon::FaCentSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -7968,7 +7968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCentercodeBrands")]
-        Icon::FaCentercodeBrands => {
+        FaIcon::FaCentercodeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -7980,7 +7980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCentosBrands")]
-        Icon::FaCentosBrands => {
+        FaIcon::FaCentosBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -7992,7 +7992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCertificateSolid")]
-        Icon::FaCertificateSolid => {
+        FaIcon::FaCertificateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8004,7 +8004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChairSolid")]
-        Icon::FaChairSolid => {
+        FaIcon::FaChairSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8016,7 +8016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChalkboardSolid")]
-        Icon::FaChalkboardSolid => {
+        FaIcon::FaChalkboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -8028,7 +8028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChalkboardUserSolid")]
-        Icon::FaChalkboardUserSolid => {
+        FaIcon::FaChalkboardUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -8040,7 +8040,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChampagneGlassesSolid")]
-        Icon::FaChampagneGlassesSolid => {
+        FaIcon::FaChampagneGlassesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -8052,7 +8052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChargingStationSolid")]
-        Icon::FaChargingStationSolid => {
+        FaIcon::FaChargingStationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -8064,7 +8064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartAreaSolid")]
-        Icon::FaChartAreaSolid => {
+        FaIcon::FaChartAreaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8076,7 +8076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartBarRegular")]
-        Icon::FaChartBarRegular => {
+        FaIcon::FaChartBarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8088,7 +8088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartBarSolid")]
-        Icon::FaChartBarSolid => {
+        FaIcon::FaChartBarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8100,7 +8100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartColumnSolid")]
-        Icon::FaChartColumnSolid => {
+        FaIcon::FaChartColumnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8112,7 +8112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartGanttSolid")]
-        Icon::FaChartGanttSolid => {
+        FaIcon::FaChartGanttSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8124,7 +8124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartLineSolid")]
-        Icon::FaChartLineSolid => {
+        FaIcon::FaChartLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8136,7 +8136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartPieSolid")]
-        Icon::FaChartPieSolid => {
+        FaIcon::FaChartPieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -8148,7 +8148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChartSimpleSolid")]
-        Icon::FaChartSimpleSolid => {
+        FaIcon::FaChartSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8160,7 +8160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCheckDoubleSolid")]
-        Icon::FaCheckDoubleSolid => {
+        FaIcon::FaCheckDoubleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8172,7 +8172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCheckSolid")]
-        Icon::FaCheckSolid => {
+        FaIcon::FaCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8184,7 +8184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCheckToSlotSolid")]
-        Icon::FaCheckToSlotSolid => {
+        FaIcon::FaCheckToSlotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -8196,7 +8196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCheeseSolid")]
-        Icon::FaCheeseSolid => {
+        FaIcon::FaCheeseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8208,7 +8208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessBishopRegular")]
-        Icon::FaChessBishopRegular => {
+        FaIcon::FaChessBishopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8220,7 +8220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessBishopSolid")]
-        Icon::FaChessBishopSolid => {
+        FaIcon::FaChessBishopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8232,7 +8232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessBoardSolid")]
-        Icon::FaChessBoardSolid => {
+        FaIcon::FaChessBoardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8244,7 +8244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessKingRegular")]
-        Icon::FaChessKingRegular => {
+        FaIcon::FaChessKingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8256,7 +8256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessKingSolid")]
-        Icon::FaChessKingSolid => {
+        FaIcon::FaChessKingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8268,7 +8268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessKnightRegular")]
-        Icon::FaChessKnightRegular => {
+        FaIcon::FaChessKnightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8280,7 +8280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessKnightSolid")]
-        Icon::FaChessKnightSolid => {
+        FaIcon::FaChessKnightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8292,7 +8292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessPawnRegular")]
-        Icon::FaChessPawnRegular => {
+        FaIcon::FaChessPawnRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8304,7 +8304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessPawnSolid")]
-        Icon::FaChessPawnSolid => {
+        FaIcon::FaChessPawnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8316,7 +8316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessQueenRegular")]
-        Icon::FaChessQueenRegular => {
+        FaIcon::FaChessQueenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8328,7 +8328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessQueenSolid")]
-        Icon::FaChessQueenSolid => {
+        FaIcon::FaChessQueenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8340,7 +8340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessRookRegular")]
-        Icon::FaChessRookRegular => {
+        FaIcon::FaChessRookRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -8352,7 +8352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessRookSolid")]
-        Icon::FaChessRookSolid => {
+        FaIcon::FaChessRookSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8364,7 +8364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChessSolid")]
-        Icon::FaChessSolid => {
+        FaIcon::FaChessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8376,7 +8376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChevronDownSolid")]
-        Icon::FaChevronDownSolid => {
+        FaIcon::FaChevronDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8388,7 +8388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChevronLeftSolid")]
-        Icon::FaChevronLeftSolid => {
+        FaIcon::FaChevronLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8400,7 +8400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChevronRightSolid")]
-        Icon::FaChevronRightSolid => {
+        FaIcon::FaChevronRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8412,7 +8412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChevronUpSolid")]
-        Icon::FaChevronUpSolid => {
+        FaIcon::FaChevronUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -8424,7 +8424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChildCombatantSolid")]
-        Icon::FaChildCombatantSolid => {
+        FaIcon::FaChildCombatantSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8436,7 +8436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChildDressSolid")]
-        Icon::FaChildDressSolid => {
+        FaIcon::FaChildDressSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8448,7 +8448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChildReachingSolid")]
-        Icon::FaChildReachingSolid => {
+        FaIcon::FaChildReachingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -8460,7 +8460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChildSolid")]
-        Icon::FaChildSolid => {
+        FaIcon::FaChildSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -8472,7 +8472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChildrenSolid")]
-        Icon::FaChildrenSolid => {
+        FaIcon::FaChildrenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -8484,7 +8484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChromeBrands")]
-        Icon::FaChromeBrands => {
+        FaIcon::FaChromeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8496,7 +8496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChromecastBrands")]
-        Icon::FaChromecastBrands => {
+        FaIcon::FaChromecastBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8508,7 +8508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaChurchSolid")]
-        Icon::FaChurchSolid => {
+        FaIcon::FaChurchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -8520,7 +8520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleArrowDownSolid")]
-        Icon::FaCircleArrowDownSolid => {
+        FaIcon::FaCircleArrowDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8532,7 +8532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleArrowLeftSolid")]
-        Icon::FaCircleArrowLeftSolid => {
+        FaIcon::FaCircleArrowLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8544,7 +8544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleArrowRightSolid")]
-        Icon::FaCircleArrowRightSolid => {
+        FaIcon::FaCircleArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8556,7 +8556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleArrowUpSolid")]
-        Icon::FaCircleArrowUpSolid => {
+        FaIcon::FaCircleArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8568,7 +8568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleCheckRegular")]
-        Icon::FaCircleCheckRegular => {
+        FaIcon::FaCircleCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8580,7 +8580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleCheckSolid")]
-        Icon::FaCircleCheckSolid => {
+        FaIcon::FaCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8592,7 +8592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleChevronDownSolid")]
-        Icon::FaCircleChevronDownSolid => {
+        FaIcon::FaCircleChevronDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8604,7 +8604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleChevronLeftSolid")]
-        Icon::FaCircleChevronLeftSolid => {
+        FaIcon::FaCircleChevronLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8616,7 +8616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleChevronRightSolid")]
-        Icon::FaCircleChevronRightSolid => {
+        FaIcon::FaCircleChevronRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8628,7 +8628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleChevronUpSolid")]
-        Icon::FaCircleChevronUpSolid => {
+        FaIcon::FaCircleChevronUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8640,7 +8640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleDollarToSlotSolid")]
-        Icon::FaCircleDollarToSlotSolid => {
+        FaIcon::FaCircleDollarToSlotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8652,7 +8652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleDotRegular")]
-        Icon::FaCircleDotRegular => {
+        FaIcon::FaCircleDotRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8664,7 +8664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleDotSolid")]
-        Icon::FaCircleDotSolid => {
+        FaIcon::FaCircleDotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8676,7 +8676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleDownRegular")]
-        Icon::FaCircleDownRegular => {
+        FaIcon::FaCircleDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8688,7 +8688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleDownSolid")]
-        Icon::FaCircleDownSolid => {
+        FaIcon::FaCircleDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8700,7 +8700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleExclamationSolid")]
-        Icon::FaCircleExclamationSolid => {
+        FaIcon::FaCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8712,7 +8712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleHSolid")]
-        Icon::FaCircleHSolid => {
+        FaIcon::FaCircleHSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8724,7 +8724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleHalfStrokeSolid")]
-        Icon::FaCircleHalfStrokeSolid => {
+        FaIcon::FaCircleHalfStrokeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8736,7 +8736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleInfoSolid")]
-        Icon::FaCircleInfoSolid => {
+        FaIcon::FaCircleInfoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8748,7 +8748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleLeftRegular")]
-        Icon::FaCircleLeftRegular => {
+        FaIcon::FaCircleLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8760,7 +8760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleLeftSolid")]
-        Icon::FaCircleLeftSolid => {
+        FaIcon::FaCircleLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8772,7 +8772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleMinusSolid")]
-        Icon::FaCircleMinusSolid => {
+        FaIcon::FaCircleMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8784,7 +8784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleNodesSolid")]
-        Icon::FaCircleNodesSolid => {
+        FaIcon::FaCircleNodesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8796,7 +8796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleNotchSolid")]
-        Icon::FaCircleNotchSolid => {
+        FaIcon::FaCircleNotchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8808,7 +8808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCirclePauseRegular")]
-        Icon::FaCirclePauseRegular => {
+        FaIcon::FaCirclePauseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8820,7 +8820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCirclePauseSolid")]
-        Icon::FaCirclePauseSolid => {
+        FaIcon::FaCirclePauseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8832,7 +8832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCirclePlayRegular")]
-        Icon::FaCirclePlayRegular => {
+        FaIcon::FaCirclePlayRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8844,7 +8844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCirclePlaySolid")]
-        Icon::FaCirclePlaySolid => {
+        FaIcon::FaCirclePlaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8856,7 +8856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCirclePlusSolid")]
-        Icon::FaCirclePlusSolid => {
+        FaIcon::FaCirclePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8868,7 +8868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleQuestionRegular")]
-        Icon::FaCircleQuestionRegular => {
+        FaIcon::FaCircleQuestionRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8880,7 +8880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleQuestionSolid")]
-        Icon::FaCircleQuestionSolid => {
+        FaIcon::FaCircleQuestionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8892,7 +8892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleRadiationSolid")]
-        Icon::FaCircleRadiationSolid => {
+        FaIcon::FaCircleRadiationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8904,7 +8904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleRegular")]
-        Icon::FaCircleRegular => {
+        FaIcon::FaCircleRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8916,7 +8916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleRightRegular")]
-        Icon::FaCircleRightRegular => {
+        FaIcon::FaCircleRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8928,7 +8928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleRightSolid")]
-        Icon::FaCircleRightSolid => {
+        FaIcon::FaCircleRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8940,7 +8940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleSolid")]
-        Icon::FaCircleSolid => {
+        FaIcon::FaCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8952,7 +8952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleStopRegular")]
-        Icon::FaCircleStopRegular => {
+        FaIcon::FaCircleStopRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8964,7 +8964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleStopSolid")]
-        Icon::FaCircleStopSolid => {
+        FaIcon::FaCircleStopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8976,7 +8976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleUpRegular")]
-        Icon::FaCircleUpRegular => {
+        FaIcon::FaCircleUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -8988,7 +8988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleUpSolid")]
-        Icon::FaCircleUpSolid => {
+        FaIcon::FaCircleUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9000,7 +9000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleUserRegular")]
-        Icon::FaCircleUserRegular => {
+        FaIcon::FaCircleUserRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9012,7 +9012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleUserSolid")]
-        Icon::FaCircleUserSolid => {
+        FaIcon::FaCircleUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9024,7 +9024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleXmarkRegular")]
-        Icon::FaCircleXmarkRegular => {
+        FaIcon::FaCircleXmarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9036,7 +9036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCircleXmarkSolid")]
-        Icon::FaCircleXmarkSolid => {
+        FaIcon::FaCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9048,7 +9048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCitySolid")]
-        Icon::FaCitySolid => {
+        FaIcon::FaCitySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9060,7 +9060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClapperboardSolid")]
-        Icon::FaClapperboardSolid => {
+        FaIcon::FaClapperboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9072,7 +9072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClipboardCheckSolid")]
-        Icon::FaClipboardCheckSolid => {
+        FaIcon::FaClipboardCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9084,7 +9084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClipboardListSolid")]
-        Icon::FaClipboardListSolid => {
+        FaIcon::FaClipboardListSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9096,7 +9096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClipboardQuestionSolid")]
-        Icon::FaClipboardQuestionSolid => {
+        FaIcon::FaClipboardQuestionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9108,7 +9108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClipboardRegular")]
-        Icon::FaClipboardRegular => {
+        FaIcon::FaClipboardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9120,7 +9120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClipboardSolid")]
-        Icon::FaClipboardSolid => {
+        FaIcon::FaClipboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9132,7 +9132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClipboardUserSolid")]
-        Icon::FaClipboardUserSolid => {
+        FaIcon::FaClipboardUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9144,7 +9144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClockRegular")]
-        Icon::FaClockRegular => {
+        FaIcon::FaClockRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9156,7 +9156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClockRotateLeftSolid")]
-        Icon::FaClockRotateLeftSolid => {
+        FaIcon::FaClockRotateLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9168,7 +9168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClockSolid")]
-        Icon::FaClockSolid => {
+        FaIcon::FaClockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9180,7 +9180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloneRegular")]
-        Icon::FaCloneRegular => {
+        FaIcon::FaCloneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9192,7 +9192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloneSolid")]
-        Icon::FaCloneSolid => {
+        FaIcon::FaCloneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9204,7 +9204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClosedCaptioningRegular")]
-        Icon::FaClosedCaptioningRegular => {
+        FaIcon::FaClosedCaptioningRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -9216,7 +9216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaClosedCaptioningSolid")]
-        Icon::FaClosedCaptioningSolid => {
+        FaIcon::FaClosedCaptioningSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -9228,7 +9228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudArrowDownSolid")]
-        Icon::FaCloudArrowDownSolid => {
+        FaIcon::FaCloudArrowDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9240,7 +9240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudArrowUpSolid")]
-        Icon::FaCloudArrowUpSolid => {
+        FaIcon::FaCloudArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9252,7 +9252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudBoltSolid")]
-        Icon::FaCloudBoltSolid => {
+        FaIcon::FaCloudBoltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9264,7 +9264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudMeatballSolid")]
-        Icon::FaCloudMeatballSolid => {
+        FaIcon::FaCloudMeatballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9276,7 +9276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudMoonRainSolid")]
-        Icon::FaCloudMoonRainSolid => {
+        FaIcon::FaCloudMoonRainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9288,7 +9288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudMoonSolid")]
-        Icon::FaCloudMoonSolid => {
+        FaIcon::FaCloudMoonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9300,7 +9300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudRainSolid")]
-        Icon::FaCloudRainSolid => {
+        FaIcon::FaCloudRainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9312,7 +9312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudShowersHeavySolid")]
-        Icon::FaCloudShowersHeavySolid => {
+        FaIcon::FaCloudShowersHeavySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9324,7 +9324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudShowersWaterSolid")]
-        Icon::FaCloudShowersWaterSolid => {
+        FaIcon::FaCloudShowersWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -9336,7 +9336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudSolid")]
-        Icon::FaCloudSolid => {
+        FaIcon::FaCloudSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9348,7 +9348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudSunRainSolid")]
-        Icon::FaCloudSunRainSolid => {
+        FaIcon::FaCloudSunRainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9360,7 +9360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudSunSolid")]
-        Icon::FaCloudSunSolid => {
+        FaIcon::FaCloudSunSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9372,7 +9372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudflareBrands")]
-        Icon::FaCloudflareBrands => {
+        FaIcon::FaCloudflareBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9384,7 +9384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudscaleBrands")]
-        Icon::FaCloudscaleBrands => {
+        FaIcon::FaCloudscaleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -9396,7 +9396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudsmithBrands")]
-        Icon::FaCloudsmithBrands => {
+        FaIcon::FaCloudsmithBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 332 512" fill = "currentColor" role =
@@ -9408,7 +9408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloudversifyBrands")]
-        Icon::FaCloudversifyBrands => {
+        FaIcon::FaCloudversifyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 616 512" fill = "currentColor" role =
@@ -9420,7 +9420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCloverSolid")]
-        Icon::FaCloverSolid => {
+        FaIcon::FaCloverSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -9432,7 +9432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCmplidBrands")]
-        Icon::FaCmplidBrands => {
+        FaIcon::FaCmplidBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9444,7 +9444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodeBranchSolid")]
-        Icon::FaCodeBranchSolid => {
+        FaIcon::FaCodeBranchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -9456,7 +9456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodeCommitSolid")]
-        Icon::FaCodeCommitSolid => {
+        FaIcon::FaCodeCommitSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9468,7 +9468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodeCompareSolid")]
-        Icon::FaCodeCompareSolid => {
+        FaIcon::FaCodeCompareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9480,7 +9480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodeForkSolid")]
-        Icon::FaCodeForkSolid => {
+        FaIcon::FaCodeForkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -9492,7 +9492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodeMergeSolid")]
-        Icon::FaCodeMergeSolid => {
+        FaIcon::FaCodeMergeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -9504,7 +9504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodePullRequestSolid")]
-        Icon::FaCodePullRequestSolid => {
+        FaIcon::FaCodePullRequestSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9516,7 +9516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodeSolid")]
-        Icon::FaCodeSolid => {
+        FaIcon::FaCodeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9528,7 +9528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodepenBrands")]
-        Icon::FaCodepenBrands => {
+        FaIcon::FaCodepenBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9540,7 +9540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCodiepieBrands")]
-        Icon::FaCodiepieBrands => {
+        FaIcon::FaCodiepieBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 472 512" fill = "currentColor" role =
@@ -9552,7 +9552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCoinsSolid")]
-        Icon::FaCoinsSolid => {
+        FaIcon::FaCoinsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9564,7 +9564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaColonSignSolid")]
-        Icon::FaColonSignSolid => {
+        FaIcon::FaColonSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -9576,7 +9576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentDollarSolid")]
-        Icon::FaCommentDollarSolid => {
+        FaIcon::FaCommentDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9588,7 +9588,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentDotsRegular")]
-        Icon::FaCommentDotsRegular => {
+        FaIcon::FaCommentDotsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9600,7 +9600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentDotsSolid")]
-        Icon::FaCommentDotsSolid => {
+        FaIcon::FaCommentDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9612,7 +9612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentMedicalSolid")]
-        Icon::FaCommentMedicalSolid => {
+        FaIcon::FaCommentMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9624,7 +9624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentRegular")]
-        Icon::FaCommentRegular => {
+        FaIcon::FaCommentRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9636,7 +9636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentSlashSolid")]
-        Icon::FaCommentSlashSolid => {
+        FaIcon::FaCommentSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9648,7 +9648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentSmsSolid")]
-        Icon::FaCommentSmsSolid => {
+        FaIcon::FaCommentSmsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9660,7 +9660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentSolid")]
-        Icon::FaCommentSolid => {
+        FaIcon::FaCommentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9672,7 +9672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentsDollarSolid")]
-        Icon::FaCommentsDollarSolid => {
+        FaIcon::FaCommentsDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9684,7 +9684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentsRegular")]
-        Icon::FaCommentsRegular => {
+        FaIcon::FaCommentsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9696,7 +9696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCommentsSolid")]
-        Icon::FaCommentsSolid => {
+        FaIcon::FaCommentsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9708,7 +9708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCompactDiscSolid")]
-        Icon::FaCompactDiscSolid => {
+        FaIcon::FaCompactDiscSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9720,7 +9720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCompassDraftingSolid")]
-        Icon::FaCompassDraftingSolid => {
+        FaIcon::FaCompassDraftingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9732,7 +9732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCompassRegular")]
-        Icon::FaCompassRegular => {
+        FaIcon::FaCompassRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9744,7 +9744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCompassSolid")]
-        Icon::FaCompassSolid => {
+        FaIcon::FaCompassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9756,7 +9756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCompressSolid")]
-        Icon::FaCompressSolid => {
+        FaIcon::FaCompressSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -9768,7 +9768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaComputerMouseSolid")]
-        Icon::FaComputerMouseSolid => {
+        FaIcon::FaComputerMouseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -9780,7 +9780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaComputerSolid")]
-        Icon::FaComputerSolid => {
+        FaIcon::FaComputerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9792,7 +9792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaConfluenceBrands")]
-        Icon::FaConfluenceBrands => {
+        FaIcon::FaConfluenceBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9804,7 +9804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaConnectdevelopBrands")]
-        Icon::FaConnectdevelopBrands => {
+        FaIcon::FaConnectdevelopBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -9816,7 +9816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaContaoBrands")]
-        Icon::FaContaoBrands => {
+        FaIcon::FaContaoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9828,7 +9828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCookieBiteSolid")]
-        Icon::FaCookieBiteSolid => {
+        FaIcon::FaCookieBiteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9840,7 +9840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCookieSolid")]
-        Icon::FaCookieSolid => {
+        FaIcon::FaCookieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9852,7 +9852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCopyRegular")]
-        Icon::FaCopyRegular => {
+        FaIcon::FaCopyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9864,7 +9864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCopySolid")]
-        Icon::FaCopySolid => {
+        FaIcon::FaCopySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9876,7 +9876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCopyrightRegular")]
-        Icon::FaCopyrightRegular => {
+        FaIcon::FaCopyrightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9888,7 +9888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCopyrightSolid")]
-        Icon::FaCopyrightSolid => {
+        FaIcon::FaCopyrightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9900,7 +9900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCottonBureauBrands")]
-        Icon::FaCottonBureauBrands => {
+        FaIcon::FaCottonBureauBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -9912,7 +9912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCouchSolid")]
-        Icon::FaCouchSolid => {
+        FaIcon::FaCouchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9924,7 +9924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCowSolid")]
-        Icon::FaCowSolid => {
+        FaIcon::FaCowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9936,7 +9936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCpanelBrands")]
-        Icon::FaCpanelBrands => {
+        FaIcon::FaCpanelBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -9948,7 +9948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsBrands")]
-        Icon::FaCreativeCommonsBrands => {
+        FaIcon::FaCreativeCommonsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -9960,7 +9960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsByBrands")]
-        Icon::FaCreativeCommonsByBrands => {
+        FaIcon::FaCreativeCommonsByBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -9972,7 +9972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsNcBrands")]
-        Icon::FaCreativeCommonsNcBrands => {
+        FaIcon::FaCreativeCommonsNcBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -9984,7 +9984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsNcEuBrands")]
-        Icon::FaCreativeCommonsNcEuBrands => {
+        FaIcon::FaCreativeCommonsNcEuBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -9996,7 +9996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsNcJpBrands")]
-        Icon::FaCreativeCommonsNcJpBrands => {
+        FaIcon::FaCreativeCommonsNcJpBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10008,7 +10008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsNdBrands")]
-        Icon::FaCreativeCommonsNdBrands => {
+        FaIcon::FaCreativeCommonsNdBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10020,7 +10020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsPdAltBrands")]
-        Icon::FaCreativeCommonsPdAltBrands => {
+        FaIcon::FaCreativeCommonsPdAltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10032,7 +10032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsPdBrands")]
-        Icon::FaCreativeCommonsPdBrands => {
+        FaIcon::FaCreativeCommonsPdBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10044,7 +10044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsRemixBrands")]
-        Icon::FaCreativeCommonsRemixBrands => {
+        FaIcon::FaCreativeCommonsRemixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10056,7 +10056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsSaBrands")]
-        Icon::FaCreativeCommonsSaBrands => {
+        FaIcon::FaCreativeCommonsSaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10068,7 +10068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsSamplingBrands")]
-        Icon::FaCreativeCommonsSamplingBrands => {
+        FaIcon::FaCreativeCommonsSamplingBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10080,7 +10080,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsSamplingPlusBrands")]
-        Icon::FaCreativeCommonsSamplingPlusBrands => {
+        FaIcon::FaCreativeCommonsSamplingPlusBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10093,7 +10093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsShareBrands")]
-        Icon::FaCreativeCommonsShareBrands => {
+        FaIcon::FaCreativeCommonsShareBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10105,7 +10105,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreativeCommonsZeroBrands")]
-        Icon::FaCreativeCommonsZeroBrands => {
+        FaIcon::FaCreativeCommonsZeroBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -10117,7 +10117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreditCardRegular")]
-        Icon::FaCreditCardRegular => {
+        FaIcon::FaCreditCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10129,7 +10129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCreditCardSolid")]
-        Icon::FaCreditCardSolid => {
+        FaIcon::FaCreditCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10141,7 +10141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCriticalRoleBrands")]
-        Icon::FaCriticalRoleBrands => {
+        FaIcon::FaCriticalRoleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10153,7 +10153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCropSimpleSolid")]
-        Icon::FaCropSimpleSolid => {
+        FaIcon::FaCropSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10165,7 +10165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCropSolid")]
-        Icon::FaCropSolid => {
+        FaIcon::FaCropSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10177,7 +10177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCrossSolid")]
-        Icon::FaCrossSolid => {
+        FaIcon::FaCrossSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -10189,7 +10189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCrosshairsSolid")]
-        Icon::FaCrosshairsSolid => {
+        FaIcon::FaCrosshairsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10201,7 +10201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCrowSolid")]
-        Icon::FaCrowSolid => {
+        FaIcon::FaCrowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10213,7 +10213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCrownSolid")]
-        Icon::FaCrownSolid => {
+        FaIcon::FaCrownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10225,7 +10225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCrutchSolid")]
-        Icon::FaCrutchSolid => {
+        FaIcon::FaCrutchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10237,7 +10237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCruzeiroSignSolid")]
-        Icon::FaCruzeiroSignSolid => {
+        FaIcon::FaCruzeiroSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -10249,7 +10249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCss3AltBrands")]
-        Icon::FaCss3AltBrands => {
+        FaIcon::FaCss3AltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -10261,7 +10261,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCss3Brands")]
-        Icon::FaCss3Brands => {
+        FaIcon::FaCss3Brands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10273,7 +10273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCubeSolid")]
-        Icon::FaCubeSolid => {
+        FaIcon::FaCubeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10285,7 +10285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCubesSolid")]
-        Icon::FaCubesSolid => {
+        FaIcon::FaCubesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10297,7 +10297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCubesStackedSolid")]
-        Icon::FaCubesStackedSolid => {
+        FaIcon::FaCubesStackedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10309,7 +10309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaCuttlefishBrands")]
-        Icon::FaCuttlefishBrands => {
+        FaIcon::FaCuttlefishBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 440 512" fill = "currentColor" role =
@@ -10321,7 +10321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDAndDBeyondBrands")]
-        Icon::FaDAndDBeyondBrands => {
+        FaIcon::FaDAndDBeyondBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10333,7 +10333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDAndDBrands")]
-        Icon::FaDAndDBrands => {
+        FaIcon::FaDAndDBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10345,7 +10345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDSolid")]
-        Icon::FaDSolid => {
+        FaIcon::FaDSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -10357,7 +10357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDailymotionBrands")]
-        Icon::FaDailymotionBrands => {
+        FaIcon::FaDailymotionBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10369,7 +10369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDashcubeBrands")]
-        Icon::FaDashcubeBrands => {
+        FaIcon::FaDashcubeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10381,7 +10381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDatabaseSolid")]
-        Icon::FaDatabaseSolid => {
+        FaIcon::FaDatabaseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10393,7 +10393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDeezerBrands")]
-        Icon::FaDeezerBrands => {
+        FaIcon::FaDeezerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10405,7 +10405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDeleteLeftSolid")]
-        Icon::FaDeleteLeftSolid => {
+        FaIcon::FaDeleteLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10417,7 +10417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDeliciousBrands")]
-        Icon::FaDeliciousBrands => {
+        FaIcon::FaDeliciousBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10429,7 +10429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDemocratSolid")]
-        Icon::FaDemocratSolid => {
+        FaIcon::FaDemocratSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10441,7 +10441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDeploydogBrands")]
-        Icon::FaDeploydogBrands => {
+        FaIcon::FaDeploydogBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10453,7 +10453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDeskproBrands")]
-        Icon::FaDeskproBrands => {
+        FaIcon::FaDeskproBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 480 512" fill = "currentColor" role =
@@ -10465,7 +10465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDesktopSolid")]
-        Icon::FaDesktopSolid => {
+        FaIcon::FaDesktopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10477,7 +10477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDevBrands")]
-        Icon::FaDevBrands => {
+        FaIcon::FaDevBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10489,7 +10489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDeviantartBrands")]
-        Icon::FaDeviantartBrands => {
+        FaIcon::FaDeviantartBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -10501,7 +10501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDharmachakraSolid")]
-        Icon::FaDharmachakraSolid => {
+        FaIcon::FaDharmachakraSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10513,7 +10513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDhlBrands")]
-        Icon::FaDhlBrands => {
+        FaIcon::FaDhlBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10525,7 +10525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiagramNextSolid")]
-        Icon::FaDiagramNextSolid => {
+        FaIcon::FaDiagramNextSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10537,7 +10537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiagramPredecessorSolid")]
-        Icon::FaDiagramPredecessorSolid => {
+        FaIcon::FaDiagramPredecessorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10549,7 +10549,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiagramProjectSolid")]
-        Icon::FaDiagramProjectSolid => {
+        FaIcon::FaDiagramProjectSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10561,7 +10561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiagramSuccessorSolid")]
-        Icon::FaDiagramSuccessorSolid => {
+        FaIcon::FaDiagramSuccessorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10573,7 +10573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiamondSolid")]
-        Icon::FaDiamondSolid => {
+        FaIcon::FaDiamondSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10585,7 +10585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiamondTurnRightSolid")]
-        Icon::FaDiamondTurnRightSolid => {
+        FaIcon::FaDiamondTurnRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10597,7 +10597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiasporaBrands")]
-        Icon::FaDiasporaBrands => {
+        FaIcon::FaDiasporaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10609,7 +10609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceD20Solid")]
-        Icon::FaDiceD20Solid => {
+        FaIcon::FaDiceD20Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10621,7 +10621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceD6Solid")]
-        Icon::FaDiceD6Solid => {
+        FaIcon::FaDiceD6Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10633,7 +10633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceFiveSolid")]
-        Icon::FaDiceFiveSolid => {
+        FaIcon::FaDiceFiveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10645,7 +10645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceFourSolid")]
-        Icon::FaDiceFourSolid => {
+        FaIcon::FaDiceFourSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10657,7 +10657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceOneSolid")]
-        Icon::FaDiceOneSolid => {
+        FaIcon::FaDiceOneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10669,7 +10669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceSixSolid")]
-        Icon::FaDiceSixSolid => {
+        FaIcon::FaDiceSixSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10681,7 +10681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceSolid")]
-        Icon::FaDiceSolid => {
+        FaIcon::FaDiceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10693,7 +10693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceThreeSolid")]
-        Icon::FaDiceThreeSolid => {
+        FaIcon::FaDiceThreeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10705,7 +10705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiceTwoSolid")]
-        Icon::FaDiceTwoSolid => {
+        FaIcon::FaDiceTwoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10717,7 +10717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiggBrands")]
-        Icon::FaDiggBrands => {
+        FaIcon::FaDiggBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10729,7 +10729,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDigitalOceanBrands")]
-        Icon::FaDigitalOceanBrands => {
+        FaIcon::FaDigitalOceanBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10741,7 +10741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiscordBrands")]
-        Icon::FaDiscordBrands => {
+        FaIcon::FaDiscordBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10753,7 +10753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiscourseBrands")]
-        Icon::FaDiscourseBrands => {
+        FaIcon::FaDiscourseBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10765,7 +10765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDiseaseSolid")]
-        Icon::FaDiseaseSolid => {
+        FaIcon::FaDiseaseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10777,7 +10777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDisplaySolid")]
-        Icon::FaDisplaySolid => {
+        FaIcon::FaDisplaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10789,7 +10789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDivideSolid")]
-        Icon::FaDivideSolid => {
+        FaIcon::FaDivideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10801,7 +10801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDnaSolid")]
-        Icon::FaDnaSolid => {
+        FaIcon::FaDnaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10813,7 +10813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDochubBrands")]
-        Icon::FaDochubBrands => {
+        FaIcon::FaDochubBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 416 512" fill = "currentColor" role =
@@ -10825,7 +10825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDockerBrands")]
-        Icon::FaDockerBrands => {
+        FaIcon::FaDockerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10837,7 +10837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDogSolid")]
-        Icon::FaDogSolid => {
+        FaIcon::FaDogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10849,7 +10849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDollarSignSolid")]
-        Icon::FaDollarSignSolid => {
+        FaIcon::FaDollarSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -10861,7 +10861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDollySolid")]
-        Icon::FaDollySolid => {
+        FaIcon::FaDollySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10873,7 +10873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDongSignSolid")]
-        Icon::FaDongSignSolid => {
+        FaIcon::FaDongSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -10885,7 +10885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDoorClosedSolid")]
-        Icon::FaDoorClosedSolid => {
+        FaIcon::FaDoorClosedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10897,7 +10897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDoorOpenSolid")]
-        Icon::FaDoorOpenSolid => {
+        FaIcon::FaDoorOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -10909,7 +10909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDoveSolid")]
-        Icon::FaDoveSolid => {
+        FaIcon::FaDoveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10921,7 +10921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDownLeftAndUpRightToCenterSolid")]
-        Icon::FaDownLeftAndUpRightToCenterSolid => {
+        FaIcon::FaDownLeftAndUpRightToCenterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10933,7 +10933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDownLongSolid")]
-        Icon::FaDownLongSolid => {
+        FaIcon::FaDownLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -10945,7 +10945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDownloadSolid")]
-        Icon::FaDownloadSolid => {
+        FaIcon::FaDownloadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -10957,7 +10957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDraft2digitalBrands")]
-        Icon::FaDraft2digitalBrands => {
+        FaIcon::FaDraft2digitalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 480 512" fill = "currentColor" role =
@@ -10969,7 +10969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDragonSolid")]
-        Icon::FaDragonSolid => {
+        FaIcon::FaDragonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -10981,7 +10981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDrawPolygonSolid")]
-        Icon::FaDrawPolygonSolid => {
+        FaIcon::FaDrawPolygonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -10993,7 +10993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDribbbleBrands")]
-        Icon::FaDribbbleBrands => {
+        FaIcon::FaDribbbleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11005,7 +11005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDropboxBrands")]
-        Icon::FaDropboxBrands => {
+        FaIcon::FaDropboxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 528 512" fill = "currentColor" role =
@@ -11017,7 +11017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDropletSlashSolid")]
-        Icon::FaDropletSlashSolid => {
+        FaIcon::FaDropletSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11029,7 +11029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDropletSolid")]
-        Icon::FaDropletSolid => {
+        FaIcon::FaDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -11041,7 +11041,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDrumSolid")]
-        Icon::FaDrumSolid => {
+        FaIcon::FaDrumSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11053,7 +11053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDrumSteelpanSolid")]
-        Icon::FaDrumSteelpanSolid => {
+        FaIcon::FaDrumSteelpanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -11065,7 +11065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDrumstickBiteSolid")]
-        Icon::FaDrumstickBiteSolid => {
+        FaIcon::FaDrumstickBiteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11077,7 +11077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDrupalBrands")]
-        Icon::FaDrupalBrands => {
+        FaIcon::FaDrupalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -11089,7 +11089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDumbbellSolid")]
-        Icon::FaDumbbellSolid => {
+        FaIcon::FaDumbbellSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11101,7 +11101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDumpsterFireSolid")]
-        Icon::FaDumpsterFireSolid => {
+        FaIcon::FaDumpsterFireSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11113,7 +11113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDumpsterSolid")]
-        Icon::FaDumpsterSolid => {
+        FaIcon::FaDumpsterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -11125,7 +11125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDungeonSolid")]
-        Icon::FaDungeonSolid => {
+        FaIcon::FaDungeonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11137,7 +11137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaDyalogBrands")]
-        Icon::FaDyalogBrands => {
+        FaIcon::FaDyalogBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 416 512" fill = "currentColor" role =
@@ -11149,7 +11149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaESolid")]
-        Icon::FaESolid => {
+        FaIcon::FaESolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -11161,7 +11161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarDeafSolid")]
-        Icon::FaEarDeafSolid => {
+        FaIcon::FaEarDeafSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11173,7 +11173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarListenSolid")]
-        Icon::FaEarListenSolid => {
+        FaIcon::FaEarListenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11185,7 +11185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarlybirdsBrands")]
-        Icon::FaEarlybirdsBrands => {
+        FaIcon::FaEarlybirdsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 480 512" fill = "currentColor" role =
@@ -11197,7 +11197,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarthAfricaSolid")]
-        Icon::FaEarthAfricaSolid => {
+        FaIcon::FaEarthAfricaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11209,7 +11209,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarthAmericasSolid")]
-        Icon::FaEarthAmericasSolid => {
+        FaIcon::FaEarthAmericasSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11221,7 +11221,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarthAsiaSolid")]
-        Icon::FaEarthAsiaSolid => {
+        FaIcon::FaEarthAsiaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11233,7 +11233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarthEuropeSolid")]
-        Icon::FaEarthEuropeSolid => {
+        FaIcon::FaEarthEuropeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11245,7 +11245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEarthOceaniaSolid")]
-        Icon::FaEarthOceaniaSolid => {
+        FaIcon::FaEarthOceaniaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11257,7 +11257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEbayBrands")]
-        Icon::FaEbayBrands => {
+        FaIcon::FaEbayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11269,7 +11269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEdgeBrands")]
-        Icon::FaEdgeBrands => {
+        FaIcon::FaEdgeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11281,7 +11281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEdgeLegacyBrands")]
-        Icon::FaEdgeLegacyBrands => {
+        FaIcon::FaEdgeLegacyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11293,7 +11293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEggSolid")]
-        Icon::FaEggSolid => {
+        FaIcon::FaEggSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -11305,7 +11305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEjectSolid")]
-        Icon::FaEjectSolid => {
+        FaIcon::FaEjectSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -11317,7 +11317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaElementorBrands")]
-        Icon::FaElementorBrands => {
+        FaIcon::FaElementorBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11329,7 +11329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaElevatorSolid")]
-        Icon::FaElevatorSolid => {
+        FaIcon::FaElevatorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11341,7 +11341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEllipsisSolid")]
-        Icon::FaEllipsisSolid => {
+        FaIcon::FaEllipsisSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -11353,7 +11353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEllipsisVerticalSolid")]
-        Icon::FaEllipsisVerticalSolid => {
+        FaIcon::FaEllipsisVerticalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 128 512" fill = "currentColor" role =
@@ -11365,7 +11365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaElloBrands")]
-        Icon::FaElloBrands => {
+        FaIcon::FaElloBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -11377,7 +11377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEmberBrands")]
-        Icon::FaEmberBrands => {
+        FaIcon::FaEmberBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11389,7 +11389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEmpireBrands")]
-        Icon::FaEmpireBrands => {
+        FaIcon::FaEmpireBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -11401,7 +11401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopeCircleCheckSolid")]
-        Icon::FaEnvelopeCircleCheckSolid => {
+        FaIcon::FaEnvelopeCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11413,7 +11413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopeOpenRegular")]
-        Icon::FaEnvelopeOpenRegular => {
+        FaIcon::FaEnvelopeOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11425,7 +11425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopeOpenSolid")]
-        Icon::FaEnvelopeOpenSolid => {
+        FaIcon::FaEnvelopeOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11437,7 +11437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopeOpenTextSolid")]
-        Icon::FaEnvelopeOpenTextSolid => {
+        FaIcon::FaEnvelopeOpenTextSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11449,7 +11449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopeRegular")]
-        Icon::FaEnvelopeRegular => {
+        FaIcon::FaEnvelopeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11461,7 +11461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopeSolid")]
-        Icon::FaEnvelopeSolid => {
+        FaIcon::FaEnvelopeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11473,7 +11473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnvelopesBulkSolid")]
-        Icon::FaEnvelopesBulkSolid => {
+        FaIcon::FaEnvelopesBulkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -11485,7 +11485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEnviraBrands")]
-        Icon::FaEnviraBrands => {
+        FaIcon::FaEnviraBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -11497,7 +11497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEqualsSolid")]
-        Icon::FaEqualsSolid => {
+        FaIcon::FaEqualsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -11509,7 +11509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEraserSolid")]
-        Icon::FaEraserSolid => {
+        FaIcon::FaEraserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11521,7 +11521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaErlangBrands")]
-        Icon::FaErlangBrands => {
+        FaIcon::FaErlangBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11533,7 +11533,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEthereumBrands")]
-        Icon::FaEthereumBrands => {
+        FaIcon::FaEthereumBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -11545,7 +11545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEthernetSolid")]
-        Icon::FaEthernetSolid => {
+        FaIcon::FaEthernetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11557,7 +11557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEtsyBrands")]
-        Icon::FaEtsyBrands => {
+        FaIcon::FaEtsyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -11569,7 +11569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEuroSignSolid")]
-        Icon::FaEuroSignSolid => {
+        FaIcon::FaEuroSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -11581,7 +11581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEvernoteBrands")]
-        Icon::FaEvernoteBrands => {
+        FaIcon::FaEvernoteBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -11593,7 +11593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaExclamationSolid")]
-        Icon::FaExclamationSolid => {
+        FaIcon::FaExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 128 512" fill = "currentColor" role =
@@ -11605,7 +11605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaExpandSolid")]
-        Icon::FaExpandSolid => {
+        FaIcon::FaExpandSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -11617,7 +11617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaExpeditedsslBrands")]
-        Icon::FaExpeditedsslBrands => {
+        FaIcon::FaExpeditedsslBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -11629,7 +11629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaExplosionSolid")]
-        Icon::FaExplosionSolid => {
+        FaIcon::FaExplosionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -11641,7 +11641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEyeDropperSolid")]
-        Icon::FaEyeDropperSolid => {
+        FaIcon::FaEyeDropperSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11653,7 +11653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEyeLowVisionSolid")]
-        Icon::FaEyeLowVisionSolid => {
+        FaIcon::FaEyeLowVisionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11665,7 +11665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEyeRegular")]
-        Icon::FaEyeRegular => {
+        FaIcon::FaEyeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -11677,7 +11677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEyeSlashRegular")]
-        Icon::FaEyeSlashRegular => {
+        FaIcon::FaEyeSlashRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11689,7 +11689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEyeSlashSolid")]
-        Icon::FaEyeSlashSolid => {
+        FaIcon::FaEyeSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -11701,7 +11701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaEyeSolid")]
-        Icon::FaEyeSolid => {
+        FaIcon::FaEyeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -11713,7 +11713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFSolid")]
-        Icon::FaFSolid => {
+        FaIcon::FaFSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -11725,7 +11725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceAngryRegular")]
-        Icon::FaFaceAngryRegular => {
+        FaIcon::FaFaceAngryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11737,7 +11737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceAngrySolid")]
-        Icon::FaFaceAngrySolid => {
+        FaIcon::FaFaceAngrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11749,7 +11749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceDizzyRegular")]
-        Icon::FaFaceDizzyRegular => {
+        FaIcon::FaFaceDizzyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11761,7 +11761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceDizzySolid")]
-        Icon::FaFaceDizzySolid => {
+        FaIcon::FaFaceDizzySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11773,7 +11773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceFlushedRegular")]
-        Icon::FaFaceFlushedRegular => {
+        FaIcon::FaFaceFlushedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11785,7 +11785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceFlushedSolid")]
-        Icon::FaFaceFlushedSolid => {
+        FaIcon::FaFaceFlushedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11797,7 +11797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceFrownOpenRegular")]
-        Icon::FaFaceFrownOpenRegular => {
+        FaIcon::FaFaceFrownOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11809,7 +11809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceFrownOpenSolid")]
-        Icon::FaFaceFrownOpenSolid => {
+        FaIcon::FaFaceFrownOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11821,7 +11821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceFrownRegular")]
-        Icon::FaFaceFrownRegular => {
+        FaIcon::FaFaceFrownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11833,7 +11833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceFrownSolid")]
-        Icon::FaFaceFrownSolid => {
+        FaIcon::FaFaceFrownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11845,7 +11845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrimaceRegular")]
-        Icon::FaFaceGrimaceRegular => {
+        FaIcon::FaFaceGrimaceRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11857,7 +11857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrimaceSolid")]
-        Icon::FaFaceGrimaceSolid => {
+        FaIcon::FaFaceGrimaceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11869,7 +11869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinBeamRegular")]
-        Icon::FaFaceGrinBeamRegular => {
+        FaIcon::FaFaceGrinBeamRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11881,7 +11881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinBeamSolid")]
-        Icon::FaFaceGrinBeamSolid => {
+        FaIcon::FaFaceGrinBeamSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11893,7 +11893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinBeamSweatRegular")]
-        Icon::FaFaceGrinBeamSweatRegular => {
+        FaIcon::FaFaceGrinBeamSweatRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11905,7 +11905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinBeamSweatSolid")]
-        Icon::FaFaceGrinBeamSweatSolid => {
+        FaIcon::FaFaceGrinBeamSweatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11917,7 +11917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinHeartsRegular")]
-        Icon::FaFaceGrinHeartsRegular => {
+        FaIcon::FaFaceGrinHeartsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11929,7 +11929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinHeartsSolid")]
-        Icon::FaFaceGrinHeartsSolid => {
+        FaIcon::FaFaceGrinHeartsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11941,7 +11941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinRegular")]
-        Icon::FaFaceGrinRegular => {
+        FaIcon::FaFaceGrinRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11953,7 +11953,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinSolid")]
-        Icon::FaFaceGrinSolid => {
+        FaIcon::FaFaceGrinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11965,7 +11965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinSquintRegular")]
-        Icon::FaFaceGrinSquintRegular => {
+        FaIcon::FaFaceGrinSquintRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11977,7 +11977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinSquintSolid")]
-        Icon::FaFaceGrinSquintSolid => {
+        FaIcon::FaFaceGrinSquintSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -11989,7 +11989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinSquintTearsRegular")]
-        Icon::FaFaceGrinSquintTearsRegular => {
+        FaIcon::FaFaceGrinSquintTearsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12001,7 +12001,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinSquintTearsSolid")]
-        Icon::FaFaceGrinSquintTearsSolid => {
+        FaIcon::FaFaceGrinSquintTearsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12013,7 +12013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinStarsRegular")]
-        Icon::FaFaceGrinStarsRegular => {
+        FaIcon::FaFaceGrinStarsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12025,7 +12025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinStarsSolid")]
-        Icon::FaFaceGrinStarsSolid => {
+        FaIcon::FaFaceGrinStarsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12037,7 +12037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTearsRegular")]
-        Icon::FaFaceGrinTearsRegular => {
+        FaIcon::FaFaceGrinTearsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -12049,7 +12049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTearsSolid")]
-        Icon::FaFaceGrinTearsSolid => {
+        FaIcon::FaFaceGrinTearsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -12061,7 +12061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTongueRegular")]
-        Icon::FaFaceGrinTongueRegular => {
+        FaIcon::FaFaceGrinTongueRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12073,7 +12073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTongueSolid")]
-        Icon::FaFaceGrinTongueSolid => {
+        FaIcon::FaFaceGrinTongueSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12085,7 +12085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTongueSquintRegular")]
-        Icon::FaFaceGrinTongueSquintRegular => {
+        FaIcon::FaFaceGrinTongueSquintRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12097,7 +12097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTongueSquintSolid")]
-        Icon::FaFaceGrinTongueSquintSolid => {
+        FaIcon::FaFaceGrinTongueSquintSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12109,7 +12109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTongueWinkRegular")]
-        Icon::FaFaceGrinTongueWinkRegular => {
+        FaIcon::FaFaceGrinTongueWinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12121,7 +12121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinTongueWinkSolid")]
-        Icon::FaFaceGrinTongueWinkSolid => {
+        FaIcon::FaFaceGrinTongueWinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12133,7 +12133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinWideRegular")]
-        Icon::FaFaceGrinWideRegular => {
+        FaIcon::FaFaceGrinWideRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12145,7 +12145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinWideSolid")]
-        Icon::FaFaceGrinWideSolid => {
+        FaIcon::FaFaceGrinWideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12157,7 +12157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinWinkRegular")]
-        Icon::FaFaceGrinWinkRegular => {
+        FaIcon::FaFaceGrinWinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12169,7 +12169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceGrinWinkSolid")]
-        Icon::FaFaceGrinWinkSolid => {
+        FaIcon::FaFaceGrinWinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12181,7 +12181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceKissBeamRegular")]
-        Icon::FaFaceKissBeamRegular => {
+        FaIcon::FaFaceKissBeamRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12193,7 +12193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceKissBeamSolid")]
-        Icon::FaFaceKissBeamSolid => {
+        FaIcon::FaFaceKissBeamSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12205,7 +12205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceKissRegular")]
-        Icon::FaFaceKissRegular => {
+        FaIcon::FaFaceKissRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12217,7 +12217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceKissSolid")]
-        Icon::FaFaceKissSolid => {
+        FaIcon::FaFaceKissSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12229,7 +12229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceKissWinkHeartRegular")]
-        Icon::FaFaceKissWinkHeartRegular => {
+        FaIcon::FaFaceKissWinkHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12241,7 +12241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceKissWinkHeartSolid")]
-        Icon::FaFaceKissWinkHeartSolid => {
+        FaIcon::FaFaceKissWinkHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12253,7 +12253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughBeamRegular")]
-        Icon::FaFaceLaughBeamRegular => {
+        FaIcon::FaFaceLaughBeamRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12265,7 +12265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughBeamSolid")]
-        Icon::FaFaceLaughBeamSolid => {
+        FaIcon::FaFaceLaughBeamSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12277,7 +12277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughRegular")]
-        Icon::FaFaceLaughRegular => {
+        FaIcon::FaFaceLaughRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12289,7 +12289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughSolid")]
-        Icon::FaFaceLaughSolid => {
+        FaIcon::FaFaceLaughSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12301,7 +12301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughSquintRegular")]
-        Icon::FaFaceLaughSquintRegular => {
+        FaIcon::FaFaceLaughSquintRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12313,7 +12313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughSquintSolid")]
-        Icon::FaFaceLaughSquintSolid => {
+        FaIcon::FaFaceLaughSquintSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12325,7 +12325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughWinkRegular")]
-        Icon::FaFaceLaughWinkRegular => {
+        FaIcon::FaFaceLaughWinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12337,7 +12337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceLaughWinkSolid")]
-        Icon::FaFaceLaughWinkSolid => {
+        FaIcon::FaFaceLaughWinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12349,7 +12349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceMehBlankRegular")]
-        Icon::FaFaceMehBlankRegular => {
+        FaIcon::FaFaceMehBlankRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12361,7 +12361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceMehBlankSolid")]
-        Icon::FaFaceMehBlankSolid => {
+        FaIcon::FaFaceMehBlankSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12373,7 +12373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceMehRegular")]
-        Icon::FaFaceMehRegular => {
+        FaIcon::FaFaceMehRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12385,7 +12385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceMehSolid")]
-        Icon::FaFaceMehSolid => {
+        FaIcon::FaFaceMehSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12397,7 +12397,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceRollingEyesRegular")]
-        Icon::FaFaceRollingEyesRegular => {
+        FaIcon::FaFaceRollingEyesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12409,7 +12409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceRollingEyesSolid")]
-        Icon::FaFaceRollingEyesSolid => {
+        FaIcon::FaFaceRollingEyesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12421,7 +12421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSadCryRegular")]
-        Icon::FaFaceSadCryRegular => {
+        FaIcon::FaFaceSadCryRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12433,7 +12433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSadCrySolid")]
-        Icon::FaFaceSadCrySolid => {
+        FaIcon::FaFaceSadCrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12445,7 +12445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSadTearRegular")]
-        Icon::FaFaceSadTearRegular => {
+        FaIcon::FaFaceSadTearRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12457,7 +12457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSadTearSolid")]
-        Icon::FaFaceSadTearSolid => {
+        FaIcon::FaFaceSadTearSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12469,7 +12469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSmileBeamRegular")]
-        Icon::FaFaceSmileBeamRegular => {
+        FaIcon::FaFaceSmileBeamRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12481,7 +12481,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSmileBeamSolid")]
-        Icon::FaFaceSmileBeamSolid => {
+        FaIcon::FaFaceSmileBeamSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12493,7 +12493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSmileRegular")]
-        Icon::FaFaceSmileRegular => {
+        FaIcon::FaFaceSmileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12505,7 +12505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSmileSolid")]
-        Icon::FaFaceSmileSolid => {
+        FaIcon::FaFaceSmileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12517,7 +12517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSmileWinkRegular")]
-        Icon::FaFaceSmileWinkRegular => {
+        FaIcon::FaFaceSmileWinkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12529,7 +12529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSmileWinkSolid")]
-        Icon::FaFaceSmileWinkSolid => {
+        FaIcon::FaFaceSmileWinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12541,7 +12541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSurpriseRegular")]
-        Icon::FaFaceSurpriseRegular => {
+        FaIcon::FaFaceSurpriseRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12553,7 +12553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceSurpriseSolid")]
-        Icon::FaFaceSurpriseSolid => {
+        FaIcon::FaFaceSurpriseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12565,7 +12565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceTiredRegular")]
-        Icon::FaFaceTiredRegular => {
+        FaIcon::FaFaceTiredRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12577,7 +12577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaceTiredSolid")]
-        Icon::FaFaceTiredSolid => {
+        FaIcon::FaFaceTiredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12589,7 +12589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFacebookBrands")]
-        Icon::FaFacebookBrands => {
+        FaIcon::FaFacebookBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12601,7 +12601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFacebookFBrands")]
-        Icon::FaFacebookFBrands => {
+        FaIcon::FaFacebookFBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -12613,7 +12613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFacebookMessengerBrands")]
-        Icon::FaFacebookMessengerBrands => {
+        FaIcon::FaFacebookMessengerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12625,7 +12625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFanSolid")]
-        Icon::FaFanSolid => {
+        FaIcon::FaFanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12637,7 +12637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFantasyFlightGamesBrands")]
-        Icon::FaFantasyFlightGamesBrands => {
+        FaIcon::FaFantasyFlightGamesBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12649,7 +12649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaucetDripSolid")]
-        Icon::FaFaucetDripSolid => {
+        FaIcon::FaFaucetDripSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12661,7 +12661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaucetSolid")]
-        Icon::FaFaucetSolid => {
+        FaIcon::FaFaucetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12673,7 +12673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFaxSolid")]
-        Icon::FaFaxSolid => {
+        FaIcon::FaFaxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12685,7 +12685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFeatherPointedSolid")]
-        Icon::FaFeatherPointedSolid => {
+        FaIcon::FaFeatherPointedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12697,7 +12697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFeatherSolid")]
-        Icon::FaFeatherSolid => {
+        FaIcon::FaFeatherSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12709,7 +12709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFedexBrands")]
-        Icon::FaFedexBrands => {
+        FaIcon::FaFedexBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -12721,7 +12721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFedoraBrands")]
-        Icon::FaFedoraBrands => {
+        FaIcon::FaFedoraBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -12733,7 +12733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFerrySolid")]
-        Icon::FaFerrySolid => {
+        FaIcon::FaFerrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12745,7 +12745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFigmaBrands")]
-        Icon::FaFigmaBrands => {
+        FaIcon::FaFigmaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12757,7 +12757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileArrowDownSolid")]
-        Icon::FaFileArrowDownSolid => {
+        FaIcon::FaFileArrowDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12769,7 +12769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileArrowUpSolid")]
-        Icon::FaFileArrowUpSolid => {
+        FaIcon::FaFileArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12781,7 +12781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileAudioRegular")]
-        Icon::FaFileAudioRegular => {
+        FaIcon::FaFileAudioRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12793,7 +12793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileAudioSolid")]
-        Icon::FaFileAudioSolid => {
+        FaIcon::FaFileAudioSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12805,7 +12805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCircleCheckSolid")]
-        Icon::FaFileCircleCheckSolid => {
+        FaIcon::FaFileCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12817,7 +12817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCircleExclamationSolid")]
-        Icon::FaFileCircleExclamationSolid => {
+        FaIcon::FaFileCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12829,7 +12829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCircleMinusSolid")]
-        Icon::FaFileCircleMinusSolid => {
+        FaIcon::FaFileCircleMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12841,7 +12841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCirclePlusSolid")]
-        Icon::FaFileCirclePlusSolid => {
+        FaIcon::FaFileCirclePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12853,7 +12853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCircleQuestionSolid")]
-        Icon::FaFileCircleQuestionSolid => {
+        FaIcon::FaFileCircleQuestionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12865,7 +12865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCircleXmarkSolid")]
-        Icon::FaFileCircleXmarkSolid => {
+        FaIcon::FaFileCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12877,7 +12877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCodeRegular")]
-        Icon::FaFileCodeRegular => {
+        FaIcon::FaFileCodeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12889,7 +12889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCodeSolid")]
-        Icon::FaFileCodeSolid => {
+        FaIcon::FaFileCodeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12901,7 +12901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileContractSolid")]
-        Icon::FaFileContractSolid => {
+        FaIcon::FaFileContractSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12913,7 +12913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileCsvSolid")]
-        Icon::FaFileCsvSolid => {
+        FaIcon::FaFileCsvSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12925,7 +12925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileExcelRegular")]
-        Icon::FaFileExcelRegular => {
+        FaIcon::FaFileExcelRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12937,7 +12937,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileExcelSolid")]
-        Icon::FaFileExcelSolid => {
+        FaIcon::FaFileExcelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12949,7 +12949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileExportSolid")]
-        Icon::FaFileExportSolid => {
+        FaIcon::FaFileExportSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -12961,7 +12961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileImageRegular")]
-        Icon::FaFileImageRegular => {
+        FaIcon::FaFileImageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12973,7 +12973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileImageSolid")]
-        Icon::FaFileImageSolid => {
+        FaIcon::FaFileImageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -12985,7 +12985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileImportSolid")]
-        Icon::FaFileImportSolid => {
+        FaIcon::FaFileImportSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -12997,7 +12997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileInvoiceDollarSolid")]
-        Icon::FaFileInvoiceDollarSolid => {
+        FaIcon::FaFileInvoiceDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13009,7 +13009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileInvoiceSolid")]
-        Icon::FaFileInvoiceSolid => {
+        FaIcon::FaFileInvoiceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13021,7 +13021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileLinesRegular")]
-        Icon::FaFileLinesRegular => {
+        FaIcon::FaFileLinesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13033,7 +13033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileLinesSolid")]
-        Icon::FaFileLinesSolid => {
+        FaIcon::FaFileLinesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13045,7 +13045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileMedicalSolid")]
-        Icon::FaFileMedicalSolid => {
+        FaIcon::FaFileMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13057,7 +13057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilePdfRegular")]
-        Icon::FaFilePdfRegular => {
+        FaIcon::FaFilePdfRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13069,7 +13069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilePdfSolid")]
-        Icon::FaFilePdfSolid => {
+        FaIcon::FaFilePdfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13081,7 +13081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilePenSolid")]
-        Icon::FaFilePenSolid => {
+        FaIcon::FaFilePenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13093,7 +13093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilePowerpointRegular")]
-        Icon::FaFilePowerpointRegular => {
+        FaIcon::FaFilePowerpointRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13105,7 +13105,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilePowerpointSolid")]
-        Icon::FaFilePowerpointSolid => {
+        FaIcon::FaFilePowerpointSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13117,7 +13117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilePrescriptionSolid")]
-        Icon::FaFilePrescriptionSolid => {
+        FaIcon::FaFilePrescriptionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13129,7 +13129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileRegular")]
-        Icon::FaFileRegular => {
+        FaIcon::FaFileRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13141,7 +13141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileShieldSolid")]
-        Icon::FaFileShieldSolid => {
+        FaIcon::FaFileShieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13153,7 +13153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileSignatureSolid")]
-        Icon::FaFileSignatureSolid => {
+        FaIcon::FaFileSignatureSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13165,7 +13165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileSolid")]
-        Icon::FaFileSolid => {
+        FaIcon::FaFileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13177,7 +13177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileVideoRegular")]
-        Icon::FaFileVideoRegular => {
+        FaIcon::FaFileVideoRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13189,7 +13189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileVideoSolid")]
-        Icon::FaFileVideoSolid => {
+        FaIcon::FaFileVideoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13201,7 +13201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileWaveformSolid")]
-        Icon::FaFileWaveformSolid => {
+        FaIcon::FaFileWaveformSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13213,7 +13213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileWordRegular")]
-        Icon::FaFileWordRegular => {
+        FaIcon::FaFileWordRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13225,7 +13225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileWordSolid")]
-        Icon::FaFileWordSolid => {
+        FaIcon::FaFileWordSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13237,7 +13237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileZipperRegular")]
-        Icon::FaFileZipperRegular => {
+        FaIcon::FaFileZipperRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13249,7 +13249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFileZipperSolid")]
-        Icon::FaFileZipperSolid => {
+        FaIcon::FaFileZipperSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13261,7 +13261,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFillDripSolid")]
-        Icon::FaFillDripSolid => {
+        FaIcon::FaFillDripSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13273,7 +13273,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFillSolid")]
-        Icon::FaFillSolid => {
+        FaIcon::FaFillSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13285,7 +13285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilmSolid")]
-        Icon::FaFilmSolid => {
+        FaIcon::FaFilmSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13297,7 +13297,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilterCircleDollarSolid")]
-        Icon::FaFilterCircleDollarSolid => {
+        FaIcon::FaFilterCircleDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13309,7 +13309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilterCircleXmarkSolid")]
-        Icon::FaFilterCircleXmarkSolid => {
+        FaIcon::FaFilterCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13321,7 +13321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFilterSolid")]
-        Icon::FaFilterSolid => {
+        FaIcon::FaFilterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13333,7 +13333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFingerprintSolid")]
-        Icon::FaFingerprintSolid => {
+        FaIcon::FaFingerprintSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13345,7 +13345,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFireBurnerSolid")]
-        Icon::FaFireBurnerSolid => {
+        FaIcon::FaFireBurnerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -13357,7 +13357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFireExtinguisherSolid")]
-        Icon::FaFireExtinguisherSolid => {
+        FaIcon::FaFireExtinguisherSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13369,7 +13369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFireFlameCurvedSolid")]
-        Icon::FaFireFlameCurvedSolid => {
+        FaIcon::FaFireFlameCurvedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13381,7 +13381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFireFlameSimpleSolid")]
-        Icon::FaFireFlameSimpleSolid => {
+        FaIcon::FaFireFlameSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13393,7 +13393,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFireSolid")]
-        Icon::FaFireSolid => {
+        FaIcon::FaFireSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13405,7 +13405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFirefoxBrands")]
-        Icon::FaFirefoxBrands => {
+        FaIcon::FaFirefoxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13417,7 +13417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFirefoxBrowserBrands")]
-        Icon::FaFirefoxBrowserBrands => {
+        FaIcon::FaFirefoxBrowserBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13429,7 +13429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFirstOrderAltBrands")]
-        Icon::FaFirstOrderAltBrands => {
+        FaIcon::FaFirstOrderAltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -13441,7 +13441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFirstOrderBrands")]
-        Icon::FaFirstOrderBrands => {
+        FaIcon::FaFirstOrderBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13453,7 +13453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFirstdraftBrands")]
-        Icon::FaFirstdraftBrands => {
+        FaIcon::FaFirstdraftBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13465,7 +13465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFishFinsSolid")]
-        Icon::FaFishFinsSolid => {
+        FaIcon::FaFishFinsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13477,7 +13477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFishSolid")]
-        Icon::FaFishSolid => {
+        FaIcon::FaFishSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13489,7 +13489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlagCheckeredSolid")]
-        Icon::FaFlagCheckeredSolid => {
+        FaIcon::FaFlagCheckeredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13501,7 +13501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlagRegular")]
-        Icon::FaFlagRegular => {
+        FaIcon::FaFlagRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13513,7 +13513,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlagSolid")]
-        Icon::FaFlagSolid => {
+        FaIcon::FaFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13525,7 +13525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlagUsaSolid")]
-        Icon::FaFlagUsaSolid => {
+        FaIcon::FaFlagUsaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13537,7 +13537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlaskSolid")]
-        Icon::FaFlaskSolid => {
+        FaIcon::FaFlaskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13549,7 +13549,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlaskVialSolid")]
-        Icon::FaFlaskVialSolid => {
+        FaIcon::FaFlaskVialSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -13561,7 +13561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlickrBrands")]
-        Icon::FaFlickrBrands => {
+        FaIcon::FaFlickrBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13573,7 +13573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlipboardBrands")]
-        Icon::FaFlipboardBrands => {
+        FaIcon::FaFlipboardBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13585,7 +13585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFloppyDiskRegular")]
-        Icon::FaFloppyDiskRegular => {
+        FaIcon::FaFloppyDiskRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13597,7 +13597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFloppyDiskSolid")]
-        Icon::FaFloppyDiskSolid => {
+        FaIcon::FaFloppyDiskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13609,7 +13609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlorinSignSolid")]
-        Icon::FaFlorinSignSolid => {
+        FaIcon::FaFlorinSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13621,7 +13621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFlyBrands")]
-        Icon::FaFlyBrands => {
+        FaIcon::FaFlyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13633,7 +13633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderClosedRegular")]
-        Icon::FaFolderClosedRegular => {
+        FaIcon::FaFolderClosedRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13645,7 +13645,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderClosedSolid")]
-        Icon::FaFolderClosedSolid => {
+        FaIcon::FaFolderClosedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13657,7 +13657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderMinusSolid")]
-        Icon::FaFolderMinusSolid => {
+        FaIcon::FaFolderMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13669,7 +13669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderOpenRegular")]
-        Icon::FaFolderOpenRegular => {
+        FaIcon::FaFolderOpenRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13681,7 +13681,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderOpenSolid")]
-        Icon::FaFolderOpenSolid => {
+        FaIcon::FaFolderOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13693,7 +13693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderPlusSolid")]
-        Icon::FaFolderPlusSolid => {
+        FaIcon::FaFolderPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13705,7 +13705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderRegular")]
-        Icon::FaFolderRegular => {
+        FaIcon::FaFolderRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13717,7 +13717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderSolid")]
-        Icon::FaFolderSolid => {
+        FaIcon::FaFolderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13729,7 +13729,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFolderTreeSolid")]
-        Icon::FaFolderTreeSolid => {
+        FaIcon::FaFolderTreeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13741,7 +13741,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFontAwesomeBrands")]
-        Icon::FaFontAwesomeBrands => {
+        FaIcon::FaFontAwesomeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13753,7 +13753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFontAwesomeRegular")]
-        Icon::FaFontAwesomeRegular => {
+        FaIcon::FaFontAwesomeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13765,7 +13765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFontAwesomeSolid")]
-        Icon::FaFontAwesomeSolid => {
+        FaIcon::FaFontAwesomeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13777,7 +13777,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFontSolid")]
-        Icon::FaFontSolid => {
+        FaIcon::FaFontSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13789,7 +13789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFonticonsBrands")]
-        Icon::FaFonticonsBrands => {
+        FaIcon::FaFonticonsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13801,7 +13801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFonticonsFiBrands")]
-        Icon::FaFonticonsFiBrands => {
+        FaIcon::FaFonticonsFiBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -13813,7 +13813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFootballSolid")]
-        Icon::FaFootballSolid => {
+        FaIcon::FaFootballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13825,7 +13825,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFortAwesomeAltBrands")]
-        Icon::FaFortAwesomeAltBrands => {
+        FaIcon::FaFortAwesomeAltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13837,7 +13837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFortAwesomeBrands")]
-        Icon::FaFortAwesomeBrands => {
+        FaIcon::FaFortAwesomeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13849,7 +13849,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaForumbeeBrands")]
-        Icon::FaForumbeeBrands => {
+        FaIcon::FaForumbeeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13861,7 +13861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaForwardFastSolid")]
-        Icon::FaForwardFastSolid => {
+        FaIcon::FaForwardFastSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13873,7 +13873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaForwardSolid")]
-        Icon::FaForwardSolid => {
+        FaIcon::FaForwardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13885,7 +13885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaForwardStepSolid")]
-        Icon::FaForwardStepSolid => {
+        FaIcon::FaForwardStepSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -13897,7 +13897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFoursquareBrands")]
-        Icon::FaFoursquareBrands => {
+        FaIcon::FaFoursquareBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 368 512" fill = "currentColor" role =
@@ -13909,7 +13909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFrancSignSolid")]
-        Icon::FaFrancSignSolid => {
+        FaIcon::FaFrancSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -13921,7 +13921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFreeCodeCampBrands")]
-        Icon::FaFreeCodeCampBrands => {
+        FaIcon::FaFreeCodeCampBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13933,7 +13933,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFreebsdBrands")]
-        Icon::FaFreebsdBrands => {
+        FaIcon::FaFreebsdBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -13945,7 +13945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFrogSolid")]
-        Icon::FaFrogSolid => {
+        FaIcon::FaFrogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -13957,7 +13957,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFulcrumBrands")]
-        Icon::FaFulcrumBrands => {
+        FaIcon::FaFulcrumBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -13969,7 +13969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFutbolRegular")]
-        Icon::FaFutbolRegular => {
+        FaIcon::FaFutbolRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13981,7 +13981,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaFutbolSolid")]
-        Icon::FaFutbolSolid => {
+        FaIcon::FaFutbolSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -13993,7 +13993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGSolid")]
-        Icon::FaGSolid => {
+        FaIcon::FaGSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14005,7 +14005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGalacticRepublicBrands")]
-        Icon::FaGalacticRepublicBrands => {
+        FaIcon::FaGalacticRepublicBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -14017,7 +14017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGalacticSenateBrands")]
-        Icon::FaGalacticSenateBrands => {
+        FaIcon::FaGalacticSenateBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14029,7 +14029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGamepadSolid")]
-        Icon::FaGamepadSolid => {
+        FaIcon::FaGamepadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14041,7 +14041,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGasPumpSolid")]
-        Icon::FaGasPumpSolid => {
+        FaIcon::FaGasPumpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14053,7 +14053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGaugeHighSolid")]
-        Icon::FaGaugeHighSolid => {
+        FaIcon::FaGaugeHighSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14065,7 +14065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGaugeSimpleHighSolid")]
-        Icon::FaGaugeSimpleHighSolid => {
+        FaIcon::FaGaugeSimpleHighSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14077,7 +14077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGaugeSimpleSolid")]
-        Icon::FaGaugeSimpleSolid => {
+        FaIcon::FaGaugeSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14089,7 +14089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGaugeSolid")]
-        Icon::FaGaugeSolid => {
+        FaIcon::FaGaugeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14101,7 +14101,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGavelSolid")]
-        Icon::FaGavelSolid => {
+        FaIcon::FaGavelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14113,7 +14113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGearSolid")]
-        Icon::FaGearSolid => {
+        FaIcon::FaGearSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14125,7 +14125,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGearsSolid")]
-        Icon::FaGearsSolid => {
+        FaIcon::FaGearsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14137,7 +14137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGemRegular")]
-        Icon::FaGemRegular => {
+        FaIcon::FaGemRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14149,7 +14149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGemSolid")]
-        Icon::FaGemSolid => {
+        FaIcon::FaGemSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14161,7 +14161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGenderlessSolid")]
-        Icon::FaGenderlessSolid => {
+        FaIcon::FaGenderlessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14173,7 +14173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGetPocketBrands")]
-        Icon::FaGetPocketBrands => {
+        FaIcon::FaGetPocketBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14185,7 +14185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGgBrands")]
-        Icon::FaGgBrands => {
+        FaIcon::FaGgBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14197,7 +14197,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGgCircleBrands")]
-        Icon::FaGgCircleBrands => {
+        FaIcon::FaGgCircleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14209,7 +14209,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGhostSolid")]
-        Icon::FaGhostSolid => {
+        FaIcon::FaGhostSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14221,7 +14221,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGiftSolid")]
-        Icon::FaGiftSolid => {
+        FaIcon::FaGiftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14233,7 +14233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGiftsSolid")]
-        Icon::FaGiftsSolid => {
+        FaIcon::FaGiftsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14245,7 +14245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGitAltBrands")]
-        Icon::FaGitAltBrands => {
+        FaIcon::FaGitAltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14257,7 +14257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGitBrands")]
-        Icon::FaGitBrands => {
+        FaIcon::FaGitBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14269,7 +14269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGithubAltBrands")]
-        Icon::FaGithubAltBrands => {
+        FaIcon::FaGithubAltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 480 512" fill = "currentColor" role =
@@ -14281,7 +14281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGithubBrands")]
-        Icon::FaGithubBrands => {
+        FaIcon::FaGithubBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -14293,7 +14293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGitkrakenBrands")]
-        Icon::FaGitkrakenBrands => {
+        FaIcon::FaGitkrakenBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 592 512" fill = "currentColor" role =
@@ -14305,7 +14305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGitlabBrands")]
-        Icon::FaGitlabBrands => {
+        FaIcon::FaGitlabBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14317,7 +14317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGitterBrands")]
-        Icon::FaGitterBrands => {
+        FaIcon::FaGitterBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14329,7 +14329,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGlassWaterDropletSolid")]
-        Icon::FaGlassWaterDropletSolid => {
+        FaIcon::FaGlassWaterDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14341,7 +14341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGlassWaterSolid")]
-        Icon::FaGlassWaterSolid => {
+        FaIcon::FaGlassWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14353,7 +14353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGlassesSolid")]
-        Icon::FaGlassesSolid => {
+        FaIcon::FaGlassesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14365,7 +14365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGlideBrands")]
-        Icon::FaGlideBrands => {
+        FaIcon::FaGlideBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14377,7 +14377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGlideGBrands")]
-        Icon::FaGlideGBrands => {
+        FaIcon::FaGlideGBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14389,7 +14389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGlobeSolid")]
-        Icon::FaGlobeSolid => {
+        FaIcon::FaGlobeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14401,7 +14401,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGoforeBrands")]
-        Icon::FaGoforeBrands => {
+        FaIcon::FaGoforeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 400 512" fill = "currentColor" role =
@@ -14413,7 +14413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGolangBrands")]
-        Icon::FaGolangBrands => {
+        FaIcon::FaGolangBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14425,7 +14425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGolfBallTeeSolid")]
-        Icon::FaGolfBallTeeSolid => {
+        FaIcon::FaGolfBallTeeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14437,7 +14437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGoodreadsBrands")]
-        Icon::FaGoodreadsBrands => {
+        FaIcon::FaGoodreadsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14449,7 +14449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGoodreadsGBrands")]
-        Icon::FaGoodreadsGBrands => {
+        FaIcon::FaGoodreadsGBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14461,7 +14461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGoogleBrands")]
-        Icon::FaGoogleBrands => {
+        FaIcon::FaGoogleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 488 512" fill = "currentColor" role =
@@ -14473,7 +14473,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGoogleDriveBrands")]
-        Icon::FaGoogleDriveBrands => {
+        FaIcon::FaGoogleDriveBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14485,7 +14485,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGooglePayBrands")]
-        Icon::FaGooglePayBrands => {
+        FaIcon::FaGooglePayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14497,7 +14497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGooglePlayBrands")]
-        Icon::FaGooglePlayBrands => {
+        FaIcon::FaGooglePlayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14509,7 +14509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGooglePlusBrands")]
-        Icon::FaGooglePlusBrands => {
+        FaIcon::FaGooglePlusBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14521,7 +14521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGooglePlusGBrands")]
-        Icon::FaGooglePlusGBrands => {
+        FaIcon::FaGooglePlusGBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14533,7 +14533,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGoogleWalletBrands")]
-        Icon::FaGoogleWalletBrands => {
+        FaIcon::FaGoogleWalletBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14545,7 +14545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGopuramSolid")]
-        Icon::FaGopuramSolid => {
+        FaIcon::FaGopuramSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14557,7 +14557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGraduationCapSolid")]
-        Icon::FaGraduationCapSolid => {
+        FaIcon::FaGraduationCapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -14569,7 +14569,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGratipayBrands")]
-        Icon::FaGratipayBrands => {
+        FaIcon::FaGratipayBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -14581,7 +14581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGravBrands")]
-        Icon::FaGravBrands => {
+        FaIcon::FaGravBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14593,7 +14593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGreaterThanEqualSolid")]
-        Icon::FaGreaterThanEqualSolid => {
+        FaIcon::FaGreaterThanEqualSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14605,7 +14605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGreaterThanSolid")]
-        Icon::FaGreaterThanSolid => {
+        FaIcon::FaGreaterThanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14617,7 +14617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGripLinesSolid")]
-        Icon::FaGripLinesSolid => {
+        FaIcon::FaGripLinesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14629,7 +14629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGripLinesVerticalSolid")]
-        Icon::FaGripLinesVerticalSolid => {
+        FaIcon::FaGripLinesVerticalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 192 512" fill = "currentColor" role =
@@ -14641,7 +14641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGripSolid")]
-        Icon::FaGripSolid => {
+        FaIcon::FaGripSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14653,7 +14653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGripVerticalSolid")]
-        Icon::FaGripVerticalSolid => {
+        FaIcon::FaGripVerticalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -14665,7 +14665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGripfireBrands")]
-        Icon::FaGripfireBrands => {
+        FaIcon::FaGripfireBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14677,7 +14677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGroupArrowsRotateSolid")]
-        Icon::FaGroupArrowsRotateSolid => {
+        FaIcon::FaGroupArrowsRotateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14689,7 +14689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGruntBrands")]
-        Icon::FaGruntBrands => {
+        FaIcon::FaGruntBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14701,7 +14701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGuaraniSignSolid")]
-        Icon::FaGuaraniSignSolid => {
+        FaIcon::FaGuaraniSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14713,7 +14713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGuildedBrands")]
-        Icon::FaGuildedBrands => {
+        FaIcon::FaGuildedBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14725,7 +14725,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGuitarSolid")]
-        Icon::FaGuitarSolid => {
+        FaIcon::FaGuitarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14737,7 +14737,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGulpBrands")]
-        Icon::FaGulpBrands => {
+        FaIcon::FaGulpBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -14749,7 +14749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaGunSolid")]
-        Icon::FaGunSolid => {
+        FaIcon::FaGunSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14761,7 +14761,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHSolid")]
-        Icon::FaHSolid => {
+        FaIcon::FaHSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14773,7 +14773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHackerNewsBrands")]
-        Icon::FaHackerNewsBrands => {
+        FaIcon::FaHackerNewsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14785,7 +14785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHackerrankBrands")]
-        Icon::FaHackerrankBrands => {
+        FaIcon::FaHackerrankBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14797,7 +14797,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHammerSolid")]
-        Icon::FaHammerSolid => {
+        FaIcon::FaHammerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14809,7 +14809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHamsaSolid")]
-        Icon::FaHamsaSolid => {
+        FaIcon::FaHamsaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14821,7 +14821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandBackFistRegular")]
-        Icon::FaHandBackFistRegular => {
+        FaIcon::FaHandBackFistRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14833,7 +14833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandBackFistSolid")]
-        Icon::FaHandBackFistSolid => {
+        FaIcon::FaHandBackFistSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14845,7 +14845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandDotsSolid")]
-        Icon::FaHandDotsSolid => {
+        FaIcon::FaHandDotsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14857,7 +14857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandFistSolid")]
-        Icon::FaHandFistSolid => {
+        FaIcon::FaHandFistSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -14869,7 +14869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandHoldingDollarSolid")]
-        Icon::FaHandHoldingDollarSolid => {
+        FaIcon::FaHandHoldingDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14881,7 +14881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandHoldingDropletSolid")]
-        Icon::FaHandHoldingDropletSolid => {
+        FaIcon::FaHandHoldingDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14893,7 +14893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandHoldingHandSolid")]
-        Icon::FaHandHoldingHandSolid => {
+        FaIcon::FaHandHoldingHandSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14905,7 +14905,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandHoldingHeartSolid")]
-        Icon::FaHandHoldingHeartSolid => {
+        FaIcon::FaHandHoldingHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14917,7 +14917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandHoldingMedicalSolid")]
-        Icon::FaHandHoldingMedicalSolid => {
+        FaIcon::FaHandHoldingMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14929,7 +14929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandHoldingSolid")]
-        Icon::FaHandHoldingSolid => {
+        FaIcon::FaHandHoldingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -14941,7 +14941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandLizardRegular")]
-        Icon::FaHandLizardRegular => {
+        FaIcon::FaHandLizardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14953,7 +14953,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandLizardSolid")]
-        Icon::FaHandLizardSolid => {
+        FaIcon::FaHandLizardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -14965,7 +14965,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandMiddleFingerSolid")]
-        Icon::FaHandMiddleFingerSolid => {
+        FaIcon::FaHandMiddleFingerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14977,7 +14977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPeaceRegular")]
-        Icon::FaHandPeaceRegular => {
+        FaIcon::FaHandPeaceRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -14989,7 +14989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPeaceSolid")]
-        Icon::FaHandPeaceSolid => {
+        FaIcon::FaHandPeaceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -15001,7 +15001,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointDownRegular")]
-        Icon::FaHandPointDownRegular => {
+        FaIcon::FaHandPointDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -15013,7 +15013,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointDownSolid")]
-        Icon::FaHandPointDownSolid => {
+        FaIcon::FaHandPointDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -15025,7 +15025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointLeftRegular")]
-        Icon::FaHandPointLeftRegular => {
+        FaIcon::FaHandPointLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15037,7 +15037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointLeftSolid")]
-        Icon::FaHandPointLeftSolid => {
+        FaIcon::FaHandPointLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15049,7 +15049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointRightRegular")]
-        Icon::FaHandPointRightRegular => {
+        FaIcon::FaHandPointRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15061,7 +15061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointRightSolid")]
-        Icon::FaHandPointRightSolid => {
+        FaIcon::FaHandPointRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15073,7 +15073,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointUpRegular")]
-        Icon::FaHandPointUpRegular => {
+        FaIcon::FaHandPointUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -15085,7 +15085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointUpSolid")]
-        Icon::FaHandPointUpSolid => {
+        FaIcon::FaHandPointUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -15097,7 +15097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointerRegular")]
-        Icon::FaHandPointerRegular => {
+        FaIcon::FaHandPointerRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -15109,7 +15109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandPointerSolid")]
-        Icon::FaHandPointerSolid => {
+        FaIcon::FaHandPointerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -15121,7 +15121,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandRegular")]
-        Icon::FaHandRegular => {
+        FaIcon::FaHandRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15133,7 +15133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandScissorsRegular")]
-        Icon::FaHandScissorsRegular => {
+        FaIcon::FaHandScissorsRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15145,7 +15145,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandScissorsSolid")]
-        Icon::FaHandScissorsSolid => {
+        FaIcon::FaHandScissorsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15157,7 +15157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandSolid")]
-        Icon::FaHandSolid => {
+        FaIcon::FaHandSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15169,7 +15169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandSparklesSolid")]
-        Icon::FaHandSparklesSolid => {
+        FaIcon::FaHandSparklesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15181,7 +15181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandSpockRegular")]
-        Icon::FaHandSpockRegular => {
+        FaIcon::FaHandSpockRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15193,7 +15193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandSpockSolid")]
-        Icon::FaHandSpockSolid => {
+        FaIcon::FaHandSpockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15205,7 +15205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandcuffsSolid")]
-        Icon::FaHandcuffsSolid => {
+        FaIcon::FaHandcuffsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15217,7 +15217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsAslInterpretingSolid")]
-        Icon::FaHandsAslInterpretingSolid => {
+        FaIcon::FaHandsAslInterpretingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15229,7 +15229,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsBoundSolid")]
-        Icon::FaHandsBoundSolid => {
+        FaIcon::FaHandsBoundSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15241,7 +15241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsBubblesSolid")]
-        Icon::FaHandsBubblesSolid => {
+        FaIcon::FaHandsBubblesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15253,7 +15253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsClappingSolid")]
-        Icon::FaHandsClappingSolid => {
+        FaIcon::FaHandsClappingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15265,7 +15265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsHoldingChildSolid")]
-        Icon::FaHandsHoldingChildSolid => {
+        FaIcon::FaHandsHoldingChildSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15277,7 +15277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsHoldingCircleSolid")]
-        Icon::FaHandsHoldingCircleSolid => {
+        FaIcon::FaHandsHoldingCircleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15289,7 +15289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsHoldingSolid")]
-        Icon::FaHandsHoldingSolid => {
+        FaIcon::FaHandsHoldingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15301,7 +15301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsPrayingSolid")]
-        Icon::FaHandsPrayingSolid => {
+        FaIcon::FaHandsPrayingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15313,7 +15313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandsSolid")]
-        Icon::FaHandsSolid => {
+        FaIcon::FaHandsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15325,7 +15325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandshakeAngleSolid")]
-        Icon::FaHandshakeAngleSolid => {
+        FaIcon::FaHandshakeAngleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15337,7 +15337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandshakeRegular")]
-        Icon::FaHandshakeRegular => {
+        FaIcon::FaHandshakeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15349,7 +15349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandshakeSimpleSlashSolid")]
-        Icon::FaHandshakeSimpleSlashSolid => {
+        FaIcon::FaHandshakeSimpleSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15361,7 +15361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandshakeSimpleSolid")]
-        Icon::FaHandshakeSimpleSolid => {
+        FaIcon::FaHandshakeSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15373,7 +15373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandshakeSlashSolid")]
-        Icon::FaHandshakeSlashSolid => {
+        FaIcon::FaHandshakeSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15385,7 +15385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHandshakeSolid")]
-        Icon::FaHandshakeSolid => {
+        FaIcon::FaHandshakeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15397,7 +15397,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHanukiahSolid")]
-        Icon::FaHanukiahSolid => {
+        FaIcon::FaHanukiahSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15409,7 +15409,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHardDriveRegular")]
-        Icon::FaHardDriveRegular => {
+        FaIcon::FaHardDriveRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15421,7 +15421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHardDriveSolid")]
-        Icon::FaHardDriveSolid => {
+        FaIcon::FaHardDriveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15433,7 +15433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHashnodeBrands")]
-        Icon::FaHashnodeBrands => {
+        FaIcon::FaHashnodeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15445,7 +15445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHashtagSolid")]
-        Icon::FaHashtagSolid => {
+        FaIcon::FaHashtagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -15457,7 +15457,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHatCowboySideSolid")]
-        Icon::FaHatCowboySideSolid => {
+        FaIcon::FaHatCowboySideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15469,7 +15469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHatCowboySolid")]
-        Icon::FaHatCowboySolid => {
+        FaIcon::FaHatCowboySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15481,7 +15481,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHatWizardSolid")]
-        Icon::FaHatWizardSolid => {
+        FaIcon::FaHatWizardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15493,7 +15493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadSideCoughSlashSolid")]
-        Icon::FaHeadSideCoughSlashSolid => {
+        FaIcon::FaHeadSideCoughSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15505,7 +15505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadSideCoughSolid")]
-        Icon::FaHeadSideCoughSolid => {
+        FaIcon::FaHeadSideCoughSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15517,7 +15517,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadSideMaskSolid")]
-        Icon::FaHeadSideMaskSolid => {
+        FaIcon::FaHeadSideMaskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15529,7 +15529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadSideVirusSolid")]
-        Icon::FaHeadSideVirusSolid => {
+        FaIcon::FaHeadSideVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15541,7 +15541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadingSolid")]
-        Icon::FaHeadingSolid => {
+        FaIcon::FaHeadingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -15553,7 +15553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadphonesSimpleSolid")]
-        Icon::FaHeadphonesSimpleSolid => {
+        FaIcon::FaHeadphonesSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15565,7 +15565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadphonesSolid")]
-        Icon::FaHeadphonesSolid => {
+        FaIcon::FaHeadphonesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15577,7 +15577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeadsetSolid")]
-        Icon::FaHeadsetSolid => {
+        FaIcon::FaHeadsetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15589,7 +15589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCircleBoltSolid")]
-        Icon::FaHeartCircleBoltSolid => {
+        FaIcon::FaHeartCircleBoltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15601,7 +15601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCircleCheckSolid")]
-        Icon::FaHeartCircleCheckSolid => {
+        FaIcon::FaHeartCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15613,7 +15613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCircleExclamationSolid")]
-        Icon::FaHeartCircleExclamationSolid => {
+        FaIcon::FaHeartCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15625,7 +15625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCircleMinusSolid")]
-        Icon::FaHeartCircleMinusSolid => {
+        FaIcon::FaHeartCircleMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15637,7 +15637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCirclePlusSolid")]
-        Icon::FaHeartCirclePlusSolid => {
+        FaIcon::FaHeartCirclePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15649,7 +15649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCircleXmarkSolid")]
-        Icon::FaHeartCircleXmarkSolid => {
+        FaIcon::FaHeartCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15661,7 +15661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartCrackSolid")]
-        Icon::FaHeartCrackSolid => {
+        FaIcon::FaHeartCrackSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15673,7 +15673,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartPulseSolid")]
-        Icon::FaHeartPulseSolid => {
+        FaIcon::FaHeartPulseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15685,7 +15685,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartRegular")]
-        Icon::FaHeartRegular => {
+        FaIcon::FaHeartRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15697,7 +15697,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHeartSolid")]
-        Icon::FaHeartSolid => {
+        FaIcon::FaHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15709,7 +15709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHelicopterSolid")]
-        Icon::FaHelicopterSolid => {
+        FaIcon::FaHelicopterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15721,7 +15721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHelicopterSymbolSolid")]
-        Icon::FaHelicopterSymbolSolid => {
+        FaIcon::FaHelicopterSymbolSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15733,7 +15733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHelmetSafetySolid")]
-        Icon::FaHelmetSafetySolid => {
+        FaIcon::FaHelmetSafetySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15745,7 +15745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHelmetUnSolid")]
-        Icon::FaHelmetUnSolid => {
+        FaIcon::FaHelmetUnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15757,7 +15757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHighlighterSolid")]
-        Icon::FaHighlighterSolid => {
+        FaIcon::FaHighlighterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15769,7 +15769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHillAvalancheSolid")]
-        Icon::FaHillAvalancheSolid => {
+        FaIcon::FaHillAvalancheSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15781,7 +15781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHillRockslideSolid")]
-        Icon::FaHillRockslideSolid => {
+        FaIcon::FaHillRockslideSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15793,7 +15793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHippoSolid")]
-        Icon::FaHippoSolid => {
+        FaIcon::FaHippoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15805,7 +15805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHipsBrands")]
-        Icon::FaHipsBrands => {
+        FaIcon::FaHipsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15817,7 +15817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHireAHelperBrands")]
-        Icon::FaHireAHelperBrands => {
+        FaIcon::FaHireAHelperBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15829,7 +15829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHiveBrands")]
-        Icon::FaHiveBrands => {
+        FaIcon::FaHiveBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15841,7 +15841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHockeyPuckSolid")]
-        Icon::FaHockeyPuckSolid => {
+        FaIcon::FaHockeyPuckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15853,7 +15853,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHollyBerrySolid")]
-        Icon::FaHollyBerrySolid => {
+        FaIcon::FaHollyBerrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15865,7 +15865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHooliBrands")]
-        Icon::FaHooliBrands => {
+        FaIcon::FaHooliBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15877,7 +15877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHornbillBrands")]
-        Icon::FaHornbillBrands => {
+        FaIcon::FaHornbillBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15889,7 +15889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHorseHeadSolid")]
-        Icon::FaHorseHeadSolid => {
+        FaIcon::FaHorseHeadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15901,7 +15901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHorseSolid")]
-        Icon::FaHorseSolid => {
+        FaIcon::FaHorseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15913,7 +15913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHospitalRegular")]
-        Icon::FaHospitalRegular => {
+        FaIcon::FaHospitalRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15925,7 +15925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHospitalSolid")]
-        Icon::FaHospitalSolid => {
+        FaIcon::FaHospitalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -15937,7 +15937,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHospitalUserSolid")]
-        Icon::FaHospitalUserSolid => {
+        FaIcon::FaHospitalUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -15949,7 +15949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHotTubPersonSolid")]
-        Icon::FaHotTubPersonSolid => {
+        FaIcon::FaHotTubPersonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15961,7 +15961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHotdogSolid")]
-        Icon::FaHotdogSolid => {
+        FaIcon::FaHotdogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15973,7 +15973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHotelSolid")]
-        Icon::FaHotelSolid => {
+        FaIcon::FaHotelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -15985,7 +15985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHotjarBrands")]
-        Icon::FaHotjarBrands => {
+        FaIcon::FaHotjarBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -15997,7 +15997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHourglassEndSolid")]
-        Icon::FaHourglassEndSolid => {
+        FaIcon::FaHourglassEndSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16009,7 +16009,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHourglassHalfRegular")]
-        Icon::FaHourglassHalfRegular => {
+        FaIcon::FaHourglassHalfRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16021,7 +16021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHourglassHalfSolid")]
-        Icon::FaHourglassHalfSolid => {
+        FaIcon::FaHourglassHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16033,7 +16033,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHourglassRegular")]
-        Icon::FaHourglassRegular => {
+        FaIcon::FaHourglassRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16045,7 +16045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHourglassSolid")]
-        Icon::FaHourglassSolid => {
+        FaIcon::FaHourglassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16057,7 +16057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHourglassStartSolid")]
-        Icon::FaHourglassStartSolid => {
+        FaIcon::FaHourglassStartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16069,7 +16069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseChimneyCrackSolid")]
-        Icon::FaHouseChimneyCrackSolid => {
+        FaIcon::FaHouseChimneyCrackSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16081,7 +16081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseChimneyMedicalSolid")]
-        Icon::FaHouseChimneyMedicalSolid => {
+        FaIcon::FaHouseChimneyMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16093,7 +16093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseChimneySolid")]
-        Icon::FaHouseChimneySolid => {
+        FaIcon::FaHouseChimneySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16105,7 +16105,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseChimneyUserSolid")]
-        Icon::FaHouseChimneyUserSolid => {
+        FaIcon::FaHouseChimneyUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16117,7 +16117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseChimneyWindowSolid")]
-        Icon::FaHouseChimneyWindowSolid => {
+        FaIcon::FaHouseChimneyWindowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16129,7 +16129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseCircleCheckSolid")]
-        Icon::FaHouseCircleCheckSolid => {
+        FaIcon::FaHouseCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16141,7 +16141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseCircleExclamationSolid")]
-        Icon::FaHouseCircleExclamationSolid => {
+        FaIcon::FaHouseCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16153,7 +16153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseCircleXmarkSolid")]
-        Icon::FaHouseCircleXmarkSolid => {
+        FaIcon::FaHouseCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16165,7 +16165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseCrackSolid")]
-        Icon::FaHouseCrackSolid => {
+        FaIcon::FaHouseCrackSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16177,7 +16177,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseFireSolid")]
-        Icon::FaHouseFireSolid => {
+        FaIcon::FaHouseFireSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16189,7 +16189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseFlagSolid")]
-        Icon::FaHouseFlagSolid => {
+        FaIcon::FaHouseFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16201,7 +16201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseFloodWaterCircleArrowRightSolid")]
-        Icon::FaHouseFloodWaterCircleArrowRightSolid => {
+        FaIcon::FaHouseFloodWaterCircleArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16214,7 +16214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseFloodWaterSolid")]
-        Icon::FaHouseFloodWaterSolid => {
+        FaIcon::FaHouseFloodWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16226,7 +16226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseLaptopSolid")]
-        Icon::FaHouseLaptopSolid => {
+        FaIcon::FaHouseLaptopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16238,7 +16238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseLockSolid")]
-        Icon::FaHouseLockSolid => {
+        FaIcon::FaHouseLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16250,7 +16250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseMedicalCircleCheckSolid")]
-        Icon::FaHouseMedicalCircleCheckSolid => {
+        FaIcon::FaHouseMedicalCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16262,7 +16262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseMedicalCircleExclamationSolid")]
-        Icon::FaHouseMedicalCircleExclamationSolid => {
+        FaIcon::FaHouseMedicalCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16275,7 +16275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseMedicalCircleXmarkSolid")]
-        Icon::FaHouseMedicalCircleXmarkSolid => {
+        FaIcon::FaHouseMedicalCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16287,7 +16287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseMedicalFlagSolid")]
-        Icon::FaHouseMedicalFlagSolid => {
+        FaIcon::FaHouseMedicalFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16299,7 +16299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseMedicalSolid")]
-        Icon::FaHouseMedicalSolid => {
+        FaIcon::FaHouseMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16311,7 +16311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseSignalSolid")]
-        Icon::FaHouseSignalSolid => {
+        FaIcon::FaHouseSignalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16323,7 +16323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseSolid")]
-        Icon::FaHouseSolid => {
+        FaIcon::FaHouseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16335,7 +16335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseTsunamiSolid")]
-        Icon::FaHouseTsunamiSolid => {
+        FaIcon::FaHouseTsunamiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16347,7 +16347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouseUserSolid")]
-        Icon::FaHouseUserSolid => {
+        FaIcon::FaHouseUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16359,7 +16359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHouzzBrands")]
-        Icon::FaHouzzBrands => {
+        FaIcon::FaHouzzBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16371,7 +16371,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHryvniaSignSolid")]
-        Icon::FaHryvniaSignSolid => {
+        FaIcon::FaHryvniaSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16383,7 +16383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHtml5Brands")]
-        Icon::FaHtml5Brands => {
+        FaIcon::FaHtml5Brands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16395,7 +16395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHubspotBrands")]
-        Icon::FaHubspotBrands => {
+        FaIcon::FaHubspotBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16407,7 +16407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaHurricaneSolid")]
-        Icon::FaHurricaneSolid => {
+        FaIcon::FaHurricaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16419,7 +16419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaICursorSolid")]
-        Icon::FaICursorSolid => {
+        FaIcon::FaICursorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -16431,7 +16431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaISolid")]
-        Icon::FaISolid => {
+        FaIcon::FaISolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -16443,7 +16443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIceCreamSolid")]
-        Icon::FaIceCreamSolid => {
+        FaIcon::FaIceCreamSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16455,7 +16455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIciclesSolid")]
-        Icon::FaIciclesSolid => {
+        FaIcon::FaIciclesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16467,7 +16467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIconsSolid")]
-        Icon::FaIconsSolid => {
+        FaIcon::FaIconsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16479,7 +16479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIdBadgeRegular")]
-        Icon::FaIdBadgeRegular => {
+        FaIcon::FaIdBadgeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16491,7 +16491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIdBadgeSolid")]
-        Icon::FaIdBadgeSolid => {
+        FaIcon::FaIdBadgeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16503,7 +16503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIdCardClipSolid")]
-        Icon::FaIdCardClipSolid => {
+        FaIcon::FaIdCardClipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16515,7 +16515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIdCardRegular")]
-        Icon::FaIdCardRegular => {
+        FaIcon::FaIdCardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16527,7 +16527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIdCardSolid")]
-        Icon::FaIdCardSolid => {
+        FaIcon::FaIdCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16539,7 +16539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIdealBrands")]
-        Icon::FaIdealBrands => {
+        FaIcon::FaIdealBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16551,7 +16551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIglooSolid")]
-        Icon::FaIglooSolid => {
+        FaIcon::FaIglooSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16563,7 +16563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaImagePortraitSolid")]
-        Icon::FaImagePortraitSolid => {
+        FaIcon::FaImagePortraitSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16575,7 +16575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaImageRegular")]
-        Icon::FaImageRegular => {
+        FaIcon::FaImageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16587,7 +16587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaImageSolid")]
-        Icon::FaImageSolid => {
+        FaIcon::FaImageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16599,7 +16599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaImagesRegular")]
-        Icon::FaImagesRegular => {
+        FaIcon::FaImagesRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16611,7 +16611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaImagesSolid")]
-        Icon::FaImagesSolid => {
+        FaIcon::FaImagesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16623,7 +16623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaImdbBrands")]
-        Icon::FaImdbBrands => {
+        FaIcon::FaImdbBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16635,7 +16635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInboxSolid")]
-        Icon::FaInboxSolid => {
+        FaIcon::FaInboxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16647,7 +16647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIndentSolid")]
-        Icon::FaIndentSolid => {
+        FaIcon::FaIndentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16659,7 +16659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIndianRupeeSignSolid")]
-        Icon::FaIndianRupeeSignSolid => {
+        FaIcon::FaIndianRupeeSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -16671,7 +16671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIndustrySolid")]
-        Icon::FaIndustrySolid => {
+        FaIcon::FaIndustrySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16683,7 +16683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInfinitySolid")]
-        Icon::FaInfinitySolid => {
+        FaIcon::FaInfinitySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16695,7 +16695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInfoSolid")]
-        Icon::FaInfoSolid => {
+        FaIcon::FaInfoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 192 512" fill = "currentColor" role =
@@ -16707,7 +16707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInstagramBrands")]
-        Icon::FaInstagramBrands => {
+        FaIcon::FaInstagramBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16719,7 +16719,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInstalodBrands")]
-        Icon::FaInstalodBrands => {
+        FaIcon::FaInstalodBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16731,7 +16731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIntercomBrands")]
-        Icon::FaIntercomBrands => {
+        FaIcon::FaIntercomBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16743,7 +16743,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInternetExplorerBrands")]
-        Icon::FaInternetExplorerBrands => {
+        FaIcon::FaInternetExplorerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16755,7 +16755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaInvisionBrands")]
-        Icon::FaInvisionBrands => {
+        FaIcon::FaInvisionBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16767,7 +16767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaIoxhostBrands")]
-        Icon::FaIoxhostBrands => {
+        FaIcon::FaIoxhostBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16779,7 +16779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaItalicSolid")]
-        Icon::FaItalicSolid => {
+        FaIcon::FaItalicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16791,7 +16791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaItchIoBrands")]
-        Icon::FaItchIoBrands => {
+        FaIcon::FaItchIoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16803,7 +16803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaItunesBrands")]
-        Icon::FaItunesBrands => {
+        FaIcon::FaItunesBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16815,7 +16815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaItunesNoteBrands")]
-        Icon::FaItunesNoteBrands => {
+        FaIcon::FaItunesNoteBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16827,7 +16827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJSolid")]
-        Icon::FaJSolid => {
+        FaIcon::FaJSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -16839,7 +16839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJarSolid")]
-        Icon::FaJarSolid => {
+        FaIcon::FaJarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -16851,7 +16851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJarWheatSolid")]
-        Icon::FaJarWheatSolid => {
+        FaIcon::FaJarWheatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -16863,7 +16863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJavaBrands")]
-        Icon::FaJavaBrands => {
+        FaIcon::FaJavaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -16875,7 +16875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJediOrderBrands")]
-        Icon::FaJediOrderBrands => {
+        FaIcon::FaJediOrderBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16887,7 +16887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJediSolid")]
-        Icon::FaJediSolid => {
+        FaIcon::FaJediSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -16899,7 +16899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJenkinsBrands")]
-        Icon::FaJenkinsBrands => {
+        FaIcon::FaJenkinsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16911,7 +16911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJetFighterSolid")]
-        Icon::FaJetFighterSolid => {
+        FaIcon::FaJetFighterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16923,7 +16923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJetFighterUpSolid")]
-        Icon::FaJetFighterUpSolid => {
+        FaIcon::FaJetFighterUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -16935,7 +16935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJiraBrands")]
-        Icon::FaJiraBrands => {
+        FaIcon::FaJiraBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -16947,7 +16947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJogetBrands")]
-        Icon::FaJogetBrands => {
+        FaIcon::FaJogetBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -16959,7 +16959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJointSolid")]
-        Icon::FaJointSolid => {
+        FaIcon::FaJointSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -16971,7 +16971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJoomlaBrands")]
-        Icon::FaJoomlaBrands => {
+        FaIcon::FaJoomlaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16983,7 +16983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJsBrands")]
-        Icon::FaJsBrands => {
+        FaIcon::FaJsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -16995,7 +16995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJsfiddleBrands")]
-        Icon::FaJsfiddleBrands => {
+        FaIcon::FaJsfiddleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17007,7 +17007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaJugDetergentSolid")]
-        Icon::FaJugDetergentSolid => {
+        FaIcon::FaJugDetergentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17019,7 +17019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKSolid")]
-        Icon::FaKSolid => {
+        FaIcon::FaKSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -17031,7 +17031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKaabaSolid")]
-        Icon::FaKaabaSolid => {
+        FaIcon::FaKaabaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17043,7 +17043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKaggleBrands")]
-        Icon::FaKaggleBrands => {
+        FaIcon::FaKaggleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -17055,7 +17055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKeySolid")]
-        Icon::FaKeySolid => {
+        FaIcon::FaKeySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17067,7 +17067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKeybaseBrands")]
-        Icon::FaKeybaseBrands => {
+        FaIcon::FaKeybaseBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17079,7 +17079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKeyboardRegular")]
-        Icon::FaKeyboardRegular => {
+        FaIcon::FaKeyboardRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17091,7 +17091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKeyboardSolid")]
-        Icon::FaKeyboardSolid => {
+        FaIcon::FaKeyboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17103,7 +17103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKeycdnBrands")]
-        Icon::FaKeycdnBrands => {
+        FaIcon::FaKeycdnBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17115,7 +17115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKhandaSolid")]
-        Icon::FaKhandaSolid => {
+        FaIcon::FaKhandaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17127,7 +17127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKickstarterBrands")]
-        Icon::FaKickstarterBrands => {
+        FaIcon::FaKickstarterBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17139,7 +17139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKickstarterKBrands")]
-        Icon::FaKickstarterKBrands => {
+        FaIcon::FaKickstarterKBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17151,7 +17151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKipSignSolid")]
-        Icon::FaKipSignSolid => {
+        FaIcon::FaKipSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17163,7 +17163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKitMedicalSolid")]
-        Icon::FaKitMedicalSolid => {
+        FaIcon::FaKitMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17175,7 +17175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKitchenSetSolid")]
-        Icon::FaKitchenSetSolid => {
+        FaIcon::FaKitchenSetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17187,7 +17187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKiwiBirdSolid")]
-        Icon::FaKiwiBirdSolid => {
+        FaIcon::FaKiwiBirdSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17199,7 +17199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaKorvueBrands")]
-        Icon::FaKorvueBrands => {
+        FaIcon::FaKorvueBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 446 512" fill = "currentColor" role =
@@ -17211,7 +17211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLSolid")]
-        Icon::FaLSolid => {
+        FaIcon::FaLSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -17223,7 +17223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLandMineOnSolid")]
-        Icon::FaLandMineOnSolid => {
+        FaIcon::FaLandMineOnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17235,7 +17235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLandmarkDomeSolid")]
-        Icon::FaLandmarkDomeSolid => {
+        FaIcon::FaLandmarkDomeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17247,7 +17247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLandmarkFlagSolid")]
-        Icon::FaLandmarkFlagSolid => {
+        FaIcon::FaLandmarkFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17259,7 +17259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLandmarkSolid")]
-        Icon::FaLandmarkSolid => {
+        FaIcon::FaLandmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17271,7 +17271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLanguageSolid")]
-        Icon::FaLanguageSolid => {
+        FaIcon::FaLanguageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17283,7 +17283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLaptopCodeSolid")]
-        Icon::FaLaptopCodeSolid => {
+        FaIcon::FaLaptopCodeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17295,7 +17295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLaptopFileSolid")]
-        Icon::FaLaptopFileSolid => {
+        FaIcon::FaLaptopFileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17307,7 +17307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLaptopMedicalSolid")]
-        Icon::FaLaptopMedicalSolid => {
+        FaIcon::FaLaptopMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17319,7 +17319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLaptopSolid")]
-        Icon::FaLaptopSolid => {
+        FaIcon::FaLaptopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17331,7 +17331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLaravelBrands")]
-        Icon::FaLaravelBrands => {
+        FaIcon::FaLaravelBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17343,7 +17343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLariSignSolid")]
-        Icon::FaLariSignSolid => {
+        FaIcon::FaLariSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17355,7 +17355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLastfmBrands")]
-        Icon::FaLastfmBrands => {
+        FaIcon::FaLastfmBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17367,7 +17367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLayerGroupSolid")]
-        Icon::FaLayerGroupSolid => {
+        FaIcon::FaLayerGroupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17379,7 +17379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLeafSolid")]
-        Icon::FaLeafSolid => {
+        FaIcon::FaLeafSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17391,7 +17391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLeanpubBrands")]
-        Icon::FaLeanpubBrands => {
+        FaIcon::FaLeanpubBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17403,7 +17403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLeftLongSolid")]
-        Icon::FaLeftLongSolid => {
+        FaIcon::FaLeftLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17415,7 +17415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLeftRightSolid")]
-        Icon::FaLeftRightSolid => {
+        FaIcon::FaLeftRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17427,7 +17427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLemonRegular")]
-        Icon::FaLemonRegular => {
+        FaIcon::FaLemonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17439,7 +17439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLemonSolid")]
-        Icon::FaLemonSolid => {
+        FaIcon::FaLemonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17451,7 +17451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLessBrands")]
-        Icon::FaLessBrands => {
+        FaIcon::FaLessBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17463,7 +17463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLessThanEqualSolid")]
-        Icon::FaLessThanEqualSolid => {
+        FaIcon::FaLessThanEqualSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17475,7 +17475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLessThanSolid")]
-        Icon::FaLessThanSolid => {
+        FaIcon::FaLessThanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17487,7 +17487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLifeRingRegular")]
-        Icon::FaLifeRingRegular => {
+        FaIcon::FaLifeRingRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17499,7 +17499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLifeRingSolid")]
-        Icon::FaLifeRingSolid => {
+        FaIcon::FaLifeRingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17511,7 +17511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLightbulbRegular")]
-        Icon::FaLightbulbRegular => {
+        FaIcon::FaLightbulbRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17523,7 +17523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLightbulbSolid")]
-        Icon::FaLightbulbSolid => {
+        FaIcon::FaLightbulbSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17535,7 +17535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLineBrands")]
-        Icon::FaLineBrands => {
+        FaIcon::FaLineBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17547,7 +17547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinesLeaningSolid")]
-        Icon::FaLinesLeaningSolid => {
+        FaIcon::FaLinesLeaningSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17559,7 +17559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinkSlashSolid")]
-        Icon::FaLinkSlashSolid => {
+        FaIcon::FaLinkSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17571,7 +17571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinkSolid")]
-        Icon::FaLinkSolid => {
+        FaIcon::FaLinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17583,7 +17583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinkedinBrands")]
-        Icon::FaLinkedinBrands => {
+        FaIcon::FaLinkedinBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17595,7 +17595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinkedinInBrands")]
-        Icon::FaLinkedinInBrands => {
+        FaIcon::FaLinkedinInBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17607,7 +17607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinodeBrands")]
-        Icon::FaLinodeBrands => {
+        FaIcon::FaLinodeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17619,7 +17619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLinuxBrands")]
-        Icon::FaLinuxBrands => {
+        FaIcon::FaLinuxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17631,7 +17631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLiraSignSolid")]
-        Icon::FaLiraSignSolid => {
+        FaIcon::FaLiraSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -17643,7 +17643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaListCheckSolid")]
-        Icon::FaListCheckSolid => {
+        FaIcon::FaListCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17655,7 +17655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaListOlSolid")]
-        Icon::FaListOlSolid => {
+        FaIcon::FaListOlSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17667,7 +17667,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaListSolid")]
-        Icon::FaListSolid => {
+        FaIcon::FaListSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17679,7 +17679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaListUlSolid")]
-        Icon::FaListUlSolid => {
+        FaIcon::FaListUlSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17691,7 +17691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLitecoinSignSolid")]
-        Icon::FaLitecoinSignSolid => {
+        FaIcon::FaLitecoinSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17703,7 +17703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLocationArrowSolid")]
-        Icon::FaLocationArrowSolid => {
+        FaIcon::FaLocationArrowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17715,7 +17715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLocationCrosshairsSolid")]
-        Icon::FaLocationCrosshairsSolid => {
+        FaIcon::FaLocationCrosshairsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17727,7 +17727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLocationDotSolid")]
-        Icon::FaLocationDotSolid => {
+        FaIcon::FaLocationDotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17739,7 +17739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLocationPinLockSolid")]
-        Icon::FaLocationPinLockSolid => {
+        FaIcon::FaLocationPinLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17751,7 +17751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLocationPinSolid")]
-        Icon::FaLocationPinSolid => {
+        FaIcon::FaLocationPinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17763,7 +17763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLockOpenSolid")]
-        Icon::FaLockOpenSolid => {
+        FaIcon::FaLockOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17775,7 +17775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLockSolid")]
-        Icon::FaLockSolid => {
+        FaIcon::FaLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17787,7 +17787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLocustSolid")]
-        Icon::FaLocustSolid => {
+        FaIcon::FaLocustSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -17799,7 +17799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLungsSolid")]
-        Icon::FaLungsSolid => {
+        FaIcon::FaLungsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17811,7 +17811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLungsVirusSolid")]
-        Icon::FaLungsVirusSolid => {
+        FaIcon::FaLungsVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -17823,7 +17823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaLyftBrands")]
-        Icon::FaLyftBrands => {
+        FaIcon::FaLyftBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17835,7 +17835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMSolid")]
-        Icon::FaMSolid => {
+        FaIcon::FaMSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17847,7 +17847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagentoBrands")]
-        Icon::FaMagentoBrands => {
+        FaIcon::FaMagentoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17859,7 +17859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnetSolid")]
-        Icon::FaMagnetSolid => {
+        FaIcon::FaMagnetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17871,7 +17871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassArrowRightSolid")]
-        Icon::FaMagnifyingGlassArrowRightSolid => {
+        FaIcon::FaMagnifyingGlassArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17883,7 +17883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassChartSolid")]
-        Icon::FaMagnifyingGlassChartSolid => {
+        FaIcon::FaMagnifyingGlassChartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17895,7 +17895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassDollarSolid")]
-        Icon::FaMagnifyingGlassDollarSolid => {
+        FaIcon::FaMagnifyingGlassDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17907,7 +17907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassLocationSolid")]
-        Icon::FaMagnifyingGlassLocationSolid => {
+        FaIcon::FaMagnifyingGlassLocationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17919,7 +17919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassMinusSolid")]
-        Icon::FaMagnifyingGlassMinusSolid => {
+        FaIcon::FaMagnifyingGlassMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17931,7 +17931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassPlusSolid")]
-        Icon::FaMagnifyingGlassPlusSolid => {
+        FaIcon::FaMagnifyingGlassPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17943,7 +17943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMagnifyingGlassSolid")]
-        Icon::FaMagnifyingGlassSolid => {
+        FaIcon::FaMagnifyingGlassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -17955,7 +17955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMailchimpBrands")]
-        Icon::FaMailchimpBrands => {
+        FaIcon::FaMailchimpBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17967,7 +17967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaManatSignSolid")]
-        Icon::FaManatSignSolid => {
+        FaIcon::FaManatSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -17979,7 +17979,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMandalorianBrands")]
-        Icon::FaMandalorianBrands => {
+        FaIcon::FaMandalorianBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -17991,7 +17991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMapLocationDotSolid")]
-        Icon::FaMapLocationDotSolid => {
+        FaIcon::FaMapLocationDotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18003,7 +18003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMapLocationSolid")]
-        Icon::FaMapLocationSolid => {
+        FaIcon::FaMapLocationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18015,7 +18015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMapPinSolid")]
-        Icon::FaMapPinSolid => {
+        FaIcon::FaMapPinSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -18027,7 +18027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMapRegular")]
-        Icon::FaMapRegular => {
+        FaIcon::FaMapRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18039,7 +18039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMapSolid")]
-        Icon::FaMapSolid => {
+        FaIcon::FaMapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18051,7 +18051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarkdownBrands")]
-        Icon::FaMarkdownBrands => {
+        FaIcon::FaMarkdownBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18063,7 +18063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarkerSolid")]
-        Icon::FaMarkerSolid => {
+        FaIcon::FaMarkerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18075,7 +18075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsAndVenusBurstSolid")]
-        Icon::FaMarsAndVenusBurstSolid => {
+        FaIcon::FaMarsAndVenusBurstSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18087,7 +18087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsAndVenusSolid")]
-        Icon::FaMarsAndVenusSolid => {
+        FaIcon::FaMarsAndVenusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18099,7 +18099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsDoubleSolid")]
-        Icon::FaMarsDoubleSolid => {
+        FaIcon::FaMarsDoubleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18111,7 +18111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsSolid")]
-        Icon::FaMarsSolid => {
+        FaIcon::FaMarsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18123,7 +18123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsStrokeRightSolid")]
-        Icon::FaMarsStrokeRightSolid => {
+        FaIcon::FaMarsStrokeRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18135,7 +18135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsStrokeSolid")]
-        Icon::FaMarsStrokeSolid => {
+        FaIcon::FaMarsStrokeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18147,7 +18147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMarsStrokeUpSolid")]
-        Icon::FaMarsStrokeUpSolid => {
+        FaIcon::FaMarsStrokeUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -18159,7 +18159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMartiniGlassCitrusSolid")]
-        Icon::FaMartiniGlassCitrusSolid => {
+        FaIcon::FaMartiniGlassCitrusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18171,7 +18171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMartiniGlassEmptySolid")]
-        Icon::FaMartiniGlassEmptySolid => {
+        FaIcon::FaMartiniGlassEmptySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18183,7 +18183,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMartiniGlassSolid")]
-        Icon::FaMartiniGlassSolid => {
+        FaIcon::FaMartiniGlassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18195,7 +18195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMaskFaceSolid")]
-        Icon::FaMaskFaceSolid => {
+        FaIcon::FaMaskFaceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18207,7 +18207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMaskSolid")]
-        Icon::FaMaskSolid => {
+        FaIcon::FaMaskSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18219,7 +18219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMaskVentilatorSolid")]
-        Icon::FaMaskVentilatorSolid => {
+        FaIcon::FaMaskVentilatorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18231,7 +18231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMasksTheaterSolid")]
-        Icon::FaMasksTheaterSolid => {
+        FaIcon::FaMasksTheaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18243,7 +18243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMastodonBrands")]
-        Icon::FaMastodonBrands => {
+        FaIcon::FaMastodonBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18255,7 +18255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMattressPillowSolid")]
-        Icon::FaMattressPillowSolid => {
+        FaIcon::FaMattressPillowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18267,7 +18267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMaxcdnBrands")]
-        Icon::FaMaxcdnBrands => {
+        FaIcon::FaMaxcdnBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18279,7 +18279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMaximizeSolid")]
-        Icon::FaMaximizeSolid => {
+        FaIcon::FaMaximizeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18291,7 +18291,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMdbBrands")]
-        Icon::FaMdbBrands => {
+        FaIcon::FaMdbBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18303,7 +18303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMedalSolid")]
-        Icon::FaMedalSolid => {
+        FaIcon::FaMedalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18315,7 +18315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMedappsBrands")]
-        Icon::FaMedappsBrands => {
+        FaIcon::FaMedappsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -18327,7 +18327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMediumBrands")]
-        Icon::FaMediumBrands => {
+        FaIcon::FaMediumBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18339,7 +18339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMedrtBrands")]
-        Icon::FaMedrtBrands => {
+        FaIcon::FaMedrtBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 544 512" fill = "currentColor" role =
@@ -18351,7 +18351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMeetupBrands")]
-        Icon::FaMeetupBrands => {
+        FaIcon::FaMeetupBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18363,7 +18363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMegaportBrands")]
-        Icon::FaMegaportBrands => {
+        FaIcon::FaMegaportBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -18375,7 +18375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMemorySolid")]
-        Icon::FaMemorySolid => {
+        FaIcon::FaMemorySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18387,7 +18387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMendeleyBrands")]
-        Icon::FaMendeleyBrands => {
+        FaIcon::FaMendeleyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18399,7 +18399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMenorahSolid")]
-        Icon::FaMenorahSolid => {
+        FaIcon::FaMenorahSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18411,7 +18411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMercurySolid")]
-        Icon::FaMercurySolid => {
+        FaIcon::FaMercurySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18423,7 +18423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMessageRegular")]
-        Icon::FaMessageRegular => {
+        FaIcon::FaMessageRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18435,7 +18435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMessageSolid")]
-        Icon::FaMessageSolid => {
+        FaIcon::FaMessageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18447,7 +18447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMetaBrands")]
-        Icon::FaMetaBrands => {
+        FaIcon::FaMetaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18459,7 +18459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMeteorSolid")]
-        Icon::FaMeteorSolid => {
+        FaIcon::FaMeteorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18471,7 +18471,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicroblogBrands")]
-        Icon::FaMicroblogBrands => {
+        FaIcon::FaMicroblogBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18483,7 +18483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicrochipSolid")]
-        Icon::FaMicrochipSolid => {
+        FaIcon::FaMicrochipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18495,7 +18495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicrophoneLinesSlashSolid")]
-        Icon::FaMicrophoneLinesSlashSolid => {
+        FaIcon::FaMicrophoneLinesSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18507,7 +18507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicrophoneLinesSolid")]
-        Icon::FaMicrophoneLinesSolid => {
+        FaIcon::FaMicrophoneLinesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18519,7 +18519,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicrophoneSlashSolid")]
-        Icon::FaMicrophoneSlashSolid => {
+        FaIcon::FaMicrophoneSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18531,7 +18531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicrophoneSolid")]
-        Icon::FaMicrophoneSolid => {
+        FaIcon::FaMicrophoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18543,7 +18543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicroscopeSolid")]
-        Icon::FaMicroscopeSolid => {
+        FaIcon::FaMicroscopeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18555,7 +18555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMicrosoftBrands")]
-        Icon::FaMicrosoftBrands => {
+        FaIcon::FaMicrosoftBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18567,7 +18567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMillSignSolid")]
-        Icon::FaMillSignSolid => {
+        FaIcon::FaMillSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18579,7 +18579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMinimizeSolid")]
-        Icon::FaMinimizeSolid => {
+        FaIcon::FaMinimizeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18591,7 +18591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMinusSolid")]
-        Icon::FaMinusSolid => {
+        FaIcon::FaMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18603,7 +18603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMittenSolid")]
-        Icon::FaMittenSolid => {
+        FaIcon::FaMittenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18615,7 +18615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMixBrands")]
-        Icon::FaMixBrands => {
+        FaIcon::FaMixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18627,7 +18627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMixcloudBrands")]
-        Icon::FaMixcloudBrands => {
+        FaIcon::FaMixcloudBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18639,7 +18639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMixerBrands")]
-        Icon::FaMixerBrands => {
+        FaIcon::FaMixerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18651,7 +18651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMizuniBrands")]
-        Icon::FaMizuniBrands => {
+        FaIcon::FaMizuniBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -18663,7 +18663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMobileButtonSolid")]
-        Icon::FaMobileButtonSolid => {
+        FaIcon::FaMobileButtonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18675,7 +18675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMobileRetroSolid")]
-        Icon::FaMobileRetroSolid => {
+        FaIcon::FaMobileRetroSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -18687,7 +18687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMobileScreenButtonSolid")]
-        Icon::FaMobileScreenButtonSolid => {
+        FaIcon::FaMobileScreenButtonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18699,7 +18699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMobileScreenSolid")]
-        Icon::FaMobileScreenSolid => {
+        FaIcon::FaMobileScreenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18711,7 +18711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMobileSolid")]
-        Icon::FaMobileSolid => {
+        FaIcon::FaMobileSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18723,7 +18723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaModxBrands")]
-        Icon::FaModxBrands => {
+        FaIcon::FaModxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -18735,7 +18735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneroBrands")]
-        Icon::FaMoneroBrands => {
+        FaIcon::FaMoneroBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -18747,7 +18747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBill1Regular")]
-        Icon::FaMoneyBill1Regular => {
+        FaIcon::FaMoneyBill1Regular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18759,7 +18759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBill1Solid")]
-        Icon::FaMoneyBill1Solid => {
+        FaIcon::FaMoneyBill1Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18771,7 +18771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBill1WaveSolid")]
-        Icon::FaMoneyBill1WaveSolid => {
+        FaIcon::FaMoneyBill1WaveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18783,7 +18783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBillSolid")]
-        Icon::FaMoneyBillSolid => {
+        FaIcon::FaMoneyBillSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18795,7 +18795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBillTransferSolid")]
-        Icon::FaMoneyBillTransferSolid => {
+        FaIcon::FaMoneyBillTransferSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18807,7 +18807,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBillTrendUpSolid")]
-        Icon::FaMoneyBillTrendUpSolid => {
+        FaIcon::FaMoneyBillTrendUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18819,7 +18819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBillWaveSolid")]
-        Icon::FaMoneyBillWaveSolid => {
+        FaIcon::FaMoneyBillWaveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18831,7 +18831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBillWheatSolid")]
-        Icon::FaMoneyBillWheatSolid => {
+        FaIcon::FaMoneyBillWheatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18843,7 +18843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyBillsSolid")]
-        Icon::FaMoneyBillsSolid => {
+        FaIcon::FaMoneyBillsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18855,7 +18855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyCheckDollarSolid")]
-        Icon::FaMoneyCheckDollarSolid => {
+        FaIcon::FaMoneyCheckDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18867,7 +18867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoneyCheckSolid")]
-        Icon::FaMoneyCheckSolid => {
+        FaIcon::FaMoneyCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18879,7 +18879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMonumentSolid")]
-        Icon::FaMonumentSolid => {
+        FaIcon::FaMonumentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18891,7 +18891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoonRegular")]
-        Icon::FaMoonRegular => {
+        FaIcon::FaMoonRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18903,7 +18903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoonSolid")]
-        Icon::FaMoonSolid => {
+        FaIcon::FaMoonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -18915,7 +18915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMortarPestleSolid")]
-        Icon::FaMortarPestleSolid => {
+        FaIcon::FaMortarPestleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -18927,7 +18927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMosqueSolid")]
-        Icon::FaMosqueSolid => {
+        FaIcon::FaMosqueSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18939,7 +18939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMosquitoNetSolid")]
-        Icon::FaMosquitoNetSolid => {
+        FaIcon::FaMosquitoNetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18951,7 +18951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMosquitoSolid")]
-        Icon::FaMosquitoSolid => {
+        FaIcon::FaMosquitoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18963,7 +18963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMotorcycleSolid")]
-        Icon::FaMotorcycleSolid => {
+        FaIcon::FaMotorcycleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18975,7 +18975,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMoundSolid")]
-        Icon::FaMoundSolid => {
+        FaIcon::FaMoundSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -18987,7 +18987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMountainCitySolid")]
-        Icon::FaMountainCitySolid => {
+        FaIcon::FaMountainCitySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -18999,7 +18999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMountainSolid")]
-        Icon::FaMountainSolid => {
+        FaIcon::FaMountainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19011,7 +19011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMountainSunSolid")]
-        Icon::FaMountainSunSolid => {
+        FaIcon::FaMountainSunSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19023,7 +19023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMugHotSolid")]
-        Icon::FaMugHotSolid => {
+        FaIcon::FaMugHotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19035,7 +19035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMugSaucerSolid")]
-        Icon::FaMugSaucerSolid => {
+        FaIcon::FaMugSaucerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19047,7 +19047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaMusicSolid")]
-        Icon::FaMusicSolid => {
+        FaIcon::FaMusicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19059,7 +19059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNSolid")]
-        Icon::FaNSolid => {
+        FaIcon::FaNSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -19071,7 +19071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNairaSignSolid")]
-        Icon::FaNairaSignSolid => {
+        FaIcon::FaNairaSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19083,7 +19083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNapsterBrands")]
-        Icon::FaNapsterBrands => {
+        FaIcon::FaNapsterBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -19095,7 +19095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNeosBrands")]
-        Icon::FaNeosBrands => {
+        FaIcon::FaNeosBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19107,7 +19107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNetworkWiredSolid")]
-        Icon::FaNetworkWiredSolid => {
+        FaIcon::FaNetworkWiredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19119,7 +19119,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNeuterSolid")]
-        Icon::FaNeuterSolid => {
+        FaIcon::FaNeuterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -19131,7 +19131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNewspaperRegular")]
-        Icon::FaNewspaperRegular => {
+        FaIcon::FaNewspaperRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19143,7 +19143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNewspaperSolid")]
-        Icon::FaNewspaperSolid => {
+        FaIcon::FaNewspaperSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19155,7 +19155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNfcDirectionalBrands")]
-        Icon::FaNfcDirectionalBrands => {
+        FaIcon::FaNfcDirectionalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19167,7 +19167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNfcSymbolBrands")]
-        Icon::FaNfcSymbolBrands => {
+        FaIcon::FaNfcSymbolBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19179,7 +19179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNimblrBrands")]
-        Icon::FaNimblrBrands => {
+        FaIcon::FaNimblrBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -19191,7 +19191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNodeBrands")]
-        Icon::FaNodeBrands => {
+        FaIcon::FaNodeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19203,7 +19203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNodeJsBrands")]
-        Icon::FaNodeJsBrands => {
+        FaIcon::FaNodeJsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19215,7 +19215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNotEqualSolid")]
-        Icon::FaNotEqualSolid => {
+        FaIcon::FaNotEqualSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19227,7 +19227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNotdefSolid")]
-        Icon::FaNotdefSolid => {
+        FaIcon::FaNotdefSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -19239,7 +19239,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNoteStickyRegular")]
-        Icon::FaNoteStickyRegular => {
+        FaIcon::FaNoteStickyRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19251,7 +19251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNoteStickySolid")]
-        Icon::FaNoteStickySolid => {
+        FaIcon::FaNoteStickySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19263,7 +19263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNotesMedicalSolid")]
-        Icon::FaNotesMedicalSolid => {
+        FaIcon::FaNotesMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19275,7 +19275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNpmBrands")]
-        Icon::FaNpmBrands => {
+        FaIcon::FaNpmBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19287,7 +19287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNs8Brands")]
-        Icon::FaNs8Brands => {
+        FaIcon::FaNs8Brands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19299,7 +19299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaNutritionixBrands")]
-        Icon::FaNutritionixBrands => {
+        FaIcon::FaNutritionixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 400 512" fill = "currentColor" role =
@@ -19311,7 +19311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOSolid")]
-        Icon::FaOSolid => {
+        FaIcon::FaOSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19323,7 +19323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaObjectGroupRegular")]
-        Icon::FaObjectGroupRegular => {
+        FaIcon::FaObjectGroupRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19335,7 +19335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaObjectGroupSolid")]
-        Icon::FaObjectGroupSolid => {
+        FaIcon::FaObjectGroupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19347,7 +19347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaObjectUngroupRegular")]
-        Icon::FaObjectUngroupRegular => {
+        FaIcon::FaObjectUngroupRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19359,7 +19359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaObjectUngroupSolid")]
-        Icon::FaObjectUngroupSolid => {
+        FaIcon::FaObjectUngroupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19371,7 +19371,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOctopusDeployBrands")]
-        Icon::FaOctopusDeployBrands => {
+        FaIcon::FaOctopusDeployBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19383,7 +19383,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOdnoklassnikiBrands")]
-        Icon::FaOdnoklassnikiBrands => {
+        FaIcon::FaOdnoklassnikiBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -19395,7 +19395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOdyseeBrands")]
-        Icon::FaOdyseeBrands => {
+        FaIcon::FaOdyseeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19407,7 +19407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOilCanSolid")]
-        Icon::FaOilCanSolid => {
+        FaIcon::FaOilCanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19419,7 +19419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOilWellSolid")]
-        Icon::FaOilWellSolid => {
+        FaIcon::FaOilWellSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19431,7 +19431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOldRepublicBrands")]
-        Icon::FaOldRepublicBrands => {
+        FaIcon::FaOldRepublicBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -19443,7 +19443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOmSolid")]
-        Icon::FaOmSolid => {
+        FaIcon::FaOmSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19455,7 +19455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOpencartBrands")]
-        Icon::FaOpencartBrands => {
+        FaIcon::FaOpencartBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19467,7 +19467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOpenidBrands")]
-        Icon::FaOpenidBrands => {
+        FaIcon::FaOpenidBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19479,7 +19479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOperaBrands")]
-        Icon::FaOperaBrands => {
+        FaIcon::FaOperaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -19491,7 +19491,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOptinMonsterBrands")]
-        Icon::FaOptinMonsterBrands => {
+        FaIcon::FaOptinMonsterBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19503,7 +19503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOrcidBrands")]
-        Icon::FaOrcidBrands => {
+        FaIcon::FaOrcidBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19515,7 +19515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOsiBrands")]
-        Icon::FaOsiBrands => {
+        FaIcon::FaOsiBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19527,7 +19527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOtterSolid")]
-        Icon::FaOtterSolid => {
+        FaIcon::FaOtterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19539,7 +19539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaOutdentSolid")]
-        Icon::FaOutdentSolid => {
+        FaIcon::FaOutdentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19551,7 +19551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPSolid")]
-        Icon::FaPSolid => {
+        FaIcon::FaPSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -19563,7 +19563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPadletBrands")]
-        Icon::FaPadletBrands => {
+        FaIcon::FaPadletBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19575,7 +19575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPage4Brands")]
-        Icon::FaPage4Brands => {
+        FaIcon::FaPage4Brands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -19587,7 +19587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPagelinesBrands")]
-        Icon::FaPagelinesBrands => {
+        FaIcon::FaPagelinesBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -19599,7 +19599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPagerSolid")]
-        Icon::FaPagerSolid => {
+        FaIcon::FaPagerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19611,7 +19611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaintRollerSolid")]
-        Icon::FaPaintRollerSolid => {
+        FaIcon::FaPaintRollerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19623,7 +19623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaintbrushSolid")]
-        Icon::FaPaintbrushSolid => {
+        FaIcon::FaPaintbrushSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19635,7 +19635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaletteSolid")]
-        Icon::FaPaletteSolid => {
+        FaIcon::FaPaletteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19647,7 +19647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPalfedBrands")]
-        Icon::FaPalfedBrands => {
+        FaIcon::FaPalfedBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19659,7 +19659,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPalletSolid")]
-        Icon::FaPalletSolid => {
+        FaIcon::FaPalletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19671,7 +19671,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPanoramaSolid")]
-        Icon::FaPanoramaSolid => {
+        FaIcon::FaPanoramaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19683,7 +19683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaperPlaneRegular")]
-        Icon::FaPaperPlaneRegular => {
+        FaIcon::FaPaperPlaneRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19695,7 +19695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaperPlaneSolid")]
-        Icon::FaPaperPlaneSolid => {
+        FaIcon::FaPaperPlaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19707,7 +19707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaperclipSolid")]
-        Icon::FaPaperclipSolid => {
+        FaIcon::FaPaperclipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19719,7 +19719,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaParachuteBoxSolid")]
-        Icon::FaParachuteBoxSolid => {
+        FaIcon::FaParachuteBoxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19731,7 +19731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaParagraphSolid")]
-        Icon::FaParagraphSolid => {
+        FaIcon::FaParagraphSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19743,7 +19743,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPassportSolid")]
-        Icon::FaPassportSolid => {
+        FaIcon::FaPassportSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -19755,7 +19755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPasteRegular")]
-        Icon::FaPasteRegular => {
+        FaIcon::FaPasteRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19767,7 +19767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPasteSolid")]
-        Icon::FaPasteSolid => {
+        FaIcon::FaPasteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19779,7 +19779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPatreonBrands")]
-        Icon::FaPatreonBrands => {
+        FaIcon::FaPatreonBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19791,7 +19791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPauseSolid")]
-        Icon::FaPauseSolid => {
+        FaIcon::FaPauseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -19803,7 +19803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPawSolid")]
-        Icon::FaPawSolid => {
+        FaIcon::FaPawSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19815,7 +19815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPaypalBrands")]
-        Icon::FaPaypalBrands => {
+        FaIcon::FaPaypalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -19827,7 +19827,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeaceSolid")]
-        Icon::FaPeaceSolid => {
+        FaIcon::FaPeaceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19839,7 +19839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenClipSolid")]
-        Icon::FaPenClipSolid => {
+        FaIcon::FaPenClipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19851,7 +19851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenFancySolid")]
-        Icon::FaPenFancySolid => {
+        FaIcon::FaPenFancySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19863,7 +19863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenNibSolid")]
-        Icon::FaPenNibSolid => {
+        FaIcon::FaPenNibSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19875,7 +19875,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenRulerSolid")]
-        Icon::FaPenRulerSolid => {
+        FaIcon::FaPenRulerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19887,7 +19887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenSolid")]
-        Icon::FaPenSolid => {
+        FaIcon::FaPenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19899,7 +19899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenToSquareRegular")]
-        Icon::FaPenToSquareRegular => {
+        FaIcon::FaPenToSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19911,7 +19911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPenToSquareSolid")]
-        Icon::FaPenToSquareSolid => {
+        FaIcon::FaPenToSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19923,7 +19923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPencilSolid")]
-        Icon::FaPencilSolid => {
+        FaIcon::FaPencilSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -19935,7 +19935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeopleArrowsSolid")]
-        Icon::FaPeopleArrowsSolid => {
+        FaIcon::FaPeopleArrowsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19947,7 +19947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeopleCarryBoxSolid")]
-        Icon::FaPeopleCarryBoxSolid => {
+        FaIcon::FaPeopleCarryBoxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19959,7 +19959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeopleGroupSolid")]
-        Icon::FaPeopleGroupSolid => {
+        FaIcon::FaPeopleGroupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19971,7 +19971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeopleLineSolid")]
-        Icon::FaPeopleLineSolid => {
+        FaIcon::FaPeopleLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -19983,7 +19983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeoplePullingSolid")]
-        Icon::FaPeoplePullingSolid => {
+        FaIcon::FaPeoplePullingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -19995,7 +19995,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeopleRobberySolid")]
-        Icon::FaPeopleRobberySolid => {
+        FaIcon::FaPeopleRobberySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20007,7 +20007,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeopleRoofSolid")]
-        Icon::FaPeopleRoofSolid => {
+        FaIcon::FaPeopleRoofSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20019,7 +20019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPepperHotSolid")]
-        Icon::FaPepperHotSolid => {
+        FaIcon::FaPepperHotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20031,7 +20031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPerbyteBrands")]
-        Icon::FaPerbyteBrands => {
+        FaIcon::FaPerbyteBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20043,7 +20043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPercentSolid")]
-        Icon::FaPercentSolid => {
+        FaIcon::FaPercentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20055,7 +20055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPeriscopeBrands")]
-        Icon::FaPeriscopeBrands => {
+        FaIcon::FaPeriscopeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20067,7 +20067,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonArrowDownToLineSolid")]
-        Icon::FaPersonArrowDownToLineSolid => {
+        FaIcon::FaPersonArrowDownToLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20079,7 +20079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonArrowUpFromLineSolid")]
-        Icon::FaPersonArrowUpFromLineSolid => {
+        FaIcon::FaPersonArrowUpFromLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20091,7 +20091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonBikingSolid")]
-        Icon::FaPersonBikingSolid => {
+        FaIcon::FaPersonBikingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20103,7 +20103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonBoothSolid")]
-        Icon::FaPersonBoothSolid => {
+        FaIcon::FaPersonBoothSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20115,7 +20115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonBreastfeedingSolid")]
-        Icon::FaPersonBreastfeedingSolid => {
+        FaIcon::FaPersonBreastfeedingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20127,7 +20127,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonBurstSolid")]
-        Icon::FaPersonBurstSolid => {
+        FaIcon::FaPersonBurstSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20139,7 +20139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCaneSolid")]
-        Icon::FaPersonCaneSolid => {
+        FaIcon::FaPersonCaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20151,7 +20151,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonChalkboardSolid")]
-        Icon::FaPersonChalkboardSolid => {
+        FaIcon::FaPersonChalkboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20163,7 +20163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCircleCheckSolid")]
-        Icon::FaPersonCircleCheckSolid => {
+        FaIcon::FaPersonCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20175,7 +20175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCircleExclamationSolid")]
-        Icon::FaPersonCircleExclamationSolid => {
+        FaIcon::FaPersonCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20187,7 +20187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCircleMinusSolid")]
-        Icon::FaPersonCircleMinusSolid => {
+        FaIcon::FaPersonCircleMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20199,7 +20199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCirclePlusSolid")]
-        Icon::FaPersonCirclePlusSolid => {
+        FaIcon::FaPersonCirclePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20211,7 +20211,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCircleQuestionSolid")]
-        Icon::FaPersonCircleQuestionSolid => {
+        FaIcon::FaPersonCircleQuestionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20223,7 +20223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonCircleXmarkSolid")]
-        Icon::FaPersonCircleXmarkSolid => {
+        FaIcon::FaPersonCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20235,7 +20235,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonDiggingSolid")]
-        Icon::FaPersonDiggingSolid => {
+        FaIcon::FaPersonDiggingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20247,7 +20247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonDotsFromLineSolid")]
-        Icon::FaPersonDotsFromLineSolid => {
+        FaIcon::FaPersonDotsFromLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20259,7 +20259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonDressBurstSolid")]
-        Icon::FaPersonDressBurstSolid => {
+        FaIcon::FaPersonDressBurstSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20271,7 +20271,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonDressSolid")]
-        Icon::FaPersonDressSolid => {
+        FaIcon::FaPersonDressSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -20283,7 +20283,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonDrowningSolid")]
-        Icon::FaPersonDrowningSolid => {
+        FaIcon::FaPersonDrowningSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20295,7 +20295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonFallingBurstSolid")]
-        Icon::FaPersonFallingBurstSolid => {
+        FaIcon::FaPersonFallingBurstSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20307,7 +20307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonFallingSolid")]
-        Icon::FaPersonFallingSolid => {
+        FaIcon::FaPersonFallingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20319,7 +20319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonHalfDressSolid")]
-        Icon::FaPersonHalfDressSolid => {
+        FaIcon::FaPersonHalfDressSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -20331,7 +20331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonHarassingSolid")]
-        Icon::FaPersonHarassingSolid => {
+        FaIcon::FaPersonHarassingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20343,7 +20343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonHikingSolid")]
-        Icon::FaPersonHikingSolid => {
+        FaIcon::FaPersonHikingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20355,7 +20355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonMilitaryPointingSolid")]
-        Icon::FaPersonMilitaryPointingSolid => {
+        FaIcon::FaPersonMilitaryPointingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20367,7 +20367,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonMilitaryRifleSolid")]
-        Icon::FaPersonMilitaryRifleSolid => {
+        FaIcon::FaPersonMilitaryRifleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20379,7 +20379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonMilitaryToPersonSolid")]
-        Icon::FaPersonMilitaryToPersonSolid => {
+        FaIcon::FaPersonMilitaryToPersonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20391,7 +20391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonPrayingSolid")]
-        Icon::FaPersonPrayingSolid => {
+        FaIcon::FaPersonPrayingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20403,7 +20403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonPregnantSolid")]
-        Icon::FaPersonPregnantSolid => {
+        FaIcon::FaPersonPregnantSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -20415,7 +20415,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonRaysSolid")]
-        Icon::FaPersonRaysSolid => {
+        FaIcon::FaPersonRaysSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20427,7 +20427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonRifleSolid")]
-        Icon::FaPersonRifleSolid => {
+        FaIcon::FaPersonRifleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20439,7 +20439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonRunningSolid")]
-        Icon::FaPersonRunningSolid => {
+        FaIcon::FaPersonRunningSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20451,7 +20451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonShelterSolid")]
-        Icon::FaPersonShelterSolid => {
+        FaIcon::FaPersonShelterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20463,7 +20463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonSkatingSolid")]
-        Icon::FaPersonSkatingSolid => {
+        FaIcon::FaPersonSkatingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20475,7 +20475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonSkiingNordicSolid")]
-        Icon::FaPersonSkiingNordicSolid => {
+        FaIcon::FaPersonSkiingNordicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20487,7 +20487,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonSkiingSolid")]
-        Icon::FaPersonSkiingSolid => {
+        FaIcon::FaPersonSkiingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20499,7 +20499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonSnowboardingSolid")]
-        Icon::FaPersonSnowboardingSolid => {
+        FaIcon::FaPersonSnowboardingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20511,7 +20511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonSolid")]
-        Icon::FaPersonSolid => {
+        FaIcon::FaPersonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -20523,7 +20523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonSwimmingSolid")]
-        Icon::FaPersonSwimmingSolid => {
+        FaIcon::FaPersonSwimmingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20535,7 +20535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonThroughWindowSolid")]
-        Icon::FaPersonThroughWindowSolid => {
+        FaIcon::FaPersonThroughWindowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20547,7 +20547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonWalkingArrowLoopLeftSolid")]
-        Icon::FaPersonWalkingArrowLoopLeftSolid => {
+        FaIcon::FaPersonWalkingArrowLoopLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20559,7 +20559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonWalkingArrowRightSolid")]
-        Icon::FaPersonWalkingArrowRightSolid => {
+        FaIcon::FaPersonWalkingArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20571,7 +20571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonWalkingDashedLineArrowRightSolid")]
-        Icon::FaPersonWalkingDashedLineArrowRightSolid => {
+        FaIcon::FaPersonWalkingDashedLineArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20584,7 +20584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonWalkingLuggageSolid")]
-        Icon::FaPersonWalkingLuggageSolid => {
+        FaIcon::FaPersonWalkingLuggageSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20596,7 +20596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonWalkingSolid")]
-        Icon::FaPersonWalkingSolid => {
+        FaIcon::FaPersonWalkingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -20608,7 +20608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPersonWalkingWithCaneSolid")]
-        Icon::FaPersonWalkingWithCaneSolid => {
+        FaIcon::FaPersonWalkingWithCaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20620,7 +20620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPesetaSignSolid")]
-        Icon::FaPesetaSignSolid => {
+        FaIcon::FaPesetaSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20632,7 +20632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPesoSignSolid")]
-        Icon::FaPesoSignSolid => {
+        FaIcon::FaPesoSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20644,7 +20644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhabricatorBrands")]
-        Icon::FaPhabricatorBrands => {
+        FaIcon::FaPhabricatorBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -20656,7 +20656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhoenixFrameworkBrands")]
-        Icon::FaPhoenixFrameworkBrands => {
+        FaIcon::FaPhoenixFrameworkBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20668,7 +20668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhoenixSquadronBrands")]
-        Icon::FaPhoenixSquadronBrands => {
+        FaIcon::FaPhoenixSquadronBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20680,7 +20680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhoneFlipSolid")]
-        Icon::FaPhoneFlipSolid => {
+        FaIcon::FaPhoneFlipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20692,7 +20692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhoneSlashSolid")]
-        Icon::FaPhoneSlashSolid => {
+        FaIcon::FaPhoneSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20704,7 +20704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhoneSolid")]
-        Icon::FaPhoneSolid => {
+        FaIcon::FaPhoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20716,7 +20716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhoneVolumeSolid")]
-        Icon::FaPhoneVolumeSolid => {
+        FaIcon::FaPhoneVolumeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20728,7 +20728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhotoFilmSolid")]
-        Icon::FaPhotoFilmSolid => {
+        FaIcon::FaPhotoFilmSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20740,7 +20740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPhpBrands")]
-        Icon::FaPhpBrands => {
+        FaIcon::FaPhpBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20752,7 +20752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPiedPiperAltBrands")]
-        Icon::FaPiedPiperAltBrands => {
+        FaIcon::FaPiedPiperAltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20764,7 +20764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPiedPiperBrands")]
-        Icon::FaPiedPiperBrands => {
+        FaIcon::FaPiedPiperBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 480 512" fill = "currentColor" role =
@@ -20776,7 +20776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPiedPiperHatBrands")]
-        Icon::FaPiedPiperHatBrands => {
+        FaIcon::FaPiedPiperHatBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20788,7 +20788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPiedPiperPpBrands")]
-        Icon::FaPiedPiperPpBrands => {
+        FaIcon::FaPiedPiperPpBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -20800,7 +20800,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPiggyBankSolid")]
-        Icon::FaPiggyBankSolid => {
+        FaIcon::FaPiggyBankSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20812,7 +20812,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPillsSolid")]
-        Icon::FaPillsSolid => {
+        FaIcon::FaPillsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20824,7 +20824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPinterestBrands")]
-        Icon::FaPinterestBrands => {
+        FaIcon::FaPinterestBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -20836,7 +20836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPinterestPBrands")]
-        Icon::FaPinterestPBrands => {
+        FaIcon::FaPinterestPBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -20848,7 +20848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPixBrands")]
-        Icon::FaPixBrands => {
+        FaIcon::FaPixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20860,7 +20860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPizzaSliceSolid")]
-        Icon::FaPizzaSliceSolid => {
+        FaIcon::FaPizzaSliceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20872,7 +20872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaceOfWorshipSolid")]
-        Icon::FaPlaceOfWorshipSolid => {
+        FaIcon::FaPlaceOfWorshipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20884,7 +20884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneArrivalSolid")]
-        Icon::FaPlaneArrivalSolid => {
+        FaIcon::FaPlaneArrivalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20896,7 +20896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneCircleCheckSolid")]
-        Icon::FaPlaneCircleCheckSolid => {
+        FaIcon::FaPlaneCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20908,7 +20908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneCircleExclamationSolid")]
-        Icon::FaPlaneCircleExclamationSolid => {
+        FaIcon::FaPlaneCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20920,7 +20920,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneCircleXmarkSolid")]
-        Icon::FaPlaneCircleXmarkSolid => {
+        FaIcon::FaPlaneCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20932,7 +20932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneDepartureSolid")]
-        Icon::FaPlaneDepartureSolid => {
+        FaIcon::FaPlaneDepartureSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20944,7 +20944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneLockSolid")]
-        Icon::FaPlaneLockSolid => {
+        FaIcon::FaPlaneLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20956,7 +20956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneSlashSolid")]
-        Icon::FaPlaneSlashSolid => {
+        FaIcon::FaPlaneSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -20968,7 +20968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneSolid")]
-        Icon::FaPlaneSolid => {
+        FaIcon::FaPlaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -20980,7 +20980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaneUpSolid")]
-        Icon::FaPlaneUpSolid => {
+        FaIcon::FaPlaneUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -20992,7 +20992,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlantWiltSolid")]
-        Icon::FaPlantWiltSolid => {
+        FaIcon::FaPlantWiltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21004,7 +21004,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlateWheatSolid")]
-        Icon::FaPlateWheatSolid => {
+        FaIcon::FaPlateWheatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21016,7 +21016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaySolid")]
-        Icon::FaPlaySolid => {
+        FaIcon::FaPlaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21028,7 +21028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlaystationBrands")]
-        Icon::FaPlaystationBrands => {
+        FaIcon::FaPlaystationBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21040,7 +21040,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugCircleBoltSolid")]
-        Icon::FaPlugCircleBoltSolid => {
+        FaIcon::FaPlugCircleBoltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21052,7 +21052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugCircleCheckSolid")]
-        Icon::FaPlugCircleCheckSolid => {
+        FaIcon::FaPlugCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21064,7 +21064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugCircleExclamationSolid")]
-        Icon::FaPlugCircleExclamationSolid => {
+        FaIcon::FaPlugCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21076,7 +21076,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugCircleMinusSolid")]
-        Icon::FaPlugCircleMinusSolid => {
+        FaIcon::FaPlugCircleMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21088,7 +21088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugCirclePlusSolid")]
-        Icon::FaPlugCirclePlusSolid => {
+        FaIcon::FaPlugCirclePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21100,7 +21100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugCircleXmarkSolid")]
-        Icon::FaPlugCircleXmarkSolid => {
+        FaIcon::FaPlugCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21112,7 +21112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlugSolid")]
-        Icon::FaPlugSolid => {
+        FaIcon::FaPlugSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21124,7 +21124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlusMinusSolid")]
-        Icon::FaPlusMinusSolid => {
+        FaIcon::FaPlusMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21136,7 +21136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPlusSolid")]
-        Icon::FaPlusSolid => {
+        FaIcon::FaPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21148,7 +21148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPodcastSolid")]
-        Icon::FaPodcastSolid => {
+        FaIcon::FaPodcastSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21160,7 +21160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPooSolid")]
-        Icon::FaPooSolid => {
+        FaIcon::FaPooSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21172,7 +21172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPooStormSolid")]
-        Icon::FaPooStormSolid => {
+        FaIcon::FaPooStormSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21184,7 +21184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPoopSolid")]
-        Icon::FaPoopSolid => {
+        FaIcon::FaPoopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21196,7 +21196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPowerOffSolid")]
-        Icon::FaPowerOffSolid => {
+        FaIcon::FaPowerOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21208,7 +21208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPrescriptionBottleMedicalSolid")]
-        Icon::FaPrescriptionBottleMedicalSolid => {
+        FaIcon::FaPrescriptionBottleMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21220,7 +21220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPrescriptionBottleSolid")]
-        Icon::FaPrescriptionBottleSolid => {
+        FaIcon::FaPrescriptionBottleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21232,7 +21232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPrescriptionSolid")]
-        Icon::FaPrescriptionSolid => {
+        FaIcon::FaPrescriptionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21244,7 +21244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPrintSolid")]
-        Icon::FaPrintSolid => {
+        FaIcon::FaPrintSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21256,7 +21256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaProductHuntBrands")]
-        Icon::FaProductHuntBrands => {
+        FaIcon::FaProductHuntBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21268,7 +21268,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPumpMedicalSolid")]
-        Icon::FaPumpMedicalSolid => {
+        FaIcon::FaPumpMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21280,7 +21280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPumpSoapSolid")]
-        Icon::FaPumpSoapSolid => {
+        FaIcon::FaPumpSoapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21292,7 +21292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPushedBrands")]
-        Icon::FaPushedBrands => {
+        FaIcon::FaPushedBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 432 512" fill = "currentColor" role =
@@ -21304,7 +21304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPuzzlePieceSolid")]
-        Icon::FaPuzzlePieceSolid => {
+        FaIcon::FaPuzzlePieceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21316,7 +21316,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaPythonBrands")]
-        Icon::FaPythonBrands => {
+        FaIcon::FaPythonBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21328,7 +21328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQSolid")]
-        Icon::FaQSolid => {
+        FaIcon::FaQSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21340,7 +21340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQqBrands")]
-        Icon::FaQqBrands => {
+        FaIcon::FaQqBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21352,7 +21352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQrcodeSolid")]
-        Icon::FaQrcodeSolid => {
+        FaIcon::FaQrcodeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21364,7 +21364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQuestionSolid")]
-        Icon::FaQuestionSolid => {
+        FaIcon::FaQuestionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -21376,7 +21376,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQuinscapeBrands")]
-        Icon::FaQuinscapeBrands => {
+        FaIcon::FaQuinscapeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21388,7 +21388,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQuoraBrands")]
-        Icon::FaQuoraBrands => {
+        FaIcon::FaQuoraBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21400,7 +21400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQuoteLeftSolid")]
-        Icon::FaQuoteLeftSolid => {
+        FaIcon::FaQuoteLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21412,7 +21412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaQuoteRightSolid")]
-        Icon::FaQuoteRightSolid => {
+        FaIcon::FaQuoteRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21424,7 +21424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRProjectBrands")]
-        Icon::FaRProjectBrands => {
+        FaIcon::FaRProjectBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 581 512" fill = "currentColor" role =
@@ -21436,7 +21436,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRSolid")]
-        Icon::FaRSolid => {
+        FaIcon::FaRSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -21448,7 +21448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRadiationSolid")]
-        Icon::FaRadiationSolid => {
+        FaIcon::FaRadiationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21460,7 +21460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRadioSolid")]
-        Icon::FaRadioSolid => {
+        FaIcon::FaRadioSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21472,7 +21472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRainbowSolid")]
-        Icon::FaRainbowSolid => {
+        FaIcon::FaRainbowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21484,7 +21484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRankingStarSolid")]
-        Icon::FaRankingStarSolid => {
+        FaIcon::FaRankingStarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21496,7 +21496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRaspberryPiBrands")]
-        Icon::FaRaspberryPiBrands => {
+        FaIcon::FaRaspberryPiBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 407 512" fill = "currentColor" role =
@@ -21508,7 +21508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRavelryBrands")]
-        Icon::FaRavelryBrands => {
+        FaIcon::FaRavelryBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21520,7 +21520,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReactBrands")]
-        Icon::FaReactBrands => {
+        FaIcon::FaReactBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21532,7 +21532,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReacteuropeBrands")]
-        Icon::FaReacteuropeBrands => {
+        FaIcon::FaReacteuropeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21544,7 +21544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReadmeBrands")]
-        Icon::FaReadmeBrands => {
+        FaIcon::FaReadmeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21556,7 +21556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRebelBrands")]
-        Icon::FaRebelBrands => {
+        FaIcon::FaRebelBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21568,7 +21568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReceiptSolid")]
-        Icon::FaReceiptSolid => {
+        FaIcon::FaReceiptSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -21580,7 +21580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRecordVinylSolid")]
-        Icon::FaRecordVinylSolid => {
+        FaIcon::FaRecordVinylSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21592,7 +21592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRectangleAdSolid")]
-        Icon::FaRectangleAdSolid => {
+        FaIcon::FaRectangleAdSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21604,7 +21604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRectangleListRegular")]
-        Icon::FaRectangleListRegular => {
+        FaIcon::FaRectangleListRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21616,7 +21616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRectangleListSolid")]
-        Icon::FaRectangleListSolid => {
+        FaIcon::FaRectangleListSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21628,7 +21628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRectangleXmarkRegular")]
-        Icon::FaRectangleXmarkRegular => {
+        FaIcon::FaRectangleXmarkRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21640,7 +21640,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRectangleXmarkSolid")]
-        Icon::FaRectangleXmarkSolid => {
+        FaIcon::FaRectangleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21652,7 +21652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRecycleSolid")]
-        Icon::FaRecycleSolid => {
+        FaIcon::FaRecycleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21664,7 +21664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRedRiverBrands")]
-        Icon::FaRedRiverBrands => {
+        FaIcon::FaRedRiverBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21676,7 +21676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRedditAlienBrands")]
-        Icon::FaRedditAlienBrands => {
+        FaIcon::FaRedditAlienBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21688,7 +21688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRedditBrands")]
-        Icon::FaRedditBrands => {
+        FaIcon::FaRedditBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21700,7 +21700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRedhatBrands")]
-        Icon::FaRedhatBrands => {
+        FaIcon::FaRedhatBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21712,7 +21712,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRegisteredRegular")]
-        Icon::FaRegisteredRegular => {
+        FaIcon::FaRegisteredRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21724,7 +21724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRegisteredSolid")]
-        Icon::FaRegisteredSolid => {
+        FaIcon::FaRegisteredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21736,7 +21736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRenrenBrands")]
-        Icon::FaRenrenBrands => {
+        FaIcon::FaRenrenBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21748,7 +21748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRepeatSolid")]
-        Icon::FaRepeatSolid => {
+        FaIcon::FaRepeatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21760,7 +21760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReplyAllSolid")]
-        Icon::FaReplyAllSolid => {
+        FaIcon::FaReplyAllSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21772,7 +21772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReplySolid")]
-        Icon::FaReplySolid => {
+        FaIcon::FaReplySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21784,7 +21784,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaReplydBrands")]
-        Icon::FaReplydBrands => {
+        FaIcon::FaReplydBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21796,7 +21796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRepublicanSolid")]
-        Icon::FaRepublicanSolid => {
+        FaIcon::FaRepublicanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21808,7 +21808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaResearchgateBrands")]
-        Icon::FaResearchgateBrands => {
+        FaIcon::FaResearchgateBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21820,7 +21820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaResolvingBrands")]
-        Icon::FaResolvingBrands => {
+        FaIcon::FaResolvingBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -21832,7 +21832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRestroomSolid")]
-        Icon::FaRestroomSolid => {
+        FaIcon::FaRestroomSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21844,7 +21844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRetweetSolid")]
-        Icon::FaRetweetSolid => {
+        FaIcon::FaRetweetSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -21856,7 +21856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRevBrands")]
-        Icon::FaRevBrands => {
+        FaIcon::FaRevBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21868,7 +21868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRibbonSolid")]
-        Icon::FaRibbonSolid => {
+        FaIcon::FaRibbonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -21880,7 +21880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRightFromBracketSolid")]
-        Icon::FaRightFromBracketSolid => {
+        FaIcon::FaRightFromBracketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21892,7 +21892,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRightLeftSolid")]
-        Icon::FaRightLeftSolid => {
+        FaIcon::FaRightLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21904,7 +21904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRightLongSolid")]
-        Icon::FaRightLongSolid => {
+        FaIcon::FaRightLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21916,7 +21916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRightToBracketSolid")]
-        Icon::FaRightToBracketSolid => {
+        FaIcon::FaRightToBracketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21928,7 +21928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRingSolid")]
-        Icon::FaRingSolid => {
+        FaIcon::FaRingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -21940,7 +21940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadBarrierSolid")]
-        Icon::FaRoadBarrierSolid => {
+        FaIcon::FaRoadBarrierSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21952,7 +21952,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadBridgeSolid")]
-        Icon::FaRoadBridgeSolid => {
+        FaIcon::FaRoadBridgeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21964,7 +21964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadCircleCheckSolid")]
-        Icon::FaRoadCircleCheckSolid => {
+        FaIcon::FaRoadCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21976,7 +21976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadCircleExclamationSolid")]
-        Icon::FaRoadCircleExclamationSolid => {
+        FaIcon::FaRoadCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -21988,7 +21988,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadCircleXmarkSolid")]
-        Icon::FaRoadCircleXmarkSolid => {
+        FaIcon::FaRoadCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22000,7 +22000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadLockSolid")]
-        Icon::FaRoadLockSolid => {
+        FaIcon::FaRoadLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22012,7 +22012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadSolid")]
-        Icon::FaRoadSolid => {
+        FaIcon::FaRoadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22024,7 +22024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRoadSpikesSolid")]
-        Icon::FaRoadSpikesSolid => {
+        FaIcon::FaRoadSpikesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22036,7 +22036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRobotSolid")]
-        Icon::FaRobotSolid => {
+        FaIcon::FaRobotSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22048,7 +22048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRocketSolid")]
-        Icon::FaRocketSolid => {
+        FaIcon::FaRocketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22060,7 +22060,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRocketchatBrands")]
-        Icon::FaRocketchatBrands => {
+        FaIcon::FaRocketchatBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22072,7 +22072,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRockrmsBrands")]
-        Icon::FaRockrmsBrands => {
+        FaIcon::FaRockrmsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -22084,7 +22084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRotateLeftSolid")]
-        Icon::FaRotateLeftSolid => {
+        FaIcon::FaRotateLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22096,7 +22096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRotateRightSolid")]
-        Icon::FaRotateRightSolid => {
+        FaIcon::FaRotateRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22108,7 +22108,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRotateSolid")]
-        Icon::FaRotateSolid => {
+        FaIcon::FaRotateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22120,7 +22120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRouteSolid")]
-        Icon::FaRouteSolid => {
+        FaIcon::FaRouteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22132,7 +22132,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRssSolid")]
-        Icon::FaRssSolid => {
+        FaIcon::FaRssSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22144,7 +22144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRubleSignSolid")]
-        Icon::FaRubleSignSolid => {
+        FaIcon::FaRubleSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -22156,7 +22156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRugSolid")]
-        Icon::FaRugSolid => {
+        FaIcon::FaRugSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22168,7 +22168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRulerCombinedSolid")]
-        Icon::FaRulerCombinedSolid => {
+        FaIcon::FaRulerCombinedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22180,7 +22180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRulerHorizontalSolid")]
-        Icon::FaRulerHorizontalSolid => {
+        FaIcon::FaRulerHorizontalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22192,7 +22192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRulerSolid")]
-        Icon::FaRulerSolid => {
+        FaIcon::FaRulerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22204,7 +22204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRulerVerticalSolid")]
-        Icon::FaRulerVerticalSolid => {
+        FaIcon::FaRulerVerticalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -22216,7 +22216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRupeeSignSolid")]
-        Icon::FaRupeeSignSolid => {
+        FaIcon::FaRupeeSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22228,7 +22228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRupiahSignSolid")]
-        Icon::FaRupiahSignSolid => {
+        FaIcon::FaRupiahSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22240,7 +22240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaRustBrands")]
-        Icon::FaRustBrands => {
+        FaIcon::FaRustBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22252,7 +22252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSSolid")]
-        Icon::FaSSolid => {
+        FaIcon::FaSSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -22264,7 +22264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSackDollarSolid")]
-        Icon::FaSackDollarSolid => {
+        FaIcon::FaSackDollarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22276,7 +22276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSackXmarkSolid")]
-        Icon::FaSackXmarkSolid => {
+        FaIcon::FaSackXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22288,7 +22288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSafariBrands")]
-        Icon::FaSafariBrands => {
+        FaIcon::FaSafariBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22300,7 +22300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSailboatSolid")]
-        Icon::FaSailboatSolid => {
+        FaIcon::FaSailboatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22312,7 +22312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSalesforceBrands")]
-        Icon::FaSalesforceBrands => {
+        FaIcon::FaSalesforceBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22324,7 +22324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSassBrands")]
-        Icon::FaSassBrands => {
+        FaIcon::FaSassBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22336,7 +22336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSatelliteDishSolid")]
-        Icon::FaSatelliteDishSolid => {
+        FaIcon::FaSatelliteDishSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22348,7 +22348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSatelliteSolid")]
-        Icon::FaSatelliteSolid => {
+        FaIcon::FaSatelliteSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22360,7 +22360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScaleBalancedSolid")]
-        Icon::FaScaleBalancedSolid => {
+        FaIcon::FaScaleBalancedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22372,7 +22372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScaleUnbalancedFlipSolid")]
-        Icon::FaScaleUnbalancedFlipSolid => {
+        FaIcon::FaScaleUnbalancedFlipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22384,7 +22384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScaleUnbalancedSolid")]
-        Icon::FaScaleUnbalancedSolid => {
+        FaIcon::FaScaleUnbalancedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22396,7 +22396,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchlixBrands")]
-        Icon::FaSchlixBrands => {
+        FaIcon::FaSchlixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22408,7 +22408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchoolCircleCheckSolid")]
-        Icon::FaSchoolCircleCheckSolid => {
+        FaIcon::FaSchoolCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22420,7 +22420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchoolCircleExclamationSolid")]
-        Icon::FaSchoolCircleExclamationSolid => {
+        FaIcon::FaSchoolCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22432,7 +22432,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchoolCircleXmarkSolid")]
-        Icon::FaSchoolCircleXmarkSolid => {
+        FaIcon::FaSchoolCircleXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22444,7 +22444,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchoolFlagSolid")]
-        Icon::FaSchoolFlagSolid => {
+        FaIcon::FaSchoolFlagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22456,7 +22456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchoolLockSolid")]
-        Icon::FaSchoolLockSolid => {
+        FaIcon::FaSchoolLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22468,7 +22468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSchoolSolid")]
-        Icon::FaSchoolSolid => {
+        FaIcon::FaSchoolSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22480,7 +22480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScissorsSolid")]
-        Icon::FaScissorsSolid => {
+        FaIcon::FaScissorsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22492,7 +22492,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScreenpalBrands")]
-        Icon::FaScreenpalBrands => {
+        FaIcon::FaScreenpalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22504,7 +22504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScrewdriverSolid")]
-        Icon::FaScrewdriverSolid => {
+        FaIcon::FaScrewdriverSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22516,7 +22516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScrewdriverWrenchSolid")]
-        Icon::FaScrewdriverWrenchSolid => {
+        FaIcon::FaScrewdriverWrenchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22528,7 +22528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScribdBrands")]
-        Icon::FaScribdBrands => {
+        FaIcon::FaScribdBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -22540,7 +22540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScrollSolid")]
-        Icon::FaScrollSolid => {
+        FaIcon::FaScrollSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22552,7 +22552,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaScrollTorahSolid")]
-        Icon::FaScrollTorahSolid => {
+        FaIcon::FaScrollTorahSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22564,7 +22564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSdCardSolid")]
-        Icon::FaSdCardSolid => {
+        FaIcon::FaSdCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -22576,7 +22576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSearchenginBrands")]
-        Icon::FaSearchenginBrands => {
+        FaIcon::FaSearchenginBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 460 512" fill = "currentColor" role =
@@ -22588,7 +22588,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSectionSolid")]
-        Icon::FaSectionSolid => {
+        FaIcon::FaSectionSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -22600,7 +22600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSeedlingSolid")]
-        Icon::FaSeedlingSolid => {
+        FaIcon::FaSeedlingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22612,7 +22612,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSellcastBrands")]
-        Icon::FaSellcastBrands => {
+        FaIcon::FaSellcastBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22624,7 +22624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSellsyBrands")]
-        Icon::FaSellsyBrands => {
+        FaIcon::FaSellsyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22636,7 +22636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaServerSolid")]
-        Icon::FaServerSolid => {
+        FaIcon::FaServerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22648,7 +22648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaServicestackBrands")]
-        Icon::FaServicestackBrands => {
+        FaIcon::FaServicestackBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -22660,7 +22660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShapesSolid")]
-        Icon::FaShapesSolid => {
+        FaIcon::FaShapesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22672,7 +22672,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShareFromSquareRegular")]
-        Icon::FaShareFromSquareRegular => {
+        FaIcon::FaShareFromSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22684,7 +22684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShareFromSquareSolid")]
-        Icon::FaShareFromSquareSolid => {
+        FaIcon::FaShareFromSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22696,7 +22696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShareNodesSolid")]
-        Icon::FaShareNodesSolid => {
+        FaIcon::FaShareNodesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22708,7 +22708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShareSolid")]
-        Icon::FaShareSolid => {
+        FaIcon::FaShareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22720,7 +22720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSheetPlasticSolid")]
-        Icon::FaSheetPlasticSolid => {
+        FaIcon::FaSheetPlasticSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -22732,7 +22732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShekelSignSolid")]
-        Icon::FaShekelSignSolid => {
+        FaIcon::FaShekelSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22744,7 +22744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShieldCatSolid")]
-        Icon::FaShieldCatSolid => {
+        FaIcon::FaShieldCatSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22756,7 +22756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShieldDogSolid")]
-        Icon::FaShieldDogSolid => {
+        FaIcon::FaShieldDogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22768,7 +22768,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShieldHalvedSolid")]
-        Icon::FaShieldHalvedSolid => {
+        FaIcon::FaShieldHalvedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22780,7 +22780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShieldHeartSolid")]
-        Icon::FaShieldHeartSolid => {
+        FaIcon::FaShieldHeartSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22792,7 +22792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShieldSolid")]
-        Icon::FaShieldSolid => {
+        FaIcon::FaShieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22804,7 +22804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShieldVirusSolid")]
-        Icon::FaShieldVirusSolid => {
+        FaIcon::FaShieldVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22816,7 +22816,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShipSolid")]
-        Icon::FaShipSolid => {
+        FaIcon::FaShipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22828,7 +22828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShirtSolid")]
-        Icon::FaShirtSolid => {
+        FaIcon::FaShirtSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22840,7 +22840,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShirtsinbulkBrands")]
-        Icon::FaShirtsinbulkBrands => {
+        FaIcon::FaShirtsinbulkBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22852,7 +22852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShoePrintsSolid")]
-        Icon::FaShoePrintsSolid => {
+        FaIcon::FaShoePrintsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22864,7 +22864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShopLockSolid")]
-        Icon::FaShopLockSolid => {
+        FaIcon::FaShopLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22876,7 +22876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShopSlashSolid")]
-        Icon::FaShopSlashSolid => {
+        FaIcon::FaShopSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22888,7 +22888,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShopSolid")]
-        Icon::FaShopSolid => {
+        FaIcon::FaShopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22900,7 +22900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShopifyBrands")]
-        Icon::FaShopifyBrands => {
+        FaIcon::FaShopifyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -22912,7 +22912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShopwareBrands")]
-        Icon::FaShopwareBrands => {
+        FaIcon::FaShopwareBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22924,7 +22924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShowerSolid")]
-        Icon::FaShowerSolid => {
+        FaIcon::FaShowerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22936,7 +22936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShrimpSolid")]
-        Icon::FaShrimpSolid => {
+        FaIcon::FaShrimpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22948,7 +22948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShuffleSolid")]
-        Icon::FaShuffleSolid => {
+        FaIcon::FaShuffleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22960,7 +22960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaShuttleSpaceSolid")]
-        Icon::FaShuttleSpaceSolid => {
+        FaIcon::FaShuttleSpaceSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -22972,7 +22972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSignHangingSolid")]
-        Icon::FaSignHangingSolid => {
+        FaIcon::FaSignHangingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -22984,7 +22984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSignalSolid")]
-        Icon::FaSignalSolid => {
+        FaIcon::FaSignalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -22996,7 +22996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSignatureSolid")]
-        Icon::FaSignatureSolid => {
+        FaIcon::FaSignatureSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23008,7 +23008,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSignsPostSolid")]
-        Icon::FaSignsPostSolid => {
+        FaIcon::FaSignsPostSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23020,7 +23020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSimCardSolid")]
-        Icon::FaSimCardSolid => {
+        FaIcon::FaSimCardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -23032,7 +23032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSimplybuiltBrands")]
-        Icon::FaSimplybuiltBrands => {
+        FaIcon::FaSimplybuiltBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23044,7 +23044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSinkSolid")]
-        Icon::FaSinkSolid => {
+        FaIcon::FaSinkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23056,7 +23056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSistrixBrands")]
-        Icon::FaSistrixBrands => {
+        FaIcon::FaSistrixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23068,7 +23068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSitemapSolid")]
-        Icon::FaSitemapSolid => {
+        FaIcon::FaSitemapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -23080,7 +23080,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSithBrands")]
-        Icon::FaSithBrands => {
+        FaIcon::FaSithBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23092,7 +23092,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSitroxBrands")]
-        Icon::FaSitroxBrands => {
+        FaIcon::FaSitroxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23104,7 +23104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSketchBrands")]
-        Icon::FaSketchBrands => {
+        FaIcon::FaSketchBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23116,7 +23116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSkullCrossbonesSolid")]
-        Icon::FaSkullCrossbonesSolid => {
+        FaIcon::FaSkullCrossbonesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23128,7 +23128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSkullSolid")]
-        Icon::FaSkullSolid => {
+        FaIcon::FaSkullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23140,7 +23140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSkyatlasBrands")]
-        Icon::FaSkyatlasBrands => {
+        FaIcon::FaSkyatlasBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23152,7 +23152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSkypeBrands")]
-        Icon::FaSkypeBrands => {
+        FaIcon::FaSkypeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23164,7 +23164,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSlackBrands")]
-        Icon::FaSlackBrands => {
+        FaIcon::FaSlackBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23176,7 +23176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSlashSolid")]
-        Icon::FaSlashSolid => {
+        FaIcon::FaSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23188,7 +23188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSleighSolid")]
-        Icon::FaSleighSolid => {
+        FaIcon::FaSleighSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23200,7 +23200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSlidersSolid")]
-        Icon::FaSlidersSolid => {
+        FaIcon::FaSlidersSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23212,7 +23212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSlideshareBrands")]
-        Icon::FaSlideshareBrands => {
+        FaIcon::FaSlideshareBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23224,7 +23224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSmogSolid")]
-        Icon::FaSmogSolid => {
+        FaIcon::FaSmogSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23236,7 +23236,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSmokingSolid")]
-        Icon::FaSmokingSolid => {
+        FaIcon::FaSmokingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23248,7 +23248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSnapchatBrands")]
-        Icon::FaSnapchatBrands => {
+        FaIcon::FaSnapchatBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23260,7 +23260,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSnowflakeRegular")]
-        Icon::FaSnowflakeRegular => {
+        FaIcon::FaSnowflakeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23272,7 +23272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSnowflakeSolid")]
-        Icon::FaSnowflakeSolid => {
+        FaIcon::FaSnowflakeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23284,7 +23284,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSnowmanSolid")]
-        Icon::FaSnowmanSolid => {
+        FaIcon::FaSnowmanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23296,7 +23296,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSnowplowSolid")]
-        Icon::FaSnowplowSolid => {
+        FaIcon::FaSnowplowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23308,7 +23308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSoapSolid")]
-        Icon::FaSoapSolid => {
+        FaIcon::FaSoapSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23320,7 +23320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSocksSolid")]
-        Icon::FaSocksSolid => {
+        FaIcon::FaSocksSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23332,7 +23332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSolarPanelSolid")]
-        Icon::FaSolarPanelSolid => {
+        FaIcon::FaSolarPanelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23344,7 +23344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSortDownSolid")]
-        Icon::FaSortDownSolid => {
+        FaIcon::FaSortDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -23356,7 +23356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSortSolid")]
-        Icon::FaSortSolid => {
+        FaIcon::FaSortSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -23368,7 +23368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSortUpSolid")]
-        Icon::FaSortUpSolid => {
+        FaIcon::FaSortUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -23380,7 +23380,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSoundcloudBrands")]
-        Icon::FaSoundcloudBrands => {
+        FaIcon::FaSoundcloudBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23392,7 +23392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSourcetreeBrands")]
-        Icon::FaSourcetreeBrands => {
+        FaIcon::FaSourcetreeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23404,7 +23404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpaSolid")]
-        Icon::FaSpaSolid => {
+        FaIcon::FaSpaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -23416,7 +23416,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpaceAwesomeBrands")]
-        Icon::FaSpaceAwesomeBrands => {
+        FaIcon::FaSpaceAwesomeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23428,7 +23428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpaghettiMonsterFlyingSolid")]
-        Icon::FaSpaghettiMonsterFlyingSolid => {
+        FaIcon::FaSpaghettiMonsterFlyingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -23440,7 +23440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpeakapBrands")]
-        Icon::FaSpeakapBrands => {
+        FaIcon::FaSpeakapBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23452,7 +23452,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpeakerDeckBrands")]
-        Icon::FaSpeakerDeckBrands => {
+        FaIcon::FaSpeakerDeckBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23464,7 +23464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpellCheckSolid")]
-        Icon::FaSpellCheckSolid => {
+        FaIcon::FaSpellCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -23476,7 +23476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpiderSolid")]
-        Icon::FaSpiderSolid => {
+        FaIcon::FaSpiderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23488,7 +23488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpinnerSolid")]
-        Icon::FaSpinnerSolid => {
+        FaIcon::FaSpinnerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23500,7 +23500,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSplotchSolid")]
-        Icon::FaSplotchSolid => {
+        FaIcon::FaSplotchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23512,7 +23512,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpoonSolid")]
-        Icon::FaSpoonSolid => {
+        FaIcon::FaSpoonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23524,7 +23524,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSpotifyBrands")]
-        Icon::FaSpotifyBrands => {
+        FaIcon::FaSpotifyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -23536,7 +23536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSprayCanSolid")]
-        Icon::FaSprayCanSolid => {
+        FaIcon::FaSprayCanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23548,7 +23548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSprayCanSparklesSolid")]
-        Icon::FaSprayCanSparklesSolid => {
+        FaIcon::FaSprayCanSparklesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23560,7 +23560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareArrowUpRightSolid")]
-        Icon::FaSquareArrowUpRightSolid => {
+        FaIcon::FaSquareArrowUpRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23572,7 +23572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareBehanceBrands")]
-        Icon::FaSquareBehanceBrands => {
+        FaIcon::FaSquareBehanceBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23584,7 +23584,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretDownRegular")]
-        Icon::FaSquareCaretDownRegular => {
+        FaIcon::FaSquareCaretDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23596,7 +23596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretDownSolid")]
-        Icon::FaSquareCaretDownSolid => {
+        FaIcon::FaSquareCaretDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23608,7 +23608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretLeftRegular")]
-        Icon::FaSquareCaretLeftRegular => {
+        FaIcon::FaSquareCaretLeftRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23620,7 +23620,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretLeftSolid")]
-        Icon::FaSquareCaretLeftSolid => {
+        FaIcon::FaSquareCaretLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23632,7 +23632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretRightRegular")]
-        Icon::FaSquareCaretRightRegular => {
+        FaIcon::FaSquareCaretRightRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23644,7 +23644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretRightSolid")]
-        Icon::FaSquareCaretRightSolid => {
+        FaIcon::FaSquareCaretRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23656,7 +23656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretUpRegular")]
-        Icon::FaSquareCaretUpRegular => {
+        FaIcon::FaSquareCaretUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23668,7 +23668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCaretUpSolid")]
-        Icon::FaSquareCaretUpSolid => {
+        FaIcon::FaSquareCaretUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23680,7 +23680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCheckRegular")]
-        Icon::FaSquareCheckRegular => {
+        FaIcon::FaSquareCheckRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23692,7 +23692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareCheckSolid")]
-        Icon::FaSquareCheckSolid => {
+        FaIcon::FaSquareCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23704,7 +23704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareDribbbleBrands")]
-        Icon::FaSquareDribbbleBrands => {
+        FaIcon::FaSquareDribbbleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23716,7 +23716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareEnvelopeSolid")]
-        Icon::FaSquareEnvelopeSolid => {
+        FaIcon::FaSquareEnvelopeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23728,7 +23728,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareFacebookBrands")]
-        Icon::FaSquareFacebookBrands => {
+        FaIcon::FaSquareFacebookBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23740,7 +23740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareFontAwesomeBrands")]
-        Icon::FaSquareFontAwesomeBrands => {
+        FaIcon::FaSquareFontAwesomeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23752,7 +23752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareFontAwesomeStrokeBrands")]
-        Icon::FaSquareFontAwesomeStrokeBrands => {
+        FaIcon::FaSquareFontAwesomeStrokeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23764,7 +23764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareFullRegular")]
-        Icon::FaSquareFullRegular => {
+        FaIcon::FaSquareFullRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23775,7 +23775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareFullSolid")]
-        Icon::FaSquareFullSolid => {
+        FaIcon::FaSquareFullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -23786,7 +23786,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareGitBrands")]
-        Icon::FaSquareGitBrands => {
+        FaIcon::FaSquareGitBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23798,7 +23798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareGithubBrands")]
-        Icon::FaSquareGithubBrands => {
+        FaIcon::FaSquareGithubBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23810,7 +23810,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareGitlabBrands")]
-        Icon::FaSquareGitlabBrands => {
+        FaIcon::FaSquareGitlabBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23822,7 +23822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareGooglePlusBrands")]
-        Icon::FaSquareGooglePlusBrands => {
+        FaIcon::FaSquareGooglePlusBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23834,7 +23834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareHSolid")]
-        Icon::FaSquareHSolid => {
+        FaIcon::FaSquareHSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23846,7 +23846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareHackerNewsBrands")]
-        Icon::FaSquareHackerNewsBrands => {
+        FaIcon::FaSquareHackerNewsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23858,7 +23858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareInstagramBrands")]
-        Icon::FaSquareInstagramBrands => {
+        FaIcon::FaSquareInstagramBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23870,7 +23870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareJsBrands")]
-        Icon::FaSquareJsBrands => {
+        FaIcon::FaSquareJsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23882,7 +23882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareLastfmBrands")]
-        Icon::FaSquareLastfmBrands => {
+        FaIcon::FaSquareLastfmBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23894,7 +23894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareMinusRegular")]
-        Icon::FaSquareMinusRegular => {
+        FaIcon::FaSquareMinusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23906,7 +23906,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareMinusSolid")]
-        Icon::FaSquareMinusSolid => {
+        FaIcon::FaSquareMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23918,7 +23918,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareNfiSolid")]
-        Icon::FaSquareNfiSolid => {
+        FaIcon::FaSquareNfiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23930,7 +23930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareOdnoklassnikiBrands")]
-        Icon::FaSquareOdnoklassnikiBrands => {
+        FaIcon::FaSquareOdnoklassnikiBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23942,7 +23942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareParkingSolid")]
-        Icon::FaSquareParkingSolid => {
+        FaIcon::FaSquareParkingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23954,7 +23954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePenSolid")]
-        Icon::FaSquarePenSolid => {
+        FaIcon::FaSquarePenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23966,7 +23966,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePersonConfinedSolid")]
-        Icon::FaSquarePersonConfinedSolid => {
+        FaIcon::FaSquarePersonConfinedSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23978,7 +23978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePhoneFlipSolid")]
-        Icon::FaSquarePhoneFlipSolid => {
+        FaIcon::FaSquarePhoneFlipSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -23990,7 +23990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePhoneSolid")]
-        Icon::FaSquarePhoneSolid => {
+        FaIcon::FaSquarePhoneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24002,7 +24002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePiedPiperBrands")]
-        Icon::FaSquarePiedPiperBrands => {
+        FaIcon::FaSquarePiedPiperBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24014,7 +24014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePinterestBrands")]
-        Icon::FaSquarePinterestBrands => {
+        FaIcon::FaSquarePinterestBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24026,7 +24026,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePlusRegular")]
-        Icon::FaSquarePlusRegular => {
+        FaIcon::FaSquarePlusRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24038,7 +24038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePlusSolid")]
-        Icon::FaSquarePlusSolid => {
+        FaIcon::FaSquarePlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24050,7 +24050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePollHorizontalSolid")]
-        Icon::FaSquarePollHorizontalSolid => {
+        FaIcon::FaSquarePollHorizontalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24062,7 +24062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarePollVerticalSolid")]
-        Icon::FaSquarePollVerticalSolid => {
+        FaIcon::FaSquarePollVerticalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24074,7 +24074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareRedditBrands")]
-        Icon::FaSquareRedditBrands => {
+        FaIcon::FaSquareRedditBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24086,7 +24086,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareRegular")]
-        Icon::FaSquareRegular => {
+        FaIcon::FaSquareRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24098,7 +24098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareRootVariableSolid")]
-        Icon::FaSquareRootVariableSolid => {
+        FaIcon::FaSquareRootVariableSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24110,7 +24110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareRssSolid")]
-        Icon::FaSquareRssSolid => {
+        FaIcon::FaSquareRssSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24122,7 +24122,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareShareNodesSolid")]
-        Icon::FaSquareShareNodesSolid => {
+        FaIcon::FaSquareShareNodesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24134,7 +24134,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareSnapchatBrands")]
-        Icon::FaSquareSnapchatBrands => {
+        FaIcon::FaSquareSnapchatBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24146,7 +24146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareSolid")]
-        Icon::FaSquareSolid => {
+        FaIcon::FaSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24158,7 +24158,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareSteamBrands")]
-        Icon::FaSquareSteamBrands => {
+        FaIcon::FaSquareSteamBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24170,7 +24170,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareTumblrBrands")]
-        Icon::FaSquareTumblrBrands => {
+        FaIcon::FaSquareTumblrBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24182,7 +24182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareTwitterBrands")]
-        Icon::FaSquareTwitterBrands => {
+        FaIcon::FaSquareTwitterBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24194,7 +24194,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareUpRightSolid")]
-        Icon::FaSquareUpRightSolid => {
+        FaIcon::FaSquareUpRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24206,7 +24206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareViadeoBrands")]
-        Icon::FaSquareViadeoBrands => {
+        FaIcon::FaSquareViadeoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24218,7 +24218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareVimeoBrands")]
-        Icon::FaSquareVimeoBrands => {
+        FaIcon::FaSquareVimeoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24230,7 +24230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareVirusSolid")]
-        Icon::FaSquareVirusSolid => {
+        FaIcon::FaSquareVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24242,7 +24242,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareWhatsappBrands")]
-        Icon::FaSquareWhatsappBrands => {
+        FaIcon::FaSquareWhatsappBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24254,7 +24254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareXingBrands")]
-        Icon::FaSquareXingBrands => {
+        FaIcon::FaSquareXingBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24266,7 +24266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareXmarkSolid")]
-        Icon::FaSquareXmarkSolid => {
+        FaIcon::FaSquareXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24278,7 +24278,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquareYoutubeBrands")]
-        Icon::FaSquareYoutubeBrands => {
+        FaIcon::FaSquareYoutubeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24290,7 +24290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSquarespaceBrands")]
-        Icon::FaSquarespaceBrands => {
+        FaIcon::FaSquarespaceBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24302,7 +24302,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStackExchangeBrands")]
-        Icon::FaStackExchangeBrands => {
+        FaIcon::FaStackExchangeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24314,7 +24314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStackOverflowBrands")]
-        Icon::FaStackOverflowBrands => {
+        FaIcon::FaStackOverflowBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24326,7 +24326,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStackpathBrands")]
-        Icon::FaStackpathBrands => {
+        FaIcon::FaStackpathBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24338,7 +24338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStaffSnakeSolid")]
-        Icon::FaStaffSnakeSolid => {
+        FaIcon::FaStaffSnakeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24350,7 +24350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStairsSolid")]
-        Icon::FaStairsSolid => {
+        FaIcon::FaStairsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24362,7 +24362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStampSolid")]
-        Icon::FaStampSolid => {
+        FaIcon::FaStampSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24374,7 +24374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStaplerSolid")]
-        Icon::FaStaplerSolid => {
+        FaIcon::FaStaplerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24386,7 +24386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarAndCrescentSolid")]
-        Icon::FaStarAndCrescentSolid => {
+        FaIcon::FaStarAndCrescentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24398,7 +24398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarHalfRegular")]
-        Icon::FaStarHalfRegular => {
+        FaIcon::FaStarHalfRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24410,7 +24410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarHalfSolid")]
-        Icon::FaStarHalfSolid => {
+        FaIcon::FaStarHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24422,7 +24422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarHalfStrokeRegular")]
-        Icon::FaStarHalfStrokeRegular => {
+        FaIcon::FaStarHalfStrokeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24434,7 +24434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarHalfStrokeSolid")]
-        Icon::FaStarHalfStrokeSolid => {
+        FaIcon::FaStarHalfStrokeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24446,7 +24446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarOfDavidSolid")]
-        Icon::FaStarOfDavidSolid => {
+        FaIcon::FaStarOfDavidSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24458,7 +24458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarOfLifeSolid")]
-        Icon::FaStarOfLifeSolid => {
+        FaIcon::FaStarOfLifeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24470,7 +24470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarRegular")]
-        Icon::FaStarRegular => {
+        FaIcon::FaStarRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24482,7 +24482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStarSolid")]
-        Icon::FaStarSolid => {
+        FaIcon::FaStarSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24494,7 +24494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStaylinkedBrands")]
-        Icon::FaStaylinkedBrands => {
+        FaIcon::FaStaylinkedBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 440 512" fill = "currentColor" role =
@@ -24506,7 +24506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSteamBrands")]
-        Icon::FaSteamBrands => {
+        FaIcon::FaSteamBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -24518,7 +24518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSteamSymbolBrands")]
-        Icon::FaSteamSymbolBrands => {
+        FaIcon::FaSteamSymbolBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24530,7 +24530,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSterlingSignSolid")]
-        Icon::FaSterlingSignSolid => {
+        FaIcon::FaSterlingSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -24542,7 +24542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStethoscopeSolid")]
-        Icon::FaStethoscopeSolid => {
+        FaIcon::FaStethoscopeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24554,7 +24554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStickerMuleBrands")]
-        Icon::FaStickerMuleBrands => {
+        FaIcon::FaStickerMuleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24566,7 +24566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStopSolid")]
-        Icon::FaStopSolid => {
+        FaIcon::FaStopSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24578,7 +24578,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStopwatch20Solid")]
-        Icon::FaStopwatch20Solid => {
+        FaIcon::FaStopwatch20Solid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24590,7 +24590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStopwatchSolid")]
-        Icon::FaStopwatchSolid => {
+        FaIcon::FaStopwatchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24602,7 +24602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStoreSlashSolid")]
-        Icon::FaStoreSlashSolid => {
+        FaIcon::FaStoreSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24614,7 +24614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStoreSolid")]
-        Icon::FaStoreSolid => {
+        FaIcon::FaStoreSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -24626,7 +24626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStravaBrands")]
-        Icon::FaStravaBrands => {
+        FaIcon::FaStravaBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24638,7 +24638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStreetViewSolid")]
-        Icon::FaStreetViewSolid => {
+        FaIcon::FaStreetViewSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24650,7 +24650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStrikethroughSolid")]
-        Icon::FaStrikethroughSolid => {
+        FaIcon::FaStrikethroughSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24662,7 +24662,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStripeBrands")]
-        Icon::FaStripeBrands => {
+        FaIcon::FaStripeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24674,7 +24674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStripeSBrands")]
-        Icon::FaStripeSBrands => {
+        FaIcon::FaStripeSBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24686,7 +24686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStroopwafelSolid")]
-        Icon::FaStroopwafelSolid => {
+        FaIcon::FaStroopwafelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24698,7 +24698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStubberBrands")]
-        Icon::FaStubberBrands => {
+        FaIcon::FaStubberBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24710,7 +24710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStudiovinariBrands")]
-        Icon::FaStudiovinariBrands => {
+        FaIcon::FaStudiovinariBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24722,7 +24722,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStumbleuponBrands")]
-        Icon::FaStumbleuponBrands => {
+        FaIcon::FaStumbleuponBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24734,7 +24734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaStumbleuponCircleBrands")]
-        Icon::FaStumbleuponCircleBrands => {
+        FaIcon::FaStumbleuponCircleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -24746,7 +24746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSubscriptSolid")]
-        Icon::FaSubscriptSolid => {
+        FaIcon::FaSubscriptSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24758,7 +24758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuitcaseMedicalSolid")]
-        Icon::FaSuitcaseMedicalSolid => {
+        FaIcon::FaSuitcaseMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24770,7 +24770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuitcaseRollingSolid")]
-        Icon::FaSuitcaseRollingSolid => {
+        FaIcon::FaSuitcaseRollingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24782,7 +24782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuitcaseSolid")]
-        Icon::FaSuitcaseSolid => {
+        FaIcon::FaSuitcaseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24794,7 +24794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSunPlantWiltSolid")]
-        Icon::FaSunPlantWiltSolid => {
+        FaIcon::FaSunPlantWiltSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24806,7 +24806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSunRegular")]
-        Icon::FaSunRegular => {
+        FaIcon::FaSunRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24818,7 +24818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSunSolid")]
-        Icon::FaSunSolid => {
+        FaIcon::FaSunSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24830,7 +24830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuperpowersBrands")]
-        Icon::FaSuperpowersBrands => {
+        FaIcon::FaSuperpowersBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24842,7 +24842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuperscriptSolid")]
-        Icon::FaSuperscriptSolid => {
+        FaIcon::FaSuperscriptSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24854,7 +24854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuppleBrands")]
-        Icon::FaSuppleBrands => {
+        FaIcon::FaSuppleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24866,7 +24866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSuseBrands")]
-        Icon::FaSuseBrands => {
+        FaIcon::FaSuseBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24878,7 +24878,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSwatchbookSolid")]
-        Icon::FaSwatchbookSolid => {
+        FaIcon::FaSwatchbookSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24890,7 +24890,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSwiftBrands")]
-        Icon::FaSwiftBrands => {
+        FaIcon::FaSwiftBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -24902,7 +24902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSymfonyBrands")]
-        Icon::FaSymfonyBrands => {
+        FaIcon::FaSymfonyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24914,7 +24914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSynagogueSolid")]
-        Icon::FaSynagogueSolid => {
+        FaIcon::FaSynagogueSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -24926,7 +24926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaSyringeSolid")]
-        Icon::FaSyringeSolid => {
+        FaIcon::FaSyringeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24938,7 +24938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTSolid")]
-        Icon::FaTSolid => {
+        FaIcon::FaTSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -24950,7 +24950,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTableCellsLargeSolid")]
-        Icon::FaTableCellsLargeSolid => {
+        FaIcon::FaTableCellsLargeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24962,7 +24962,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTableCellsSolid")]
-        Icon::FaTableCellsSolid => {
+        FaIcon::FaTableCellsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24974,7 +24974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTableColumnsSolid")]
-        Icon::FaTableColumnsSolid => {
+        FaIcon::FaTableColumnsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24986,7 +24986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTableListSolid")]
-        Icon::FaTableListSolid => {
+        FaIcon::FaTableListSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -24998,7 +24998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTableSolid")]
-        Icon::FaTableSolid => {
+        FaIcon::FaTableSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25010,7 +25010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTableTennisPaddleBallSolid")]
-        Icon::FaTableTennisPaddleBallSolid => {
+        FaIcon::FaTableTennisPaddleBallSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25022,7 +25022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTabletButtonSolid")]
-        Icon::FaTabletButtonSolid => {
+        FaIcon::FaTabletButtonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25034,7 +25034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTabletScreenButtonSolid")]
-        Icon::FaTabletScreenButtonSolid => {
+        FaIcon::FaTabletScreenButtonSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25046,7 +25046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTabletSolid")]
-        Icon::FaTabletSolid => {
+        FaIcon::FaTabletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25058,7 +25058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTabletsSolid")]
-        Icon::FaTabletsSolid => {
+        FaIcon::FaTabletsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25070,7 +25070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTachographDigitalSolid")]
-        Icon::FaTachographDigitalSolid => {
+        FaIcon::FaTachographDigitalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25082,7 +25082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTagSolid")]
-        Icon::FaTagSolid => {
+        FaIcon::FaTagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25094,7 +25094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTagsSolid")]
-        Icon::FaTagsSolid => {
+        FaIcon::FaTagsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25106,7 +25106,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTapeSolid")]
-        Icon::FaTapeSolid => {
+        FaIcon::FaTapeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25118,7 +25118,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTarpDropletSolid")]
-        Icon::FaTarpDropletSolid => {
+        FaIcon::FaTarpDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25130,7 +25130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTarpSolid")]
-        Icon::FaTarpSolid => {
+        FaIcon::FaTarpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25142,7 +25142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTaxiSolid")]
-        Icon::FaTaxiSolid => {
+        FaIcon::FaTaxiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25154,7 +25154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTeamspeakBrands")]
-        Icon::FaTeamspeakBrands => {
+        FaIcon::FaTeamspeakBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25166,7 +25166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTeethOpenSolid")]
-        Icon::FaTeethOpenSolid => {
+        FaIcon::FaTeethOpenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25178,7 +25178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTeethSolid")]
-        Icon::FaTeethSolid => {
+        FaIcon::FaTeethSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25190,7 +25190,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTelegramBrands")]
-        Icon::FaTelegramBrands => {
+        FaIcon::FaTelegramBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -25202,7 +25202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureArrowDownSolid")]
-        Icon::FaTemperatureArrowDownSolid => {
+        FaIcon::FaTemperatureArrowDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25214,7 +25214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureArrowUpSolid")]
-        Icon::FaTemperatureArrowUpSolid => {
+        FaIcon::FaTemperatureArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25226,7 +25226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureEmptySolid")]
-        Icon::FaTemperatureEmptySolid => {
+        FaIcon::FaTemperatureEmptySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25238,7 +25238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureFullSolid")]
-        Icon::FaTemperatureFullSolid => {
+        FaIcon::FaTemperatureFullSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25250,7 +25250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureHalfSolid")]
-        Icon::FaTemperatureHalfSolid => {
+        FaIcon::FaTemperatureHalfSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25262,7 +25262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureHighSolid")]
-        Icon::FaTemperatureHighSolid => {
+        FaIcon::FaTemperatureHighSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25274,7 +25274,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureLowSolid")]
-        Icon::FaTemperatureLowSolid => {
+        FaIcon::FaTemperatureLowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25286,7 +25286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureQuarterSolid")]
-        Icon::FaTemperatureQuarterSolid => {
+        FaIcon::FaTemperatureQuarterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25298,7 +25298,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTemperatureThreeQuartersSolid")]
-        Icon::FaTemperatureThreeQuartersSolid => {
+        FaIcon::FaTemperatureThreeQuartersSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25310,7 +25310,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTencentWeiboBrands")]
-        Icon::FaTencentWeiboBrands => {
+        FaIcon::FaTencentWeiboBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -25322,7 +25322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTengeSignSolid")]
-        Icon::FaTengeSignSolid => {
+        FaIcon::FaTengeSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -25334,7 +25334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTentArrowDownToLineSolid")]
-        Icon::FaTentArrowDownToLineSolid => {
+        FaIcon::FaTentArrowDownToLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25346,7 +25346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTentArrowLeftRightSolid")]
-        Icon::FaTentArrowLeftRightSolid => {
+        FaIcon::FaTentArrowLeftRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25358,7 +25358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTentArrowTurnLeftSolid")]
-        Icon::FaTentArrowTurnLeftSolid => {
+        FaIcon::FaTentArrowTurnLeftSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25370,7 +25370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTentArrowsDownSolid")]
-        Icon::FaTentArrowsDownSolid => {
+        FaIcon::FaTentArrowsDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25382,7 +25382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTentSolid")]
-        Icon::FaTentSolid => {
+        FaIcon::FaTentSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25394,7 +25394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTentsSolid")]
-        Icon::FaTentsSolid => {
+        FaIcon::FaTentsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25406,7 +25406,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTerminalSolid")]
-        Icon::FaTerminalSolid => {
+        FaIcon::FaTerminalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25418,7 +25418,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTextHeightSolid")]
-        Icon::FaTextHeightSolid => {
+        FaIcon::FaTextHeightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25430,7 +25430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTextSlashSolid")]
-        Icon::FaTextSlashSolid => {
+        FaIcon::FaTextSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25442,7 +25442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTextWidthSolid")]
-        Icon::FaTextWidthSolid => {
+        FaIcon::FaTextWidthSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25454,7 +25454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTheRedYetiBrands")]
-        Icon::FaTheRedYetiBrands => {
+        FaIcon::FaTheRedYetiBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25466,7 +25466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThemecoBrands")]
-        Icon::FaThemecoBrands => {
+        FaIcon::FaThemecoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25478,7 +25478,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThemeisleBrands")]
-        Icon::FaThemeisleBrands => {
+        FaIcon::FaThemeisleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25490,7 +25490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThermometerSolid")]
-        Icon::FaThermometerSolid => {
+        FaIcon::FaThermometerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25502,7 +25502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThinkPeaksBrands")]
-        Icon::FaThinkPeaksBrands => {
+        FaIcon::FaThinkPeaksBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25514,7 +25514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThumbsDownRegular")]
-        Icon::FaThumbsDownRegular => {
+        FaIcon::FaThumbsDownRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25526,7 +25526,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThumbsDownSolid")]
-        Icon::FaThumbsDownSolid => {
+        FaIcon::FaThumbsDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25538,7 +25538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThumbsUpRegular")]
-        Icon::FaThumbsUpRegular => {
+        FaIcon::FaThumbsUpRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25550,7 +25550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThumbsUpSolid")]
-        Icon::FaThumbsUpSolid => {
+        FaIcon::FaThumbsUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25562,7 +25562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaThumbtackSolid")]
-        Icon::FaThumbtackSolid => {
+        FaIcon::FaThumbtackSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -25574,7 +25574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTicketSimpleSolid")]
-        Icon::FaTicketSimpleSolid => {
+        FaIcon::FaTicketSimpleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25586,7 +25586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTicketSolid")]
-        Icon::FaTicketSolid => {
+        FaIcon::FaTicketSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25598,7 +25598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTiktokBrands")]
-        Icon::FaTiktokBrands => {
+        FaIcon::FaTiktokBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25610,7 +25610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTimelineSolid")]
-        Icon::FaTimelineSolid => {
+        FaIcon::FaTimelineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25622,7 +25622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToggleOffSolid")]
-        Icon::FaToggleOffSolid => {
+        FaIcon::FaToggleOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25634,7 +25634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToggleOnSolid")]
-        Icon::FaToggleOnSolid => {
+        FaIcon::FaToggleOnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25646,7 +25646,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToiletPaperSlashSolid")]
-        Icon::FaToiletPaperSlashSolid => {
+        FaIcon::FaToiletPaperSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25658,7 +25658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToiletPaperSolid")]
-        Icon::FaToiletPaperSolid => {
+        FaIcon::FaToiletPaperSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25670,7 +25670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToiletPortableSolid")]
-        Icon::FaToiletPortableSolid => {
+        FaIcon::FaToiletPortableSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25682,7 +25682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToiletSolid")]
-        Icon::FaToiletSolid => {
+        FaIcon::FaToiletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25694,7 +25694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToiletsPortableSolid")]
-        Icon::FaToiletsPortableSolid => {
+        FaIcon::FaToiletsPortableSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25706,7 +25706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToolboxSolid")]
-        Icon::FaToolboxSolid => {
+        FaIcon::FaToolboxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25718,7 +25718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToothSolid")]
-        Icon::FaToothSolid => {
+        FaIcon::FaToothSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -25730,7 +25730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaToriiGateSolid")]
-        Icon::FaToriiGateSolid => {
+        FaIcon::FaToriiGateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25742,7 +25742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTornadoSolid")]
-        Icon::FaTornadoSolid => {
+        FaIcon::FaTornadoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25754,7 +25754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTowerBroadcastSolid")]
-        Icon::FaTowerBroadcastSolid => {
+        FaIcon::FaTowerBroadcastSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25766,7 +25766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTowerCellSolid")]
-        Icon::FaTowerCellSolid => {
+        FaIcon::FaTowerCellSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -25778,7 +25778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTowerObservationSolid")]
-        Icon::FaTowerObservationSolid => {
+        FaIcon::FaTowerObservationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25790,7 +25790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTractorSolid")]
-        Icon::FaTractorSolid => {
+        FaIcon::FaTractorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25802,7 +25802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTradeFederationBrands")]
-        Icon::FaTradeFederationBrands => {
+        FaIcon::FaTradeFederationBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -25814,7 +25814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrademarkSolid")]
-        Icon::FaTrademarkSolid => {
+        FaIcon::FaTrademarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25826,7 +25826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrafficLightSolid")]
-        Icon::FaTrafficLightSolid => {
+        FaIcon::FaTrafficLightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -25838,7 +25838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrailerSolid")]
-        Icon::FaTrailerSolid => {
+        FaIcon::FaTrailerSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25850,7 +25850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrainSolid")]
-        Icon::FaTrainSolid => {
+        FaIcon::FaTrainSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25862,7 +25862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrainSubwaySolid")]
-        Icon::FaTrainSubwaySolid => {
+        FaIcon::FaTrainSubwaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25874,7 +25874,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrainTramSolid")]
-        Icon::FaTrainTramSolid => {
+        FaIcon::FaTrainTramSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25886,7 +25886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTransgenderSolid")]
-        Icon::FaTransgenderSolid => {
+        FaIcon::FaTransgenderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -25898,7 +25898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrashArrowUpSolid")]
-        Icon::FaTrashArrowUpSolid => {
+        FaIcon::FaTrashArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25910,7 +25910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrashCanArrowUpSolid")]
-        Icon::FaTrashCanArrowUpSolid => {
+        FaIcon::FaTrashCanArrowUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25922,7 +25922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrashCanRegular")]
-        Icon::FaTrashCanRegular => {
+        FaIcon::FaTrashCanRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25934,7 +25934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrashCanSolid")]
-        Icon::FaTrashCanSolid => {
+        FaIcon::FaTrashCanSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25946,7 +25946,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrashSolid")]
-        Icon::FaTrashSolid => {
+        FaIcon::FaTrashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25958,7 +25958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTreeCitySolid")]
-        Icon::FaTreeCitySolid => {
+        FaIcon::FaTreeCitySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -25970,7 +25970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTreeSolid")]
-        Icon::FaTreeSolid => {
+        FaIcon::FaTreeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25982,7 +25982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrelloBrands")]
-        Icon::FaTrelloBrands => {
+        FaIcon::FaTrelloBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -25994,7 +25994,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTriangleExclamationSolid")]
-        Icon::FaTriangleExclamationSolid => {
+        FaIcon::FaTriangleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26006,7 +26006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrophySolid")]
-        Icon::FaTrophySolid => {
+        FaIcon::FaTrophySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -26018,7 +26018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrowelBricksSolid")]
-        Icon::FaTrowelBricksSolid => {
+        FaIcon::FaTrowelBricksSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26030,7 +26030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTrowelSolid")]
-        Icon::FaTrowelSolid => {
+        FaIcon::FaTrowelSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26042,7 +26042,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckArrowRightSolid")]
-        Icon::FaTruckArrowRightSolid => {
+        FaIcon::FaTruckArrowRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26054,7 +26054,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckDropletSolid")]
-        Icon::FaTruckDropletSolid => {
+        FaIcon::FaTruckDropletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26066,7 +26066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckFastSolid")]
-        Icon::FaTruckFastSolid => {
+        FaIcon::FaTruckFastSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26078,7 +26078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckFieldSolid")]
-        Icon::FaTruckFieldSolid => {
+        FaIcon::FaTruckFieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26090,7 +26090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckFieldUnSolid")]
-        Icon::FaTruckFieldUnSolid => {
+        FaIcon::FaTruckFieldUnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26102,7 +26102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckFrontSolid")]
-        Icon::FaTruckFrontSolid => {
+        FaIcon::FaTruckFrontSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26114,7 +26114,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckMedicalSolid")]
-        Icon::FaTruckMedicalSolid => {
+        FaIcon::FaTruckMedicalSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26126,7 +26126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckMonsterSolid")]
-        Icon::FaTruckMonsterSolid => {
+        FaIcon::FaTruckMonsterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26138,7 +26138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckMovingSolid")]
-        Icon::FaTruckMovingSolid => {
+        FaIcon::FaTruckMovingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26150,7 +26150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckPickupSolid")]
-        Icon::FaTruckPickupSolid => {
+        FaIcon::FaTruckPickupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26162,7 +26162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckPlaneSolid")]
-        Icon::FaTruckPlaneSolid => {
+        FaIcon::FaTruckPlaneSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26174,7 +26174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckRampBoxSolid")]
-        Icon::FaTruckRampBoxSolid => {
+        FaIcon::FaTruckRampBoxSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26186,7 +26186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTruckSolid")]
-        Icon::FaTruckSolid => {
+        FaIcon::FaTruckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26198,7 +26198,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTtySolid")]
-        Icon::FaTtySolid => {
+        FaIcon::FaTtySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26210,7 +26210,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTumblrBrands")]
-        Icon::FaTumblrBrands => {
+        FaIcon::FaTumblrBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -26222,7 +26222,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTurkishLiraSignSolid")]
-        Icon::FaTurkishLiraSignSolid => {
+        FaIcon::FaTurkishLiraSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -26234,7 +26234,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTurnDownSolid")]
-        Icon::FaTurnDownSolid => {
+        FaIcon::FaTurnDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -26246,7 +26246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTurnUpSolid")]
-        Icon::FaTurnUpSolid => {
+        FaIcon::FaTurnUpSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -26258,7 +26258,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTvSolid")]
-        Icon::FaTvSolid => {
+        FaIcon::FaTvSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26270,7 +26270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTwitchBrands")]
-        Icon::FaTwitchBrands => {
+        FaIcon::FaTwitchBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26282,7 +26282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTwitterBrands")]
-        Icon::FaTwitterBrands => {
+        FaIcon::FaTwitterBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26294,7 +26294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaTypo3Brands")]
-        Icon::FaTypo3Brands => {
+        FaIcon::FaTypo3Brands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26306,7 +26306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUSolid")]
-        Icon::FaUSolid => {
+        FaIcon::FaUSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -26318,7 +26318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUberBrands")]
-        Icon::FaUberBrands => {
+        FaIcon::FaUberBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26330,7 +26330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUbuntuBrands")]
-        Icon::FaUbuntuBrands => {
+        FaIcon::FaUbuntuBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -26342,7 +26342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUikitBrands")]
-        Icon::FaUikitBrands => {
+        FaIcon::FaUikitBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26354,7 +26354,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUmbracoBrands")]
-        Icon::FaUmbracoBrands => {
+        FaIcon::FaUmbracoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 510 512" fill = "currentColor" role =
@@ -26366,7 +26366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUmbrellaBeachSolid")]
-        Icon::FaUmbrellaBeachSolid => {
+        FaIcon::FaUmbrellaBeachSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -26378,7 +26378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUmbrellaSolid")]
-        Icon::FaUmbrellaSolid => {
+        FaIcon::FaUmbrellaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -26390,7 +26390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUnchartedBrands")]
-        Icon::FaUnchartedBrands => {
+        FaIcon::FaUnchartedBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26402,7 +26402,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUnderlineSolid")]
-        Icon::FaUnderlineSolid => {
+        FaIcon::FaUnderlineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26414,7 +26414,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUniregistryBrands")]
-        Icon::FaUniregistryBrands => {
+        FaIcon::FaUniregistryBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -26426,7 +26426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUnityBrands")]
-        Icon::FaUnityBrands => {
+        FaIcon::FaUnityBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26438,7 +26438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUniversalAccessSolid")]
-        Icon::FaUniversalAccessSolid => {
+        FaIcon::FaUniversalAccessSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26450,7 +26450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUnlockKeyholeSolid")]
-        Icon::FaUnlockKeyholeSolid => {
+        FaIcon::FaUnlockKeyholeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26462,7 +26462,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUnlockSolid")]
-        Icon::FaUnlockSolid => {
+        FaIcon::FaUnlockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26474,7 +26474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUnsplashBrands")]
-        Icon::FaUnsplashBrands => {
+        FaIcon::FaUnsplashBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26486,7 +26486,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUntappdBrands")]
-        Icon::FaUntappdBrands => {
+        FaIcon::FaUntappdBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26498,7 +26498,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUpDownLeftRightSolid")]
-        Icon::FaUpDownLeftRightSolid => {
+        FaIcon::FaUpDownLeftRightSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26510,7 +26510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUpDownSolid")]
-        Icon::FaUpDownSolid => {
+        FaIcon::FaUpDownSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -26522,7 +26522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUpLongSolid")]
-        Icon::FaUpLongSolid => {
+        FaIcon::FaUpLongSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -26534,7 +26534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUpRightAndDownLeftFromCenterSolid")]
-        Icon::FaUpRightAndDownLeftFromCenterSolid => {
+        FaIcon::FaUpRightAndDownLeftFromCenterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26547,7 +26547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUpRightFromSquareSolid")]
-        Icon::FaUpRightFromSquareSolid => {
+        FaIcon::FaUpRightFromSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26559,7 +26559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUploadSolid")]
-        Icon::FaUploadSolid => {
+        FaIcon::FaUploadSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26571,7 +26571,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUpsBrands")]
-        Icon::FaUpsBrands => {
+        FaIcon::FaUpsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -26583,7 +26583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsbBrands")]
-        Icon::FaUsbBrands => {
+        FaIcon::FaUsbBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26595,7 +26595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserAstronautSolid")]
-        Icon::FaUserAstronautSolid => {
+        FaIcon::FaUserAstronautSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26607,7 +26607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserCheckSolid")]
-        Icon::FaUserCheckSolid => {
+        FaIcon::FaUserCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26619,7 +26619,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserClockSolid")]
-        Icon::FaUserClockSolid => {
+        FaIcon::FaUserClockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26631,7 +26631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserDoctorSolid")]
-        Icon::FaUserDoctorSolid => {
+        FaIcon::FaUserDoctorSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26643,7 +26643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserGearSolid")]
-        Icon::FaUserGearSolid => {
+        FaIcon::FaUserGearSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26655,7 +26655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserGraduateSolid")]
-        Icon::FaUserGraduateSolid => {
+        FaIcon::FaUserGraduateSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26667,7 +26667,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserGroupSolid")]
-        Icon::FaUserGroupSolid => {
+        FaIcon::FaUserGroupSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26679,7 +26679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserInjuredSolid")]
-        Icon::FaUserInjuredSolid => {
+        FaIcon::FaUserInjuredSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26691,7 +26691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserLargeSlashSolid")]
-        Icon::FaUserLargeSlashSolid => {
+        FaIcon::FaUserLargeSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26703,7 +26703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserLargeSolid")]
-        Icon::FaUserLargeSolid => {
+        FaIcon::FaUserLargeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -26715,7 +26715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserLockSolid")]
-        Icon::FaUserLockSolid => {
+        FaIcon::FaUserLockSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26727,7 +26727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserMinusSolid")]
-        Icon::FaUserMinusSolid => {
+        FaIcon::FaUserMinusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26739,7 +26739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserNinjaSolid")]
-        Icon::FaUserNinjaSolid => {
+        FaIcon::FaUserNinjaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26751,7 +26751,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserNurseSolid")]
-        Icon::FaUserNurseSolid => {
+        FaIcon::FaUserNurseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26763,7 +26763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserPenSolid")]
-        Icon::FaUserPenSolid => {
+        FaIcon::FaUserPenSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26775,7 +26775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserPlusSolid")]
-        Icon::FaUserPlusSolid => {
+        FaIcon::FaUserPlusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26787,7 +26787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserRegular")]
-        Icon::FaUserRegular => {
+        FaIcon::FaUserRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26799,7 +26799,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserSecretSolid")]
-        Icon::FaUserSecretSolid => {
+        FaIcon::FaUserSecretSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26811,7 +26811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserShieldSolid")]
-        Icon::FaUserShieldSolid => {
+        FaIcon::FaUserShieldSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26823,7 +26823,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserSlashSolid")]
-        Icon::FaUserSlashSolid => {
+        FaIcon::FaUserSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26835,7 +26835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserSolid")]
-        Icon::FaUserSolid => {
+        FaIcon::FaUserSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26847,7 +26847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserTagSolid")]
-        Icon::FaUserTagSolid => {
+        FaIcon::FaUserTagSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26859,7 +26859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserTieSolid")]
-        Icon::FaUserTieSolid => {
+        FaIcon::FaUserTieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -26871,7 +26871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUserXmarkSolid")]
-        Icon::FaUserXmarkSolid => {
+        FaIcon::FaUserXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26883,7 +26883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersBetweenLinesSolid")]
-        Icon::FaUsersBetweenLinesSolid => {
+        FaIcon::FaUsersBetweenLinesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26895,7 +26895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersGearSolid")]
-        Icon::FaUsersGearSolid => {
+        FaIcon::FaUsersGearSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26907,7 +26907,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersLineSolid")]
-        Icon::FaUsersLineSolid => {
+        FaIcon::FaUsersLineSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26919,7 +26919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersRaysSolid")]
-        Icon::FaUsersRaysSolid => {
+        FaIcon::FaUsersRaysSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26931,7 +26931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersRectangleSolid")]
-        Icon::FaUsersRectangleSolid => {
+        FaIcon::FaUsersRectangleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26943,7 +26943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersSlashSolid")]
-        Icon::FaUsersSlashSolid => {
+        FaIcon::FaUsersSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26955,7 +26955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersSolid")]
-        Icon::FaUsersSolid => {
+        FaIcon::FaUsersSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26967,7 +26967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUsersViewfinderSolid")]
-        Icon::FaUsersViewfinderSolid => {
+        FaIcon::FaUsersViewfinderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -26979,7 +26979,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUspsBrands")]
-        Icon::FaUspsBrands => {
+        FaIcon::FaUspsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -26991,7 +26991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUssunnahBrands")]
-        Icon::FaUssunnahBrands => {
+        FaIcon::FaUssunnahBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27003,7 +27003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaUtensilsSolid")]
-        Icon::FaUtensilsSolid => {
+        FaIcon::FaUtensilsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27015,7 +27015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVSolid")]
-        Icon::FaVSolid => {
+        FaIcon::FaVSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -27027,7 +27027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVaadinBrands")]
-        Icon::FaVaadinBrands => {
+        FaIcon::FaVaadinBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27039,7 +27039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVanShuttleSolid")]
-        Icon::FaVanShuttleSolid => {
+        FaIcon::FaVanShuttleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27051,7 +27051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVaultSolid")]
-        Icon::FaVaultSolid => {
+        FaIcon::FaVaultSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27063,7 +27063,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVectorSquareSolid")]
-        Icon::FaVectorSquareSolid => {
+        FaIcon::FaVectorSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27075,7 +27075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVenusDoubleSolid")]
-        Icon::FaVenusDoubleSolid => {
+        FaIcon::FaVenusDoubleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27087,7 +27087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVenusMarsSolid")]
-        Icon::FaVenusMarsSolid => {
+        FaIcon::FaVenusMarsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27099,7 +27099,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVenusSolid")]
-        Icon::FaVenusSolid => {
+        FaIcon::FaVenusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -27111,7 +27111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVestPatchesSolid")]
-        Icon::FaVestPatchesSolid => {
+        FaIcon::FaVestPatchesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27123,7 +27123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVestSolid")]
-        Icon::FaVestSolid => {
+        FaIcon::FaVestSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27135,7 +27135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaViacoinBrands")]
-        Icon::FaViacoinBrands => {
+        FaIcon::FaViacoinBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -27147,7 +27147,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaViadeoBrands")]
-        Icon::FaViadeoBrands => {
+        FaIcon::FaViadeoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27159,7 +27159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVialCircleCheckSolid")]
-        Icon::FaVialCircleCheckSolid => {
+        FaIcon::FaVialCircleCheckSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27171,7 +27171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVialSolid")]
-        Icon::FaVialSolid => {
+        FaIcon::FaVialSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27183,7 +27183,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVialVirusSolid")]
-        Icon::FaVialVirusSolid => {
+        FaIcon::FaVialVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27195,7 +27195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVialsSolid")]
-        Icon::FaVialsSolid => {
+        FaIcon::FaVialsSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27207,7 +27207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaViberBrands")]
-        Icon::FaViberBrands => {
+        FaIcon::FaViberBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27219,7 +27219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVideoSlashSolid")]
-        Icon::FaVideoSlashSolid => {
+        FaIcon::FaVideoSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27231,7 +27231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVideoSolid")]
-        Icon::FaVideoSolid => {
+        FaIcon::FaVideoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27243,7 +27243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaViharaSolid")]
-        Icon::FaViharaSolid => {
+        FaIcon::FaViharaSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27255,7 +27255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVimeoBrands")]
-        Icon::FaVimeoBrands => {
+        FaIcon::FaVimeoBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27267,7 +27267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVimeoVBrands")]
-        Icon::FaVimeoVBrands => {
+        FaIcon::FaVimeoVBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27279,7 +27279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVineBrands")]
-        Icon::FaVineBrands => {
+        FaIcon::FaVineBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -27291,7 +27291,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVirusCovidSlashSolid")]
-        Icon::FaVirusCovidSlashSolid => {
+        FaIcon::FaVirusCovidSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27303,7 +27303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVirusCovidSolid")]
-        Icon::FaVirusCovidSolid => {
+        FaIcon::FaVirusCovidSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27315,7 +27315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVirusSlashSolid")]
-        Icon::FaVirusSlashSolid => {
+        FaIcon::FaVirusSlashSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27327,7 +27327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVirusSolid")]
-        Icon::FaVirusSolid => {
+        FaIcon::FaVirusSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27339,7 +27339,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVirusesSolid")]
-        Icon::FaVirusesSolid => {
+        FaIcon::FaVirusesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27351,7 +27351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVkBrands")]
-        Icon::FaVkBrands => {
+        FaIcon::FaVkBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27363,7 +27363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVnvBrands")]
-        Icon::FaVnvBrands => {
+        FaIcon::FaVnvBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27375,7 +27375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVoicemailSolid")]
-        Icon::FaVoicemailSolid => {
+        FaIcon::FaVoicemailSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27387,7 +27387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVolcanoSolid")]
-        Icon::FaVolcanoSolid => {
+        FaIcon::FaVolcanoSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27399,7 +27399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVolleyballSolid")]
-        Icon::FaVolleyballSolid => {
+        FaIcon::FaVolleyballSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27411,7 +27411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVolumeHighSolid")]
-        Icon::FaVolumeHighSolid => {
+        FaIcon::FaVolumeHighSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27423,7 +27423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVolumeLowSolid")]
-        Icon::FaVolumeLowSolid => {
+        FaIcon::FaVolumeLowSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27435,7 +27435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVolumeOffSolid")]
-        Icon::FaVolumeOffSolid => {
+        FaIcon::FaVolumeOffSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -27447,7 +27447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVolumeXmarkSolid")]
-        Icon::FaVolumeXmarkSolid => {
+        FaIcon::FaVolumeXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27459,7 +27459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVrCardboardSolid")]
-        Icon::FaVrCardboardSolid => {
+        FaIcon::FaVrCardboardSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27471,7 +27471,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaVuejsBrands")]
-        Icon::FaVuejsBrands => {
+        FaIcon::FaVuejsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27483,7 +27483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWSolid")]
-        Icon::FaWSolid => {
+        FaIcon::FaWSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27495,7 +27495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWalkieTalkieSolid")]
-        Icon::FaWalkieTalkieSolid => {
+        FaIcon::FaWalkieTalkieSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -27507,7 +27507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWalletSolid")]
-        Icon::FaWalletSolid => {
+        FaIcon::FaWalletSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27519,7 +27519,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWandMagicSolid")]
-        Icon::FaWandMagicSolid => {
+        FaIcon::FaWandMagicSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27531,7 +27531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWandMagicSparklesSolid")]
-        Icon::FaWandMagicSparklesSolid => {
+        FaIcon::FaWandMagicSparklesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27543,7 +27543,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWandSparklesSolid")]
-        Icon::FaWandSparklesSolid => {
+        FaIcon::FaWandSparklesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27555,7 +27555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWarehouseSolid")]
-        Icon::FaWarehouseSolid => {
+        FaIcon::FaWarehouseSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27567,7 +27567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWatchmanMonitoringBrands")]
-        Icon::FaWatchmanMonitoringBrands => {
+        FaIcon::FaWatchmanMonitoringBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27579,7 +27579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWaterLadderSolid")]
-        Icon::FaWaterLadderSolid => {
+        FaIcon::FaWaterLadderSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27591,7 +27591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWaterSolid")]
-        Icon::FaWaterSolid => {
+        FaIcon::FaWaterSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27603,7 +27603,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWaveSquareSolid")]
-        Icon::FaWaveSquareSolid => {
+        FaIcon::FaWaveSquareSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27615,7 +27615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWazeBrands")]
-        Icon::FaWazeBrands => {
+        FaIcon::FaWazeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27627,7 +27627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWeeblyBrands")]
-        Icon::FaWeeblyBrands => {
+        FaIcon::FaWeeblyBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27639,7 +27639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWeiboBrands")]
-        Icon::FaWeiboBrands => {
+        FaIcon::FaWeiboBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27651,7 +27651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWeightHangingSolid")]
-        Icon::FaWeightHangingSolid => {
+        FaIcon::FaWeightHangingSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27663,7 +27663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWeightScaleSolid")]
-        Icon::FaWeightScaleSolid => {
+        FaIcon::FaWeightScaleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27675,7 +27675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWeixinBrands")]
-        Icon::FaWeixinBrands => {
+        FaIcon::FaWeixinBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -27687,7 +27687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWhatsappBrands")]
-        Icon::FaWhatsappBrands => {
+        FaIcon::FaWhatsappBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27699,7 +27699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWheatAwnCircleExclamationSolid")]
-        Icon::FaWheatAwnCircleExclamationSolid => {
+        FaIcon::FaWheatAwnCircleExclamationSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27711,7 +27711,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWheatAwnSolid")]
-        Icon::FaWheatAwnSolid => {
+        FaIcon::FaWheatAwnSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27723,7 +27723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWheelchairMoveSolid")]
-        Icon::FaWheelchairMoveSolid => {
+        FaIcon::FaWheelchairMoveSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27735,7 +27735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWheelchairSolid")]
-        Icon::FaWheelchairSolid => {
+        FaIcon::FaWheelchairSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27747,7 +27747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWhiskeyGlassSolid")]
-        Icon::FaWhiskeyGlassSolid => {
+        FaIcon::FaWhiskeyGlassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27759,7 +27759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWhmcsBrands")]
-        Icon::FaWhmcsBrands => {
+        FaIcon::FaWhmcsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27771,7 +27771,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWifiSolid")]
-        Icon::FaWifiSolid => {
+        FaIcon::FaWifiSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27783,7 +27783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWikipediaWBrands")]
-        Icon::FaWikipediaWBrands => {
+        FaIcon::FaWikipediaWBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27795,7 +27795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindSolid")]
-        Icon::FaWindSolid => {
+        FaIcon::FaWindSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27807,7 +27807,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowMaximizeRegular")]
-        Icon::FaWindowMaximizeRegular => {
+        FaIcon::FaWindowMaximizeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27819,7 +27819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowMaximizeSolid")]
-        Icon::FaWindowMaximizeSolid => {
+        FaIcon::FaWindowMaximizeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27831,7 +27831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowMinimizeRegular")]
-        Icon::FaWindowMinimizeRegular => {
+        FaIcon::FaWindowMinimizeRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27843,7 +27843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowMinimizeSolid")]
-        Icon::FaWindowMinimizeSolid => {
+        FaIcon::FaWindowMinimizeSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27855,7 +27855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowRestoreRegular")]
-        Icon::FaWindowRestoreRegular => {
+        FaIcon::FaWindowRestoreRegular => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27867,7 +27867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowRestoreSolid")]
-        Icon::FaWindowRestoreSolid => {
+        FaIcon::FaWindowRestoreSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27879,7 +27879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWindowsBrands")]
-        Icon::FaWindowsBrands => {
+        FaIcon::FaWindowsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -27891,7 +27891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWineBottleSolid")]
-        Icon::FaWineBottleSolid => {
+        FaIcon::FaWineBottleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27903,7 +27903,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWineGlassEmptySolid")]
-        Icon::FaWineGlassEmptySolid => {
+        FaIcon::FaWineGlassEmptySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -27915,7 +27915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWineGlassSolid")]
-        Icon::FaWineGlassSolid => {
+        FaIcon::FaWineGlassSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -27927,7 +27927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWirsindhandwerkBrands")]
-        Icon::FaWirsindhandwerkBrands => {
+        FaIcon::FaWirsindhandwerkBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27939,7 +27939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWixBrands")]
-        Icon::FaWixBrands => {
+        FaIcon::FaWixBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27951,7 +27951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWizardsOfTheCoastBrands")]
-        Icon::FaWizardsOfTheCoastBrands => {
+        FaIcon::FaWizardsOfTheCoastBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27963,7 +27963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWoduBrands")]
-        Icon::FaWoduBrands => {
+        FaIcon::FaWoduBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -27975,7 +27975,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWolfPackBattalionBrands")]
-        Icon::FaWolfPackBattalionBrands => {
+        FaIcon::FaWolfPackBattalionBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27987,7 +27987,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWonSignSolid")]
-        Icon::FaWonSignSolid => {
+        FaIcon::FaWonSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -27999,7 +27999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWordpressBrands")]
-        Icon::FaWordpressBrands => {
+        FaIcon::FaWordpressBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28011,7 +28011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWordpressSimpleBrands")]
-        Icon::FaWordpressSimpleBrands => {
+        FaIcon::FaWordpressSimpleBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28023,7 +28023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWormSolid")]
-        Icon::FaWormSolid => {
+        FaIcon::FaWormSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -28035,7 +28035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWpbeginnerBrands")]
-        Icon::FaWpbeginnerBrands => {
+        FaIcon::FaWpbeginnerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28047,7 +28047,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWpexplorerBrands")]
-        Icon::FaWpexplorerBrands => {
+        FaIcon::FaWpexplorerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28059,7 +28059,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWpformsBrands")]
-        Icon::FaWpformsBrands => {
+        FaIcon::FaWpformsBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -28071,7 +28071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWpressrBrands")]
-        Icon::FaWpressrBrands => {
+        FaIcon::FaWpressrBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -28083,7 +28083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaWrenchSolid")]
-        Icon::FaWrenchSolid => {
+        FaIcon::FaWrenchSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28095,7 +28095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaXRaySolid")]
-        Icon::FaXRaySolid => {
+        FaIcon::FaXRaySolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28107,7 +28107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaXSolid")]
-        Icon::FaXSolid => {
+        FaIcon::FaXSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -28119,7 +28119,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaXboxBrands")]
-        Icon::FaXboxBrands => {
+        FaIcon::FaXboxBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28131,7 +28131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaXingBrands")]
-        Icon::FaXingBrands => {
+        FaIcon::FaXingBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -28143,7 +28143,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaXmarkSolid")]
-        Icon::FaXmarkSolid => {
+        FaIcon::FaXmarkSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -28155,7 +28155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaXmarksLinesSolid")]
-        Icon::FaXmarksLinesSolid => {
+        FaIcon::FaXmarksLinesSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =
@@ -28167,7 +28167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYCombinatorBrands")]
-        Icon::FaYCombinatorBrands => {
+        FaIcon::FaYCombinatorBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -28179,7 +28179,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYSolid")]
-        Icon::FaYSolid => {
+        FaIcon::FaYSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -28191,7 +28191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYahooBrands")]
-        Icon::FaYahooBrands => {
+        FaIcon::FaYahooBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28203,7 +28203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYammerBrands")]
-        Icon::FaYammerBrands => {
+        FaIcon::FaYammerBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28215,7 +28215,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYandexBrands")]
-        Icon::FaYandexBrands => {
+        FaIcon::FaYandexBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 256 512" fill = "currentColor" role =
@@ -28227,7 +28227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYandexInternationalBrands")]
-        Icon::FaYandexInternationalBrands => {
+        FaIcon::FaYandexInternationalBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -28239,7 +28239,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYarnBrands")]
-        Icon::FaYarnBrands => {
+        FaIcon::FaYarnBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 496 512" fill = "currentColor" role =
@@ -28251,7 +28251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYelpBrands")]
-        Icon::FaYelpBrands => {
+        FaIcon::FaYelpBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -28263,7 +28263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYenSignSolid")]
-        Icon::FaYenSignSolid => {
+        FaIcon::FaYenSignSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 320 512" fill = "currentColor" role =
@@ -28275,7 +28275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYinYangSolid")]
-        Icon::FaYinYangSolid => {
+        FaIcon::FaYinYangSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 512 512" fill = "currentColor" role =
@@ -28287,7 +28287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYoastBrands")]
-        Icon::FaYoastBrands => {
+        FaIcon::FaYoastBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 448 512" fill = "currentColor" role =
@@ -28299,7 +28299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaYoutubeBrands")]
-        Icon::FaYoutubeBrands => {
+        FaIcon::FaYoutubeBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 576 512" fill = "currentColor" role =
@@ -28311,7 +28311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaZSolid")]
-        Icon::FaZSolid => {
+        FaIcon::FaZSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 384 512" fill = "currentColor" role =
@@ -28323,7 +28323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "FaZhihuBrands")]
-        Icon::FaZhihuBrands => {
+        FaIcon::FaZhihuBrands => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 640 512" fill = "currentColor" role =

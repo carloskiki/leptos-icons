@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum CgIcon {
     #[cfg(feature = "CgAbstract")]
     CgAbstract,
     #[cfg(feature = "CgAdd")]
@@ -1431,12 +1431,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosCgIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: CgIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -1460,7 +1460,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "CgAbstract")]
-        Icon::CgAbstract => {
+        CgIcon::CgAbstract => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1474,7 +1474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAdd")]
-        Icon::CgAdd => {
+        CgIcon::CgAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1490,7 +1490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAddR")]
-        Icon::CgAddR => {
+        CgIcon::CgAddR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1505,7 +1505,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAdidas")]
-        Icon::CgAdidas => {
+        CgIcon::CgAdidas => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1521,7 +1521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAirplane")]
-        Icon::CgAirplane => {
+        CgIcon::CgAirplane => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1533,7 +1533,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlarm")]
-        Icon::CgAlarm => {
+        CgIcon::CgAlarm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1551,7 +1551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlbum")]
-        Icon::CgAlbum => {
+        CgIcon::CgAlbum => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1564,7 +1564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlignBottom")]
-        Icon::CgAlignBottom => {
+        CgIcon::CgAlignBottom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1577,7 +1577,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlignCenter")]
-        Icon::CgAlignCenter => {
+        CgIcon::CgAlignCenter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1589,7 +1589,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlignLeft")]
-        Icon::CgAlignLeft => {
+        CgIcon::CgAlignLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1602,7 +1602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlignMiddle")]
-        Icon::CgAlignMiddle => {
+        CgIcon::CgAlignMiddle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1614,7 +1614,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlignRight")]
-        Icon::CgAlignRight => {
+        CgIcon::CgAlignRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1633,7 +1633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAlignTop")]
-        Icon::CgAlignTop => {
+        CgIcon::CgAlignTop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1652,7 +1652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAnchor")]
-        Icon::CgAnchor => {
+        CgIcon::CgAnchor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1665,7 +1665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAppleWatch")]
-        Icon::CgAppleWatch => {
+        CgIcon::CgAppleWatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1678,7 +1678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrangeBack")]
-        Icon::CgArrangeBack => {
+        CgIcon::CgArrangeBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1691,7 +1691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrangeFront")]
-        Icon::CgArrangeFront => {
+        CgIcon::CgArrangeFront => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1703,7 +1703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowAlignH")]
-        Icon::CgArrowAlignH => {
+        CgIcon::CgArrowAlignH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1718,7 +1718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowAlignV")]
-        Icon::CgArrowAlignV => {
+        CgIcon::CgArrowAlignV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1733,7 +1733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowBottomLeft")]
-        Icon::CgArrowBottomLeft => {
+        CgIcon::CgArrowBottomLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1745,7 +1745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowBottomLeftO")]
-        Icon::CgArrowBottomLeftO => {
+        CgIcon::CgArrowBottomLeftO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1760,7 +1760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowBottomLeftR")]
-        Icon::CgArrowBottomLeftR => {
+        CgIcon::CgArrowBottomLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1775,7 +1775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowBottomRight")]
-        Icon::CgArrowBottomRight => {
+        CgIcon::CgArrowBottomRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1787,7 +1787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowBottomRightO")]
-        Icon::CgArrowBottomRightO => {
+        CgIcon::CgArrowBottomRightO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1802,7 +1802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowBottomRightR")]
-        Icon::CgArrowBottomRightR => {
+        CgIcon::CgArrowBottomRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1817,7 +1817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowDown")]
-        Icon::CgArrowDown => {
+        CgIcon::CgArrowDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1829,7 +1829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowDownO")]
-        Icon::CgArrowDownO => {
+        CgIcon::CgArrowDownO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1844,7 +1844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowDownR")]
-        Icon::CgArrowDownR => {
+        CgIcon::CgArrowDownR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1859,7 +1859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLeft")]
-        Icon::CgArrowLeft => {
+        CgIcon::CgArrowLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1871,7 +1871,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLeftO")]
-        Icon::CgArrowLeftO => {
+        CgIcon::CgArrowLeftO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1886,7 +1886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLeftR")]
-        Icon::CgArrowLeftR => {
+        CgIcon::CgArrowLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1901,7 +1901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongDown")]
-        Icon::CgArrowLongDown => {
+        CgIcon::CgArrowLongDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1913,7 +1913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongDownC")]
-        Icon::CgArrowLongDownC => {
+        CgIcon::CgArrowLongDownC => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1926,7 +1926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongDownE")]
-        Icon::CgArrowLongDownE => {
+        CgIcon::CgArrowLongDownE => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1939,7 +1939,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongDownL")]
-        Icon::CgArrowLongDownL => {
+        CgIcon::CgArrowLongDownL => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1951,7 +1951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongDownR")]
-        Icon::CgArrowLongDownR => {
+        CgIcon::CgArrowLongDownR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1964,7 +1964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongLeft")]
-        Icon::CgArrowLongLeft => {
+        CgIcon::CgArrowLongLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1976,7 +1976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongLeftC")]
-        Icon::CgArrowLongLeftC => {
+        CgIcon::CgArrowLongLeftC => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1989,7 +1989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongLeftE")]
-        Icon::CgArrowLongLeftE => {
+        CgIcon::CgArrowLongLeftE => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2002,7 +2002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongLeftL")]
-        Icon::CgArrowLongLeftL => {
+        CgIcon::CgArrowLongLeftL => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2014,7 +2014,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongLeftR")]
-        Icon::CgArrowLongLeftR => {
+        CgIcon::CgArrowLongLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2027,7 +2027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongRight")]
-        Icon::CgArrowLongRight => {
+        CgIcon::CgArrowLongRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2039,7 +2039,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongRightC")]
-        Icon::CgArrowLongRightC => {
+        CgIcon::CgArrowLongRightC => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2052,7 +2052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongRightE")]
-        Icon::CgArrowLongRightE => {
+        CgIcon::CgArrowLongRightE => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2065,7 +2065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongRightL")]
-        Icon::CgArrowLongRightL => {
+        CgIcon::CgArrowLongRightL => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2077,7 +2077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongRightR")]
-        Icon::CgArrowLongRightR => {
+        CgIcon::CgArrowLongRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2090,7 +2090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongUp")]
-        Icon::CgArrowLongUp => {
+        CgIcon::CgArrowLongUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2102,7 +2102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongUpC")]
-        Icon::CgArrowLongUpC => {
+        CgIcon::CgArrowLongUpC => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2115,7 +2115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongUpE")]
-        Icon::CgArrowLongUpE => {
+        CgIcon::CgArrowLongUpE => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2128,7 +2128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongUpL")]
-        Icon::CgArrowLongUpL => {
+        CgIcon::CgArrowLongUpL => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2140,7 +2140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowLongUpR")]
-        Icon::CgArrowLongUpR => {
+        CgIcon::CgArrowLongUpR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2153,7 +2153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowRight")]
-        Icon::CgArrowRight => {
+        CgIcon::CgArrowRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2165,7 +2165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowRightO")]
-        Icon::CgArrowRightO => {
+        CgIcon::CgArrowRightO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2180,7 +2180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowRightR")]
-        Icon::CgArrowRightR => {
+        CgIcon::CgArrowRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2195,7 +2195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowTopLeft")]
-        Icon::CgArrowTopLeft => {
+        CgIcon::CgArrowTopLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2207,7 +2207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowTopLeftO")]
-        Icon::CgArrowTopLeftO => {
+        CgIcon::CgArrowTopLeftO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2222,7 +2222,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowTopLeftR")]
-        Icon::CgArrowTopLeftR => {
+        CgIcon::CgArrowTopLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2237,7 +2237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowTopRight")]
-        Icon::CgArrowTopRight => {
+        CgIcon::CgArrowTopRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2249,7 +2249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowTopRightO")]
-        Icon::CgArrowTopRightO => {
+        CgIcon::CgArrowTopRightO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2264,7 +2264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowTopRightR")]
-        Icon::CgArrowTopRightR => {
+        CgIcon::CgArrowTopRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2279,7 +2279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowUp")]
-        Icon::CgArrowUp => {
+        CgIcon::CgArrowUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2291,7 +2291,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowUpO")]
-        Icon::CgArrowUpO => {
+        CgIcon::CgArrowUpO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2306,7 +2306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowUpR")]
-        Icon::CgArrowUpR => {
+        CgIcon::CgArrowUpR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2321,7 +2321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsBreakeH")]
-        Icon::CgArrowsBreakeH => {
+        CgIcon::CgArrowsBreakeH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2335,7 +2335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsBreakeV")]
-        Icon::CgArrowsBreakeV => {
+        CgIcon::CgArrowsBreakeV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2349,7 +2349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExchange")]
-        Icon::CgArrowsExchange => {
+        CgIcon::CgArrowsExchange => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2363,7 +2363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExchangeAlt")]
-        Icon::CgArrowsExchangeAlt => {
+        CgIcon::CgArrowsExchangeAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2377,7 +2377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExchangeAltV")]
-        Icon::CgArrowsExchangeAltV => {
+        CgIcon::CgArrowsExchangeAltV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2391,7 +2391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExchangeV")]
-        Icon::CgArrowsExchangeV => {
+        CgIcon::CgArrowsExchangeV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2405,7 +2405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandDownLeft")]
-        Icon::CgArrowsExpandDownLeft => {
+        CgIcon::CgArrowsExpandDownLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2420,7 +2420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandDownRight")]
-        Icon::CgArrowsExpandDownRight => {
+        CgIcon::CgArrowsExpandDownRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2435,7 +2435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandLeft")]
-        Icon::CgArrowsExpandLeft => {
+        CgIcon::CgArrowsExpandLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2449,7 +2449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandLeftAlt")]
-        Icon::CgArrowsExpandLeftAlt => {
+        CgIcon::CgArrowsExpandLeftAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2465,7 +2465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandRight")]
-        Icon::CgArrowsExpandRight => {
+        CgIcon::CgArrowsExpandRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2479,7 +2479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandRightAlt")]
-        Icon::CgArrowsExpandRightAlt => {
+        CgIcon::CgArrowsExpandRightAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2495,7 +2495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandUpLeft")]
-        Icon::CgArrowsExpandUpLeft => {
+        CgIcon::CgArrowsExpandUpLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2510,7 +2510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsExpandUpRight")]
-        Icon::CgArrowsExpandUpRight => {
+        CgIcon::CgArrowsExpandUpRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2525,7 +2525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsH")]
-        Icon::CgArrowsH => {
+        CgIcon::CgArrowsH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2539,7 +2539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsHAlt")]
-        Icon::CgArrowsHAlt => {
+        CgIcon::CgArrowsHAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2551,7 +2551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsMergeAltH")]
-        Icon::CgArrowsMergeAltH => {
+        CgIcon::CgArrowsMergeAltH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2565,7 +2565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsMergeAltV")]
-        Icon::CgArrowsMergeAltV => {
+        CgIcon::CgArrowsMergeAltV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2579,7 +2579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsScrollH")]
-        Icon::CgArrowsScrollH => {
+        CgIcon::CgArrowsScrollH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2593,7 +2593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsScrollV")]
-        Icon::CgArrowsScrollV => {
+        CgIcon::CgArrowsScrollV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2607,7 +2607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsShrinkH")]
-        Icon::CgArrowsShrinkH => {
+        CgIcon::CgArrowsShrinkH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2621,7 +2621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsShrinkV")]
-        Icon::CgArrowsShrinkV => {
+        CgIcon::CgArrowsShrinkV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2635,7 +2635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsV")]
-        Icon::CgArrowsV => {
+        CgIcon::CgArrowsV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2649,7 +2649,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgArrowsVAlt")]
-        Icon::CgArrowsVAlt => {
+        CgIcon::CgArrowsVAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2661,7 +2661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAssign")]
-        Icon::CgAssign => {
+        CgIcon::CgAssign => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2677,7 +2677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAsterisk")]
-        Icon::CgAsterisk => {
+        CgIcon::CgAsterisk => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2689,7 +2689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAtlasian")]
-        Icon::CgAtlasian => {
+        CgIcon::CgAtlasian => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2703,7 +2703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAttachment")]
-        Icon::CgAttachment => {
+        CgIcon::CgAttachment => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2715,7 +2715,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAttribution")]
-        Icon::CgAttribution => {
+        CgIcon::CgAttribution => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2727,7 +2727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgAwards")]
-        Icon::CgAwards => {
+        CgIcon::CgAwards => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2740,7 +2740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBackspace")]
-        Icon::CgBackspace => {
+        CgIcon::CgBackspace => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2755,7 +2755,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBandAid")]
-        Icon::CgBandAid => {
+        CgIcon::CgBandAid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2776,7 +2776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBattery")]
-        Icon::CgBattery => {
+        CgIcon::CgBattery => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2791,7 +2791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBatteryEmpty")]
-        Icon::CgBatteryEmpty => {
+        CgIcon::CgBatteryEmpty => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2804,7 +2804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBatteryFull")]
-        Icon::CgBatteryFull => {
+        CgIcon::CgBatteryFull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2819,7 +2819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBee")]
-        Icon::CgBee => {
+        CgIcon::CgBee => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2832,7 +2832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBell")]
-        Icon::CgBell => {
+        CgIcon::CgBell => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2845,7 +2845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBitbucket")]
-        Icon::CgBitbucket => {
+        CgIcon::CgBitbucket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2858,7 +2858,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBlock")]
-        Icon::CgBlock => {
+        CgIcon::CgBlock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2873,7 +2873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBmw")]
-        Icon::CgBmw => {
+        CgIcon::CgBmw => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2886,7 +2886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBoard")]
-        Icon::CgBoard => {
+        CgIcon::CgBoard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2899,7 +2899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBolt")]
-        Icon::CgBolt => {
+        CgIcon::CgBolt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2911,7 +2911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBookmark")]
-        Icon::CgBookmark => {
+        CgIcon::CgBookmark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2924,7 +2924,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderAll")]
-        Icon::CgBorderAll => {
+        CgIcon::CgBorderAll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2935,7 +2935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderBottom")]
-        Icon::CgBorderBottom => {
+        CgIcon::CgBorderBottom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2947,7 +2947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderLeft")]
-        Icon::CgBorderLeft => {
+        CgIcon::CgBorderLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2959,7 +2959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderRight")]
-        Icon::CgBorderRight => {
+        CgIcon::CgBorderRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2971,7 +2971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderStyleDashed")]
-        Icon::CgBorderStyleDashed => {
+        CgIcon::CgBorderStyleDashed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2984,7 +2984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderStyleDotted")]
-        Icon::CgBorderStyleDotted => {
+        CgIcon::CgBorderStyleDotted => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2999,7 +2999,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderStyleSolid")]
-        Icon::CgBorderStyleSolid => {
+        CgIcon::CgBorderStyleSolid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3010,7 +3010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBorderTop")]
-        Icon::CgBorderTop => {
+        CgIcon::CgBorderTop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3023,7 +3023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBot")]
-        Icon::CgBot => {
+        CgIcon::CgBot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3043,7 +3043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBowl")]
-        Icon::CgBowl => {
+        CgIcon::CgBowl => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3056,7 +3056,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBox")]
-        Icon::CgBox => {
+        CgIcon::CgBox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3071,7 +3071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBoy")]
-        Icon::CgBoy => {
+        CgIcon::CgBoy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3088,7 +3088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBrackets")]
-        Icon::CgBrackets => {
+        CgIcon::CgBrackets => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3103,7 +3103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBriefcase")]
-        Icon::CgBriefcase => {
+        CgIcon::CgBriefcase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3117,7 +3117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBrowse")]
-        Icon::CgBrowse => {
+        CgIcon::CgBrowse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3134,7 +3134,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBrowser")]
-        Icon::CgBrowser => {
+        CgIcon::CgBrowser => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3153,7 +3153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBrush")]
-        Icon::CgBrush => {
+        CgIcon::CgBrush => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3166,7 +3166,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgBulb")]
-        Icon::CgBulb => {
+        CgIcon::CgBulb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3181,7 +3181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCPlusPlus")]
-        Icon::CgCPlusPlus => {
+        CgIcon::CgCPlusPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3196,7 +3196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalculator")]
-        Icon::CgCalculator => {
+        CgIcon::CgCalculator => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3217,7 +3217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalendar")]
-        Icon::CgCalendar => {
+        CgIcon::CgCalendar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3232,7 +3232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalendarDates")]
-        Icon::CgCalendarDates => {
+        CgIcon::CgCalendarDates => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3259,7 +3259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalendarDue")]
-        Icon::CgCalendarDue => {
+        CgIcon::CgCalendarDue => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3276,7 +3276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalendarNext")]
-        Icon::CgCalendarNext => {
+        CgIcon::CgCalendarNext => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3293,7 +3293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalendarToday")]
-        Icon::CgCalendarToday => {
+        CgIcon::CgCalendarToday => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3308,7 +3308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalendarTwo")]
-        Icon::CgCalendarTwo => {
+        CgIcon::CgCalendarTwo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3323,7 +3323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCalibrate")]
-        Icon::CgCalibrate => {
+        CgIcon::CgCalibrate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3337,7 +3337,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCamera")]
-        Icon::CgCamera => {
+        CgIcon::CgCamera => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3350,7 +3350,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCap")]
-        Icon::CgCap => {
+        CgIcon::CgCap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3364,7 +3364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCaptions")]
-        Icon::CgCaptions => {
+        CgIcon::CgCaptions => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3379,7 +3379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCardClubs")]
-        Icon::CgCardClubs => {
+        CgIcon::CgCardClubs => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3398,7 +3398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCardDiamonds")]
-        Icon::CgCardDiamonds => {
+        CgIcon::CgCardDiamonds => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3413,7 +3413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCardHearts")]
-        Icon::CgCardHearts => {
+        CgIcon::CgCardHearts => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3428,7 +3428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCardSpades")]
-        Icon::CgCardSpades => {
+        CgIcon::CgCardSpades => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3443,7 +3443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCarousel")]
-        Icon::CgCarousel => {
+        CgIcon::CgCarousel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3460,7 +3460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCast")]
-        Icon::CgCast => {
+        CgIcon::CgCast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3477,7 +3477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChanel")]
-        Icon::CgChanel => {
+        CgIcon::CgChanel => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3490,7 +3490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChart")]
-        Icon::CgChart => {
+        CgIcon::CgChart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3506,7 +3506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCheck")]
-        Icon::CgCheck => {
+        CgIcon::CgCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3518,7 +3518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCheckO")]
-        Icon::CgCheckO => {
+        CgIcon::CgCheckO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3533,7 +3533,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCheckR")]
-        Icon::CgCheckR => {
+        CgIcon::CgCheckR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3548,7 +3548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleDown")]
-        Icon::CgChevronDoubleDown => {
+        CgIcon::CgChevronDoubleDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3562,7 +3562,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleDownO")]
-        Icon::CgChevronDoubleDownO => {
+        CgIcon::CgChevronDoubleDownO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3579,7 +3579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleDownR")]
-        Icon::CgChevronDoubleDownR => {
+        CgIcon::CgChevronDoubleDownR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3596,7 +3596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleLeft")]
-        Icon::CgChevronDoubleLeft => {
+        CgIcon::CgChevronDoubleLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3610,7 +3610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleLeftO")]
-        Icon::CgChevronDoubleLeftO => {
+        CgIcon::CgChevronDoubleLeftO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3627,7 +3627,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleLeftR")]
-        Icon::CgChevronDoubleLeftR => {
+        CgIcon::CgChevronDoubleLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3644,7 +3644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleRight")]
-        Icon::CgChevronDoubleRight => {
+        CgIcon::CgChevronDoubleRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3658,7 +3658,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleRightO")]
-        Icon::CgChevronDoubleRightO => {
+        CgIcon::CgChevronDoubleRightO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3675,7 +3675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleRightR")]
-        Icon::CgChevronDoubleRightR => {
+        CgIcon::CgChevronDoubleRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3692,7 +3692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleUp")]
-        Icon::CgChevronDoubleUp => {
+        CgIcon::CgChevronDoubleUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3706,7 +3706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleUpO")]
-        Icon::CgChevronDoubleUpO => {
+        CgIcon::CgChevronDoubleUpO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3723,7 +3723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDoubleUpR")]
-        Icon::CgChevronDoubleUpR => {
+        CgIcon::CgChevronDoubleUpR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3740,7 +3740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDown")]
-        Icon::CgChevronDown => {
+        CgIcon::CgChevronDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3752,7 +3752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDownO")]
-        Icon::CgChevronDownO => {
+        CgIcon::CgChevronDownO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3767,7 +3767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronDownR")]
-        Icon::CgChevronDownR => {
+        CgIcon::CgChevronDownR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3782,7 +3782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronLeft")]
-        Icon::CgChevronLeft => {
+        CgIcon::CgChevronLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3794,7 +3794,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronLeftO")]
-        Icon::CgChevronLeftO => {
+        CgIcon::CgChevronLeftO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3809,7 +3809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronLeftR")]
-        Icon::CgChevronLeftR => {
+        CgIcon::CgChevronLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3824,7 +3824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronRight")]
-        Icon::CgChevronRight => {
+        CgIcon::CgChevronRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3836,7 +3836,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronRightO")]
-        Icon::CgChevronRightO => {
+        CgIcon::CgChevronRightO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3851,7 +3851,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronRightR")]
-        Icon::CgChevronRightR => {
+        CgIcon::CgChevronRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3866,7 +3866,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronUp")]
-        Icon::CgChevronUp => {
+        CgIcon::CgChevronUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3878,7 +3878,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronUpO")]
-        Icon::CgChevronUpO => {
+        CgIcon::CgChevronUpO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3893,7 +3893,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgChevronUpR")]
-        Icon::CgChevronUpR => {
+        CgIcon::CgChevronUpR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3908,7 +3908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCircleci")]
-        Icon::CgCircleci => {
+        CgIcon::CgCircleci => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3921,7 +3921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgClapperBoard")]
-        Icon::CgClapperBoard => {
+        CgIcon::CgClapperBoard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3934,7 +3934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgClipboard")]
-        Icon::CgClipboard => {
+        CgIcon::CgClipboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3951,7 +3951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgClose")]
-        Icon::CgClose => {
+        CgIcon::CgClose => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3963,7 +3963,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCloseO")]
-        Icon::CgCloseO => {
+        CgIcon::CgCloseO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3978,7 +3978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCloseR")]
-        Icon::CgCloseR => {
+        CgIcon::CgCloseR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3993,7 +3993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCloud")]
-        Icon::CgCloud => {
+        CgIcon::CgCloud => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4006,7 +4006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCode")]
-        Icon::CgCode => {
+        CgIcon::CgCode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4020,7 +4020,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCodeClimate")]
-        Icon::CgCodeClimate => {
+        CgIcon::CgCodeClimate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4034,7 +4034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCodeSlash")]
-        Icon::CgCodeSlash => {
+        CgIcon::CgCodeSlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4050,7 +4050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCoffee")]
-        Icon::CgCoffee => {
+        CgIcon::CgCoffee => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4069,7 +4069,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCollage")]
-        Icon::CgCollage => {
+        CgIcon::CgCollage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4082,7 +4082,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgColorBucket")]
-        Icon::CgColorBucket => {
+        CgIcon::CgColorBucket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4097,7 +4097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgColorPicker")]
-        Icon::CgColorPicker => {
+        CgIcon::CgColorPicker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4112,7 +4112,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgComedyCentral")]
-        Icon::CgComedyCentral => {
+        CgIcon::CgComedyCentral => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4126,7 +4126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgComment")]
-        Icon::CgComment => {
+        CgIcon::CgComment => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4140,7 +4140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCommunity")]
-        Icon::CgCommunity => {
+        CgIcon::CgCommunity => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4153,7 +4153,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgComponents")]
-        Icon::CgComponents => {
+        CgIcon::CgComponents => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4175,7 +4175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCompress")]
-        Icon::CgCompress => {
+        CgIcon::CgCompress => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4189,7 +4189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCompressLeft")]
-        Icon::CgCompressLeft => {
+        CgIcon::CgCompressLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4203,7 +4203,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCompressRight")]
-        Icon::CgCompressRight => {
+        CgIcon::CgCompressRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4217,7 +4217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCompressV")]
-        Icon::CgCompressV => {
+        CgIcon::CgCompressV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4231,7 +4231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgController")]
-        Icon::CgController => {
+        CgIcon::CgController => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4252,7 +4252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCopy")]
-        Icon::CgCopy => {
+        CgIcon::CgCopy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4267,7 +4267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCopyright")]
-        Icon::CgCopyright => {
+        CgIcon::CgCopyright => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4282,7 +4282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleDownLeft")]
-        Icon::CgCornerDoubleDownLeft => {
+        CgIcon::CgCornerDoubleDownLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4294,7 +4294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleDownRight")]
-        Icon::CgCornerDoubleDownRight => {
+        CgIcon::CgCornerDoubleDownRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4306,7 +4306,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleLeftDown")]
-        Icon::CgCornerDoubleLeftDown => {
+        CgIcon::CgCornerDoubleLeftDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4318,7 +4318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleLeftUp")]
-        Icon::CgCornerDoubleLeftUp => {
+        CgIcon::CgCornerDoubleLeftUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4332,7 +4332,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleRightDown")]
-        Icon::CgCornerDoubleRightDown => {
+        CgIcon::CgCornerDoubleRightDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4344,7 +4344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleRightUp")]
-        Icon::CgCornerDoubleRightUp => {
+        CgIcon::CgCornerDoubleRightUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4358,7 +4358,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleUpLeft")]
-        Icon::CgCornerDoubleUpLeft => {
+        CgIcon::CgCornerDoubleUpLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4372,7 +4372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDoubleUpRight")]
-        Icon::CgCornerDoubleUpRight => {
+        CgIcon::CgCornerDoubleUpRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4386,7 +4386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDownLeft")]
-        Icon::CgCornerDownLeft => {
+        CgIcon::CgCornerDownLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4398,7 +4398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerDownRight")]
-        Icon::CgCornerDownRight => {
+        CgIcon::CgCornerDownRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4410,7 +4410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerLeftDown")]
-        Icon::CgCornerLeftDown => {
+        CgIcon::CgCornerLeftDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4422,7 +4422,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerLeftUp")]
-        Icon::CgCornerLeftUp => {
+        CgIcon::CgCornerLeftUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4434,7 +4434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerRightDown")]
-        Icon::CgCornerRightDown => {
+        CgIcon::CgCornerRightDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4446,7 +4446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerRightUp")]
-        Icon::CgCornerRightUp => {
+        CgIcon::CgCornerRightUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4458,7 +4458,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerUpLeft")]
-        Icon::CgCornerUpLeft => {
+        CgIcon::CgCornerUpLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4470,7 +4470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCornerUpRight")]
-        Icon::CgCornerUpRight => {
+        CgIcon::CgCornerUpRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4482,7 +4482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCreditCard")]
-        Icon::CgCreditCard => {
+        CgIcon::CgCreditCard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4497,7 +4497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCrop")]
-        Icon::CgCrop => {
+        CgIcon::CgCrop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4510,7 +4510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCross")]
-        Icon::CgCross => {
+        CgIcon::CgCross => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4522,7 +4522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCrowdfire")]
-        Icon::CgCrowdfire => {
+        CgIcon::CgCrowdfire => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4535,7 +4535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgCrown")]
-        Icon::CgCrown => {
+        CgIcon::CgCrown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4548,7 +4548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDanger")]
-        Icon::CgDanger => {
+        CgIcon::CgDanger => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4565,7 +4565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDarkMode")]
-        Icon::CgDarkMode => {
+        CgIcon::CgDarkMode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4580,7 +4580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgData")]
-        Icon::CgData => {
+        CgIcon::CgData => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4601,7 +4601,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDatabase")]
-        Icon::CgDatabase => {
+        CgIcon::CgDatabase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4617,7 +4617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDebug")]
-        Icon::CgDebug => {
+        CgIcon::CgDebug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4634,7 +4634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDesignmodo")]
-        Icon::CgDesignmodo => {
+        CgIcon::CgDesignmodo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4650,7 +4650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDesktop")]
-        Icon::CgDesktop => {
+        CgIcon::CgDesktop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4669,7 +4669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDetailsLess")]
-        Icon::CgDetailsLess => {
+        CgIcon::CgDetailsLess => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4683,7 +4683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDetailsMore")]
-        Icon::CgDetailsMore => {
+        CgIcon::CgDetailsMore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4699,7 +4699,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDialpad")]
-        Icon::CgDialpad => {
+        CgIcon::CgDialpad => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4718,7 +4718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDice1")]
-        Icon::CgDice1 => {
+        CgIcon::CgDice1 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4733,7 +4733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDice2")]
-        Icon::CgDice2 => {
+        CgIcon::CgDice2 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4750,7 +4750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDice3")]
-        Icon::CgDice3 => {
+        CgIcon::CgDice3 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4769,7 +4769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDice4")]
-        Icon::CgDice4 => {
+        CgIcon::CgDice4 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4790,7 +4790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDice5")]
-        Icon::CgDice5 => {
+        CgIcon::CgDice5 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4813,7 +4813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDice6")]
-        Icon::CgDice6 => {
+        CgIcon::CgDice6 => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4838,7 +4838,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDigitalocean")]
-        Icon::CgDigitalocean => {
+        CgIcon::CgDigitalocean => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4852,7 +4852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDisc")]
-        Icon::CgDisc => {
+        CgIcon::CgDisc => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4872,7 +4872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDisplayFlex")]
-        Icon::CgDisplayFlex => {
+        CgIcon::CgDisplayFlex => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4885,7 +4885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDisplayFullwidth")]
-        Icon::CgDisplayFullwidth => {
+        CgIcon::CgDisplayFullwidth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4899,7 +4899,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDisplayGrid")]
-        Icon::CgDisplayGrid => {
+        CgIcon::CgDisplayGrid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4914,7 +4914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDisplaySpacing")]
-        Icon::CgDisplaySpacing => {
+        CgIcon::CgDisplaySpacing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4927,7 +4927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDistributeHorizontal")]
-        Icon::CgDistributeHorizontal => {
+        CgIcon::CgDistributeHorizontal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4940,7 +4940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDistributeVertical")]
-        Icon::CgDistributeVertical => {
+        CgIcon::CgDistributeVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4954,7 +4954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDockBottom")]
-        Icon::CgDockBottom => {
+        CgIcon::CgDockBottom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4966,7 +4966,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDockLeft")]
-        Icon::CgDockLeft => {
+        CgIcon::CgDockLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4978,7 +4978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDockRight")]
-        Icon::CgDockRight => {
+        CgIcon::CgDockRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4990,7 +4990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDockWindow")]
-        Icon::CgDockWindow => {
+        CgIcon::CgDockWindow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5002,7 +5002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDolby")]
-        Icon::CgDolby => {
+        CgIcon::CgDolby => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5015,7 +5015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDollar")]
-        Icon::CgDollar => {
+        CgIcon::CgDollar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5028,7 +5028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDribbble")]
-        Icon::CgDribbble => {
+        CgIcon::CgDribbble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5041,7 +5041,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDrive")]
-        Icon::CgDrive => {
+        CgIcon::CgDrive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5058,7 +5058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDrop")]
-        Icon::CgDrop => {
+        CgIcon::CgDrop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5070,7 +5070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDropInvert")]
-        Icon::CgDropInvert => {
+        CgIcon::CgDropInvert => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5083,7 +5083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDropOpacity")]
-        Icon::CgDropOpacity => {
+        CgIcon::CgDropOpacity => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5096,7 +5096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgDuplicate")]
-        Icon::CgDuplicate => {
+        CgIcon::CgDuplicate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5110,7 +5110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditBlackPoint")]
-        Icon::CgEditBlackPoint => {
+        CgIcon::CgEditBlackPoint => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5126,7 +5126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditContrast")]
-        Icon::CgEditContrast => {
+        CgIcon::CgEditContrast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5141,7 +5141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditExposure")]
-        Icon::CgEditExposure => {
+        CgIcon::CgEditExposure => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5154,7 +5154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditFade")]
-        Icon::CgEditFade => {
+        CgIcon::CgEditFade => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5172,7 +5172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditFlipH")]
-        Icon::CgEditFlipH => {
+        CgIcon::CgEditFlipH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5187,7 +5187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditFlipV")]
-        Icon::CgEditFlipV => {
+        CgIcon::CgEditFlipV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5202,7 +5202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditHighlight")]
-        Icon::CgEditHighlight => {
+        CgIcon::CgEditHighlight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5217,7 +5217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditMarkup")]
-        Icon::CgEditMarkup => {
+        CgIcon::CgEditMarkup => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5230,7 +5230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditMask")]
-        Icon::CgEditMask => {
+        CgIcon::CgEditMask => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5245,7 +5245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditNoise")]
-        Icon::CgEditNoise => {
+        CgIcon::CgEditNoise => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5300,7 +5300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditShadows")]
-        Icon::CgEditShadows => {
+        CgIcon::CgEditShadows => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5315,7 +5315,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditStraight")]
-        Icon::CgEditStraight => {
+        CgIcon::CgEditStraight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5331,7 +5331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEditUnmask")]
-        Icon::CgEditUnmask => {
+        CgIcon::CgEditUnmask => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5351,7 +5351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEject")]
-        Icon::CgEject => {
+        CgIcon::CgEject => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5365,7 +5365,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEnter")]
-        Icon::CgEnter => {
+        CgIcon::CgEnter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5378,7 +5378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgErase")]
-        Icon::CgErase => {
+        CgIcon::CgErase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5391,7 +5391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEreader")]
-        Icon::CgEreader => {
+        CgIcon::CgEreader => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5410,7 +5410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEricsson")]
-        Icon::CgEricsson => {
+        CgIcon::CgEricsson => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5426,7 +5426,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEthernet")]
-        Icon::CgEthernet => {
+        CgIcon::CgEthernet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5439,7 +5439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEuro")]
-        Icon::CgEuro => {
+        CgIcon::CgEuro => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5451,7 +5451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEventbrite")]
-        Icon::CgEventbrite => {
+        CgIcon::CgEventbrite => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5464,7 +5464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExpand")]
-        Icon::CgExpand => {
+        CgIcon::CgExpand => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5476,7 +5476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExport")]
-        Icon::CgExport => {
+        CgIcon::CgExport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5490,7 +5490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExtension")]
-        Icon::CgExtension => {
+        CgIcon::CgExtension => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5504,7 +5504,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExtensionAdd")]
-        Icon::CgExtensionAdd => {
+        CgIcon::CgExtensionAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5518,7 +5518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExtensionAlt")]
-        Icon::CgExtensionAlt => {
+        CgIcon::CgExtensionAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5531,7 +5531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExtensionRemove")]
-        Icon::CgExtensionRemove => {
+        CgIcon::CgExtensionRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5545,7 +5545,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgExternal")]
-        Icon::CgExternal => {
+        CgIcon::CgExternal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5559,7 +5559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEye")]
-        Icon::CgEye => {
+        CgIcon::CgEye => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5575,7 +5575,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgEyeAlt")]
-        Icon::CgEyeAlt => {
+        CgIcon::CgEyeAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5590,7 +5590,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFacebook")]
-        Icon::CgFacebook => {
+        CgIcon::CgFacebook => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5602,7 +5602,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFeed")]
-        Icon::CgFeed => {
+        CgIcon::CgFeed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5624,7 +5624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFigma")]
-        Icon::CgFigma => {
+        CgIcon::CgFigma => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5642,7 +5642,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFile")]
-        Icon::CgFile => {
+        CgIcon::CgFile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5655,7 +5655,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFileAdd")]
-        Icon::CgFileAdd => {
+        CgIcon::CgFileAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5669,7 +5669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFileDocument")]
-        Icon::CgFileDocument => {
+        CgIcon::CgFileDocument => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5684,7 +5684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFileRemove")]
-        Icon::CgFileRemove => {
+        CgIcon::CgFileRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5698,7 +5698,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFilm")]
-        Icon::CgFilm => {
+        CgIcon::CgFilm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5723,7 +5723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFilters")]
-        Icon::CgFilters => {
+        CgIcon::CgFilters => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5736,7 +5736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFlag")]
-        Icon::CgFlag => {
+        CgIcon::CgFlag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5749,7 +5749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFlagAlt")]
-        Icon::CgFlagAlt => {
+        CgIcon::CgFlagAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5762,7 +5762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFolder")]
-        Icon::CgFolder => {
+        CgIcon::CgFolder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5775,7 +5775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFolderAdd")]
-        Icon::CgFolderAdd => {
+        CgIcon::CgFolderAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5790,7 +5790,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFolderRemove")]
-        Icon::CgFolderRemove => {
+        CgIcon::CgFolderRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5804,7 +5804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFontHeight")]
-        Icon::CgFontHeight => {
+        CgIcon::CgFontHeight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5818,7 +5818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFontSpacing")]
-        Icon::CgFontSpacing => {
+        CgIcon::CgFontSpacing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5832,7 +5832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatBold")]
-        Icon::CgFormatBold => {
+        CgIcon::CgFormatBold => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5844,7 +5844,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatCenter")]
-        Icon::CgFormatCenter => {
+        CgIcon::CgFormatCenter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5862,7 +5862,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatColor")]
-        Icon::CgFormatColor => {
+        CgIcon::CgFormatColor => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5877,7 +5877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatHeading")]
-        Icon::CgFormatHeading => {
+        CgIcon::CgFormatHeading => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5889,7 +5889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatIndentDecrease")]
-        Icon::CgFormatIndentDecrease => {
+        CgIcon::CgFormatIndentDecrease => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5904,7 +5904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatIndentIncrease")]
-        Icon::CgFormatIndentIncrease => {
+        CgIcon::CgFormatIndentIncrease => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5919,7 +5919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatItalic")]
-        Icon::CgFormatItalic => {
+        CgIcon::CgFormatItalic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5931,7 +5931,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatJustify")]
-        Icon::CgFormatJustify => {
+        CgIcon::CgFormatJustify => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5949,7 +5949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatLeft")]
-        Icon::CgFormatLeft => {
+        CgIcon::CgFormatLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5967,7 +5967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatLineHeight")]
-        Icon::CgFormatLineHeight => {
+        CgIcon::CgFormatLineHeight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5983,7 +5983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatRight")]
-        Icon::CgFormatRight => {
+        CgIcon::CgFormatRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6001,7 +6001,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatSeparator")]
-        Icon::CgFormatSeparator => {
+        CgIcon::CgFormatSeparator => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6023,7 +6023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatSlash")]
-        Icon::CgFormatSlash => {
+        CgIcon::CgFormatSlash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6036,7 +6036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatStrike")]
-        Icon::CgFormatStrike => {
+        CgIcon::CgFormatStrike => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6048,7 +6048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatText")]
-        Icon::CgFormatText => {
+        CgIcon::CgFormatText => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6070,7 +6070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatUnderline")]
-        Icon::CgFormatUnderline => {
+        CgIcon::CgFormatUnderline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6084,7 +6084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFormatUppercase")]
-        Icon::CgFormatUppercase => {
+        CgIcon::CgFormatUppercase => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6097,7 +6097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgFramer")]
-        Icon::CgFramer => {
+        CgIcon::CgFramer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6109,7 +6109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGames")]
-        Icon::CgGames => {
+        CgIcon::CgGames => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6131,7 +6131,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGenderFemale")]
-        Icon::CgGenderFemale => {
+        CgIcon::CgGenderFemale => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6144,7 +6144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGenderMale")]
-        Icon::CgGenderMale => {
+        CgIcon::CgGenderMale => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6157,7 +6157,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGhost")]
-        Icon::CgGhost => {
+        CgIcon::CgGhost => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6171,7 +6171,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGhostCharacter")]
-        Icon::CgGhostCharacter => {
+        CgIcon::CgGhostCharacter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6188,7 +6188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGift")]
-        Icon::CgGift => {
+        CgIcon::CgGift => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6201,7 +6201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGirl")]
-        Icon::CgGirl => {
+        CgIcon::CgGirl => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6218,7 +6218,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGitBranch")]
-        Icon::CgGitBranch => {
+        CgIcon::CgGitBranch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6230,7 +6230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGitCommit")]
-        Icon::CgGitCommit => {
+        CgIcon::CgGitCommit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6243,7 +6243,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGitFork")]
-        Icon::CgGitFork => {
+        CgIcon::CgGitFork => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6255,7 +6255,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGitPull")]
-        Icon::CgGitPull => {
+        CgIcon::CgGitPull => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6267,7 +6267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGitter")]
-        Icon::CgGitter => {
+        CgIcon::CgGitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6281,7 +6281,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGlass")]
-        Icon::CgGlass => {
+        CgIcon::CgGlass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6294,7 +6294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGlassAlt")]
-        Icon::CgGlassAlt => {
+        CgIcon::CgGlassAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6307,7 +6307,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGlobe")]
-        Icon::CgGlobe => {
+        CgIcon::CgGlobe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6322,7 +6322,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGlobeAlt")]
-        Icon::CgGlobeAlt => {
+        CgIcon::CgGlobeAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6335,7 +6335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGoogle")]
-        Icon::CgGoogle => {
+        CgIcon::CgGoogle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6347,7 +6347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGoogleTasks")]
-        Icon::CgGoogleTasks => {
+        CgIcon::CgGoogleTasks => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6361,7 +6361,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgGym")]
-        Icon::CgGym => {
+        CgIcon::CgGym => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6381,7 +6381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHashtag")]
-        Icon::CgHashtag => {
+        CgIcon::CgHashtag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6394,7 +6394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHeadset")]
-        Icon::CgHeadset => {
+        CgIcon::CgHeadset => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6407,7 +6407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHeart")]
-        Icon::CgHeart => {
+        CgIcon::CgHeart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6420,7 +6420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHello")]
-        Icon::CgHello => {
+        CgIcon::CgHello => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6435,7 +6435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHome")]
-        Icon::CgHome => {
+        CgIcon::CgHome => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6448,7 +6448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHomeAlt")]
-        Icon::CgHomeAlt => {
+        CgIcon::CgHomeAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6461,7 +6461,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgHomeScreen")]
-        Icon::CgHomeScreen => {
+        CgIcon::CgHomeScreen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6494,7 +6494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgIcecream")]
-        Icon::CgIcecream => {
+        CgIcon::CgIcecream => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6507,7 +6507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgIfDesign")]
-        Icon::CgIfDesign => {
+        CgIcon::CgIfDesign => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6523,7 +6523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgImage")]
-        Icon::CgImage => {
+        CgIcon::CgImage => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6539,7 +6539,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgImport")]
-        Icon::CgImport => {
+        CgIcon::CgImport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6553,7 +6553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInbox")]
-        Icon::CgInbox => {
+        CgIcon::CgInbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6566,7 +6566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgIndieHackers")]
-        Icon::CgIndieHackers => {
+        CgIcon::CgIndieHackers => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6579,7 +6579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInfinity")]
-        Icon::CgInfinity => {
+        CgIcon::CgInfinity => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6591,7 +6591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInfo")]
-        Icon::CgInfo => {
+        CgIcon::CgInfo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6608,7 +6608,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInpicture")]
-        Icon::CgInpicture => {
+        CgIcon::CgInpicture => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6622,7 +6622,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsertAfter")]
-        Icon::CgInsertAfter => {
+        CgIcon::CgInsertAfter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6636,7 +6636,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsertAfterO")]
-        Icon::CgInsertAfterO => {
+        CgIcon::CgInsertAfterO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6653,7 +6653,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsertAfterR")]
-        Icon::CgInsertAfterR => {
+        CgIcon::CgInsertAfterR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6670,7 +6670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsertBefore")]
-        Icon::CgInsertBefore => {
+        CgIcon::CgInsertBefore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6684,7 +6684,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsertBeforeO")]
-        Icon::CgInsertBeforeO => {
+        CgIcon::CgInsertBeforeO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6701,7 +6701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsertBeforeR")]
-        Icon::CgInsertBeforeR => {
+        CgIcon::CgInsertBeforeR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6718,7 +6718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInsights")]
-        Icon::CgInsights => {
+        CgIcon::CgInsights => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6731,7 +6731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInstagram")]
-        Icon::CgInstagram => {
+        CgIcon::CgInstagram => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6749,7 +6749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgInternal")]
-        Icon::CgInternal => {
+        CgIcon::CgInternal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6763,7 +6763,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgKey")]
-        Icon::CgKey => {
+        CgIcon::CgKey => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6776,7 +6776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgKeyboard")]
-        Icon::CgKeyboard => {
+        CgIcon::CgKeyboard => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6803,7 +6803,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgKeyhole")]
-        Icon::CgKeyhole => {
+        CgIcon::CgKeyhole => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6819,7 +6819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLaptop")]
-        Icon::CgLaptop => {
+        CgIcon::CgLaptop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6834,7 +6834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLastpass")]
-        Icon::CgLastpass => {
+        CgIcon::CgLastpass => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6852,7 +6852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLayoutGrid")]
-        Icon::CgLayoutGrid => {
+        CgIcon::CgLayoutGrid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6865,7 +6865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLayoutGridSmall")]
-        Icon::CgLayoutGridSmall => {
+        CgIcon::CgLayoutGridSmall => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6883,7 +6883,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLayoutList")]
-        Icon::CgLayoutList => {
+        CgIcon::CgLayoutList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6898,7 +6898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLayoutPin")]
-        Icon::CgLayoutPin => {
+        CgIcon::CgLayoutPin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6911,7 +6911,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLinear")]
-        Icon::CgLinear => {
+        CgIcon::CgLinear => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6929,7 +6929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLink")]
-        Icon::CgLink => {
+        CgIcon::CgLink => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6945,7 +6945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgList")]
-        Icon::CgList => {
+        CgIcon::CgList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6958,7 +6958,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgListTree")]
-        Icon::CgListTree => {
+        CgIcon::CgListTree => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6971,7 +6971,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLivePhoto")]
-        Icon::CgLivePhoto => {
+        CgIcon::CgLivePhoto => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7019,7 +7019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLoadbar")]
-        Icon::CgLoadbar => {
+        CgIcon::CgLoadbar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7030,7 +7030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLoadbarAlt")]
-        Icon::CgLoadbarAlt => {
+        CgIcon::CgLoadbarAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7043,7 +7043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLoadbarDoc")]
-        Icon::CgLoadbarDoc => {
+        CgIcon::CgLoadbarDoc => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7058,7 +7058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLoadbarSound")]
-        Icon::CgLoadbarSound => {
+        CgIcon::CgLoadbarSound => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7070,7 +7070,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLock")]
-        Icon::CgLock => {
+        CgIcon::CgLock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7083,7 +7083,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLockUnlock")]
-        Icon::CgLockUnlock => {
+        CgIcon::CgLockUnlock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7096,7 +7096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLogIn")]
-        Icon::CgLogIn => {
+        CgIcon::CgLogIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7110,7 +7110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLogOff")]
-        Icon::CgLogOff => {
+        CgIcon::CgLogOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7124,7 +7124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLogOut")]
-        Icon::CgLogOut => {
+        CgIcon::CgLogOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7138,7 +7138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgLoupe")]
-        Icon::CgLoupe => {
+        CgIcon::CgLoupe => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7152,7 +7152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMagnet")]
-        Icon::CgMagnet => {
+        CgIcon::CgMagnet => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7167,7 +7167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMail")]
-        Icon::CgMail => {
+        CgIcon::CgMail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7180,7 +7180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMailForward")]
-        Icon::CgMailForward => {
+        CgIcon::CgMailForward => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7192,7 +7192,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMailOpen")]
-        Icon::CgMailOpen => {
+        CgIcon::CgMailOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7205,7 +7205,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMailReply")]
-        Icon::CgMailReply => {
+        CgIcon::CgMailReply => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7217,7 +7217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMathDivide")]
-        Icon::CgMathDivide => {
+        CgIcon::CgMathDivide => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7233,7 +7233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMathEqual")]
-        Icon::CgMathEqual => {
+        CgIcon::CgMathEqual => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7247,7 +7247,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMathMinus")]
-        Icon::CgMathMinus => {
+        CgIcon::CgMathMinus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7259,7 +7259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMathPercent")]
-        Icon::CgMathPercent => {
+        CgIcon::CgMathPercent => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7275,7 +7275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMathPlus")]
-        Icon::CgMathPlus => {
+        CgIcon::CgMathPlus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7287,7 +7287,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMaximize")]
-        Icon::CgMaximize => {
+        CgIcon::CgMaximize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7301,7 +7301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMaximizeAlt")]
-        Icon::CgMaximizeAlt => {
+        CgIcon::CgMaximizeAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7319,7 +7319,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMaze")]
-        Icon::CgMaze => {
+        CgIcon::CgMaze => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7333,7 +7333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMediaLive")]
-        Icon::CgMediaLive => {
+        CgIcon::CgMediaLive => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7352,7 +7352,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMediaPodcast")]
-        Icon::CgMediaPodcast => {
+        CgIcon::CgMediaPodcast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7368,7 +7368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenu")]
-        Icon::CgMenu => {
+        CgIcon::CgMenu => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7384,7 +7384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuBoxed")]
-        Icon::CgMenuBoxed => {
+        CgIcon::CgMenuBoxed => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7403,7 +7403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuCake")]
-        Icon::CgMenuCake => {
+        CgIcon::CgMenuCake => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7421,7 +7421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuCheese")]
-        Icon::CgMenuCheese => {
+        CgIcon::CgMenuCheese => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7437,7 +7437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuGridO")]
-        Icon::CgMenuGridO => {
+        CgIcon::CgMenuGridO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7465,7 +7465,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuGridR")]
-        Icon::CgMenuGridR => {
+        CgIcon::CgMenuGridR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7483,7 +7483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuHotdog")]
-        Icon::CgMenuHotdog => {
+        CgIcon::CgMenuHotdog => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7499,7 +7499,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuLeft")]
-        Icon::CgMenuLeft => {
+        CgIcon::CgMenuLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7515,7 +7515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuLeftAlt")]
-        Icon::CgMenuLeftAlt => {
+        CgIcon::CgMenuLeftAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7531,7 +7531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuMotion")]
-        Icon::CgMenuMotion => {
+        CgIcon::CgMenuMotion => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7547,7 +7547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuOreos")]
-        Icon::CgMenuOreos => {
+        CgIcon::CgMenuOreos => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7565,7 +7565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuRight")]
-        Icon::CgMenuRight => {
+        CgIcon::CgMenuRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7581,7 +7581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuRightAlt")]
-        Icon::CgMenuRightAlt => {
+        CgIcon::CgMenuRightAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7597,7 +7597,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMenuRound")]
-        Icon::CgMenuRound => {
+        CgIcon::CgMenuRound => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7616,7 +7616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMergeHorizontal")]
-        Icon::CgMergeHorizontal => {
+        CgIcon::CgMergeHorizontal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7632,7 +7632,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMergeVertical")]
-        Icon::CgMergeVertical => {
+        CgIcon::CgMergeVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7648,7 +7648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMic")]
-        Icon::CgMic => {
+        CgIcon::CgMic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7663,7 +7663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMicrobit")]
-        Icon::CgMicrobit => {
+        CgIcon::CgMicrobit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7680,7 +7680,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMicrosoft")]
-        Icon::CgMicrosoft => {
+        CgIcon::CgMicrosoft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7693,7 +7693,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMiniPlayer")]
-        Icon::CgMiniPlayer => {
+        CgIcon::CgMiniPlayer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7706,7 +7706,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMinimize")]
-        Icon::CgMinimize => {
+        CgIcon::CgMinimize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7721,7 +7721,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMinimizeAlt")]
-        Icon::CgMinimizeAlt => {
+        CgIcon::CgMinimizeAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7735,7 +7735,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgModem")]
-        Icon::CgModem => {
+        CgIcon::CgModem => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7750,7 +7750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMonday")]
-        Icon::CgMonday => {
+        CgIcon::CgMonday => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7766,7 +7766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoon")]
-        Icon::CgMoon => {
+        CgIcon::CgMoon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7779,7 +7779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMore")]
-        Icon::CgMore => {
+        CgIcon::CgMore => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7798,7 +7798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreAlt")]
-        Icon::CgMoreAlt => {
+        CgIcon::CgMoreAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7814,7 +7814,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreO")]
-        Icon::CgMoreO => {
+        CgIcon::CgMoreO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7833,7 +7833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreR")]
-        Icon::CgMoreR => {
+        CgIcon::CgMoreR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7852,7 +7852,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreVertical")]
-        Icon::CgMoreVertical => {
+        CgIcon::CgMoreVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7865,7 +7865,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreVerticalAlt")]
-        Icon::CgMoreVerticalAlt => {
+        CgIcon::CgMoreVerticalAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7881,7 +7881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreVerticalO")]
-        Icon::CgMoreVerticalO => {
+        CgIcon::CgMoreVerticalO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7900,7 +7900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoreVerticalR")]
-        Icon::CgMoreVerticalR => {
+        CgIcon::CgMoreVerticalR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7919,7 +7919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMouse")]
-        Icon::CgMouse => {
+        CgIcon::CgMouse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7934,7 +7934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoveDown")]
-        Icon::CgMoveDown => {
+        CgIcon::CgMoveDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7948,7 +7948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoveLeft")]
-        Icon::CgMoveLeft => {
+        CgIcon::CgMoveLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7962,7 +7962,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoveRight")]
-        Icon::CgMoveRight => {
+        CgIcon::CgMoveRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7976,7 +7976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoveTask")]
-        Icon::CgMoveTask => {
+        CgIcon::CgMoveTask => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7991,7 +7991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMoveUp")]
-        Icon::CgMoveUp => {
+        CgIcon::CgMoveUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8005,7 +8005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMusic")]
-        Icon::CgMusic => {
+        CgIcon::CgMusic => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8018,7 +8018,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMusicNote")]
-        Icon::CgMusicNote => {
+        CgIcon::CgMusicNote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8031,7 +8031,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgMusicSpeaker")]
-        Icon::CgMusicSpeaker => {
+        CgIcon::CgMusicSpeaker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8049,7 +8049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgNametag")]
-        Icon::CgNametag => {
+        CgIcon::CgNametag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8064,7 +8064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgNotes")]
-        Icon::CgNotes => {
+        CgIcon::CgNotes => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8085,7 +8085,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgNotifications")]
-        Icon::CgNotifications => {
+        CgIcon::CgNotifications => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8098,7 +8098,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgNpm")]
-        Icon::CgNpm => {
+        CgIcon::CgNpm => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8111,7 +8111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgOculus")]
-        Icon::CgOculus => {
+        CgIcon::CgOculus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8124,7 +8124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgOpenCollective")]
-        Icon::CgOpenCollective => {
+        CgIcon::CgOpenCollective => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8138,7 +8138,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgOptions")]
-        Icon::CgOptions => {
+        CgIcon::CgOptions => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8154,7 +8154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgOrganisation")]
-        Icon::CgOrganisation => {
+        CgIcon::CgOrganisation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8168,7 +8168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgOverflow")]
-        Icon::CgOverflow => {
+        CgIcon::CgOverflow => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8184,7 +8184,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPacman")]
-        Icon::CgPacman => {
+        CgIcon::CgPacman => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8199,7 +8199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPassword")]
-        Icon::CgPassword => {
+        CgIcon::CgPassword => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8219,7 +8219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathBack")]
-        Icon::CgPathBack => {
+        CgIcon::CgPathBack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8231,7 +8231,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathCrop")]
-        Icon::CgPathCrop => {
+        CgIcon::CgPathCrop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8245,7 +8245,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathDivide")]
-        Icon::CgPathDivide => {
+        CgIcon::CgPathDivide => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8258,7 +8258,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathExclude")]
-        Icon::CgPathExclude => {
+        CgIcon::CgPathExclude => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8270,7 +8270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathFront")]
-        Icon::CgPathFront => {
+        CgIcon::CgPathFront => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8282,7 +8282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathIntersect")]
-        Icon::CgPathIntersect => {
+        CgIcon::CgPathIntersect => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8295,7 +8295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathOutline")]
-        Icon::CgPathOutline => {
+        CgIcon::CgPathOutline => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8308,7 +8308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathTrim")]
-        Icon::CgPathTrim => {
+        CgIcon::CgPathTrim => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8320,7 +8320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPathUnite")]
-        Icon::CgPathUnite => {
+        CgIcon::CgPathUnite => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8331,7 +8331,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPatreon")]
-        Icon::CgPatreon => {
+        CgIcon::CgPatreon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8344,7 +8344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPaypal")]
-        Icon::CgPaypal => {
+        CgIcon::CgPaypal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8357,7 +8357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPen")]
-        Icon::CgPen => {
+        CgIcon::CgPen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8372,7 +8372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonBottomLeft")]
-        Icon::CgPentagonBottomLeft => {
+        CgIcon::CgPentagonBottomLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8385,7 +8385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonBottomRight")]
-        Icon::CgPentagonBottomRight => {
+        CgIcon::CgPentagonBottomRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8398,7 +8398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonDown")]
-        Icon::CgPentagonDown => {
+        CgIcon::CgPentagonDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8411,7 +8411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonLeft")]
-        Icon::CgPentagonLeft => {
+        CgIcon::CgPentagonLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8424,7 +8424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonRight")]
-        Icon::CgPentagonRight => {
+        CgIcon::CgPentagonRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8437,7 +8437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonTopLeft")]
-        Icon::CgPentagonTopLeft => {
+        CgIcon::CgPentagonTopLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8450,7 +8450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonTopRight")]
-        Icon::CgPentagonTopRight => {
+        CgIcon::CgPentagonTopRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8463,7 +8463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPentagonUp")]
-        Icon::CgPentagonUp => {
+        CgIcon::CgPentagonUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8476,7 +8476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPerformance")]
-        Icon::CgPerformance => {
+        CgIcon::CgPerformance => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8494,7 +8494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPexels")]
-        Icon::CgPexels => {
+        CgIcon::CgPexels => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8507,7 +8507,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPhone")]
-        Icon::CgPhone => {
+        CgIcon::CgPhone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8523,7 +8523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPhotoscan")]
-        Icon::CgPhotoscan => {
+        CgIcon::CgPhotoscan => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8538,7 +8538,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPiano")]
-        Icon::CgPiano => {
+        CgIcon::CgPiano => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8551,7 +8551,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPill")]
-        Icon::CgPill => {
+        CgIcon::CgPill => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8564,7 +8564,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPin")]
-        Icon::CgPin => {
+        CgIcon::CgPin => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8580,7 +8580,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPinAlt")]
-        Icon::CgPinAlt => {
+        CgIcon::CgPinAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8595,7 +8595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPinBottom")]
-        Icon::CgPinBottom => {
+        CgIcon::CgPinBottom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8610,7 +8610,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPinTop")]
-        Icon::CgPinTop => {
+        CgIcon::CgPinTop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8625,7 +8625,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayBackwards")]
-        Icon::CgPlayBackwards => {
+        CgIcon::CgPlayBackwards => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8638,7 +8638,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayButton")]
-        Icon::CgPlayButton => {
+        CgIcon::CgPlayButton => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8650,7 +8650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayButtonO")]
-        Icon::CgPlayButtonO => {
+        CgIcon::CgPlayButtonO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8664,7 +8664,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayButtonR")]
-        Icon::CgPlayButtonR => {
+        CgIcon::CgPlayButtonR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8678,7 +8678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayForwards")]
-        Icon::CgPlayForwards => {
+        CgIcon::CgPlayForwards => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8691,7 +8691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayList")]
-        Icon::CgPlayList => {
+        CgIcon::CgPlayList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8704,7 +8704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayListAdd")]
-        Icon::CgPlayListAdd => {
+        CgIcon::CgPlayListAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8718,7 +8718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayListCheck")]
-        Icon::CgPlayListCheck => {
+        CgIcon::CgPlayListCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8732,7 +8732,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayListRemove")]
-        Icon::CgPlayListRemove => {
+        CgIcon::CgPlayListRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8749,7 +8749,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayListSearch")]
-        Icon::CgPlayListSearch => {
+        CgIcon::CgPlayListSearch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8766,7 +8766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayPause")]
-        Icon::CgPlayPause => {
+        CgIcon::CgPlayPause => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8778,7 +8778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayPauseO")]
-        Icon::CgPlayPauseO => {
+        CgIcon::CgPlayPauseO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8792,7 +8792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayPauseR")]
-        Icon::CgPlayPauseR => {
+        CgIcon::CgPlayPauseR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8806,7 +8806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayStop")]
-        Icon::CgPlayStop => {
+        CgIcon::CgPlayStop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8817,7 +8817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayStopO")]
-        Icon::CgPlayStopO => {
+        CgIcon::CgPlayStopO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8831,7 +8831,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayStopR")]
-        Icon::CgPlayStopR => {
+        CgIcon::CgPlayStopR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8845,7 +8845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayTrackNext")]
-        Icon::CgPlayTrackNext => {
+        CgIcon::CgPlayTrackNext => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8857,7 +8857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayTrackNextO")]
-        Icon::CgPlayTrackNextO => {
+        CgIcon::CgPlayTrackNextO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8870,7 +8870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayTrackNextR")]
-        Icon::CgPlayTrackNextR => {
+        CgIcon::CgPlayTrackNextR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8886,7 +8886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayTrackPrev")]
-        Icon::CgPlayTrackPrev => {
+        CgIcon::CgPlayTrackPrev => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8898,7 +8898,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayTrackPrevO")]
-        Icon::CgPlayTrackPrevO => {
+        CgIcon::CgPlayTrackPrevO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8914,7 +8914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlayTrackPrevR")]
-        Icon::CgPlayTrackPrevR => {
+        CgIcon::CgPlayTrackPrevR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8930,7 +8930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPlug")]
-        Icon::CgPlug => {
+        CgIcon::CgPlug => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8943,7 +8943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPocket")]
-        Icon::CgPocket => {
+        CgIcon::CgPocket => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8956,7 +8956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPokemon")]
-        Icon::CgPokemon => {
+        CgIcon::CgPokemon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8969,7 +8969,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPolaroid")]
-        Icon::CgPolaroid => {
+        CgIcon::CgPolaroid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8982,7 +8982,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPoll")]
-        Icon::CgPoll => {
+        CgIcon::CgPoll => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8997,7 +8997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPresentation")]
-        Icon::CgPresentation => {
+        CgIcon::CgPresentation => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9010,7 +9010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPrinter")]
-        Icon::CgPrinter => {
+        CgIcon::CgPrinter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9023,7 +9023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgProductHunt")]
-        Icon::CgProductHunt => {
+        CgIcon::CgProductHunt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9036,7 +9036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgProfile")]
-        Icon::CgProfile => {
+        CgIcon::CgProfile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9052,7 +9052,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPullClear")]
-        Icon::CgPullClear => {
+        CgIcon::CgPullClear => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9066,7 +9066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronDown")]
-        Icon::CgPushChevronDown => {
+        CgIcon::CgPushChevronDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9079,7 +9079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronDownO")]
-        Icon::CgPushChevronDownO => {
+        CgIcon::CgPushChevronDownO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9095,7 +9095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronDownR")]
-        Icon::CgPushChevronDownR => {
+        CgIcon::CgPushChevronDownR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9111,7 +9111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronLeft")]
-        Icon::CgPushChevronLeft => {
+        CgIcon::CgPushChevronLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9124,7 +9124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronLeftO")]
-        Icon::CgPushChevronLeftO => {
+        CgIcon::CgPushChevronLeftO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9140,7 +9140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronLeftR")]
-        Icon::CgPushChevronLeftR => {
+        CgIcon::CgPushChevronLeftR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9156,7 +9156,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronRight")]
-        Icon::CgPushChevronRight => {
+        CgIcon::CgPushChevronRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9169,7 +9169,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronRightO")]
-        Icon::CgPushChevronRightO => {
+        CgIcon::CgPushChevronRightO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9185,7 +9185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronRightR")]
-        Icon::CgPushChevronRightR => {
+        CgIcon::CgPushChevronRightR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9201,7 +9201,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronUp")]
-        Icon::CgPushChevronUp => {
+        CgIcon::CgPushChevronUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9214,7 +9214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronUpO")]
-        Icon::CgPushChevronUpO => {
+        CgIcon::CgPushChevronUpO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9227,7 +9227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushChevronUpR")]
-        Icon::CgPushChevronUpR => {
+        CgIcon::CgPushChevronUpR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9240,7 +9240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushDown")]
-        Icon::CgPushDown => {
+        CgIcon::CgPushDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9253,7 +9253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushLeft")]
-        Icon::CgPushLeft => {
+        CgIcon::CgPushLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9266,7 +9266,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushRight")]
-        Icon::CgPushRight => {
+        CgIcon::CgPushRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9279,7 +9279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgPushUp")]
-        Icon::CgPushUp => {
+        CgIcon::CgPushUp => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9292,7 +9292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgQr")]
-        Icon::CgQr => {
+        CgIcon::CgQr => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9305,7 +9305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgQuote")]
-        Icon::CgQuote => {
+        CgIcon::CgQuote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9318,7 +9318,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgQuoteO")]
-        Icon::CgQuoteO => {
+        CgIcon::CgQuoteO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9335,7 +9335,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRadioCheck")]
-        Icon::CgRadioCheck => {
+        CgIcon::CgRadioCheck => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9348,7 +9348,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRadioChecked")]
-        Icon::CgRadioChecked => {
+        CgIcon::CgRadioChecked => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9363,7 +9363,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRatio")]
-        Icon::CgRatio => {
+        CgIcon::CgRatio => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9378,7 +9378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRead")]
-        Icon::CgRead => {
+        CgIcon::CgRead => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9391,7 +9391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgReadme")]
-        Icon::CgReadme => {
+        CgIcon::CgReadme => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9404,7 +9404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRecord")]
-        Icon::CgRecord => {
+        CgIcon::CgRecord => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9419,7 +9419,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRedo")]
-        Icon::CgRedo => {
+        CgIcon::CgRedo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9431,7 +9431,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRemote")]
-        Icon::CgRemote => {
+        CgIcon::CgRemote => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9445,7 +9445,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRemove")]
-        Icon::CgRemove => {
+        CgIcon::CgRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9460,7 +9460,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRemoveR")]
-        Icon::CgRemoveR => {
+        CgIcon::CgRemoveR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9475,7 +9475,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRename")]
-        Icon::CgRename => {
+        CgIcon::CgRename => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9490,7 +9490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgReorder")]
-        Icon::CgReorder => {
+        CgIcon::CgReorder => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9511,7 +9511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRepeat")]
-        Icon::CgRepeat => {
+        CgIcon::CgRepeat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9525,7 +9525,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRing")]
-        Icon::CgRing => {
+        CgIcon::CgRing => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9540,7 +9540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRowFirst")]
-        Icon::CgRowFirst => {
+        CgIcon::CgRowFirst => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9556,7 +9556,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRowLast")]
-        Icon::CgRowLast => {
+        CgIcon::CgRowLast => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9572,7 +9572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgRuler")]
-        Icon::CgRuler => {
+        CgIcon::CgRuler => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9585,7 +9585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSandClock")]
-        Icon::CgSandClock => {
+        CgIcon::CgSandClock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9600,7 +9600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScan")]
-        Icon::CgScan => {
+        CgIcon::CgScan => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9615,7 +9615,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScreen")]
-        Icon::CgScreen => {
+        CgIcon::CgScreen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9628,7 +9628,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScreenMirror")]
-        Icon::CgScreenMirror => {
+        CgIcon::CgScreenMirror => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9641,7 +9641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScreenShot")]
-        Icon::CgScreenShot => {
+        CgIcon::CgScreenShot => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9656,7 +9656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScreenWide")]
-        Icon::CgScreenWide => {
+        CgIcon::CgScreenWide => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9669,7 +9669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScrollH")]
-        Icon::CgScrollH => {
+        CgIcon::CgScrollH => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9686,7 +9686,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgScrollV")]
-        Icon::CgScrollV => {
+        CgIcon::CgScrollV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9703,7 +9703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSearch")]
-        Icon::CgSearch => {
+        CgIcon::CgSearch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9716,7 +9716,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSearchFound")]
-        Icon::CgSearchFound => {
+        CgIcon::CgSearchFound => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9731,7 +9731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSearchLoading")]
-        Icon::CgSearchLoading => {
+        CgIcon::CgSearchLoading => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9750,7 +9750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSelect")]
-        Icon::CgSelect => {
+        CgIcon::CgSelect => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9764,7 +9764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSelectO")]
-        Icon::CgSelectO => {
+        CgIcon::CgSelectO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9781,7 +9781,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSelectR")]
-        Icon::CgSelectR => {
+        CgIcon::CgSelectR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9798,7 +9798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgServer")]
-        Icon::CgServer => {
+        CgIcon::CgServer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9817,7 +9817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgServerless")]
-        Icon::CgServerless => {
+        CgIcon::CgServerless => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9834,7 +9834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeCircle")]
-        Icon::CgShapeCircle => {
+        CgIcon::CgShapeCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9847,7 +9847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeHalfCircle")]
-        Icon::CgShapeHalfCircle => {
+        CgIcon::CgShapeHalfCircle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9859,7 +9859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeHexagon")]
-        Icon::CgShapeHexagon => {
+        CgIcon::CgShapeHexagon => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9872,7 +9872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeRhombus")]
-        Icon::CgShapeRhombus => {
+        CgIcon::CgShapeRhombus => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9885,7 +9885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeSquare")]
-        Icon::CgShapeSquare => {
+        CgIcon::CgShapeSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9897,7 +9897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeTriangle")]
-        Icon::CgShapeTriangle => {
+        CgIcon::CgShapeTriangle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9910,7 +9910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShapeZigzag")]
-        Icon::CgShapeZigzag => {
+        CgIcon::CgShapeZigzag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9923,7 +9923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShare")]
-        Icon::CgShare => {
+        CgIcon::CgShare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9935,7 +9935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShield")]
-        Icon::CgShield => {
+        CgIcon::CgShield => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9948,7 +9948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShoppingBag")]
-        Icon::CgShoppingBag => {
+        CgIcon::CgShoppingBag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9961,7 +9961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShoppingCart")]
-        Icon::CgShoppingCart => {
+        CgIcon::CgShoppingCart => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9978,7 +9978,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShortcut")]
-        Icon::CgShortcut => {
+        CgIcon::CgShortcut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9993,7 +9993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgShutterstock")]
-        Icon::CgShutterstock => {
+        CgIcon::CgShutterstock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10010,7 +10010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSidebar")]
-        Icon::CgSidebar => {
+        CgIcon::CgSidebar => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10022,7 +10022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSidebarOpen")]
-        Icon::CgSidebarOpen => {
+        CgIcon::CgSidebarOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10034,7 +10034,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSidebarRight")]
-        Icon::CgSidebarRight => {
+        CgIcon::CgSidebarRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10046,7 +10046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSignal")]
-        Icon::CgSignal => {
+        CgIcon::CgSignal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10062,7 +10062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSize")]
-        Icon::CgSize => {
+        CgIcon::CgSize => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10075,7 +10075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSketch")]
-        Icon::CgSketch => {
+        CgIcon::CgSketch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10089,7 +10089,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSlack")]
-        Icon::CgSlack => {
+        CgIcon::CgSlack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10102,7 +10102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSleep")]
-        Icon::CgSleep => {
+        CgIcon::CgSleep => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10115,7 +10115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartHomeBoiler")]
-        Icon::CgSmartHomeBoiler => {
+        CgIcon::CgSmartHomeBoiler => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10128,7 +10128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartHomeCooker")]
-        Icon::CgSmartHomeCooker => {
+        CgIcon::CgSmartHomeCooker => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10144,7 +10144,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartHomeHeat")]
-        Icon::CgSmartHomeHeat => {
+        CgIcon::CgSmartHomeHeat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10159,7 +10159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartHomeLight")]
-        Icon::CgSmartHomeLight => {
+        CgIcon::CgSmartHomeLight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10178,7 +10178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartHomeRefrigerator")]
-        Icon::CgSmartHomeRefrigerator => {
+        CgIcon::CgSmartHomeRefrigerator => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10195,7 +10195,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartHomeWashMachine")]
-        Icon::CgSmartHomeWashMachine => {
+        CgIcon::CgSmartHomeWashMachine => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10208,7 +10208,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartphone")]
-        Icon::CgSmartphone => {
+        CgIcon::CgSmartphone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10222,7 +10222,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartphoneChip")]
-        Icon::CgSmartphoneChip => {
+        CgIcon::CgSmartphoneChip => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10238,7 +10238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartphoneRam")]
-        Icon::CgSmartphoneRam => {
+        CgIcon::CgSmartphoneRam => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10275,7 +10275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmartphoneShake")]
-        Icon::CgSmartphoneShake => {
+        CgIcon::CgSmartphoneShake => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10292,7 +10292,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmile")]
-        Icon::CgSmile => {
+        CgIcon::CgSmile => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10311,7 +10311,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmileMouthOpen")]
-        Icon::CgSmileMouthOpen => {
+        CgIcon::CgSmileMouthOpen => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10330,7 +10330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmileNeutral")]
-        Icon::CgSmileNeutral => {
+        CgIcon::CgSmileNeutral => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10349,7 +10349,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmileNoMouth")]
-        Icon::CgSmileNoMouth => {
+        CgIcon::CgSmileNoMouth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10366,7 +10366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmileNone")]
-        Icon::CgSmileNone => {
+        CgIcon::CgSmileNone => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10385,7 +10385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmileSad")]
-        Icon::CgSmileSad => {
+        CgIcon::CgSmileSad => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10404,7 +10404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSmileUpside")]
-        Icon::CgSmileUpside => {
+        CgIcon::CgSmileUpside => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10423,7 +10423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSoftwareDownload")]
-        Icon::CgSoftwareDownload => {
+        CgIcon::CgSoftwareDownload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10437,7 +10437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSoftwareUpload")]
-        Icon::CgSoftwareUpload => {
+        CgIcon::CgSoftwareUpload => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10451,7 +10451,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSortAz")]
-        Icon::CgSortAz => {
+        CgIcon::CgSortAz => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10467,7 +10467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSortZa")]
-        Icon::CgSortZa => {
+        CgIcon::CgSortZa => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10483,7 +10483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpaceBetween")]
-        Icon::CgSpaceBetween => {
+        CgIcon::CgSpaceBetween => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10496,7 +10496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpaceBetweenV")]
-        Icon::CgSpaceBetweenV => {
+        CgIcon::CgSpaceBetweenV => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10509,7 +10509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpectrum")]
-        Icon::CgSpectrum => {
+        CgIcon::CgSpectrum => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10521,7 +10521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpinner")]
-        Icon::CgSpinner => {
+        CgIcon::CgSpinner => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10536,7 +10536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpinnerAlt")]
-        Icon::CgSpinnerAlt => {
+        CgIcon::CgSpinnerAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10548,7 +10548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpinnerTwo")]
-        Icon::CgSpinnerTwo => {
+        CgIcon::CgSpinnerTwo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10565,7 +10565,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSpinnerTwoAlt")]
-        Icon::CgSpinnerTwoAlt => {
+        CgIcon::CgSpinnerTwoAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10579,7 +10579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSquare")]
-        Icon::CgSquare => {
+        CgIcon::CgSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10593,7 +10593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgStack")]
-        Icon::CgStack => {
+        CgIcon::CgStack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10606,7 +10606,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgStark")]
-        Icon::CgStark => {
+        CgIcon::CgStark => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10618,7 +10618,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgStopwatch")]
-        Icon::CgStopwatch => {
+        CgIcon::CgStopwatch => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10634,7 +10634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgStories")]
-        Icon::CgStories => {
+        CgIcon::CgStories => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10651,7 +10651,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgStudio")]
-        Icon::CgStudio => {
+        CgIcon::CgStudio => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10663,7 +10663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgStyle")]
-        Icon::CgStyle => {
+        CgIcon::CgStyle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10678,7 +10678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSun")]
-        Icon::CgSun => {
+        CgIcon::CgSun => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10694,7 +10694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSupport")]
-        Icon::CgSupport => {
+        CgIcon::CgSupport => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10707,7 +10707,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSwap")]
-        Icon::CgSwap => {
+        CgIcon::CgSwap => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10720,7 +10720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSwapVertical")]
-        Icon::CgSwapVertical => {
+        CgIcon::CgSwapVertical => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10733,7 +10733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSweden")]
-        Icon::CgSweden => {
+        CgIcon::CgSweden => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10746,7 +10746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSwiss")]
-        Icon::CgSwiss => {
+        CgIcon::CgSwiss => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10758,7 +10758,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgSync")]
-        Icon::CgSync => {
+        CgIcon::CgSync => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10772,7 +10772,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTab")]
-        Icon::CgTab => {
+        CgIcon::CgTab => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10785,7 +10785,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTag")]
-        Icon::CgTag => {
+        CgIcon::CgTag => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10801,7 +10801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTally")]
-        Icon::CgTally => {
+        CgIcon::CgTally => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10819,7 +10819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTapDouble")]
-        Icon::CgTapDouble => {
+        CgIcon::CgTapDouble => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10839,7 +10839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTapSingle")]
-        Icon::CgTapSingle => {
+        CgIcon::CgTapSingle => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10856,7 +10856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTemplate")]
-        Icon::CgTemplate => {
+        CgIcon::CgTemplate => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10872,7 +10872,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTennis")]
-        Icon::CgTennis => {
+        CgIcon::CgTennis => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10885,7 +10885,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTerminal")]
-        Icon::CgTerminal => {
+        CgIcon::CgTerminal => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10901,7 +10901,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTerrain")]
-        Icon::CgTerrain => {
+        CgIcon::CgTerrain => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10914,7 +10914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgThermometer")]
-        Icon::CgThermometer => {
+        CgIcon::CgThermometer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10929,7 +10929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgThermostat")]
-        Icon::CgThermostat => {
+        CgIcon::CgThermostat => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10944,7 +10944,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTikcode")]
-        Icon::CgTikcode => {
+        CgIcon::CgTikcode => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10962,7 +10962,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTime")]
-        Icon::CgTime => {
+        CgIcon::CgTime => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10976,7 +10976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTimelapse")]
-        Icon::CgTimelapse => {
+        CgIcon::CgTimelapse => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10991,7 +10991,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTimer")]
-        Icon::CgTimer => {
+        CgIcon::CgTimer => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11005,7 +11005,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToday")]
-        Icon::CgToday => {
+        CgIcon::CgToday => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11021,7 +11021,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToggleOff")]
-        Icon::CgToggleOff => {
+        CgIcon::CgToggleOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11036,7 +11036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToggleOn")]
-        Icon::CgToggleOn => {
+        CgIcon::CgToggleOn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11051,7 +11051,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToggleSquare")]
-        Icon::CgToggleSquare => {
+        CgIcon::CgToggleSquare => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11066,7 +11066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToggleSquareOff")]
-        Icon::CgToggleSquareOff => {
+        CgIcon::CgToggleSquareOff => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11081,7 +11081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToolbarBottom")]
-        Icon::CgToolbarBottom => {
+        CgIcon::CgToolbarBottom => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11095,7 +11095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToolbarLeft")]
-        Icon::CgToolbarLeft => {
+        CgIcon::CgToolbarLeft => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11109,7 +11109,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToolbarRight")]
-        Icon::CgToolbarRight => {
+        CgIcon::CgToolbarRight => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11123,7 +11123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToolbarTop")]
-        Icon::CgToolbarTop => {
+        CgIcon::CgToolbarTop => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11137,7 +11137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgToolbox")]
-        Icon::CgToolbox => {
+        CgIcon::CgToolbox => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11150,7 +11150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTouchpad")]
-        Icon::CgTouchpad => {
+        CgIcon::CgTouchpad => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11163,7 +11163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrack")]
-        Icon::CgTrack => {
+        CgIcon::CgTrack => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11178,7 +11178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTranscript")]
-        Icon::CgTranscript => {
+        CgIcon::CgTranscript => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11199,7 +11199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrash")]
-        Icon::CgTrash => {
+        CgIcon::CgTrash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11214,7 +11214,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrashEmpty")]
-        Icon::CgTrashEmpty => {
+        CgIcon::CgTrashEmpty => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11227,7 +11227,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTree")]
-        Icon::CgTree => {
+        CgIcon::CgTree => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11240,7 +11240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrees")]
-        Icon::CgTrees => {
+        CgIcon::CgTrees => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11253,7 +11253,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrello")]
-        Icon::CgTrello => {
+        CgIcon::CgTrello => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11270,7 +11270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrending")]
-        Icon::CgTrending => {
+        CgIcon::CgTrending => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11282,7 +11282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrendingDown")]
-        Icon::CgTrendingDown => {
+        CgIcon::CgTrendingDown => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11294,7 +11294,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTrophy")]
-        Icon::CgTrophy => {
+        CgIcon::CgTrophy => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11309,7 +11309,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTv")]
-        Icon::CgTv => {
+        CgIcon::CgTv => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11323,7 +11323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTwilio")]
-        Icon::CgTwilio => {
+        CgIcon::CgTwilio => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11344,7 +11344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgTwitter")]
-        Icon::CgTwitter => {
+        CgIcon::CgTwitter => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11357,7 +11357,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUiKit")]
-        Icon::CgUiKit => {
+        CgIcon::CgUiKit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11374,7 +11374,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUmbrella")]
-        Icon::CgUmbrella => {
+        CgIcon::CgUmbrella => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11387,7 +11387,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUnavailable")]
-        Icon::CgUnavailable => {
+        CgIcon::CgUnavailable => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11400,7 +11400,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUnblock")]
-        Icon::CgUnblock => {
+        CgIcon::CgUnblock => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11413,7 +11413,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUndo")]
-        Icon::CgUndo => {
+        CgIcon::CgUndo => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11425,7 +11425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUnfold")]
-        Icon::CgUnfold => {
+        CgIcon::CgUnfold => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11437,7 +11437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUnsplash")]
-        Icon::CgUnsplash => {
+        CgIcon::CgUnsplash => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11449,7 +11449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUsb")]
-        Icon::CgUsb => {
+        CgIcon::CgUsb => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11464,7 +11464,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUsbC")]
-        Icon::CgUsbC => {
+        CgIcon::CgUsbC => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11479,7 +11479,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUser")]
-        Icon::CgUser => {
+        CgIcon::CgUser => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11494,7 +11494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUserAdd")]
-        Icon::CgUserAdd => {
+        CgIcon::CgUserAdd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11511,7 +11511,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUserList")]
-        Icon::CgUserList => {
+        CgIcon::CgUserList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11528,7 +11528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUserRemove")]
-        Icon::CgUserRemove => {
+        CgIcon::CgUserRemove => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11544,7 +11544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgUserlane")]
-        Icon::CgUserlane => {
+        CgIcon::CgUserlane => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11559,7 +11559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewCols")]
-        Icon::CgViewCols => {
+        CgIcon::CgViewCols => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11572,7 +11572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewComfortable")]
-        Icon::CgViewComfortable => {
+        CgIcon::CgViewComfortable => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11585,7 +11585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewDay")]
-        Icon::CgViewDay => {
+        CgIcon::CgViewDay => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11598,7 +11598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewGrid")]
-        Icon::CgViewGrid => {
+        CgIcon::CgViewGrid => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11611,7 +11611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewList")]
-        Icon::CgViewList => {
+        CgIcon::CgViewList => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11624,7 +11624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewMonth")]
-        Icon::CgViewMonth => {
+        CgIcon::CgViewMonth => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11637,7 +11637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgViewSplit")]
-        Icon::CgViewSplit => {
+        CgIcon::CgViewSplit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11650,7 +11650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgVinyl")]
-        Icon::CgVinyl => {
+        CgIcon::CgVinyl => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11665,7 +11665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgVoicemail")]
-        Icon::CgVoicemail => {
+        CgIcon::CgVoicemail => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11678,7 +11678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgVoicemailO")]
-        Icon::CgVoicemailO => {
+        CgIcon::CgVoicemailO => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11694,7 +11694,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgVoicemailR")]
-        Icon::CgVoicemailR => {
+        CgIcon::CgVoicemailR => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11710,7 +11710,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgVolume")]
-        Icon::CgVolume => {
+        CgIcon::CgVolume => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11727,7 +11727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgWebcam")]
-        Icon::CgWebcam => {
+        CgIcon::CgWebcam => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11742,7 +11742,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgWebsite")]
-        Icon::CgWebsite => {
+        CgIcon::CgWebsite => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11764,7 +11764,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgWindows")]
-        Icon::CgWindows => {
+        CgIcon::CgWindows => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11776,7 +11776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgWorkAlt")]
-        Icon::CgWorkAlt => {
+        CgIcon::CgWorkAlt => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11789,7 +11789,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgYinyang")]
-        Icon::CgYinyang => {
+        CgIcon::CgYinyang => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11804,7 +11804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgYoutube")]
-        Icon::CgYoutube => {
+        CgIcon::CgYoutube => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11817,7 +11817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgZeit")]
-        Icon::CgZeit => {
+        CgIcon::CgZeit => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11829,7 +11829,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgZoomIn")]
-        Icon::CgZoomIn => {
+        CgIcon::CgZoomIn => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11842,7 +11842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "CgZoomOut")]
-        Icon::CgZoomOut => {
+        CgIcon::CgZoomOut => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =

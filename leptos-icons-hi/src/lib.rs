@@ -17,7 +17,7 @@
     not(feature = "serde"),
     derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
 )]
-pub enum Icon {
+pub enum HiIcon {
     #[cfg(feature = "HiAcademicCapOutlineLg")]
     HiAcademicCapOutlineLg,
     #[cfg(feature = "HiAcademicCapSolidLg")]
@@ -1775,12 +1775,12 @@ pub enum Icon {
 use leptos::*;
 
 #[component]
-pub fn LeptosIcon(
+pub fn LeptosHiIcon(
     #[allow(unused)]
     cx: Scope,
     /// Variant of the icon to display.
     #[allow(unused)]
-    icon: Icon,
+    icon: HiIcon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional, default = String::from("1em"))]
     #[allow(unused)]
@@ -1804,7 +1804,7 @@ pub fn LeptosIcon(
 ) -> impl IntoView {
     match icon {
         #[cfg(feature = "HiAcademicCapOutlineLg")]
-        Icon::HiAcademicCapOutlineLg => {
+        HiIcon::HiAcademicCapOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1817,7 +1817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAcademicCapSolidLg")]
-        Icon::HiAcademicCapSolidLg => {
+        HiIcon::HiAcademicCapSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1833,7 +1833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAcademicCapSolidMd")]
-        Icon::HiAcademicCapSolidMd => {
+        HiIcon::HiAcademicCapSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -1846,7 +1846,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAdjustmentsHorizontalOutlineLg")]
-        Icon::HiAdjustmentsHorizontalOutlineLg => {
+        HiIcon::HiAdjustmentsHorizontalOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1859,7 +1859,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAdjustmentsHorizontalSolidLg")]
-        Icon::HiAdjustmentsHorizontalSolidLg => {
+        HiIcon::HiAdjustmentsHorizontalSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1887,7 +1887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAdjustmentsHorizontalSolidMd")]
-        Icon::HiAdjustmentsHorizontalSolidMd => {
+        HiIcon::HiAdjustmentsHorizontalSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -1915,7 +1915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAdjustmentsVerticalOutlineLg")]
-        Icon::HiAdjustmentsVerticalOutlineLg => {
+        HiIcon::HiAdjustmentsVerticalOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1928,7 +1928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAdjustmentsVerticalSolidLg")]
-        Icon::HiAdjustmentsVerticalSolidLg => {
+        HiIcon::HiAdjustmentsVerticalSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1956,7 +1956,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAdjustmentsVerticalSolidMd")]
-        Icon::HiAdjustmentsVerticalSolidMd => {
+        HiIcon::HiAdjustmentsVerticalSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -1984,7 +1984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxArrowDownOutlineLg")]
-        Icon::HiArchiveBoxArrowDownOutlineLg => {
+        HiIcon::HiArchiveBoxArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -1997,7 +1997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxArrowDownSolidLg")]
-        Icon::HiArchiveBoxArrowDownSolidLg => {
+        HiIcon::HiArchiveBoxArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2012,7 +2012,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxArrowDownSolidMd")]
-        Icon::HiArchiveBoxArrowDownSolidMd => {
+        HiIcon::HiArchiveBoxArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2025,7 +2025,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxOutlineLg")]
-        Icon::HiArchiveBoxOutlineLg => {
+        HiIcon::HiArchiveBoxOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2038,7 +2038,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxSolidLg")]
-        Icon::HiArchiveBoxSolidLg => {
+        HiIcon::HiArchiveBoxSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2053,7 +2053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxSolidMd")]
-        Icon::HiArchiveBoxSolidMd => {
+        HiIcon::HiArchiveBoxSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2068,7 +2068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxXMarkOutlineLg")]
-        Icon::HiArchiveBoxXMarkOutlineLg => {
+        HiIcon::HiArchiveBoxXMarkOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2081,7 +2081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxXMarkSolidLg")]
-        Icon::HiArchiveBoxXMarkSolidLg => {
+        HiIcon::HiArchiveBoxXMarkSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2096,7 +2096,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArchiveBoxXMarkSolidMd")]
-        Icon::HiArchiveBoxXMarkSolidMd => {
+        HiIcon::HiArchiveBoxXMarkSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2111,7 +2111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownCircleOutlineLg")]
-        Icon::HiArrowDownCircleOutlineLg => {
+        HiIcon::HiArrowDownCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2124,7 +2124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownCircleSolidLg")]
-        Icon::HiArrowDownCircleSolidLg => {
+        HiIcon::HiArrowDownCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2137,7 +2137,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownCircleSolidMd")]
-        Icon::HiArrowDownCircleSolidMd => {
+        HiIcon::HiArrowDownCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2150,7 +2150,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownLeftOutlineLg")]
-        Icon::HiArrowDownLeftOutlineLg => {
+        HiIcon::HiArrowDownLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2163,7 +2163,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownLeftSolidLg")]
-        Icon::HiArrowDownLeftSolidLg => {
+        HiIcon::HiArrowDownLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2176,7 +2176,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownLeftSolidMd")]
-        Icon::HiArrowDownLeftSolidMd => {
+        HiIcon::HiArrowDownLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2189,7 +2189,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOnSquareOutlineLg")]
-        Icon::HiArrowDownOnSquareOutlineLg => {
+        HiIcon::HiArrowDownOnSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2202,7 +2202,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOnSquareSolidLg")]
-        Icon::HiArrowDownOnSquareSolidLg => {
+        HiIcon::HiArrowDownOnSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2216,7 +2216,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOnSquareSolidMd")]
-        Icon::HiArrowDownOnSquareSolidMd => {
+        HiIcon::HiArrowDownOnSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2228,7 +2228,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOnSquareStackOutlineLg")]
-        Icon::HiArrowDownOnSquareStackOutlineLg => {
+        HiIcon::HiArrowDownOnSquareStackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2241,7 +2241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOnSquareStackSolidLg")]
-        Icon::HiArrowDownOnSquareStackSolidLg => {
+        HiIcon::HiArrowDownOnSquareStackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2256,7 +2256,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOnSquareStackSolidMd")]
-        Icon::HiArrowDownOnSquareStackSolidMd => {
+        HiIcon::HiArrowDownOnSquareStackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2269,7 +2269,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownOutlineLg")]
-        Icon::HiArrowDownOutlineLg => {
+        HiIcon::HiArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2282,7 +2282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownRightOutlineLg")]
-        Icon::HiArrowDownRightOutlineLg => {
+        HiIcon::HiArrowDownRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2295,7 +2295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownRightSolidLg")]
-        Icon::HiArrowDownRightSolidLg => {
+        HiIcon::HiArrowDownRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2308,7 +2308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownRightSolidMd")]
-        Icon::HiArrowDownRightSolidMd => {
+        HiIcon::HiArrowDownRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2320,7 +2320,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownSolidLg")]
-        Icon::HiArrowDownSolidLg => {
+        HiIcon::HiArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2333,7 +2333,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownSolidMd")]
-        Icon::HiArrowDownSolidMd => {
+        HiIcon::HiArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2346,7 +2346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownTrayOutlineLg")]
-        Icon::HiArrowDownTrayOutlineLg => {
+        HiIcon::HiArrowDownTrayOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2359,7 +2359,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownTraySolidLg")]
-        Icon::HiArrowDownTraySolidLg => {
+        HiIcon::HiArrowDownTraySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2372,7 +2372,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowDownTraySolidMd")]
-        Icon::HiArrowDownTraySolidMd => {
+        HiIcon::HiArrowDownTraySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2386,7 +2386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftCircleOutlineLg")]
-        Icon::HiArrowLeftCircleOutlineLg => {
+        HiIcon::HiArrowLeftCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2399,7 +2399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftCircleSolidLg")]
-        Icon::HiArrowLeftCircleSolidLg => {
+        HiIcon::HiArrowLeftCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2412,7 +2412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftCircleSolidMd")]
-        Icon::HiArrowLeftCircleSolidMd => {
+        HiIcon::HiArrowLeftCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2428,7 +2428,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftOnRectangleOutlineLg")]
-        Icon::HiArrowLeftOnRectangleOutlineLg => {
+        HiIcon::HiArrowLeftOnRectangleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2441,7 +2441,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftOnRectangleSolidLg")]
-        Icon::HiArrowLeftOnRectangleSolidLg => {
+        HiIcon::HiArrowLeftOnRectangleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2454,7 +2454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftOnRectangleSolidMd")]
-        Icon::HiArrowLeftOnRectangleSolidMd => {
+        HiIcon::HiArrowLeftOnRectangleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2470,7 +2470,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftOutlineLg")]
-        Icon::HiArrowLeftOutlineLg => {
+        HiIcon::HiArrowLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2483,7 +2483,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftSolidLg")]
-        Icon::HiArrowLeftSolidLg => {
+        HiIcon::HiArrowLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2496,7 +2496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLeftSolidMd")]
-        Icon::HiArrowLeftSolidMd => {
+        HiIcon::HiArrowLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2509,7 +2509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongDownOutlineLg")]
-        Icon::HiArrowLongDownOutlineLg => {
+        HiIcon::HiArrowLongDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2522,7 +2522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongDownSolidLg")]
-        Icon::HiArrowLongDownSolidLg => {
+        HiIcon::HiArrowLongDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2535,7 +2535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongDownSolidMd")]
-        Icon::HiArrowLongDownSolidMd => {
+        HiIcon::HiArrowLongDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2548,7 +2548,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongLeftOutlineLg")]
-        Icon::HiArrowLongLeftOutlineLg => {
+        HiIcon::HiArrowLongLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2561,7 +2561,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongLeftSolidLg")]
-        Icon::HiArrowLongLeftSolidLg => {
+        HiIcon::HiArrowLongLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2574,7 +2574,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongLeftSolidMd")]
-        Icon::HiArrowLongLeftSolidMd => {
+        HiIcon::HiArrowLongLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2587,7 +2587,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongRightOutlineLg")]
-        Icon::HiArrowLongRightOutlineLg => {
+        HiIcon::HiArrowLongRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2600,7 +2600,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongRightSolidLg")]
-        Icon::HiArrowLongRightSolidLg => {
+        HiIcon::HiArrowLongRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2613,7 +2613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongRightSolidMd")]
-        Icon::HiArrowLongRightSolidMd => {
+        HiIcon::HiArrowLongRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2626,7 +2626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongUpOutlineLg")]
-        Icon::HiArrowLongUpOutlineLg => {
+        HiIcon::HiArrowLongUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2639,7 +2639,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongUpSolidLg")]
-        Icon::HiArrowLongUpSolidLg => {
+        HiIcon::HiArrowLongUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2652,7 +2652,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowLongUpSolidMd")]
-        Icon::HiArrowLongUpSolidMd => {
+        HiIcon::HiArrowLongUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2665,7 +2665,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowPathOutlineLg")]
-        Icon::HiArrowPathOutlineLg => {
+        HiIcon::HiArrowPathOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2678,7 +2678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowPathRoundedSquareOutlineLg")]
-        Icon::HiArrowPathRoundedSquareOutlineLg => {
+        HiIcon::HiArrowPathRoundedSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2691,7 +2691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowPathRoundedSquareSolidLg")]
-        Icon::HiArrowPathRoundedSquareSolidLg => {
+        HiIcon::HiArrowPathRoundedSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2704,7 +2704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowPathRoundedSquareSolidMd")]
-        Icon::HiArrowPathRoundedSquareSolidMd => {
+        HiIcon::HiArrowPathRoundedSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2717,7 +2717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowPathSolidLg")]
-        Icon::HiArrowPathSolidLg => {
+        HiIcon::HiArrowPathSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2730,7 +2730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowPathSolidMd")]
-        Icon::HiArrowPathSolidMd => {
+        HiIcon::HiArrowPathSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2743,7 +2743,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightCircleOutlineLg")]
-        Icon::HiArrowRightCircleOutlineLg => {
+        HiIcon::HiArrowRightCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2756,7 +2756,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightCircleSolidLg")]
-        Icon::HiArrowRightCircleSolidLg => {
+        HiIcon::HiArrowRightCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2769,7 +2769,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightCircleSolidMd")]
-        Icon::HiArrowRightCircleSolidMd => {
+        HiIcon::HiArrowRightCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2782,7 +2782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightOnRectangleOutlineLg")]
-        Icon::HiArrowRightOnRectangleOutlineLg => {
+        HiIcon::HiArrowRightOnRectangleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2795,7 +2795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightOnRectangleSolidLg")]
-        Icon::HiArrowRightOnRectangleSolidLg => {
+        HiIcon::HiArrowRightOnRectangleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2808,7 +2808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightOnRectangleSolidMd")]
-        Icon::HiArrowRightOnRectangleSolidMd => {
+        HiIcon::HiArrowRightOnRectangleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2824,7 +2824,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightOutlineLg")]
-        Icon::HiArrowRightOutlineLg => {
+        HiIcon::HiArrowRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2837,7 +2837,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightSolidLg")]
-        Icon::HiArrowRightSolidLg => {
+        HiIcon::HiArrowRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2850,7 +2850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowRightSolidMd")]
-        Icon::HiArrowRightSolidMd => {
+        HiIcon::HiArrowRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2863,7 +2863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallDownOutlineLg")]
-        Icon::HiArrowSmallDownOutlineLg => {
+        HiIcon::HiArrowSmallDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2876,7 +2876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallDownSolidLg")]
-        Icon::HiArrowSmallDownSolidLg => {
+        HiIcon::HiArrowSmallDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2889,7 +2889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallDownSolidMd")]
-        Icon::HiArrowSmallDownSolidMd => {
+        HiIcon::HiArrowSmallDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2902,7 +2902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallLeftOutlineLg")]
-        Icon::HiArrowSmallLeftOutlineLg => {
+        HiIcon::HiArrowSmallLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2915,7 +2915,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallLeftSolidLg")]
-        Icon::HiArrowSmallLeftSolidLg => {
+        HiIcon::HiArrowSmallLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2928,7 +2928,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallLeftSolidMd")]
-        Icon::HiArrowSmallLeftSolidMd => {
+        HiIcon::HiArrowSmallLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2941,7 +2941,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallRightOutlineLg")]
-        Icon::HiArrowSmallRightOutlineLg => {
+        HiIcon::HiArrowSmallRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2954,7 +2954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallRightSolidLg")]
-        Icon::HiArrowSmallRightSolidLg => {
+        HiIcon::HiArrowSmallRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2967,7 +2967,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallRightSolidMd")]
-        Icon::HiArrowSmallRightSolidMd => {
+        HiIcon::HiArrowSmallRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -2980,7 +2980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallUpOutlineLg")]
-        Icon::HiArrowSmallUpOutlineLg => {
+        HiIcon::HiArrowSmallUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -2993,7 +2993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallUpSolidLg")]
-        Icon::HiArrowSmallUpSolidLg => {
+        HiIcon::HiArrowSmallUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3006,7 +3006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowSmallUpSolidMd")]
-        Icon::HiArrowSmallUpSolidMd => {
+        HiIcon::HiArrowSmallUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3019,7 +3019,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTopRightOnSquareOutlineLg")]
-        Icon::HiArrowTopRightOnSquareOutlineLg => {
+        HiIcon::HiArrowTopRightOnSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3032,7 +3032,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTopRightOnSquareSolidLg")]
-        Icon::HiArrowTopRightOnSquareSolidLg => {
+        HiIcon::HiArrowTopRightOnSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3045,7 +3045,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTopRightOnSquareSolidMd")]
-        Icon::HiArrowTopRightOnSquareSolidMd => {
+        HiIcon::HiArrowTopRightOnSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3061,7 +3061,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTrendingDownOutlineLg")]
-        Icon::HiArrowTrendingDownOutlineLg => {
+        HiIcon::HiArrowTrendingDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3074,7 +3074,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTrendingDownSolidLg")]
-        Icon::HiArrowTrendingDownSolidLg => {
+        HiIcon::HiArrowTrendingDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3087,7 +3087,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTrendingDownSolidMd")]
-        Icon::HiArrowTrendingDownSolidMd => {
+        HiIcon::HiArrowTrendingDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3100,7 +3100,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTrendingUpOutlineLg")]
-        Icon::HiArrowTrendingUpOutlineLg => {
+        HiIcon::HiArrowTrendingUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3113,7 +3113,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTrendingUpSolidLg")]
-        Icon::HiArrowTrendingUpSolidLg => {
+        HiIcon::HiArrowTrendingUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3126,7 +3126,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowTrendingUpSolidMd")]
-        Icon::HiArrowTrendingUpSolidMd => {
+        HiIcon::HiArrowTrendingUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3139,7 +3139,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpCircleOutlineLg")]
-        Icon::HiArrowUpCircleOutlineLg => {
+        HiIcon::HiArrowUpCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3152,7 +3152,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpCircleSolidLg")]
-        Icon::HiArrowUpCircleSolidLg => {
+        HiIcon::HiArrowUpCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3165,7 +3165,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpCircleSolidMd")]
-        Icon::HiArrowUpCircleSolidMd => {
+        HiIcon::HiArrowUpCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3178,7 +3178,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpLeftOutlineLg")]
-        Icon::HiArrowUpLeftOutlineLg => {
+        HiIcon::HiArrowUpLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3191,7 +3191,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpLeftSolidLg")]
-        Icon::HiArrowUpLeftSolidLg => {
+        HiIcon::HiArrowUpLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3204,7 +3204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpLeftSolidMd")]
-        Icon::HiArrowUpLeftSolidMd => {
+        HiIcon::HiArrowUpLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3217,7 +3217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOnSquareOutlineLg")]
-        Icon::HiArrowUpOnSquareOutlineLg => {
+        HiIcon::HiArrowUpOnSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3230,7 +3230,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOnSquareSolidLg")]
-        Icon::HiArrowUpOnSquareSolidLg => {
+        HiIcon::HiArrowUpOnSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3244,7 +3244,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOnSquareSolidMd")]
-        Icon::HiArrowUpOnSquareSolidMd => {
+        HiIcon::HiArrowUpOnSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3257,7 +3257,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOnSquareStackOutlineLg")]
-        Icon::HiArrowUpOnSquareStackOutlineLg => {
+        HiIcon::HiArrowUpOnSquareStackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3270,7 +3270,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOnSquareStackSolidLg")]
-        Icon::HiArrowUpOnSquareStackSolidLg => {
+        HiIcon::HiArrowUpOnSquareStackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3286,7 +3286,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOnSquareStackSolidMd")]
-        Icon::HiArrowUpOnSquareStackSolidMd => {
+        HiIcon::HiArrowUpOnSquareStackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3299,7 +3299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpOutlineLg")]
-        Icon::HiArrowUpOutlineLg => {
+        HiIcon::HiArrowUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3312,7 +3312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpRightOutlineLg")]
-        Icon::HiArrowUpRightOutlineLg => {
+        HiIcon::HiArrowUpRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3325,7 +3325,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpRightSolidLg")]
-        Icon::HiArrowUpRightSolidLg => {
+        HiIcon::HiArrowUpRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3338,7 +3338,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpRightSolidMd")]
-        Icon::HiArrowUpRightSolidMd => {
+        HiIcon::HiArrowUpRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3351,7 +3351,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpSolidLg")]
-        Icon::HiArrowUpSolidLg => {
+        HiIcon::HiArrowUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3364,7 +3364,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpSolidMd")]
-        Icon::HiArrowUpSolidMd => {
+        HiIcon::HiArrowUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3377,7 +3377,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpTrayOutlineLg")]
-        Icon::HiArrowUpTrayOutlineLg => {
+        HiIcon::HiArrowUpTrayOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3390,7 +3390,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpTraySolidLg")]
-        Icon::HiArrowUpTraySolidLg => {
+        HiIcon::HiArrowUpTraySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3403,7 +3403,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUpTraySolidMd")]
-        Icon::HiArrowUpTraySolidMd => {
+        HiIcon::HiArrowUpTraySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3417,7 +3417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnDownOutlineLg")]
-        Icon::HiArrowUturnDownOutlineLg => {
+        HiIcon::HiArrowUturnDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3430,7 +3430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnDownSolidLg")]
-        Icon::HiArrowUturnDownSolidLg => {
+        HiIcon::HiArrowUturnDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3443,7 +3443,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnDownSolidMd")]
-        Icon::HiArrowUturnDownSolidMd => {
+        HiIcon::HiArrowUturnDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3456,7 +3456,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnLeftOutlineLg")]
-        Icon::HiArrowUturnLeftOutlineLg => {
+        HiIcon::HiArrowUturnLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3469,7 +3469,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnLeftSolidLg")]
-        Icon::HiArrowUturnLeftSolidLg => {
+        HiIcon::HiArrowUturnLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3482,7 +3482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnLeftSolidMd")]
-        Icon::HiArrowUturnLeftSolidMd => {
+        HiIcon::HiArrowUturnLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3495,7 +3495,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnRightOutlineLg")]
-        Icon::HiArrowUturnRightOutlineLg => {
+        HiIcon::HiArrowUturnRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3508,7 +3508,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnRightSolidLg")]
-        Icon::HiArrowUturnRightSolidLg => {
+        HiIcon::HiArrowUturnRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3521,7 +3521,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnRightSolidMd")]
-        Icon::HiArrowUturnRightSolidMd => {
+        HiIcon::HiArrowUturnRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3534,7 +3534,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnUpOutlineLg")]
-        Icon::HiArrowUturnUpOutlineLg => {
+        HiIcon::HiArrowUturnUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3547,7 +3547,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnUpSolidLg")]
-        Icon::HiArrowUturnUpSolidLg => {
+        HiIcon::HiArrowUturnUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3560,7 +3560,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowUturnUpSolidMd")]
-        Icon::HiArrowUturnUpSolidMd => {
+        HiIcon::HiArrowUturnUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3573,7 +3573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsPointingInOutlineLg")]
-        Icon::HiArrowsPointingInOutlineLg => {
+        HiIcon::HiArrowsPointingInOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3586,7 +3586,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsPointingInSolidLg")]
-        Icon::HiArrowsPointingInSolidLg => {
+        HiIcon::HiArrowsPointingInSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3599,7 +3599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsPointingInSolidMd")]
-        Icon::HiArrowsPointingInSolidMd => {
+        HiIcon::HiArrowsPointingInSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3617,7 +3617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsPointingOutOutlineLg")]
-        Icon::HiArrowsPointingOutOutlineLg => {
+        HiIcon::HiArrowsPointingOutOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3630,7 +3630,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsPointingOutSolidLg")]
-        Icon::HiArrowsPointingOutSolidLg => {
+        HiIcon::HiArrowsPointingOutSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3643,7 +3643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsPointingOutSolidMd")]
-        Icon::HiArrowsPointingOutSolidMd => {
+        HiIcon::HiArrowsPointingOutSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3661,7 +3661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsRightLeftOutlineLg")]
-        Icon::HiArrowsRightLeftOutlineLg => {
+        HiIcon::HiArrowsRightLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3674,7 +3674,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsRightLeftSolidLg")]
-        Icon::HiArrowsRightLeftSolidLg => {
+        HiIcon::HiArrowsRightLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3687,7 +3687,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsRightLeftSolidMd")]
-        Icon::HiArrowsRightLeftSolidMd => {
+        HiIcon::HiArrowsRightLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3700,7 +3700,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsUpDownOutlineLg")]
-        Icon::HiArrowsUpDownOutlineLg => {
+        HiIcon::HiArrowsUpDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3713,7 +3713,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsUpDownSolidLg")]
-        Icon::HiArrowsUpDownSolidLg => {
+        HiIcon::HiArrowsUpDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3726,7 +3726,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiArrowsUpDownSolidMd")]
-        Icon::HiArrowsUpDownSolidMd => {
+        HiIcon::HiArrowsUpDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3739,7 +3739,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAtSymbolOutlineLg")]
-        Icon::HiAtSymbolOutlineLg => {
+        HiIcon::HiAtSymbolOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3752,7 +3752,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAtSymbolSolidLg")]
-        Icon::HiAtSymbolSolidLg => {
+        HiIcon::HiAtSymbolSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3765,7 +3765,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiAtSymbolSolidMd")]
-        Icon::HiAtSymbolSolidMd => {
+        HiIcon::HiAtSymbolSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3778,7 +3778,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBackspaceOutlineLg")]
-        Icon::HiBackspaceOutlineLg => {
+        HiIcon::HiBackspaceOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3791,7 +3791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBackspaceSolidLg")]
-        Icon::HiBackspaceSolidLg => {
+        HiIcon::HiBackspaceSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3804,7 +3804,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBackspaceSolidMd")]
-        Icon::HiBackspaceSolidMd => {
+        HiIcon::HiBackspaceSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3817,7 +3817,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBackwardOutlineLg")]
-        Icon::HiBackwardOutlineLg => {
+        HiIcon::HiBackwardOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3833,7 +3833,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBackwardSolidLg")]
-        Icon::HiBackwardSolidLg => {
+        HiIcon::HiBackwardSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3845,7 +3845,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBackwardSolidMd")]
-        Icon::HiBackwardSolidMd => {
+        HiIcon::HiBackwardSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3857,7 +3857,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBanknotesOutlineLg")]
-        Icon::HiBanknotesOutlineLg => {
+        HiIcon::HiBanknotesOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3870,7 +3870,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBanknotesSolidLg")]
-        Icon::HiBanknotesSolidLg => {
+        HiIcon::HiBanknotesSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3887,7 +3887,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBanknotesSolidMd")]
-        Icon::HiBanknotesSolidMd => {
+        HiIcon::HiBanknotesSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3900,7 +3900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars2OutlineLg")]
-        Icon::HiBars2OutlineLg => {
+        HiIcon::HiBars2OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3912,7 +3912,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars2SolidLg")]
-        Icon::HiBars2SolidLg => {
+        HiIcon::HiBars2SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3925,7 +3925,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars2SolidMd")]
-        Icon::HiBars2SolidMd => {
+        HiIcon::HiBars2SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3938,7 +3938,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3BottomLeftOutlineLg")]
-        Icon::HiBars3BottomLeftOutlineLg => {
+        HiIcon::HiBars3BottomLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3951,7 +3951,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3BottomLeftSolidLg")]
-        Icon::HiBars3BottomLeftSolidLg => {
+        HiIcon::HiBars3BottomLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3964,7 +3964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3BottomLeftSolidMd")]
-        Icon::HiBars3BottomLeftSolidMd => {
+        HiIcon::HiBars3BottomLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -3980,7 +3980,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3BottomRightOutlineLg")]
-        Icon::HiBars3BottomRightOutlineLg => {
+        HiIcon::HiBars3BottomRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -3993,7 +3993,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3BottomRightSolidLg")]
-        Icon::HiBars3BottomRightSolidLg => {
+        HiIcon::HiBars3BottomRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4006,7 +4006,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3BottomRightSolidMd")]
-        Icon::HiBars3BottomRightSolidMd => {
+        HiIcon::HiBars3BottomRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4022,7 +4022,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3CenterLeftOutlineLg")]
-        Icon::HiBars3CenterLeftOutlineLg => {
+        HiIcon::HiBars3CenterLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4035,7 +4035,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3CenterLeftSolidLg")]
-        Icon::HiBars3CenterLeftSolidLg => {
+        HiIcon::HiBars3CenterLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4048,7 +4048,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3CenterLeftSolidMd")]
-        Icon::HiBars3CenterLeftSolidMd => {
+        HiIcon::HiBars3CenterLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4064,7 +4064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3OutlineLg")]
-        Icon::HiBars3OutlineLg => {
+        HiIcon::HiBars3OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4077,7 +4077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3SolidLg")]
-        Icon::HiBars3SolidLg => {
+        HiIcon::HiBars3SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4090,7 +4090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars3SolidMd")]
-        Icon::HiBars3SolidMd => {
+        HiIcon::HiBars3SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4103,7 +4103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars4OutlineLg")]
-        Icon::HiBars4OutlineLg => {
+        HiIcon::HiBars4OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4116,7 +4116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars4SolidLg")]
-        Icon::HiBars4SolidLg => {
+        HiIcon::HiBars4SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4129,7 +4129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBars4SolidMd")]
-        Icon::HiBars4SolidMd => {
+        HiIcon::HiBars4SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4142,7 +4142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBarsArrowDownOutlineLg")]
-        Icon::HiBarsArrowDownOutlineLg => {
+        HiIcon::HiBarsArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4155,7 +4155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBarsArrowDownSolidLg")]
-        Icon::HiBarsArrowDownSolidLg => {
+        HiIcon::HiBarsArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4168,7 +4168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBarsArrowDownSolidMd")]
-        Icon::HiBarsArrowDownSolidMd => {
+        HiIcon::HiBarsArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4181,7 +4181,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBarsArrowUpOutlineLg")]
-        Icon::HiBarsArrowUpOutlineLg => {
+        HiIcon::HiBarsArrowUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4194,7 +4194,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBarsArrowUpSolidLg")]
-        Icon::HiBarsArrowUpSolidLg => {
+        HiIcon::HiBarsArrowUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4207,7 +4207,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBarsArrowUpSolidMd")]
-        Icon::HiBarsArrowUpSolidMd => {
+        HiIcon::HiBarsArrowUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4220,7 +4220,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery0OutlineLg")]
-        Icon::HiBattery0OutlineLg => {
+        HiIcon::HiBattery0OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4233,7 +4233,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery0SolidLg")]
-        Icon::HiBattery0SolidLg => {
+        HiIcon::HiBattery0SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4246,7 +4246,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery0SolidMd")]
-        Icon::HiBattery0SolidMd => {
+        HiIcon::HiBattery0SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4259,7 +4259,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery100OutlineLg")]
-        Icon::HiBattery100OutlineLg => {
+        HiIcon::HiBattery100OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4272,7 +4272,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery100SolidLg")]
-        Icon::HiBattery100SolidLg => {
+        HiIcon::HiBattery100SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4285,7 +4285,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery100SolidMd")]
-        Icon::HiBattery100SolidMd => {
+        HiIcon::HiBattery100SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4300,7 +4300,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery50OutlineLg")]
-        Icon::HiBattery50OutlineLg => {
+        HiIcon::HiBattery50OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4313,7 +4313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery50SolidLg")]
-        Icon::HiBattery50SolidLg => {
+        HiIcon::HiBattery50SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4328,7 +4328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBattery50SolidMd")]
-        Icon::HiBattery50SolidMd => {
+        HiIcon::HiBattery50SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4343,7 +4343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBeakerOutlineLg")]
-        Icon::HiBeakerOutlineLg => {
+        HiIcon::HiBeakerOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4356,7 +4356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBeakerSolidLg")]
-        Icon::HiBeakerSolidLg => {
+        HiIcon::HiBeakerSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4369,7 +4369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBeakerSolidMd")]
-        Icon::HiBeakerSolidMd => {
+        HiIcon::HiBeakerSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4382,7 +4382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellAlertOutlineLg")]
-        Icon::HiBellAlertOutlineLg => {
+        HiIcon::HiBellAlertOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4395,7 +4395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellAlertSolidLg")]
-        Icon::HiBellAlertSolidLg => {
+        HiIcon::HiBellAlertSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4412,7 +4412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellAlertSolidMd")]
-        Icon::HiBellAlertSolidMd => {
+        HiIcon::HiBellAlertSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4429,7 +4429,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellOutlineLg")]
-        Icon::HiBellOutlineLg => {
+        HiIcon::HiBellOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4442,7 +4442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSlashOutlineLg")]
-        Icon::HiBellSlashOutlineLg => {
+        HiIcon::HiBellSlashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4455,7 +4455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSlashSolidLg")]
-        Icon::HiBellSlashSolidLg => {
+        HiIcon::HiBellSlashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4472,7 +4472,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSlashSolidMd")]
-        Icon::HiBellSlashSolidMd => {
+        HiIcon::HiBellSlashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4488,7 +4488,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSnoozeOutlineLg")]
-        Icon::HiBellSnoozeOutlineLg => {
+        HiIcon::HiBellSnoozeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4501,7 +4501,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSnoozeSolidLg")]
-        Icon::HiBellSnoozeSolidLg => {
+        HiIcon::HiBellSnoozeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4514,7 +4514,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSnoozeSolidMd")]
-        Icon::HiBellSnoozeSolidMd => {
+        HiIcon::HiBellSnoozeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4527,7 +4527,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSolidLg")]
-        Icon::HiBellSolidLg => {
+        HiIcon::HiBellSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4540,7 +4540,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBellSolidMd")]
-        Icon::HiBellSolidMd => {
+        HiIcon::HiBellSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4553,7 +4553,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBoltOutlineLg")]
-        Icon::HiBoltOutlineLg => {
+        HiIcon::HiBoltOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4566,7 +4566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBoltSlashOutlineLg")]
-        Icon::HiBoltSlashOutlineLg => {
+        HiIcon::HiBoltSlashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4579,7 +4579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBoltSlashSolidLg")]
-        Icon::HiBoltSlashSolidLg => {
+        HiIcon::HiBoltSlashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4595,7 +4595,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBoltSlashSolidMd")]
-        Icon::HiBoltSlashSolidMd => {
+        HiIcon::HiBoltSlashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4616,7 +4616,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBoltSolidLg")]
-        Icon::HiBoltSolidLg => {
+        HiIcon::HiBoltSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4629,7 +4629,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBoltSolidMd")]
-        Icon::HiBoltSolidMd => {
+        HiIcon::HiBoltSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4641,7 +4641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookOpenOutlineLg")]
-        Icon::HiBookOpenOutlineLg => {
+        HiIcon::HiBookOpenOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4654,7 +4654,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookOpenSolidLg")]
-        Icon::HiBookOpenSolidLg => {
+        HiIcon::HiBookOpenSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4668,7 +4668,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookOpenSolidMd")]
-        Icon::HiBookOpenSolidMd => {
+        HiIcon::HiBookOpenSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4682,7 +4682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkOutlineLg")]
-        Icon::HiBookmarkOutlineLg => {
+        HiIcon::HiBookmarkOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4695,7 +4695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSlashOutlineLg")]
-        Icon::HiBookmarkSlashOutlineLg => {
+        HiIcon::HiBookmarkSlashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4708,7 +4708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSlashSolidLg")]
-        Icon::HiBookmarkSlashSolidLg => {
+        HiIcon::HiBookmarkSlashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4724,7 +4724,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSlashSolidMd")]
-        Icon::HiBookmarkSlashSolidMd => {
+        HiIcon::HiBookmarkSlashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4740,7 +4740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSolidLg")]
-        Icon::HiBookmarkSolidLg => {
+        HiIcon::HiBookmarkSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4753,7 +4753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSolidMd")]
-        Icon::HiBookmarkSolidMd => {
+        HiIcon::HiBookmarkSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4766,7 +4766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSquareOutlineLg")]
-        Icon::HiBookmarkSquareOutlineLg => {
+        HiIcon::HiBookmarkSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4779,7 +4779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSquareSolidLg")]
-        Icon::HiBookmarkSquareSolidLg => {
+        HiIcon::HiBookmarkSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4792,7 +4792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBookmarkSquareSolidMd")]
-        Icon::HiBookmarkSquareSolidMd => {
+        HiIcon::HiBookmarkSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4805,7 +4805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBriefcaseOutlineLg")]
-        Icon::HiBriefcaseOutlineLg => {
+        HiIcon::HiBriefcaseOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4820,7 +4820,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBriefcaseSolidLg")]
-        Icon::HiBriefcaseSolidLg => {
+        HiIcon::HiBriefcaseSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4835,7 +4835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBriefcaseSolidMd")]
-        Icon::HiBriefcaseSolidMd => {
+        HiIcon::HiBriefcaseSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4850,7 +4850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBugAntOutlineLg")]
-        Icon::HiBugAntOutlineLg => {
+        HiIcon::HiBugAntOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4863,7 +4863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBugAntSolidLg")]
-        Icon::HiBugAntSolidLg => {
+        HiIcon::HiBugAntSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4876,7 +4876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBugAntSolidMd")]
-        Icon::HiBugAntSolidMd => {
+        HiIcon::HiBugAntSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4889,7 +4889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingLibraryOutlineLg")]
-        Icon::HiBuildingLibraryOutlineLg => {
+        HiIcon::HiBuildingLibraryOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4902,7 +4902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingLibrarySolidLg")]
-        Icon::HiBuildingLibrarySolidLg => {
+        HiIcon::HiBuildingLibrarySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4919,7 +4919,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingLibrarySolidMd")]
-        Icon::HiBuildingLibrarySolidMd => {
+        HiIcon::HiBuildingLibrarySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4932,7 +4932,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingOffice2OutlineLg")]
-        Icon::HiBuildingOffice2OutlineLg => {
+        HiIcon::HiBuildingOffice2OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4945,7 +4945,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingOffice2SolidLg")]
-        Icon::HiBuildingOffice2SolidLg => {
+        HiIcon::HiBuildingOffice2SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4961,7 +4961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingOffice2SolidMd")]
-        Icon::HiBuildingOffice2SolidMd => {
+        HiIcon::HiBuildingOffice2SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -4977,7 +4977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingOfficeOutlineLg")]
-        Icon::HiBuildingOfficeOutlineLg => {
+        HiIcon::HiBuildingOfficeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -4990,7 +4990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingOfficeSolidLg")]
-        Icon::HiBuildingOfficeSolidLg => {
+        HiIcon::HiBuildingOfficeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5003,7 +5003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingOfficeSolidMd")]
-        Icon::HiBuildingOfficeSolidMd => {
+        HiIcon::HiBuildingOfficeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5016,7 +5016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingStorefrontOutlineLg")]
-        Icon::HiBuildingStorefrontOutlineLg => {
+        HiIcon::HiBuildingStorefrontOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5029,7 +5029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingStorefrontSolidLg")]
-        Icon::HiBuildingStorefrontSolidLg => {
+        HiIcon::HiBuildingStorefrontSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5044,7 +5044,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiBuildingStorefrontSolidMd")]
-        Icon::HiBuildingStorefrontSolidMd => {
+        HiIcon::HiBuildingStorefrontSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5058,7 +5058,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCakeOutlineLg")]
-        Icon::HiCakeOutlineLg => {
+        HiIcon::HiCakeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5071,7 +5071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCakeSolidLg")]
-        Icon::HiCakeSolidLg => {
+        HiIcon::HiCakeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5093,7 +5093,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCakeSolidMd")]
-        Icon::HiCakeSolidMd => {
+        HiIcon::HiCakeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5115,7 +5115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalculatorOutlineLg")]
-        Icon::HiCalculatorOutlineLg => {
+        HiIcon::HiCalculatorOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5128,7 +5128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalculatorSolidLg")]
-        Icon::HiCalculatorSolidLg => {
+        HiIcon::HiCalculatorSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5141,7 +5141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalculatorSolidMd")]
-        Icon::HiCalculatorSolidMd => {
+        HiIcon::HiCalculatorSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5154,7 +5154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalendarDaysOutlineLg")]
-        Icon::HiCalendarDaysOutlineLg => {
+        HiIcon::HiCalendarDaysOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5167,7 +5167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalendarDaysSolidLg")]
-        Icon::HiCalendarDaysSolidLg => {
+        HiIcon::HiCalendarDaysSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5204,7 +5204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalendarDaysSolidMd")]
-        Icon::HiCalendarDaysSolidMd => {
+        HiIcon::HiCalendarDaysSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5241,7 +5241,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalendarOutlineLg")]
-        Icon::HiCalendarOutlineLg => {
+        HiIcon::HiCalendarOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5254,7 +5254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalendarSolidLg")]
-        Icon::HiCalendarSolidLg => {
+        HiIcon::HiCalendarSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5267,7 +5267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCalendarSolidMd")]
-        Icon::HiCalendarSolidMd => {
+        HiIcon::HiCalendarSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5280,7 +5280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCameraOutlineLg")]
-        Icon::HiCameraOutlineLg => {
+        HiIcon::HiCameraOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5299,7 +5299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCameraSolidLg")]
-        Icon::HiCameraSolidLg => {
+        HiIcon::HiCameraSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5314,7 +5314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCameraSolidMd")]
-        Icon::HiCameraSolidMd => {
+        HiIcon::HiCameraSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5327,7 +5327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartBarOutlineLg")]
-        Icon::HiChartBarOutlineLg => {
+        HiIcon::HiChartBarOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5346,7 +5346,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartBarSolidLg")]
-        Icon::HiChartBarSolidLg => {
+        HiIcon::HiChartBarSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5362,7 +5362,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartBarSolidMd")]
-        Icon::HiChartBarSolidMd => {
+        HiIcon::HiChartBarSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5378,7 +5378,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartBarSquareOutlineLg")]
-        Icon::HiChartBarSquareOutlineLg => {
+        HiIcon::HiChartBarSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5391,7 +5391,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartBarSquareSolidLg")]
-        Icon::HiChartBarSquareSolidLg => {
+        HiIcon::HiChartBarSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5404,7 +5404,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartBarSquareSolidMd")]
-        Icon::HiChartBarSquareSolidMd => {
+        HiIcon::HiChartBarSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5417,7 +5417,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartPieOutlineLg")]
-        Icon::HiChartPieOutlineLg => {
+        HiIcon::HiChartPieOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5433,7 +5433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartPieSolidLg")]
-        Icon::HiChartPieSolidLg => {
+        HiIcon::HiChartPieSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5449,7 +5449,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChartPieSolidMd")]
-        Icon::HiChartPieSolidMd => {
+        HiIcon::HiChartPieSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5463,7 +5463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleBottomCenterOutlineLg")]
-        Icon::HiChatBubbleBottomCenterOutlineLg => {
+        HiIcon::HiChatBubbleBottomCenterOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5476,7 +5476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleBottomCenterSolidLg")]
-        Icon::HiChatBubbleBottomCenterSolidLg => {
+        HiIcon::HiChatBubbleBottomCenterSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5489,7 +5489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleBottomCenterSolidMd")]
-        Icon::HiChatBubbleBottomCenterSolidMd => {
+        HiIcon::HiChatBubbleBottomCenterSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5502,7 +5502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleBottomCenterTextOutlineLg")]
-        Icon::HiChatBubbleBottomCenterTextOutlineLg => {
+        HiIcon::HiChatBubbleBottomCenterTextOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5516,7 +5516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleBottomCenterTextSolidLg")]
-        Icon::HiChatBubbleBottomCenterTextSolidLg => {
+        HiIcon::HiChatBubbleBottomCenterTextSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5529,7 +5529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleBottomCenterTextSolidMd")]
-        Icon::HiChatBubbleBottomCenterTextSolidMd => {
+        HiIcon::HiChatBubbleBottomCenterTextSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5542,7 +5542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftEllipsisOutlineLg")]
-        Icon::HiChatBubbleLeftEllipsisOutlineLg => {
+        HiIcon::HiChatBubbleLeftEllipsisOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5555,7 +5555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftEllipsisSolidLg")]
-        Icon::HiChatBubbleLeftEllipsisSolidLg => {
+        HiIcon::HiChatBubbleLeftEllipsisSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5568,7 +5568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftEllipsisSolidMd")]
-        Icon::HiChatBubbleLeftEllipsisSolidMd => {
+        HiIcon::HiChatBubbleLeftEllipsisSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5581,7 +5581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftOutlineLg")]
-        Icon::HiChatBubbleLeftOutlineLg => {
+        HiIcon::HiChatBubbleLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5594,7 +5594,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftRightOutlineLg")]
-        Icon::HiChatBubbleLeftRightOutlineLg => {
+        HiIcon::HiChatBubbleLeftRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5607,7 +5607,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftRightSolidLg")]
-        Icon::HiChatBubbleLeftRightSolidLg => {
+        HiIcon::HiChatBubbleLeftRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5621,7 +5621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftRightSolidMd")]
-        Icon::HiChatBubbleLeftRightSolidMd => {
+        HiIcon::HiChatBubbleLeftRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5635,7 +5635,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftSolidLg")]
-        Icon::HiChatBubbleLeftSolidLg => {
+        HiIcon::HiChatBubbleLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5648,7 +5648,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleLeftSolidMd")]
-        Icon::HiChatBubbleLeftSolidMd => {
+        HiIcon::HiChatBubbleLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5661,7 +5661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleOvalLeftEllipsisOutlineLg")]
-        Icon::HiChatBubbleOvalLeftEllipsisOutlineLg => {
+        HiIcon::HiChatBubbleOvalLeftEllipsisOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5675,7 +5675,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleOvalLeftEllipsisSolidLg")]
-        Icon::HiChatBubbleOvalLeftEllipsisSolidLg => {
+        HiIcon::HiChatBubbleOvalLeftEllipsisSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5688,7 +5688,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleOvalLeftEllipsisSolidMd")]
-        Icon::HiChatBubbleOvalLeftEllipsisSolidMd => {
+        HiIcon::HiChatBubbleOvalLeftEllipsisSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5701,7 +5701,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleOvalLeftOutlineLg")]
-        Icon::HiChatBubbleOvalLeftOutlineLg => {
+        HiIcon::HiChatBubbleOvalLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5714,7 +5714,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleOvalLeftSolidLg")]
-        Icon::HiChatBubbleOvalLeftSolidLg => {
+        HiIcon::HiChatBubbleOvalLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5727,7 +5727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChatBubbleOvalLeftSolidMd")]
-        Icon::HiChatBubbleOvalLeftSolidMd => {
+        HiIcon::HiChatBubbleOvalLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5740,7 +5740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckBadgeOutlineLg")]
-        Icon::HiCheckBadgeOutlineLg => {
+        HiIcon::HiCheckBadgeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5753,7 +5753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckBadgeSolidLg")]
-        Icon::HiCheckBadgeSolidLg => {
+        HiIcon::HiCheckBadgeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5766,7 +5766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckBadgeSolidMd")]
-        Icon::HiCheckBadgeSolidMd => {
+        HiIcon::HiCheckBadgeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5779,7 +5779,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckCircleOutlineLg")]
-        Icon::HiCheckCircleOutlineLg => {
+        HiIcon::HiCheckCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5792,7 +5792,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckCircleSolidLg")]
-        Icon::HiCheckCircleSolidLg => {
+        HiIcon::HiCheckCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5805,7 +5805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckCircleSolidMd")]
-        Icon::HiCheckCircleSolidMd => {
+        HiIcon::HiCheckCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5818,7 +5818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckOutlineLg")]
-        Icon::HiCheckOutlineLg => {
+        HiIcon::HiCheckOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5830,7 +5830,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckSolidLg")]
-        Icon::HiCheckSolidLg => {
+        HiIcon::HiCheckSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5843,7 +5843,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCheckSolidMd")]
-        Icon::HiCheckSolidMd => {
+        HiIcon::HiCheckSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5856,7 +5856,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleDownOutlineLg")]
-        Icon::HiChevronDoubleDownOutlineLg => {
+        HiIcon::HiChevronDoubleDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5869,7 +5869,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleDownSolidLg")]
-        Icon::HiChevronDoubleDownSolidLg => {
+        HiIcon::HiChevronDoubleDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5882,7 +5882,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleDownSolidMd")]
-        Icon::HiChevronDoubleDownSolidMd => {
+        HiIcon::HiChevronDoubleDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5895,7 +5895,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleLeftOutlineLg")]
-        Icon::HiChevronDoubleLeftOutlineLg => {
+        HiIcon::HiChevronDoubleLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5908,7 +5908,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleLeftSolidLg")]
-        Icon::HiChevronDoubleLeftSolidLg => {
+        HiIcon::HiChevronDoubleLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5921,7 +5921,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleLeftSolidMd")]
-        Icon::HiChevronDoubleLeftSolidMd => {
+        HiIcon::HiChevronDoubleLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5934,7 +5934,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleRightOutlineLg")]
-        Icon::HiChevronDoubleRightOutlineLg => {
+        HiIcon::HiChevronDoubleRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5947,7 +5947,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleRightSolidLg")]
-        Icon::HiChevronDoubleRightSolidLg => {
+        HiIcon::HiChevronDoubleRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5960,7 +5960,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleRightSolidMd")]
-        Icon::HiChevronDoubleRightSolidMd => {
+        HiIcon::HiChevronDoubleRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -5976,7 +5976,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleUpOutlineLg")]
-        Icon::HiChevronDoubleUpOutlineLg => {
+        HiIcon::HiChevronDoubleUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -5989,7 +5989,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleUpSolidLg")]
-        Icon::HiChevronDoubleUpSolidLg => {
+        HiIcon::HiChevronDoubleUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6002,7 +6002,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDoubleUpSolidMd")]
-        Icon::HiChevronDoubleUpSolidMd => {
+        HiIcon::HiChevronDoubleUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6015,7 +6015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDownOutlineLg")]
-        Icon::HiChevronDownOutlineLg => {
+        HiIcon::HiChevronDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6027,7 +6027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDownSolidLg")]
-        Icon::HiChevronDownSolidLg => {
+        HiIcon::HiChevronDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6040,7 +6040,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronDownSolidMd")]
-        Icon::HiChevronDownSolidMd => {
+        HiIcon::HiChevronDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6053,7 +6053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronLeftOutlineLg")]
-        Icon::HiChevronLeftOutlineLg => {
+        HiIcon::HiChevronLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6065,7 +6065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronLeftSolidLg")]
-        Icon::HiChevronLeftSolidLg => {
+        HiIcon::HiChevronLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6078,7 +6078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronLeftSolidMd")]
-        Icon::HiChevronLeftSolidMd => {
+        HiIcon::HiChevronLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6091,7 +6091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronRightOutlineLg")]
-        Icon::HiChevronRightOutlineLg => {
+        HiIcon::HiChevronRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6103,7 +6103,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronRightSolidLg")]
-        Icon::HiChevronRightSolidLg => {
+        HiIcon::HiChevronRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6116,7 +6116,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronRightSolidMd")]
-        Icon::HiChevronRightSolidMd => {
+        HiIcon::HiChevronRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6129,7 +6129,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronUpDownOutlineLg")]
-        Icon::HiChevronUpDownOutlineLg => {
+        HiIcon::HiChevronUpDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6142,7 +6142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronUpDownSolidLg")]
-        Icon::HiChevronUpDownSolidLg => {
+        HiIcon::HiChevronUpDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6155,7 +6155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronUpDownSolidMd")]
-        Icon::HiChevronUpDownSolidMd => {
+        HiIcon::HiChevronUpDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6168,7 +6168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronUpOutlineLg")]
-        Icon::HiChevronUpOutlineLg => {
+        HiIcon::HiChevronUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6180,7 +6180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronUpSolidLg")]
-        Icon::HiChevronUpSolidLg => {
+        HiIcon::HiChevronUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6193,7 +6193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiChevronUpSolidMd")]
-        Icon::HiChevronUpSolidMd => {
+        HiIcon::HiChevronUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6206,7 +6206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCircleStackOutlineLg")]
-        Icon::HiCircleStackOutlineLg => {
+        HiIcon::HiCircleStackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6219,7 +6219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCircleStackSolidLg")]
-        Icon::HiCircleStackSolidLg => {
+        HiIcon::HiCircleStackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6237,7 +6237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCircleStackSolidMd")]
-        Icon::HiCircleStackSolidMd => {
+        HiIcon::HiCircleStackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6250,7 +6250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentCheckOutlineLg")]
-        Icon::HiClipboardDocumentCheckOutlineLg => {
+        HiIcon::HiClipboardDocumentCheckOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6263,7 +6263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentCheckSolidLg")]
-        Icon::HiClipboardDocumentCheckSolidLg => {
+        HiIcon::HiClipboardDocumentCheckSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6279,7 +6279,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentCheckSolidMd")]
-        Icon::HiClipboardDocumentCheckSolidMd => {
+        HiIcon::HiClipboardDocumentCheckSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6295,7 +6295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentListOutlineLg")]
-        Icon::HiClipboardDocumentListOutlineLg => {
+        HiIcon::HiClipboardDocumentListOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6308,7 +6308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentListSolidLg")]
-        Icon::HiClipboardDocumentListSolidLg => {
+        HiIcon::HiClipboardDocumentListSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6324,7 +6324,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentListSolidMd")]
-        Icon::HiClipboardDocumentListSolidMd => {
+        HiIcon::HiClipboardDocumentListSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6340,7 +6340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentOutlineLg")]
-        Icon::HiClipboardDocumentOutlineLg => {
+        HiIcon::HiClipboardDocumentOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6353,7 +6353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentSolidLg")]
-        Icon::HiClipboardDocumentSolidLg => {
+        HiIcon::HiClipboardDocumentSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6370,7 +6370,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardDocumentSolidMd")]
-        Icon::HiClipboardDocumentSolidMd => {
+        HiIcon::HiClipboardDocumentSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6385,7 +6385,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardOutlineLg")]
-        Icon::HiClipboardOutlineLg => {
+        HiIcon::HiClipboardOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6398,7 +6398,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardSolidLg")]
-        Icon::HiClipboardSolidLg => {
+        HiIcon::HiClipboardSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6411,7 +6411,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClipboardSolidMd")]
-        Icon::HiClipboardSolidMd => {
+        HiIcon::HiClipboardSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6424,7 +6424,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClockOutlineLg")]
-        Icon::HiClockOutlineLg => {
+        HiIcon::HiClockOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6437,7 +6437,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClockSolidLg")]
-        Icon::HiClockSolidLg => {
+        HiIcon::HiClockSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6450,7 +6450,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiClockSolidMd")]
-        Icon::HiClockSolidMd => {
+        HiIcon::HiClockSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6463,7 +6463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudArrowDownOutlineLg")]
-        Icon::HiCloudArrowDownOutlineLg => {
+        HiIcon::HiCloudArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6476,7 +6476,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudArrowDownSolidLg")]
-        Icon::HiCloudArrowDownSolidLg => {
+        HiIcon::HiCloudArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6489,7 +6489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudArrowDownSolidMd")]
-        Icon::HiCloudArrowDownSolidMd => {
+        HiIcon::HiCloudArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6502,7 +6502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudArrowUpOutlineLg")]
-        Icon::HiCloudArrowUpOutlineLg => {
+        HiIcon::HiCloudArrowUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6515,7 +6515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudArrowUpSolidLg")]
-        Icon::HiCloudArrowUpSolidLg => {
+        HiIcon::HiCloudArrowUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6528,7 +6528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudArrowUpSolidMd")]
-        Icon::HiCloudArrowUpSolidMd => {
+        HiIcon::HiCloudArrowUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6541,7 +6541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudOutlineLg")]
-        Icon::HiCloudOutlineLg => {
+        HiIcon::HiCloudOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6554,7 +6554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudSolidLg")]
-        Icon::HiCloudSolidLg => {
+        HiIcon::HiCloudSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6567,7 +6567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCloudSolidMd")]
-        Icon::HiCloudSolidMd => {
+        HiIcon::HiCloudSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6579,7 +6579,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCodeBracketOutlineLg")]
-        Icon::HiCodeBracketOutlineLg => {
+        HiIcon::HiCodeBracketOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6592,7 +6592,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCodeBracketSolidLg")]
-        Icon::HiCodeBracketSolidLg => {
+        HiIcon::HiCodeBracketSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6605,7 +6605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCodeBracketSolidMd")]
-        Icon::HiCodeBracketSolidMd => {
+        HiIcon::HiCodeBracketSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6621,7 +6621,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCodeBracketSquareOutlineLg")]
-        Icon::HiCodeBracketSquareOutlineLg => {
+        HiIcon::HiCodeBracketSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6634,7 +6634,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCodeBracketSquareSolidLg")]
-        Icon::HiCodeBracketSquareSolidLg => {
+        HiIcon::HiCodeBracketSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6647,7 +6647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCodeBracketSquareSolidMd")]
-        Icon::HiCodeBracketSquareSolidMd => {
+        HiIcon::HiCodeBracketSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6660,7 +6660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCog6ToothOutlineLg")]
-        Icon::HiCog6ToothOutlineLg => {
+        HiIcon::HiCog6ToothOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6676,7 +6676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCog6ToothSolidLg")]
-        Icon::HiCog6ToothSolidLg => {
+        HiIcon::HiCog6ToothSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6689,7 +6689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCog6ToothSolidMd")]
-        Icon::HiCog6ToothSolidMd => {
+        HiIcon::HiCog6ToothSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6702,7 +6702,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCog8ToothOutlineLg")]
-        Icon::HiCog8ToothOutlineLg => {
+        HiIcon::HiCog8ToothOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6718,7 +6718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCog8ToothSolidLg")]
-        Icon::HiCog8ToothSolidLg => {
+        HiIcon::HiCog8ToothSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6731,7 +6731,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCog8ToothSolidMd")]
-        Icon::HiCog8ToothSolidMd => {
+        HiIcon::HiCog8ToothSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6744,7 +6744,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCogOutlineLg")]
-        Icon::HiCogOutlineLg => {
+        HiIcon::HiCogOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6757,7 +6757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCogSolidLg")]
-        Icon::HiCogSolidLg => {
+        HiIcon::HiCogSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6776,7 +6776,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCogSolidMd")]
-        Icon::HiCogSolidMd => {
+        HiIcon::HiCogSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6795,7 +6795,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCommandLineOutlineLg")]
-        Icon::HiCommandLineOutlineLg => {
+        HiIcon::HiCommandLineOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6808,7 +6808,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCommandLineSolidLg")]
-        Icon::HiCommandLineSolidLg => {
+        HiIcon::HiCommandLineSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6821,7 +6821,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCommandLineSolidMd")]
-        Icon::HiCommandLineSolidMd => {
+        HiIcon::HiCommandLineSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6834,7 +6834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiComputerDesktopOutlineLg")]
-        Icon::HiComputerDesktopOutlineLg => {
+        HiIcon::HiComputerDesktopOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6847,7 +6847,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiComputerDesktopSolidLg")]
-        Icon::HiComputerDesktopSolidLg => {
+        HiIcon::HiComputerDesktopSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6860,7 +6860,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiComputerDesktopSolidMd")]
-        Icon::HiComputerDesktopSolidMd => {
+        HiIcon::HiComputerDesktopSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6873,7 +6873,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCpuChipOutlineLg")]
-        Icon::HiCpuChipOutlineLg => {
+        HiIcon::HiCpuChipOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6886,7 +6886,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCpuChipSolidLg")]
-        Icon::HiCpuChipSolidLg => {
+        HiIcon::HiCpuChipSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6900,7 +6900,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCpuChipSolidMd")]
-        Icon::HiCpuChipSolidMd => {
+        HiIcon::HiCpuChipSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6914,7 +6914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCreditCardOutlineLg")]
-        Icon::HiCreditCardOutlineLg => {
+        HiIcon::HiCreditCardOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6927,7 +6927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCreditCardSolidLg")]
-        Icon::HiCreditCardSolidLg => {
+        HiIcon::HiCreditCardSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6942,7 +6942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCreditCardSolidMd")]
-        Icon::HiCreditCardSolidMd => {
+        HiIcon::HiCreditCardSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6955,7 +6955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCubeOutlineLg")]
-        Icon::HiCubeOutlineLg => {
+        HiIcon::HiCubeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6968,7 +6968,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCubeSolidLg")]
-        Icon::HiCubeSolidLg => {
+        HiIcon::HiCubeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -6984,7 +6984,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCubeSolidMd")]
-        Icon::HiCubeSolidMd => {
+        HiIcon::HiCubeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -6997,7 +6997,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCubeTransparentOutlineLg")]
-        Icon::HiCubeTransparentOutlineLg => {
+        HiIcon::HiCubeTransparentOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7010,7 +7010,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCubeTransparentSolidLg")]
-        Icon::HiCubeTransparentSolidLg => {
+        HiIcon::HiCubeTransparentSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7023,7 +7023,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCubeTransparentSolidMd")]
-        Icon::HiCubeTransparentSolidMd => {
+        HiIcon::HiCubeTransparentSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7036,7 +7036,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyBangladeshiOutlineLg")]
-        Icon::HiCurrencyBangladeshiOutlineLg => {
+        HiIcon::HiCurrencyBangladeshiOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7049,7 +7049,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyBangladeshiSolidLg")]
-        Icon::HiCurrencyBangladeshiSolidLg => {
+        HiIcon::HiCurrencyBangladeshiSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7062,7 +7062,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyBangladeshiSolidMd")]
-        Icon::HiCurrencyBangladeshiSolidMd => {
+        HiIcon::HiCurrencyBangladeshiSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7075,7 +7075,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyDollarOutlineLg")]
-        Icon::HiCurrencyDollarOutlineLg => {
+        HiIcon::HiCurrencyDollarOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7088,7 +7088,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyDollarSolidLg")]
-        Icon::HiCurrencyDollarSolidLg => {
+        HiIcon::HiCurrencyDollarSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7105,7 +7105,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyDollarSolidMd")]
-        Icon::HiCurrencyDollarSolidMd => {
+        HiIcon::HiCurrencyDollarSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7122,7 +7122,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyEuroOutlineLg")]
-        Icon::HiCurrencyEuroOutlineLg => {
+        HiIcon::HiCurrencyEuroOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7135,7 +7135,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyEuroSolidLg")]
-        Icon::HiCurrencyEuroSolidLg => {
+        HiIcon::HiCurrencyEuroSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7148,7 +7148,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyEuroSolidMd")]
-        Icon::HiCurrencyEuroSolidMd => {
+        HiIcon::HiCurrencyEuroSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7161,7 +7161,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyPoundOutlineLg")]
-        Icon::HiCurrencyPoundOutlineLg => {
+        HiIcon::HiCurrencyPoundOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7174,7 +7174,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyPoundSolidLg")]
-        Icon::HiCurrencyPoundSolidLg => {
+        HiIcon::HiCurrencyPoundSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7187,7 +7187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyPoundSolidMd")]
-        Icon::HiCurrencyPoundSolidMd => {
+        HiIcon::HiCurrencyPoundSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7200,7 +7200,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyRupeeOutlineLg")]
-        Icon::HiCurrencyRupeeOutlineLg => {
+        HiIcon::HiCurrencyRupeeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7213,7 +7213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyRupeeSolidLg")]
-        Icon::HiCurrencyRupeeSolidLg => {
+        HiIcon::HiCurrencyRupeeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7226,7 +7226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyRupeeSolidMd")]
-        Icon::HiCurrencyRupeeSolidMd => {
+        HiIcon::HiCurrencyRupeeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7239,7 +7239,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyYenOutlineLg")]
-        Icon::HiCurrencyYenOutlineLg => {
+        HiIcon::HiCurrencyYenOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7252,7 +7252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyYenSolidLg")]
-        Icon::HiCurrencyYenSolidLg => {
+        HiIcon::HiCurrencyYenSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7265,7 +7265,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCurrencyYenSolidMd")]
-        Icon::HiCurrencyYenSolidMd => {
+        HiIcon::HiCurrencyYenSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7278,7 +7278,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCursorArrowRaysOutlineLg")]
-        Icon::HiCursorArrowRaysOutlineLg => {
+        HiIcon::HiCursorArrowRaysOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7291,7 +7291,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCursorArrowRaysSolidLg")]
-        Icon::HiCursorArrowRaysSolidLg => {
+        HiIcon::HiCursorArrowRaysSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7304,7 +7304,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCursorArrowRaysSolidMd")]
-        Icon::HiCursorArrowRaysSolidMd => {
+        HiIcon::HiCursorArrowRaysSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7317,7 +7317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCursorArrowRippleOutlineLg")]
-        Icon::HiCursorArrowRippleOutlineLg => {
+        HiIcon::HiCursorArrowRippleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7330,7 +7330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCursorArrowRippleSolidLg")]
-        Icon::HiCursorArrowRippleSolidLg => {
+        HiIcon::HiCursorArrowRippleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7343,7 +7343,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiCursorArrowRippleSolidMd")]
-        Icon::HiCursorArrowRippleSolidMd => {
+        HiIcon::HiCursorArrowRippleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7356,7 +7356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDevicePhoneMobileOutlineLg")]
-        Icon::HiDevicePhoneMobileOutlineLg => {
+        HiIcon::HiDevicePhoneMobileOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7369,7 +7369,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDevicePhoneMobileSolidLg")]
-        Icon::HiDevicePhoneMobileSolidLg => {
+        HiIcon::HiDevicePhoneMobileSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7384,7 +7384,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDevicePhoneMobileSolidMd")]
-        Icon::HiDevicePhoneMobileSolidMd => {
+        HiIcon::HiDevicePhoneMobileSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7399,7 +7399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDeviceTabletOutlineLg")]
-        Icon::HiDeviceTabletOutlineLg => {
+        HiIcon::HiDeviceTabletOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7412,7 +7412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDeviceTabletSolidLg")]
-        Icon::HiDeviceTabletSolidLg => {
+        HiIcon::HiDeviceTabletSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7427,7 +7427,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDeviceTabletSolidMd")]
-        Icon::HiDeviceTabletSolidMd => {
+        HiIcon::HiDeviceTabletSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7440,7 +7440,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentArrowDownOutlineLg")]
-        Icon::HiDocumentArrowDownOutlineLg => {
+        HiIcon::HiDocumentArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7453,7 +7453,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentArrowDownSolidLg")]
-        Icon::HiDocumentArrowDownSolidLg => {
+        HiIcon::HiDocumentArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7468,7 +7468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentArrowDownSolidMd")]
-        Icon::HiDocumentArrowDownSolidMd => {
+        HiIcon::HiDocumentArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7481,7 +7481,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentArrowUpOutlineLg")]
-        Icon::HiDocumentArrowUpOutlineLg => {
+        HiIcon::HiDocumentArrowUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7494,7 +7494,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentArrowUpSolidLg")]
-        Icon::HiDocumentArrowUpSolidLg => {
+        HiIcon::HiDocumentArrowUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7509,7 +7509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentArrowUpSolidMd")]
-        Icon::HiDocumentArrowUpSolidMd => {
+        HiIcon::HiDocumentArrowUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7522,7 +7522,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentChartBarOutlineLg")]
-        Icon::HiDocumentChartBarOutlineLg => {
+        HiIcon::HiDocumentChartBarOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7535,7 +7535,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentChartBarSolidLg")]
-        Icon::HiDocumentChartBarSolidLg => {
+        HiIcon::HiDocumentChartBarSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7550,7 +7550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentChartBarSolidMd")]
-        Icon::HiDocumentChartBarSolidMd => {
+        HiIcon::HiDocumentChartBarSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7563,7 +7563,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentCheckOutlineLg")]
-        Icon::HiDocumentCheckOutlineLg => {
+        HiIcon::HiDocumentCheckOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7576,7 +7576,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentCheckSolidLg")]
-        Icon::HiDocumentCheckSolidLg => {
+        HiIcon::HiDocumentCheckSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7591,7 +7591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentCheckSolidMd")]
-        Icon::HiDocumentCheckSolidMd => {
+        HiIcon::HiDocumentCheckSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7604,7 +7604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentDuplicateOutlineLg")]
-        Icon::HiDocumentDuplicateOutlineLg => {
+        HiIcon::HiDocumentDuplicateOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7617,7 +7617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentDuplicateSolidLg")]
-        Icon::HiDocumentDuplicateSolidLg => {
+        HiIcon::HiDocumentDuplicateSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7633,7 +7633,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentDuplicateSolidMd")]
-        Icon::HiDocumentDuplicateSolidMd => {
+        HiIcon::HiDocumentDuplicateSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7647,7 +7647,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentMagnifyingGlassOutlineLg")]
-        Icon::HiDocumentMagnifyingGlassOutlineLg => {
+        HiIcon::HiDocumentMagnifyingGlassOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7660,7 +7660,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentMagnifyingGlassSolidLg")]
-        Icon::HiDocumentMagnifyingGlassSolidLg => {
+        HiIcon::HiDocumentMagnifyingGlassSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7677,7 +7677,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentMagnifyingGlassSolidMd")]
-        Icon::HiDocumentMagnifyingGlassSolidMd => {
+        HiIcon::HiDocumentMagnifyingGlassSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7692,7 +7692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentMinusOutlineLg")]
-        Icon::HiDocumentMinusOutlineLg => {
+        HiIcon::HiDocumentMinusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7705,7 +7705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentMinusSolidLg")]
-        Icon::HiDocumentMinusSolidLg => {
+        HiIcon::HiDocumentMinusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7720,7 +7720,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentMinusSolidMd")]
-        Icon::HiDocumentMinusSolidMd => {
+        HiIcon::HiDocumentMinusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7733,7 +7733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentOutlineLg")]
-        Icon::HiDocumentOutlineLg => {
+        HiIcon::HiDocumentOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7746,7 +7746,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentPlusOutlineLg")]
-        Icon::HiDocumentPlusOutlineLg => {
+        HiIcon::HiDocumentPlusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7759,7 +7759,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentPlusSolidLg")]
-        Icon::HiDocumentPlusSolidLg => {
+        HiIcon::HiDocumentPlusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7774,7 +7774,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentPlusSolidMd")]
-        Icon::HiDocumentPlusSolidMd => {
+        HiIcon::HiDocumentPlusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7787,7 +7787,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentSolidLg")]
-        Icon::HiDocumentSolidLg => {
+        HiIcon::HiDocumentSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7801,7 +7801,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentSolidMd")]
-        Icon::HiDocumentSolidMd => {
+        HiIcon::HiDocumentSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7813,7 +7813,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentTextOutlineLg")]
-        Icon::HiDocumentTextOutlineLg => {
+        HiIcon::HiDocumentTextOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7826,7 +7826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentTextSolidLg")]
-        Icon::HiDocumentTextSolidLg => {
+        HiIcon::HiDocumentTextSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7841,7 +7841,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiDocumentTextSolidMd")]
-        Icon::HiDocumentTextSolidMd => {
+        HiIcon::HiDocumentTextSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7854,7 +7854,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisHorizontalCircleOutlineLg")]
-        Icon::HiEllipsisHorizontalCircleOutlineLg => {
+        HiIcon::HiEllipsisHorizontalCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7868,7 +7868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisHorizontalCircleSolidLg")]
-        Icon::HiEllipsisHorizontalCircleSolidLg => {
+        HiIcon::HiEllipsisHorizontalCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7881,7 +7881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisHorizontalCircleSolidMd")]
-        Icon::HiEllipsisHorizontalCircleSolidMd => {
+        HiIcon::HiEllipsisHorizontalCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7894,7 +7894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisHorizontalOutlineLg")]
-        Icon::HiEllipsisHorizontalOutlineLg => {
+        HiIcon::HiEllipsisHorizontalOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7913,7 +7913,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisHorizontalSolidLg")]
-        Icon::HiEllipsisHorizontalSolidLg => {
+        HiIcon::HiEllipsisHorizontalSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7926,7 +7926,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisHorizontalSolidMd")]
-        Icon::HiEllipsisHorizontalSolidMd => {
+        HiIcon::HiEllipsisHorizontalSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7942,7 +7942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisVerticalOutlineLg")]
-        Icon::HiEllipsisVerticalOutlineLg => {
+        HiIcon::HiEllipsisVerticalOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7961,7 +7961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisVerticalSolidLg")]
-        Icon::HiEllipsisVerticalSolidLg => {
+        HiIcon::HiEllipsisVerticalSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -7974,7 +7974,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEllipsisVerticalSolidMd")]
-        Icon::HiEllipsisVerticalSolidMd => {
+        HiIcon::HiEllipsisVerticalSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -7990,7 +7990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEnvelopeOpenOutlineLg")]
-        Icon::HiEnvelopeOpenOutlineLg => {
+        HiIcon::HiEnvelopeOpenOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8003,7 +8003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEnvelopeOpenSolidLg")]
-        Icon::HiEnvelopeOpenSolidLg => {
+        HiIcon::HiEnvelopeOpenSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8017,7 +8017,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEnvelopeOpenSolidMd")]
-        Icon::HiEnvelopeOpenSolidMd => {
+        HiIcon::HiEnvelopeOpenSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8030,7 +8030,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEnvelopeOutlineLg")]
-        Icon::HiEnvelopeOutlineLg => {
+        HiIcon::HiEnvelopeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8043,7 +8043,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEnvelopeSolidLg")]
-        Icon::HiEnvelopeSolidLg => {
+        HiIcon::HiEnvelopeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8057,7 +8057,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEnvelopeSolidMd")]
-        Icon::HiEnvelopeSolidMd => {
+        HiIcon::HiEnvelopeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8071,7 +8071,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiExclamationCircleOutlineLg")]
-        Icon::HiExclamationCircleOutlineLg => {
+        HiIcon::HiExclamationCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8084,7 +8084,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiExclamationCircleSolidLg")]
-        Icon::HiExclamationCircleSolidLg => {
+        HiIcon::HiExclamationCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8097,7 +8097,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiExclamationCircleSolidMd")]
-        Icon::HiExclamationCircleSolidMd => {
+        HiIcon::HiExclamationCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8110,7 +8110,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiExclamationTriangleOutlineLg")]
-        Icon::HiExclamationTriangleOutlineLg => {
+        HiIcon::HiExclamationTriangleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8123,7 +8123,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiExclamationTriangleSolidLg")]
-        Icon::HiExclamationTriangleSolidLg => {
+        HiIcon::HiExclamationTriangleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8136,7 +8136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiExclamationTriangleSolidMd")]
-        Icon::HiExclamationTriangleSolidMd => {
+        HiIcon::HiExclamationTriangleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8149,7 +8149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeDropperOutlineLg")]
-        Icon::HiEyeDropperOutlineLg => {
+        HiIcon::HiEyeDropperOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8162,7 +8162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeDropperSolidLg")]
-        Icon::HiEyeDropperSolidLg => {
+        HiIcon::HiEyeDropperSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8175,7 +8175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeDropperSolidMd")]
-        Icon::HiEyeDropperSolidMd => {
+        HiIcon::HiEyeDropperSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8188,7 +8188,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeOutlineLg")]
-        Icon::HiEyeOutlineLg => {
+        HiIcon::HiEyeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8204,7 +8204,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeSlashOutlineLg")]
-        Icon::HiEyeSlashOutlineLg => {
+        HiIcon::HiEyeSlashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8217,7 +8217,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeSlashSolidLg")]
-        Icon::HiEyeSlashSolidLg => {
+        HiIcon::HiEyeSlashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8237,7 +8237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeSlashSolidMd")]
-        Icon::HiEyeSlashSolidMd => {
+        HiIcon::HiEyeSlashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8252,7 +8252,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeSolidLg")]
-        Icon::HiEyeSolidLg => {
+        HiIcon::HiEyeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8267,7 +8267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiEyeSolidMd")]
-        Icon::HiEyeSolidMd => {
+        HiIcon::HiEyeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8282,7 +8282,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFaceFrownOutlineLg")]
-        Icon::HiFaceFrownOutlineLg => {
+        HiIcon::HiFaceFrownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8295,7 +8295,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFaceFrownSolidLg")]
-        Icon::HiFaceFrownSolidLg => {
+        HiIcon::HiFaceFrownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8308,7 +8308,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFaceFrownSolidMd")]
-        Icon::HiFaceFrownSolidMd => {
+        HiIcon::HiFaceFrownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8321,7 +8321,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFaceSmileOutlineLg")]
-        Icon::HiFaceSmileOutlineLg => {
+        HiIcon::HiFaceSmileOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8334,7 +8334,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFaceSmileSolidLg")]
-        Icon::HiFaceSmileSolidLg => {
+        HiIcon::HiFaceSmileSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8347,7 +8347,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFaceSmileSolidMd")]
-        Icon::HiFaceSmileSolidMd => {
+        HiIcon::HiFaceSmileSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8360,7 +8360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFilmOutlineLg")]
-        Icon::HiFilmOutlineLg => {
+        HiIcon::HiFilmOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8373,7 +8373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFilmSolidLg")]
-        Icon::HiFilmSolidLg => {
+        HiIcon::HiFilmSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8386,7 +8386,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFilmSolidMd")]
-        Icon::HiFilmSolidMd => {
+        HiIcon::HiFilmSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8399,7 +8399,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFingerPrintOutlineLg")]
-        Icon::HiFingerPrintOutlineLg => {
+        HiIcon::HiFingerPrintOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8412,7 +8412,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFingerPrintSolidLg")]
-        Icon::HiFingerPrintSolidLg => {
+        HiIcon::HiFingerPrintSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8425,7 +8425,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFingerPrintSolidMd")]
-        Icon::HiFingerPrintSolidMd => {
+        HiIcon::HiFingerPrintSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8438,7 +8438,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFireOutlineLg")]
-        Icon::HiFireOutlineLg => {
+        HiIcon::HiFireOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8454,7 +8454,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFireSolidLg")]
-        Icon::HiFireSolidLg => {
+        HiIcon::HiFireSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8467,7 +8467,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFireSolidMd")]
-        Icon::HiFireSolidMd => {
+        HiIcon::HiFireSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8480,7 +8480,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFlagOutlineLg")]
-        Icon::HiFlagOutlineLg => {
+        HiIcon::HiFlagOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8493,7 +8493,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFlagSolidLg")]
-        Icon::HiFlagSolidLg => {
+        HiIcon::HiFlagSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8506,7 +8506,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFlagSolidMd")]
-        Icon::HiFlagSolidMd => {
+        HiIcon::HiFlagSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8518,7 +8518,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderArrowDownOutlineLg")]
-        Icon::HiFolderArrowDownOutlineLg => {
+        HiIcon::HiFolderArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8531,7 +8531,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderArrowDownSolidLg")]
-        Icon::HiFolderArrowDownSolidLg => {
+        HiIcon::HiFolderArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8544,7 +8544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderArrowDownSolidMd")]
-        Icon::HiFolderArrowDownSolidMd => {
+        HiIcon::HiFolderArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8557,7 +8557,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderMinusOutlineLg")]
-        Icon::HiFolderMinusOutlineLg => {
+        HiIcon::HiFolderMinusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8570,7 +8570,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderMinusSolidLg")]
-        Icon::HiFolderMinusSolidLg => {
+        HiIcon::HiFolderMinusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8583,7 +8583,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderMinusSolidMd")]
-        Icon::HiFolderMinusSolidMd => {
+        HiIcon::HiFolderMinusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8596,7 +8596,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderOpenOutlineLg")]
-        Icon::HiFolderOpenOutlineLg => {
+        HiIcon::HiFolderOpenOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8609,7 +8609,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderOpenSolidLg")]
-        Icon::HiFolderOpenSolidLg => {
+        HiIcon::HiFolderOpenSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8623,7 +8623,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderOpenSolidMd")]
-        Icon::HiFolderOpenSolidMd => {
+        HiIcon::HiFolderOpenSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8637,7 +8637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderOutlineLg")]
-        Icon::HiFolderOutlineLg => {
+        HiIcon::HiFolderOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8650,7 +8650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderPlusOutlineLg")]
-        Icon::HiFolderPlusOutlineLg => {
+        HiIcon::HiFolderPlusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8663,7 +8663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderPlusSolidLg")]
-        Icon::HiFolderPlusSolidLg => {
+        HiIcon::HiFolderPlusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8676,7 +8676,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderPlusSolidMd")]
-        Icon::HiFolderPlusSolidMd => {
+        HiIcon::HiFolderPlusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8689,7 +8689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderSolidLg")]
-        Icon::HiFolderSolidLg => {
+        HiIcon::HiFolderSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8703,7 +8703,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFolderSolidMd")]
-        Icon::HiFolderSolidMd => {
+        HiIcon::HiFolderSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8717,7 +8717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiForwardOutlineLg")]
-        Icon::HiForwardOutlineLg => {
+        HiIcon::HiForwardOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8733,7 +8733,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiForwardSolidLg")]
-        Icon::HiForwardSolidLg => {
+        HiIcon::HiForwardSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8745,7 +8745,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiForwardSolidMd")]
-        Icon::HiForwardSolidMd => {
+        HiIcon::HiForwardSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8757,7 +8757,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFunnelOutlineLg")]
-        Icon::HiFunnelOutlineLg => {
+        HiIcon::HiFunnelOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8770,7 +8770,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFunnelSolidLg")]
-        Icon::HiFunnelSolidLg => {
+        HiIcon::HiFunnelSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8783,7 +8783,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiFunnelSolidMd")]
-        Icon::HiFunnelSolidMd => {
+        HiIcon::HiFunnelSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8796,7 +8796,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGifOutlineLg")]
-        Icon::HiGifOutlineLg => {
+        HiIcon::HiGifOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8809,7 +8809,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGifSolidLg")]
-        Icon::HiGifSolidLg => {
+        HiIcon::HiGifSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8822,7 +8822,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGifSolidMd")]
-        Icon::HiGifSolidMd => {
+        HiIcon::HiGifSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8835,7 +8835,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGiftOutlineLg")]
-        Icon::HiGiftOutlineLg => {
+        HiIcon::HiGiftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8848,7 +8848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGiftSolidLg")]
-        Icon::HiGiftSolidLg => {
+        HiIcon::HiGiftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8864,7 +8864,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGiftSolidMd")]
-        Icon::HiGiftSolidMd => {
+        HiIcon::HiGiftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8881,7 +8881,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGiftTopOutlineLg")]
-        Icon::HiGiftTopOutlineLg => {
+        HiIcon::HiGiftTopOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8894,7 +8894,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGiftTopSolidLg")]
-        Icon::HiGiftTopSolidLg => {
+        HiIcon::HiGiftTopSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8916,7 +8916,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGiftTopSolidMd")]
-        Icon::HiGiftTopSolidMd => {
+        HiIcon::HiGiftTopSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8929,7 +8929,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAltOutlineLg")]
-        Icon::HiGlobeAltOutlineLg => {
+        HiIcon::HiGlobeAltOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8942,7 +8942,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAltSolidLg")]
-        Icon::HiGlobeAltSolidLg => {
+        HiIcon::HiGlobeAltSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -8970,7 +8970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAltSolidMd")]
-        Icon::HiGlobeAltSolidMd => {
+        HiIcon::HiGlobeAltSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -8998,7 +8998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAmericasOutlineLg")]
-        Icon::HiGlobeAmericasOutlineLg => {
+        HiIcon::HiGlobeAmericasOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9011,7 +9011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAmericasSolidLg")]
-        Icon::HiGlobeAmericasSolidLg => {
+        HiIcon::HiGlobeAmericasSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9024,7 +9024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAmericasSolidMd")]
-        Icon::HiGlobeAmericasSolidMd => {
+        HiIcon::HiGlobeAmericasSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9037,7 +9037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAsiaAustraliaOutlineLg")]
-        Icon::HiGlobeAsiaAustraliaOutlineLg => {
+        HiIcon::HiGlobeAsiaAustraliaOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9050,7 +9050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAsiaAustraliaSolidLg")]
-        Icon::HiGlobeAsiaAustraliaSolidLg => {
+        HiIcon::HiGlobeAsiaAustraliaSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9065,7 +9065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeAsiaAustraliaSolidMd")]
-        Icon::HiGlobeAsiaAustraliaSolidMd => {
+        HiIcon::HiGlobeAsiaAustraliaSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9078,7 +9078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeEuropeAfricaOutlineLg")]
-        Icon::HiGlobeEuropeAfricaOutlineLg => {
+        HiIcon::HiGlobeEuropeAfricaOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9091,7 +9091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeEuropeAfricaSolidLg")]
-        Icon::HiGlobeEuropeAfricaSolidLg => {
+        HiIcon::HiGlobeEuropeAfricaSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9104,7 +9104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiGlobeEuropeAfricaSolidMd")]
-        Icon::HiGlobeEuropeAfricaSolidMd => {
+        HiIcon::HiGlobeEuropeAfricaSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9117,7 +9117,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandRaisedOutlineLg")]
-        Icon::HiHandRaisedOutlineLg => {
+        HiIcon::HiHandRaisedOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9130,7 +9130,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandRaisedSolidLg")]
-        Icon::HiHandRaisedSolidLg => {
+        HiIcon::HiHandRaisedSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9142,7 +9142,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandRaisedSolidMd")]
-        Icon::HiHandRaisedSolidMd => {
+        HiIcon::HiHandRaisedSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9155,7 +9155,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandThumbDownOutlineLg")]
-        Icon::HiHandThumbDownOutlineLg => {
+        HiIcon::HiHandThumbDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9168,7 +9168,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandThumbDownSolidLg")]
-        Icon::HiHandThumbDownSolidLg => {
+        HiIcon::HiHandThumbDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9182,7 +9182,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandThumbDownSolidMd")]
-        Icon::HiHandThumbDownSolidMd => {
+        HiIcon::HiHandThumbDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9196,7 +9196,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandThumbUpOutlineLg")]
-        Icon::HiHandThumbUpOutlineLg => {
+        HiIcon::HiHandThumbUpOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9209,7 +9209,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandThumbUpSolidLg")]
-        Icon::HiHandThumbUpSolidLg => {
+        HiIcon::HiHandThumbUpSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9223,7 +9223,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHandThumbUpSolidMd")]
-        Icon::HiHandThumbUpSolidMd => {
+        HiIcon::HiHandThumbUpSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9237,7 +9237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHashtagOutlineLg")]
-        Icon::HiHashtagOutlineLg => {
+        HiIcon::HiHashtagOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9250,7 +9250,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHashtagSolidLg")]
-        Icon::HiHashtagSolidLg => {
+        HiIcon::HiHashtagSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9263,7 +9263,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHashtagSolidMd")]
-        Icon::HiHashtagSolidMd => {
+        HiIcon::HiHashtagSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9276,7 +9276,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHeartOutlineLg")]
-        Icon::HiHeartOutlineLg => {
+        HiIcon::HiHeartOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9289,7 +9289,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHeartSolidLg")]
-        Icon::HiHeartSolidLg => {
+        HiIcon::HiHeartSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9301,7 +9301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHeartSolidMd")]
-        Icon::HiHeartSolidMd => {
+        HiIcon::HiHeartSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9313,7 +9313,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHomeModernOutlineLg")]
-        Icon::HiHomeModernOutlineLg => {
+        HiIcon::HiHomeModernOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9326,7 +9326,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHomeModernSolidLg")]
-        Icon::HiHomeModernSolidLg => {
+        HiIcon::HiHomeModernSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9341,7 +9341,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHomeModernSolidMd")]
-        Icon::HiHomeModernSolidMd => {
+        HiIcon::HiHomeModernSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9355,7 +9355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHomeOutlineLg")]
-        Icon::HiHomeOutlineLg => {
+        HiIcon::HiHomeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9368,7 +9368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHomeSolidLg")]
-        Icon::HiHomeSolidLg => {
+        HiIcon::HiHomeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9382,7 +9382,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiHomeSolidMd")]
-        Icon::HiHomeSolidMd => {
+        HiIcon::HiHomeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9395,7 +9395,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiIdentificationOutlineLg")]
-        Icon::HiIdentificationOutlineLg => {
+        HiIcon::HiIdentificationOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9408,7 +9408,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiIdentificationSolidLg")]
-        Icon::HiIdentificationSolidLg => {
+        HiIcon::HiIdentificationSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9421,7 +9421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiIdentificationSolidMd")]
-        Icon::HiIdentificationSolidMd => {
+        HiIcon::HiIdentificationSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9434,7 +9434,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxArrowDownOutlineLg")]
-        Icon::HiInboxArrowDownOutlineLg => {
+        HiIcon::HiInboxArrowDownOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9447,7 +9447,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxArrowDownSolidLg")]
-        Icon::HiInboxArrowDownSolidLg => {
+        HiIcon::HiInboxArrowDownSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9463,7 +9463,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxArrowDownSolidMd")]
-        Icon::HiInboxArrowDownSolidMd => {
+        HiIcon::HiInboxArrowDownSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9477,7 +9477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxOutlineLg")]
-        Icon::HiInboxOutlineLg => {
+        HiIcon::HiInboxOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9490,7 +9490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxSolidLg")]
-        Icon::HiInboxSolidLg => {
+        HiIcon::HiInboxSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9503,7 +9503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxSolidMd")]
-        Icon::HiInboxSolidMd => {
+        HiIcon::HiInboxSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9516,7 +9516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxStackOutlineLg")]
-        Icon::HiInboxStackOutlineLg => {
+        HiIcon::HiInboxStackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9529,7 +9529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxStackSolidLg")]
-        Icon::HiInboxStackSolidLg => {
+        HiIcon::HiInboxStackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9544,7 +9544,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInboxStackSolidMd")]
-        Icon::HiInboxStackSolidMd => {
+        HiIcon::HiInboxStackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9559,7 +9559,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInformationCircleOutlineLg")]
-        Icon::HiInformationCircleOutlineLg => {
+        HiIcon::HiInformationCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9572,7 +9572,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInformationCircleSolidLg")]
-        Icon::HiInformationCircleSolidLg => {
+        HiIcon::HiInformationCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9585,7 +9585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiInformationCircleSolidMd")]
-        Icon::HiInformationCircleSolidMd => {
+        HiIcon::HiInformationCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9598,7 +9598,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiKeyOutlineLg")]
-        Icon::HiKeyOutlineLg => {
+        HiIcon::HiKeyOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9611,7 +9611,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiKeySolidLg")]
-        Icon::HiKeySolidLg => {
+        HiIcon::HiKeySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9624,7 +9624,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiKeySolidMd")]
-        Icon::HiKeySolidMd => {
+        HiIcon::HiKeySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9637,7 +9637,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLanguageOutlineLg")]
-        Icon::HiLanguageOutlineLg => {
+        HiIcon::HiLanguageOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9650,7 +9650,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLanguageSolidLg")]
-        Icon::HiLanguageSolidLg => {
+        HiIcon::HiLanguageSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9663,7 +9663,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLanguageSolidMd")]
-        Icon::HiLanguageSolidMd => {
+        HiIcon::HiLanguageSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9678,7 +9678,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLifebuoyOutlineLg")]
-        Icon::HiLifebuoyOutlineLg => {
+        HiIcon::HiLifebuoyOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9691,7 +9691,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLifebuoySolidLg")]
-        Icon::HiLifebuoySolidLg => {
+        HiIcon::HiLifebuoySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9704,7 +9704,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLifebuoySolidMd")]
-        Icon::HiLifebuoySolidMd => {
+        HiIcon::HiLifebuoySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9717,7 +9717,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLightBulbOutlineLg")]
-        Icon::HiLightBulbOutlineLg => {
+        HiIcon::HiLightBulbOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9730,7 +9730,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLightBulbSolidLg")]
-        Icon::HiLightBulbSolidLg => {
+        HiIcon::HiLightBulbSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9748,7 +9748,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLightBulbSolidMd")]
-        Icon::HiLightBulbSolidMd => {
+        HiIcon::HiLightBulbSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9762,7 +9762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLinkOutlineLg")]
-        Icon::HiLinkOutlineLg => {
+        HiIcon::HiLinkOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9775,7 +9775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLinkSolidLg")]
-        Icon::HiLinkSolidLg => {
+        HiIcon::HiLinkSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9788,7 +9788,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLinkSolidMd")]
-        Icon::HiLinkSolidMd => {
+        HiIcon::HiLinkSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9802,7 +9802,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiListBulletOutlineLg")]
-        Icon::HiListBulletOutlineLg => {
+        HiIcon::HiListBulletOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9815,7 +9815,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiListBulletSolidLg")]
-        Icon::HiListBulletSolidLg => {
+        HiIcon::HiListBulletSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9828,7 +9828,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiListBulletSolidMd")]
-        Icon::HiListBulletSolidMd => {
+        HiIcon::HiListBulletSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9850,7 +9850,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLockClosedOutlineLg")]
-        Icon::HiLockClosedOutlineLg => {
+        HiIcon::HiLockClosedOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9863,7 +9863,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLockClosedSolidLg")]
-        Icon::HiLockClosedSolidLg => {
+        HiIcon::HiLockClosedSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9876,7 +9876,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLockClosedSolidMd")]
-        Icon::HiLockClosedSolidMd => {
+        HiIcon::HiLockClosedSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9889,7 +9889,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLockOpenOutlineLg")]
-        Icon::HiLockOpenOutlineLg => {
+        HiIcon::HiLockOpenOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9902,7 +9902,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLockOpenSolidLg")]
-        Icon::HiLockOpenSolidLg => {
+        HiIcon::HiLockOpenSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9914,7 +9914,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiLockOpenSolidMd")]
-        Icon::HiLockOpenSolidMd => {
+        HiIcon::HiLockOpenSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9927,7 +9927,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassCircleOutlineLg")]
-        Icon::HiMagnifyingGlassCircleOutlineLg => {
+        HiIcon::HiMagnifyingGlassCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9940,7 +9940,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassCircleSolidLg")]
-        Icon::HiMagnifyingGlassCircleSolidLg => {
+        HiIcon::HiMagnifyingGlassCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9955,7 +9955,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassCircleSolidMd")]
-        Icon::HiMagnifyingGlassCircleSolidMd => {
+        HiIcon::HiMagnifyingGlassCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -9970,7 +9970,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassMinusOutlineLg")]
-        Icon::HiMagnifyingGlassMinusOutlineLg => {
+        HiIcon::HiMagnifyingGlassMinusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9983,7 +9983,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassMinusSolidLg")]
-        Icon::HiMagnifyingGlassMinusSolidLg => {
+        HiIcon::HiMagnifyingGlassMinusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -9996,7 +9996,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassMinusSolidMd")]
-        Icon::HiMagnifyingGlassMinusSolidMd => {
+        HiIcon::HiMagnifyingGlassMinusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10011,7 +10011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassOutlineLg")]
-        Icon::HiMagnifyingGlassOutlineLg => {
+        HiIcon::HiMagnifyingGlassOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10024,7 +10024,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassPlusOutlineLg")]
-        Icon::HiMagnifyingGlassPlusOutlineLg => {
+        HiIcon::HiMagnifyingGlassPlusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10037,7 +10037,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassPlusSolidLg")]
-        Icon::HiMagnifyingGlassPlusSolidLg => {
+        HiIcon::HiMagnifyingGlassPlusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10050,7 +10050,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassPlusSolidMd")]
-        Icon::HiMagnifyingGlassPlusSolidMd => {
+        HiIcon::HiMagnifyingGlassPlusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10065,7 +10065,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassSolidLg")]
-        Icon::HiMagnifyingGlassSolidLg => {
+        HiIcon::HiMagnifyingGlassSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10078,7 +10078,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMagnifyingGlassSolidMd")]
-        Icon::HiMagnifyingGlassSolidMd => {
+        HiIcon::HiMagnifyingGlassSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10091,7 +10091,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMapOutlineLg")]
-        Icon::HiMapOutlineLg => {
+        HiIcon::HiMapOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10104,7 +10104,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMapPinOutlineLg")]
-        Icon::HiMapPinOutlineLg => {
+        HiIcon::HiMapPinOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10120,7 +10120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMapPinSolidLg")]
-        Icon::HiMapPinSolidLg => {
+        HiIcon::HiMapPinSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10133,7 +10133,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMapPinSolidMd")]
-        Icon::HiMapPinSolidMd => {
+        HiIcon::HiMapPinSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10146,7 +10146,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMapSolidLg")]
-        Icon::HiMapSolidLg => {
+        HiIcon::HiMapSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10159,7 +10159,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMapSolidMd")]
-        Icon::HiMapSolidMd => {
+        HiIcon::HiMapSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10172,7 +10172,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMegaphoneOutlineLg")]
-        Icon::HiMegaphoneOutlineLg => {
+        HiIcon::HiMegaphoneOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10185,7 +10185,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMegaphoneSolidLg")]
-        Icon::HiMegaphoneSolidLg => {
+        HiIcon::HiMegaphoneSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10199,7 +10199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMegaphoneSolidMd")]
-        Icon::HiMegaphoneSolidMd => {
+        HiIcon::HiMegaphoneSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10213,7 +10213,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMicrophoneOutlineLg")]
-        Icon::HiMicrophoneOutlineLg => {
+        HiIcon::HiMicrophoneOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10226,7 +10226,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMicrophoneSolidLg")]
-        Icon::HiMicrophoneSolidLg => {
+        HiIcon::HiMicrophoneSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10240,7 +10240,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMicrophoneSolidMd")]
-        Icon::HiMicrophoneSolidMd => {
+        HiIcon::HiMicrophoneSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10254,7 +10254,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusCircleOutlineLg")]
-        Icon::HiMinusCircleOutlineLg => {
+        HiIcon::HiMinusCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10267,7 +10267,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusCircleSolidLg")]
-        Icon::HiMinusCircleSolidLg => {
+        HiIcon::HiMinusCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10280,7 +10280,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusCircleSolidMd")]
-        Icon::HiMinusCircleSolidMd => {
+        HiIcon::HiMinusCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10293,7 +10293,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusOutlineLg")]
-        Icon::HiMinusOutlineLg => {
+        HiIcon::HiMinusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10305,7 +10305,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusSmallOutlineLg")]
-        Icon::HiMinusSmallOutlineLg => {
+        HiIcon::HiMinusSmallOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10317,7 +10317,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusSmallSolidLg")]
-        Icon::HiMinusSmallSolidLg => {
+        HiIcon::HiMinusSmallSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10330,7 +10330,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusSmallSolidMd")]
-        Icon::HiMinusSmallSolidMd => {
+        HiIcon::HiMinusSmallSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10342,7 +10342,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusSolidLg")]
-        Icon::HiMinusSolidLg => {
+        HiIcon::HiMinusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10355,7 +10355,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMinusSolidMd")]
-        Icon::HiMinusSolidMd => {
+        HiIcon::HiMinusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10368,7 +10368,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMoonOutlineLg")]
-        Icon::HiMoonOutlineLg => {
+        HiIcon::HiMoonOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10381,7 +10381,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMoonSolidLg")]
-        Icon::HiMoonSolidLg => {
+        HiIcon::HiMoonSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10394,7 +10394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMoonSolidMd")]
-        Icon::HiMoonSolidMd => {
+        HiIcon::HiMoonSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10407,7 +10407,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMusicalNoteOutlineLg")]
-        Icon::HiMusicalNoteOutlineLg => {
+        HiIcon::HiMusicalNoteOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10420,7 +10420,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMusicalNoteSolidLg")]
-        Icon::HiMusicalNoteSolidLg => {
+        HiIcon::HiMusicalNoteSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10433,7 +10433,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiMusicalNoteSolidMd")]
-        Icon::HiMusicalNoteSolidMd => {
+        HiIcon::HiMusicalNoteSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10446,7 +10446,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiNewspaperOutlineLg")]
-        Icon::HiNewspaperOutlineLg => {
+        HiIcon::HiNewspaperOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10459,7 +10459,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiNewspaperSolidLg")]
-        Icon::HiNewspaperSolidLg => {
+        HiIcon::HiNewspaperSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10474,7 +10474,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiNewspaperSolidMd")]
-        Icon::HiNewspaperSolidMd => {
+        HiIcon::HiNewspaperSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10489,7 +10489,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiNoSymbolOutlineLg")]
-        Icon::HiNoSymbolOutlineLg => {
+        HiIcon::HiNoSymbolOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10502,7 +10502,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiNoSymbolSolidLg")]
-        Icon::HiNoSymbolSolidLg => {
+        HiIcon::HiNoSymbolSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10515,7 +10515,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiNoSymbolSolidMd")]
-        Icon::HiNoSymbolSolidMd => {
+        HiIcon::HiNoSymbolSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10528,7 +10528,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaintBrushOutlineLg")]
-        Icon::HiPaintBrushOutlineLg => {
+        HiIcon::HiPaintBrushOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10541,7 +10541,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaintBrushSolidLg")]
-        Icon::HiPaintBrushSolidLg => {
+        HiIcon::HiPaintBrushSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10554,7 +10554,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaintBrushSolidMd")]
-        Icon::HiPaintBrushSolidMd => {
+        HiIcon::HiPaintBrushSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10568,7 +10568,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaperAirplaneOutlineLg")]
-        Icon::HiPaperAirplaneOutlineLg => {
+        HiIcon::HiPaperAirplaneOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10581,7 +10581,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaperAirplaneSolidLg")]
-        Icon::HiPaperAirplaneSolidLg => {
+        HiIcon::HiPaperAirplaneSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10593,7 +10593,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaperAirplaneSolidMd")]
-        Icon::HiPaperAirplaneSolidMd => {
+        HiIcon::HiPaperAirplaneSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10605,7 +10605,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaperClipOutlineLg")]
-        Icon::HiPaperClipOutlineLg => {
+        HiIcon::HiPaperClipOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10618,7 +10618,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaperClipSolidLg")]
-        Icon::HiPaperClipSolidLg => {
+        HiIcon::HiPaperClipSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10631,7 +10631,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPaperClipSolidMd")]
-        Icon::HiPaperClipSolidMd => {
+        HiIcon::HiPaperClipSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10644,7 +10644,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPauseCircleOutlineLg")]
-        Icon::HiPauseCircleOutlineLg => {
+        HiIcon::HiPauseCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10657,7 +10657,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPauseCircleSolidLg")]
-        Icon::HiPauseCircleSolidLg => {
+        HiIcon::HiPauseCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10670,7 +10670,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPauseCircleSolidMd")]
-        Icon::HiPauseCircleSolidMd => {
+        HiIcon::HiPauseCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10683,7 +10683,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPauseOutlineLg")]
-        Icon::HiPauseOutlineLg => {
+        HiIcon::HiPauseOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10696,7 +10696,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPauseSolidLg")]
-        Icon::HiPauseSolidLg => {
+        HiIcon::HiPauseSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10709,7 +10709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPauseSolidMd")]
-        Icon::HiPauseSolidMd => {
+        HiIcon::HiPauseSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10723,7 +10723,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPencilOutlineLg")]
-        Icon::HiPencilOutlineLg => {
+        HiIcon::HiPencilOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10736,7 +10736,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPencilSolidLg")]
-        Icon::HiPencilSolidLg => {
+        HiIcon::HiPencilSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10750,7 +10750,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPencilSolidMd")]
-        Icon::HiPencilSolidMd => {
+        HiIcon::HiPencilSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10762,7 +10762,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPencilSquareOutlineLg")]
-        Icon::HiPencilSquareOutlineLg => {
+        HiIcon::HiPencilSquareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10775,7 +10775,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPencilSquareSolidLg")]
-        Icon::HiPencilSquareSolidLg => {
+        HiIcon::HiPencilSquareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10791,7 +10791,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPencilSquareSolidMd")]
-        Icon::HiPencilSquareSolidMd => {
+        HiIcon::HiPencilSquareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10805,7 +10805,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneArrowDownLeftOutlineLg")]
-        Icon::HiPhoneArrowDownLeftOutlineLg => {
+        HiIcon::HiPhoneArrowDownLeftOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10818,7 +10818,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneArrowDownLeftSolidLg")]
-        Icon::HiPhoneArrowDownLeftSolidLg => {
+        HiIcon::HiPhoneArrowDownLeftSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10834,7 +10834,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneArrowDownLeftSolidMd")]
-        Icon::HiPhoneArrowDownLeftSolidMd => {
+        HiIcon::HiPhoneArrowDownLeftSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10848,7 +10848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneArrowUpRightOutlineLg")]
-        Icon::HiPhoneArrowUpRightOutlineLg => {
+        HiIcon::HiPhoneArrowUpRightOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10861,7 +10861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneArrowUpRightSolidLg")]
-        Icon::HiPhoneArrowUpRightSolidLg => {
+        HiIcon::HiPhoneArrowUpRightSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10877,7 +10877,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneArrowUpRightSolidMd")]
-        Icon::HiPhoneArrowUpRightSolidMd => {
+        HiIcon::HiPhoneArrowUpRightSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10891,7 +10891,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneOutlineLg")]
-        Icon::HiPhoneOutlineLg => {
+        HiIcon::HiPhoneOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10904,7 +10904,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneSolidLg")]
-        Icon::HiPhoneSolidLg => {
+        HiIcon::HiPhoneSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10917,7 +10917,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneSolidMd")]
-        Icon::HiPhoneSolidMd => {
+        HiIcon::HiPhoneSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10930,7 +10930,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneXMarkOutlineLg")]
-        Icon::HiPhoneXMarkOutlineLg => {
+        HiIcon::HiPhoneXMarkOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10943,7 +10943,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneXMarkSolidLg")]
-        Icon::HiPhoneXMarkSolidLg => {
+        HiIcon::HiPhoneXMarkSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10959,7 +10959,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhoneXMarkSolidMd")]
-        Icon::HiPhoneXMarkSolidMd => {
+        HiIcon::HiPhoneXMarkSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -10972,7 +10972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhotoOutlineLg")]
-        Icon::HiPhotoOutlineLg => {
+        HiIcon::HiPhotoOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10985,7 +10985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhotoSolidLg")]
-        Icon::HiPhotoSolidLg => {
+        HiIcon::HiPhotoSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -10998,7 +10998,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPhotoSolidMd")]
-        Icon::HiPhotoSolidMd => {
+        HiIcon::HiPhotoSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11011,7 +11011,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayCircleOutlineLg")]
-        Icon::HiPlayCircleOutlineLg => {
+        HiIcon::HiPlayCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11027,7 +11027,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayCircleSolidLg")]
-        Icon::HiPlayCircleSolidLg => {
+        HiIcon::HiPlayCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11040,7 +11040,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayCircleSolidMd")]
-        Icon::HiPlayCircleSolidMd => {
+        HiIcon::HiPlayCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11053,7 +11053,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayOutlineLg")]
-        Icon::HiPlayOutlineLg => {
+        HiIcon::HiPlayOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11066,7 +11066,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayPauseOutlineLg")]
-        Icon::HiPlayPauseOutlineLg => {
+        HiIcon::HiPlayPauseOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11079,7 +11079,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayPauseSolidLg")]
-        Icon::HiPlayPauseSolidLg => {
+        HiIcon::HiPlayPauseSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11095,7 +11095,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlayPauseSolidMd")]
-        Icon::HiPlayPauseSolidMd => {
+        HiIcon::HiPlayPauseSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11111,7 +11111,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlaySolidLg")]
-        Icon::HiPlaySolidLg => {
+        HiIcon::HiPlaySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11124,7 +11124,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlaySolidMd")]
-        Icon::HiPlaySolidMd => {
+        HiIcon::HiPlaySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11136,7 +11136,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusCircleOutlineLg")]
-        Icon::HiPlusCircleOutlineLg => {
+        HiIcon::HiPlusCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11149,7 +11149,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusCircleSolidLg")]
-        Icon::HiPlusCircleSolidLg => {
+        HiIcon::HiPlusCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11162,7 +11162,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusCircleSolidMd")]
-        Icon::HiPlusCircleSolidMd => {
+        HiIcon::HiPlusCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11175,7 +11175,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusOutlineLg")]
-        Icon::HiPlusOutlineLg => {
+        HiIcon::HiPlusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11187,7 +11187,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusSmallOutlineLg")]
-        Icon::HiPlusSmallOutlineLg => {
+        HiIcon::HiPlusSmallOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11199,7 +11199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusSmallSolidLg")]
-        Icon::HiPlusSmallSolidLg => {
+        HiIcon::HiPlusSmallSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11212,7 +11212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusSmallSolidMd")]
-        Icon::HiPlusSmallSolidMd => {
+        HiIcon::HiPlusSmallSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11224,7 +11224,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusSolidLg")]
-        Icon::HiPlusSolidLg => {
+        HiIcon::HiPlusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11237,7 +11237,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPlusSolidMd")]
-        Icon::HiPlusSolidMd => {
+        HiIcon::HiPlusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11249,7 +11249,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPowerOutlineLg")]
-        Icon::HiPowerOutlineLg => {
+        HiIcon::HiPowerOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11262,7 +11262,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPowerSolidLg")]
-        Icon::HiPowerSolidLg => {
+        HiIcon::HiPowerSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11275,7 +11275,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPowerSolidMd")]
-        Icon::HiPowerSolidMd => {
+        HiIcon::HiPowerSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11288,7 +11288,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPresentationChartBarOutlineLg")]
-        Icon::HiPresentationChartBarOutlineLg => {
+        HiIcon::HiPresentationChartBarOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11301,7 +11301,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPresentationChartBarSolidLg")]
-        Icon::HiPresentationChartBarSolidLg => {
+        HiIcon::HiPresentationChartBarSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11314,7 +11314,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPresentationChartBarSolidMd")]
-        Icon::HiPresentationChartBarSolidMd => {
+        HiIcon::HiPresentationChartBarSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11327,7 +11327,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPresentationChartLineOutlineLg")]
-        Icon::HiPresentationChartLineOutlineLg => {
+        HiIcon::HiPresentationChartLineOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11340,7 +11340,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPresentationChartLineSolidLg")]
-        Icon::HiPresentationChartLineSolidLg => {
+        HiIcon::HiPresentationChartLineSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11353,7 +11353,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPresentationChartLineSolidMd")]
-        Icon::HiPresentationChartLineSolidMd => {
+        HiIcon::HiPresentationChartLineSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11366,7 +11366,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPrinterOutlineLg")]
-        Icon::HiPrinterOutlineLg => {
+        HiIcon::HiPrinterOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11379,7 +11379,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPrinterSolidLg")]
-        Icon::HiPrinterSolidLg => {
+        HiIcon::HiPrinterSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11392,7 +11392,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPrinterSolidMd")]
-        Icon::HiPrinterSolidMd => {
+        HiIcon::HiPrinterSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11405,7 +11405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPuzzlePieceOutlineLg")]
-        Icon::HiPuzzlePieceOutlineLg => {
+        HiIcon::HiPuzzlePieceOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11418,7 +11418,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPuzzlePieceSolidLg")]
-        Icon::HiPuzzlePieceSolidLg => {
+        HiIcon::HiPuzzlePieceSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11430,7 +11430,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiPuzzlePieceSolidMd")]
-        Icon::HiPuzzlePieceSolidMd => {
+        HiIcon::HiPuzzlePieceSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11442,7 +11442,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQrCodeOutlineLg")]
-        Icon::HiQrCodeOutlineLg => {
+        HiIcon::HiQrCodeOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11477,7 +11477,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQrCodeSolidLg")]
-        Icon::HiQrCodeSolidLg => {
+        HiIcon::HiQrCodeSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11490,7 +11490,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQrCodeSolidMd")]
-        Icon::HiQrCodeSolidMd => {
+        HiIcon::HiQrCodeSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11503,7 +11503,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQuestionMarkCircleOutlineLg")]
-        Icon::HiQuestionMarkCircleOutlineLg => {
+        HiIcon::HiQuestionMarkCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11516,7 +11516,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQuestionMarkCircleSolidLg")]
-        Icon::HiQuestionMarkCircleSolidLg => {
+        HiIcon::HiQuestionMarkCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11529,7 +11529,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQuestionMarkCircleSolidMd")]
-        Icon::HiQuestionMarkCircleSolidMd => {
+        HiIcon::HiQuestionMarkCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11542,7 +11542,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQueueListOutlineLg")]
-        Icon::HiQueueListOutlineLg => {
+        HiIcon::HiQueueListOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11555,7 +11555,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQueueListSolidLg")]
-        Icon::HiQueueListSolidLg => {
+        HiIcon::HiQueueListSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11573,7 +11573,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiQueueListSolidMd")]
-        Icon::HiQueueListSolidMd => {
+        HiIcon::HiQueueListSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11591,7 +11591,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRadioOutlineLg")]
-        Icon::HiRadioOutlineLg => {
+        HiIcon::HiRadioOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11604,7 +11604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRadioSolidLg")]
-        Icon::HiRadioSolidLg => {
+        HiIcon::HiRadioSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11617,7 +11617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRadioSolidMd")]
-        Icon::HiRadioSolidMd => {
+        HiIcon::HiRadioSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11630,7 +11630,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiReceiptPercentOutlineLg")]
-        Icon::HiReceiptPercentOutlineLg => {
+        HiIcon::HiReceiptPercentOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11643,7 +11643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiReceiptPercentSolidLg")]
-        Icon::HiReceiptPercentSolidLg => {
+        HiIcon::HiReceiptPercentSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11656,7 +11656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiReceiptPercentSolidMd")]
-        Icon::HiReceiptPercentSolidMd => {
+        HiIcon::HiReceiptPercentSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11669,7 +11669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiReceiptRefundOutlineLg")]
-        Icon::HiReceiptRefundOutlineLg => {
+        HiIcon::HiReceiptRefundOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11682,7 +11682,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiReceiptRefundSolidLg")]
-        Icon::HiReceiptRefundSolidLg => {
+        HiIcon::HiReceiptRefundSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11695,7 +11695,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiReceiptRefundSolidMd")]
-        Icon::HiReceiptRefundSolidMd => {
+        HiIcon::HiReceiptRefundSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11708,7 +11708,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRectangleGroupOutlineLg")]
-        Icon::HiRectangleGroupOutlineLg => {
+        HiIcon::HiRectangleGroupOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11727,7 +11727,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRectangleGroupSolidLg")]
-        Icon::HiRectangleGroupSolidLg => {
+        HiIcon::HiRectangleGroupSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11740,7 +11740,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRectangleGroupSolidMd")]
-        Icon::HiRectangleGroupSolidMd => {
+        HiIcon::HiRectangleGroupSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11753,7 +11753,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRectangleStackOutlineLg")]
-        Icon::HiRectangleStackOutlineLg => {
+        HiIcon::HiRectangleStackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11766,7 +11766,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRectangleStackSolidLg")]
-        Icon::HiRectangleStackSolidLg => {
+        HiIcon::HiRectangleStackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11782,7 +11782,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRectangleStackSolidMd")]
-        Icon::HiRectangleStackSolidMd => {
+        HiIcon::HiRectangleStackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11798,7 +11798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRocketLaunchOutlineLg")]
-        Icon::HiRocketLaunchOutlineLg => {
+        HiIcon::HiRocketLaunchOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11811,7 +11811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRocketLaunchSolidLg")]
-        Icon::HiRocketLaunchSolidLg => {
+        HiIcon::HiRocketLaunchSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11826,7 +11826,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRocketLaunchSolidMd")]
-        Icon::HiRocketLaunchSolidMd => {
+        HiIcon::HiRocketLaunchSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11842,7 +11842,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRssOutlineLg")]
-        Icon::HiRssOutlineLg => {
+        HiIcon::HiRssOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11855,7 +11855,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRssSolidLg")]
-        Icon::HiRssSolidLg => {
+        HiIcon::HiRssSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11868,7 +11868,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiRssSolidMd")]
-        Icon::HiRssSolidMd => {
+        HiIcon::HiRssSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11884,7 +11884,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiScaleOutlineLg")]
-        Icon::HiScaleOutlineLg => {
+        HiIcon::HiScaleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11897,7 +11897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiScaleSolidLg")]
-        Icon::HiScaleSolidLg => {
+        HiIcon::HiScaleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11910,7 +11910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiScaleSolidMd")]
-        Icon::HiScaleSolidMd => {
+        HiIcon::HiScaleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11923,7 +11923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiScissorsOutlineLg")]
-        Icon::HiScissorsOutlineLg => {
+        HiIcon::HiScissorsOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11936,7 +11936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiScissorsSolidLg")]
-        Icon::HiScissorsSolidLg => {
+        HiIcon::HiScissorsSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11954,7 +11954,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiScissorsSolidMd")]
-        Icon::HiScissorsSolidMd => {
+        HiIcon::HiScissorsSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -11972,7 +11972,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiServerOutlineLg")]
-        Icon::HiServerOutlineLg => {
+        HiIcon::HiServerOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -11985,7 +11985,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiServerSolidLg")]
-        Icon::HiServerSolidLg => {
+        HiIcon::HiServerSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12000,7 +12000,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiServerSolidMd")]
-        Icon::HiServerSolidMd => {
+        HiIcon::HiServerSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12015,7 +12015,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiServerStackOutlineLg")]
-        Icon::HiServerStackOutlineLg => {
+        HiIcon::HiServerStackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12028,7 +12028,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiServerStackSolidLg")]
-        Icon::HiServerStackSolidLg => {
+        HiIcon::HiServerStackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12046,7 +12046,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiServerStackSolidMd")]
-        Icon::HiServerStackSolidMd => {
+        HiIcon::HiServerStackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12064,7 +12064,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShareOutlineLg")]
-        Icon::HiShareOutlineLg => {
+        HiIcon::HiShareOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12077,7 +12077,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShareSolidLg")]
-        Icon::HiShareSolidLg => {
+        HiIcon::HiShareSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12090,7 +12090,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShareSolidMd")]
-        Icon::HiShareSolidMd => {
+        HiIcon::HiShareSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12102,7 +12102,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShieldCheckOutlineLg")]
-        Icon::HiShieldCheckOutlineLg => {
+        HiIcon::HiShieldCheckOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12115,7 +12115,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShieldCheckSolidLg")]
-        Icon::HiShieldCheckSolidLg => {
+        HiIcon::HiShieldCheckSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12128,7 +12128,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShieldCheckSolidMd")]
-        Icon::HiShieldCheckSolidMd => {
+        HiIcon::HiShieldCheckSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12141,7 +12141,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShieldExclamationOutlineLg")]
-        Icon::HiShieldExclamationOutlineLg => {
+        HiIcon::HiShieldExclamationOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12154,7 +12154,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShieldExclamationSolidLg")]
-        Icon::HiShieldExclamationSolidLg => {
+        HiIcon::HiShieldExclamationSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12167,7 +12167,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShieldExclamationSolidMd")]
-        Icon::HiShieldExclamationSolidMd => {
+        HiIcon::HiShieldExclamationSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12180,7 +12180,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShoppingBagOutlineLg")]
-        Icon::HiShoppingBagOutlineLg => {
+        HiIcon::HiShoppingBagOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12193,7 +12193,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShoppingBagSolidLg")]
-        Icon::HiShoppingBagSolidLg => {
+        HiIcon::HiShoppingBagSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12206,7 +12206,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShoppingBagSolidMd")]
-        Icon::HiShoppingBagSolidMd => {
+        HiIcon::HiShoppingBagSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12219,7 +12219,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShoppingCartOutlineLg")]
-        Icon::HiShoppingCartOutlineLg => {
+        HiIcon::HiShoppingCartOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12232,7 +12232,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShoppingCartSolidLg")]
-        Icon::HiShoppingCartSolidLg => {
+        HiIcon::HiShoppingCartSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12248,7 +12248,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiShoppingCartSolidMd")]
-        Icon::HiShoppingCartSolidMd => {
+        HiIcon::HiShoppingCartSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12264,7 +12264,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSignalOutlineLg")]
-        Icon::HiSignalOutlineLg => {
+        HiIcon::HiSignalOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12277,7 +12277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSignalSlashOutlineLg")]
-        Icon::HiSignalSlashOutlineLg => {
+        HiIcon::HiSignalSlashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12290,7 +12290,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSignalSlashSolidLg")]
-        Icon::HiSignalSlashSolidLg => {
+        HiIcon::HiSignalSlashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12303,7 +12303,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSignalSlashSolidMd")]
-        Icon::HiSignalSlashSolidMd => {
+        HiIcon::HiSignalSlashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12323,7 +12323,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSignalSolidLg")]
-        Icon::HiSignalSolidLg => {
+        HiIcon::HiSignalSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12336,7 +12336,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSignalSolidMd")]
-        Icon::HiSignalSolidMd => {
+        HiIcon::HiSignalSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12356,7 +12356,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSparklesOutlineLg")]
-        Icon::HiSparklesOutlineLg => {
+        HiIcon::HiSparklesOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12375,7 +12375,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSparklesSolidLg")]
-        Icon::HiSparklesSolidLg => {
+        HiIcon::HiSparklesSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12394,7 +12394,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSparklesSolidMd")]
-        Icon::HiSparklesSolidMd => {
+        HiIcon::HiSparklesSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12410,7 +12410,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSpeakerWaveOutlineLg")]
-        Icon::HiSpeakerWaveOutlineLg => {
+        HiIcon::HiSpeakerWaveOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12423,7 +12423,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSpeakerWaveSolidLg")]
-        Icon::HiSpeakerWaveSolidLg => {
+        HiIcon::HiSpeakerWaveSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12439,7 +12439,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSpeakerWaveSolidMd")]
-        Icon::HiSpeakerWaveSolidMd => {
+        HiIcon::HiSpeakerWaveSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12455,7 +12455,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSpeakerXMarkOutlineLg")]
-        Icon::HiSpeakerXMarkOutlineLg => {
+        HiIcon::HiSpeakerXMarkOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12468,7 +12468,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSpeakerXMarkSolidLg")]
-        Icon::HiSpeakerXMarkSolidLg => {
+        HiIcon::HiSpeakerXMarkSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12482,7 +12482,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSpeakerXMarkSolidMd")]
-        Icon::HiSpeakerXMarkSolidMd => {
+        HiIcon::HiSpeakerXMarkSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12496,7 +12496,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquare2StackOutlineLg")]
-        Icon::HiSquare2StackOutlineLg => {
+        HiIcon::HiSquare2StackOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12509,7 +12509,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquare2StackSolidLg")]
-        Icon::HiSquare2StackSolidLg => {
+        HiIcon::HiSquare2StackSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12523,7 +12523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquare2StackSolidMd")]
-        Icon::HiSquare2StackSolidMd => {
+        HiIcon::HiSquare2StackSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12537,7 +12537,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquare3Stack3dOutlineLg")]
-        Icon::HiSquare3Stack3dOutlineLg => {
+        HiIcon::HiSquare3Stack3dOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12550,7 +12550,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquare3Stack3dSolidLg")]
-        Icon::HiSquare3Stack3dSolidLg => {
+        HiIcon::HiSquare3Stack3dSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12566,7 +12566,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquare3Stack3dSolidMd")]
-        Icon::HiSquare3Stack3dSolidMd => {
+        HiIcon::HiSquare3Stack3dSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12582,7 +12582,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquares2x2OutlineLg")]
-        Icon::HiSquares2x2OutlineLg => {
+        HiIcon::HiSquares2x2OutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12604,7 +12604,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquares2x2SolidLg")]
-        Icon::HiSquares2x2SolidLg => {
+        HiIcon::HiSquares2x2SolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12617,7 +12617,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquares2x2SolidMd")]
-        Icon::HiSquares2x2SolidMd => {
+        HiIcon::HiSquares2x2SolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12630,7 +12630,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquaresPlusOutlineLg")]
-        Icon::HiSquaresPlusOutlineLg => {
+        HiIcon::HiSquaresPlusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12643,7 +12643,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquaresPlusSolidLg")]
-        Icon::HiSquaresPlusSolidLg => {
+        HiIcon::HiSquaresPlusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12661,7 +12661,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSquaresPlusSolidMd")]
-        Icon::HiSquaresPlusSolidMd => {
+        HiIcon::HiSquaresPlusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12679,7 +12679,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStarOutlineLg")]
-        Icon::HiStarOutlineLg => {
+        HiIcon::HiStarOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12692,7 +12692,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStarSolidLg")]
-        Icon::HiStarSolidLg => {
+        HiIcon::HiStarSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12705,7 +12705,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStarSolidMd")]
-        Icon::HiStarSolidMd => {
+        HiIcon::HiStarSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12718,7 +12718,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStopCircleOutlineLg")]
-        Icon::HiStopCircleOutlineLg => {
+        HiIcon::HiStopCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12734,7 +12734,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStopCircleSolidLg")]
-        Icon::HiStopCircleSolidLg => {
+        HiIcon::HiStopCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12747,7 +12747,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStopCircleSolidMd")]
-        Icon::HiStopCircleSolidMd => {
+        HiIcon::HiStopCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12760,7 +12760,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStopOutlineLg")]
-        Icon::HiStopOutlineLg => {
+        HiIcon::HiStopOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12773,7 +12773,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStopSolidLg")]
-        Icon::HiStopSolidLg => {
+        HiIcon::HiStopSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12786,7 +12786,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiStopSolidMd")]
-        Icon::HiStopSolidMd => {
+        HiIcon::HiStopSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12798,7 +12798,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSunOutlineLg")]
-        Icon::HiSunOutlineLg => {
+        HiIcon::HiSunOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12811,7 +12811,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSunSolidLg")]
-        Icon::HiSunSolidLg => {
+        HiIcon::HiSunSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12839,7 +12839,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSunSolidMd")]
-        Icon::HiSunSolidMd => {
+        HiIcon::HiSunSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12867,7 +12867,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSwatchOutlineLg")]
-        Icon::HiSwatchOutlineLg => {
+        HiIcon::HiSwatchOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12880,7 +12880,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSwatchSolidLg")]
-        Icon::HiSwatchSolidLg => {
+        HiIcon::HiSwatchSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12897,7 +12897,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiSwatchSolidMd")]
-        Icon::HiSwatchSolidMd => {
+        HiIcon::HiSwatchSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12910,7 +12910,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTableCellsOutlineLg")]
-        Icon::HiTableCellsOutlineLg => {
+        HiIcon::HiTableCellsOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12923,7 +12923,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTableCellsSolidLg")]
-        Icon::HiTableCellsSolidLg => {
+        HiIcon::HiTableCellsSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12936,7 +12936,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTableCellsSolidMd")]
-        Icon::HiTableCellsSolidMd => {
+        HiIcon::HiTableCellsSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12949,7 +12949,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTagOutlineLg")]
-        Icon::HiTagOutlineLg => {
+        HiIcon::HiTagOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12964,7 +12964,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTagSolidLg")]
-        Icon::HiTagSolidLg => {
+        HiIcon::HiTagSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -12977,7 +12977,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTagSolidMd")]
-        Icon::HiTagSolidMd => {
+        HiIcon::HiTagSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -12990,7 +12990,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTicketOutlineLg")]
-        Icon::HiTicketOutlineLg => {
+        HiIcon::HiTicketOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13003,7 +13003,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTicketSolidLg")]
-        Icon::HiTicketSolidLg => {
+        HiIcon::HiTicketSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13016,7 +13016,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTicketSolidMd")]
-        Icon::HiTicketSolidMd => {
+        HiIcon::HiTicketSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13029,7 +13029,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTrashOutlineLg")]
-        Icon::HiTrashOutlineLg => {
+        HiIcon::HiTrashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13042,7 +13042,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTrashSolidLg")]
-        Icon::HiTrashSolidLg => {
+        HiIcon::HiTrashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13055,7 +13055,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTrashSolidMd")]
-        Icon::HiTrashSolidMd => {
+        HiIcon::HiTrashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13068,7 +13068,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTrophyOutlineLg")]
-        Icon::HiTrophyOutlineLg => {
+        HiIcon::HiTrophyOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13081,7 +13081,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTrophySolidLg")]
-        Icon::HiTrophySolidLg => {
+        HiIcon::HiTrophySolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13094,7 +13094,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTrophySolidMd")]
-        Icon::HiTrophySolidMd => {
+        HiIcon::HiTrophySolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13107,7 +13107,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTruckOutlineLg")]
-        Icon::HiTruckOutlineLg => {
+        HiIcon::HiTruckOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13120,7 +13120,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTruckSolidLg")]
-        Icon::HiTruckSolidLg => {
+        HiIcon::HiTruckSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13140,7 +13140,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTruckSolidMd")]
-        Icon::HiTruckSolidMd => {
+        HiIcon::HiTruckSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13160,7 +13160,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTvOutlineLg")]
-        Icon::HiTvOutlineLg => {
+        HiIcon::HiTvOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13173,7 +13173,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTvSolidLg")]
-        Icon::HiTvSolidLg => {
+        HiIcon::HiTvSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13186,7 +13186,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiTvSolidMd")]
-        Icon::HiTvSolidMd => {
+        HiIcon::HiTvSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13199,7 +13199,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserCircleOutlineLg")]
-        Icon::HiUserCircleOutlineLg => {
+        HiIcon::HiUserCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13212,7 +13212,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserCircleSolidLg")]
-        Icon::HiUserCircleSolidLg => {
+        HiIcon::HiUserCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13225,7 +13225,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserCircleSolidMd")]
-        Icon::HiUserCircleSolidMd => {
+        HiIcon::HiUserCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13238,7 +13238,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserGroupOutlineLg")]
-        Icon::HiUserGroupOutlineLg => {
+        HiIcon::HiUserGroupOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13251,7 +13251,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserGroupSolidLg")]
-        Icon::HiUserGroupSolidLg => {
+        HiIcon::HiUserGroupSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13277,7 +13277,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserGroupSolidMd")]
-        Icon::HiUserGroupSolidMd => {
+        HiIcon::HiUserGroupSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13299,7 +13299,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserMinusOutlineLg")]
-        Icon::HiUserMinusOutlineLg => {
+        HiIcon::HiUserMinusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13312,7 +13312,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserMinusSolidLg")]
-        Icon::HiUserMinusSolidLg => {
+        HiIcon::HiUserMinusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13328,7 +13328,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserMinusSolidMd")]
-        Icon::HiUserMinusSolidMd => {
+        HiIcon::HiUserMinusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13344,7 +13344,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserOutlineLg")]
-        Icon::HiUserOutlineLg => {
+        HiIcon::HiUserOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13360,7 +13360,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserPlusOutlineLg")]
-        Icon::HiUserPlusOutlineLg => {
+        HiIcon::HiUserPlusOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13373,7 +13373,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserPlusSolidLg")]
-        Icon::HiUserPlusSolidLg => {
+        HiIcon::HiUserPlusSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13389,7 +13389,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserPlusSolidMd")]
-        Icon::HiUserPlusSolidMd => {
+        HiIcon::HiUserPlusSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13405,7 +13405,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserSolidLg")]
-        Icon::HiUserSolidLg => {
+        HiIcon::HiUserSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13421,7 +13421,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUserSolidMd")]
-        Icon::HiUserSolidMd => {
+        HiIcon::HiUserSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13435,7 +13435,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUsersOutlineLg")]
-        Icon::HiUsersOutlineLg => {
+        HiIcon::HiUsersOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13448,7 +13448,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUsersSolidLg")]
-        Icon::HiUsersSolidLg => {
+        HiIcon::HiUsersSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13466,7 +13466,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiUsersSolidMd")]
-        Icon::HiUsersSolidMd => {
+        HiIcon::HiUsersSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13484,7 +13484,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVariableOutlineLg")]
-        Icon::HiVariableOutlineLg => {
+        HiIcon::HiVariableOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13497,7 +13497,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVariableSolidLg")]
-        Icon::HiVariableSolidLg => {
+        HiIcon::HiVariableSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13510,7 +13510,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVariableSolidMd")]
-        Icon::HiVariableSolidMd => {
+        HiIcon::HiVariableSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13523,7 +13523,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVideoCameraOutlineLg")]
-        Icon::HiVideoCameraOutlineLg => {
+        HiIcon::HiVideoCameraOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13536,7 +13536,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVideoCameraSlashOutlineLg")]
-        Icon::HiVideoCameraSlashOutlineLg => {
+        HiIcon::HiVideoCameraSlashOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13549,7 +13549,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVideoCameraSlashSolidLg")]
-        Icon::HiVideoCameraSlashSolidLg => {
+        HiIcon::HiVideoCameraSlashSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13567,7 +13567,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVideoCameraSlashSolidMd")]
-        Icon::HiVideoCameraSlashSolidMd => {
+        HiIcon::HiVideoCameraSlashSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13585,7 +13585,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVideoCameraSolidLg")]
-        Icon::HiVideoCameraSolidLg => {
+        HiIcon::HiVideoCameraSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13599,7 +13599,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiVideoCameraSolidMd")]
-        Icon::HiVideoCameraSolidMd => {
+        HiIcon::HiVideoCameraSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13613,7 +13613,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiViewColumnsOutlineLg")]
-        Icon::HiViewColumnsOutlineLg => {
+        HiIcon::HiViewColumnsOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13626,7 +13626,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiViewColumnsSolidLg")]
-        Icon::HiViewColumnsSolidLg => {
+        HiIcon::HiViewColumnsSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13641,7 +13641,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiViewColumnsSolidMd")]
-        Icon::HiViewColumnsSolidMd => {
+        HiIcon::HiViewColumnsSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13656,7 +13656,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiViewfinderCircleOutlineLg")]
-        Icon::HiViewfinderCircleOutlineLg => {
+        HiIcon::HiViewfinderCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13669,7 +13669,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiViewfinderCircleSolidLg")]
-        Icon::HiViewfinderCircleSolidLg => {
+        HiIcon::HiViewfinderCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13689,7 +13689,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiViewfinderCircleSolidMd")]
-        Icon::HiViewfinderCircleSolidMd => {
+        HiIcon::HiViewfinderCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13709,7 +13709,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWalletOutlineLg")]
-        Icon::HiWalletOutlineLg => {
+        HiIcon::HiWalletOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13722,7 +13722,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWalletSolidLg")]
-        Icon::HiWalletSolidLg => {
+        HiIcon::HiWalletSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13738,7 +13738,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWalletSolidMd")]
-        Icon::HiWalletSolidMd => {
+        HiIcon::HiWalletSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13754,7 +13754,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWifiOutlineLg")]
-        Icon::HiWifiOutlineLg => {
+        HiIcon::HiWifiOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13767,7 +13767,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWifiSolidLg")]
-        Icon::HiWifiSolidLg => {
+        HiIcon::HiWifiSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13780,7 +13780,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWifiSolidMd")]
-        Icon::HiWifiSolidMd => {
+        HiIcon::HiWifiSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13793,7 +13793,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWindowOutlineLg")]
-        Icon::HiWindowOutlineLg => {
+        HiIcon::HiWindowOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13806,7 +13806,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWindowSolidLg")]
-        Icon::HiWindowSolidLg => {
+        HiIcon::HiWindowSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13819,7 +13819,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWindowSolidMd")]
-        Icon::HiWindowSolidMd => {
+        HiIcon::HiWindowSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13832,7 +13832,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWrenchOutlineLg")]
-        Icon::HiWrenchOutlineLg => {
+        HiIcon::HiWrenchOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13848,7 +13848,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWrenchScrewdriverOutlineLg")]
-        Icon::HiWrenchScrewdriverOutlineLg => {
+        HiIcon::HiWrenchScrewdriverOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13861,7 +13861,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWrenchScrewdriverSolidLg")]
-        Icon::HiWrenchScrewdriverSolidLg => {
+        HiIcon::HiWrenchScrewdriverSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13879,7 +13879,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWrenchScrewdriverSolidMd")]
-        Icon::HiWrenchScrewdriverSolidMd => {
+        HiIcon::HiWrenchScrewdriverSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13896,7 +13896,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWrenchSolidLg")]
-        Icon::HiWrenchSolidLg => {
+        HiIcon::HiWrenchSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13909,7 +13909,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiWrenchSolidMd")]
-        Icon::HiWrenchSolidMd => {
+        HiIcon::HiWrenchSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13922,7 +13922,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiXCircleOutlineLg")]
-        Icon::HiXCircleOutlineLg => {
+        HiIcon::HiXCircleOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13935,7 +13935,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiXCircleSolidLg")]
-        Icon::HiXCircleSolidLg => {
+        HiIcon::HiXCircleSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13948,7 +13948,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiXCircleSolidMd")]
-        Icon::HiXCircleSolidMd => {
+        HiIcon::HiXCircleSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
@@ -13961,7 +13961,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiXMarkOutlineLg")]
-        Icon::HiXMarkOutlineLg => {
+        HiIcon::HiXMarkOutlineLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13973,7 +13973,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiXMarkSolidLg")]
-        Icon::HiXMarkSolidLg => {
+        HiIcon::HiXMarkSolidLg => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 24 24" fill = "none" role =
@@ -13986,7 +13986,7 @@ pub fn LeptosIcon(
                 .into_view(cx)
         }
         #[cfg(feature = "HiXMarkSolidMd")]
-        Icon::HiXMarkSolidMd => {
+        HiIcon::HiXMarkSolidMd => {
             view! {
                 cx, < svg class = class style = format!(" {}", style) width = width
                 height = height viewBox = "0 0 20 20" fill = "none" role =
