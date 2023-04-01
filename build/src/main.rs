@@ -73,16 +73,27 @@ async fn main() -> Result<()> {
             })
         })
         .collect::<Vec<_>>();
-    for handle in handles {
-        if let Err(err) = handle.await.unwrap() {
-            error!(?err, "Could not process package successfully.");
-            return Err(err)
+
+    let libs = {
+        let mut libs = Vec::new();
+        for handle in handles {
+            match handle.await.unwrap() {
+                Ok(lib) => libs.push(lib),
+                Err(err) => {
+                    error!(?err, "Could not process package successfully.");
+                    return Err(err);
+                }
+            }
         }
-    }
+        libs
+    };
+
+    // TODO: Generate a base library, combining all previously generated libraries.
 
     let end = time::OffsetDateTime::now_utc();
     info!(
         took = format!("{}s", (end - start).whole_seconds()),
+        num_libs = libs.len(),
         "Build successful!"
     );
 

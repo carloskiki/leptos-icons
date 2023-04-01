@@ -71,7 +71,6 @@ impl Library {
             error!(?err, "Could not get icons.");
             err
         })?;
-
         trace!(num_icons = icons.len(), "Sorting icons to avoid churn.");
         icons.sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
 

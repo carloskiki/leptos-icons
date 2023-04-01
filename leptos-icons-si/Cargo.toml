@@ -16,8 +16,11 @@ categories = ["web-programming"]
 
 [dependencies]
 leptos = { version = "0.2", default-features = false }
+serde = { version = "1", features = ["derive"] }
 
 [features]
+serde = [dep:serde]
+
 Si1001tracklists = []
 Si1password = []
 Si3m = []

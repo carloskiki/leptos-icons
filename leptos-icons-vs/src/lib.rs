@@ -1,4 +1,22 @@
 
+#[cfg_attr(
+    feature = "serde",
+    derive(
+        Debug,
+        PartialEq,
+        Eq,
+        PartialOrd,
+        Ord,
+        Clone,
+        Copy,
+        serde::Serialize,
+        serde::Deserialize
+    )
+)]
+#[cfg_attr(
+    not(feature = "serde"),
+    derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)
+)]
 pub enum Icon {
     #[cfg(feature = "VsAccount")]
     VsAccount,
