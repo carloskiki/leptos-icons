@@ -28,7 +28,7 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
     serde = { version = "1", features = ["derive"] }
 
     [features]
-    serde = [dep:serde]
+    serde = ["dep:serde"]
 
 "#
 );
