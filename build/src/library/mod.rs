@@ -5,6 +5,7 @@ use heck::ToUpperCamelCase;
 use tracing::{error, info, instrument, trace};
 
 use crate::{
+    icon::SvgIcon,
     library::{
         cargo_toml::CargoToml, icons_md::Icons, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir,
     },
@@ -26,6 +27,7 @@ pub(crate) struct IconLibrary {
     pub readme_md: Readme,
     pub icons_md: Icons,
     pub src_dir: SrcDir,
+    pub icons: Vec<SvgIcon>,
 }
 
 impl IconLibrary {
@@ -49,6 +51,7 @@ impl IconLibrary {
                     path: root.join("src").join("lib.rs"),
                 },
             },
+            icons: Vec::new(),
         }
     }
 
@@ -68,21 +71,26 @@ impl IconLibrary {
         // Extract icon information from that package.
         // Sorting the resulting Vec is necessary, as we want to reduce churn in the later generated output as much as possible.
         trace!("Collecting icons.");
-        let mut icons = self.package.read_icons().await.map_err(|err| {
+        self.icons = self.package.read_icons().await.map_err(|err| {
             error!(?err, "Could not get icons.");
             err
         })?;
-        trace!(num_icons = icons.len(), "Sorting icons to avoid churn.");
-        icons.sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
 
-        let enum_code = LibRs::build_enum(&self.enum_name(), &icons)?;
+        trace!(
+            num_icons = self.icons.len(),
+            "Sorting icons to avoid churn."
+        );
+        self.icons
+            .sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
+
+        let enum_code = LibRs::build_enum(&self.enum_name(), &self.icons)?;
         self.src_dir.lib_rs.write_enum(enum_code).await?;
 
         let component_code =
-            LibRs::build_icon_component(&self.component_name(), &self.enum_name(), &icons)?;
+            LibRs::build_icon_component(&self.component_name(), &self.enum_name(), &self.icons)?;
         self.src_dir.lib_rs.write_component(component_code).await?;
 
-        self.cargo_toml.append_features(&icons).await?;
+        self.cargo_toml.append_features(&self.icons).await?;
 
         trace!("Writing README.md.");
         self.readme_md.write_usage().await?;
@@ -91,7 +99,7 @@ impl IconLibrary {
 
         trace!("Writing ICONS.md.");
         self.icons_md
-            .write_icon_table(self.package.ty, &icons)
+            .write_icon_table(self.package.ty, &self.icons)
             .await?;
 
         info!("Library generated.");

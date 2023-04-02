@@ -9,27 +9,12 @@ console_error_panic_hook = "0.1"
 console_log = "1"
 log = "0.4"
 
-leptos-icons-ai = { path = "../../../leptos-icons-ai", features = [
+leptos-icons = { path = "../..", features = [
     "AiPushpinTwotone",
-] }
-
-leptos-icons-bi = { path = "../../../leptos-icons-bi", features = [
-    "BiGraphql",
-] }
-
-leptos-icons-bs = { path = "../../../leptos-icons-bs", features = [
-    "Bs1Circle",
-] }
-
-leptos-icons-fa = { path = "../../../leptos-icons-fa", features = [
-    "FaBarsSolid",
-] }
-
-leptos-icons-im = { path = "../../../leptos-icons-im", features = [
-    "ImPagebreak",
-    "ImPageBreak",
-] }
-
-leptos-icons-io = { path = "../../../leptos-icons-io", features = [
+    #"BiGraphql",
+    #"Bs1Circle",
+    #"FaBarsSolid",
+    #"ImPagebreak",
+    #"ImPageBreak",
     "IoColorWand",
 ] }

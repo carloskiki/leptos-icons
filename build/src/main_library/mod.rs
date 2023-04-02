@@ -50,13 +50,32 @@ impl MainLibrary {
 
         trace!("Resetting library directory.");
         self.src_dir.reset().await?;
-        self.cargo_toml.reset(&self.name).await?;
+        self.cargo_toml.reset().await?;
+        self.cargo_toml.write_package_section(&self.name).await?;
+        self.cargo_toml
+            .write_dependencies_section(&icon_libs)
+            .await?;
+        self.cargo_toml.write_features_section(&icon_libs).await?;
         self.readme_md.reset().await?;
 
-        let enum_code = LibRs::build_enum(&self.enum_name(), &icon_libs)?;
-        self.src_dir.lib_rs.write_enum(enum_code).await?;
+        self.src_dir
+            .lib_rs
+            .write(LibRs::build_reexports(&icon_libs)?)
+            .await?;
 
-        self.cargo_toml.append_dependencies(&icon_libs).await?;
+        self.src_dir
+            .lib_rs
+            .write(LibRs::build_enum(&self.enum_name(), &icon_libs)?)
+            .await?;
+
+        self.src_dir
+            .lib_rs
+            .write(LibRs::build_component(
+                &self.component_name(),
+                &self.enum_name(),
+                &icon_libs,
+            )?)
+            .await?;
 
         trace!("Writing README.md.");
         self.readme_md.write_usage().await?;
@@ -69,5 +88,9 @@ impl MainLibrary {
 
     pub fn enum_name(&self) -> String {
         "Icon".to_owned()
+    }
+
+    pub fn component_name(&self) -> String {
+        "LeptosIcon".to_owned()
     }
 }
