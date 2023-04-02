@@ -7,14 +7,14 @@ use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::{Layer, Registry};
 
-use crate::library::IconLibrary;
+use crate::icon_library::IconLibrary;
 use crate::main_library::MainLibrary;
 use crate::package::Package;
 
 mod feature;
 mod git;
 mod icon;
-mod library;
+mod icon_library;
 mod main_library;
 mod package;
 mod path;

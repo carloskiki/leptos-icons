@@ -8,7 +8,7 @@ use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
 
-use crate::library::IconLibrary;
+use crate::icon_library::IconLibrary;
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {

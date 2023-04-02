@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, instrument, trace};
 
-use crate::library::IconLibrary;
+use crate::icon_library::IconLibrary;
 
 const BASE_CARGO_TOML: &str = indoc::indoc!(
     r#"

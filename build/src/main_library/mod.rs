@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use anyhow::Result;
 use tracing::{info, instrument, trace};
 
-use crate::library::IconLibrary;
+use crate::icon_library::IconLibrary;
 
 use self::{cargo_toml::CargoToml, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir};
 

@@ -6,7 +6,7 @@ use tracing::{error, info, instrument, trace};
 
 use crate::{
     icon::SvgIcon,
-    library::{
+    icon_library::{
         cargo_toml::CargoToml, icons_md::Icons, lib_rs::LibRs, readme_md::Readme, src_dir::SrcDir,
     },
     package::{Downloaded, Package},
