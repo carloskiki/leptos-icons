@@ -18,7 +18,7 @@ mod readme_md;
 mod src_dir;
 
 #[derive(Debug)]
-pub(crate) struct Library {
+pub(crate) struct IconLibrary {
     pub package: Package<Downloaded>,
     pub name: String,
     pub path: PathBuf,
@@ -28,7 +28,7 @@ pub(crate) struct Library {
     pub src_dir: SrcDir,
 }
 
-impl Library {
+impl IconLibrary {
     pub fn new(package: Package<Downloaded>, name: String, root: PathBuf) -> Self {
         Self {
             package,

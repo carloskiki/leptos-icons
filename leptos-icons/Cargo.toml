@@ -14,9 +14,26 @@ license = "MIT"
 keywords = ["leptos", "icons"]
 categories = ["web-programming"]
 
+[features]
+serde = ["dep:serde"]
+
 [dependencies]
 leptos = { version = "0.2", default-features = false }
+serde = { version = "1", features = ["derive"], optional = true }
 
-leptos-icons-ai = { path = "../leptos-icons-ai" }
-
-[features]
+leptos-icons-ai = {  path = "../leptos-icons-ai" }
+leptos-icons-fa = {  path = "../leptos-icons-fa" }
+leptos-icons-wi = {  path = "../leptos-icons-wi" }
+leptos-icons-fi = {  path = "../leptos-icons-fi" }
+leptos-icons-vs = {  path = "../leptos-icons-vs" }
+leptos-icons-bs = {  path = "../leptos-icons-bs" }
+leptos-icons-bi = {  path = "../leptos-icons-bi" }
+leptos-icons-im = {  path = "../leptos-icons-im" }
+leptos-icons-io = {  path = "../leptos-icons-io" }
+leptos-icons-ri = {  path = "../leptos-icons-ri" }
+leptos-icons-si = {  path = "../leptos-icons-si" }
+leptos-icons-ti = {  path = "../leptos-icons-ti" }
+leptos-icons-hi = {  path = "../leptos-icons-hi" }
+leptos-icons-cg = {  path = "../leptos-icons-cg" }
+leptos-icons-tb = {  path = "../leptos-icons-tb" }
+leptos-icons-oc = {  path = "../leptos-icons-oc" }

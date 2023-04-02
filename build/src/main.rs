@@ -7,13 +7,15 @@ use tracing_subscriber::prelude::__tracing_subscriber_SubscriberExt;
 use tracing_subscriber::util::SubscriberInitExt;
 use tracing_subscriber::{Layer, Registry};
 
-use crate::library::Library;
+use crate::library::IconLibrary;
+use crate::main_library::MainLibrary;
 use crate::package::Package;
 
 mod feature;
 mod git;
 mod icon;
 mod library;
+mod main_library;
 mod package;
 mod path;
 mod sem_ver;
@@ -65,11 +67,11 @@ async fn main() -> Result<()> {
                 // Generate the library for that package.
                 let lib_name = format!("leptos-icons-{}", package.meta.short_name);
                 let lib_path = path::library_crate(&lib_name, "");
-                let mut lib = Library::new(package, lib_name, lib_path);
+                let mut lib = IconLibrary::new(package, lib_name, lib_path);
 
                 lib.generate().await?;
 
-                Ok::<Library, anyhow::Error>(lib)
+                Ok::<IconLibrary, anyhow::Error>(lib)
             })
         })
         .collect::<Vec<_>>();
@@ -88,17 +90,18 @@ async fn main() -> Result<()> {
         libs
     };
 
+    let num_libs = libs.len();
+
     // TODO: Generate a base library, combining all previously generated libraries.
-    for lib in &libs {
-        let component_name = lib.component_name();
-        info!(component_name, "component_name");
-    }
+    let lib_name = "leptos-icons".to_owned();
+    let lib_path = path::library_crate(&lib_name, "");
+    let mut main_lib = MainLibrary::new(lib_name, lib_path);
+    main_lib.generate(libs).await?;
 
     let end = time::OffsetDateTime::now_utc();
     info!(
         took = format!("{}s", (end - start).whole_seconds()),
-        num_libs = libs.len(),
-        "Build successful!"
+        num_libs, "Build successful!"
     );
 
     Ok(())
