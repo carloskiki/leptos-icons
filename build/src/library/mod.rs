@@ -1,7 +1,8 @@
 use std::path::PathBuf;
 
 use anyhow::Result;
-use tracing::{error, instrument, trace, info};
+use heck::ToUpperCamelCase;
+use tracing::{error, info, instrument, trace};
 
 use crate::{
     library::{
@@ -18,13 +19,13 @@ mod src_dir;
 
 #[derive(Debug)]
 pub(crate) struct Library {
-    package: Package<Downloaded>,
-    name: String,
-    path: PathBuf,
-    cargo_toml: CargoToml,
-    readme_md: Readme,
-    icons_md: Icons,
-    src_dir: SrcDir,
+    pub package: Package<Downloaded>,
+    pub name: String,
+    pub path: PathBuf,
+    pub cargo_toml: CargoToml,
+    pub readme_md: Readme,
+    pub icons_md: Icons,
+    pub src_dir: SrcDir,
 }
 
 impl Library {
@@ -74,11 +75,13 @@ impl Library {
         trace!(num_icons = icons.len(), "Sorting icons to avoid churn.");
         icons.sort_by(|a, b| a.feature.name.cmp(&b.feature.name));
 
-        self.src_dir.lib_rs.write_enum(&self.package, &icons).await?;
-        self.src_dir
-            .lib_rs
-            .write_leptos_icon_component(&self.package, &icons)
-            .await?;
+        let enum_code = LibRs::build_enum(&self.enum_name(), &icons)?;
+        self.src_dir.lib_rs.write_enum(enum_code).await?;
+
+        let component_code =
+            LibRs::build_icon_component(&self.component_name(), &self.enum_name(), &icons)?;
+        self.src_dir.lib_rs.write_component(component_code).await?;
+
         self.cargo_toml.append_features(&icons).await?;
 
         trace!("Writing README.md.");
@@ -93,5 +96,16 @@ impl Library {
 
         info!("Library generated.");
         Ok(())
+    }
+
+    pub fn component_name(&self) -> String {
+        format!(
+            "Leptos{}Icon",
+            self.package.meta.short_name.to_upper_camel_case()
+        )
+    }
+
+    pub fn enum_name(&self) -> String {
+        format!("{}Icon", self.package.meta.short_name.to_upper_camel_case())
     }
 }

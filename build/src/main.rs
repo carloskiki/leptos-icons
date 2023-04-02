@@ -89,6 +89,10 @@ async fn main() -> Result<()> {
     };
 
     // TODO: Generate a base library, combining all previously generated libraries.
+    for lib in &libs {
+        let component_name = lib.component_name();
+        info!(component_name, "component_name");
+    }
 
     let end = time::OffsetDateTime::now_utc();
     info!(

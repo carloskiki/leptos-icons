@@ -1,7 +1,6 @@
 use std::{io, path::PathBuf};
 
 use anyhow::Result;
-use heck::ToUpperCamelCase;
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::quote;
 use snafu::{prelude::*, Backtrace};
@@ -9,10 +8,7 @@ use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
 use xml::attribute::OwnedAttribute;
 
-use crate::{
-    icon::SvgIcon,
-    package::{Downloaded, Package},
-};
+use crate::icon::SvgIcon;
 
 #[derive(Debug, Snafu)]
 pub(crate) enum Error {
@@ -58,7 +54,7 @@ impl LibRs {
         ))
     }
 
-    pub fn build_enum(package: &Package<Downloaded>, icons: &[SvgIcon]) -> Result<String> {
+    pub fn build_enum(name: &str, icons: &[SvgIcon]) -> Result<String> {
         let variants = icons.iter().map(|icon| {
             let feature_name = &icon.feature.name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
@@ -68,7 +64,7 @@ impl LibRs {
             }
         });
 
-        let enum_ident = Self::create_enum_ident(package);
+        let enum_ident = Ident::new(name, Span::call_site());
 
         let icon_enum = quote! {
             #[cfg_attr(feature = "serde", derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy, serde::Serialize, serde::Deserialize))]
@@ -85,16 +81,10 @@ impl LibRs {
         Ok(prettyplease::unparse(&tokens_file))
     }
 
-    pub async fn write_enum(
-        &mut self,
-        package: &Package<Downloaded>,
-        icons: &[SvgIcon],
-    ) -> Result<()> {
-        let code = Self::build_enum(package, icons)?;
-
+    pub async fn write_enum(&mut self, enum_code: String) -> Result<()> {
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;
-        writer.write_all(code.as_bytes()).await?;
+        writer.write_all(enum_code.as_bytes()).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
             err
@@ -102,15 +92,9 @@ impl LibRs {
         Ok(())
     }
 
-    pub fn create_enum_ident(package: &Package<Downloaded>) -> Ident {
-        Ident::new(
-            format!("{}Icon", package.meta.short_name.to_upper_camel_case()).as_str(),
-            Span::call_site(),
-        )
-    }
-
-    pub fn create_icon_component(
-        package: &Package<Downloaded>,
+    pub fn build_icon_component(
+        component_name: &str,
+        enum_name: &str,
         icons: &[SvgIcon],
     ) -> Result<String> {
         let match_arms = icons.iter().map(|icon| {
@@ -154,7 +138,7 @@ impl LibRs {
 
             let style_format_string = format!("{style_attribute} {{}}");
 
-            let enum_ident = Self::create_enum_ident(package);
+            let enum_ident = Ident::new(enum_name, Span::call_site());
 
             quote! {
                 #[cfg(feature = #feature_name)]
@@ -184,16 +168,8 @@ impl LibRs {
             }
         });
 
-        let component_ident = Ident::new(
-            format!(
-                "Leptos{}Icon",
-                package.meta.short_name.to_upper_camel_case()
-            )
-            .as_str(),
-            Span::call_site(),
-        );
-
-        let enum_ident = Self::create_enum_ident(package);
+        let component_ident = Ident::new(component_name, Span::call_site());
+        let enum_ident = Ident::new(enum_name, Span::call_site());
 
         // Note: All parameters are `#[allow(unused)]` as the match may not include any arms if a user never activated any icon features, leading to unused warnings.
         let tokens = quote! {
@@ -235,13 +211,7 @@ impl LibRs {
         Ok(prettyplease::unparse(&tokens_file))
     }
 
-    pub async fn write_leptos_icon_component(
-        &mut self,
-        package: &Package<Downloaded>,
-        icons: &[SvgIcon],
-    ) -> Result<()> {
-        let code = Self::create_icon_component(package, icons)?;
-
+    pub async fn write_component(&mut self, component_code: String) -> Result<()> {
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;
         // TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, this write can be removed. In component generation use `::leptos::...` wherever possible.
@@ -249,7 +219,7 @@ impl LibRs {
             .write_all("use leptos::*;\n\n".as_bytes())
             .await
             .unwrap();
-        writer.write_all(code.as_bytes()).await?;
+        writer.write_all(component_code.as_bytes()).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
             err
