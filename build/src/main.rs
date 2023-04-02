@@ -92,7 +92,6 @@ async fn main() -> Result<()> {
 
     let num_libs = libs.len();
 
-    // TODO: Generate a base library, combining all previously generated libraries.
     let lib_name = "leptos-icons".to_owned();
     let lib_path = path::library_crate(&lib_name, "");
     let mut main_lib = MainLibrary::new(lib_name, lib_path);
