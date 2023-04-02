@@ -7,14 +7,14 @@ fn main() {
     mount_to_body(|cx| {
         view! { cx,
             <div style="font-size: 8em; color: #8f39d3;">
-                <LeptosAiIcon icon=AiIcon::AiPushpinTwotone style="color: red"/>
-                //<LeptosBiIcon icon=BiIcon::BiGraphql width="2em" height="2em" />
-                //<LeptosBiIcon icon=BiIcon::BiGraphql />
-                //<LeptosBsIcon icon=BsIcon::Bs1Circle />
-                //<LeptosFaIcon icon=FaIcon::FaBarsSolid />
-                //<LeptosImIcon icon=ImIcon::ImPagebreak />
-                //<LeptosImIcon icon=ImIcon::ImPageBreak />
-                <LeptosIcon icon=Icon::Io(IoIcon::IoColorWand) style="color: green"/>
+                <LeptosAiIcon icon=AiIcon::AiPushpinTwotone style=Some(String::from("color: red"))/>
+                <LeptosIcon icon=Icon::Bi(BiIcon::BiGraphql) width="2em" height="2em" style="color: green"/>
+                <LeptosIcon icon=Icon::Bi(BiIcon::BiGraphql) style="color: orange" title="Custom title"/>
+                <LeptosIcon icon=Icon::Bs(BsIcon::Bs1Circle) style="color: green"/>
+                <LeptosIcon icon=Icon::Fa(FaIcon::FaBarsSolid) />
+                <LeptosIcon icon=Icon::Im(ImIcon::ImPagebreak) />
+                <LeptosIcon icon=Icon::Im(ImIcon::ImPageBreak) />
+                <LeptosIcon icon=Icon::Io(IoIcon::IoColorWand) />
             </div>
         }
     })

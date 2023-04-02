@@ -61,21 +61,21 @@ pub fn LeptosIcon(
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     #[allow(unused)]
-    width: String,
+    width: Option<String>,
     /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     #[allow(unused)]
-    height: String,
+    height: Option<String>,
     /// HTML class attribute.
     #[prop(into, optional)]
     #[allow(unused)]
-    class: String,
+    class: Option<String>,
     /// HTML style attribute.
     #[prop(into, optional)]
     #[allow(unused)]
-    style: String,
+    style: Option<String>,
     /// ARIA accessibility title.
-    #[prop(into, optional_no_strip)]
+    #[prop(into, optional)]
     #[allow(unused)]
     title: Option<String>,
 ) -> impl IntoView {

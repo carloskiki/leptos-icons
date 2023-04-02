@@ -11,10 +11,10 @@ log = "0.4"
 
 leptos-icons = { path = "../..", features = [
     "AiPushpinTwotone",
-    #"BiGraphql",
-    #"Bs1Circle",
-    #"FaBarsSolid",
-    #"ImPagebreak",
-    #"ImPageBreak",
+    "BiGraphql",
+    "Bs1Circle",
+    "FaBarsSolid",
+    "ImPagebreak",
+    "ImPageBreak",
     "IoColorWand",
 ] }

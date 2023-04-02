@@ -172,6 +172,7 @@ impl LibRs {
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
         // Note: All parameters are `#[allow(unused)]` as the match may not include any arms if a user never activated any icon features, leading to unused warnings.
+        // Note: The title prop is `unwrap_or_else`ed in each individual match arm!
         let tokens = quote! {
             #[component]
             pub fn #component_ident(
@@ -181,26 +182,34 @@ impl LibRs {
                 #[allow(unused)]
                 icon: #enum_ident,
                 /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
-                #[prop(into, optional, default = String::from("1em"))]
+                #[prop(into, optional_no_strip)]
                 #[allow(unused)]
-                width: String,
+                width: Option<String>,
                 /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
-                #[prop(into, optional, default = String::from("1em"))]
+                #[prop(into, optional_no_strip)]
                 #[allow(unused)]
-                height: String,
+                height: Option<String>,
                 /// HTML class attribute.
-                #[prop(into, optional)]
+                #[prop(into, optional_no_strip)]
                 #[allow(unused)]
-                class: String,
+                class: Option<String>,
                 /// HTML style attribute.
-                #[prop(into, optional)]
+                #[prop(into, optional_no_strip)]
                 #[allow(unused)]
-                style: String,
+                style: Option<String>,
                 /// ARIA accessibility title.
                 #[prop(into, optional_no_strip)]
                 #[allow(unused)]
                 title: Option<String>,
             ) -> impl IntoView {
+                #[allow(unused)]
+                let width = width.unwrap_or_else(|| String::from("1em"));
+                #[allow(unused)]
+                let height = height.unwrap_or_else(|| String::from("1em"));
+                #[allow(unused)]
+                let class = class.unwrap_or_else(|| String::from(""));
+                #[allow(unused)]
+                let style = style.unwrap_or_else(|| String::from(""));
                 match icon {
                     #(#match_arms),*
                 }
