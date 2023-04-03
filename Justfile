@@ -18,4 +18,4 @@ build-clean:
 
 # Serves a simple example application
 serve-example:
-    cd leptos-icons/examples/simple-app && trunk serve
+    cd leptos-icons/examples/simple-app && trunk serve --release
