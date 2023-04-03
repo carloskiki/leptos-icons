@@ -2,8 +2,14 @@
 list:
   just --list
 
+# Enable nightly, add wasm target, update...
+setup-rust:
+  rustup default nightly
+  rustup target add wasm32-unknown-unknown
+  rustup update
+
 # Install dependencies for building, running examples, profiling and possibly more...
-install:
+install-tools:
   cargo install trunk
   cargo install twiggy
   cargo install cargo-expand
