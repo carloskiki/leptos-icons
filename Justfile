@@ -15,3 +15,7 @@ build:
 # Build all libraries, forcing new downloads of icon packages
 build-clean:
     cd build && cargo run -- --clean
+
+# Serves a simple example application
+serve-example:
+    cd leptos-icons/examples/simple-app && trunk serve
