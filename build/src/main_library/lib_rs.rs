@@ -114,12 +114,10 @@ impl LibRs {
                 Span::call_site(),
             );
             let lib_component_ident = Ident::new(&lib.component_name(), Span::call_site());
+            //let lib_component_props_ident = Ident::new(&format!("{}Props", lib.component_name()), Span::call_site());
             quote! {
                 #[allow(unreachable_code, unreachable_patterns)]
-                #enum_ident::#lib_short_name_ident(icon) => view! { cx,
-                    <#lib_component_ident icon width height class style title/>
-                }
-                .into_view(cx)
+                #enum_ident::#lib_short_name_ident(icon) => #lib_component_ident(cx, icon, width, height, class, style, title).into_view(cx)
             }
         });
 

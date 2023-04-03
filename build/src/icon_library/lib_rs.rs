@@ -101,12 +101,16 @@ impl LibRs {
             let feature_name = &icon.feature.name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
 
-            let svg_content: TokenStream = icon
+            // TODO: Remove
+            //let svg_content: TokenStream = icon
+            //    .svg
+            //    .content
+            //    .parse()
+            //    .map_err(|err| anyhow::anyhow!("Error parsing svg content into TokenStream: {err}"))
+            //    .unwrap();
+            let svg_content_str = &icon
                 .svg
-                .content
-                .parse()
-                .map_err(|err| anyhow::anyhow!("Error parsing svg content into TokenStream: {err}"))
-                .unwrap();
+                .content;
 
             let x_attribute = attribute_token_stream(&icon.svg.svg_attributes.x).unwrap();
             let y_attribute = attribute_token_stream(&icon.svg.svg_attributes.y).unwrap();
@@ -123,7 +127,7 @@ impl LibRs {
             // Fill should most likely always default to use the "currentColor".
             let fill_attribute = attribute_token_stream_opt(&icon.svg.svg_attributes.fill)
                 .unwrap()
-                .unwrap_or_else(|| quote!(fill = "currentColor"));
+                .unwrap_or_else(|| quote!(.attr("fill", "currentColor")));
             let style_attribute = icon
                 .svg
                 .svg_attributes
@@ -134,7 +138,7 @@ impl LibRs {
             // role="graphics-symbol" should be used for icons.
             let role_attribute = attribute_token_stream_opt(&icon.svg.svg_attributes.role)
                 .unwrap()
-                .unwrap_or_else(|| quote!(role = "graphics-symbol"));
+                .unwrap_or_else(|| quote!(.attr("role", "graphics-symbol")));
 
             let style_format_string = format!("{style_attribute} {{}}");
 
@@ -142,29 +146,30 @@ impl LibRs {
 
             quote! {
                 #[cfg(feature = #feature_name)]
-                #enum_ident::#feature_ident => view! {cx,
-                    // <#feature_ident width=width height=height class=class style=style title=title/>
-
-                    <svg
-                        class=class
-                        style=format!(#style_format_string, style)
-                        #x_attribute
-                        #y_attribute
-                        width=width
-                        height=height
-                        #view_box_attribute
-                        #stroke_linecap_attribute
-                        #stroke_linejoin_attribute
-                        #stroke_width_attribute
-                        #stroke_attribute
-                        #fill_attribute
-                        #role_attribute
-                    >
-                        // Title should be the first child!
-                        <title>{title.unwrap_or_else(|| #feature_name.to_owned())}</title>
-                        #svg_content
-                    </svg>
-                }.into_view(cx)
+                #enum_ident::#feature_ident =>
+                    leptos::IntoView::into_view(
+                        leptos::svg::svg(cx)
+                            .classes(class)
+                            .attr("style", format!(#style_format_string, style))
+                            #x_attribute
+                            #y_attribute
+                            .attr("width", width)
+                            .attr("height", height)
+                            #view_box_attribute
+                            #stroke_linecap_attribute
+                            #stroke_linejoin_attribute
+                            #stroke_width_attribute
+                            #stroke_attribute
+                            #fill_attribute
+                            #role_attribute
+                        .inner_html(#svg_content_str)
+                        .child(
+                            // TODO: Title should be the first child!
+                            leptos::svg::title(cx)
+                                .child(title.unwrap_or_else(|| #feature_name.to_owned()))
+                        ),
+                        cx
+                    )
             }
         });
 
@@ -174,34 +179,30 @@ impl LibRs {
         // Note: All parameters are `#[allow(unused)]` as the match may not include any arms if a user never activated any icon features, leading to unused warnings.
         // Note: The title prop is `unwrap_or_else`ed in each individual match arm!
         let tokens = quote! {
-            #[component]
+            #[allow(unused)]
+            #[allow(non_snake_case)]
             pub fn #component_ident(
                 #[allow(unused)]
-                cx: Scope,
-                /// Variant of the icon to display.
+                cx: leptos::Scope,
+                // Variant of the icon to display.
                 #[allow(unused)]
                 icon: #enum_ident,
-                /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
-                #[prop(into, optional_no_strip)]
+                // The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
                 #[allow(unused)]
                 width: Option<String>,
-                /// The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
-                #[prop(into, optional_no_strip)]
+                // The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
                 #[allow(unused)]
                 height: Option<String>,
-                /// HTML class attribute.
-                #[prop(into, optional_no_strip)]
+                // HTML class attribute.
                 #[allow(unused)]
                 class: Option<String>,
-                /// HTML style attribute.
-                #[prop(into, optional_no_strip)]
+                // HTML style attribute.
                 #[allow(unused)]
                 style: Option<String>,
-                /// ARIA accessibility title.
-                #[prop(into, optional_no_strip)]
+                // ARIA accessibility title.
                 #[allow(unused)]
                 title: Option<String>,
-            ) -> impl IntoView {
+            ) -> leptos::View {
                 #[allow(unused)]
                 let width = width.unwrap_or_else(|| String::from("1em"));
                 #[allow(unused)]
@@ -223,11 +224,6 @@ impl LibRs {
     pub async fn write_component(&mut self, component_code: String) -> Result<()> {
         let mut writer = self.append().await?;
         writer.write_all("\n".as_bytes()).await?;
-        // TODO: Once https://github.com/leptos-rs/leptos/pull/748 is merged, this write can be removed. In component generation use `::leptos::...` wherever possible.
-        writer
-            .write_all("use leptos::*;\n\n".as_bytes())
-            .await
-            .unwrap();
         writer.write_all(component_code.as_bytes()).await?;
         writer.flush().await.map_err(|err| {
             error!(?err, "Could not flush lib.rs file after writing.");
@@ -239,13 +235,9 @@ impl LibRs {
 
 fn attribute_token_stream_opt(attribute: &Option<OwnedAttribute>) -> Result<Option<TokenStream>> {
     if let Some(attribute) = attribute {
+        let attr_name = &attribute.name.local_name;
         let attribute_val = &attribute.value;
-        let attr_ident: TokenStream = attribute
-            .name
-            .local_name
-            .parse()
-            .map_err(|_| anyhow::anyhow!("could not convert attributes to token stream"))?;
-        Ok(Some(quote!(#attr_ident=#attribute_val)))
+        Ok(Some(quote!(.attr(#attr_name, #attribute_val))))
     } else {
         Ok(None)
     }
@@ -255,13 +247,9 @@ fn attribute_token_stream(attribute: &Option<OwnedAttribute>) -> Result<TokenStr
     attribute
         .iter()
         .map(|attribute| {
+            let attr_name = &attribute.name.local_name;
             let attribute_val = &attribute.value;
-            let attr_ident: TokenStream = attribute
-                .name
-                .local_name
-                .parse()
-                .map_err(|_| anyhow::anyhow!("could not convert attributes to token stream"))?;
-            Ok(quote!(#attr_ident=#attribute_val))
+            Ok(quote!(.attr(#attr_name, #attribute_val)))
         })
         .collect::<Result<TokenStream>>()
 }

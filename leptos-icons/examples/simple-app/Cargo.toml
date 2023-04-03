@@ -18,3 +18,8 @@ leptos-icons = { path = "../..", features = [
     "ImPageBreak",
     "IoColorWand",
 ] }
+
+[profile.release]
+opt-level = "s"
+lto = "thin"
+debug = 0

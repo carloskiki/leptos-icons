@@ -7,7 +7,16 @@ fn main() {
     mount_to_body(|cx| {
         view! { cx,
             <div style="font-size: 8em; color: #8f39d3;">
-                <LeptosAiIcon icon=AiIcon::AiPushpinTwotone style=Some(String::from("color: red"))/>
+                //<LeptosAiIcon
+                //    icon=AiIcon::AiPushpinTwotone
+                //    width=None
+                //    height=None
+                //    class=None
+                //    style=None
+                //    title=None
+                //    style=Some(String::from("color: red"))
+                //    />
+
                 <LeptosIcon icon=Icon::Bi(BiIcon::BiGraphql) width="2em" height="2em" style="color: green"/>
                 <LeptosIcon icon=Icon::Bi(BiIcon::BiGraphql) style="color: orange" title="Custom title"/>
                 <LeptosIcon icon=Icon::Bs(BsIcon::Bs1Circle) style="color: green"/>
