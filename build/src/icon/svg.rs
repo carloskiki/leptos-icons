@@ -45,6 +45,7 @@ pub(crate) struct SvgAttributes {
     pub stroke: Option<OwnedAttribute>,
     pub fill: Option<OwnedAttribute>,
     pub style: Option<OwnedAttribute>,
+    #[allow(unused)]
     pub role: Option<OwnedAttribute>,
     #[allow(unused)]
     pub unknown_attributes: Vec<OwnedAttribute>,

@@ -9,14 +9,18 @@ console_error_panic_hook = "0.1"
 console_log = "1"
 log = "0.4"
 
-leptos-icons = { path = "../..", features = [
-    "AiPushpinTwotone",
-    "BiGraphql",
+leptos-icons = { path = "../..", default_features = false, features = [
+    #"serde",
+    #"AiPushpinTwotone",
+    #"BiGraphql",
+    #"BiFilePlusSolid",
+    #"BiKubernetes",
     "Bs1Circle",
-    "FaBarsSolid",
-    "ImPagebreak",
-    "ImPageBreak",
-    "IoColorWand",
+    "BsFolder",
+    #"FaBarsSolid",
+    #"ImPagebreak",
+    #"ImPageBreak",
+    #"IoColorWand",
 ] }
 
 [profile.release]

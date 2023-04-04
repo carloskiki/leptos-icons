@@ -6,7 +6,6 @@ use quote::quote;
 use snafu::{prelude::*, Backtrace};
 use tokio::io::AsyncWriteExt;
 use tracing::{error, trace};
-use xml::attribute::OwnedAttribute;
 
 use crate::icon::SvgIcon;
 
@@ -97,123 +96,190 @@ impl LibRs {
         enum_name: &str,
         icons: &[SvgIcon],
     ) -> Result<String> {
+        struct Data {
+            style: Option<String>,
+            x: Option<String>,
+            y: Option<String>,
+            width: Option<String>,
+            height: Option<String>,
+            view_box: Option<String>,
+            stroke_linecap: Option<String>,
+            stroke_linejoin: Option<String>,
+            stroke_width: Option<String>,
+            stroke: Option<String>,
+            fill: Option<String>,
+            data: String,
+            feature_name: String,
+        }
+        let icons = icons.iter().map(|icon| Data {
+            style: icon.svg.svg_attributes.style.as_ref().map(|it| it.value.to_owned()),
+            x: icon.svg.svg_attributes.x.as_ref().map(|it| it.value.to_owned()),
+            y: icon.svg.svg_attributes.y.as_ref().map(|it| it.value.to_owned()),
+            width: icon.svg.svg_attributes.width.as_ref().map(|it| it.value.to_owned()),
+            height: icon.svg.svg_attributes.height.as_ref().map(|it| it.value.to_owned()),
+            view_box: icon.svg.svg_attributes.view_box.as_ref().map(|it| it.value.to_owned()),
+            stroke_linecap: icon.svg.svg_attributes.stroke_linecap.as_ref().map(|it| it.value.to_owned()),
+            stroke_linejoin: icon.svg.svg_attributes.stroke_linejoin.as_ref().map(|it| it.value.to_owned()),
+            stroke_width: icon.svg.svg_attributes.stroke_width.as_ref().map(|it| it.value.to_owned()),
+            stroke: icon.svg.svg_attributes.stroke.as_ref().map(|it| it.value.to_owned()),
+            fill: icon.svg.svg_attributes.fill.as_ref().map(|it| it.value.to_owned()),
+            data: icon.svg.content.clone(),
+            feature_name: icon.feature.name.to_owned(),
+        }).collect::<Vec<_>>();
+
+        let data_struct = quote! {
+            struct Data {
+                style: Option<&'static str>,
+                x: Option<&'static str>,
+                y: Option<&'static str>,
+                width: Option<&'static str>,
+                height: Option<&'static str>,
+                view_box: Option<&'static str>,
+                stroke_linecap: Option<&'static str>,
+                stroke_linejoin: Option<&'static str>,
+                stroke_width: Option<&'static str>,
+                stroke: Option<&'static str>,
+                fill: Option<&'static str>,
+                data: &'static str,
+            }
+        };
+
         let match_arms = icons.iter().map(|icon| {
-            let feature_name = &icon.feature.name;
+            let feature_name = &icon.feature_name;
             let feature_ident = Ident::new(feature_name.as_str(), Span::call_site());
-
-            // TODO: Remove
-            //let svg_content: TokenStream = icon
-            //    .svg
-            //    .content
-            //    .parse()
-            //    .map_err(|err| anyhow::anyhow!("Error parsing svg content into TokenStream: {err}"))
-            //    .unwrap();
-            let svg_content_str = &icon
-                .svg
-                .content;
-
-            let x_attribute = attribute_token_stream(&icon.svg.svg_attributes.x).unwrap();
-            let y_attribute = attribute_token_stream(&icon.svg.svg_attributes.y).unwrap();
-            let view_box_attribute =
-                attribute_token_stream(&icon.svg.svg_attributes.view_box).unwrap();
-            let stroke_linecap_attribute =
-                attribute_token_stream(&icon.svg.svg_attributes.stroke_linecap).unwrap();
-            let stroke_linejoin_attribute =
-                attribute_token_stream(&icon.svg.svg_attributes.stroke_linejoin).unwrap();
-            let stroke_width_attribute =
-                attribute_token_stream(&icon.svg.svg_attributes.stroke_width).unwrap();
-            // We are fine is stroke is not set for the svg.
-            let stroke_attribute = attribute_token_stream(&icon.svg.svg_attributes.stroke).unwrap();
-            // Fill should most likely always default to use the "currentColor".
-            let fill_attribute = attribute_token_stream_opt(&icon.svg.svg_attributes.fill)
-                .unwrap()
-                .unwrap_or_else(|| quote!(.attr("fill", "currentColor")));
-            let style_attribute = icon
-                .svg
-                .svg_attributes
-                .style
-                .clone()
-                .map(|it| it.value)
-                .unwrap_or_default();
-            // role="graphics-symbol" should be used for icons.
-            let role_attribute = attribute_token_stream_opt(&icon.svg.svg_attributes.role)
-                .unwrap()
-                .unwrap_or_else(|| quote!(.attr("role", "graphics-symbol")));
-
-            let style_format_string = format!("{style_attribute} {{}}");
-
             let enum_ident = Ident::new(enum_name, Span::call_site());
+
+            fn quote_opt(value: &Option<String>) -> TokenStream {
+                match value {
+                    Some(value) => quote! { Some(#value) },
+                    None => quote! { None },
+                }
+            }
+
+            let style = quote_opt(&icon.style);
+            let x = quote_opt(&icon.x);
+            let y = quote_opt(&icon.y);
+            let width = quote_opt(&icon.width);
+            let height = quote_opt(&icon.height);
+            let view_box = quote_opt(&icon.view_box);
+            let stroke_linecap = quote_opt(&icon.stroke_linecap);
+            let stroke_linejoin = quote_opt(&icon.stroke_linejoin);
+            let stroke_width = quote_opt(&icon.stroke_width);
+            let stroke = quote_opt(&icon.stroke);
+            let fill = quote_opt(&icon.fill);
+            let data = &icon.data;
 
             quote! {
                 #[cfg(feature = #feature_name)]
-                #enum_ident::#feature_ident =>
-                    leptos::IntoView::into_view(
-                        leptos::svg::svg(cx)
-                            .classes(class)
-                            .attr("style", format!(#style_format_string, style))
-                            #x_attribute
-                            #y_attribute
-                            .attr("width", width)
-                            .attr("height", height)
-                            #view_box_attribute
-                            #stroke_linecap_attribute
-                            #stroke_linejoin_attribute
-                            #stroke_width_attribute
-                            #stroke_attribute
-                            #fill_attribute
-                            #role_attribute
-                        .inner_html(#svg_content_str)
-                        .child(
-                            // TODO: Title should be the first child!
-                            leptos::svg::title(cx)
-                                .child(title.unwrap_or_else(|| #feature_name.to_owned()))
-                        ),
-                        cx
-                    )
+                #enum_ident::#feature_ident => Data {
+                    style: #style,
+                    x: #x,
+                    y: #y,
+                    width: #width,
+                    height: #height,
+                    view_box: #view_box,
+                    stroke_linecap: #stroke_linecap,
+                    stroke_linejoin: #stroke_linejoin,
+                    stroke_width: #stroke_width,
+                    stroke: #stroke,
+                    fill: #fill,
+                    data: #data,
+                }
             }
         });
 
         let component_ident = Ident::new(component_name, Span::call_site());
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
+        let data_struct_impl = quote! {
+            impl Data {
+                pub fn of(icon: #enum_ident) -> Data {
+                    match icon {
+                        #(#match_arms),*
+                    }
+                }
+            }
+        };
+
         // Note: All parameters are `#[allow(unused)]` as the match may not include any arms if a user never activated any icon features, leading to unused warnings.
         // Note: The title prop is `unwrap_or_else`ed in each individual match arm!
         let tokens = quote! {
-            #[allow(unused)]
+            #data_struct
+
+            #data_struct_impl
+
             #[allow(non_snake_case)]
             pub fn #component_ident(
-                #[allow(unused)]
                 cx: leptos::Scope,
                 // Variant of the icon to display.
-                #[allow(unused)]
                 icon: #enum_ident,
                 // The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
-                #[allow(unused)]
                 width: Option<String>,
                 // The height of the icon (vertical side length of the square surrounding the icon). Defaults to "1em".
-                #[allow(unused)]
                 height: Option<String>,
                 // HTML class attribute.
-                #[allow(unused)]
                 class: Option<String>,
                 // HTML style attribute.
-                #[allow(unused)]
                 style: Option<String>,
-                // ARIA accessibility title.
-                #[allow(unused)]
-                title: Option<String>,
             ) -> leptos::View {
-                #[allow(unused)]
-                let width = width.unwrap_or_else(|| String::from("1em"));
-                #[allow(unused)]
-                let height = height.unwrap_or_else(|| String::from("1em"));
-                #[allow(unused)]
-                let class = class.unwrap_or_else(|| String::from(""));
-                #[allow(unused)]
-                let style = style.unwrap_or_else(|| String::from(""));
-                match icon {
-                    #(#match_arms),*
+                let data = Data::of(icon);
+
+                let mut svg = leptos::svg::svg(cx);
+
+                if let Some(classes) = class {
+                    svg = svg.classes(classes);
                 }
+
+                svg = match (style, data.style) {
+                    (Some(a), Some(b)) => {svg.attr("style", format!("{a} {b}"))},
+                    (Some(a), None) => {svg.attr("style", a)},
+                    (None, Some(b)) => {svg.attr("style", b)},
+                    (None, None) => {svg},
+                };
+
+                if let Some(x) = data.x {
+                    svg = svg.attr("x", x);
+                }
+                if let Some(y) = data.y {
+                    svg = svg.attr("x", y);
+                }
+
+                svg = match (width, data.width) {
+                    (Some(a), Some(_b)) => {svg.attr("width", a)},
+                    (Some(a), None) => {svg.attr("width", a)},
+                    (None, Some(_b)) => {svg.attr("width", "1em")},
+                    (None, None) => {svg.attr("width", "1em")},
+                };
+
+                svg = match (height, data.height) {
+                    (Some(a), Some(_b)) => {svg.attr("height", a)},
+                    (Some(a), None) => {svg.attr("height", a)},
+                    (None, Some(_b)) => {svg.attr("height", "1em")},
+                    (None, None) => {svg.attr("height", "1em")},
+                };
+
+                if let Some(view_box) = data.view_box {
+                    svg = svg.attr("viewBox", view_box);
+                }
+
+                if let Some(stroke_linecap) = data.stroke_linecap {
+                    svg = svg.attr("stroke-linecap", stroke_linecap);
+                }
+                if let Some(stroke_linejoin) = data.stroke_linejoin {
+                    svg = svg.attr("stroke-linejoin", stroke_linejoin);
+                }
+                if let Some(stroke_width) = data.stroke_width {
+                    svg = svg.attr("stroke-width", stroke_width);
+                }
+                if let Some(stroke) = data.stroke {
+                    svg = svg.attr("stroke", stroke);
+                }
+                svg = svg.attr("fill", data.fill.unwrap_or("currentColor"));
+                svg = svg.attr("role", "graphics-symbol"); // Ignoring the data property...
+
+                svg = svg.inner_html(data.data);
+
+                leptos::IntoView::into_view(svg, cx)
             }
         };
 
@@ -231,25 +297,4 @@ impl LibRs {
         })?;
         Ok(())
     }
-}
-
-fn attribute_token_stream_opt(attribute: &Option<OwnedAttribute>) -> Result<Option<TokenStream>> {
-    if let Some(attribute) = attribute {
-        let attr_name = &attribute.name.local_name;
-        let attribute_val = &attribute.value;
-        Ok(Some(quote!(.attr(#attr_name, #attribute_val))))
-    } else {
-        Ok(None)
-    }
-}
-
-fn attribute_token_stream(attribute: &Option<OwnedAttribute>) -> Result<TokenStream> {
-    attribute
-        .iter()
-        .map(|attribute| {
-            let attr_name = &attribute.name.local_name;
-            let attribute_val = &attribute.value;
-            Ok(quote!(.attr(#attr_name, #attribute_val)))
-        })
-        .collect::<Result<TokenStream>>()
 }

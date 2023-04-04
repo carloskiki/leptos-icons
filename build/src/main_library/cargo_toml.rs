@@ -2,6 +2,7 @@ use anyhow::Result;
 use std::path::PathBuf;
 use tokio::io::AsyncWriteExt;
 use tracing::{error, instrument, trace};
+use heck::ToUpperCamelCase;
 
 use crate::icon_library::IconLibrary;
 
@@ -119,7 +120,7 @@ impl CargoToml {
                 // Example: leptos-icons-ai = { path = "../leptos-icons-ai" }
                 .write_all(
                     format!(
-                        "{lib_name} = {{  path = \"../{lib_name}\" }}\n",
+                        "{lib_name} = {{  path = \"../{lib_name}\", optional = true }}\n",
                         lib_name = &lib.name
                     )
                     .as_bytes(),
@@ -152,12 +153,26 @@ impl CargoToml {
             .await?;
 
         for lib in icon_libs.iter() {
+            writer
+                // Example: Ai = []
+                .write_all(
+                    format!(
+                        "{lib_short_name} = []\n",
+                        lib_short_name = &lib.package.meta.short_name.to_upper_camel_case(),
+                    )
+                    .as_bytes(),
+                )
+                .await?;
+        }
+
+        for lib in icon_libs.iter() {
             for icon in &lib.icons {
                 writer
-                    // Example: AiPushpinTwotone = ["leptos-icons-ai/AiPushpinTwotone"]
+                    // Example: AiPushpinTwotone = ["Ai", "leptos-icons-ai/AiPushpinTwotone"]
                     .write_all(
                         format!(
-                            "{feature_name} = [\"{lib_name}/{feature_name}\"]\n",
+                            "{feature_name} = [\"{lib_short_name}\", \"{lib_name}/{feature_name}\"]\n",
+                            lib_short_name = &lib.package.meta.short_name.to_upper_camel_case(),
                             lib_name = &lib.name,
                             feature_name = icon.feature.name,
                         )

@@ -6,24 +6,18 @@ fn main() {
     console_error_panic_hook::set_once();
     mount_to_body(|cx| {
         view! { cx,
+            "Hello, World!"
             <div style="font-size: 8em; color: #8f39d3;">
-                //<LeptosAiIcon
-                //    icon=AiIcon::AiPushpinTwotone
-                //    width=None
-                //    height=None
-                //    class=None
-                //    style=None
-                //    title=None
-                //    style=Some(String::from("color: red"))
-                //    />
-
-                <LeptosIcon icon=Icon::Bi(BiIcon::BiGraphql) width="2em" height="2em" style="color: green"/>
-                <LeptosIcon icon=Icon::Bi(BiIcon::BiGraphql) style="color: orange" title="Custom title"/>
-                <LeptosIcon icon=Icon::Bs(BsIcon::Bs1Circle) style="color: green"/>
-                <LeptosIcon icon=Icon::Fa(FaIcon::FaBarsSolid) />
-                <LeptosIcon icon=Icon::Im(ImIcon::ImPagebreak) />
-                <LeptosIcon icon=Icon::Im(ImIcon::ImPageBreak) />
-                <LeptosIcon icon=Icon::Io(IoIcon::IoColorWand) />
+                //<LeptosIcon icon=Icon::Ai(AiIcon::AiPushpinTwotone)/>
+                //<LeptosIcon icon=BiIcon::BiGraphql width="2em" height="2em" style="color: green"/>
+                //<LeptosIcon icon=BiIcon::BiKubernetes width="2em" height="2em" style="color: green"/>
+                //<LeptosIcon icon=BiIcon::BiGraphql style="color: orange" title="Custom title"/>
+                <LeptosIcon icon=BsIcon::Bs1Circle style="color: green"/>
+                <LeptosIcon icon=BsIcon::BsFolder style="color: green"/>
+                //<LeptosIcon icon=FaIcon::FaBarsSolid />
+                //<LeptosIcon icon=ImIcon::ImPagebreak />
+                //<LeptosIcon icon=ImIcon::ImPageBreak />
+                //<LeptosIcon icon=IoIcon::IoColorWand />
             </div>
         }
     })

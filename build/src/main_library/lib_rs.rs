@@ -61,8 +61,10 @@ impl LibRs {
 
     pub fn build_reexports(icon_libs: &[IconLibrary]) -> Result<String> {
         let statements = icon_libs.iter().map(|lib| {
+            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
             let lib_name_ident = Ident::new(&lib.name.to_snake_case(), Span::call_site());
             quote! {
+                #[cfg(feature = #lib_short_name)]
                 pub use #lib_name_ident::*;
             }
         });
@@ -75,13 +77,12 @@ impl LibRs {
 
     pub fn build_enum(enum_name: &str, icon_libs: &[IconLibrary]) -> Result<String> {
         let variants = icon_libs.iter().map(|lib| {
-            let lib_short_name_ident = Ident::new(
-                &lib.package.meta.short_name.to_upper_camel_case(),
-                Span::call_site(),
-            );
+            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
+            let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
             let lib_name_ident = Ident::new(&lib.name.to_snake_case(), Span::call_site());
             let lib_enum_ident = Ident::new(&lib.enum_name(), Span::call_site());
             quote! {
+                #[cfg(feature = #lib_short_name)]
                 #lib_short_name_ident(#lib_name_ident::#lib_enum_ident)
             }
         });
@@ -96,7 +97,28 @@ impl LibRs {
             }
         };
 
-        let tokens_file = syn::parse2::<syn::File>(icon_enum).context(ParseTokenStreamSnafu {})?;
+        let from_impls = icon_libs.iter().map(|lib| {
+            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
+            let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
+            let lib_enum_ident = Ident::new(&lib.enum_name(), Span::call_site());
+            quote! {
+                #[cfg(feature = #lib_short_name)]
+                impl From<#lib_enum_ident> for #enum_ident {
+                    fn from(value: #lib_enum_ident) -> Self {
+                        #enum_ident::#lib_short_name_ident(value)
+                    }
+                }
+
+            }
+        }).collect::<Vec<_>>();
+
+        let code = quote! {
+            #icon_enum
+
+            #(#from_impls)*
+        };
+
+        let tokens_file = syn::parse2::<syn::File>(code).context(ParseTokenStreamSnafu {})?;
         Ok(prettyplease::unparse(&tokens_file))
     }
 
@@ -109,27 +131,24 @@ impl LibRs {
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
         let match_arms = icon_libs.iter().map(|lib| {
-            let lib_short_name_ident = Ident::new(
-                &lib.package.meta.short_name.to_upper_camel_case(),
-                Span::call_site(),
-            );
+            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
+            let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
             let lib_component_ident = Ident::new(&lib.component_name(), Span::call_site());
             //let lib_component_props_ident = Ident::new(&format!("{}Props", lib.component_name()), Span::call_site());
             quote! {
+                #[cfg(feature = #lib_short_name)]
                 #[allow(unreachable_code, unreachable_patterns)]
-                #enum_ident::#lib_short_name_ident(icon) => #lib_component_ident(cx, icon, width, height, class, style, title).into_view(cx)
+                #enum_ident::#lib_short_name_ident(icon) => #lib_component_ident(cx, icon, width, height, class, style)
             }
         });
 
         let component = quote! {
-            use leptos::*;
-
-            #[component]
+            #[leptos::component]
             pub fn #component_ident(
-                cx: Scope,
-
+                cx: leptos::Scope,
+                /// The icon to show.
+                #[prop(into)]
                 icon: #enum_ident,
-
                 /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
                 #[prop(into, optional)]
                 #[allow(unused)]
@@ -146,14 +165,13 @@ impl LibRs {
                 #[prop(into, optional)]
                 #[allow(unused)]
                 style: Option<String>,
-                /// ARIA accessibility title.
-                #[prop(into, optional)]
-                #[allow(unused)]
-                title: Option<String>,
-            ) -> impl IntoView {
-                match icon {
-                    #(#match_arms),*
-                }
+            ) -> impl leptos::IntoView {
+                leptos::IntoView::into_view(
+                    match icon {
+                        #(#match_arms),*
+                    },
+                    cx
+                )
             }
         };
 
