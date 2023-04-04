@@ -97,6 +97,25 @@ impl LibRs {
             }
         };
 
+        let data_impl_match_arms = icon_libs.iter().map(|lib| {
+            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
+            let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
+            quote! {
+                #[cfg(feature = #lib_short_name)]
+                Self::#lib_short_name_ident(icon) => leptos_icons_core::IconData::data(icon)
+            }
+        });
+
+        let data_impl = quote! {
+            impl leptos_icons_core::IconData for crate::#enum_ident {
+                fn data(self) -> leptos_icons_core::Data {
+                    match self {
+                        #(#data_impl_match_arms),*
+                    }
+                }
+            }
+        };
+
         let from_impls = icon_libs.iter().map(|lib| {
             let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
             let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
@@ -105,7 +124,7 @@ impl LibRs {
                 #[cfg(feature = #lib_short_name)]
                 impl From<#lib_enum_ident> for #enum_ident {
                     fn from(value: #lib_enum_ident) -> Self {
-                        #enum_ident::#lib_short_name_ident(value)
+                        Self::#lib_short_name_ident(value)
                     }
                 }
 
@@ -114,6 +133,8 @@ impl LibRs {
 
         let code = quote! {
             #icon_enum
+
+            #data_impl
 
             #(#from_impls)*
         };
@@ -125,27 +146,19 @@ impl LibRs {
     pub fn build_component(
         component_name: &str,
         enum_name: &str,
-        icon_libs: &[IconLibrary],
     ) -> Result<String> {
         let component_ident = Ident::new(component_name, Span::call_site());
         let enum_ident = Ident::new(enum_name, Span::call_site());
 
-        let match_arms = icon_libs.iter().map(|lib| {
-            let lib_short_name = &lib.package.meta.short_name.to_upper_camel_case();
-            let lib_short_name_ident = Ident::new(&lib_short_name, Span::call_site());
-            quote! {
-                #[cfg(feature = #lib_short_name)]
-                #enum_ident::#lib_short_name_ident(icon) => leptos_icons_core::LeptosIconCore(cx, icon.data(), width, height, class, style)
-            }
-        });
-
         let component = quote! {
             #[leptos::component]
             pub fn #component_ident(
+                #[allow(unused)]
                 cx: leptos::Scope,
                 /// The icon to show.
                 #[prop(into)]
-                icon: #enum_ident,
+                #[allow(unused)]
+                icon: crate::#enum_ident,
                 /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
                 #[prop(into, optional)]
                 #[allow(unused)]
@@ -163,11 +176,15 @@ impl LibRs {
                 #[allow(unused)]
                 style: Option<String>,
             ) -> impl leptos::IntoView {
-                use leptos_icons_core::IconData;
                 leptos::IntoView::into_view(
-                    match icon {
-                        #(#match_arms),*
-                    },
+                    leptos_icons_core::LeptosIconCore(
+                        cx,
+                        leptos_icons_core::IconData::data(icon),
+                        width,
+                        height,
+                        class,
+                        style
+                    ),
                     cx
                 )
             }

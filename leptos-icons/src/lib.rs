@@ -84,109 +84,149 @@ pub enum Icon {
     #[cfg(feature = "Oc")]
     Oc(leptos_icons_oc::OcIcon),
 }
+impl leptos_icons_core::IconData for crate::Icon {
+    fn data(self) -> leptos_icons_core::Data {
+        match self {
+            #[cfg(feature = "Ai")]
+            Self::Ai(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Fa")]
+            Self::Fa(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Wi")]
+            Self::Wi(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Fi")]
+            Self::Fi(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Vs")]
+            Self::Vs(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Bs")]
+            Self::Bs(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Bi")]
+            Self::Bi(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Im")]
+            Self::Im(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Io")]
+            Self::Io(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Ri")]
+            Self::Ri(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Si")]
+            Self::Si(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Ti")]
+            Self::Ti(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Hi")]
+            Self::Hi(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Cg")]
+            Self::Cg(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Tb")]
+            Self::Tb(icon) => leptos_icons_core::IconData::data(icon),
+            #[cfg(feature = "Oc")]
+            Self::Oc(icon) => leptos_icons_core::IconData::data(icon),
+        }
+    }
+}
 #[cfg(feature = "Ai")]
 impl From<AiIcon> for Icon {
     fn from(value: AiIcon) -> Self {
-        Icon::Ai(value)
+        Self::Ai(value)
     }
 }
 #[cfg(feature = "Fa")]
 impl From<FaIcon> for Icon {
     fn from(value: FaIcon) -> Self {
-        Icon::Fa(value)
+        Self::Fa(value)
     }
 }
 #[cfg(feature = "Wi")]
 impl From<WiIcon> for Icon {
     fn from(value: WiIcon) -> Self {
-        Icon::Wi(value)
+        Self::Wi(value)
     }
 }
 #[cfg(feature = "Fi")]
 impl From<FiIcon> for Icon {
     fn from(value: FiIcon) -> Self {
-        Icon::Fi(value)
+        Self::Fi(value)
     }
 }
 #[cfg(feature = "Vs")]
 impl From<VsIcon> for Icon {
     fn from(value: VsIcon) -> Self {
-        Icon::Vs(value)
+        Self::Vs(value)
     }
 }
 #[cfg(feature = "Bs")]
 impl From<BsIcon> for Icon {
     fn from(value: BsIcon) -> Self {
-        Icon::Bs(value)
+        Self::Bs(value)
     }
 }
 #[cfg(feature = "Bi")]
 impl From<BiIcon> for Icon {
     fn from(value: BiIcon) -> Self {
-        Icon::Bi(value)
+        Self::Bi(value)
     }
 }
 #[cfg(feature = "Im")]
 impl From<ImIcon> for Icon {
     fn from(value: ImIcon) -> Self {
-        Icon::Im(value)
+        Self::Im(value)
     }
 }
 #[cfg(feature = "Io")]
 impl From<IoIcon> for Icon {
     fn from(value: IoIcon) -> Self {
-        Icon::Io(value)
+        Self::Io(value)
     }
 }
 #[cfg(feature = "Ri")]
 impl From<RiIcon> for Icon {
     fn from(value: RiIcon) -> Self {
-        Icon::Ri(value)
+        Self::Ri(value)
     }
 }
 #[cfg(feature = "Si")]
 impl From<SiIcon> for Icon {
     fn from(value: SiIcon) -> Self {
-        Icon::Si(value)
+        Self::Si(value)
     }
 }
 #[cfg(feature = "Ti")]
 impl From<TiIcon> for Icon {
     fn from(value: TiIcon) -> Self {
-        Icon::Ti(value)
+        Self::Ti(value)
     }
 }
 #[cfg(feature = "Hi")]
 impl From<HiIcon> for Icon {
     fn from(value: HiIcon) -> Self {
-        Icon::Hi(value)
+        Self::Hi(value)
     }
 }
 #[cfg(feature = "Cg")]
 impl From<CgIcon> for Icon {
     fn from(value: CgIcon) -> Self {
-        Icon::Cg(value)
+        Self::Cg(value)
     }
 }
 #[cfg(feature = "Tb")]
 impl From<TbIcon> for Icon {
     fn from(value: TbIcon) -> Self {
-        Icon::Tb(value)
+        Self::Tb(value)
     }
 }
 #[cfg(feature = "Oc")]
 impl From<OcIcon> for Icon {
     fn from(value: OcIcon) -> Self {
-        Icon::Oc(value)
+        Self::Oc(value)
     }
 }
 
 #[leptos::component]
 pub fn LeptosIcon(
+    #[allow(unused)]
     cx: leptos::Scope,
     /// The icon to show.
     #[prop(into)]
-    icon: Icon,
+    #[allow(unused)]
+    icon: crate::Icon,
     /// The width of the icon (horizontal side length of the square surrounding the icon). Defaults to "1em".
     #[prop(into, optional)]
     #[allow(unused)]
@@ -204,186 +244,15 @@ pub fn LeptosIcon(
     #[allow(unused)]
     style: Option<String>,
 ) -> impl leptos::IntoView {
-    use leptos_icons_core::IconData;
     leptos::IntoView::into_view(
-        match icon {
-            #[cfg(feature = "Ai")]
-            Icon::Ai(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Fa")]
-            Icon::Fa(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Wi")]
-            Icon::Wi(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Fi")]
-            Icon::Fi(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Vs")]
-            Icon::Vs(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Bs")]
-            Icon::Bs(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Bi")]
-            Icon::Bi(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Im")]
-            Icon::Im(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Io")]
-            Icon::Io(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Ri")]
-            Icon::Ri(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Si")]
-            Icon::Si(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Ti")]
-            Icon::Ti(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Hi")]
-            Icon::Hi(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Cg")]
-            Icon::Cg(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Tb")]
-            Icon::Tb(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-            #[cfg(feature = "Oc")]
-            Icon::Oc(icon) => {
-                leptos_icons_core::LeptosIconCore(
-                    cx,
-                    icon.data(),
-                    width,
-                    height,
-                    class,
-                    style,
-                )
-            }
-        },
+        leptos_icons_core::LeptosIconCore(
+            cx,
+            leptos_icons_core::IconData::data(icon),
+            width,
+            height,
+            class,
+            style,
+        ),
         cx,
     )
 }
