@@ -6,18 +6,14 @@ fn main() {
     console_error_panic_hook::set_once();
     mount_to_body(|cx| {
         view! { cx,
-            "Hello, World!"
             <div style="font-size: 8em; color: #8f39d3;">
-                //<LeptosIcon icon=Icon::Ai(AiIcon::AiPushpinTwotone)/>
-                //<LeptosIcon icon=BiIcon::BiGraphql width="2em" height="2em" style="color: green"/>
-                //<LeptosIcon icon=BiIcon::BiKubernetes width="2em" height="2em" style="color: green"/>
-                //<LeptosIcon icon=BiIcon::BiGraphql style="color: orange" title="Custom title"/>
-                <LeptosIcon icon=BsIcon::Bs1Circle style="color: green"/>
-                <LeptosIcon icon=BsIcon::BsFolder style="color: green"/>
-                //<LeptosIcon icon=FaIcon::FaBarsSolid />
-                //<LeptosIcon icon=ImIcon::ImPagebreak />
-                //<LeptosIcon icon=ImIcon::ImPageBreak />
-                //<LeptosIcon icon=IoIcon::IoColorWand />
+                <LeptosIcon icon=BiIcon::BiGraphql width="2em" height="2em" style="color: green"/>
+                <LeptosIcon icon=BiIcon::BiGraphql style="color: orange"/>
+                <LeptosIcon icon=BsIcon::Bs1Circle style="color: red"/>
+                <LeptosIcon icon=FaIcon::FaBarsSolid />
+                <LeptosIcon icon=ImIcon::ImPagebreak />
+                <LeptosIcon icon=ImIcon::ImPageBreak />
+                <LeptosIcon icon=IoIcon::IoColorWand />
             </div>
         }
     })

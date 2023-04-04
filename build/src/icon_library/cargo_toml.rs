@@ -24,7 +24,7 @@ const BASE_CARGO_TOML: &str = indoc::indoc!(
     categories = ["web-programming"]
 
     [dependencies]
-    leptos = { version = "0.2", default-features = false }
+    leptos = { version = "0.2.5", default-features = false }
     serde = { version = "1", features = ["derive"], optional = true }
 
     [features]

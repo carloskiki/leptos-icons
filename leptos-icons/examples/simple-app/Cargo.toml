@@ -11,16 +11,14 @@ log = "0.4"
 
 leptos-icons = { path = "../..", default_features = false, features = [
     #"serde",
-    #"AiPushpinTwotone",
-    #"BiGraphql",
-    #"BiFilePlusSolid",
-    #"BiKubernetes",
+    "BiGraphql",
+    "BiFilePlusSolid",
     "Bs1Circle",
     "BsFolder",
-    #"FaBarsSolid",
-    #"ImPagebreak",
-    #"ImPageBreak",
-    #"IoColorWand",
+    "FaBarsSolid",
+    "ImPagebreak",
+    "ImPageBreak",
+    "IoColorWand",
 ] }
 
 [profile.release]
